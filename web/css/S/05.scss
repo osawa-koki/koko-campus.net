@@ -1,0 +1,222 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+// ---> S/01.js
+
+#subjectMenuBox.active {
+	position: fixed;
+	background-color: black;
+	z-index: 10;
+	&.withTransition {
+		transition: all 0.5s;
+	}
+	@include sb {
+		font-size: 12px;
+	}
+	@include tb {
+		font-size: 14px;
+	}
+	@include sbtb {
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100px;
+		height: 30px;
+		overflow-y: auto;
+		$menuHeight: 150;
+		&.open {
+			width: 100%;
+			height: #{$menuHeight}px;
+			padding: 25px;
+			box-sizing: border-box;
+		}
+		.subjectMenuSubBox {
+			position: absolute;
+			inset: 0;
+		}
+		.close {
+			position: fixed;
+			right: 0;
+			bottom: #{$menuHeight - 15}px;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: red;
+			z-index: 101;
+			cursor: pointer;
+			&::before {
+				content: "×";
+				color: white;
+				font-weight: bold;
+				font-size: 25px;
+			}
+		}
+		.subjectMenuMainBox {
+			display: grid;
+			@include sb {
+				grid-template-columns: repeat(2, 1fr);
+				grid-auto-rows: auto;
+			}
+			@include tb {
+				grid-template-columns: repeat(3, 1fr);
+				grid-auto-rows: auto;
+			}
+			.subjectsMenuComponents {
+				display: inline-block;
+				color: white;
+				text-decoration: none;
+				text-overflow: ellipsis;
+				margin-right: 10px;
+				margin-bottom: 5px;
+				margin-left: 1.5rem;
+				text-indent: -1.5rem;
+				position: relative;
+				z-index: 50;
+				cursor: pointer;
+				&.this {
+					color: yellow;
+					text-decoration: underline;
+					text-decoration-color: yellow;
+					pointer-events: none;
+				}
+				&:hover {
+					text-decoration: underline;
+				}
+				&::before {
+					content: "♠";
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	@include fb {
+		bottom: 120px;
+		width: 20px;
+		left: 0;
+		height: 70px;
+		$menuHeight: 100;
+		&.open {
+			right: 0;
+			left: 0;
+			width: calc(100% - 20px);
+			max-width: 1200px;
+			margin-right: auto;
+			margin-left: auto;
+			height: #{$menuHeight}px;
+			bottom: 0;
+		}
+		.close {
+			position: fixed;
+			@media screen and (max-width: 1200px) {
+				right: 10px;
+			}
+			@media screen and (min-width: 1201px) {
+				right: calc((100% - 1200px) / 2 - 5px );
+			}
+			bottom: #{$menuHeight - 15}px;
+			width: 35px;
+			height: 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: red;
+			z-index: 101;
+			cursor: pointer;
+			&::before {
+				content: "×";
+				color: white;
+				font-weight: bold;
+				font-size: 25px;
+			}
+		}
+		.prev, .next {
+			position: absolute;
+			top: 3px;
+			bottom: 3px;
+			width: 30px;
+			background-color: lightgray;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 99;
+			cursor: pointer;
+			&::before {
+				color: grey;
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+		.prev {
+			left: 3px;
+			&::before {
+				content: "<";
+			}
+		}
+		.next {
+			right: 3px;
+			&::before {
+				content: ">";
+			}
+		}
+		.subjectMenuMainBox {
+			display: flex;
+			overflow: auto hidden;
+			padding: 0 35px;
+			height: 90%;
+			font-size: 13px;
+			.subjectsMenuComponents {
+				display: flex;
+				align-items: center;
+				width: 100px;
+				border: 1px white solid;
+				padding: 10px;
+				color: white;
+				margin: 10px;
+				flex-shrink: 0;
+				overflow: hidden;
+				&.this {
+					color: yellow;
+					border: 1px yellow solid;
+					pointer-events: none;
+				}
+				&:hover:not(.this) {
+					color: aqua;
+					border: 1px aqua solid;
+				}
+			}
+		}
+		&:not(.open) {
+			&::before {
+				writing-mode: vertical-rl;
+			}
+		}
+	}
+	&:not(.open) {
+		cursor: pointer;
+		&::before {
+			content: "Menu";
+			position: absolute;
+			color: white;
+			inset: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+	&:not(.transitionFinished) {
+		* {
+			display: none;
+		}
+	}
+}
+#subjectMenuBox:not(.active) {
+	display: none;
+}
+

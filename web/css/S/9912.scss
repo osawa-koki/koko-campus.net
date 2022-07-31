@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+#subjectIndexContainer {
+    > div {
+        > div {
+            font-size: 20px;
+            margin: 25px 0;
+            &:nth-of-type(1) {
+                border-left: 3px green solid;
+                padding-left: 10px;
+                margin-top: 25px;
+            }
+            > div {
+                font-size: 18px;
+                > div {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    div.subjectsBox {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid grey;
+        padding: 10px;
+        > div {
+            width: 100%;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid grey;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+
+#subjectMainBox { // 情報処理安全確保支援士試験
+	.step {
+		position: relative;
+		margin: 25px 0;
+		padding: 50px 15px 15px 15px;
+		background-color: rgb(255, 255, 220);
+		border: 1px black solid;
+		text-indent: 1rem !important;
+		font-size: 1rem;
+		&:before {
+			content: "対策" !important;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			font-size: 1.5rem;
+			border-right: 1px black solid;
+			border-bottom: 1px black solid;
+			background-color: rgba(red, 0.3);
+		}
+		ul, ol {
+			margin: 0 25px;
+			border: none;
+			display: block;
+			padding: 0;
+		}
+	}
+	svg {
+		.pc {
+			fill:#000000;fill-opacity:1;stroke:none;
+		}
+		.monitor {
+			fill:#ffffff;fill-opacity:1;stroke:none;
+		}
+		.server {
+			fill:#000064;fill-opacity:1;stroke:#000000;stroke-width:0.1;
+		}
+		.window {
+			fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;
+		}
+		.bad_face {
+			fill:#000000;fill-opacity:0.5;stroke:#000000;stroke-width:0.2;
+		}
+		.bad_eyes {
+			fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;
+		}
+		.e_node_face {
+			fill:#80d5ff;
+		}
+		.d_node_face {
+			fill:#ff80ff;
+		}
+		.white {
+			fill: white;
+		}
+		.key {
+			fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;
+		}
+		polyline {
+			fill: none;
+			stroke: black;
+			stroke-width: 1px;
+		}
+	}
+	.bg-white {
+		background-color: white;
+	}
+	.sup {
+		vertical-align: super;
+		font-size: smaller;
+	}
+	.margin-left_25 {
+		margin-left: 25px;
+	}
+	iframe {
+		display: block;
+		margin: 25px 0;
+		&#iframe1 {
+			opacity: 0.5;
+		}
+		&#iframe2 {
+			opacity: 0.001;
+		}
+	}
+	.fraction{
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+		.fraction_n, .fraction_d{
+			display: block;
+		}
+		.fraction_n{
+			border-bottom: 1px solid #000000;
+		}
+	}
+	pre.todokede {
+		border: 2px black solid;
+		padding: 10px;
+		margin: 25px 0;
+		overflow-x: auto;
+	}
+	li.information-security_list {
+		color: blue;
+		text-decoration: underline;
+		cursor: pointer;
+		&.visited {
+			color: purple;
+		}
+	}
+	#ssltls_protocol {
+		border-collapse: separate;
+		background-color: black;
+	}
+	.red {
+		color: red;;
+	}
+	#fqdn {
+		padding: 5px 10px;
+		border: 1px black solid;
+		overflow-x: auto;
+		white-space: nowrap;
+		span {
+			cursor: pointer;
+		}
+	}
+}
+
+

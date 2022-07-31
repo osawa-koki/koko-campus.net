@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@import "../00.scss";
+
+/* fixedBox -> subjectsButtonBox */
+
+#subjectsButtonBox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    @include fb {
+        height: 100px;
+    }
+    a {
+        display: block;
+        width: 70px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        @include fb {
+            width: 100px;
+        }
+        height: 100%;
+        img {
+            position: absolute;
+        }
+        .board {
+            width: 90%;
+            bottom: 0;
+            margin: 0 auto;
+            transition: all 1s;
+            &:hover {
+                transform: rotateY(360deg);
+            }
+        }
+        .bird {
+            width: 30%;
+            top: 0;
+        }
+    }
+    #subjectPrevButtonA {
+        left: 0;
+        .bird {
+            left: 10%;
+        }
+    }
+    #subjectNextButtonA {
+        right: 0;
+        .bird {
+            right: 10%;
+        }
+    }
+}
+
+

@@ -1,0 +1,426 @@
+<h2>配列とコレクション</h2>
+今までは、データ型として単一の値のみを扱えるスカラ型のみを対象としていました。<br />しかしながら、この方法だと必要なデータの数だけ変数を宣言しないといけないため、大量のデータを扱うことはできません。<br />また、各データに対して同一の処理をする際にも、何度もその処理を書く必要があります。<br /><br />ここでは、複数のデータをまとめて扱うことができる配列とコレクションについて説明します。<br />配列とコレクションは同一のデータ型を複数まとめることができるデータ型です。
+<table>
+	<thead>
+		<tr>
+			<th width="50%">配列</th>
+			<th width="50%">コレクション</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>同一のデータ型の値を複数まとめて扱うことができる複合データ型</td>
+			<td>配列よりも柔軟に複数の値をまとめて扱うことが可能な複合データ型の総称</td>
+		</tr>
+	</tbody>
+</table>
+コレクションには、以下の種類があります。
+<table>
+	<tbody>
+		<tr>
+			<th>Dictionary&lt;TKey,TValue&gt;</th>
+			<td>キーに基づいて編成された、キーと値のペアのコレクションを表します。</td>
+		</tr>
+		<tr>
+			<th>List&lt;T&gt;</th>
+			<td>要素数が変更可能な配列を表します。</td>
+		</tr>
+		<tr>
+			<th>Queue&lt;T&gt;</th>
+			<td>先入れ先出し(FIFO)のオブジェクトのコレクションを表します。</td>
+		</tr>
+		<tr>
+			<th>SortedList&lt;TKey,TValue&gt;</th>
+			<td>自動的に要素が整列されるリストを表します。</td>
+		</tr>
+		<tr>
+			<th>Stack&lt;T&gt;</th>
+			<td>後入れ先出し(LIFO)のオブジェクトのコレクションを表します。</td>
+		</tr>
+	</tbody>
+</table>
+<p>公式ドキュメントは<a href="https://docs.microsoft.com/ja-jp/dotnet/csharp/programming-guide/concepts/collections">こちら</a>。</p>
+コレクションでは、「Dictionary」と「List」の2つをよく使用するため、ここではこれら2つについて説明します。
+<img src="/?S0251/Array_and_Collections.png" alt="配列のコレクション" />
+<div class="separator"></div>
+また、コレクションを使用する際には、コードの先頭に以下の命令文を追加する必要があります。
+<code class="sc">
+	using System.Collections.Generic;
+</code>
+<h2>配列型</h2>
+<h3>配列の作成</h3>
+では、早速配列を作成してみましょう♪
+<code class="cs">
+	string[] fruits; 
+</code>
+配列を使えるようにするためには初期化が必要です。<br />配列を初期化するには「new」演算子を使用します。<br />配列の初期化は以下のように書きます。
+<p>初期化とはそのデータを使えるようにすることだと思ってください。</p>
+<code class="cs">
+	new データ型[要素数]
+</code>
+初期化したデータを先ほど作成した変数に代入します。<br />配列の宣言と、配列の初期化を同時に行うことが多いです。
+<code class="cs">
+	string[] fruits;
+	fruits = new string[4];
+
+	 // or
+
+	string[] fruits = new string[4];
+</code>
+また、初期化時に値を代入することも可能です。
+<code class="cs">
+	string[] fruits = new string[4]{"りんご", "バナナ", "もも", "ぶどう"};
+</code>
+配列の初期化と同時に代入をする場合には、自動的に要素数が推測されるため、要素数を省略可能です。
+<code class="cs">
+	string[] fruits = new string[]{"りんご", "バナナ", "もも", "ぶどう"};
+</code>
+<h3>要素へのアクセス</h3>
+配列の各要素にアクセスするには「0」から始まるインデックス番号を使用します。<br />「1」から始まるのではなく、「0」から始まることに注意して下さい。
+<code class="cs">
+	string[] fruits = new string[]{"りんご", "バナナ", "もも", "ぶどう"};
+</code>
+<img src="/?S0251/accessToElementOfArray.png" alt="配列の要素へのアクセス" />
+<div class="separator"></div>
+配列の要素に値を再代入することも可能です。
+<img src="/?S0251/reassigningValueToArray.png" alt="配列の値の更新" />
+<h3>配列の走査</h3>
+今度は、配列の各要素をひとつずつ取り出して処理をしましょう♪<br />以下の3通りの方法があります。
+<ul>
+	<li>for</li>
+	<li>foreach</li>
+	<li>ForEach</li>
+</ul>
+<h4>for</h4>
+反復処理で使用したforを使用します。<br />反復継続の条件式には、カウンタ変数が「配列の要素数 - 1」未満である限りという条件を設定します。<br /><br />また、配列の要素数は「配列.Length」で取得できます。
+<code class="cs">
+	string[] fruits = new string[] { "りんご", "バナナ", "もも", "ぶどう" };
+	for (int i = 0; i &lt; fruits.Length; i++)
+	{
+		Console.WriteLine(fruits[i]);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+<h4>foreach</h4>
+forよりも配列を走査することに特化した構文です。<br />以下のように書きます。
+<code class="cs">
+	string[] fruits = new string[] { "りんご", "バナナ", "もも", "ぶどう" };
+	foreach (string f in fruits)
+	{
+		Console.WriteLine(f);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+「fruits」の中から配列をひとつずつ取り出し、「f」変数に代入しています。
+<h4>ForEach</h4>
+foreachに非常に似ていますが、こちらは配列に用意されたメソッドです。<br />メソッドについてはまだ説明していませんが、あるデータ型専用の処理だと思ってください。<br />以下のように書きます。
+<code class="cs">
+	string[] fruits = new string[] { "りんご", "バナナ", "もも", "ぶどう" };
+	Array.ForEach(fruits, f => {
+		Console.WriteLine(f);
+	});
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+<h2>リスト</h2>
+配列は初期化時に配列のサイズ(要素数)が決定されるため、後から追加・削除することができません。<br />したがって、後から配列のサイズを変更する必要がある場合には、コレクションのリストを使用します。<br /><br />リストは以下のように作成します。
+<code class="cs">
+	List&lt;データ型&gt; 変数名 = new List&lt;データ型&gt;();
+</code>
+また、配列同様に初期化時に代入をすることもできます。
+<code class="cs">
+	List&lt;データ型&gt; 変数名 = new List&lt;データ型&gt; { "りんご", "バナナ", "もも", "ぶどう" };
+</code>
+<div class="separator"></div>
+また、リストの操作方法は配列と非常に似ています。
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+        
+	 // リストの要素数は「リスト.Count」で取得
+	for (int i = 0; i &lt; fruits.Count; i++)
+	{
+		Console.WriteLine(fruits[i]);
+	}
+
+	Console.WriteLine("");
+
+	 // foreachはそのまま
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	Console.WriteLine("");
+
+	/*
+	配列.ForEach(変数 =&gt; {
+		処理
+	});
+	*/
+	fruits.ForEach(fruit =&gt;
+	{
+		Console.WriteLine(fruit);
+	});
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+
+	りんご
+	バナナ
+	もも
+	ぶどう
+
+	りんご
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+<h3>要素の追加</h3>
+要素を追加する際には、「追加する要素の種類」と「どこに追加するか」によって使用するメソッドが分かれます。
+<table>
+	<caption>追加する要素の種類</caption>
+	<thead>
+		<tr>
+			<th width="50%">単一</th>
+			<th width="50%">別のリスト</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Add・Insert</td>
+			<td>AddRange・InsertRange</td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<caption>どこに追加するか</caption>
+	<thead>
+		<tr>
+			<th width="50%">末尾</th>
+			<th width="50%">任意の位置</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Add・AddRange</td>
+			<td>Insert・InsertRange</td>
+		</tr>
+	</tbody>
+</table>
+<div class="separator"></div>
+<table class="x">
+	<thead>
+		<tr>
+			<th></th>
+			<th>末尾に追加</th>
+			<th>任意の位置に追加</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>単一の値を追加</th>
+			<td>Add</td>
+			<td>Insert</td>
+		</tr>
+		<tr>
+			<th>リストから追加</th>
+			<td>AddRange</td>
+			<td>InsertRange</td>
+		</tr>
+	</tbody>
+</table>
+<h4>Add</h4>
+そのまま、追加する値を引数に渡します。
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.Add("パイナップル");
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+	パイナップル
+	*/
+</code>
+<h4>AddRange</h4>
+Addメソッドと異なり、別のリストの値を追加します。<br />追加というよりかは、リストの合体的な感じです。
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.AddRange(new List&lt;string&gt; {"かき", "さくらんぼ"});
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	もも
+	ぶどう
+	かき
+	さくらんぼ
+	*/
+</code>
+<h4>Insert</h4>
+任意の位置に要素を追加します。<br />「Insert(追加する位置, 追加する要素)」と書きます。
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.Insert(1, "パイナップル");
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	パイナップル
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+<h4>InsertRange</h4>
+任意の位置に別のリストの値を追加します。
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.InsertRange(new List&lt;string&gt; {"かき", "さくらんぼ"});
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	かき
+	さくらんぼ
+	バナナ
+	もも
+	ぶどう
+	*/
+</code>
+<h3>要素の削除</h3>
+リストから要素を削除するには、「要素名を指定して削除」する方法と、「インデックス番号を指定した削除」する方法があります。<br /><br />それぞれ、「Remove」メソッドと「RemoveAt」メソッドを使用します。
+<h4>Remove</h4>
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.Remove("もも");
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	バナナ
+	ぶどう
+	*/
+</code>
+<h4>RemoveAt</h4>
+<code class="cs">
+	List&lt;string&gt; fruits = new List&lt;string&gt; {"りんご", "バナナ", "もも", "ぶどう"};
+	fruits.Remove(1);
+	foreach (string fruit in fruits)
+	{
+		Console.WriteLine(fruit);
+	}
+
+	/* &darr; コンソール &darr;
+	りんご
+	もも
+	ぶどう
+	*/
+</code>
+<h2>ディクショナリー</h2>
+リストの各要素をインデックス番号ではなく、任意の値で指定するバージョンです。<br />辞書と呼ぶこともあります。<br /><br />値の識別子は「キー」、値そのものは「バリュー」と呼ばれます<br /><br />ディクショナリーは以下のように作成します。
+<code class="cs">
+	Dictionary&lt;キーのデータ型, バリューのデータ型&gt; = new Dictionary&lt;キーのデータ型, バリューのデータ型&gt;
+</code>
+初期化時に代入する場合には、以下のように書きます。
+<code class="cs">
+	Dictionary&lt;キーのデータ型, バリューのデータ型&gt; 変数名 = new Dictionary&lt;キーのデータ型, バリューのデータ型&gt;
+	{
+		[キーA] = バリューA,
+		[キーB] = バリューB,
+		[キーC] = バリューC
+	};
+</code>
+各要素へのアクセスはインデックス番号の代わりにキーを使用すればOK!です。
+<h3>要素の追加</h3>
+要素を追加するには、新たなキーを指定して値を代入するだけです。<br />「Add」メソッドで追加する方法もありますが、僕はほとんど使用しません。
+<code class="cs">
+	Dictionary&lt;キーのデータ型, バリューのデータ型&gt; 変数名 = new Dictionary&lt;キーのデータ型, バリューのデータ型&gt;
+	{
+		["cs"] = "C#",
+		["f"] = "fortran",
+		["rs"] = "rust"
+	};
+	lang["rb"] = "ruby";
+	lang.Add("vb", "VB.NET");
+
+	Console.WriteLine(lang["rs"]);
+	Console.WriteLine(lang["rb"]);
+	Console.WriteLine(lang["vb"]);
+
+	/* &darr; コンソール &darr;
+	rust
+	ruby
+	VB.NET
+	*/
+</code>
+<h3>要素の削除</h3>
+要素の削除するには、リスト同様「Remove」メソッドを使用します。
+<h3>要素の走査</h3>
+ディクショナリーを走査するには以下のように書きます。
+<code class="cs">
+	foreach(var 変数 in ディクショナリー)
+	{
+		// キーは「変数.Key」
+		// バリューは「変数.Value」
+	}
+</code>
+<div class="separator"></div>
+<code class="cs">
+	Dictionary&lt;キーのデータ型, バリューのデータ型&gt; 変数名 = new Dictionary&lt;キーのデータ型, バリューのデータ型&gt;
+	{
+		["cs"] = "C#",
+		["f"] = "fortran",
+		["rs"] = "rust"
+	};
+
+	foreach(var L in lang)
+	{
+		Console.WriteLine(L.Key + " @ " + L.Value);
+	}
+
+	/* &darr; コンソール &darr;
+	cs @ C#
+	f @fortran
+	rs @ rust
+	*/
+</code>

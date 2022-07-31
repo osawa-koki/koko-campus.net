@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+@import "../00.scss";
+
+html {
+	font-size: 15px;
+}
+body {
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
+}
+
+
+/**/
+#subjectIndexBox {
+	border: 1px solid fuchsia;
+	margin: 0 auto 100px auto;
+	max-width: 400px;
+	text-align: center;
+	padding: 25px 0;
+	div.indexTitle {
+		font-size: 16px;
+		margin: 10px 0;
+	}
+	ul {
+		display: inline-block;
+		text-align: left;
+		margin-left: 35px;
+		margin-right: 20px;
+		li {
+			cursor: pointer;
+			&:hover {
+				color: red;
+				text-decoration: underline;
+				text-decoration-color: grey;
+			}
+		}
+	}
+}
+
+
+
+/**/
+main {
+	h1, h2, h3, h4, h5, h6 {
+		&:not(.x) {
+			padding-left: 10px;
+			margin-top: 25px;
+			margin-bottom: 25px;
+			font-weight: bold;
+		}
+	}
+	h1 {
+		&:not(.x) {
+			font-size: 28px;
+			border-left: 7px double green;
+			letter-spacing: 3.5px;
+			margin-bottom: 50px;
+		}
+	}
+	h2 {
+		&:not(.x) {
+			font-size: 25px;
+			border-left: 6px solid red;
+			letter-spacing: 3px;
+		}
+	}
+	div.separator-h2 {
+		&:not(.x) {
+			height: 3px;
+			background-color: lightgrey;
+			margin-top: 30px;
+			letter-spacing: 2.5px;
+		}
+	}
+	h3 {
+		&:not(.x) {
+			font-size: 23px;
+			border-left: 5px solid blue;
+			letter-spacing: 2px;
+		}
+	}
+	h4 {
+		&:not(.x) {
+			font-size: 21px;
+			border-left: 4px solid lime;
+			letter-spacing: 1.5px;
+		}
+	}
+	h5 {
+		&:not(.x) {
+			font-size: 19px;
+			border-left: 3px solid orange;
+			letter-spacing: 1px;
+		}
+	}
+	h6 {
+		&:not(.x) {
+			font-size: 17px;
+			border-left: 2px solid yellow;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+
+/**/
+noscript {
+	margin: 30px auto;
+}
+
+/**/
+#subjectMainBox {
+	table:not(.x) {
+		border-collapse: collapse;
+		margin: 30px 0;
+		th, td {
+			padding: 10px 15px;
+			background-color: white;
+		}
+		thead {
+			th {
+				background-color: lightgray;
+			}
+		}
+	}
+	ul:not(.x), ol:not(.x) {
+		display: inline-block;
+		border: 1px solid black;
+		padding: 20px 20px 20px 40px;
+		margin: 25px 0;
+	}
+	ul.n, ol.n, table ul, table ol {
+		display: block !important;
+		border: none !important;
+		padding: 0 !important;
+		margin: 10px 10px 10px 40px !important;
+	}
+	a.link {
+		display: block;
+		max-width: 300px;
+		border: 1px solid black;
+		color: black;
+		text-decoration: none;
+		margin: 50px 0;
+		padding: 25px;
+		cursor: pointer;
+		background-position: right;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	a.linkProgram {
+		display: block;
+		width: 100px;
+		height: 100px;
+		border: 1px solid black;
+		margin: 50px 0;
+		cursor: pointer;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	a.linkSubject {
+		display: block;
+		width: 150px;
+		height: 75px;
+		border: 1px solid black;
+		margin: 50px 0;
+		cursor: pointer;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	div.subjectsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+		a {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
+	}
+	div.bg {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	img:not(.x) {
+		display: block;
+		width: 100%;
+		max-width: 600px;
+		margin: 25px 0;
+		background-color: white;
+	}
+	* {
+		&.max-300w {
+			max-width: 300px;
+		}
+		&.max-400w {
+			max-width: 400px;
+		}
+		&.max-500w {
+			max-width: 500px;
+		}
+		&.no-max {
+			max-width: none !important;
+		}
+	}
+	p:not(.x) {
+		text-indent: -1rem;
+		margin: 10px 1rem;
+		font-size: 0.95rem;
+		& + & {
+			margin-top: 0 !important;
+		}
+		&::before {
+			content: "※";
+		}
+	}
+	div.result {
+		position: relative;
+		border-width: 1px 1px 1px 7px;
+		border-style: solid;
+		border-color: black black black blue;
+		padding: 50px 25px 25px 25px;
+		margin: 30px 0;
+		width: 100%;
+		box-sizing: border-box;
+		max-width: 800px;
+		&::before {
+			content: "結果";
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 5px 10px;
+			background-color: aqua;
+		}
+	}
+	div.quote {
+		margin: 30px 0;
+		padding: 25px;
+		border: 1px solid black;
+		background-color: rgba(255, 200, 200, 0.1);
+		div:nth-of-type(1) {
+			border-bottom: 1px dotted black;
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+		}
+	}
+	div.column {
+		margin: 30px 0;
+		padding: 25px;
+		border: 1px solid black;
+		background-color: rgba(0, 255, 255, 0.1);
+	}
+	div.scroll-600w {
+		overflow-x: auto;
+		table {
+			min-width: 600px;
+		}
+	}
+	.border {
+		border: 1px solid black;
+	}
+	div.solution {
+		margin: 25px 0;
+		padding: 25px;
+		max-width: 500px;
+		overflow-x: auto;
+		border: 1px dotted black;
+		white-space: nowrap;
+		font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
+	}
+	span.cancel {
+		text-decoration: line-through;
+	}
+	div.separator {
+		height: 1px;
+		background-color: lightgrey;
+		margin: 15px 0;
+	}
+	div.separator2 {
+		height: 2px;
+		background-color: grey;
+		margin: 15px 0;
+	}
+	img.絵文字 {
+		display: inline;
+		width: 1.2rem;
+		height: 1.2rem;
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+	}
+	.en {
+		font-family: "consolas", "code";
+	}
+	.ja {
+		font-family: "kyokasho";
+	}
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.r-border {
+		margin: 25px 0;
+		padding: 25px;
+		border: 1px black solid;
+		border-radius: 25px;
+		background-color: white;
+	}
+	div.superSeparator {
+		height: 2px;
+		background-color: black;
+		margin: 15px 0;
+		padding: 0;
+		border: none;
+	}
+	.title {
+		font-size: 1.2rem;
+		border-bottom: 1px black solid;
+		margin-bottom: 25px;
+		padding-bottom: 10px;
+	}
+	.button {
+		width: 100px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid black;
+		background-color: rgba(red, 0.3);
+		margin: 25px 0;
+		cursor: pointer;
+		&:hover {
+			background-color: red;
+			color: white;
+		}
+	}
+	div.how {
+		background-color: rgba(lime, 0.15);
+		margin: 25px 0;
+		border: 1px grey solid;
+		padding: 25px;
+	}
+	.explanation {
+		margin: 25px 0;
+		padding: 25px;
+		border: 1px black solid;
+		background-color: #CCFFFF;
+		text-indent: 0;
+		font-size: 1rem;
+		&:before {
+			content: "";
+		}
+	}
+	div.exam {
+		font-size: 0.95rem;
+		margin: 25px 0;
+		padding: 1rem;
+		border: 1px grey solid;
+		background-color: rgb(240, 240, 240);
+	}
+	#message {
+		border: 1px solid black;
+		border-radius: 25px;
+		margin: 0 0 50px 0;
+		padding: 25px;
+		text-indent: 0;
+		font-size: 1rem;
+		&:before {
+			content: "";
+		}
+	}
+	svg {
+		display: block;
+		width: 100%;
+		background-color: white;
+		margin: 25px 0;
+	}
+	.margin {
+		margin: 25px 0;
+	}
+	.center {
+		text-align: center;
+	}
+}
+
+
+
+
+

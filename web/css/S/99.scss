@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import "../00.scss";
+
+// エラーページ
+
+#subjectError {
+    .subjectErrorTable {
+        th {
+            background-color: lightgray;
+        }
+    }
+    .subjectImgBox {
+        margin: 25px -5px;
+        display: flex;
+        flex-wrap: wrap;
+        img.subjectImg {
+            margin: 5px;
+            border: 1px grey solid;
+            transition: 1s all;
+            @include sb {
+                width: 50px;
+            }
+            @include tb {
+                width: 75px;
+            }
+            @include fb {
+                width: 100px;
+            }
+            &:hover {
+                transform:scale(1.02, 1.02);
+                border: 1px red solid;
+            }
+        }
+    }
+    .lessonTextBox {
+        margin: 25px 0;
+        display: grid;
+        @include sb {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: auto;
+        }
+        @include tb {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto;
+        }
+        @include fb {
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: auto;
+        }
+        .lessonText {
+            display: inline-block;
+            color: blue;
+            text-decoration: none;
+            text-overflow: ellipsis;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            margin-left: 1.5rem;
+            text-indent: -1.5rem;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+            &::before {
+                content: "♠";
+                margin-right: 5px;
+            }
+        }
+    }
+}
+

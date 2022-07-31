@@ -1,0 +1,81 @@
+<div id="registerEntireBox">
+	<div id="welcomeSign">Welcome to koko-campus!</div>
+	<div id="registerBox">
+		{{ if eq .R01_Success "false" }}
+			<p id="errorMessageBox">{{ .ErrorMessage }}</p>
+		{{ end }}
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="2">メールアドレスを入力してください。<br /><small>※メールアドレスは50文字以内で入力してください。</small></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="email" id="mail" /></td>
+				</tr>
+				<tr id="mailErrorTR" class="hidden">
+					<td colspan="2">メールアドレスが不正です。</td>
+				</tr>
+				<tr>
+					<td width="80%"><input type="button" id="button" value="登録" disabled /></td>
+					<td width="20%"><input type="button" id="reset" value="リセット" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="cfmMessage" class="hidden">「__%MAIL%__」に、登録確認用メールを送信しました。<br />メールに添付されたURLを10分以内にクリックして、登録を完了させてください。</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="ImgBox" class="hidden">
+			<img src="/?R/00.png" alt="メール送信完了" />
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			"use strict";
+			(() => {
+				const [mail, err, send, reset, cfm, imgBox] = getElm(["mail", "mailErrorTR", "button", "reset", "cfmMessage", "ImgBox"]);
+				mail.addEventListener("input", function() {
+					if (this.value.match(`^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$`) && this.value.length <= 50) {
+						send.disabled = false;
+					} else {
+						send.disabled = true;
+					}
+				});
+				reset.addEventListener("click", () => {
+					mail.value = "";
+				});
+				button.addEventListener("click", () => {
+					const url = "/A";
+					const postData = URLencodeAssoc({
+						"program" : "register",
+						"action" : "pre",
+						"mail": mail.value,
+					});
+					const data = {
+						method: "POST",
+						mode: "cors",
+						headers: {
+							"Accept": "application/json",
+							"Content-Type": "application/x-www-form-urlencoded",
+						}
+					};
+					data["body"] = postData;
+					fetch(url, data)
+					.then(response => response.json())
+					.then(response => {
+						if (response.Success) {
+							mail.disabled = true;
+							button.disabled = true;
+							reset.disabled = true;
+							cfm.textContent = cfm.textContent.replace("__%MAIL%__", mail.value);
+							cfm.classList.remove("hidden");
+							imgBox.classList.remove("hidden");
+						} else {
+							window.alert(response.ErrorMessage.join("\n"))
+						}
+					})
+					.catch(() => {
+						window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
+					});
+				});
+			})();
+		</script>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<div id="subjectError">
+	<table class="subjectErrorTable">
+		<tbody>
+			<tr>
+				<th>教科</th>
+				<td>{{ .Name }}</td>
+			</tr>
+			<tr>
+				<th>レッスン</th>
+				<td>{{ .Lesson }}</td>
+			</tr>
+			<tr>
+				<th>ページ</th>
+				<td>{{ .Page }}</td>
+			</tr>
+		</tbody>
+	</table>
+	{{ if gt (len .ErrorMessage) 0 }}
+		{{ range $i, $message := .ErrorMessage }}
+			<p>{{ $message }}</p>
+		{{ end }}
+		<div class="separator"></div>
+		{{ $ErrorType := .ErrorType }}
+		<div class="{{ if eq $ErrorType 1 }}subjectImgBox{{ else if eq $ErrorType 2 }}lessonTextBox{{ end }}">
+		{{ range $url, $textOrImg := .AltSuggestion }}
+			{{ if eq $ErrorType 1 }}
+				<a href="{{$url}}"><img class="subjectImg" src="{{$textOrImg}}" alt="subject pic" /></a>
+			{{ else if eq $ErrorType 2 }}
+				<a class="lessonText" href="{{$url}}">{{ $textOrImg }}</a>
+			{{ end }}
+		{{ end }}
+		</div>
+	{{ end }}
+</div>

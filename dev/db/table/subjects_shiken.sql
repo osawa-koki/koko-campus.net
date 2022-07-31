@@ -1,0 +1,8 @@
+CREATE TABLE subjects_shiken(
+    subject CHAR(4) PRIMARY KEY CHECK (LENGTH(subject) = 4),
+    shiken_type CHAR(1) NOT NULL,
+    fst DATE NULL,
+    snd DATE NULL,
+    rgdt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updt DATETIME DEFAULT CURRENT_TIMESTAMP
+)

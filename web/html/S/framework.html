@@ -1,0 +1,25 @@
+<h1>{{ .Page }}</h1>
+<div id="subjectMainBox">
+    <section id="subjectIndexBox"></section>
+    (((CONTENTS)))
+</div>
+<div id="fixedBox">
+    <!-- 【S/01.scss】 -->
+    <div id="subjectsButtonBox">
+        <!-- 【前へ戻るボタンの表示部分】 -->
+        {{ if ne .PrevPage "" }}
+            <a id="subjectPrevButtonA" href="/S{{ .PathS }}L{{ .PathL }}P{{ .PrevPage }}">
+                <img class="board" src="/?S/10.png" alt="前へ戻る" />
+                <img class="bird" src="/?S/11.png" alt="前へ戻る" />
+            </a>
+        {{ end }}
+        <!-- 【先へ進むボタンの表示部分】 -->
+        {{ if ne .NextPage "" }}
+            <a id="subjectNextButtonA" href="/S{{ .PathS }}L{{ .PathL }}P{{ .NextPage }}">
+                <img class="board" src="/?S/20.png" alt="次に進む" />
+                <img class="bird" src="/?S/21.png" alt="次に進む" />
+            </a>
+        {{ end }}
+    </div>
+    <div id="subjectMenuBox"></div>
+</div>

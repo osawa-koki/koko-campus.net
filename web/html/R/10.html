@@ -1,0 +1,67 @@
+<div id="registerEntireBox">
+	<div id="welcomeSign">Welcome to koko-campus!</div>
+	<div id="registerBox">
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="2">ID(メールアドレス)とパスワードを入力してください。</td>
+				</tr>
+				<tr>
+					<th>ID(Mail)</th>
+					<td><input type="email" id="mail" /></td>
+				</tr>
+				<tr>
+					<th>PW</th>
+					<td><input type="password" id="pw" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" id="button" value="ログイン" disabled /></td>
+				</tr>
+				<tr>
+					<td colspan="2">※パスワードを忘れた方は<a href="/R11">こちら</a>。</td>
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript" charset="utf-8">
+			"use strict";
+			(() => {
+				const [mail, pw, button] = getElm(["mail", "pw", "button"]);
+				const inputCheck = () => {
+					button.disabled = !(between(8, 16)(pw.value));
+				};
+				mail.addEventListener("input", inputCheck);
+				pw.addEventListener("input", inputCheck);
+				button.addEventListener("click", () => {
+					const url = "/A";
+					const postData = URLencodeAssoc({
+						"program" : "register",
+						"action" : "login",
+						"mail": mail.value,
+						"pw": pw.value
+					});
+					const data = {
+						method: "POST",
+						mode: "cors",
+						headers: {
+							"Accept": "application/json",
+							"Content-Type": "application/x-www-form-urlencoded",
+						}
+					};
+					data["body"] = postData;
+					fetch(url, data)
+					.then(response => response.json())
+					.then(response => {
+						if (response.Success) {
+							window.location.href = "/M00";
+						} else {
+							window.alert(response.ErrorMessage.join("\n"));
+						}
+					})
+					.catch(ex => {
+						window.alert("通信に失敗しました。\n時間を開けて再度ログインを行って下さい。")
+					});
+				});
+			})();
+		</script>
+	</div>
+</div>

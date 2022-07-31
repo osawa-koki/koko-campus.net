@@ -1,0 +1,15 @@
+<div id="toppageEntireBox">
+    <div id="toppageMainFrame">
+        <div id="toppageSubjectsBox">
+            {{ range $_, $subjectsMap := .Subjects }}
+                {{ range $categoryTitle, $subjectsSlice := $subjectsMap }}
+                    <div class="categoryTitle">{{ $categoryTitle }}</div>
+                    {{ range $_, $subjectMap := $subjectsSlice }}
+                        <a href="/S{{ index $subjectMap "code" }}"><img src="/?S/{{ index $subjectMap "code" }}.png" alt="{{ index $subjectMap "name" }}" /></a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    <div id="toppageSubFrame"></div>
+</div>

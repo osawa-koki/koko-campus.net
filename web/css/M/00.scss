@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+@import "../00.scss";
+
+#mypageEntireWapper {
+	#yourProfile {
+		position: relative;
+		padding: 10px;
+		border: 1px lightgray solid;
+		max-width: 500px;
+		margin: 0 auto;
+		#userIcon {
+			display: block;
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			border: 1px lightgray solid;
+			margin: 25px auto 10px auto;
+			cursor: pointer;
+			transition: 1s all;
+			&:hover {
+                transform:scale(1.02, 1.02);
+                border: 1px blue solid;
+			}
+		}
+		$nameIdBoxSize: 200;
+		#userId {
+			$idPad: 10;
+			$idBoxHeight: 30;
+			width: #{$nameIdBoxSize}px;
+			box-sizing: border-box;
+			font-size: 10px;
+			margin: 10px auto;
+			background-color: rgba(lightgray, 0.5);
+			height: #{$idBoxHeight}px;
+			line-height: #{$idBoxHeight}px;
+			padding: 0 #{$idPad}px;
+		}
+		#userName {
+			$nameBoxHeight: 50;
+			display: block;
+			width: #{$nameIdBoxSize}px;
+			box-sizing: border-box;
+			height: #{$nameBoxHeight}px;
+			border: none;
+			text-align: center;
+			line-height: #{$nameBoxHeight}px;
+			overflow-x: hidden;
+			background-color: lime;
+			margin: 10px auto;
+			padding: 10px;
+		}
+		#editProfile {
+			position: absolute;
+			font-size: 12px;
+			color: blue;
+			text-decoration: underline;
+			text-decoration-color: blue;
+			right: 10px;
+			bottom: 3px;
+			cursor: pointer;
+		}
+	}
+	.title {
+		font-size: 20px;
+		font-weight: bold;
+		border-left: 5px red solid;
+		padding-left: 10px;
+		margin-top: 50px;
+	}
+
+
+
+	#yourScheduleBox {
+		position: relative;
+		#scheduleLoadingBox {
+			display: hidden;
+			position: absolute;
+			/* thank you https://projects.lukehaas.me/css-loaders/ */
+			&.loading {
+				display: block;
+				inset: 0;
+				color: blue;
+				font-size: 30px;
+				margin: auto;
+				width: 1em;
+				height: 1em;
+				border-radius: 50%;
+				position: absolute;
+				animation: load 1s infinite linear;
+				transform: translateZ(0);
+				z-index: 999;
+			}
+			@keyframes load {
+				0%,
+				100% {
+				  box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+				}
+				12.5% {
+				  box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+				}
+				25% {
+				  box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+				}
+				37.5% {
+				  box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+				}
+				50% {
+				  box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+				}
+				62.5% {
+				  box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+				}
+				75% {
+				  box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+				}
+				87.5% {
+				  box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+				}
+			}
+		}
+		#scheduleTable {
+			height: 300px;
+			margin: 25px 0;
+			border: 1px gray solid;
+			overflow-y: auto;
+			.scheduleContainer {
+				display: grid;
+				margin-bottom: 25px;
+				font-size: 13px;
+				&:nth-of-type(2n) {
+					div {
+						background-color: aliceblue;
+					}
+				}
+				&:nth-of-type(2n+1) {
+					div {
+						background-color: lightyellow;
+					}
+				}
+				@include fb {
+					margin-bottom: 10px;
+					font-size: 15px;
+				}
+				div {
+					padding: 20px 5px 5px 35px;
+					border: 1px lightgray solid;
+				}
+
+				// sbtb <- fbで使用するものも含んでいるため、「@include sbtb」とはせずに、次の「fb」で必要個所を上書きする
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 50px 50px 100px 50px;
+				div {
+					position: relative;
+					box-sizing: border-box;
+					&::before {
+						position: absolute;
+						display: inline-block;
+						font-size: 8px;
+						top: -1px;
+						left: -1px;
+						padding: 1px 7px;
+						color: white;
+						background-color: black;
+					}
+				}
+				.scheduleElement_ScheduleId {
+					grid-column: 2 / 3;
+					grid-row: 1 / 2;
+					&:before {
+						content: "ID";
+					}
+				}
+				.scheduleElement_Title {
+					font-weight: bold;
+					grid-column: 1 / 2;
+					grid-row: 1 / 2;
+					&:before {
+						font-weight: normal;
+						content: "タイトル";
+					}
+				}
+				.scheduleElement_Importance {
+					grid-column: 1 / 2;
+					grid-row: 2 / 3;
+					padding: 0;
+					text-align: center;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					&.A {
+						color: red;
+						font-size: 20px;
+						font-weight: bold;
+					}
+					&.B {
+						color: blue;
+						font-size: 18px;
+					}
+					&.C {
+						font-size: 16px;
+					}
+					&:before {
+						content: "重要度";
+					}
+				}
+				.scheduleElement_Due {
+					grid-column: 2 / 3;
+					grid-row: 2 / 3;
+					&:before {
+						content: "締切";
+					}
+				}
+				.scheduleElement_Description {
+					grid-column: 1 / 3;
+					grid-row: 3 / 4;
+					&:before {
+						content: "説明";
+					}
+				}
+				.scheduleElement_Rgdt {
+					grid-column: 1 / 2;
+					grid-row: 4 / 5;
+					&:before {
+						content: "登録日";
+					}
+				}
+				.scheduleElement_Updt {
+					grid-column: 2 / 3;
+					grid-row: 4 / 5;
+					&:before {
+						content: "更新日";
+					}
+				}
+				.scheduleElement_Rgdt, .scheduleElement_Updt {
+					font-size: 12px;
+				}
+
+
+				@include fb {
+					grid-template-columns: 120px 220px 450px 150px;
+					grid-template-rows: 50px 50px;
+					div {
+						position: relative;
+						box-sizing: border-box;
+						&:before {
+							position: absolute;
+							display: inline-block;
+							font-size: 10px;
+							top: -1px;
+							left: -1px;
+							padding: 1px 7px;
+							color: white;
+							background-color: black;
+						}
+					}
+					.scheduleElement_ScheduleId {
+						grid-column: 1 / 2;
+						grid-row: 1 / 2;
+					}
+					.scheduleElement_Title {
+						font-weight: bold;
+						grid-column: 2 / 3;
+						grid-row: 1 / 2;
+					}
+					.scheduleElement_Importance {
+						grid-column: 1 / 2;
+						grid-row: 2 / 3;
+					}
+					.scheduleElement_Due {
+						grid-column: 2 / 3;
+						grid-row: 2 / 3;
+					}
+					.scheduleElement_Description {
+						grid-column: 3 / 4;
+						grid-row: 1 / 3;
+					}
+					.scheduleElement_Rgdt {
+						grid-column: 4 / 5;
+						grid-row: 1 / 2;
+					}
+					.scheduleElement_Updt {
+						grid-column: 4 / 5;
+						grid-row: 2 / 3;
+					}
+					.scheduleElement_Rgdt, .scheduleElement_Updt {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+	#editProfileBox {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 25px 0;
+		.menuBox {
+			display: block;
+			border: 1px grey solid;
+			max-width: 350px;
+			color: black;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			text-decoration: none;
+			width: 300px;
+			box-sizing: border-box;
+			@include sb {
+				width: 100%;
+			}
+			&:hover {
+				background-color: rgba(lightskyblue, 0.3);
+			}
+			.menuTitle {
+				width: 100%;
+				box-sizing: border-box;
+				font-size: 15px;
+				padding: 10px;
+				border-bottom: 1px lightgray dashed;
+			}
+			.menuContents {
+				width: 100%;
+				box-sizing: border-box;
+				font-size: 12px;
+				padding: 10px;
+			}
+		}
+	}
+}
+
+
+
+

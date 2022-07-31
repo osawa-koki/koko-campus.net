@@ -1,0 +1,72 @@
+<h2>CRUD</h2>
+CRUDとは、以下の単語の頭文字を合わせてもので、「データに対する一般的な処理4つ」のことです。
+<table>
+	<tbody>
+		<tr>
+			<th>CREATE</th>
+			<td>データの作成</td>
+		</tr>
+		<tr>
+			<th>READ</th>
+			<td>データの読み取り</td>
+		</tr>
+		<tr>
+			<th>UPDATE</th>
+			<td>データの更新</td>
+		</tr>
+		<tr>
+			<th>DELETE</th>
+			<td>データの削除</td>
+		</tr>
+	</tbody>
+</table>
+SQLではそれぞれ、以下のクエリ文が該当します。
+<table>
+	<tbody>
+		<tr>
+			<th>INSERT文</th>
+			<td>CREATE</td>
+		</tr>
+		<tr>
+			<th>SELECT文</th>
+			<td>READ</td>
+		</tr>
+		<tr>
+			<th>UPDATE文</th>
+			<td>UPDATE</td>
+		</tr>
+		<tr>
+			<th>DELETE文</th>
+			<td>DELETE</td>
+		</tr>
+	</tbody>
+</table>
+データベーススペシャリスト試験を受ける人の大半は業務でSQLを使用する方だと思いますが、使用する頻度が低い人のために入門レベルから説明します。
+<div class="separator"></div>
+以下で使用するデータベース・テーブルを作成しましょう♪
+<code class="sql">
+	-- データベースの作成
+	CREATE DATABASE poke;
+
+	-- データベースの選択
+	USE poke;
+
+	-- テーブルの作成
+	CREATE TABLE pokemon(
+		number INT PRIMARY KEY,
+		name NVARCHAR(5) NOT NULL,
+		height INT NOT NULL
+	);
+</code>
+<p>ひとつずつ実行して下さい。</p>
+「poke」データベースを作成し、その中に「pokemon」テーブルを作成しました。<br />「pokemon」テーブルでは、以下の内容を管理します。
+<ul>
+	<li>number: 図鑑番号</li>
+	<li>name: 名前</li>
+	<li>height: 身長</li>
+</ul>
+<h2>INSERT文</h2>
+
+
+
+

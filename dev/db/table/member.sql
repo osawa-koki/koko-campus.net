@@ -1,0 +1,9 @@
+CREATE TABLE member(
+    user_id CHAR(16) PRIMARY KEY CHECK (8 <= LENGTH(user_id) AND LENGTH(user_id) <= 16),
+    mail VARCHAR(50) UNIQUE,
+    pw VARCHAR(128),
+    name VARCHAR(25) CHECK (3 <= LENGTH(name) AND LENGTH(name) <= 25),
+    comment VARCHAR(300),
+    rgdt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
