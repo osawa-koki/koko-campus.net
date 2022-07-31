@@ -55,7 +55,7 @@ func pageController(RR *RequestResponse) {
 	case "P":
 		ProgramController()
 	case "B":
-		backOfficeController()
+		//backOfficeController(RR, digit)
 	case "A":
 		isPage = false
 		APIdata = API(RR)
