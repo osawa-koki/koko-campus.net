@@ -1,0 +1,132 @@
+#programListBox {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  #programListBox {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+#programListBox .programSuggestionItem {
+  position: relative;
+}
+#programListBox .programSuggestionItem * {
+  color: black;
+  text-decoration: none;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  #programListBox .programSuggestionItem {
+    width: 100%;
+    height: 100px;
+    border: 1px gray solid;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  #programListBox .programSuggestionItem {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #programListBox .programSuggestionItem {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox .programSuggestionItem {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+#programListBox .programSuggestionItem .programImg {
+  position: absolute;
+}
+@media screen and (max-width: 500px) {
+  #programListBox .programSuggestionItem .programImg {
+    width: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-right: 1px lightgray dashed;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox .programSuggestionItem .programImg {
+    width: 100%;
+    border: 1px lightgrey solid;
+  }
+}
+#programListBox .programSuggestionItem .programName {
+  position: absolute;
+}
+@media screen and (max-width: 500px) {
+  #programListBox .programSuggestionItem .programName {
+    top: 5px;
+    left: 110px;
+    right: 5px;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox .programSuggestionItem .programName {
+    right: 7px;
+    bottom: 5px;
+    left: 7px;
+    text-align: center;
+    height: 25px;
+    padding: 3px;
+    line-height: 25px;
+    background-color: rgba(211, 211, 211, 0.8);
+    z-index: 3;
+  }
+}
+#programListBox .programSuggestionItem .programDescription {
+  position: absolute;
+}
+@media screen and (max-width: 500px) {
+  #programListBox .programSuggestionItem .programDescription {
+    font-size: 12px;
+    top: 30px;
+    right: 5px;
+    bottom: 5px;
+    left: 110px;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox .programSuggestionItem .programDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    inset: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+  }
+}
+@media screen and (min-width: 501px) and (min-width: 501px) and (max-width: 1000px) {
+  #programListBox .programSuggestionItem .programDescription {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 501px) and (min-width: 1001px) {
+  #programListBox .programSuggestionItem .programDescription {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 501px) {
+  #programListBox .programSuggestionItem:hover .programDescription {
+    inset: 20px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}

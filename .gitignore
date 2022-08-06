@@ -1,15 +1,10 @@
 /DBbackup/
 /dev/db/contents/
 /logFiles/
-img/
 bin/
-go.*
-alter.sql
 *.pdf
 *.csv
 *.txt
-*.png
-*.css
 *.env
 *.user
 *.crt

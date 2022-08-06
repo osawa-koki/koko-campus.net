@@ -26,10 +26,10 @@ func CreateRandStr(length int) string {
 
 func sendPreRegisterMail(mail string, token string) bool {
 	ms := mailStruct{
-		"register@koko-campus.org",
-		"register@koko-campus.org",
+		"info@koko-campus.net",
+		"info@koko-campus.net",
 		mail,
-		"【koko-campus】仮登録メール",
+		"pre-register (koko-campus)",
 		fmt.Sprintf("【koko-campus】に登録していただきありがとうございます。\r\n以下のURLをクリックして会員登録を完了させて下さい。\r\n%s\r\n\r\n※このURLの有効期限は10分です。", "https://"+os.Getenv("DOMAIN")+fmt.Sprintf("/R01?mail=%s&token=%s", mail, token)),
 	}
 	if er := MailSender(&ms); er != nil {
@@ -40,10 +40,10 @@ func sendPreRegisterMail(mail string, token string) bool {
 
 func sendResetPwMail(mail string, token string) bool {
 	ms := mailStruct{
-		"register@koko-campus.org",
-		"register@koko-campus.org",
+		"info@koko-campus.net",
+		"info@koko-campus.net",
 		mail,
-		"【koko-campus】パスワード再設定",
+		"reset your password (koko-campus)",
 		fmt.Sprintf("【koko-campus】" + CRLF + "パスワードを再設定するには、以下のURLをクリックして下さい。" + CRLF + CRLF + "https://" + os.Getenv("DOMAIN") + fmt.Sprintf("/R12?mail=%s&token=%s", mail, token) + CRLF + CRLF + "※パスワード再設定の手続きをしていない場合は、このメールを無視してください。"),
 	}
 	if er := MailSender(&ms); er != nil {

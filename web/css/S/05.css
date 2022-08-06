@@ -1,0 +1,243 @@
+@charset "UTF-8";
+#subjectMenuBox.active {
+  position: fixed;
+  background-color: black;
+  z-index: 10;
+}
+#subjectMenuBox.active.withTransition {
+  transition: all 0.5s;
+}
+@media screen and (max-width: 500px) {
+  #subjectMenuBox.active {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  #subjectMenuBox.active {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #subjectMenuBox.active {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 30px;
+    overflow-y: auto;
+  }
+  #subjectMenuBox.active.open {
+    width: 100%;
+    height: 150px;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  #subjectMenuBox.active .subjectMenuSubBox {
+    position: absolute;
+    inset: 0;
+  }
+  #subjectMenuBox.active .close {
+    position: fixed;
+    right: 0;
+    bottom: 135px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    z-index: 101;
+    cursor: pointer;
+  }
+  #subjectMenuBox.active .close::before {
+    content: "×";
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox {
+    display: grid;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 500px) {
+  #subjectMenuBox.active .subjectMenuMainBox {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 501px) and (max-width: 1000px) {
+  #subjectMenuBox.active .subjectMenuMainBox {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 1.5rem;
+    text-indent: -1.5rem;
+    position: relative;
+    z-index: 50;
+    cursor: pointer;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents.this {
+    color: yellow;
+    text-decoration: underline;
+    -webkit-text-decoration-color: yellow;
+            text-decoration-color: yellow;
+    pointer-events: none;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents:hover {
+    text-decoration: underline;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents::before {
+    content: "♠";
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active {
+    bottom: 120px;
+    width: 20px;
+    left: 0;
+    height: 70px;
+  }
+  #subjectMenuBox.active.open {
+    right: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    bottom: 0;
+  }
+  #subjectMenuBox.active .close {
+    position: fixed;
+    bottom: 85px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    z-index: 101;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+  #subjectMenuBox.active .close {
+    right: 10px;
+  }
+}
+@media screen and (min-width: 1001px) and (min-width: 1201px) {
+  #subjectMenuBox.active .close {
+    right: calc((100% - 1200px) / 2 - 5px);
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active .close::before {
+    content: "×";
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active .prev, #subjectMenuBox.active .next {
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    width: 30px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    cursor: pointer;
+  }
+  #subjectMenuBox.active .prev::before, #subjectMenuBox.active .next::before {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active .prev {
+    left: 3px;
+  }
+  #subjectMenuBox.active .prev::before {
+    content: "<";
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active .next {
+    right: 3px;
+  }
+  #subjectMenuBox.active .next::before {
+    content: ">";
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active .subjectMenuMainBox {
+    display: flex;
+    overflow: auto hidden;
+    padding: 0 35px;
+    height: 90%;
+    font-size: 13px;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    border: 1px white solid;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents.this {
+    color: yellow;
+    border: 1px yellow solid;
+    pointer-events: none;
+  }
+  #subjectMenuBox.active .subjectMenuMainBox .subjectsMenuComponents:hover:not(.this) {
+    color: aqua;
+    border: 1px aqua solid;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #subjectMenuBox.active:not(.open)::before {
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+  }
+}
+#subjectMenuBox.active:not(.open) {
+  cursor: pointer;
+}
+#subjectMenuBox.active:not(.open)::before {
+  content: "Menu";
+  position: absolute;
+  color: white;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#subjectMenuBox.active:not(.transitionFinished) * {
+  display: none;
+}
+
+#subjectMenuBox:not(.active) {
+  display: none;
+}
