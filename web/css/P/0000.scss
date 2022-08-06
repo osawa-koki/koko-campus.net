@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@import "../00.scss";
+
+#programListBox {
+	display: flex;
+	@include sb {
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	@include tbfb {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	$sbImgSize: 100;
+	.programSuggestionItem {
+		position: relative;
+		* {
+			color: black;
+			text-decoration: none;
+			overflow: hidden;
+		}
+		@include sb {
+			$imgSize: 100;
+			width: 100%;
+			height: #{$sbImgSize}px;
+			border: 1px gray solid;
+			margin-bottom: 10px;
+		}
+		@include tb {
+			$imgSize: 150;
+			width: #{$imgSize}px;
+			height: #{$imgSize}px;
+		}
+		@include fb {
+			$imgSize: 200;
+			width: #{$imgSize}px;
+			height: #{$imgSize}px;
+		}
+		@include tbfb {
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+		.programImg {
+			position: absolute;
+			@include sb {
+				width: 100px;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				border-right: 1px lightgray dashed;
+			}
+			@include tbfb {
+				width: 100%;
+				border: 1px lightgrey solid;
+			}
+		}
+		.programName {
+			position: absolute;
+			@include sb {
+				top: 5px;
+				left: #{$sbImgSize + 10}px;
+				right: 5px;
+				font-weight: bold;
+			}
+			@include tbfb {
+				right: 7px;
+				bottom: 5px;
+				left: 7px;
+				text-align: center;
+				$height: 25;
+				height: #{$height}px;
+				padding: 3px;
+				line-height: #{$height}px;
+				background-color: rgba(lightgray, 0.8);
+				z-index: 3;
+			}
+		}
+		.programDescription {
+			position: absolute;
+			@include sb {
+				font-size: 12px;
+				top: 30px;
+				right: 5px;
+				bottom: 5px;
+				left: #{$sbImgSize + 10}px;
+			}
+			@include tbfb {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				padding: 10px;
+				inset: 50%;
+				transition: all 0.3s ease;
+				z-index: 10;
+				@include tb {
+					font-size: 13px;
+				}
+				@include fb {
+					font-size: 15px;
+				}
+			}
+		}
+		@include tbfb {
+			&:hover .programDescription {
+				inset: 20px 10px;
+				color: white;
+				background-color: rgba(black, 0.8);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

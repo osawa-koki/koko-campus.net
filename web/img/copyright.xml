@@ -1,0 +1,31 @@
+<copyright>
+    <free>
+        <img path="?99/0000.png" using-for="?01/00.png" url="https://hiyokoyarou.com/dance-penguin/" description="ペンギン" />
+        <img path="?99/0001.png" using-for="?01/01.png,?R/04.png" url="https://hiyokoyarou.com/smile-kaeru/" description="カエル" />
+        <img path="?99/0002.png" using-for="?01/02.png,?R/05.png" url="https://hiyokoyarou.com/kobuta-2/" description="子豚" />
+        <img path="?99/0003.png" using-for="404" url="https://www.illust-box.jp/sozai/85114/" description="困った猫" />
+        <img path="?99/0004.png" using-for="?S/11.png" url="https://illustkun.com/bird-2/" description="鳥" />
+        <img path="?99/0005.png" using-for="?S/21.png" url="https://illustkun.com/bird-2/" description="鳥" />
+        <img path="?99/0006.jpg" using-for="?S/05.png" url="https://www.sozailab.jp/sozai/detail/48385/" description="看板" />
+        <img path="?99/0007.png" using-for="?S/0101.png" url="https://free-icons.net/fashion034/" description="ルビー" />
+        <img path="?99/0008.png" using-for="?S/0199.png" url="https://nureyon.com/database-2" description="データベース" />
+        <img path="?99/0009.png" using-for="?S/0199.png" url="https://illustkun.com/spanner/" description="工具" />
+        <img path="?99/0010.png" using-for="?S01/09.png" url="https://hiyokoyarou.com/draming-gorilla/" description="ゴリラ" />
+        <img path="?99/0011.png" using-for="?R/01.png" url="https://www.sozai-library.com/sozai/8782" description="タコ" />
+        <img path="?99/0012.png" using-for="?R/02.png" url="https://www.sozailab.jp/sozai/detail/358/" description="ペンギン" />
+        <img path="?99/0013.png" using-for="?R/03.png" url="https://frame-illust.com/?p=9544" description="ライオン" />
+        <img path="?99/0014.png" using-for="?S/0301.png" url="http://www.oofree.net/drawing_animal/p2/sp_rakuda.html" description="ラクダ" />
+        <img path="?99/0015.png" using-for="?S/0400.png" url="http://www.wanpug.com/illust220.html" description="小鳥" />
+        <img path="?99/0016.png" using-for="?S/0901.png" url="https://kohacu.com/20210125-kaseki/" description="アンモナイト" />
+        <img path="?99/0017.png" using-for="?S/0512.png" url="https://tegakisozai.com/archives/3133" description="ニワトリ" />
+    </free>
+    <bought>
+        <img path="?bought/0000.png" using-for="?S/0221.png" url="https://pixta.jp/illustration/41469917" description="gopher" />
+        <img path="?bought/0001.png" using-for="" url="https://pixta.jp/illustration/69063261" description="お金" />
+        <img path="?bought/0002.jpg" using-for="?S/0102.png" url="https://pixta.jp/illustration/34638909" description="真珠" />
+        <img path="?bought/0003.png" using-for="?S/0200.png,?S/0201.png" url="https://pixta.jp/illustration/79706844" description="ロボット" />
+        <img path="?bought/0004.png" using-for="?R/00.png" url="https://pixta.jp/illustration/48321184" description="ヤギ" />
+        <img path="?bought/0005.jpg" using-for="?S/0500.png" url="https://www.photolibrary.jp/img683/23564_5940142.html" description="人工知能・ビッグデータ" />
+        <img path="?bought/0006.jpg" using-for="?S/0510.png" url="https://tegakisozai.com/archives/3133" description="人工知能・ビッグデータ" />
+    </bought>
+</copyright>

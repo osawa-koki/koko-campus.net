@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="タグ.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\html&amp;css入門\pics\タグ.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.500196408"
+         inkscape:cx="299.2941442"
+         inkscape:cy="248.3008212"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="512.5859343"
+             y="236.4118662"
+             width="98.66736242"
+             height="38.21884072"
+             id="rect67339" />
+        <rect
+             x="102.6532254"
+             y="245.301214"
+             width="162.6453701"
+             height="25.99659604"
+             id="rect64385" />
+        <rect
+             x="368.6184003"
+             y="179.9764341"
+             width="137.3153535"
+             height="19.33080219"
+             id="rect55308" />
+        <rect
+             x="202.6401333"
+             y="175.9769578"
+             width="88.6550583"
+             height="31.32923113"
+             id="rect49770" />
+        <rect
+             x="83.32242322"
+             y="177.3101166"
+             width="47.99371577"
+             height="23.3302785"
+             id="rect39982" />
+        <rect
+             x="11.33184956"
+             y="179.3098548"
+             width="45.32739823"
+             height="24.66343727"
+             id="rect29864" />
+        <rect
+             x="15.99790526"
+             y="176.6435372"
+             width="93.321114"
+             height="48.66029516"
+             id="rect25596" />
+        <rect
+             x="21.99711973"
+             y="122.650607"
+             width="540.5958818"
+             height="105.3195429"
+             id="rect4079" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text4077"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4079)"
+             transform="matrix(1.193417082,0,0,1.193417082,-10.66804595,-19.21206813)"><tspan
+                 x="21.99804688"
+                 y="154.1503906"
+                 id="tspan909">&lt;<tspan
+     style="fill:#0000ff"
+     id="tspan895">a</tspan> <tspan
+     style="fill:#ff0000"
+     id="tspan897">href</tspan>=<tspan
+     style="fill:#006400"
+     id="tspan899">&quot;index&quot;</tspan>&gt;<tspan
+     style="fill:#ff9600"
+     id="tspan901">トップ</tspan><tspan
+     style="fill:#ff9600"
+     id="tspan903">へ</tspan>&lt;<tspan
+     style="fill:#0000ff"
+     id="tspan905">/</tspan><tspan
+     style="fill:#0000ff"
+     id="tspan907">a</tspan>&gt;</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text29862"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect29864);fill:#0000ff;fill-opacity:1"
+             transform="translate(13.33158772,5.840637379)"><tspan
+                 x="11.33203125"
+                 y="193.0917969"
+                 id="tspan911">タグ名</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text39980"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect39982);fill:#ff0000;fill-opacity:1"
+             transform="translate(23.99685789,7.676574879)"><tspan
+                 x="83.32226562"
+                 y="191.0917969"
+                 id="tspan913">属性</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text49768"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect49770);fill:#006400;fill-opacity:1"
+             transform="translate(37.99502499,9.010559279)"><tspan
+                 x="202.640625"
+                 y="189.7578125"
+                 id="tspan915">属性値</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text55306"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect55308);fill:#ff9600;fill-opacity:1"
+             transform="translate(-1.333158771,5.283996779)"><tspan
+                 x="368.6191406"
+                 y="193.7578125"
+                 id="tspan917">テキストコンテント</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 360.6194477,176.0031421 h 145.9808855"
+             id="path60974" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 192.9747322,176.0031421 h 138.6485123"
+             id="path60974-8" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 78.98965723,176.0031421 h 80.65610577"
+             id="path60974-4" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 28.99646513,176.0031421 h 31.99581053"
+             id="path60974-44" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 15.99790525,199.0834206 v 37.3284456 h 327.29047835 v -37.3284456"
+             id="path61275"
+             sodipodi:nodetypes="cccc" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 512.5859343,199.0834206 v 37.3284456 h 71.6708973 v -37.3284456"
+             id="path61275-8"
+             sodipodi:nodetypes="cccc" />
+        <text
+             xml:space="preserve"
+             id="text64383"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect64385)"
+             transform="translate(30.66736491,-0.0452665767)"><tspan
+                 x="102.6523438"
+                 y="264.9882812"
+                 id="tspan919">開始タグ</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text67337"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect67339)"
+             transform="translate(-3.332635086,8.843405303)"><tspan
+                 x="512.5859375"
+                 y="256.0996094"
+                 id="tspan921">閉じタグ</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,54 @@
+/* subjectsButtonBox */
+#subjectsButtonBox {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+}
+@media screen and (min-width: 1001px) {
+  #subjectsButtonBox {
+    height: 100px;
+  }
+}
+#subjectsButtonBox a {
+  display: block;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+@media screen and (min-width: 1001px) {
+  #subjectsButtonBox a {
+    width: 100px;
+  }
+}
+#subjectsButtonBox a img {
+  position: absolute;
+}
+#subjectsButtonBox a .board {
+  width: 90%;
+  bottom: 0;
+  margin: 0 auto;
+  transition: all 1s;
+}
+#subjectsButtonBox a .board:hover {
+  transform: rotateY(360deg);
+}
+#subjectsButtonBox a .bird {
+  width: 30%;
+  top: 0;
+}
+#subjectsButtonBox #subjectPrevButtonA {
+  left: 0;
+}
+#subjectsButtonBox #subjectPrevButtonA .bird {
+  left: 10%;
+}
+#subjectsButtonBox #subjectNextButtonA {
+  right: 0;
+}
+#subjectsButtonBox #subjectNextButtonA .bird {
+  right: 10%;
+}
