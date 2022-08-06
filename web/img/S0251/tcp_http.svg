@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg20"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="tcp_http.svg"
+   inkscape:export-filename="tcp_http.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0444209"
+     inkscape:cx="287.24051"
+     inkscape:cy="147.45013"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="opacity:0.984749;fill:#ff9100;fill-opacity:1"
+       id="path449"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="226.12881"
+       sodipodi:cy="66.349174"
+       sodipodi:r1="74.522781"
+       sodipodi:r2="70.028511"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 290.66744,103.61057 -129.07725,-10e-6 64.53863,-111.7841669 z"
+       inkscape:transform-center-y="3.2129547"
+       transform="matrix(3.0989196,0,0,3.0989196,-382.49488,35.766806)"
+       inkscape:transform-center-x="-2.3850602e-05" />
+    <path
+       sodipodi:type="star"
+       style="opacity:0.984749;fill:#ffb700;fill-opacity:1"
+       id="path449-4"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="226.12881"
+       sodipodi:cy="66.349174"
+       sodipodi:r1="74.522781"
+       sodipodi:r2="70.028511"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 290.66744,103.61057 -129.07725,-10e-6 64.53863,-111.7841669 z"
+       inkscape:transform-center-y="2.4097144"
+       transform="matrix(2.3241897,0,0,2.3241897,-207.30613,29.434468)"
+       inkscape:transform-center-x="-1.2095765e-05" />
+    <path
+       sodipodi:type="star"
+       style="opacity:0.984749;fill:#ffe700;fill-opacity:1"
+       id="path449-4-8"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="226.12881"
+       sodipodi:cy="66.349174"
+       sodipodi:r1="74.522781"
+       sodipodi:r2="70.028511"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 290.66744,103.61057 -129.07725,-10e-6 64.53863,-111.7841669 z"
+       inkscape:transform-center-y="1.606476"
+       transform="matrix(1.5494598,0,0,1.5494598,-32.117372,23.10213)"
+       inkscape:transform-center-x="-4.3002719e-06" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:0.984749;fill:#000000"
+       x="250.41542"
+       y="124.94238"
+       id="text233"><tspan
+         sodipodi:role="line"
+         id="tspan231"
+         x="250.41542"
+         y="124.94238">HTTP(s)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:0.984749;fill:#000000"
+       x="289.96356"
+       y="238.76836"
+       id="text237"><tspan
+         sodipodi:role="line"
+         id="tspan235"
+         x="289.96356"
+         y="238.76836">TCP</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:0.984749;fill:#000000;fill-opacity:1"
+       x="310.26172"
+       y="317.87952"
+       id="text1894"><tspan
+         sodipodi:role="line"
+         id="tspan1892"
+         x="310.26172"
+         y="317.87952">:</tspan><tspan
+         sodipodi:role="line"
+         x="310.26172"
+         y="364.54614"
+         id="tspan2258">:</tspan></text>
+  </g>
+</svg>

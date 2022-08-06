@@ -34,6 +34,7 @@ func Error(message string) {
 		_, er := f.WriteString(s + "\n")
 		if er != nil {
 			f.Close()
+			Error("ログファイルに書き込みできませんでした。")
 			return
 		}
 	}
@@ -50,7 +51,7 @@ func SQLLogger(SQLstruct *SQLbuilder) {
 		_, er := f.WriteString(s + "\n")
 		if er != nil {
 			f.Close()
-			Error("0003")
+			Error("ログファイルに書き込みできませんでした。")
 			return
 		}
 	}

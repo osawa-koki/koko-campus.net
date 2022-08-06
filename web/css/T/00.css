@@ -1,0 +1,18 @@
+#toppageEntireBox #toppageMainFrame #toppageSubjectsBox .categoryTitle {
+  margin: 20px 0 10px 0;
+  padding-left: 10px;
+  border-left: 5px purple solid;
+  font-size: 20px;
+  font-weight: bold;
+}
+#toppageEntireBox #toppageMainFrame #toppageSubjectsBox img {
+  border: 1px lightgrey solid;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 500px) {
+  #toppageEntireBox #toppageMainFrame #toppageSubjectsBox img {
+    width: 75px;
+    height: 75px;
+  }
+}

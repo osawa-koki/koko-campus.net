@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg20"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="flowchart.svg"
+   inkscape:export-filename="flowchart.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="346.12877"
+     inkscape:cy="270.8219"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17">
+    <marker
+       style="overflow:visible"
+       id="TriangleStart"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-1-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-8-5" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-5-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-7" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-5-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-3" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-5-2-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="10"
+       markerHeight="11.560694"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-7-3-9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:21.3333px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:0.637566;fill:#0f73c8;stroke-width:0.4;fill-opacity:1"
+       x="190.24609"
+       y="47.392265"
+       id="text183"><tspan
+         sodipodi:role="line"
+         id="tspan181"
+         x="190.24609"
+         y="47.392265">明日の天気予報が</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:0.743386;fill:#0000ff;fill-opacity:1;stroke-width:0.4"
+       x="40.621941"
+       y="362.88934"
+       id="text1312"><tspan
+         sodipodi:role="line"
+         id="tspan1310"
+         x="40.621941"
+         y="362.88934">通常の傘</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.66666667px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:0.743386;fill:#0000ff;fill-opacity:1;stroke-width:0.4"
+       x="249.82495"
+       y="360.18121"
+       id="text1784"><tspan
+         sodipodi:role="line"
+         id="tspan1782"
+         x="249.82495"
+         y="360.18121">折りたたみ傘</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:0.743386;fill:#0000ff;fill-opacity:1;stroke-width:0.4"
+       x="470.34238"
+       y="364.92044"
+       id="text1788"><tspan
+         sodipodi:role="line"
+         id="tspan1786"
+         x="470.34238"
+         y="364.92044">傘なし</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart)"
+       d="M 188.49577,111.08243 233.01163,77.536575"
+       id="path2002"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-5)"
+       d="m 115.74922,203.5341 26.81197,-37.32448"
+       id="path2002-2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-5-2)"
+       d="m 100.7748,321.32157 1.29769,-71.67294"
+       id="path2002-2-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-5-2-7)"
+       d="m 313.4803,322.51048 -67.77609,-75.7098"
+       id="path2002-2-1-1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-5-4)"
+       d="M 219.51242,203.5341 192.70045,166.20962"
+       id="path2002-2-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-1)"
+       d="M 373.15609,111.08243 328.64023,77.536573"
+       id="path2002-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.222543;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleStart-1-1)"
+       d="M 493.73195,316.92417 404.04334,158.93202"
+       id="path2002-5-7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:21.3333px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="129.99022"
+       y="148.2701"
+       id="text2693"><tspan
+         sodipodi:role="line"
+         id="tspan2691"
+         x="129.99022"
+         y="148.2701">雨 or 嵐</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:21.3333px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="347.99463"
+       y="146.91602"
+       id="text2905"><tspan
+         sodipodi:role="line"
+         id="tspan2903"
+         x="347.99463"
+         y="146.91602">それ以外</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="46.715229"
+       y="237.63837"
+       id="text3243"><tspan
+         sodipodi:role="line"
+         id="tspan3241"
+         x="46.715229"
+         y="237.63837">嵐 or 強い雨</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'MS Reference Sans Serif';-inkscape-font-specification:'MS Reference Sans Serif, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="209.88004"
+       y="237.49254"
+       id="text3247"><tspan
+         sodipodi:role="line"
+         id="tspan3245"
+         x="209.88004"
+         y="237.49254">弱い雨</tspan></text>
+  </g>
+</svg>

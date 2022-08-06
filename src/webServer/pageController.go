@@ -13,15 +13,15 @@ func pageController(RR *RequestResponse) {
 	var APIdata string
 	var tmplMap *TmplMapStruct = &TmplMapStruct{
 		Title: defaultTitle,
-		Login: (*RR).Login,
-		Name:  (*RR).Name,
+		Login: RR.Login,
+		Name:  RR.Name,
 		CSS:   []string{"00/00", "00/01"},
 		JS:    []string{"00/01"},
 		JSFX:  []string{"00/00", "00/30"},
 	}
 
 	rex := regexp.MustCompile(`\d+`)
-	digit := rex.FindString((*RR).request.URL.Path)
+	digit := rex.FindString(RR.request.URL.Path)
 
 	switch RR.snd {
 	case "", "T", "0":
@@ -37,7 +37,7 @@ func pageController(RR *RequestResponse) {
 		if RR.Login {
 			tmplMap.addJS("S/70")
 		}
-		SubjMap := RegexGetParam(`/(S(?P<Subject>\d+))?(L(?P<Lesson>\d+))?(P(?P<Page>\d+))?`, (*RR).path)
+		SubjMap := RegexGetParam(`/(S(?P<Subject>\d+))?(L(?P<Lesson>\d+))?(P(?P<Page>\d+))?`, RR.path)
 		tmplMap.addCSS("S/" + SubjMap["Subject"])
 		strHTML = SubjectsController(&SubjMap)
 	case "R":
@@ -53,9 +53,20 @@ func pageController(RR *RequestResponse) {
 		tmplMap.Title = "マイページ"
 		strHTML = MypageController(RR, digit)
 	case "P":
-		ProgramController()
+		urlCheck = true
+		var name string = getProgramName(digit)
+		if name != "" {
+			tmplMap.Title = name
+			tmplMap.addCSS("P/00", "P/" + digit)
+			tmplMap.addJS("P/00", "P/" + digit)
+		} else {
+			tmplMap.Title = "プログラム一覧"
+			tmplMap.addCSS("P/0000")
+			tmplMap.addJS("P/0000")
+		}
+		strHTML = programController(digit)
 	case "B":
-		//backOfficeController(RR, digit)
+		backOfficeController(RR, digit)
 	case "A":
 		isPage = false
 		APIdata = API(RR)

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="flexbox-outlook.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\html&amp;css入門\pics\flexbox-outlook.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.500196408"
+         inkscape:cx="228.6367293"
+         inkscape:cy="235.6358128"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="57.99240656"
+             y="192.6414425"
+             width="136.6487741"
+             height="25.99659604"
+             id="rect7854" />
+        <rect
+             x="171.3109021"
+             y="68.65767673"
+             width="290.6286122"
+             height="30.66265174"
+             id="rect4284" />
+        <rect
+             x="57.99240494"
+             y="192.641449"
+             width="136.6487732"
+             height="25.99659538"
+             id="rect7854-8" />
+        <rect
+             x="57.99240494"
+             y="192.641449"
+             width="136.6487732"
+             height="25.99659538"
+             id="rect7854-9" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="fill:#d3d3d3;fill-opacity:1;stroke-width:2.50909;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+             id="rect843"
+             width="553.2608643"
+             height="308.6262512"
+             x="23.36956787"
+             y="45.68687439" />
+        <g
+             id="g1618"
+             transform="translate(-3.963474274)">
+            <rect
+                 style="fill:#00d3d3;fill-opacity:1;stroke-width:1.62093;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+                 id="rect1321"
+                 width="100"
+                 height="100"
+                 x="66.6579361"
+                 y="150" />
+            <rect
+                 style="fill:#00d3d3;fill-opacity:1;stroke-width:1.62093;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+                 id="rect1321-2"
+                 width="100"
+                 height="100"
+                 x="253.9634705"
+                 y="150" />
+            <rect
+                 style="fill:#00d3d3;fill-opacity:1;stroke-width:1.62093;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+                 id="rect1321-6"
+                 width="100"
+                 height="100"
+                 x="441.2690125"
+                 y="150" />
+        </g>
+        <text
+             xml:space="preserve"
+             id="text4282"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4284)"
+             transform="translate(67.24414063)"><tspan
+                 x="171.3105469"
+                 y="88.34570312"
+                 id="tspan861">flexコンテナ</tspan></text>
+        <g
+             id="g9659">
+            <text
+                 xml:space="preserve"
+                 id="text7852"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect7854)"
+                 transform="translate(-7.332373243,-5.296875)"><tspan
+                     x="57.9921875"
+                     y="212.328125"
+                     id="tspan863">flexアイテム</tspan></text>
+            <text
+                 xml:space="preserve"
+                 id="text7852-0"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect7854-8)"
+                 transform="translate(180.0740416,-5.296875)"><tspan
+                     x="57.9921875"
+                     y="212.328125"
+                     id="tspan865">flexアイテム</tspan></text>
+            <text
+                 xml:space="preserve"
+                 id="text7852-5"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect7854-9)"
+                 transform="translate(367.4804686,-5.296875)"><tspan
+                     x="57.9921875"
+                     y="212.328125"
+                     id="tspan867">flexアイテム</tspan></text>
+        </g>
+    </g>
+</svg>
