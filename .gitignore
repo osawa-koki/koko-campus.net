@@ -16,6 +16,7 @@ alter.sql
 *.key
 *.code-workspace
 .~lock*
+*.ods
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,go,linux,macos
