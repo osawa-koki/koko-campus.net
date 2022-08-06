@@ -6,19 +6,30 @@ import (
 )
 
 type TmplMapStruct struct {
-	Title string
-	Login bool
-	Name  string
-	CSS   []string // 1階層のみ
-	JS    []string // 1階層のみ
-	JSFX  []string
+	Title  string
+	Login  bool
+	Name   string
+	CSS    []string // 1階層のみ
+	CSSLIB []string
+	JS     []string // 1階層のみ
+	JSFX   []string
+	JSLIB  []string
 }
 
 func (p *TmplMapStruct) addCSS(s ...string) {
 	(*p).CSS = append((*p).CSS, s...)
 }
+func (p *TmplMapStruct) addCSSLIB(s ...string) {
+	(*p).CSSLIB = append((*p).CSS, s...)
+}
 func (p *TmplMapStruct) addJS(s ...string) {
 	(*p).JS = append((*p).JS, s...)
+}
+func (p *TmplMapStruct) addJSFX(s ...string) {
+	(*p).JSFX = append((*p).JS, s...)
+}
+func (p *TmplMapStruct) addJSLIB(s ...string) {
+	(*p).JSLIB = append((*p).JS, s...)
 }
 
 /*

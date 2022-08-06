@@ -12,12 +12,14 @@ func pageController(RR *RequestResponse) {
 	var isPage bool = true
 	var APIdata string
 	var tmplMap *TmplMapStruct = &TmplMapStruct{
-		Title: defaultTitle,
-		Login: RR.Login,
-		Name:  RR.Name,
-		CSS:   []string{"00/00", "00/01"},
-		JS:    []string{"00/01"},
-		JSFX:  []string{"00/00", "00/30"},
+		Title:  defaultTitle,
+		Login:  RR.Login,
+		Name:   RR.Name,
+		CSS:    []string{"00/00", "00/01"},
+		CSSLIB: []string{},
+		JS:     []string{"00/01"},
+		JSFX:   []string{"00/00", "00/30"},
+		JSLIB:  []string{},
 	}
 
 	rex := regexp.MustCompile(`\d+`)
