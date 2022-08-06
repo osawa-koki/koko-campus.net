@@ -57,8 +57,8 @@ func pageController(RR *RequestResponse) {
 		var name string = getProgramName(digit)
 		if name != "" {
 			tmplMap.Title = name
-			tmplMap.addCSS("P/00", "P/" + digit)
-			tmplMap.addJS("P/00", "P/" + digit)
+			tmplMap.addCSS("P/00", "P/"+digit)
+			tmplMap.addJS("P/00", "P/"+digit)
 		} else {
 			tmplMap.Title = "プログラム一覧"
 			tmplMap.addCSS("P/0000")

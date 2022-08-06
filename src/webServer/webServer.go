@@ -74,8 +74,14 @@ func main() {
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
-	if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
-		fmt.Println(er.Error())
-		Error("ListenAndServeに失敗")
+
+	if os.Getenv("DEBUG") == "ON" {
+		if er := http.ListenAndServe(":8080", nil); er != nil {
+			Error("ListenAndServeに失敗")
+		}
+	} else {
+		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
+			Error("ListenAndServeに失敗")
+		}
 	}
 }
