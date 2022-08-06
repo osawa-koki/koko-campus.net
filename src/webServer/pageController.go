@@ -54,8 +54,8 @@ func pageController(RR *RequestResponse) {
 		strHTML = MypageController(RR, digit)
 	case "P":
 		ProgramController()
-	case "B":
-		backOfficeController()
+	// case "B":
+	// 	backOfficeController()
 	case "A":
 		isPage = false
 		APIdata = API(RR)

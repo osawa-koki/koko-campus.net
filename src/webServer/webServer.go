@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 )
 
@@ -32,13 +31,13 @@ func setResponseHeadersSecurity(w *http.ResponseWriter) {
 func controller(w http.ResponseWriter, r *http.Request) {
 	path, _ := url.QueryUnescape(fmt.Sprint((*r).URL))
 	RR := RequestResponse{
-		request: r,
+		request:  r,
 		response: &w,
-		snd: strIndex(path, 1),
-		path: r.URL.Path,
-		Login: false,
-		userID: "",
-		Name: "ゲスト",
+		snd:      strIndex(path, 1),
+		path:     r.URL.Path,
+		Login:    false,
+		userID:   "",
+		Name:     "ゲスト",
 	}
 
 	setResponseHeaders(&w)
@@ -74,7 +73,12 @@ func main() {
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
-	if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
+
+	// if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
+	// 	Error("ListenAndServeに失敗")
+	// }
+
+	if er := http.ListenAndServe(":8080", nil); er != nil {
 		Error("ListenAndServeに失敗")
 	}
 }
