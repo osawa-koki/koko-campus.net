@@ -21,7 +21,8 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"golang.Go",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+				"glenn2223.live-sass"
 			]
 		}
 	},

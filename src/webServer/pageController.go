@@ -36,10 +36,11 @@ func pageController(RR *RequestResponse) {
 		tmplMap.addJS("S/00", "S/01", "99/00")
 		if RR.Login {
 			tmplMap.addJS("S/70")
+			tmplMap.addCSS("S/70")
 		}
 		SubjMap := RegexGetParam(`/(S(?P<Subject>\d+))?(L(?P<Lesson>\d+))?(P(?P<Page>\d+))?`, RR.path)
 		tmplMap.addCSS("S/" + SubjMap["Subject"])
-		strHTML = SubjectsController(&SubjMap)
+		strHTML = SubjectsController(&SubjMap, RR)
 	case "R":
 		urlCheck = true
 		tmplMap.addCSS("R/00")

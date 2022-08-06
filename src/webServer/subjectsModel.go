@@ -22,6 +22,7 @@ type SubjectsModelStruct struct {
 	PathS         string
 	PathL         string
 	PathP         string
+	IsLogin       bool
 }
 
 func (p *SubjectsModelStruct) putError(message string) {
@@ -33,7 +34,7 @@ htmlレンダリング用の構造体を生成。
 【引数】なし
 【戻り値】モデル構造体
 */
-func SubjectsModel(subjMap *map[string]string) *string {
+func SubjectsModel(subjMap *map[string]string, RR *RequestResponse) *string {
 	model := SubjectsModelStruct{
 		URLcheck:      false,
 		Name:          "**********",
@@ -51,6 +52,7 @@ func SubjectsModel(subjMap *map[string]string) *string {
 		PathS:         (*subjMap)["Subject"],
 		PathL:         (*subjMap)["Lesson"],
 		PathP:         (*subjMap)["Page"],
+		IsLogin:       (*RR).Login,
 	}
 
 	var name string

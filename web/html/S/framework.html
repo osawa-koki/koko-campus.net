@@ -22,4 +22,13 @@
         {{ end }}
     </div>
     <div id="subjectMenuBox"></div>
+    
+    {{ if .IsLogin }}
+        <!-- 【S/70.scss】 -->
+        <div id="noteBox">
+            <textarea id="noteArea" class="hidden" maxlength="500"></textarea>
+            <button id="noteUpdateButton" class="hidden">アップデート</button>
+            <button id="noteButton">メモ!</button>
+        </div>
+    {{ end }}
 </div>

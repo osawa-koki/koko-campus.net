@@ -14,7 +14,7 @@ func API(RR *RequestResponse) string {
 				answer = "{Success: false}"
 			}
 		case "subjects":
-			answer = subjectsAPI(r)
+			answer = subjectsAPI(RR)
 		}
 	}
 	return answer

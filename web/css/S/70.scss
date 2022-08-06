@@ -1,0 +1,44 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+#noteBox {
+    #noteArea {
+        position: fixed;
+        right: 0;
+        bottom: 150px;
+        width: 400px;
+        height: 500px;
+        padding: 10px;
+        font-size: 16px;
+        resize: none;
+        z-index: 10;
+        @include fb {
+            bottom: 200px;
+        }
+    }
+    #noteUpdateButton {
+        position: fixed;
+        right: 70px;
+        bottom: 70px;
+        padding: 5px 10px;
+        border-radius: 0;
+        box-sizing: border-box;
+        @include fb {
+            bottom: 120px;
+        }
+        cursor: pointer;
+    }
+    #noteButton {
+        position: fixed;
+        right: 0;
+        bottom: 70px;
+        padding: 5px 10px;
+        border-radius: 0;
+        box-sizing: border-box;
+        @include fb {
+            bottom: 120px;
+        }
+        cursor: pointer;
+    }
+}
