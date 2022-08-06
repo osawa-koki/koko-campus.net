@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
+	"os"
 	"strings"
 )
 
@@ -74,11 +75,13 @@ func main() {
 	fmt.Println("")
 	http.HandleFunc("/", controller)
 
-	// if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
-	// 	Error("ListenAndServeに失敗")
-	// }
-
-	if er := http.ListenAndServe(":8080", nil); er != nil {
-		Error("ListenAndServeに失敗")
+	if os.Getenv("DEBUG") == "ON" {
+		if er := http.ListenAndServe(":8080", nil); er != nil {
+			Error("ListenAndServeに失敗")
+		}
+	} else {
+		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
+			Error("ListenAndServeに失敗")
+		}
 	}
 }
