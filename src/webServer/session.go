@@ -28,6 +28,7 @@ func setCookieANDredirect(RR *RequestResponse) {
 		Path:     "/",
 		Secure:   true, // 一時的な対応
 		HttpOnly: true,
+		SameSite: http.SameSiteStrictMode,
 	}
 	if SessionAdd(cookieValue, RR.request) {
 		http.SetCookie(*RR.response, cookie)
