@@ -8,7 +8,7 @@ import (
 
 // 静的ページ
 func WebController(w *http.ResponseWriter, path string) {
-	reg := `/\?(?P<Category>[\w\d]+)/(?P<Name>[\w\d\-_ぁ-んーァ-ヶー一-龠]+)\.(?P<Ext>\w+)`
+	reg := `/\?(?P<Category>[\w\d]+)/(?P<Name>[\w\d\-]+)\.(?P<Ext>\w+)`
 	Params := RegexGetParam(reg, path)
 	var (
 		Category = Params["Category"]
@@ -44,6 +44,9 @@ func WebController(w *http.ResponseWriter, path string) {
 		case "MPEG":
 			contentType = "video/mpeg"
 		}
+	case "ZIP":
+		Type = "zip"
+		contentType = "application/zip"
 	}
 	(*w).Header().Set("Content-Type", contentType)
 	if contents, er := FileGetContents(fmt.Sprintf("%s/%s/%s.%s", Type, Category, Name, strings.ToLower(Ext))); er == nil && Type != "" {
