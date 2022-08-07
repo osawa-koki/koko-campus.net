@@ -19,6 +19,8 @@
     const noteButton = document.getElementById("noteButton");
     const updateButton = document.getElementById("noteUpdateButton");
     const noteArea = document.getElementById("noteArea");
+    let is_latest = true;
+
 
     // メモの表示・非表示
     noteButton.addEventListener("click", function(){
@@ -33,6 +35,22 @@
             setVisibility(updateButton, "hidden")
         }
     })
+
+
+    // ノートの内容が変更されたら、is_latestをfalseにする
+    noteArea.addEventListener("input", function(){
+        is_latest = false;
+    });
+
+
+    // ノートが保存されていなかったら、ページを離れる前に警告を出す
+    window.addEventListener('beforeunload', function(e){
+        if(!is_latest){
+            e.preventDefault();
+            e.returnValue = '';
+        }
+    });
+
 
     // メモの内容の更新
     updateButton.addEventListener("click", function(){
@@ -62,6 +80,7 @@
             if (response.Success) {
                 // サーバでの処理成功時に実行する処理
                 window.alert("update完了!");
+                is_latest = true;
             } else {
                 window.alert(response.ErrorMessage.join("\n"))
             }
