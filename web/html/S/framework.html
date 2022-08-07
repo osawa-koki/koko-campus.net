@@ -26,9 +26,9 @@
     {{ if .IsLogin }}
         <!-- 【S/70.scss】 -->
         <div id="noteBox">
-            <textarea id="noteArea" class="hidden" maxlength="500"></textarea>
-            <button id="noteUpdateButton" class="hidden">アップデート</button>
-            <button id="noteButton">メモ!</button>
+            <button id="noteUpdateButton" class="hidden noteBoxContent">更新</button>
+            <textarea id="noteArea" class="hidden noteBoxContent" maxlength="500"></textarea>
+            <button id="noteButton" class="noteBoxContent">メモ!</button>
         </div>
     {{ end }}
 </div>

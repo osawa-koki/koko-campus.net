@@ -1,7 +1,18 @@
-#noteBox #noteArea {
+#noteBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: fixed;
   right: 0;
-  bottom: 150px;
+  bottom: 70px;
+}
+@media screen and (min-width: 1001px) {
+  #noteBox {
+    bottom: 120px;
+  }
+}
+#noteBox #noteArea {
   width: 400px;
   height: 500px;
   padding: 10px;
@@ -9,36 +20,21 @@
   resize: none;
   z-index: 10;
 }
-@media screen and (min-width: 1001px) {
+@media screen and (max-width: 500px) {
   #noteBox #noteArea {
-    bottom: 200px;
+    width: 300px;
+    height: 200px;
   }
 }
 #noteBox #noteUpdateButton {
-  position: fixed;
-  right: 70px;
-  bottom: 70px;
   padding: 5px 10px;
   border-radius: 0;
   box-sizing: border-box;
   cursor: pointer;
-}
-@media screen and (min-width: 1001px) {
-  #noteBox #noteUpdateButton {
-    bottom: 120px;
-  }
 }
 #noteBox #noteButton {
-  position: fixed;
-  right: 0;
-  bottom: 70px;
   padding: 5px 10px;
   border-radius: 0;
   box-sizing: border-box;
   cursor: pointer;
-}
-@media screen and (min-width: 1001px) {
-  #noteBox #noteButton {
-    bottom: 120px;
-  }
 }

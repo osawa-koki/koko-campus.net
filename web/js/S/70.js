@@ -1,16 +1,42 @@
 "use strict";
 (() => {
-    const pageInfo = location.href.match(/S(?<Subjects>\d{4})L(?<Lesson>\d{2})P(?<Page>\d{2})/).groups
 
+    function setVisibility(element, visibility){
+        // 状態をチェックしてから、visibilityをセットする。
+        // visibilityは、"hidden" or "show"
+        if(visibility == "hidden" && !element.classList.contains("hidden")){
+            element.classList.toggle("hidden");
+            return false;
+        }else if(visibility == "show" && element.classList.contains("hidden")){
+            element.classList.toggle("hidden");
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    const pageInfo = location.href.match(/S(?<Subjects>\d{4})L(?<Lesson>\d{2})P(?<Page>\d{2})/).groups;
+    const noteButton = document.getElementById("noteButton");
     const updateButton = document.getElementById("noteUpdateButton");
+    const noteArea = document.getElementById("noteArea");
 
-    document.getElementById("noteButton").addEventListener("click", function(){
-        document.getElementById("noteArea").classList.toggle("hidden");
+    // メモの表示・非表示
+    noteButton.addEventListener("click", function(){
+        noteArea.classList.toggle("hidden");
         updateButton.classList.toggle("hidden");
     });
 
+    document.addEventListener("click", (e) => {
+        if(!e.target.closest(".noteBoxContent")) {
+            //noteBoxContent以外の場所をクリックした場合の処理
+            setVisibility(noteArea, "hidden")
+            setVisibility(updateButton, "hidden")
+        }
+    })
+
+    // メモの内容の更新
     updateButton.addEventListener("click", function(){
-        const content = document.getElementById("noteArea").value;
+        const content = noteArea.value;
         const url = "/A";
         const postData = URLencodeAssoc({
             "program" : "subjects",
@@ -46,7 +72,8 @@
 
     });
 
-
+    
+    // ページを読み込んだときに、メモの内容を取得して挿入する。
     const url = "/A";
     const postData = URLencodeAssoc({
         "program" : "subjects",
@@ -70,7 +97,7 @@
     .then(response => {
         if (response.Success) {
             // サーバでの処理成功時に実行する処理
-            document.getElementById("noteArea").value = response.Content
+            noteArea.value = response.Content
         } else {
             window.alert(response.ErrorMessage.join("\n"))
         }
