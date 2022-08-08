@@ -26,9 +26,9 @@
     {{ if .IsLogin }}
         <!-- 【S/70.scss】 -->
         <div id="noteBox">
-            <button id="noteUpdateButton" class="hidden noteBoxContent">更新</button>
-            <textarea id="noteArea" class="hidden noteBoxContent" maxlength="500"></textarea>
-            <button id="noteButton" class="noteBoxContent">メモ!</button>
+            <div id="noteSaveButton" class="noteBoxContent"><i id="noteSaveButtonIcon" class="gg-circle-green"></i></div>
+            <textarea id="noteArea" class="noteBoxContent" maxlength="500"></textarea>
+            <div id="notePreviewButton" class="noteBoxContent"><i class="gg-notes"></i></div>
         </div>
     {{ end }}
 

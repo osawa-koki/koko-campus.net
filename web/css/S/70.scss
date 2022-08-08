@@ -2,6 +2,7 @@
 
 @import "../00.scss";
 
+
 #noteBox {
     display: flex;
     flex-direction: column;
@@ -10,36 +11,120 @@
     
     position: fixed;
     right:  0;
-    bottom: 70px;
+    bottom: 90px;
+
+    z-index: 10;
 
     @include fb {
-        bottom: 120px;
+        bottom: 115px;
     }
 
+
     #noteArea {
+        visibility: hidden;
         width: 400px;
         height: 500px;
         padding: 10px;
         font-size: 16px;
         resize: none;
-        z-index: 10;
         @include sb {
             width: 300px;
             height: 200px;
         }
     }
 
-    #noteUpdateButton {
-        padding: 5px 10px;
-        border-radius: 0;
-        box-sizing: border-box;
+
+    #noteSaveButton {
+        visibility: hidden;
+        padding: 0px 6px;
         cursor: pointer;
     }
 
-    #noteButton {
-        padding: 5px 10px;
-        border-radius: 0;
-        box-sizing: border-box;
+
+    #notePreviewButton {
+        margin-top: 5px;
+        padding: 5px 5px;
         cursor: pointer;
+        @include fb {
+            padding: 12px 45px;
+        }
+    }
+}
+
+
+// https://css.gg/notes.css
+.gg-notes {
+    background: #fff;
+    --ggs: 2.0;
+}
+
+
+// https://css.gg/spinner.css
+.gg-spinner {
+    transform: scale(var(--ggs,1))
+}
+
+.gg-spinner,
+.gg-spinner::after,
+.gg-spinner::before {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px
+}
+
+.gg-spinner::after,
+.gg-spinner::before {
+    content: "";
+    position: absolute;
+    border-radius: 100px
+}
+
+.gg-spinner::before {
+    animation: spinner 1s
+    cubic-bezier(.6,0,.4,1) infinite;
+    border: 3px solid transparent;
+    border-top-color: currentColor
+}
+
+.gg-spinner::after {
+    border: 3px solid;
+    opacity: .2;
+    background: #000;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg) }
+    to { transform: rotate(359deg) }
+}
+
+.gg-spinner {
+    --ggs: 0.65;
+}
+
+.gg-circle {
+    @extend .gg-spinner;
+    &:before{
+        content: none;
+    }
+    &:after{
+        opacity: 1.0;
+    }
+}
+
+.gg-circle-green {
+    @extend .gg-circle;
+    &:after{
+        color: #03AF7A;
+        background: #03AF7A;
+    }
+}
+
+.gg-circle-red {
+    @extend .gg-circle;
+    &:after{
+        color: #FF4B00;
+        background: #FF4B00;
     }
 }
