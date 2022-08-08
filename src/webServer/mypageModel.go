@@ -38,6 +38,67 @@ func MypageModel(digit string, userId string) *string {
 		}
 		answer = MypageView(&ItmplStruct, digit)
 
+	case "10":
+		var SQL SQLbuilder
+
+		// 教科一覧の取得
+		var subjectsDataMap []map[string]string = []map[string]string{}
+		SQL.Add("SELECT s.subject, s.subject_name, sc.category FROM subjects s")
+		SQL.Add("INNER JOIN subjects_category sc ON s.subject = sc.subject;")
+		if Rows := SelectAll(&SQL); Rows != nil {
+			for Rows.Next() {
+				var subj string
+				var subjName string
+				var category string
+				if err := Rows.Scan(&subj, &subjName, &category); err == nil {
+					subjectsDataMap = append(subjectsDataMap, map[string]string{
+						"Subject":     subj,
+						"SubjectName": subjName,
+						"Category":    category,
+					})
+				}
+			}
+			// Rows.Close() -- 自動でクローズされる
+		} else {
+			Error("SQL構文エラー(mypageModel)")
+		}
+
+		// 登録済みのお気に入り科目の取得
+		var bookmarked []map[string]string = []map[string]string{}
+		SQL.Add("SELECT subject, lesson, page FROM bookmark")
+		SQL.Add("WHERE user_id = ?;")
+		SQL.AddParam(userId)
+		if Rows := SelectAll(&SQL); Rows != nil {
+			for Rows.Next() {
+				var subject string
+				var lesson string
+				var page string
+				if err := Rows.Scan(&subject, &lesson, &page); err == nil {
+					bookmarked = append(bookmarked, map[string]string{
+						"Subject": subject,
+						"Lesson":  lesson,
+						"Page":    page,
+					})
+				}
+			}
+			// Rows.Close() -- 自動でクローズされる
+		} else {
+			Error("SQL構文エラー(mypageModel)")
+		}
+
+		ItmplStruct := struct {
+			UserName     string
+			Comment      string
+			SubjectsData []map[string]string
+			Bookmark     []map[string]string
+		}{
+			UserName:     userName,
+			Comment:      comment,
+			SubjectsData: subjectsDataMap,
+			Bookmark:     bookmarked,
+		}
+		answer = MypageView(&ItmplStruct, digit)
+
 	default:
 
 	}
