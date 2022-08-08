@@ -1,44 +1,130 @@
-#noteBox #noteArea {
+#noteBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: fixed;
   right: 0;
-  bottom: 150px;
+  bottom: 90px;
+  z-index: 10;
+}
+@media screen and (min-width: 1001px) {
+  #noteBox {
+    bottom: 115px;
+  }
+}
+#noteBox #noteArea {
+  visibility: hidden;
   width: 400px;
   height: 500px;
   padding: 10px;
   font-size: 16px;
   resize: none;
-  z-index: 10;
 }
-@media screen and (min-width: 1001px) {
+@media screen and (max-width: 500px) {
   #noteBox #noteArea {
-    bottom: 200px;
+    width: 300px;
+    height: 200px;
   }
 }
-#noteBox #noteUpdateButton {
-  position: fixed;
-  right: 70px;
-  bottom: 70px;
-  padding: 5px 10px;
-  border-radius: 0;
-  box-sizing: border-box;
+#noteBox #noteSaveButton {
+  visibility: hidden;
+  padding: 0px 6px;
+  cursor: pointer;
+}
+#noteBox #notePreviewButton {
+  margin-top: 5px;
+  padding: 5px 5px;
   cursor: pointer;
 }
 @media screen and (min-width: 1001px) {
-  #noteBox #noteUpdateButton {
-    bottom: 120px;
+  #noteBox #notePreviewButton {
+    padding: 12px 45px;
   }
 }
-#noteBox #noteButton {
-  position: fixed;
-  right: 0;
-  bottom: 70px;
-  padding: 5px 10px;
-  border-radius: 0;
+
+.gg-notes {
+  background: #fff;
+  --ggs: 2.0;
+}
+
+.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green {
+  transform: scale(var(--ggs, 1));
+}
+
+.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green,
+.gg-spinner::after,
+.gg-circle::after,
+.gg-circle-red::after,
+.gg-circle-green::after,
+.gg-spinner::before,
+.gg-circle::before,
+.gg-circle-red::before,
+.gg-circle-green::before {
   box-sizing: border-box;
-  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
 }
-@media screen and (min-width: 1001px) {
-  #noteBox #noteButton {
-    bottom: 120px;
+
+.gg-spinner::after, .gg-circle::after, .gg-circle-red::after, .gg-circle-green::after,
+.gg-spinner::before,
+.gg-circle::before,
+.gg-circle-red::before,
+.gg-circle-green::before {
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+}
+
+.gg-spinner::before, .gg-circle::before, .gg-circle-red::before, .gg-circle-green::before {
+  -webkit-animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+          animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+  border: 3px solid transparent;
+  border-top-color: currentColor;
+}
+
+.gg-spinner::after, .gg-circle::after, .gg-circle-red::after, .gg-circle-green::after {
+  border: 3px solid;
+  opacity: 0.2;
+  background: #000;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green {
+  --ggs: 0.65;
+}
+
+.gg-circle:before, .gg-circle-red:before, .gg-circle-green:before {
+  content: none;
+}
+.gg-circle:after, .gg-circle-red:after, .gg-circle-green:after {
+  opacity: 1;
+}
+
+.gg-circle-green:after {
+  color: #03AF7A;
+  background: #03AF7A;
+}
+
+.gg-circle-red:after {
+  color: #FF4B00;
+  background: #FF4B00;
 }
