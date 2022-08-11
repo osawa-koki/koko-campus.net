@@ -43,18 +43,15 @@ func MypageModel(digit string, userId string) *string {
 
 		// 教科一覧の取得
 		var subjectsDataMap []map[string]string = []map[string]string{}
-		SQL.Add("SELECT s.subject, s.subject_name, sc.category FROM subjects s")
-		SQL.Add("INNER JOIN subjects_category sc ON s.subject = sc.subject;")
+		SQL.Add("SELECT subject, subject_name FROM subjects;")
 		if Rows := SelectAll(&SQL); Rows != nil {
 			for Rows.Next() {
 				var subj string
 				var subjName string
-				var category string
-				if err := Rows.Scan(&subj, &subjName, &category); err == nil {
+				if err := Rows.Scan(&subj, &subjName); err == nil {
 					subjectsDataMap = append(subjectsDataMap, map[string]string{
 						"Subject":     subj,
 						"SubjectName": subjName,
-						"Category":    category,
 					})
 				}
 			}
@@ -65,7 +62,11 @@ func MypageModel(digit string, userId string) *string {
 
 		// 登録済みのお気に入り科目の取得
 		var bookmarked []map[string]string = []map[string]string{}
-		SQL.Add("SELECT subject, lesson, page FROM bookmark")
+		SQL.Add("SELECT b.subject, IFNULL(b.lesson, '') AS lesson, IFNULL(b.page, '') AS page,")
+		SQL.Add("(SELECT subject_name FROM subjects WHERE subject = b.subject) AS subject_name,")
+		SQL.Add("IFNULL((SELECT lesson_name FROM subjects_lesson WHERE subject = b.subject AND subject_lesson = b.lesson), '') AS lesson_name,")
+		SQL.Add("IFNULL((SELECT page_name FROM subjects_page WHERE subject = b.subject AND subject_lesson = b.lesson AND subject_page = b.page), '') AS page_name")
+		SQL.Add("FROM bookmark b")
 		SQL.Add("WHERE user_id = ?;")
 		SQL.AddParam(userId)
 		if Rows := SelectAll(&SQL); Rows != nil {
@@ -73,11 +74,17 @@ func MypageModel(digit string, userId string) *string {
 				var subject string
 				var lesson string
 				var page string
-				if err := Rows.Scan(&subject, &lesson, &page); err == nil {
+				var subjectName string
+				var lessonName string
+				var pageName string
+				if err := Rows.Scan(&subject, &lesson, &page, &subjectName, &lessonName, &pageName); err == nil {
 					bookmarked = append(bookmarked, map[string]string{
-						"Subject": subject,
-						"Lesson":  lesson,
-						"Page":    page,
+						"Subject":     subject,
+						"Lesson":      lesson,
+						"Page":        page,
+						"SubjectName": subjectName,
+						"LessonName":  lessonName,
+						"PageName":    pageName,
 					})
 				}
 			}

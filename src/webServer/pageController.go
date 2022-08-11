@@ -52,8 +52,8 @@ func pageController(RR *RequestResponse) {
 		strHTML = RegisterController(RR, digit)
 	case "M": // Need To Login
 		urlCheck = true
-		tmplMap.addCSS("M/00")
-		tmplMap.addJS("M/00")
+		tmplMap.addCSS("M/00", "M/" + digit)
+		tmplMap.addJS("M/00", "M/" + digit)
 		tmplMap.Title = "マイページ"
 		strHTML = MypageController(RR, digit)
 	case "P":
