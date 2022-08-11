@@ -3,6 +3,8 @@
 const sb = window.innerWidth <= 500;
 const tb = 501 <= window.innerWidth && window.innerWidth <= 1000;
 const fb = 1001 <= window.innerWidth;
+const sbtb = window.innerWidth <= 1000;
+const tbfb = 501 <= window.innerWidth;
 
 
 
@@ -32,3 +34,8 @@ const mailCheck = regex(mailRegex);
 const regexGrouping = (a, b) => a.match(b).groups;
 
 
+const eraser = target => {
+	while (target.firstChild) {
+		target.removeChild(target.firstChild);
+	}
+};
