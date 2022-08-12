@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="1200"
+     viewBox="0 0 600 1200"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="switch-説明.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\switch-説明.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.530399526956313"
+         inkscape:cx="1.88537121391959"
+         inkscape:cy="632.542042270022"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid22703" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="366.618661961246"
+             y="569.258795118007"
+             width="137.370853544229"
+             height="68.2475812692065"
+             id="rect11915" />
+        <rect
+             x="367.647386908304"
+             y="844.646304281642"
+             width="118.778386539606"
+             height="70.7014205592893"
+             id="rect8131" />
+        <rect
+             x="375.188871767962"
+             y="861.614645215872"
+             width="114.06495850232"
+             height="49.962337195231"
+             id="rect3267" />
+        <rect
+             x="394.985269524562"
+             y="187.59443588398"
+             width="149.887011585693"
+             height="77.3002198114895"
+             id="rect3873" />
+        <rect
+             x="421.278171562741"
+             y="23.996857873827"
+             width="147.980623555266"
+             height="57.3258271430312"
+             id="rect8328" />
+        <rect
+             x="25.3300170898438"
+             y="23.9968585968018"
+             width="760.313880494795"
+             height="1200.18380671878"
+             id="rect9323" />
+        <rect
+             x="408.613159179688"
+             y="29.3294925689697"
+             width="149.313781738281"
+             height="50.6600341796875"
+             id="rect24943" />
+        <rect
+             x="37.9950256347656"
+             y="61.9918823242188"
+             width="556.593811035156"
+             height="695.242309570312"
+             id="rect3555" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1900"
+             x="-0.0814569962011367"
+             y="-0.158521342420883"
+             width="1.16291399240227"
+             height="1.31704268484177">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="7.28547622769178"
+                 id="feGaussianBlur1902" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1117"
+             x="-0.0561207782182238"
+             y="-0.156647503780223"
+             width="1.11224155643645"
+             height="1.31329500756045">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.69880947079208"
+                 id="feGaussianBlur1119" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter9557"
+             x="-0.0440776229610191"
+             y="-0.0723700510359536"
+             width="1.08815524592204"
+             height="1.14474010207191">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="3.35206832717747"
+                 id="feGaussianBlur9559" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text9321"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect9323)"
+             transform="matrix(0.928058885894466,0,0,0.928058885894466,-0.844043500843573,-11.1219276287293)"><tspan
+                 x="25.330078125"
+                 y="63.37109375"
+                 id="tspan1031"><tspan
+     style="fill:#ab00ff"
+     id="tspan1029">switch</tspan> (対象の値) {
+</tspan><tspan
+                 x="25.330078125"
+                 y="113.37109375"
+                 id="tspan1033">
+</tspan><tspan
+                 x="25.330078125"
+                 y="168.0390625"
+                 id="tspan1037">    <tspan
+     style="fill:#ff8500"
+     id="tspan1035">case</tspan> 値1 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="218.0390625"
+                 id="tspan1039">
+</tspan><tspan
+                 x="25.330078125"
+                 y="268.0390625"
+                 id="tspan1047">        <tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1041">//</tspan><tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1043">処理</tspan><tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1045">1</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="318.0390625"
+                 id="tspan1049">
+</tspan><tspan
+                 x="25.330078125"
+                 y="372.70703125"
+                 id="tspan1053">    <tspan
+     style="fill:#ff8c00"
+     id="tspan1051">case</tspan> 値2 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="422.70703125"
+                 id="tspan1055">
+</tspan><tspan
+                 x="25.330078125"
+                 y="472.70703125"
+                 id="tspan1063">        <tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1057">//</tspan><tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1059">処理</tspan><tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1061">2</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="522.70703125"
+                 id="tspan1065">
+</tspan><tspan
+                 x="25.330078125"
+                 y="572.70703125"
+                 id="tspan1067">        break;
+</tspan><tspan
+                 x="25.330078125"
+                 y="622.70703125"
+                 id="tspan1069">
+</tspan><tspan
+                 x="25.330078125"
+                 y="677.375"
+                 id="tspan1073">    <tspan
+     style="fill:#ff9100"
+     id="tspan1071">case</tspan> 値3 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="727.375"
+                 id="tspan1075">
+</tspan><tspan
+                 x="25.330078125"
+                 y="777.375"
+                 id="tspan1083">        <tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1077">//</tspan><tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1079">処理</tspan><tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1081">3</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="827.375"
+                 id="tspan1085">
+</tspan><tspan
+                 x="25.330078125"
+                 y="877.375"
+                 id="tspan1087">        break;
+</tspan><tspan
+                 x="25.330078125"
+                 y="927.375"
+                 id="tspan1089">
+</tspan><tspan
+                 x="25.330078125"
+                 y="977.375"
+                 id="tspan1093">    <tspan
+     style="fill:#ff9a00"
+     id="tspan1091">default</tspan> :
+</tspan><tspan
+                 x="25.330078125"
+                 y="1027.375"
+                 id="tspan1095">
+</tspan><tspan
+                 x="25.330078125"
+                 y="1082.04296875"
+                 id="tspan1103">        <tspan
+     style="fill:#7e7f7d"
+     id="tspan1097">//No! </tspan><tspan
+     style="fill:#7e7f7d"
+     id="tspan1099">マッチ</tspan><tspan
+     style="fill:#7c7b80"
+     id="tspan1101">
+</tspan></tspan><tspan
+                 x="25.330078125"
+                 y="1132.04296875"
+                 id="tspan1107"><tspan
+                     style="fill:#7c7b80"
+                     id="tspan1105">
+</tspan></tspan><tspan
+                 x="25.330078125"
+                 y="1182.04296875"
+                 id="tspan1111"><tspan
+                     style="font-size:32px"
+                     id="tspan1109">}</tspan></tspan></text>
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 220,160 v 20 h -90 v 90 h 90 v 30"
+             id="path31341"
+             sodipodi:nodetypes="cccccc" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 240,160 v 45"
+             id="path31551"
+             sodipodi:nodetypes="cc" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 240,250 v 30 h 100 v 90 h -100 v 25"
+             id="path31882" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 240,440 v 50 h 75 v 20 h 255"
+             id="path31997"
+             sodipodi:nodetypes="ccccc" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 220,345 v 15 h -90 v 200 h 90 v 20"
+             id="path32192" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 240,345 v 25"
+             id="path32194" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 220,630 v 20 h -90 v 200 h 60 v 15"
+             id="path32484" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 239.333420614264,727.992406559014 v 45 h 75 v 25 h 255"
+             id="path32521" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 190,905 v 30 h 135 v 20"
+             id="path32739" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 570,510 v 660"
+             id="path32741" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 325,1010 v 25 h 245"
+             id="path32743" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 232.928932188135,197.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 212.928932188135,292.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-1" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 232.928932188135,387.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-0" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 240,630 v 50"
+             id="path32194-5" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 232.928932188135,672.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-0-8" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 212.928932188135,572.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-06" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 182.928932188135,857.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-04" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 317.928932188135,947.928932188135 7.071067811865,7.071067811865 7.071067811865,-7.071067811865"
+             id="path3164-2" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 562.928932188135,1162.92893218814 7.071067811865,7.07106781186 7.071067811865,-7.07106781186"
+             id="path3164-08" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 562.262352802398,805.063474370879 7.071067811866,-7.071067811865 -7.071067811866,-7.071067811865"
+             id="path3164-065" />
+        <path
+             style="fill:none;stroke:#008500;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 562.92893218813,1042.07106781187 7.07106781187,-7.07106781187 -7.07106781187,-7.07106781186"
+             id="path3164-5" />
+        <text
+             xml:space="preserve"
+             id="text8326"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect8328)"
+             transform="translate(63.5733977560069,-3.9994763123045)"><tspan
+                 x="421.27734375"
+                 y="43.0849609375"
+                 id="tspan1117"><tspan
+     style="fill:#ff0000"
+     id="tspan1113">●</tspan><tspan
+     style="fill:#ff0000"
+     id="tspan1115">true</tspan>
+</tspan><tspan
+                 x="421.27734375"
+                 y="70.5849609375"
+                 id="tspan1123"><tspan
+                     style="fill:#0000ff"
+                     id="tspan1119">●</tspan><tspan
+                     style="fill:#0000ff"
+                     id="tspan1121">false</tspan></tspan></text>
+        <path
+             id="path1644"
+             style="opacity:0.406417;fill:#ff9a00;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter1900);stop-color:#000000"
+             d="m 570.324783325195,229.072601318359 c 0,23.949020083325 -46.426020620494,43.363536834717 -103.695419311523,43.363536834717 -27.223858715206,0 -51.997420486232,-4.387132013587 -70.498432799284,-11.562999614247 -3.607870925737,-1.399361486025 -37.143144668047,36.688020690216 -40.24559670348,35.0884090805 -2.905998520539,-1.498320979078 24.588095733521,-42.672083802465 22.173698536525,-44.325955989385 -9.595901124183,-6.573232439742 -15.125088345285,-14.29808911722 -15.125088345285,-22.562990311585 0,-23.949020083325 46.426020620495,-43.363536834716 103.695419311524,-43.363536834716 57.269398691028,0 103.695419311522,19.414516751391 103.695419311523,43.363536834716 z"
+             sodipodi:nodetypes="ssssssss"
+             transform="matrix(0.898527802116429,0,0,0.898527802116429,34.3163494873382,31.8110994242764)" />
+        <text
+             xml:space="preserve"
+             id="text3871"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3873)"
+             transform="translate(-1.40120074779965,29.6817689715153)"><tspan
+                 x="394.984375"
+                 y="201.375"
+                 id="tspan1125">break;に出会うまで
+</tspan><tspan
+                 x="394.984375"
+                 y="220.5087890625"
+                 id="tspan1127">次の処理に続く!!</tspan></text>
+        <path
+             id="path1115"
+             style="opacity:0.3796791444;fill:#59de00;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter1117);stop-color:#000000"
+             d="m 507.487520567382,881.413178680398 c 0,19.879646982541 -33.723466709426,35.99528503418 -75.323471069336,35.99528503418 -19.698701123875,0 -37.631267712149,-3.613565527042 -51.053336513006,-9.529231030162 -3.725956125886,-1.642184259899 -71.525666016557,-9.070512737465 -74.497744259198,-11.039447718402 -2.434913677548,-1.613075539702 59.82421187357,2.282349198586 57.966981568677,0.484218601832 -4.955204019286,-4.797522384145 -7.739371865809,-10.198797666746 -7.739371865809,-15.910824887448 0,-19.879646982542 33.723466709426,-35.99528503418 75.323471069336,-35.99528503418 41.600004359909,0 75.323471069336,16.115638051638 75.323471069336,35.99528503418 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             id="text3265"
+             style="line-height:1.25;font-family:Consolas;font-size:12px;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3267)" />
+        <text
+             xml:space="preserve"
+             id="text8129"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect8131)"
+             transform="translate(10.3695416820291,9.54148485965754)"><tspan
+                 x="367.646484375"
+                 y="858.427734375"
+                 id="tspan1129">いずれにもマッチ
+</tspan><tspan
+                 x="367.646484375"
+                 y="877.5615234375"
+                 id="tspan1131">しなかった場合の
+</tspan><tspan
+                 x="367.646484375"
+                 y="896.6953125"
+                 id="tspan1133">処理</tspan></text>
+        <path
+             id="path9489"
+             style="opacity:0.379679;fill:#ffff00;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter9557);stop-color:#000000;fill-opacity:1"
+             d="m 503.394104003906,598.605346679687 c 0,23.428389990549 -37.773897446816,42.420852661133 -84.370361328125,42.420852661133 -46.596463881309,0 -84.370361328126,-18.992462670584 -84.370361328125,-42.420852661133 0,-10.903284318424 8.181286126399,-20.845810200639 21.625670750996,-28.360332449816 3.013493674556,-1.684343753732 -38.702697614483,-38.90869921006 -35.193219296749,-40.332548986832 3.71722275257,-1.508134915583 52.06571126042,31.244544571041 56.328786249477,30.230150090115 12.33936582488,-2.936139904415 26.707173718381,-3.958121314599 41.609123624401,-3.958121314599 46.596463881308,0 84.370361328124,18.992462670584 84.370361328125,42.420852661132 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             id="text11913"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect11915)"
+             transform="translate(-12.2549128969435,2.82805682237154)"><tspan
+                 x="366.619140625"
+                 y="583.0390625"
+                 id="tspan1135">break;に出会ったら</tspan><tspan
+                 x="366.619140625"
+                 y="602.1728515625"
+                 id="tspan1137">switchブロックから</tspan><tspan
+                 x="366.619140625"
+                 y="621.306640625"
+                 id="tspan1139">抜け出す</tspan></text>
+    </g>
+</svg>

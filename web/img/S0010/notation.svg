@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="500"
+     viewBox="0 0 600 500"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ケース.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\ケース.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.06079905335291"
+         inkscape:cx="225.301860182268"
+         inkscape:cy="183.352350650423"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="43.3635368347168"
+             y="172.511459350586"
+             width="232.843350457526"
+             height="79.1855917850978"
+             id="rect19699" />
+        <rect
+             x="103.319801330566"
+             y="13.3315877914429"
+             width="369.454833984375"
+             height="63.3250427246094"
+             id="rect2697" />
+        <rect
+             x="43.3635368347168"
+             y="172.511459350586"
+             width="219.645751953125"
+             height="54.6757659912109"
+             id="rect19699-6" />
+        <rect
+             x="43.3635368347168"
+             y="172.511459350586"
+             width="219.645751953125"
+             height="54.6757659912109"
+             id="rect19699-5" />
+        <rect
+             x="43.3635368347168"
+             y="172.511459350586"
+             width="219.645751953125"
+             height="54.6757659912109"
+             id="rect19699-8" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text2695"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2697)"
+             transform="translate(22,12)"><tspan
+                 x="103.3203125"
+                 y="52.70703125"
+                 id="tspan4215">「font」+「size」</tspan></text>
+        <rect
+             style="fill:#d0ffff;fill-opacity:1;stroke:#000000;stroke-width:1.07676;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect4549"
+             width="280.843536376953"
+             height="171.492034912109"
+             x="15.9494018554688"
+             y="98.7654495239258" />
+        <text
+             xml:space="preserve"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="89.4405059814453"
+             y="169.428497314453"
+             id="text6173"><tspan
+                 sodipodi:role="line"
+                 id="tspan6171"
+                 x="89.4405059814453"
+                 y="169.428497314453">↪font-size</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="17.7963962554932"
+             y="131.721069335938"
+             id="text7753"><tspan
+                 sodipodi:role="line"
+                 id="tspan7751"
+                 x="17.7963962554932"
+                 y="131.721069335938">・ケバブケース</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text19697"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19699)"
+             transform="translate(-2,22)"><tspan
+                 x="43.36328125"
+                 y="190.23046875"
+                 id="tspan4217">・htmlでのクラス・id
+</tspan><tspan
+                 x="43.36328125"
+                 y="214.8310546875"
+                 id="tspan4219">・ファイル名
+</tspan><tspan
+                 x="43.36328125"
+                 y="239.431640625"
+                 id="tspan4221">・cssプロパティ</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 24.3951970088014,181.683409342295 h 265.8373413029286"
+             id="path23204" />
+        <rect
+             style="fill:#d0ffff;fill-opacity:1;stroke:#000000;stroke-width:1.07676;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect4549-49"
+             width="280.843536376953"
+             height="171.492034912109"
+             x="15.9494018554688"
+             y="284.257476806641" />
+        <text
+             xml:space="preserve"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="89.4405059814453"
+             y="354.920532226562"
+             id="text6173-9"><tspan
+                 sodipodi:role="line"
+                 id="tspan6171-2"
+                 x="89.4405059814453"
+                 y="354.920532226562">↪FontSize</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="17.7964019775391"
+             y="317.213104248047"
+             id="text7753-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan7751-4"
+                 x="17.7964019775391"
+                 y="317.213104248047">・パスカルケース</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text19697-6"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19699-5)"
+             transform="translate(-1.99999264804205,207.492027078178)"><tspan
+                 x="43.36328125"
+                 y="190.23046875"
+                 id="tspan4223">・プログラムコード</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 24.3952043607589,367.175436420473 h 265.8373413029291"
+             id="path23204-2" />
+        <rect
+             style="fill:#ff6581;fill-opacity:1;stroke:#000000;stroke-width:1.07676;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect4549-4"
+             width="280.843536376953"
+             height="171.492034912109"
+             x="310.792938232422"
+             y="98.7654495239258" />
+        <text
+             xml:space="preserve"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="384.284027099609"
+             y="169.428497314453"
+             id="text6173-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan6171-4"
+                 x="384.284027099609"
+                 y="169.428497314453">↪fontSize</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="312.639923095703"
+             y="131.721069335938"
+             id="text7753-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan7751-6"
+                 x="312.639923095703"
+                 y="131.721069335938">・キャメルケース</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text19697-3"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19699-6)"
+             transform="translate(292.843529984677,21.9999998492511)"><tspan
+                 x="43.36328125"
+                 y="190.23046875"
+                 id="tspan4225">・プログラムコード</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 319.238726993478,181.683409191546 h 265.837341302929"
+             id="path23204-9" />
+        <rect
+             style="fill:#d0ffff;fill-opacity:1;stroke:#000000;stroke-width:1.07676;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect4549-3"
+             width="280.843536376953"
+             height="171.492034912109"
+             x="310.792938232422"
+             y="284.257476806641" />
+        <text
+             xml:space="preserve"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="384.284057617188"
+             y="354.920532226562"
+             id="text6173-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan6171-5"
+                 x="384.284057617188"
+                 y="354.920532226562">↪font_size</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="312.639953613281"
+             y="317.213104248047"
+             id="text7753-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan7751-7"
+                 x="312.639953613281"
+                 y="317.213104248047">・スネークケース</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text19697-0"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19699-8)"
+             transform="translate(292.843542429507,207.492030628885)"><tspan
+                 x="43.36328125"
+                 y="190.23046875"
+                 id="tspan4227">・データベース</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 319.238739438308,367.17543997118 h 265.837341302929"
+             id="path23204-8" />
+    </g>
+</svg>

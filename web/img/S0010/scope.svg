@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="スコープ.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\スコープ.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.50019640780845"
+         inkscape:cx="159.979052576591"
+         inkscape:cy="218.304748828473"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="309.959414367145"
+             y="84.6555819884459"
+             width="119.317710046707"
+             height="40.6613425298835"
+             id="rect3645" />
+        <rect
+             x="392.157212909109"
+             y="290.81851005399"
+             width="129.619271093756"
+             height="65.0453069488666"
+             id="rect45178" />
+        <rect
+             x="34.6621280399724"
+             y="26.6631754153634"
+             width="595.921970533372"
+             height="409.279742625828"
+             id="rect3881" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter43054"
+             x="-0.0368569377111924"
+             y="-0.0927903647236245"
+             width="1.07371387542238"
+             height="1.18558072944725">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="3.42763983020075"
+                 id="feGaussianBlur43056" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter951"
+             x="-0.062340502595237"
+             y="-0.187463756452041"
+             width="1.12468100519047"
+             height="1.37492751290408">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.52978109793257"
+                 id="feGaussianBlur953" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.0891265597;fill:#ff0000;fill-opacity:1;stroke-width:3.63561;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect40822-8-8"
+             width="462.939392089844"
+             height="26.9964656829834"
+             x="22.6636981964111"
+             y="136.037567138672" />
+        <rect
+             style="opacity:0.0891265597;fill:#ff0000;fill-opacity:1;stroke-width:3.6343;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect40822-8"
+             width="462.606079101562"
+             height="26.9964656829834"
+             x="22.6636981964111"
+             y="82.8222274780273" />
+        <rect
+             style="opacity:0.0891265597;fill:#ff0000;fill-opacity:1;stroke-width:1.03237;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect40822"
+             width="37.3284454345703"
+             height="26.9964656829834"
+             x="447.941345214844"
+             y="37.3284454345703" />
+        <text
+             xml:space="preserve"
+             id="text3879"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3881)"><tspan
+                 x="34.662109375"
+                 y="61.37109375"
+                 id="tspan7563"><tspan
+     style="font-style:italic;-inkscape-font-specification:'Consolas Italic';fill:#9e00ff"
+     id="tspan7561">function</tspan> pokemon() {
+</tspan><tspan
+                 x="34.662109375"
+                 y="111.37109375"
+                 id="tspan7567">    <tspan
+     style="fill:#ff0000"
+     id="tspan7565">let</tspan> x;
+</tspan><tspan
+                 x="34.662109375"
+                 y="166.0390625"
+                 id="tspan7577">    x <tspan
+     style="fill:#ff8d00"
+     id="tspan7569">=</tspan> <tspan
+     style="fill:#008d00"
+     id="tspan7571">&quot;</tspan><tspan
+     style="fill:#008d00"
+     id="tspan7573">ピカチュウ</tspan><tspan
+     style="fill:#008d00"
+     id="tspan7575">&quot;</tspan>;
+</tspan><tspan
+                 x="34.662109375"
+                 y="216.0390625"
+                 id="tspan7581">    console.<tspan
+     style="fill:#0000ff"
+     id="tspan7579">log</tspan>(x);
+</tspan><tspan
+                 x="34.662109375"
+                 y="266.0390625"
+                 id="tspan7583">}
+</tspan><tspan
+                 x="34.662109375"
+                 y="316.0390625"
+                 id="tspan7587"><tspan
+     style="fill:#0000ff"
+     id="tspan7585">pokemon</tspan>();
+</tspan><tspan
+                 x="34.662109375"
+                 y="366.0390625"
+                 id="tspan7591">console.<tspan
+     style="fill:#0000ff"
+     id="tspan7589">log</tspan>(x);</tspan></text>
+        <rect
+             style="opacity:0.0891265597;fill:#ff0000;fill-opacity:1;stroke-width:3.63692;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect40822-8-80"
+             width="463.272674560547"
+             height="26.9964656829834"
+             x="22.6636981964111"
+             y="189.252914428711" />
+        <rect
+             style="opacity:0.0891265597;fill:#ff0000;fill-opacity:1;stroke-width:1.03237;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect40822-8-3"
+             width="37.3284454345703"
+             height="26.9964656829834"
+             x="22.6636981964111"
+             y="242.46826171875" />
+        <ellipse
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:2.94078;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path41242"
+             cx="183.642623901367"
+             cy="98.6537475585938"
+             rx="84.2018966674805"
+             ry="26.5427837371826" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 223.416488967355,120.663757754521 147.058954763322,65.045306914546"
+             id="path42157" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 201.0277057895,125.141514387704 93.090203737144,204.798448222314"
+             id="path42159"
+             sodipodi:nodetypes="cc" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path42371"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="331.825347900391"
+             sodipodi:cy="320.513092041016"
+             sodipodi:r1="10.9935092926025"
+             sodipodi:r2="5.49675464630127"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 341.346006224525,326.009846687317 h -19.041316648268 l 9.520658324134,-16.490263938904 z"
+             inkscape:transform-center-y="0.514927395260145"
+             transform="rotate(35.3752598010812,304.735255921525,260.457179616693)"
+             inkscape:transform-center-x="2.29035128885869" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path42371-5"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="447.775665283203"
+             sodipodi:cy="324.283843994141"
+             sodipodi:r1="10.9935092926025"
+             sodipodi:r2="5.49675464630127"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="-2.53143624793051"
+             d="m 457.296323607337,329.780598640442 h -19.041316648268 l 9.520658324134,-16.490263938904 z"
+             transform="rotate(-2.57850010428331,-2742.85214713009,2127.33485967123)"
+             inkscape:transform-center-x="-0.247288702335993" />
+        <g
+             id="g42874"
+             transform="rotate(20.2099208137828,138.901389773449,1510.39477714642)">
+            <rect
+                 style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect42768"
+                 width="61.2745628356934"
+                 height="16.9683418273926"
+                 x="-192.307861328125"
+                 y="301.659393310547" />
+            <rect
+                 style="fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect42768-3"
+                 width="61.2745628356934"
+                 height="16.9683418273926"
+                 x="278.563598632812"
+                 y="152.715072631836"
+                 transform="rotate(90)" />
+        </g>
+        <path
+             id="path42898"
+             style="opacity:0.698752;fill:#ffff00;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter43054);stop-color:#000000"
+             d="m 537.262466430664,320.957977294922 c -9e-13,24.48141875601 -38.200031696283,44.327529907226 -85.322158813476,44.327529907226 -47.122127117193,0 -85.322158813477,-19.846111151216 -85.322158813477,-44.327529907226 0,-5.978046067072 -1.257305205278,-6.494930279894 2.871933168478,-11.698721640869 2.487640198854,-3.134999582076 -55.424002589159,-21.069401842043 -55.424002589159,-21.069401842043 0,0 62.655610643151,7.245003899793 68.042874859799,4.86661463334 14.882128333228,-6.570216879348 48.771514341278,-16.426021057655 69.831353374359,-16.426021057655 47.122127117194,0 85.322158813476,19.846111151217 85.322158813476,44.327529907227 z"
+             sodipodi:nodetypes="sssscsss" />
+        <text
+             xml:space="preserve"
+             id="text45176"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect45178)"><tspan
+                 x="392.15625"
+                 y="302.630859375"
+                 id="tspan7593">関数のブロック内で宣</tspan><tspan
+                 x="392.15625"
+                 y="319.03125"
+                 id="tspan7595">言された変数は、その</tspan><tspan
+                 x="392.15625"
+                 y="335.431640625"
+                 id="tspan7597">ブロック外で参照でき</tspan><tspan
+                 x="392.15625"
+                 y="351.83203125"
+                 id="tspan7599">ない</tspan></text>
+        <path
+             id="path883"
+             style="opacity:0.572202;fill:#00ff00;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter951);stop-color:#000000"
+             d="m 446.817283630371,104.724021911621 c 0,16.014160420402 -33.872685770042,28.996202468872 -75.656761169433,28.996202468872 -41.784075399392,0 -75.656761169434,-12.98204204847 -75.656761169434,-28.996202468872 0,-3.297780238182 1.436430791875,-6.4669781660143 4.082578040878,-9.4207032709864 1.52144992247,-1.6982973391407 -29.315507097727,-7.0961043456709 -27.037314592285,-8.6354202109463 1.919870415952,-1.297206879352 36.851472267133,1.2386452712334 39.252365582275,0.07595592734 13.856981754076,-6.710570987213 35.296159999178,-11.0160349142794 59.359132138566,-11.0160349142794 41.784075399392,10e-14 75.656761169433,12.9820420484697 75.656761169433,28.9962024688721 z"
+             sodipodi:nodetypes="ssssssss"
+             transform="matrix(1,0,0,0.69533393907969,0,25.771944690833)" />
+        <text
+             xml:space="preserve"
+             id="text3643"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3645)"
+             transform="translate(3.33237324309374,4.66579385735794)"
+             inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\text3643.png"
+             inkscape:export-xdpi="96"
+             inkscape:export-ydpi="96"><tspan
+                 x="309.958984375"
+                 y="96.46875"
+                 id="tspan7601">関数内で変数を宣言!</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="600"
+     viewBox="0 0 600 600"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="styleプロパティ.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\styleプロパティ.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.530399526956311"
+         inkscape:cx="-101.810045551658"
+         inkscape:cy="460.973261803341"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 298.418387305929,239.754914126318 v 190.71927885117 l 38.7391789836,2e-12"
+             id="path14696-9" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 55.9926683722632,69.3242560799449 10e-14,85.3221613291631 121.3174481399037,10e-13"
+             id="path14696" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 177.310116512167,154.646417409109 v 85.322161329163 l 121.317448139904,1e-12"
+             id="path14696-3" />
+        <rect
+             style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect14229"
+             width="305.293365478516"
+             height="49.3268737792969"
+             x="250.633850097656"
+             y="208.639083862305" />
+        <rect
+             style="fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect14059"
+             width="405.2802734375"
+             height="49.3268737792969"
+             x="131.982711791992"
+             y="126.650085449219" />
+        <rect
+             style="fill:#ffff00;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:1.1;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect13829"
+             width="401.280792236328"
+             height="50.6600341796875"
+             x="18.6642227172852"
+             y="42.6610794067383" />
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="152.632888793945"
+             y="162.009002685547"
+             id="text1707"><tspan
+                 sodipodi:role="line"
+                 id="tspan1705"
+                 x="152.632888793945"
+                 y="162.009002685547">documentオブジェクト</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="268.202972412109"
+             y="241.965972900391"
+             id="text6341"><tspan
+                 sodipodi:role="line"
+                 id="tspan6339"
+                 x="268.202972412109"
+                 y="241.965972900391">styleオブジェクト</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="381.950775146484"
+             y="307.959686279297"
+             id="text9777"><tspan
+                 sodipodi:role="line"
+                 id="tspan9775"
+                 x="381.950775146484"
+                 y="307.959686279297">・color</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="346.227264404297"
+                 id="tspan9779">・fontSize</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="384.494842529297"
+                 id="tspan9781">・fontFamily</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="422.762420654297"
+                 id="tspan9783">・width</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="461.029998779297"
+                 id="tspan9785">・height</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="499.297576904297"
+                 id="tspan9787">・padding</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="537.565185546875"
+                 id="tspan9789">・margin</tspan><tspan
+                 sodipodi:role="line"
+                 x="381.950775146484"
+                 y="575.832763671875"
+                 id="tspan9791">・etc...</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="37.3284454345703"
+             y="79.9895248413086"
+             id="text12926"><tspan
+                 sodipodi:role="line"
+                 id="tspan12924"
+                 x="37.3284454345703"
+                 y="79.9895248413086">windowオブジェクト</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 373.953130140123,286.629135866393 c -54.915013744089,76.805371097937 -39.415672776566,236.860967889856 -8e-12,297.960985423904"
+             id="path14846"
+             sodipodi:nodetypes="cc" />
+    </g>
+</svg>

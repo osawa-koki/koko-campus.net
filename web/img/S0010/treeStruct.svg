@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="500"
+     height="800"
+     viewBox="0 0 500 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="木構造.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\木構造.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="true"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.750098204299998"
+         inkscape:cx="-98.6537490368449"
+         inkscape:cy="395.281575532764"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid13482" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="17.3310642242432"
+             y="53.3263511657715"
+             width="622.869567871094"
+             height="682.326965332031"
+             id="rect3621" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text3619"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3621)"
+             transform="matrix(1.20605727298295,0,0,1.20605727298295,26.0721058966727,-45.3535541217061)"><tspan
+                 x="17.33203125"
+                 y="88.033203125"
+                 id="tspan1106">&lt;ul&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="138.033203125"
+                 id="tspan1108">
+</tspan><tspan
+                 x="17.33203125"
+                 y="188.033203125"
+                 id="tspan1110">    &lt;li&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="238.033203125"
+                 id="tspan1112">
+</tspan><tspan
+                 x="17.33203125"
+                 y="288.033203125"
+                 id="tspan1114">        &lt;a&gt;&lt;/a&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="338.033203125"
+                 id="tspan1116">
+</tspan><tspan
+                 x="17.33203125"
+                 y="388.033203125"
+                 id="tspan1118">        &lt;a&gt;&lt;/a&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="438.033203125"
+                 id="tspan1120">
+</tspan><tspan
+                 x="17.33203125"
+                 y="488.033203125"
+                 id="tspan1122">        &lt;a&gt;&lt;/a&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="538.033203125"
+                 id="tspan1124">
+</tspan><tspan
+                 x="17.33203125"
+                 y="588.033203125"
+                 id="tspan1126">    &lt;/li&gt;
+</tspan><tspan
+                 x="17.33203125"
+                 y="638.033203125"
+                 id="tspan1128">
+</tspan><tspan
+                 x="17.33203125"
+                 y="688.033203125"
+                 id="tspan1130">&lt;/ul&gt;</tspan></text>
+        <g
+             id="g7378"
+             transform="matrix(1.20605727298295,0,0,1.20605727298295,26.0721058966727,-45.3535541217061)">
+            <path
+                 style="fill:none;stroke:#fd0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 90.8672933382591,107.920994303315 36.5871749486809,34.079005696685"
+                 id="path13517-4" />
+            <path
+                 style="fill:none;stroke:#fd0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 127.253814746781,136.346705548371 0.200653540159,5.653294451629 -5.653294451629,0.200653540159"
+                 id="path13519-8" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 105.386521408522,143.425711245056 -36.587174948681,-34.079005696685"
+                 id="path13517-4-5" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 69,115 -0.200653540159,-5.653294451629 5.653294451629,-0.200653540159"
+                 id="path13519-8-0" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="115"
+                 y="122.121040344238"
+                 id="text3879"><tspan
+                     sodipodi:role="line"
+                     id="tspan3877"
+                     x="115"
+                     y="122.121040344238">子要素</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="50.693775177002"
+                 y="136.12744140625"
+                 id="text3879-2"><tspan
+                     sodipodi:role="line"
+                     id="tspan3877-9"
+                     x="50.693775177002"
+                     y="136.12744140625">親要素</tspan></text>
+        </g>
+        <g
+             id="g7378-8"
+             transform="matrix(1.20605727298295,0,0,1.20605727298295,149.989889892571,79.6582555203241)">
+            <path
+                 style="fill:none;stroke:#fd0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 90.8672933382591,107.920994303315 36.5871749486809,34.079005696685"
+                 id="path13517-4-69" />
+            <path
+                 style="fill:none;stroke:#fd0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 127.253814746781,136.346705548371 0.200653540159,5.653294451629 -5.653294451629,0.200653540159"
+                 id="path13519-8-9" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 105.386521408522,143.425711245056 -36.587174948681,-34.079005696685"
+                 id="path13517-4-5-0" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 69,115 -0.200653540159,-5.653294451629 5.653294451629,-0.200653540159"
+                 id="path13519-8-0-0" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="115"
+                 y="122.121040344238"
+                 id="text3879-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan3877-4"
+                     x="115"
+                     y="122.121040344238">子要素</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="50.693775177002"
+                 y="136.12744140625"
+                 id="text3879-2-3"><tspan
+                     sodipodi:role="line"
+                     id="tspan3877-9-00"
+                     x="50.693775177002"
+                     y="136.12744140625">親要素</tspan></text>
+        </g>
+        <g
+             id="g1250"
+             style="stroke:#009a00;stroke-opacity:1"
+             transform="matrix(1.20605727298295,0,0,1.20605727298295,-70.1704762805046,-26.4747845021753)">
+            <path
+                 style="fill:none;stroke:#009a00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 350,230 c 12.835491487734,-104.82952595427 -44.769274595694,-163.8981694265281 -150,-160"
+                 id="path7680"
+                 sodipodi:nodetypes="cc" />
+            <path
+                 style="fill:none;stroke:#009a00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 210,80 -10,-10 10,-10"
+                 id="path1166" />
+        </g>
+        <g
+             id="g1250-5"
+             style="stroke:#ff8a00;stroke-opacity:1"
+             transform="matrix(-1.20605727298295,0,0,-1.20605727298295,484.615869291652,365.493829217282)">
+            <path
+                 style="fill:none;stroke:#ff8a00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 350,230 c 12.835491487734,-104.82952595427 -44.769274595694,-163.8981694265281 -150,-160"
+                 id="path7680-6"
+                 sodipodi:nodetypes="cc" />
+            <path
+                 style="fill:none;stroke:#ff8a00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 210,80 -10,-10 10,-10"
+                 id="path1166-8" />
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:19.2969px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#00a700;fill-opacity:1;stroke-width:1.20606"
+             x="333.858703613281"
+             y="106.191513061523"
+             id="text2840"><tspan
+                 sodipodi:role="line"
+                 id="tspan2838"
+                 x="333.858703613281"
+                 y="106.191513061523"
+                 style="stroke-width:1.20606">祖先要素</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:19.2969px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff9400;fill-opacity:1;stroke-width:1.20606"
+             x="7.14522743225098"
+             y="250.727478027344"
+             id="text2840-6"><tspan
+                 sodipodi:role="line"
+                 id="tspan2838-5"
+                 x="7.14522743225098"
+                 y="250.727478027344"
+                 style="stroke-width:1.20606">子孫要素</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1.20606px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 249.434701059977,287.100106473391 c -40.89550136202,78.156475765675 -39.512135684535,160.247804136051 0,247.241740961504"
+             id="path22382"
+             sodipodi:nodetypes="cc" />
+        <text
+             xml:space="preserve"
+             style="font-size:21.709px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:1.20606"
+             x="119.069938659668"
+             y="418.429351806641"
+             id="text1538"><tspan
+                 sodipodi:role="line"
+                 id="tspan1536"
+                 x="119.069938659668"
+                 y="418.429351806641"
+                 style="stroke-width:1.20606">兄弟要素</tspan></text>
+        <path
+             style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:1.13352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 342,381.17257376606 v -63.921035468094"
+             id="path3739" />
+        <path
+             style="fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:1.20606px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 333.55759908912,325.693939208845 8.44240091088,-8.442400910879 8.442400910881,8.442400910879"
+             id="path3856" />
+        <text
+             xml:space="preserve"
+             style="font-size:19.2969px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#0000ff;fill-opacity:1;stroke-width:1.20606"
+             x="347.246704101562"
+             y="354.785278320312"
+             id="text6539"><tspan
+                 sodipodi:role="line"
+                 id="tspan6537"
+                 x="347.246704101562"
+                 y="354.785278320312"
+                 style="stroke-width:1.20606">兄要素</tspan></text>
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1.13352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 342,435.79839704705 v 63.921035468096"
+             id="path3739-2" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1.20606px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 333.55759908912,491.277031604265 8.44240091088,8.442400910881 8.442400910881,-8.442400910881"
+             id="path3856-9" />
+        <text
+             xml:space="preserve"
+             style="font-size:19.2969px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1;stroke-width:1.20606"
+             x="347.246704101562"
+             y="474.184967041016"
+             id="text6539-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan6537-8"
+                 x="347.246704101562"
+                 y="474.184967041016"
+                 style="stroke-width:1.20606">弟要素</tspan></text>
+    </g>
+</svg>

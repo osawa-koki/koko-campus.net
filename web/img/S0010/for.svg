@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="for.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\for.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.06079905335291"
+         inkscape:cx="137.63209868875"
+         inkscape:cy="305.901479619858"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="51.9931920873921"
+             y="79.3229469025598"
+             width="178.643275377194"
+             height="99.3203284746337"
+             id="rect16873" />
+        <rect
+             x="29.3294929568997"
+             y="49.3268745184223"
+             width="605.254081961107"
+             height="375.284193987067"
+             id="rect3023" />
+        <rect
+             x="51.9931907653809"
+             y="79.3229446411133"
+             width="178.643280029297"
+             height="99.3203277587891"
+             id="rect16873-7" />
+        <rect
+             x="51.9931907653809"
+             y="79.3229446411133"
+             width="178.643280029297"
+             height="99.3203277587891"
+             id="rect16873-5" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text3021"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3023)"
+             transform="translate(0,-16)"><tspan
+                 x="29.330078125"
+                 y="84.033203125"
+                 id="tspan885">for (<tspan
+     style="fill:#ff0000"
+     id="tspan879">i = 0</tspan>; <tspan
+     style="fill:#0000ff"
+     id="tspan881">i &lt; N</tspan>; <tspan
+     style="fill:#009200"
+     id="tspan883">i++</tspan>) {
+</tspan><tspan
+                 x="29.330078125"
+                 y="134.033203125"
+                 id="tspan887">
+</tspan><tspan
+                 x="29.330078125"
+                 y="184.033203125"
+                 id="tspan889">
+</tspan><tspan
+                 x="29.330078125"
+                 y="238.701171875"
+                 id="tspan891">    //繰り返す処理
+</tspan><tspan
+                 x="29.330078125"
+                 y="288.701171875"
+                 id="tspan893">
+</tspan><tspan
+                 x="29.330078125"
+                 y="338.701171875"
+                 id="tspan895">
+</tspan><tspan
+                 x="29.330078125"
+                 y="388.701171875"
+                 id="tspan897">}</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text16871"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect16873);fill:#ff0000;fill-opacity:1"
+             transform="translate(41.9984289432443,9.99869078603696)"><tspan
+                 x="51.994140625"
+                 y="91.134765625"
+                 id="tspan899">一番最初に一度だけ実行
+</tspan><tspan
+                 x="51.994140625"
+                 y="107.53515625"
+                 id="tspan901">通常は「i」に「0」を代入</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text16871-5"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect16873-7);fill:#0000ff;fill-opacity:1"
+             transform="translate(201.435573407012,9.676853937435)"><tspan
+                 x="51.994140625"
+                 y="91.134765625"
+                 id="tspan903">反復処理を継続するかの判定
+</tspan><tspan
+                 x="51.994140625"
+                 y="107.53515625"
+                 id="tspan905">「i」が「N」よりも小さい限り
+</tspan><tspan
+                 x="51.994140625"
+                 y="123.935546875"
+                 id="tspan907">反復処理を継続</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text16871-57"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect16873-5);fill:#007600;fill-opacity:1"
+             transform="translate(371.271723443819,10.3638411195708)"><tspan
+                 x="51.994140625"
+                 y="91.134765625"
+                 id="tspan909">反復処理が一回終了する度に実</tspan><tspan
+                 x="51.994140625"
+                 y="107.53515625"
+                 id="tspan911">行する処理
+</tspan><tspan
+                 x="51.994140625"
+                 y="123.935546875"
+                 id="tspan913">「i++」は「i = i + 1」と同じ</tspan><tspan
+                 x="51.994140625"
+                 y="140.3359375"
+                 id="tspan915">で、「i」の値に「1」加算する</tspan></text>
+    </g>
+</svg>
