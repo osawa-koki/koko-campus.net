@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="構造体.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\c言語入門\pics\構造体.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.414213562"
+         inkscape:cx="298.399061739446"
+         inkscape:cy="207.535840333003"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="-227.688383482"
+             y="509.11688232"
+             width="879.640835564"
+             height="557.200143428"
+             id="rect5176" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text5174"
+             style="line-height:1.25;font-family:Consolas;font-size:32px;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect5176)" />
+        <rect
+             style="opacity:0.611475;fill:none;stroke:#000000;stroke-width:1.12831;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect6682"
+             width="238.16667175293"
+             height="220.489013671875"
+             x="196.639831542969"
+             y="14.9134016036987" />
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="233.345245361328"
+             y="60.7903671264648"
+             id="text8020"><tspan
+                 sodipodi:role="line"
+                 id="tspan8018"
+                 x="233.345245361328"
+                 y="60.7903671264648">ポケモン構造体</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="246.073165893555"
+             y="105.137092590332"
+             id="text9864"><tspan
+                 sodipodi:role="line"
+                 id="tspan9862"
+                 x="246.073165893555"
+                 y="105.137092590332">・図鑑番号(no)</tspan><tspan
+                 sodipodi:role="line"
+                 x="246.073165893555"
+                 y="127.637084960938"
+                 id="tspan12250" /><tspan
+                 sodipodi:role="line"
+                 x="246.073165893555"
+                 y="152.237670898438"
+                 id="tspan9866">・名前(name)</tspan><tspan
+                 sodipodi:role="line"
+                 x="246.073165893555"
+                 y="174.737670898438"
+                 id="tspan12252" /><tspan
+                 sodipodi:role="line"
+                 x="246.073165893555"
+                 y="199.338256835938"
+                 id="tspan9868">・タイプ(type)</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ff0200;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path12966-4"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="131.521865844727"
+             sodipodi:cy="-245.28987121582"
+             sodipodi:r1="72.2772445678711"
+             sodipodi:r2="36.1386222839355"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="13.6115811592201"
+             transform="matrix(0.250700986990319,0,0,-0.753298453357812,283.545317257898,85.8070135346429)"
+             d="m 194.115795756044,-209.151248931885 h -125.1878598226346 l 62.5939299113176,-108.415866851806 z" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path12966-4-2"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="131.521865844727"
+             sodipodi:cy="-245.28987121582"
+             sodipodi:r1="72.2772445678711"
+             sodipodi:r2="36.1386222839355"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="3.71992951917844"
+             transform="matrix(0.130714737358728,0.213926721835209,0.943335193183088,-0.576402101431527,418.552585443579,106.780559479144)"
+             d="m 194.115795756044,-209.151248931885 h -125.1878598226346 l 62.5939299113176,-108.415866851806 z"
+             inkscape:transform-center-x="12.9544388341418" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#0000ff;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path12966-4-2-1"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="131.521865844727"
+             sodipodi:cy="-245.28987121582"
+             sodipodi:r1="72.2772445678711"
+             sodipodi:r2="36.1386222839355"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="3.71992951917844"
+             transform="matrix(-0.130714737358728,0.213926721835209,-0.943335193183088,-0.576402101431527,210.291859966528,107.479821569344)"
+             inkscape:transform-center-x="-12.9544388341414"
+             d="m 194.115795756044,-209.151248931885 h -125.1878598226346 l 62.5939299113176,-108.415866851806 z" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="16.2634563446045"
+             y="362.038696289062"
+             id="text14755"><tspan
+                 sodipodi:role="line"
+                 id="tspan14753"
+                 x="16.2634563446045"
+                 y="362.038696289062">チコリータ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="236.880783081055"
+             y="364.867095947266"
+             id="text15683"><tspan
+                 sodipodi:role="line"
+                 id="tspan15681"
+                 x="236.880783081055"
+                 y="364.867095947266">ヒノアラシ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="461.74072265625"
+             y="363.452880859375"
+             id="text16611"><tspan
+                 sodipodi:role="line"
+                 id="tspan16609"
+                 x="461.74072265625"
+                 y="363.452880859375">ワニノコ</tspan></text>
+    </g>
+</svg>

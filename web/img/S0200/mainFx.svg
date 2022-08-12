@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="main関数.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\c言語入門\pics\main関数.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="43.9942394353496"
+         inkscape:cy="381.949987825081"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter39747"
+             x="-0.0652886700332989"
+             y="-0.15725782297714"
+             width="1.1305773400666"
+             height="1.31451564595428">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.14171325002251"
+                 id="feGaussianBlur39749" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter39747-7"
+             x="-0.0652886700332989"
+             y="-0.15725782297714"
+             width="1.1305773400666"
+             height="1.31451564595428">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.14171325002251"
+                 id="feGaussianBlur39749-3" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter39747-7-0"
+             x="-0.0652886700332989"
+             y="-0.15725782297714"
+             width="1.1305773400666"
+             height="1.31451564595428">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.14171325002251"
+                 id="feGaussianBlur39749-3-9" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter39747-7-4"
+             x="-0.0652886700332989"
+             y="-0.15725782297714"
+             width="1.1305773400666"
+             height="1.31451564595428">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.14171325002251"
+                 id="feGaussianBlur39749-3-1" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter39747-7-0-6"
+             x="-0.0652886700332989"
+             y="-0.15725782297714"
+             width="1.1305773400666"
+             height="1.31451564595428">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.14171325002251"
+                 id="feGaussianBlur39749-3-9-6" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="27.9963359832764"
+             y="169.980102539062"
+             id="text1883"><tspan
+                 sodipodi:role="line"
+                 id="tspan1881"
+                 x="27.9963359832764"
+                 y="169.980102539062"
+                 style="fill:#56585a;fill-opacity:1">#include &lt;stdio.h&gt;</tspan><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="214.980102539062"
+                 style="fill:#56585a;fill-opacity:1"
+                 id="tspan32491" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="259.980102539062"
+                 id="tspan15645" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="304.980102539062"
+                 id="tspan1885" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="349.980102539062"
+                 id="tspan1887"><tspan
+     style="fill:#0000ff;fill-opacity:1"
+     id="tspan17873">int</tspan> <tspan
+     style="fill:#8e00ff;fill-opacity:1"
+     id="tspan22799">main</tspan>(<tspan
+     style="fill:#007200;fill-opacity:1"
+     id="tspan24659">void</tspan>) {</tspan><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="394.980102539062"
+                 id="tspan33653" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="439.980102539062"
+                 id="tspan7377" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="484.980102539062"
+                 id="tspan1889">    printf(&quot;hello world!&quot;);</tspan><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="529.980102539062"
+                 id="tspan35259" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="574.980102539062"
+                 id="tspan9577" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="619.980102539062"
+                 id="tspan1891">    <tspan
+     style="fill:#ff8800;fill-opacity:1"
+     id="tspan19121">return</tspan> 0;</tspan><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="664.980102539062"
+                 id="tspan36509" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="709.980102539062"
+                 id="tspan10741" /><tspan
+                 sodipodi:role="line"
+                 x="27.9963359832764"
+                 y="754.980102539062"
+                 id="tspan1893">}</tspan></text>
+        <path
+             id="path39128"
+             style="mix-blend-mode:normal;fill:#ffc1c5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter39747);stop-color:#000000"
+             transform="matrix(1.16468899946664,0,0,-1.18252443009856,14.0827300033211,279.759793912744)"
+             d="m 337.010108947754,171.568786621094 c -1e-12,20.564919213277 -42.310986928009,37.236080169677 -94.504234313965,37.236080169677 -52.193247385956,0 -94.504234313965,-16.6711609564 -94.504234313965,-37.236080169677 0,-8.295079074902 6.883989525801,-15.956644421989 18.523778267566,-22.146157264995 3.124273026711,-1.66134699288 -8.173659691539,-17.565890921652 -4.405272327977,-18.998912290083 3.397999126213,-1.29217219144 21.805966974753,11.86432384509 25.664049294929,10.782873077995 15.44191043101,-4.328488740042 34.327370514611,-6.873883692595 54.721679079447,-6.873883692595 52.193247385957,0 94.504234313965,16.671160956401 94.504234313965,37.236080169678 z"
+             sodipodi:nodetypes="ssssssss" />
+        <path
+             id="path39128-1"
+             style="mix-blend-mode:normal;fill:#0000ff;fill-opacity:0.244973;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter39747-7);stop-color:#000000"
+             transform="matrix(1.16468899946664,0,0,-1.18252443009856,-123.798029130456,462.488223339887)"
+             d="m 337.010108947754,171.568786621094 c -1e-12,20.564919213277 -42.310986928009,37.236080169677 -94.504234313965,37.236080169677 -52.193247385956,0 -94.504234313965,-16.6711609564 -94.504234313965,-37.236080169677 0,-8.295079074902 6.883989525801,-15.956644421989 18.523778267566,-22.146157264995 3.124273026711,-1.66134699288 -8.173659691539,-17.565890921652 -4.405272327977,-18.998912290083 3.397999126213,-1.29217219144 21.805966974753,11.86432384509 25.664049294929,10.782873077995 15.44191043101,-4.328488740042 34.327370514611,-6.873883692595 54.721679079447,-6.873883692595 52.193247385957,0 94.504234313965,16.671160956401 94.504234313965,37.236080169678 z"
+             sodipodi:nodetypes="ssssssss" />
+        <path
+             id="path39128-1-27"
+             style="mix-blend-mode:normal;fill:#00bd00;fill-opacity:0.244973;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter39747-7-4);stop-color:#000000"
+             transform="matrix(1.16468899946664,0,0,-1.18252443009856,114.837390837046,467.82085842296)"
+             d="m 337.010108947754,171.568786621094 c -1e-12,20.564919213277 -42.310986928009,37.236080169677 -94.504234313965,37.236080169677 -52.193247385956,0 -94.504234313965,-16.6711609564 -94.504234313965,-37.236080169677 0,-8.295079074902 6.883989525801,-15.956644421989 18.523778267566,-22.146157264995 3.124273026711,-1.66134699288 -8.173659691539,-17.565890921652 -4.405272327977,-18.998912290083 3.397999126213,-1.29217219144 21.805966974753,11.86432384509 25.664049294929,10.782873077995 15.44191043101,-4.328488740042 34.327370514611,-6.873883692595 54.721679079447,-6.873883692595 52.193247385957,0 94.504234313965,16.671160956401 94.504234313965,37.236080169678 z"
+             sodipodi:nodetypes="ssssssss" />
+        <path
+             id="path39128-1-2"
+             style="mix-blend-mode:normal;fill:#9600ff;fill-opacity:0.244973;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter39747-7-0);stop-color:#000000"
+             transform="matrix(1.16468899946664,0,0,1.02209273691035,-38.4758678012932,234.928476017103)"
+             d="m 337.010108947754,171.568786621094 c -1e-12,20.564919213277 -42.310986928009,37.236080169677 -94.504234313965,37.236080169677 -52.193247385956,0 -94.504234313965,-16.6711609564 -94.504234313965,-37.236080169677 0,-8.295079074902 6.883989525801,-15.956644421989 18.523778267566,-22.146157264995 3.124273026711,-1.66134699288 -8.173659691539,-17.565890921652 -4.405272327977,-18.998912290083 3.397999126213,-1.29217219144 21.805966974753,11.86432384509 25.664049294929,10.782873077995 15.44191043101,-4.328488740042 34.327370514611,-6.873883692595 54.721679079447,-6.873883692595 52.193247385957,0 94.504234313965,16.671160956401 94.504234313965,37.236080169678 z"
+             sodipodi:nodetypes="ssssssss" />
+        <path
+             id="path39128-1-2-2"
+             style="mix-blend-mode:normal;fill:#ff7300;fill-opacity:0.244973;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter39747-7-0-6);stop-color:#000000"
+             transform="matrix(1.51768838382465,0,0,0.908565897551399,-5.42916115475158,528.514511623292)"
+             d="m 337.010108947754,171.568786621094 c -1e-12,20.564919213277 -42.310986928009,37.236080169677 -94.504234313965,37.236080169677 -52.193247385956,0 -94.504234313965,-16.6711609564 -94.504234313965,-37.236080169677 0,-8.295079074902 6.883989525801,-15.956644421989 18.523778267566,-22.146157264995 3.124273026711,-1.66134699288 -8.173659691539,-17.565890921652 -4.405272327977,-18.998912290083 3.397999126213,-1.29217219144 21.805966974753,11.86432384509 25.664049294929,10.782873077995 15.44191043101,-4.328488740042 34.327370514611,-6.873883692595 54.721679079447,-6.873883692595 52.193247385957,0 94.504234313965,16.671160956401 94.504234313965,37.236080169678 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="225.303833007812"
+             y="60.6610794067383"
+             id="text42783"><tspan
+                 sodipodi:role="line"
+                 id="tspan42781"
+                 x="225.303833007812"
+                 y="60.6610794067383">コンソール画面に</tspan><tspan
+                 sodipodi:role="line"
+                 x="225.303833007812"
+                 y="85.2616653442383"
+                 id="tspan42785">文字を入力したり、</tspan><tspan
+                 sodipodi:role="line"
+                 x="225.303833007812"
+                 y="109.862251281738"
+                 id="tspan42787">表示したりするよ!</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="71.9905700683594"
+             y="253.969100952148"
+             id="text45783"><tspan
+                 sodipodi:role="line"
+                 id="tspan45781"
+                 x="71.9905700683594"
+                 y="253.969100952148">main関数が終わったら</tspan><tspan
+                 sodipodi:role="line"
+                 x="71.9905700683594"
+                 y="278.569702148438"
+                 id="tspan45785">数字を受け取るよ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="169.311172485352"
+             y="403.282867431641"
+             id="text48535"><tspan
+                 sodipodi:role="line"
+                 id="tspan48533"
+                 x="169.311172485352"
+                 y="403.282867431641">このプログラムは</tspan><tspan
+                 sodipodi:role="line"
+                 x="169.311172485352"
+                 y="427.883453369141"
+                 id="tspan48537">ここから始まるよ♪</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="325.290740966797"
+             y="268.633850097656"
+             id="text54909"><tspan
+                 sodipodi:role="line"
+                 id="tspan54907"
+                 x="325.290740966797"
+                 y="268.633850097656">引数は何もないよ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="250.633834838867"
+             y="679.246765136719"
+             id="text57904"><tspan
+                 sodipodi:role="line"
+                 id="tspan57902"
+                 x="250.633834838867"
+                 y="679.246765136719">main関数の実行が終了したら</tspan><tspan
+                 sodipodi:role="line"
+                 x="250.633834838867"
+                 y="703.847351074219"
+                 id="tspan58038">「0」を返してね♪</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 167.97800511679,584.592477576473 c -73.1934570889421,-8.8560758425 -116.8949839262003,-69.99330076753 -111.9853367445268,-217.304879635212"
+             id="path59536"
+             sodipodi:nodetypes="cc" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 42.661080687091,379.952606454538 13.3315876851722,-12.665008513277 13.9981671299955,15.33132605622"
+             id="path59628" />
+    </g>
+</svg>
