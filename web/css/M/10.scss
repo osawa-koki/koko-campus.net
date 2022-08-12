@@ -1,0 +1,252 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+#manageBookmarkBox {
+	margin-bottom: 100px;
+	#bookmarkedBox {
+		display: grid;
+		gap: 10px;
+		@include sb {
+			font-size: 13px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include tb {
+			font-size: 14px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		@include fb {
+			font-size: 15px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+		.bookmarkedItem {
+			position: relative;
+			border: 1px black solid;
+			@include sb {
+				height: 60px;
+			}
+			@include tb {
+				height: 80px;
+			}
+			@include fb {
+				height: 100px;
+			}
+			display: grid;
+			&.toPage { // ページまで指定している場合
+				grid-template-rows: 1.1fr 1fr 0.9fr;
+				* {
+					display: flex;
+					padding: 0 10px;
+					justify-content: center;
+					align-items: center;
+				}
+				.subject {
+					font-weight: bold;
+				}
+			}
+			&.toLesson {
+				grid-template-rows: 2fr 1.5fr;
+				display: flex;
+				padding: 0 10px;
+				justify-content: center;
+				align-items: center;
+				.subject {
+					font-weight: bold;
+				}
+			}
+			&.toSubject {
+				grid-template-rows: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5em;
+			}
+			.star {
+				position: absolute;
+				top: 0;
+				right: 0;
+				@include sb {
+					width: 20px;
+					height: 20px;
+				}
+				width: 30px;
+				height: 30px;
+				padding: 0;
+				fill: yellow;
+				stroke: black;
+				animation: shining 3s ease 0s infinite normal none running;
+				cursor: pointer;
+				@keyframes shining {
+					from {
+						fill: yellow;
+					}
+					15% {
+						fill: rgba(orange, 0.8);
+					}
+					30% {
+						fill: yellow;
+					}
+				}
+				&.off {
+					fill: lightgray;
+					animation: none;
+				}
+			}
+		}
+	}
+	#subjectsSuggestionForBookmark {
+		margin: 50px 0;
+		overflow-y: auto;
+		@include sb {
+			#SLPtab {
+				display: grid;
+				grid-template-columns: repeat(3, 70px);
+				grid-template-rows: 30px;
+				div {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-width: 0 0 3px 0;
+					border-style: solid;
+				}
+				#SLPtabSubject {
+					color: white;
+					background-color: blue;
+					border-color: blue;
+				}
+				#SLPtabLesson {
+					background-color: yellow;
+					border-color: yellow;
+				}
+				#SLPtabPage {
+					color: white;
+					background-color: red;
+					border-color: red;
+				}
+			}
+			#bookmarkOnSubject, #bookmarkOnLesson, #bookmarkOnPage {
+				overflow-y: auto;
+				display: none;
+				&.on {
+					display: block;
+				}
+			}
+			#bookmarkOnSubject {
+				background-color: rgba(blue, 0.2);
+			}
+			#bookmarkOnLesson {
+				background-color: rgba(yellow, 0.2);
+			}
+			#bookmarkOnPage {
+				background-color: rgba(red, 0.2);
+			}
+			#bookmarkOnSubject, #bookmarkOnLesson, #bookmarkOnPage {
+				height: 250px;
+				border: 1px gray solid;
+				div {
+					padding: 3px;
+					text-align: center;
+				}
+			}
+			.usedJustOnceLesson, .usedJustOncePage {
+				font-weight: bold;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: sticky;
+				top: 50%;
+			}
+		}
+		@include tbfb {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			height: 300px;
+			#SLPtab {
+				display: none;
+			}
+			#bookmarkOnSubject {
+				background-color: rgba(blue, 0.2);
+			}
+			#bookmarkOnLesson {
+				background-color: rgba(yellow, 0.2);
+			}
+			#bookmarkOnPage {
+				background-color: rgba(red, 0.2);
+			}
+			#bookmarkOnSubject, #bookmarkOnLesson, #bookmarkOnPage {
+				overflow-y: auto;
+				div {
+					padding: 3px;
+					text-align: center;
+					cursor: pointer;
+					&:hover {
+						border: 3px black double;
+					}
+				}
+				&::-webkit-scrollbar {
+					width: 0;
+				}
+			}
+			.usedJustOnceLesson, .usedJustOncePage {
+				font-weight: bold;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: sticky;
+				top: 50%;
+			}
+		}
+	}
+	#currentBookmarkingBox {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 250px;
+		max-width: 100%;
+		color: white;
+		background-color: black;
+		#bookmarkingSubject {
+			font-size: 1.05em;
+			font-weight: bold;
+		}
+		#bookmarkingSubject, #bookmarkingLesson, #bookmarkingPage {
+			padding: 5px 10px;
+			text-align: center;
+		}
+		.star {
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include sb {
+				width: 20px;
+				height: 20px;
+			}
+			width: 30px;
+			height: 30px;
+			padding: 0;
+			fill: yellow;
+			stroke: black;
+			animation: rotater 3s ease 0s infinite normal none running;
+			cursor: pointer;
+			@keyframes rotater {
+				from {
+					fill: yellow;
+				}
+				15% {
+					fill: rgba(orange, 0.8);
+					transform: rotate(0deg);
+				}
+				30% {
+					fill: yellow;
+					transform: rotate(360deg);
+				}
+			}
+			&.off {
+				fill: lightgray;
+				animation: none;
+			}
+		}
+	}
+}
+
+

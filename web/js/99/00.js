@@ -62,7 +62,7 @@ window.addEventListener("load", function() {
 				elm.style[i] = style[i];
 			}
 			nm = {
-				"cs" : "C#",
+				"csharp" : "C#",
 				"vb-net" : "vb.net",
 				"-dot-" : "."
 			},

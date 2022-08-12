@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="非同期.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\非同期.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.50019640780844"
+         inkscape:cx="306.626517438466"
+         inkscape:cy="215.63843128553"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="186.975517797546"
+             y="126.98337304967"
+             width="93.6544037452949"
+             height="41.994501323513"
+             id="rect18324" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter15116"
+             x="-0.0860521394139061"
+             y="-0.2628779504685"
+             width="1.17210427882781"
+             height="1.525755900937">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.51251621032649"
+                 id="feGaussianBlur15118" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter15116-1"
+             x="-0.0860521394139061"
+             y="-0.2628779504685"
+             width="1.17210427882781"
+             height="1.525755900937">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.51251621032649"
+                 id="feGaussianBlur15118-4" />
+        </filter>
+        <rect
+             x="186.975524902344"
+             y="126.983375549316"
+             width="93.6544036865234"
+             height="41.9945030212402"
+             id="rect18324-7" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter15116-8"
+             x="-0.0860521394139061"
+             y="-0.2628779504685"
+             width="1.17210427882781"
+             height="1.525755900937">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.51251621032649"
+                 id="feGaussianBlur15118-1" />
+        </filter>
+        <rect
+             x="186.975524902344"
+             y="126.983375549316"
+             width="93.6544036865234"
+             height="41.9945030212402"
+             id="rect18324-3" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:1;fill:#8ffc8b;fill-opacity:1;stroke:none;stroke-width:0.711354;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect12767"
+             width="27.9963340759277"
+             height="309.292846679688"
+             x="115.318229675293"
+             y="33.3289680480957" />
+        <rect
+             style="opacity:1;fill:#fffcff;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect13782"
+             width="31.9997386932373"
+             height="71.3239974975586"
+             x="113.314567565918"
+             y="152.646682739258" />
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="9.33211326599121"
+             y="102.653221130371"
+             id="text1553"><tspan
+                 sodipodi:role="line"
+                 id="tspan1551"
+                 x="9.33211326599121"
+                 y="102.653221130371">	console.log(1);</tspan><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="132.653228759766"
+                 id="tspan6525" /><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="162.653228759766"
+                 id="tspan6527" /><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="192.653228759766"
+                 id="tspan1555">	setTimeout(() =&gt; {console.log(3)}, 1000);</tspan><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="222.653228759766"
+                 id="tspan8245" /><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="252.653228759766"
+                 id="tspan8511" /><tspan
+                 sodipodi:role="line"
+                 x="9.33211326599121"
+                 y="282.653228759766"
+                 id="tspan1557">	console.log(3);</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 190.783997826833,43.9826279061337 c 387.52880467067,31.1036391210663 619.964319651848,169.6876938363773 21.330540343547,327.9570576413273"
+             id="path12288-8"
+             sodipodi:nodetypes="cc" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#8ffc8b;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13051"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="61.9918823242188"
+             sodipodi:cy="-204.904388427734"
+             sodipodi:r1="103.457328796387"
+             sodipodi:r2="51.7286643981934"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 151.588557269569,-153.175724029541 h -179.1933498907005 l 89.5966749453502,-155.18599319458 z"
+             inkscape:transform-center-y="16.3100253994703"
+             transform="matrix(0.630599218439769,0,0,-0.630599218439769,90.4562552770512,195.231744405612)" />
+        <path
+             style="fill:none;stroke:#7fff80;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 113.314567933196,152.646679333497 c -139.3481319876936,15.553519000502 -140.3448678870129,56.437054658965 10e-13,68.657676730788"
+             id="path13256"
+             sodipodi:nodetypes="cc" />
+        <path
+             style="fill:none;stroke:#6cff74;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 100.653487246105,201.306974492211 12.661080687092,19.997381572074 -16.6605570015065,17.997643414866"
+             id="path14392" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 208.639347735304,29.9960723581109 -17.855349908471,13.9865555480228 15.855611751264,18.6758343530312"
+             id="path14705" />
+        <path
+             id="path14828"
+             style="opacity:0.45234;fill:#0fff00;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter15116);stop-color:#000000"
+             transform="matrix(1.13515325931091,0,0,1.24967953377456,-23.0280833915078,-29.2018436432142)"
+             d="m 273.297546386719,138.315216064453 c 1e-12,10.123894530754 -21.785955523414,18.330932617188 -48.660293579102,18.330932617188 -10.483622790135,0 -20.192913996555,-1.248917265709 -28.136644203578,-3.37334345347 -2.524276505933,-0.675078203136 -46.856166465601,8.696041750423 -48.992072703542,7.856131815055 -1.902039736169,-0.747945786897 38.348416606975,-11.69110171814 36.802038754657,-12.551796737459 -5.260932547266,-2.928170778971 -8.333615426638,-6.459871158287 -8.333615426638,-10.261924241314 10e-13,-10.123894530753 21.785955523415,-18.330932617187 48.660293579101,-18.330932617187 26.874338055687,0 48.660293579101,8.207038086434 48.660293579102,18.330932617187 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             id="text18322"
+             style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect18324)"
+             transform="translate(0,4.99934539565629)"><tspan
+                 x="186.974609375"
+                 y="136.826171875"
+                 id="tspan3705">時間がかかる処理は</tspan><tspan
+                 x="186.974609375"
+                 y="150.4931640625"
+                 id="tspan3707">いったんスキップ</tspan></text>
+        <path
+             id="path14828-9"
+             style="opacity:0.45234;fill:#0fff00;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter15116-1);stop-color:#000000"
+             transform="matrix(1.13515325931091,0,0,1.08897297159002,5.83204071472434,166.177640361013)"
+             d="m 273.297546386719,138.315216064453 c 1e-12,10.123894530754 -21.785955523414,18.330932617188 -48.660293579102,18.330932617188 -10.483622790135,0 -20.192913996555,-1.248917265709 -28.136644203578,-3.37334345347 -2.524276505933,-0.675078203136 -46.856166465601,8.696041750423 -48.992072703542,7.856131815055 -1.902039736169,-0.747945786897 38.348416606975,-11.69110171814 36.802038754657,-12.551796737459 -5.260932547266,-2.928170778971 -8.333615426638,-6.459871158287 -8.333615426638,-10.261924241314 10e-13,-10.123894530753 21.785955523415,-18.330932617187 48.660293579101,-18.330932617187 26.874338055687,0 48.660293579101,8.207038086434 48.660293579102,18.330932617187 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             id="text18322-1"
+             style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect18324-7)"
+             transform="translate(32.8596004206469,183.141315250664)"><tspan
+                 x="186.974609375"
+                 y="136.826171875"
+                 id="tspan3709">処理は無限ループ♪</tspan></text>
+        <path
+             id="path14828-2"
+             style="opacity:0.45234;fill:#0fffff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;filter:url(#filter15116-8);stop-color:#000000;fill-opacity:1"
+             transform="matrix(1.13515325931091,0,0,-1.24967953377456,29.1623192154772,406.98708149186)"
+             d="m 273.297546386719,138.315216064453 c 1e-12,10.123894530754 -21.785955523414,18.330932617188 -48.660293579102,18.330932617188 -10.483622790135,0 -20.192913996555,-1.248917265709 -28.136644203578,-3.37334345347 -2.524276505933,-0.675078203136 -46.856166465601,8.696041750423 -48.992072703542,7.856131815055 -1.902039736169,-0.747945786897 38.348416606975,-11.69110171814 36.802038754657,-12.551796737459 -5.260932547266,-2.928170778971 -8.333615426638,-6.459871158287 -8.333615426638,-10.261924241314 10e-13,-10.123894530753 21.785955523415,-18.330932617187 48.660293579101,-18.330932617187 26.874338055687,0 48.660293579101,8.207038086434 48.660293579102,18.330932617187 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             id="text18322-7"
+             style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect18324-3)"
+             transform="translate(56.1898789213998,93.153098176332)"><tspan
+                 x="186.974609375"
+                 y="136.826171875"
+                 id="tspan3711">1秒経過していたら
+</tspan><tspan
+                 x="186.974609375"
+                 y="150.4931640625"
+                 id="tspan3713">処理を実行!!</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="373.284454345703"
+             y="367.951812744141"
+             id="text2711"><tspan
+                 sodipodi:role="line"
+                 id="tspan2709"
+                 x="373.284454345703"
+                 y="367.951812744141">※すべての処理をループして実行する</tspan><tspan
+                 sodipodi:role="line"
+                 x="373.284454345703"
+                 y="384.352203369141"
+                 id="tspan2713">わけではありません。</tspan></text>
+    </g>
+</svg>

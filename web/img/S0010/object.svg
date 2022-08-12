@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="オブジェクト.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\オブジェクト.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.50019640780844"
+         inkscape:cx="333.956272253635"
+         inkscape:cy="275.630576001752"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid843" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="347.28785996835"
+             y="182.642751691608"
+             width="218.638038521342"
+             height="155.979576262176"
+             id="rect12137" />
+        <rect
+             x="66.6579385735797"
+             y="183.97591046308"
+             width="194.641180634853"
+             height="164.645108276742"
+             id="rect9025" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.479846;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21525"
+             width="576.591186523438"
+             height="360.619445800781"
+             x="11.3318490982056"
+             y="23.9968585968018" />
+        <rect
+             style="opacity:1;fill:#8bffff;fill-opacity:1;stroke:#000000;stroke-width:1.75763;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21153-8"
+             width="239.234786987305"
+             height="265.116455078125"
+             x="312.935150146484"
+             y="98.078239440918" />
+        <rect
+             style="opacity:1;fill:#74ff6e;fill-opacity:1;stroke:#000000;stroke-width:1.75763;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21153-8-9"
+             width="239.234786987305"
+             height="265.116455078125"
+             x="49.0271911621094"
+             y="94.7453460693359" />
+        <text
+             xml:space="preserve"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="179.974594116211"
+             y="74.6568908691406"
+             id="text1901"><tspan
+                 sodipodi:role="line"
+                 id="tspan1899"
+                 x="179.974594116211"
+                 y="74.6568908691406">オブジェクト</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="88.6550674438477"
+             y="135.087326049805"
+             id="text3621"><tspan
+                 sodipodi:role="line"
+                 id="tspan3619"
+                 x="88.6550674438477"
+                 y="135.087326049805">プロパティ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="372.617614746094"
+             y="136.649826049805"
+             id="text5219"><tspan
+                 sodipodi:role="line"
+                 id="tspan5217"
+                 x="372.617614746094"
+                 y="136.649826049805">メソッド</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text9023"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect9025)"
+             transform="translate(7.99895262882955,-1.33315877147155)"><tspan
+                 x="66.658203125"
+                 y="201.330078125"
+                 id="tspan1031">x = 10
+</tspan><tspan
+                 x="66.658203125"
+                 y="226.330078125"
+                 id="tspan1033">y = &quot;hello&quot;
+</tspan><tspan
+                 x="66.658203125"
+                 y="251.330078125"
+                 id="tspan1035">z = obj[0]</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text12135"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12137)"
+             transform="translate(-8.6655320145654,-4.66631754294315)"><tspan
+                 x="347.287109375"
+                 y="199.99609375"
+                 id="tspan1037">function add() {
+</tspan><tspan
+                 x="347.287109375"
+                 y="224.99609375"
+                 id="tspan1039">    ....
+</tspan><tspan
+                 x="347.287109375"
+                 y="249.99609375"
+                 id="tspan1041">}
+</tspan><tspan
+                 x="347.287109375"
+                 y="274.99609375"
+                 id="tspan1043">function delete() {
+</tspan><tspan
+                 x="347.287109375"
+                 y="299.99609375"
+                 id="tspan1045">    ....
+</tspan><tspan
+                 x="347.287109375"
+                 y="324.99609375"
+                 id="tspan1047">}</tspan></text>
+        <g
+             id="g964"
+             transform="translate(-10,226)">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 280,-10 h 60"
+                 id="path878" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 335,-15 5,5 -5,5"
+                 id="path880" />
+        </g>
+        <g
+             id="g964-9"
+             transform="matrix(-1,0,0,1,610,250)">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 280,-10 h 60"
+                 id="path878-6" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 335,-15 5,5 -5,5"
+                 id="path880-0" />
+        </g>
+    </g>
+</svg>

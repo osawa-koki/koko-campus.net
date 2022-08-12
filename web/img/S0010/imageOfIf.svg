@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="if-説明.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\javascript入門\pics\if-説明.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.750098204299999"
+         inkscape:cx="42.6610806645815"
+         inkscape:cy="307.293096662064"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid22703" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="408.613163456043"
+             y="29.3294929723751"
+             width="149.313782404818"
+             height="50.6600333159205"
+             id="rect24943" />
+        <rect
+             x="37.9950256347656"
+             y="61.9918823242188"
+             width="556.593811035156"
+             height="695.242309570312"
+             id="rect3555" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text3553"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3555)"
+             transform="translate(6)"><tspan
+                 x="37.994140625"
+                 y="101.3671875"
+                 id="tspan1026">if (条件式A) {
+</tspan><tspan
+                 x="37.994140625"
+                 y="151.3671875"
+                 id="tspan1028">
+</tspan><tspan
+                 x="37.994140625"
+                 y="206.03515625"
+                 id="tspan1036">    <tspan
+     style="fill:#717376"
+     id="tspan1030">//</tspan><tspan
+     style="fill:#717376"
+     id="tspan1032">処理</tspan><tspan
+     style="fill:#717376"
+     id="tspan1034">1</tspan>
+</tspan><tspan
+                 x="37.994140625"
+                 y="256.03515625"
+                 id="tspan1038">
+</tspan><tspan
+                 x="37.994140625"
+                 y="310.703125"
+                 id="tspan1040">} else (条件式B) {
+</tspan><tspan
+                 x="37.994140625"
+                 y="360.703125"
+                 id="tspan1042">
+</tspan><tspan
+                 x="37.994140625"
+                 y="415.37109375"
+                 id="tspan1050">    <tspan
+     style="fill:#7d7b7e"
+     id="tspan1044">//</tspan><tspan
+     style="fill:#7d7b7e"
+     id="tspan1046">処理</tspan><tspan
+     style="fill:#7d7b7e"
+     id="tspan1048">2</tspan>
+</tspan><tspan
+                 x="37.994140625"
+                 y="465.37109375"
+                 id="tspan1052">
+</tspan><tspan
+                 x="37.994140625"
+                 y="515.37109375"
+                 id="tspan1054">} else {
+</tspan><tspan
+                 x="37.994140625"
+                 y="565.37109375"
+                 id="tspan1056">
+</tspan><tspan
+                 x="37.994140625"
+                 y="620.0390625"
+                 id="tspan1064">    <tspan
+     style="fill:#808285"
+     id="tspan1058">//</tspan><tspan
+     style="fill:#808285"
+     id="tspan1060">処理</tspan><tspan
+     style="fill:#808285"
+     id="tspan1062">3</tspan>
+</tspan><tspan
+                 x="37.994140625"
+                 y="670.0390625"
+                 id="tspan1066">
+</tspan><tspan
+                 x="37.994140625"
+                 y="720.0390625"
+                 id="tspan1068">}</tspan></text>
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 220,120 v 40"
+             id="path22738" />
+        <path
+             style="fill:none;stroke:#fe8000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 285,195 h 205 v 570"
+             id="path22740" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 206,120 v 40 h -100 v 90 h 180 v 20"
+             id="path22742" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 270,330 v 20 h -180 v 110 h 50 v 20"
+             id="path22744" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 280,330 v 30 h -60 v 20"
+             id="path22746" />
+        <path
+             style="fill:none;stroke:#008000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 140,530 v 30 h 70 v 20"
+             id="path22748" />
+        <path
+             style="fill:none;stroke:#fe8000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 285,400 h 205"
+             id="path22750" />
+        <path
+             style="fill:none;stroke:#fe8000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 290,605 h 200"
+             id="path22752" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 294.939564808232,261.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 228.939564808232,151.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930-9" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 228.939564808232,371.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930-8" />
+        <path
+             style="fill:none;stroke:#0000ff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 148.939564808232,471.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930-3" />
+        <path
+             style="fill:none;stroke:#008000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 218.939564808232,571.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930-1" />
+        <path
+             style="fill:none;stroke:#ff7a00;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 498.939564808232,756.060435191768 -8.939564808232,8.939564808232 -8.939564808232,-8.939564808232"
+             id="path22930-4" />
+        <text
+             xml:space="preserve"
+             id="text24941"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect24943)"
+             transform="matrix(1.67455755121787,0,0,1.67455755121787,-212.87070320795,-9.87067416743015)"><tspan
+                 x="408.61328125"
+                 y="41.4775390625"
+                 id="tspan1074"><tspan
+     style="fill:#ff0000"
+     id="tspan1070">●</tspan><tspan
+     style="fill:#ff0000"
+     id="tspan1072">true</tspan>
+</tspan><tspan
+                 x="408.61328125"
+                 y="58.9775390625"
+                 id="tspan1080"><tspan
+                     style="fill:#0000ff"
+                     id="tspan1076">●</tspan><tspan
+                     style="fill:#0000ff"
+                     id="tspan1078">false</tspan></tspan></text>
+    </g>
+</svg>
