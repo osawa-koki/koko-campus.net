@@ -18,6 +18,8 @@
         <img path="?99/0015.png" using-for="?S/0400.png" url="http://www.wanpug.com/illust220.html" description="小鳥" />
         <img path="?99/0016.png" using-for="?S/0901.png" url="https://kohacu.com/20210125-kaseki/" description="アンモナイト" />
         <img path="?99/0017.png" using-for="?S/0512.png" url="https://tegakisozai.com/archives/3133" description="ニワトリ" />
+        <img path="?99/0018.png" using-for="?S/4500.png,?S/4501.png,?S/4502.png" url="https://www.pinterest.jp/pin/863776403524215555/" description="雲" />
+        <img path="?99/0019.png" using-for="?S/6100.png" url="http://illust-hp.com/img/pc8.png" description="パソコン" />
     </free>
     <bought>
         <img path="?bought/0000.png" using-for="?S/0221.png" url="https://pixta.jp/illustration/41469917" description="gopher" />
