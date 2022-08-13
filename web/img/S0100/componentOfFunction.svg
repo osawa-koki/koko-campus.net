@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="function.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\php入門\pics\function.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="221.304355947516"
+         inkscape:cy="348.621018555877"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="3.99947631230451"
+             y="10.6652701661454"
+             width="589.256176679531"
+             height="374.617614585856"
+             id="rect2627" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text2625"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2627)"
+             transform="translate(46.660556976886,13.3315877076817)"
+             inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\php入門\pics\text2625.png"
+             inkscape:export-xdpi="96"
+             inkscape:export-ydpi="96"><tspan
+                 x="4"
+                 y="50.041015625"
+                 id="tspan2264"><tspan
+     style="font-style:italic;-inkscape-font-specification:'Consolas, Italic';fill:#8800ff"
+     id="tspan2260">function</tspan> 関数名(<tspan
+     style="fill:#009300"
+     id="tspan2262">引数</tspan>) {
+</tspan><tspan
+                 x="4"
+                 y="100.041015625"
+                 id="tspan2266">
+</tspan><tspan
+                 x="4"
+                 y="154.708984375"
+                 id="tspan2278">    <tspan
+     style="fill:#7e7e7f"
+     id="tspan2268">//</tspan><tspan
+     style="fill:#7e7e7f"
+     id="tspan2270">関数内</tspan><tspan
+     style="fill:#7e7e7f"
+     id="tspan2272">の</tspan><tspan
+     style="fill:#7e7e7f"
+     id="tspan2274">処理</tspan><tspan
+     style="fill:#7e7e7f"
+     id="tspan2276">...</tspan>
+</tspan><tspan
+                 x="4"
+                 y="204.708984375"
+                 id="tspan2280">
+</tspan><tspan
+                 x="4"
+                 y="259.376953125"
+                 id="tspan2284">    <tspan
+     style="fill:#ff8400"
+     id="tspan2282">return</tspan> 戻り値;
+</tspan><tspan
+                 x="4"
+                 y="309.376953125"
+                 id="tspan2286">
+</tspan><tspan
+                 x="4"
+                 y="359.376953125"
+                 id="tspan2288">}</tspan></text>
+    </g>
+</svg>

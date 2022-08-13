@@ -384,6 +384,11 @@ noscript {
 	.center {
 		text-align: center;
 	}
+	span.underline {
+		text-decoration-color: orange;
+		text-decoration-line: underline;
+		text-decoration-thickness: 2px;
+	}
 }
 
 

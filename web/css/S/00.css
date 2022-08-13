@@ -356,3 +356,10 @@ noscript {
 #subjectMainBox .center {
   text-align: center;
 }
+#subjectMainBox span.underline {
+  -webkit-text-decoration-color: orange;
+          text-decoration-color: orange;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
