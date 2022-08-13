@@ -76,12 +76,18 @@ func main() {
 	http.HandleFunc("/", controller)
 
 	if os.Getenv("DEBUG") == "ON" {
-		if er := http.ListenAndServe(":8080", nil); er != nil {
-			Error("ListenAndServeに失敗")
+		fmt.Println("DEBUG MODE")
+		if er := http.ListenAndServe("", nil); er != nil {
+			Error("failure on ListenAndServe")
+			fmt.Println("failure on ListenAndServe")
 		}
 	} else {
+		fmt.Println("OPERATION MODE")
 		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
-			Error("ListenAndServeに失敗")
+			fmt.Println("failure on ListenAndServe")
+			Error("failure on ListenAndServe")
+		} else {
+			fmt.Println("success on ListenAndServe")		
 		}
 	}
 }
