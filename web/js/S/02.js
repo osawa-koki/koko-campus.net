@@ -1,7 +1,9 @@
 "use strict";
 
 (() => {
-	const imgs = Array.from(document.getElementById("subjectMainBox").getElementsByTagName("img"));
+	const subjectMainBox = document.getElementById("subjectMainBox");
+	if (!subjectMainBox) return;
+	const imgs = Array.from(subjectMainBox.getElementsByTagName("img"));
 	const zoomedImgBox = document.getElementById("zoomedImgBox");
 	imgs.forEach(e => {
 		e.addEventListener("click", function() {
