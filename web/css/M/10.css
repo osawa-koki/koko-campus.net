@@ -57,6 +57,8 @@
 }
 #manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson {
   grid-template-rows: 2fr 1.5fr;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson * {
   display: flex;
   padding: 0 10px;
   justify-content: center;
@@ -64,6 +66,9 @@
 }
 #manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson .subject {
   font-weight: bold;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson .lesson {
+  font-weight: normal;
 }
 #manageBookmarkBox #bookmarkedBox .bookmarkedItem.toSubject {
   grid-template-rows: 100%;

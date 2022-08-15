@@ -4,7 +4,7 @@
 			{{ $S := index $subjMap "Subject" }}
 			{{ $L := index $subjMap "Lesson" }}
 			{{ $P := index $subjMap "Page" }}
-			<div class="bookmarkedItem to{{ if and (ne $L "") (ne $P "") }}Page{{ else if ne $P "" }}Lesson{{ else }}Subject{{ end }}">
+			<div class="bookmarkedItem to{{ if and (ne $L "") (ne $P "") }}Page{{ else if ne $L "" }}Lesson{{ else }}Subject{{ end }}">
 				<div class="subject">{{ index $subjMap "SubjectName" }}</div>
 				{{ with index $subjMap "LessonName" }}<div class="lesson">{{ . }}</div>{{ end }}
 				{{ with index $subjMap "PageName" }}<div class="page">{{ . }}</div>{{ end }}

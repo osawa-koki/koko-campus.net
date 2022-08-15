@@ -46,12 +46,17 @@
 			}
 			&.toLesson {
 				grid-template-rows: 2fr 1.5fr;
-				display: flex;
-				padding: 0 10px;
-				justify-content: center;
-				align-items: center;
+				* {
+					display: flex;
+					padding: 0 10px;
+					justify-content: center;
+					align-items: center;
+				}
 				.subject {
 					font-weight: bold;
+				}
+				.lesson {
+					font-weight: normal;
 				}
 			}
 			&.toSubject {
