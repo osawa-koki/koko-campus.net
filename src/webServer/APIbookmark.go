@@ -25,7 +25,7 @@ func bookmarkAPI(RR *RequestResponse) string {
 		if Lesson != "" {
 			SQL.Add("AND lesson = ?")
 			SQL.AddParam(Lesson)
-			if Lesson != "" {
+			if Page != "" {
 				SQL.Add("AND page = ?")
 				SQL.AddParam(Page)
 			}
