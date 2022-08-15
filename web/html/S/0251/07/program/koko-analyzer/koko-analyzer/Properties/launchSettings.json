@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "koko-analyzer": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\kokof\\source\\repos\\toBeAnalyzed\\toBeAnalyzed.sln"
+    }
+  }
+}
