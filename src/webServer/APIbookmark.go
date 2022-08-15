@@ -174,7 +174,35 @@ func bookmarkAPI(RR *RequestResponse) string {
 			Pages:        pageData,
 		}
 		answer = jsonEncode(jsonStruct)
+	case "checkExists":
+		var exists bool = false
 
+		var SQL SQLbuilder
+
+		SQL.Add("SELECT subject")
+		SQL.Add("FROM bookmark")
+		SQL.Add("WHERE subject = ? AND lesson = ? AND page = ?;")
+		SQL.AddParam(Subject)
+		SQL.AddParam(Lesson)
+		SQL.AddParam(Page)
+
+		if Exists(&SQL) {
+			success = true
+			exists = true
+		} else {
+			success = true
+		}
+
+		jsonStruct := struct {
+			Success      bool
+			ErrorMessage []string
+			Exists       bool
+		}{
+			Success:      success,
+			ErrorMessage: errorMessage,
+			Exists:       exists,
+		}
+		answer = jsonEncode(jsonStruct)
 	}
 	return answer
 }

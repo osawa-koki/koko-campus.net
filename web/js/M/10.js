@@ -1,5 +1,5 @@
 (() => {
-	Array.from(document.getElementById("bookmarkedBox").querySelectorAll("svg.star")).forEach(star => {
+	Array.from(document.querySelectorAll("svg.star")).forEach(star => {
 		star.addEventListener("click", function() {
 			const jsonStruct = {
 				"program" : "mypage",
@@ -43,7 +43,7 @@
 		});
 	});
 
-	const SLPtab = document.getElementById("SLPtab");
+	const star = document.querySelector("#currentBookmarkingBox .star");
 	const [S, L, P] = getElm(["SLPtabSubject", "SLPtabLesson", "SLPtabPage"]);
 	const [bS, bL, bP] = getElm(["bookmarkOnSubject", "bookmarkOnLesson", "bookmarkOnPage"]);
 	const reseter = () => {
@@ -63,6 +63,49 @@
 	});
 	const [eS, eL, eP] = [bS, bL, bP].map(e => Array.from(e.getElementsByTagName("div")));
 	const [cS, cL, cP] = getElm(["bookmarkingSubject", "bookmarkingLesson", "bookmarkingPage"]);
+	const checkIfRegistered = () => {
+		const [Sdata, Ldata, Pdata] = [
+			cS.dataset.subject,
+			cL.dataset.lesson,
+			cP.dataset.page
+		];
+		const url = "/A";
+		const postData = URLencodeAssoc({
+			"program" : "mypage",
+			"action" : "bookmark",
+			"method" : "checkExists",
+			"subject" : Sdata,
+			"lesson" : Ldata,
+			"page" : Pdata
+		});
+		const data = {
+			method: "POST",
+			mode: "cors",
+			headers: {
+				"Accept": "application/json",
+				"Content-Type": "application/x-www-form-urlencoded",
+			}
+		};
+		data["body"] = postData;
+		fetch(url, data)
+		.then(response => response.json())
+		.then(response => {
+			if (response.Success) {
+				if (response.Exists) {
+					star.classList.remove("off");
+				} else {
+					star.classList.add("off");
+				}
+			} else {
+				window.alert(response.ErrorMessage.join("\n"))
+			}
+		})
+		.catch(() => {
+			window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
+		});
+	};
+
+	// FIX ME!!!
 	eS.forEach(e => {
 		e.addEventListener("click", function() {
 			document.getElementById("currentBookmarkingBox").classList.remove("hidden");
@@ -70,6 +113,12 @@
 			cS.dataset.subject = this.dataset.subject;
 			[cL.textContent, cP.textContent] = new Array(2).fill("*****");
 			[cL.dataset.lesson, cP.dataset.page] = new Array(2).fill("");
+			(obj => {
+				star.dataset.subject = obj.dataset.subject;
+				star.dataset.lesson = "";
+				star.dataset.page = "";
+			})(this);
+			checkIfRegistered();
 			if (sb) {
 				L.click();
 			}
@@ -104,6 +153,11 @@
 						elm.addEventListener("click", function() {
 							cL.textContent = this.textContent;
 							cL.dataset.lesson = this.dataset.lesson;
+							(obj => {
+								star.dataset.lesson = obj.dataset.lesson;
+								star.dataset.page = "";
+							})(this);
+							checkIfRegistered();
 							if (sb) {
 								P.click();
 							}
@@ -136,6 +190,46 @@
 										elm.dataset.lesson = response.Lesson;
 										elm.dataset.page = pageMap.page;
 										elm.textContent = pageMap.pageName;
+										elm.addEventListener("click", function() {
+											cP.textContent = this.textContent;
+											cP.dataset.page = this.dataset.page;
+											(obj => {
+												star.dataset.page = obj.dataset.page;
+											})(this);
+											checkIfRegistered();
+											const jsonStruct = {
+												"program" : "mypage",
+												"action" : "bookmark",
+												"method" : "onLesson",
+												"subject" : this.dataset.subject,
+												"lesson" : this.dataset.lesson,
+												"page" : this.dataset.page,
+											};
+											const url = "/A";
+											const postData = URLencodeAssoc(jsonStruct);
+											const data = {
+												method: "POST",
+												mode: "cors",
+												headers: {
+													"Accept": "application/json",
+													"Content-Type": "application/x-www-form-urlencoded",
+												}
+											};
+											data["body"] = postData;
+											fetch(url, data)
+											.then(response => response.json())
+											.then(response => {
+												if (response.Success) {
+													// *****
+												} else {
+													window.alert(response.ErrorMessage.join("\n"))
+												}
+											})
+											.catch(ex => {
+												console.log(ex);
+												window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
+											});
+										});
 										bP.appendChild(elm);
 									})
 								} else {
