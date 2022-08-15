@@ -7,15 +7,9 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/joho/godotenv"
 )
 
 func connect() (*sql.DB, error) {
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println(err.Error())
-	}
-
 	user := os.Getenv("DB_USER")
 	password := os.Getenv("DB_PASSWORD")
 	host := os.Getenv("DB_HOST")
@@ -60,6 +54,8 @@ func SelectAll(sqlStruct *SQLbuilder) *sql.Rows {
 			sqlStruct.Reset()
 			db.Close()
 			return rows
+		} else {
+			fmt.Println(er.Error())
 		}
 		db.Close()
 	}
@@ -77,6 +73,8 @@ func Execute(sqlStruct *SQLbuilder) bool {
 		if _, er := db.Exec(sqlStruct.sql, sqlStruct.data...); er == nil {
 			sqlStruct.Reset()
 			return true
+		} else {
+			fmt.Println(er.Error())
 		}
 		db.Close()
 	}
