@@ -1,0 +1,893 @@
+<h2>基本手順</h2>
+では、早速roslynを使用したソースコードの構文解析を行いましょう♪<br />このページではroslynを使用した基本的な構文解析の流れについて説明します。<br /><br />基本的には以下の手順を踏みます。
+<ol>
+	<li>ソリューションのオープン</li>
+	<li>ソリューション内のプロジェクトの走査・コンパイル</li>
+	<li>プロジェクト内のドキュメントの走査・構文解析</li>
+	<li>処理...</li>
+</ol>
+ワークスペースは少し複雑なのでここでは飛ばして後ほど説明します。
+<div class="separator"></div>
+使用するソリューションデータは以下からダウンロード可能です。
+
+また、以下の名前空間に属するモジュール群を使用します。
+<ul>
+	<li>Microsoft.CodeAnalysis</li>
+	<li>Microsoft.CodeAnalysis.CSharp</li>
+	<li>Microsoft.CodeAnalysis.CSharp.Syntax</li>
+	<li>Microsoft.CodeAnalysis.CSharp.Symbols</li>
+</ul>
+「C#」ではなく、「Visual Basic」コードを解析する場合には以下の名前空間をインポートして下さい。
+<ul>
+	<li>Microsoft.CodeAnalysis</li>
+	<li>Microsoft.CodeAnalysis.VisualBasic</li>
+	<li>Microsoft.CodeAnalysis.VisualBasic.Syntax</li>
+	<li>Microsoft.CodeAnalysis.VisualBasic.Symbols</li>
+</ul>
+ノード・トークンの種類に若干の相違はありますが、おおむね同じです。<br />ここでは「C#」のコード解析を想定して説明をします。
+<h2>ソリューションのオープン</h2>
+では、最初にソリューションファイルのパスからソリューションを読み込んでみましょう♪<br />以下のように書きます。
+<code class="csharp">
+	Solution solution = workspace.OpenSolutionAsync(solutionPath).Result;
+</code>
+アナライザープロジェクトテンプレートでは読み込みの進捗状況を表すために、以下のようなコードが生成されていると思います。
+<code class="csharp">
+	var solution = await workspace.OpenSolutionAsync(solutionPath, new ConsoleProgressReporter());
+</code>
+どちらでもok!ですが、せっかくテンプレートとして生成してくれているので、下のコードを使用しましょう♪<br />これで、ソリューションインスタンスが生成されました。<br /><br />ソリューションクラスには以下のプロパティ・メソッドがあります。
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>AnalyzerReferences</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>FilePath</th>
+				<td>ソリューションファイルのパスを保持します。</td>
+			</tr>
+			<tr>
+				<th>Id</th>
+				<td>ソリューションのIDを保持します。</td>
+			</tr>
+			<tr>
+				<th>Options</th>
+				<td>ソリューションに適用されているオプションを保持します。</td>
+			</tr>
+			<tr>
+				<th>ProjectIds</th>
+				<td>ソリューションに含まれるプロジェクトのIDをリスト形式で保持します。</td>
+			</tr>
+			<tr>
+				<th>Projects</th>
+				<td>ソリューションに含まれるプロジェクトをリスト形式で保持します。</td>
+			</tr>
+			<tr>
+				<th>Version</th>
+				<td>ソリューションのバージョンを返します。</td>
+			</tr>
+			<tr>
+				<th>Workspace</th>
+				<td>ソリューションが属するワークスペースを保持します。</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.solution?view=roslyn-dotnet">MS公式ドキュメント</a>より。</p>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>AddAdditionalDocument(DocumentId, String, SourceText, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new additional document instance defined by its name and text.</td>
+			</tr>
+			<tr>
+				<th>AddAdditionalDocument(DocumentId, String, String, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new additional document instance defined by its name and text.</td>
+			</tr>
+			<tr>
+				<th>AddAdditionalDocument(DocumentInfo)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>AddAdditionalDocuments(ImmutableArray&lt;DocumentInfo&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerConfigDocument(DocumentId, String, SourceText, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new analyzer config document instance defined by its name and text.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerConfigDocuments(ImmutableArray&lt;DocumentInfo&gt;)</th>
+				<td>Creates a new Solution instance that contains a new compiler configuration document like a .editorconfig file.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReference(AnalyzerReference)</th>
+				<td>Create a new solution instance updated to include the specified analyzer reference.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReference(ProjectId, AnalyzerReference)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified analyzer reference.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReferences(IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Create a new solution instance updated to include the specified analyzer references.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReferences(ProjectId, IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified analyzer references.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(DocumentId, String, SourceText, IEnumerable&lt;String&gt;, String, Boolean)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new document instance defined by its name and text.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(DocumentId, String, String, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new document instance defined by its name and text.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(DocumentId, String, SyntaxNode, IEnumerable&lt;String&gt;, String, Boolean, PreservationMode)</th>
+				<td>Creates a new solution instance with the corresponding project updated to include a new document instance defined by its name and root SyntaxNode.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(DocumentId, String, TextLoader, IEnumerable&lt;String&gt;)</th>
+				<td>Creates a new solution instance with the project updated to include a new document with the arguments specified.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(DocumentInfo)</th>
+				<td>Create a new solution instance with the corresponding project updated to include a new document instanced defined by the document info.</td>
+			</tr>
+			<tr>
+				<th>AddDocuments(ImmutableArray&lt;DocumentInfo&gt;)</th>
+				<td>Create a new Solution instance with the corresponding Projects updated to include the documents specified by documentInfos.</td>
+			</tr>
+			<tr>
+				<th>AddMetadataReference(ProjectId, MetadataReference)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified metadata reference.</td>
+			</tr>
+			<tr>
+				<th>AddMetadataReferences(ProjectId, IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>AddProject(ProjectId, String, String, String)</th>
+				<td>Creates a new solution instance that includes a project with the specified language and names.</td>
+			</tr>
+			<tr>
+				<th>AddProject(ProjectInfo)</th>
+				<td>Create a new solution instance that includes a project with the specified project information.</td>
+			</tr>
+			<tr>
+				<th>AddProject(String, String, String)</th>
+				<td>Creates a new solution instance that includes a project with the specified language and names. Returns the new project.</td>
+			</tr>
+			<tr>
+				<th>AddProjectReference(ProjectId, ProjectReference)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified project reference.</td>
+			</tr>
+			<tr>
+				<th>AddProjectReferences(ProjectId, IEnumerable&lt;ProjectReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to include the specified project references.</td>
+			</tr>
+			<tr>
+				<th>ContainsAdditionalDocument(DocumentId)</th>
+				<td>True if the solution contains the additional document in one of its projects</td>
+			</tr>
+			<tr>
+				<th>ContainsAnalyzerConfigDocument(DocumentId)</th>
+				<td>True if the solution contains the analyzer config document in one of its projects</td>
+			</tr>
+			<tr>
+				<th>ContainsDocument(DocumentId)</th>
+				<td>True if the solution contains the document in one of its projects</td>
+			</tr>
+			<tr>
+				<th>ContainsProject(ProjectId)</th>
+				<td>True if the solution contains a project with the specified project ID.</td>
+			</tr>
+			<tr>
+				<th>GetAdditionalDocument(DocumentId)</th>
+				<td>Gets the additional document in this solution with the specified document ID.</td>
+			</tr>
+			<tr>
+				<th>GetAnalyzerConfigDocument(DocumentId)</th>
+				<td>Gets the analyzer config document in this solution with the specified document ID.</td>
+			</tr>
+			<tr>
+				<th>GetChanges(Solution)</th>
+				<td>Gets an objects that lists the added, changed and removed projects between this solution and the specified solution.</td>
+			</tr>
+			<tr>
+				<th>GetDocument(DocumentId)</th>
+				<td>Gets the document in this solution with the specified document ID.</td>
+			</tr>
+			<tr>
+				<th>GetDocument(SyntaxTree)</th>
+				<td>Gets the document in this solution with the specified syntax tree.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentId(SyntaxTree)</th>
+				<td>Gets the documentId in this solution with the specified syntax tree.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentId(SyntaxTree, ProjectId)</th>
+				<td>Gets the documentId in this solution with the specified syntax tree.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentIdsWithFilePath(String)</th>
+				<td>Gets the set of DocumentIds in this Solution with a FilePath that matches the given file path.</td>
+			</tr>
+			<tr>
+				<th>GetIsolatedSolution()</th>
+				<td>Formerly, returned a copy of the solution isolated from the original so that they do not share computed state. It now does nothing.</td>
+			</tr>
+			<tr>
+				<th>GetLatestProjectVersion()</th>
+				<td>The version of the most recently modified project.</td>
+			</tr>
+			<tr>
+				<th>GetProject(IAssemblySymbol, CancellationToken)</th>
+				<td>Gets the Project associated with an assembly symbol.</td>
+			</tr>
+			<tr>
+				<th>GetProject(ProjectId)</th>
+				<td>Gets the project in this solution with the specified project ID. If the id is not an id of a project that is part of this solution the method returns null.</td>
+			</tr>
+			<tr>
+				<th>GetProjectDependencyGraph()</th>
+				<td>Gets a ProjectDependencyGraph that details the dependencies between projects for this solution.</td>
+			</tr>
+			<tr>
+				<th>GetSourceGeneratedDocumentAsync(DocumentId, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>RemoveAdditionalDocument(DocumentId)</th>
+				<td>Creates a new solution instance that no longer includes the specified additional document.</td>
+			</tr>
+			<tr>
+				<th>RemoveAdditionalDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new solution instance that no longer includes the specified additional documents.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerConfigDocument(DocumentId)</th>
+				<td>Creates a new solution instance that no longer includes the specified AnalyzerConfigDocument.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerConfigDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new solution instance that no longer includes the specified AnalyzerConfigDocuments.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerReference(AnalyzerReference)</th>
+				<td>Create a new solution instance with the project specified updated to no longer include the specified analyzer reference.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerReference(ProjectId, AnalyzerReference)</th>
+				<td>Create a new solution instance with the project specified updated to no longer include the specified analyzer reference.</td>
+			</tr>
+			<tr>
+				<th>RemoveDocument(DocumentId)</th>
+				<td>Creates a new solution instance that no longer includes the specified document.</td>
+			</tr>
+			<tr>
+				<th>RemoveDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new solution instance that no longer includes the specified documents.</td>
+			</tr>
+			<tr>
+				<th>RemoveMetadataReference(ProjectId, MetadataReference)</th>
+				<td>Create a new solution instance with the project specified updated to no longer include the specified metadata reference.</td>
+			</tr>
+			<tr>
+				<th>RemoveProject(ProjectId)</th>
+				<td>Create a new solution instance without the project specified.</td>
+			</tr>
+			<tr>
+				<th>RemoveProjectReference(ProjectId, ProjectReference)</th>
+				<td>Create a new solution instance with the project specified updated to no longer include the specified project reference.</td>
+			</tr>
+			<tr>
+				<th>WithAdditionalDocumentText(DocumentId, SourceText, PreservationMode)</th>
+				<td>Creates a new solution instance with the additional document specified updated to have the text specified.</td>
+			</tr>
+			<tr>
+				<th>WithAdditionalDocumentText(DocumentId, TextAndVersion, PreservationMode)</th>
+				<td>Creates a new solution instance with the additional document specified updated to have the text and version specified.</td>
+			</tr>
+			<tr>
+				<th>WithAdditionalDocumentTextLoader(DocumentId, TextLoader, PreservationMode)</th>
+				<td>Creates a new solution instance with the additional document specified updated to have the text supplied by the text loader.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzerConfigDocumentText(DocumentId, SourceText, PreservationMode)</th>
+				<td>Creates a new solution instance with the analyzer config document specified updated to have the text supplied by the text loader.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzerConfigDocumentText(DocumentId, TextAndVersion, PreservationMode)</th>
+				<td>Creates a new solution instance with the analyzer config document specified updated to have the text and version specified.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzerConfigDocumentTextLoader(DocumentId, TextLoader, PreservationMode)</th>
+				<td>Creates a new solution instance with the analyzer config document specified updated to have the text supplied by the text loader.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzerReferences(IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Creates a new solution instance with the specified analyzer references.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentFilePath(DocumentId, String)</th>
+				<td>Creates a new solution instance with the document specified updated to have the specified file path.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentFolders(DocumentId, IEnumerable&lt;String&gt;)</th>
+				<td>Creates a new solution instance with the document specified updated to be contained in the sequence of logical folders.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentName(DocumentId, String)</th>
+				<td>Creates a new solution instance with the document specified updated to have the new name.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentSourceCodeKind(DocumentId, SourceCodeKind)</th>
+				<td>Creates a new solution instance with the document specified updated to have the source code kind specified.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentSyntaxRoot(DocumentId, SyntaxNode, PreservationMode)</th>
+				<td>Creates a new solution instance with the document specified updated to have a syntax tree rooted by the specified syntax node.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentText(DocumentId, SourceText, PreservationMode)</th>
+				<td>Creates a new solution instance with the document specified updated to have the text specified.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentText(DocumentId, TextAndVersion, PreservationMode)</th>
+				<td>Creates a new solution instance with the document specified updated to have the text and version specified.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentText(IEnumerable&lt;DocumentId&gt;, SourceText, PreservationMode)</th>
+				<td>Creates a new solution instance with all the documents specified updated to have the same specified text.</td>
+			</tr>
+			<tr>
+				<th>WithDocumentTextLoader(DocumentId, TextLoader, PreservationMode)</th>
+				<td>Creates a new solution instance with the document specified updated to have the text supplied by the text loader.</td>
+			</tr>
+			<tr>
+				<th>WithOptions(OptionSet)</th>
+				<td>Creates a new solution instance with the specified options.</td>
+			</tr>
+			<tr>
+				<th>WithProjectAnalyzerReferences(ProjectId, IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to include only the specified analyzer references.</td>
+			</tr>
+			<tr>
+				<th>WithProjectAssemblyName(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the new assembly name.</td>
+			</tr>
+			<tr>
+				<th>WithProjectCompilationOptions(ProjectId, CompilationOptions)</th>
+				<td>Create a new solution instance with the project specified updated to have the specified compilation options.</td>
+			</tr>
+			<tr>
+				<th>WithProjectCompilationOutputInfo(ProjectId, CompilationOutputInfo)</th>
+				<td>Creates a new solution instance with the project specified updated to have the compiler output file path.</td>
+			</tr>
+			<tr>
+				<th>WithProjectDefaultNamespace(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the default namespace.</td>
+			</tr>
+			<tr>
+				<th>WithProjectDocumentsOrder(ProjectId, ImmutableList&lt;DocumentId&gt;)</th>
+				<td>Creates a new solution instance with the project documents in the order by the specified document ids. The specified document ids must be the same as what is already in the project; no adding or removing is allowed.</td>
+			</tr>
+			<tr>
+				<th>WithProjectFilePath(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the project file path.</td>
+			</tr>
+			<tr>
+				<th>WithProjectMetadataReferences(ProjectId, IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to include only the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>WithProjectName(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the name.</td>
+			</tr>
+			<tr>
+				<th>WithProjectOutputFilePath(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the output file path.</td>
+			</tr>
+			<tr>
+				<th>WithProjectOutputRefFilePath(ProjectId, String)</th>
+				<td>Creates a new solution instance with the project specified updated to have the reference assembly output file path.</td>
+			</tr>
+			<tr>
+				<th>WithProjectParseOptions(ProjectId, ParseOptions)</th>
+				<td>Create a new solution instance with the project specified updated to have the specified parse options.</td>
+			</tr>
+			<tr>
+				<th>WithProjectReferences(ProjectId, IEnumerable&lt;ProjectReference&gt;)</th>
+				<td>Create a new solution instance with the project specified updated to contain the specified list of project references.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.solution?view=roslyn-dotnet">MS公式ドキュメント</a>より。</p>
+なんだかたくさんありますけど、覚えるべきは「Projects」プロパティです。
+<code class="csharp">
+	IEnumerable&lt;Project&gt; projects = solution.Projects;
+</code>
+これによって、ソリューションが有するプロジェクト一覧を取得し、それらを走査することでソリューション全体を解析します。
+<h2>ソリューション内のプロジェクトの走査・コンパイル</h2>
+では、先ほど取得したソリューションからプロジェクト一覧を取得、走査して各プロジェクトをコンパイルして、セマンティックモデルを使用する準備をしましょう♪
+<code class="csharp">
+	IEnumerable&lt;Project&gt; projects = solution.Projects;
+	foreach (Project project in projects)
+	{
+		Compilation compiledProject = await project.GetCompilationAsync();
+	}
+</code>
+これによって、プロジェクトをコンパイルします。<br />コンパイルしたデータは意味解析に使用されます。<br />当然ですが、コンパイルされたデータは不変です。<br />一度コンパイルしたプロジェクトは、当該プロジェクトを走査している間は使いまわします。<br /><br />プロジェクトのコンパイルにはかなりの時間がかかるため、間違ってドキュメントのループ時にコンパイルをし直さないように注意して下さい。<br />一般的には共有可能なクラスのプロパティとしてセットしておけばok!です。
+<div class="separator"></div>
+プロジェクトは以下のプロパティ・メソッドを有します。
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>AdditionalDocumentIds</th>
+				<td>All the additional document IDs associated with this project.</td>
+			</tr>
+			<tr>
+				<th>AdditionalDocuments</th>
+				<td>All the additional documents associated with this project.</td>
+			</tr>
+			<tr>
+				<th>AllProjectReferences</th>
+				<td>The list of all other projects that this project references, including projects that are not part of the solution.</td>
+			</tr>
+			<tr>
+				<th>AnalyzerConfigDocuments</th>
+				<td>All the AnalyzerConfigDocuments associated with this project.</td>
+			</tr>
+			<tr>
+				<th>AnalyzerOptions</th>
+				<td>The options used by analyzers for this project.</td>
+			</tr>
+			<tr>
+				<th>AnalyzerReferences</th>
+				<td>The list of all the diagnostic analyzer references for this project.</td>
+			</tr>
+			<tr>
+				<th>AssemblyName</th>
+				<td>The name of the assembly this project represents.</td>
+			</tr>
+			<tr>
+				<th>CompilationOptions</th>
+				<td>The options used when building the compilation for this project.</td>
+			</tr>
+			<tr>
+				<th>CompilationOutputInfo</th>
+				<td>Compilation output file paths.</td>
+			</tr>
+			<tr>
+				<th>DefaultNamespace</th>
+				<td>The default namespace of the project ("" if not defined, which means global namespace), or null if it is unknown or not applicable.</td>
+			</tr>
+			<tr>
+				<th>DocumentIds</th>
+				<td>All the document IDs associated with this project.</td>
+			</tr>
+			<tr>
+				<th>Documents</th>
+				<td>All the regular documents associated with this project. Documents produced from source generators are returned by GetSourceGeneratedDocumentsAsync(CancellationToken).</td>
+			</tr>
+			<tr>
+				<th>FilePath</th>
+				<td>The path to the project file or null if there is no project file.</td>
+			</tr>
+			<tr>
+				<th>HasDocuments</th>
+				<td>True if the project has any documents.</td>
+			</tr>
+			<tr>
+				<th>Id</th>
+				<td>The ID of the project. Multiple Project instances may share the same ID. However, only one project may have this ID in any given solution.</td>
+			</tr>
+			<tr>
+				<th>IsSubmission</th>
+				<td>Returns true if this is a submission project.</td>
+			</tr>
+			<tr>
+				<th>Language</th>
+				<td>The language associated with the project.</td>
+			</tr>
+			<tr>
+				<th>LanguageServices</th>
+				<td>The language services from the host environment associated with this project's language.</td>
+			</tr>
+			<tr>
+				<th>MetadataReferences</th>
+				<td>The list of all other metadata sources (assemblies) that this project references.</td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>The name of the project. This may be different than the assembly name.</td>
+			</tr>
+			<tr>
+				<th>OutputFilePath</th>
+				<td>The path to the output file, or null if it is not known.</td>
+			</tr>
+			<tr>
+				<th>OutputRefFilePath</th>
+				<td>The path to the reference assembly output file, or null if it is not known.</td>
+			</tr>
+			<tr>
+				<th>ParseOptions</th>
+				<td>The options used when parsing documents for this project.</td>
+			</tr>
+			<tr>
+				<th>ProjectReferences</th>
+				<td>The list of all other projects within the same solution that this project references.</td>
+			</tr>
+			<tr>
+				<th>Solution</th>
+				<td>The solution this project is part of.</td>
+			</tr>
+			<tr>
+				<th>SupportsCompilation</th>
+				<td>true if this Project supports providing data through the GetCompilationAsync(CancellationToken) method. If false then GetCompilationAsync(CancellationToken) method will return null instead.</td>
+			</tr>
+			<tr>
+				<th>Version</th>
+				<td>The project version. This equates to the version of the project file.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>AddAdditionalDocument(String, SourceText, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new additional document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddAdditionalDocument(String, String, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new additional document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerConfigDocument(String, SourceText, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new analyzer config document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReference(AnalyzerReference)</th>
+				<td>Creates a new instance of this project updated to include the specified analyzer reference in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>AddAnalyzerReferences(IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Creates a new instance of this project updated to include the specified analyzer references in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(String, SourceText, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(String, String, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddDocument(String, SyntaxNode, IEnumerable&lt;String&gt;, String)</th>
+				<td>Creates a new document in a new instance of this project.</td>
+			</tr>
+			<tr>
+				<th>AddMetadataReference(MetadataReference)</th>
+				<td>Creates a new instance of this project updated to include the specified metadata reference in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>AddMetadataReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new instance of this project updated to include the specified metadata references in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>AddProjectReference(ProjectReference)</th>
+				<td>Creates a new instance of this project updated to include the specified project reference in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>AddProjectReferences(IEnumerable&lt;ProjectReference&gt;)</th>
+				<td>Creates a new instance of this project updated to include the specified project references in addition to already existing ones.</td>
+			</tr>
+			<tr>
+				<th>ContainsAdditionalDocument(DocumentId)</th>
+				<td>True if the project contains an additional document with the specified ID.</td>
+			</tr>
+			<tr>
+				<th>ContainsAnalyzerConfigDocument(DocumentId)</th>
+				<td>True if the project contains an AnalyzerConfigDocument with the specified ID.</td>
+			</tr>
+			<tr>
+				<th>ContainsDocument(DocumentId)</th>
+				<td>True if the project contains a document with the specified ID.</td>
+			</tr>
+			<tr>
+				<th>GetAdditionalDocument(DocumentId)</th>
+				<td>Get the additional document in this project with the specified document Id.</td>
+			</tr>
+			<tr>
+				<th>GetAnalyzerConfigDocument(DocumentId)</th>
+				<td>Get the analyzer config document in this project with the specified document Id.</td>
+			</tr>
+			<tr>
+				<th>GetChanges(Project)</th>
+				<td>Gets an object that lists the added, changed and removed documents between this project and the specified project.</td>
+			</tr>
+			<tr>
+				<th>GetCompilationAsync(CancellationToken)</th>
+				<td>Get the Compilation for this project asynchronously.</td>
+			</tr>
+			<tr>
+				<th>GetDependentSemanticVersionAsync(CancellationToken)</th>
+				<td>The semantic version of this project including the semantics of referenced projects. This version changes whenever the consumable declarations of this project and/or projects it depends on change.</td>
+			</tr>
+			<tr>
+				<th>GetDependentVersionAsync(CancellationToken)</th>
+				<td>The most recent version of the project, its documents and all dependent projects and documents.</td>
+			</tr>
+			<tr>
+				<th>GetDocument(DocumentId)</th>
+				<td>Get the document in this project with the specified document Id.</td>
+			</tr>
+			<tr>
+				<th>GetDocument(SyntaxTree)</th>
+				<td>Get the document in this project with the specified syntax tree.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentId(SyntaxTree)</th>
+				<td>Get the documentId in this project with the specified syntax tree.</td>
+			</tr>
+			<tr>
+				<th>GetLatestDocumentVersionAsync(CancellationToken)</th>
+				<td>The version of the most recently modified document.</td>
+			</tr>
+			<tr>
+				<th>GetSemanticVersionAsync(CancellationToken)</th>
+				<td>The semantic version of this project not including the semantics of referenced projects. This version changes only when the consumable declarations of this project change.</td>
+			</tr>
+			<tr>
+				<th>GetSourceGeneratedDocumentAsync(DocumentId, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetSourceGeneratedDocumentsAsync(CancellationToken)</th>
+				<td>Gets all source generated documents in this project.</td>
+			</tr>
+			<tr>
+				<th>RemoveAdditionalDocument(DocumentId)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified additional document.</td>
+			</tr>
+			<tr>
+				<th>RemoveAdditionalDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified additional documents.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerConfigDocument(DocumentId)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified analyzer config document.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerConfigDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new solution instance that no longer includes the specified AnalyzerConfigDocuments.</td>
+			</tr>
+			<tr>
+				<th>RemoveAnalyzerReference(AnalyzerReference)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified analyzer reference.</td>
+			</tr>
+			<tr>
+				<th>RemoveDocument(DocumentId)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified document.</td>
+			</tr>
+			<tr>
+				<th>RemoveDocuments(ImmutableArray&lt;DocumentId&gt;)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified documents.</td>
+			</tr>
+			<tr>
+				<th>RemoveMetadataReference(MetadataReference)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified metadata reference.</td>
+			</tr>
+			<tr>
+				<th>RemoveProjectReference(ProjectReference)</th>
+				<td>Creates a new instance of this project updated to no longer include the specified project reference.</td>
+			</tr>
+			<tr>
+				<th>TryGetCompilation(Compilation)</th>
+				<td>Tries to get the cached Compilation for this project if it has already been created and is still cached. In almost all cases you should call GetCompilationAsync(CancellationToken) which will either return the cached Compilation or create a new one otherwise.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzerReferences(IEnumerable&lt;AnalyzerReference&gt;)</th>
+				<td>Creates a new instance of this project updated to replace existing analyzer references with the specified ones.</td>
+			</tr>
+			<tr>
+				<th>WithAssemblyName(String)</th>
+				<td>Creates a new instance of this project updated to have the new assembly name.</td>
+			</tr>
+			<tr>
+				<th>WithCompilationOptions(CompilationOptions)</th>
+				<td>Creates a new instance of this project updated to have the specified compilation options.</td>
+			</tr>
+			<tr>
+				<th>WithDefaultNamespace(String)</th>
+				<td>Creates a new instance of this project updated to have the new default namespace.</td>
+			</tr>
+			<tr>
+				<th>WithMetadataReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new instance of this project updated to replace existing metadata reference with the specified ones.</td>
+			</tr>
+			<tr>
+				<th>WithParseOptions(ParseOptions)</th>
+				<td>Creates a new instance of this project updated to have the specified parse options.</td>
+			</tr>
+			<tr>
+				<th>WithProjectReferences(IEnumerable&lt;ProjectReference&gt;)</th>
+				<td>Creates a new instance of this project updated to replace existing project references with the specified ones.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+この中でも以下のプロパティ・メソッドをよく使用します。
+<table>
+	<tbody>
+		<tr>
+			<th>Documents</th>
+			<td>プロジェクトに含まれるドキュメント一覧を保持します。</td>
+		</tr>
+		<tr>
+			<th>FilePath</th>
+			<td>当該プロジェクトファイルへのパスを保持します。</td>
+		</tr>
+		<tr>
+			<th>Language</th>
+			<td>当該プロジェクトを構成している言語「C#」or「Visual Basic」を返します。<br /></td>
+		</tr>
+		<tr>
+			<th>GetCompilationAsync</th>
+			<td>プロジェクトをコンパイルします。</td>
+		</tr>
+	</tbody>
+</table>
+<h2>プロジェクト内のドキュメントの走査・構文解析</h2>
+次にプロジェクトに含まれるドキュメントから構文ツリーを生成しましょう♪<br />構文ツリーはドキュメントレベルで生成されることに注意して下さい。<br />したがって、あるドキュメントに含まれるノードの定義元をたどる場合に、その定義場所が別ファイル(ドキュメント)に存在する場合には、少し工夫が必要となります。<br /><br />では、ドキュメントの走査、構文解析をしましょう♪
+<code class="csharp">
+	IEnumerable&lt;Document&gt; documents = project.Documents;
+	foreach (Document document in documents)
+	{
+		// ドキュメントの走査
+	}
+</code>
+Documentクラスには以下のプロパティ・メソッドが搭載されています。
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>FilePath</th>
+				<td>The path to the document file or null if there is no document file. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>Folders</th>
+				<td>The sequence of logical folders the document is contained in. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>Id</th>
+				<td>The document's identifier. Many document instances may share the same ID, but only one document in a solution may have that ID. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>The name of the document. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>Project</th>
+				<td>The project this document belongs to. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>SourceCodeKind</th>
+				<td>The kind of source code this document contains.</td>
+			</tr>
+			<tr>
+				<th>SupportsSemanticModel</th>
+				<td>true if this Document supports providing data through the GetSemanticModelAsync(CancellationToken) method. If false then that method will return null instead.</td>
+			</tr>
+			<tr>
+				<th>SupportsSyntaxTree</th>
+				<td>true if this Document supports providing data through the GetSyntaxTreeAsync(CancellationToken) and GetSyntaxRootAsync(CancellationToken) methods. If false then these methods will return null instead.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>GetLinkedDocumentIds()</th>
+				<td>Gets the list of DocumentIds that are linked to this Document. Documents are considered to be linked if they share the same FilePath. This DocumentId is excluded from the result.</td>
+			</tr>
+			<tr>
+				<th>GetOptionsAsync(CancellationToken)</th>
+				<td>Returns the options that should be applied to this document. This consists of global options from Options, merged with any settings the user has specified at the document levels.</td>
+			</tr>
+			<tr>
+				<th>GetSemanticModelAsync(CancellationToken)</th>
+				<td>Gets the semantic model for this document asynchronously.</td>
+			</tr>
+			<tr>
+				<th>GetSyntaxRootAsync(CancellationToken)</th>
+				<td>Gets the root node of the syntax tree asynchronously.</td>
+			</tr>
+			<tr>
+				<th>GetSyntaxTreeAsync(CancellationToken)</th>
+				<td>Gets the SyntaxTree for this document asynchronously.</td>
+			</tr>
+			<tr>
+				<th>GetSyntaxVersionAsync(CancellationToken)</th>
+				<td>Gets the version of the syntax tree. This is generally the newer of the text version and the project's version.	</td>	</tr>
+			<tr>	<th>	GetTextAsync(CancellationToken)	</th>	<td>	Gets the current text for the document asynchronously. (Inherited from TextDocument)	</td>	</tr>
+			<tr>	<th>	GetTextChangesAsync(Document, CancellationToken)	</th>	<td>	Get the text changes between this document and a prior version of the same document. The changes, when applied to the text of the old document, will produce the text of the current document.	</td>	</tr>
+			<tr>	<th>	GetTextVersionAsync(CancellationToken)	</th>	<td>	Gets the version of the document's text. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>TryGetSemanticModel(SemanticModel)</th>
+				<td>Gets the current semantic model for this document if the model is already computed and still cached. In almost all cases, you should call GetSemanticModelAsync(CancellationToken), which will compute the semantic model if necessary.</td>
+			</tr>
+			<tr>
+				<th>TryGetSyntaxRoot(SyntaxNode)</th>
+				<td>Gets the root node of the current syntax tree if the syntax tree has already been parsed and the tree is still cached. In almost all cases, you should call GetSyntaxRootAsync(CancellationToken) to fetch the root node, which will parse the document if necessary.</td>
+			</tr>
+			<tr>
+				<th>TryGetSyntaxTree(SyntaxTree)</th>
+				<td>Get the current syntax tree for the document if the text is already loaded and the tree is already parsed. In almost all cases, you should call GetSyntaxTreeAsync(CancellationToken) to fetch the tree, which will parse the tree if it's not already parsed.	</td>	</tr>
+			<tr>	<th>	TryGetSyntaxVersion(VersionStamp)	</th>	<td>	Get the current syntax tree version for the document if the text is already loaded and the tree is already parsed. In almost all cases, you should call GetSyntaxVersionAsync(CancellationToken) to fetch the version, which will load the tree if it's not already available.</td>
+			</tr>
+			<tr>
+				<th>TryGetText(SourceText)</th>
+				<td>Get the current text for the document if it is already loaded and available. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>TryGetTextVersion(VersionStamp)</th>
+				<td>Gets the version of the document's text if it is already loaded and available. (Inherited from TextDocument)</td>
+			</tr>
+			<tr>
+				<th>WithFilePath(String)</th>
+				<td>Creates a new instance of this document updated to have the specified file path.</td>
+			</tr>
+			<tr>
+				<th>WithFolders(IEnumerable&lt;String&gt;)</th>
+				<td>Creates a new instance of this document updated to have the specified folders.</td>
+			</tr>
+			<tr>
+				<th>WithName(String)</th>
+				<td>Creates a new instance of this document updated to have the specified name.</td>
+			</tr>
+			<tr>
+				<th>WithSourceCodeKind(SourceCodeKind)</th>
+				<td>Creates a new instance of this document updated to have the source code kind specified.</td>
+			</tr>
+			<tr>
+				<th>WithSyntaxRoot(SyntaxNode)</th>
+				<td>Creates a new instance of this document updated to have a syntax tree rooted by the specified syntax node.</td>
+			</tr>
+			<tr>
+				<th>WithText(SourceText)</th>
+				<td>Creates a new instance of this document updated to have the text specified.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+構文ツリーから構文ノードを探索する方法もありますが、頂点に位置する構文ノードの子孫ノードを探索する方法が一般的ですので、ここでもこの方法を採用します。<br />頂点の構文ノードを取得するには以下の処理を行います。
+<code class="csharp">
+	SyntaxTree tree = document.GetSyntaxTreeAsync().Result;
+	SyntaxNode root = tree.GetRoot();
+
+	// or
+
+	SyntaxNode root = document.GetSyntaxRootAsync().Result;
+</code>
+構文ツリーを別の用途で使用する場合は上の処理を、頂点ノードから子孫ノードを探索する以外の処理をしない場合は下の処理をオススメします。<br />今回は頂点ノードから子孫ノードを探索するだけでok!ですので、下の処理を採用します。
+<div class="separator"></div>
+これで、ソリューションファイルへのパスからソリューションを読み込み、当該ソリューションに含まれるプロジェクト一覧の走査とコンパイル、各プロジェクトに含まれるドキュメントの走査と頂点の構文ノードの取得まで完了しました。<br /><br />次は構文ノードをたどった探索を行います。

@@ -93,6 +93,7 @@ noscript {
 #subjectMainBox table:not(.x) th, #subjectMainBox table:not(.x) td {
   padding: 10px 15px;
   background-color: white;
+  word-break: break-word;
 }
 #subjectMainBox table:not(.x) thead th {
   background-color: lightgray;
