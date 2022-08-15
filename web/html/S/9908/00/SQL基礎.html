@@ -55,7 +55,14 @@ SQLではそれぞれ、以下のクエリ文が該当します。
 	CREATE TABLE pokemon(
 		number INT PRIMARY KEY,
 		name NVARCHAR(5) NOT NULL,
-		height INT NOT NULL
+		type1 NVARCHAR(5) NOT NULL,
+		type2 NVARCHAR(5) NULL,
+		hp INT NOT NULL,
+		attack INT NOT NULL,
+		defence INT NOT NULL,
+		sp_attack INT NOT NULL,
+		sp_defence INT NULL,
+		speed INT NOT NULL
 	);
 </code>
 <p>ひとつずつ実行して下さい。</p>
@@ -63,9 +70,21 @@ SQLではそれぞれ、以下のクエリ文が該当します。
 <ul>
 	<li>number: 図鑑番号</li>
 	<li>name: 名前</li>
-	<li>height: 身長</li>
+	<li>type1: タイプ1</li>
+	<li>type2: タイプ2</li>
+	<li>hp: HP</li>
+	<li>attack: 攻撃</li>
+	<li>defence: 防御</li>
+	<li>sp_attack: 特攻</li>
+	<li>sp_defence: 特防</li>
+	<li>speed: スピード</li>
 </ul>
 <h2>INSERT文</h2>
+行を追加するためのSQL文です。
+<code class="sql">
+	INSERT INTO テーブル名(列1, 列2, 列3)
+	VALUES(値1, 値2, 値3);
+</code>
 
 
 
