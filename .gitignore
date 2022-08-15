@@ -2,11 +2,7 @@
 /dev/db/contents/
 /logFiles/
 bin/
-<<<<<<< HEAD
-program/
-=======
 .vs/
->>>>>>> feature/document
 *.pdf
 *.csv
 *.txt
