@@ -96,7 +96,7 @@
 <code class="javascript">
 	function factrial(n) {
 		if (n !== 1) {
-			return n * (factrial - 1);
+			return n * (factrial(n - 1));
 		} else {
 			return 1;
 		}
