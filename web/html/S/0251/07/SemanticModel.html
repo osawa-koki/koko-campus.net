@@ -1,3 +1,340 @@
+<h2>compilation</h2>
+プロジェクトをコンパイルすることで生成されるオブジェクトで、セマンティックモデルを使用するための基となるデータです。<br />復習になりますが、プロジェクトをコンパイルして「Compilation」オブジェクトを生成してみましょう♪
+<code class="csharp">
+	Compilation compiledProject = await project.GetCompilationAsync();
+</code>
+「Compilation」オブジェクトは以下のプロパティ・メソッドを持ちます。
+<div class="collapser" data-count="2">「Compilation」オブジェクトプロパティ</div>
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>Assembly</th>
+				<td>The IAssemblySymbol that represents the assembly being created.</td>
+			</tr>
+			<tr>
+				<th>AssemblyName</th>
+				<td>Simple assembly name, or null if not specified.</td>
+			</tr>
+			<tr>
+				<th>CommonAssembly</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonDynamicType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonGlobalNamespace</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonObjectType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonOptions</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonScriptClass</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonScriptGlobalsType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonSourceModule</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonSyntaxTrees</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>DirectiveReferences</th>
+				<td>Unique metadata references specified via #r directive in the source code of this compilation.</td>
+			</tr>
+			<tr>
+				<th>DynamicType</th>
+				<td>The TypeSymbol for the type 'dynamic' in this Compilation.</td>
+			</tr>
+			<tr>
+				<th>ExternalReferences</th>
+				<td>Metadata references passed to the compilation constructor.</td>
+			</tr>
+			<tr>
+				<th>GlobalNamespace</th>
+				<td>The root namespace that contains all namespaces and types defined in source code or in referenced metadata, merged into a single namespace hierarchy.</td>
+			</tr>
+			<tr>
+				<th>IsCaseSensitive</th>
+				<td>Returns true if this is a case sensitive compilation, false otherwise. Case sensitivity affects compilation features such as name lookup as well as choosing what names to emit when there are multiple different choices (for example between a virtual method and an override).</td>
+			</tr>
+			<tr>
+				<th>Language</th>
+				<td>Gets the source language ("C#" or "Visual Basic").</td>
+			</tr>
+			<tr>
+				<th>ObjectType</th>
+				<td>The INamedTypeSymbol for the .NET System.Object type, which could have a TypeKind of Error if there was no COR Library in this Compilation.</td>
+			</tr>
+			<tr>
+				<th>Options</th>
+				<td>Gets the options the compilation was created with.</td>
+			</tr>
+			<tr>
+				<th>ReferencedAssemblyNames</th>
+				<td>Assembly identities of all assemblies directly referenced by this compilation.</td>
+			</tr>
+			<tr>
+				<th>References</th>
+				<td>All metadata references -- references passed to the compilation constructor as well as references specified via #r directives.</td>
+			</tr>
+			<tr>
+				<th>ScriptClass</th>
+				<td>A symbol representing the implicit Script class. This is null if the class is not defined in the compilation.</td>
+			</tr>
+			<tr>
+				<th>ScriptCompilationInfo</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>SourceModule</th>
+				<td>Gets the IModuleSymbol for the module being created by compiling all of the source code.</td>
+			</tr>
+			<tr>
+				<th>SyntaxTrees</th>
+				<td>Gets the syntax trees (parsed from source code) that this compilation was created with.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.compilation?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="collapser" data-count="2">「Compilation」オブジェクトメソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>AddReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation with additional metadata references.</td>
+			</tr>
+			<tr>
+				<th>AddReferences(MetadataReference[])</th>
+				<td>Creates a new compilation with additional metadata references.</td>
+			</tr>
+			<tr>
+				<th>AddSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td>Creates a new compilation with additional syntax trees.</td>
+			</tr>
+			<tr>
+				<th>AddSyntaxTrees(SyntaxTree[])</th>
+				<td>Creates a new compilation with additional syntax trees.</td>
+			</tr>
+			<tr>
+				<th>AppendDefaultVersionResource(Stream)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementLocations(Int32, ImmutableArray&lt;Location&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementNames(Int32, ImmutableArray&lt;String&gt;)</th>
+				<td>Check that if any names are provided, and their number matches the expected cardinality. Returns a normalized version of the element names (empty array if all the names are null).</td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementNullableAnnotations(Int32, ImmutableArray&lt;NullableAnnotation&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ClassifyCommonConversion(ITypeSymbol, ITypeSymbol)</th>
+				<td>Classifies a conversion from source to destination according to this compilation's programming language.	</td>	</tr>
+			<tr>	<th>	Clone()	</th>	<td>	Creates a new compilation equivalent to this one with different symbol instances.	</td>	</tr>
+			<tr>	<th>	CommonAddSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonBindScriptClass()	</th>	<td>	Resolves a symbol that represents script container (Script class). Uses the full name of the container class stored in ScriptClassName to find the symbol.	</td>	</tr>
+			<tr>	<th>	CommonClone()	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonContainsSyntaxTree(SyntaxTree)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateArrayTypeSymbol(ITypeSymbol, Int32, NullableAnnotation)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateErrorNamespaceSymbol(INamespaceSymbol, String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateErrorTypeSymbol(INamespaceOrTypeSymbol, String, Int32)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateFunctionPointerTypeSymbol(ITypeSymbol, RefKind, ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;RefKind&gt;, SignatureCallingConvention, ImmutableArray&lt;INamedTypeSymbol&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateNativeIntegerTypeSymbol(Boolean)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreatePointerTypeSymbol(ITypeSymbol)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetAssemblyOrModuleSymbol(MetadataReference)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetCompilationNamespace(INamespaceSymbol)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetEntryPoint(CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetSemanticModel(SyntaxTree, Boolean)	</th>	<td>	Gets a SemanticModel for the given syntaxTree. If Microsoft.CodeAnalysis.Compilation.SemanticModelProvider is non-null, it attempts to use Microsoft.CodeAnalysis.SemanticModelProvider.GetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.Compilation,System.Boolean) to get a semantic model. Otherwise, it creates a new semantic model using Microsoft.CodeAnalysis.Compilation.CreateSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean).	</td>	</tr>
+			<tr>	<th>	CommonGetTypeByMetadataName(String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonRemoveAllSyntaxTrees()	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonRemoveSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonReplaceSyntaxTree(SyntaxTree, SyntaxTree)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithAssemblyName(String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithOptions(CompilationOptions)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithReferences(IEnumerable&lt;MetadataReference&gt;)	</th>	<td>	Creates a new compilation with the specified references.	</td>	</tr>
+			<tr>	<th>	CommonWithScriptCompilationInfo(ScriptCompilationInfo)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	ContainsSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)	</th>	<td>	Return true if there is a source declaration symbol name that meets given predicate.	</td>	</tr>
+			<tr>	<th>	ContainsSymbolsWithName(String, SymbolFilter, CancellationToken)	</th>	<td>	Return true if there is a source declaration symbol name that matches the provided name. This may be faster than ContainsSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken) when predicate is just a simple string check. name is case sensitive or not depending on the target language.	</td>	</tr>
+			<tr>	<th>	ContainsSyntaxTree(SyntaxTree)	</th>	<td>	Returns true if this compilation contains the specified tree. False otherwise.	</td>	</tr>
+			<tr>	<th>	CreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new anonymous type symbol with the given member types, names, and source locations. Anonymous type members will be readonly by default. Writable properties are supported in VB and can be created by passing in false in the appropriate locations in memberIsReadOnly.	</td>	</tr>
+			<tr>	<th>	CreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new anonymous type symbol with the given member types, names, source locations, and nullable annotations. Anonymous type members will be readonly by default. Writable properties are supported in VB and can be created by passing in false in the appropriate locations in memberIsReadOnly.	</td>	</tr>
+			<tr>	<th>	CreateArrayTypeSymbol(ITypeSymbol, Int32)	</th>	<td>	Returns a new ArrayTypeSymbol representing an array type tied to the base types of the COR Library in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateArrayTypeSymbol(ITypeSymbol, Int32, NullableAnnotation)	</th>	<td>	Returns a new ArrayTypeSymbol representing an array type tied to the base types of the COR Library in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateDefaultWin32Resources(Boolean, Boolean, Stream, Stream)	</th>	<td>	Create a stream filled with default win32 resources.	</td>	</tr>
+			<tr>	<th>	CreateErrorNamespaceSymbol(INamespaceSymbol, String)	</th>	<td>	Returns a new INamespaceSymbol representing an error (missing) namespace with the given name.	</td>	</tr>
+			<tr>	<th>	CreateErrorTypeSymbol(INamespaceOrTypeSymbol, String, Int32)	</th>	<td>	Returns a new INamedTypeSymbol representing an error type with the given name and arity in the given optional container.	</td>	</tr>
+			<tr>	<th>	CreateFunctionPointerTypeSymbol(ITypeSymbol, RefKind, ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;RefKind&gt;, SignatureCallingConvention, ImmutableArray&lt;INamedTypeSymbol&gt;)	</th>	<td>	Returns a new IFunctionPointerTypeSymbol representing a function pointer type tied to types in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateNativeIntegerTypeSymbol(Boolean)	</th>	<td>	Returns a new INamedTypeSymbol representing a native integer.	</td>	</tr>
+			<tr>	<th>	CreatePointerTypeSymbol(ITypeSymbol)	</th>	<td>	Returns a new IPointerTypeSymbol representing a pointer type tied to a type in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given element types, names, and locations.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given element types and (optional) element names, locations, and nullable annotations.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given underlying type and element names and locations. The underlying type needs to be tuple-compatible.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given underlying type and (optional) element names, locations, and nullable annotations. The underlying type needs to be tuple-compatible.	</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, Stream, IEnumerable&lt;EmbeddedText&gt;, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, Stream, IEnumerable&lt;EmbeddedText&gt;, Stream, CancellationToken)	</th>	<td>	Emit the IL for the compiled source code into the specified stream.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Func&lt;ISymbol,Boolean&gt;, Stream, Stream, Stream, CancellationToken)	</th>	<td>	Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Func&lt;ISymbol, Boolean&gt;, Stream, Stream, Stream, ICollection&lt;MethodDefinitionHandle&gt;, CancellationToken)	</th>	<td>	Obsolete. Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Stream, Stream, Stream, ICollection&lt;MethodDefinitionHandle&gt;, CancellationToken)	</th>	<td>	Obsolete. Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	GetAssemblyOrModuleSymbol(MetadataReference)	</th>	<td>	Gets the IAssemblySymbol or IModuleSymbol for a metadata reference used to create this compilation.	</td>	</tr>
+			<tr>	<th>	GetCompilationNamespace(INamespaceSymbol)	</th>	<td>	Gets the corresponding compilation namespace for the specified module or assembly namespace.	</td>	</tr>
+			<tr>	<th>	GetDeclarationDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during symbol declaration.	</td>	</tr>
+			<tr>	<th>	GetDiagnostics(CancellationToken)	</th>	<td>	Gets all the diagnostics for the compilation, including syntax, declaration, and binding. Does not include any diagnostics that might be produced during emit, see EmitResult.	</td>	</tr>
+			<tr>	<th>	GetEntryPoint(CancellationToken)	</th>	<td>	Returns the Main method that will serves as the entry point of the assembly, if it is executable (and not a script).	</td>	</tr>
+			<tr>	<th>	GetMetadataReference(IAssemblySymbol)	</th>	<td>	Gets the MetadataReference that corresponds to the assembly symbol.	</td>	</tr>
+			<tr>	<th>	GetMethodBodyDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during the analysis of method bodies and field initializers.	</td>	</tr>
+			<tr>	<th>	GetParseDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during the parsing stage.	</td>	</tr>
+			<tr>	<th>	GetRequiredLanguageVersion(Diagnostic)	</th>	<td>	Returns the required language version found in a Diagnostic, if any is found. Returns null if none is found.	</td>	</tr>
+			<tr>	<th>	GetSemanticModel(SyntaxTree, Boolean)	</th>	<td>	Gets a new SemanticModel for the specified syntax tree.	</td>	</tr>
+			<tr>	<th>	GetSpecialType(SpecialType)	</th>	<td>	Get the symbol for the predefined type from the Cor Library referenced by this compilation.	</td>	</tr>
+			<tr>	<th>	GetSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)	</th>	<td>	Return source declaration symbols whose name meets given predicate.	</td>	</tr>
+			<tr>	<th>	GetSymbolsWithName(String, SymbolFilter, CancellationToken)	</th>	<td>	Return source declaration symbols whose name matches the provided name. This may be faster than GetSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken) when predicate is just a simple string check. name is case sensitive or not depending on the target language.	</td>	</tr>
+			<tr>	<th>	GetTypeByMetadataName(String)	</th>	<td>	Gets the type within the compilation's assembly and all referenced assemblies (other than those that can only be referenced via an extern alias) using its canonical CLR metadata name. This lookup follows the following order: If the type is found in the compilation's assembly, that type is returned. Next, the core library (the library that defines System.Object and has no assembly references) is searched. If the type is found there, that type is returned. Finally, all remaining referenced non-extern assemblies are searched. If one and only one type matching the provided metadata name is found, that single type is returned. Accessibility is ignored for this check.	</td>	</tr>
+			<tr>	<th>	GetTypesByMetadataName(String)	</th>	<td>	Gets all types with the compilation's assembly and all referenced assemblies that have the given canonical CLR metadata name. Accessibility to the current assembly is ignored when searching for matching type names.</td>
+			</tr>
+			<tr>
+				<th>GetUnreferencedAssemblyIdentities(Diagnostic)</th>
+				<td>Given a Diagnostic reporting unreferenced AssemblyIdentitys, returns the actual AssemblyIdentity instances that were not referenced.</td>
+			</tr>
+			<tr>
+				<th>GetUsedAssemblyReferences(CancellationToken)</th>
+				<td>Unique metadata assembly references that are considered to be used by this compilation. For example, if a type declared in a referenced assembly is referenced in source code within this compilation, the reference is considered to be used. Etc. The returned set is a subset of references returned by References API. The result is undefined if the compilation contains errors.</td>
+			</tr>
+			<tr>
+				<th>HasImplicitConversion(ITypeSymbol, ITypeSymbol)</th>
+				<td>Returns true if there is an implicit (C#) or widening (VB) conversion from fromType to toType. Returns false if either fromType or toType is null, or if no such conversion exists.</td>
+			</tr>
+			<tr>
+				<th>IsSymbolAccessibleWithin(ISymbol, ISymbol, ITypeSymbol)</th>
+				<td>Checks if symbol is accessible from within within. An optional qualifier of type throughType is used to resolve protected access for instance members. All symbols are required to be from this compilation or some assembly referenced (References) by this compilation. within is required to be an INamedTypeSymbol or IAssemblySymbol.</td>
+			</tr>
+			<tr>
+				<th>RemoveAllReferences()</th>
+				<td>Creates a new compilation without any metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveAllSyntaxTrees()</th>
+				<td>Creates a new compilation without any syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>RemoveReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation without the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveReferences(MetadataReference[])</th>
+				<td>Creates a new compilation without the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td>Creates a new compilation without the specified syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>RemoveSyntaxTrees(SyntaxTree[])</th>
+				<td>Creates a new compilation without the specified syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>ReplaceReference(MetadataReference, MetadataReference)</th>
+				<td>Creates a new compilation with an old metadata reference replaced with a new metadata reference.</td>
+			</tr>
+			<tr>
+				<th>ReplaceSyntaxTree(SyntaxTree, SyntaxTree)</th>
+				<td>Creates a new compilation with an old syntax tree replaced with a new syntax tree. Reuses metadata from old compilation object.</td>
+			</tr>
+			<tr>
+				<th>SyntaxTreeCommonFeatures(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ToMetadataReference(ImmutableArray&lt;String&gt;, Boolean)</th>
+				<td>Creates a metadata reference for this compilation.</td>
+			</tr>
+			<tr>
+				<th>WithAssemblyName(String)</th>
+				<td>Creates a compilation with the specified assembly name.</td>
+			</tr>
+			<tr>
+				<th>WithOptions(CompilationOptions)</th>
+				<td>Creates a new compilation with the specified compilation options.</td>
+			</tr>
+			<tr>
+				<th>WithReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation with the specified references.</td>
+			</tr>
+			<tr>
+				<th>WithReferences(MetadataReference[])</th>
+				<td>Creates a new compilation with the specified references.</td>
+			</tr>
+			<tr>
+				<th>WithScriptCompilationInfo(ScriptCompilationInfo)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>WithAnalyzers(Compilation, ImmutableArray&lt;DiagnosticAnalyzer&gt;, AnalyzerOptions, CancellationToken)</th>
+				<td>Returns a new compilation with attached diagnostic analyzers.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzers(Compilation, ImmutableArray&lt;DiagnosticAnalyzer&gt;, CompilationWithAnalyzersOptions)</th>
+				<td>Returns a new compilation with attached diagnostic analyzers.</td>
+			</tr>
+			<tr>
+				<th>Emit(Compilation, String, String, String, String, IEnumerable&lt;ResourceDescription&gt;, CancellationToken)</th>
+				<td>Emit the IL for the compilation into the specified stream.</td>
+			</tr>
+			<tr>
+				<th>AliasImports(Compilation)</th>
+				<td>Gets the compilation AliasImports property.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)</th>
+				<td>Determines what kind of conversion there is between the specified types.</td>
+			</tr>
+			<tr>
+				<th>GetSpecialType(Compilation, SpecialType)</th>
+				<td>Gets the special type symbol in current compilation.</td>
+			</tr>
+			<tr>
+				<th>MemberImports(Compilation)</th>
+				<td>Gets the compilation MemberImports property.</td>
+			</tr>
+			<tr>
+				<th>RootNamespace(Compilation)</th>
+				<td>Gets the compilation RootNamespace property.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.compilation?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
 
 
 
