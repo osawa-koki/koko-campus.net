@@ -35,8 +35,8 @@ func pageController(RR *RequestResponse) {
 	case "S":
 		urlCheck = true
 		tmplMap.addCSSLIB("https://css.gg/notes.css")
-		tmplMap.addCSS("S/00", "S/01", "S/02", "S/03", "S/05", "S/99")
-		tmplMap.addJS("S/00", "S/01", "S/02", "99/00")
+		tmplMap.addCSS("S/00", "S/01", "S/02", "S/03", "S/04", "S/05", "S/99")
+		tmplMap.addJS("S/00", "S/01", "S/02", "S/04", "99/00")
 		if RR.Login {
 			tmplMap.addJS("S/70")
 			tmplMap.addCSS("S/70")

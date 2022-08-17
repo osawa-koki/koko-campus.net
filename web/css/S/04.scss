@@ -1,0 +1,25 @@
+@charset "utf8";
+
+div.collapser {
+	margin: 25px 0 10px 0;
+	border: 1px black solid;
+	color: white;
+	background-color: black;
+	width: 250px;
+	padding: 10px;
+	max-width: 100%;
+	cursor: pointer;
+	&::before {
+		content: "▶";
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	&.open::before {
+		content: "▼";
+	}
+	&.open {
+		color: black;
+		background-color: white;
+	}
+}
+
