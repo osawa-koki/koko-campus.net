@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="純粋関数・非純粋関数.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\haskell入門\pics\純粋関数・非純粋関数.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.37504910234789"
+         inkscape:cx="-133.315877006474"
+         inkscape:cy="686.576766583343"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid11226" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="509.050228026883"
+             y="625.000557744117"
+             width="43.3635379430307"
+             height="43.3635379430307"
+             id="rect13260" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1820"
+             x="-0.105699096655223"
+             y="-0.100947260476482"
+             width="1.21139819331045"
+             height="1.20189452095296">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="14.0974439900622"
+                 id="feGaussianBlur1822" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             style="opacity:0.398703;fill:#b300ff;fill-opacity:0.561776;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter1820)"
+             d="m 275.2641973775,545.814966717713 c 67.444786202259,6.2626321816 141.353807646977,3.290642588258 149.382057027583,94.434041657933 -12.769609077078,67.496006309922 -71.255755669511,88.818309729336 -146.554000205212,93.160394226048 l -5.656113644743,60.33187887726 211.168771734052,0.624759679686 c 54.528545317325,2.203939728154 108.021661709741,-43.46967279121 108.023200985724,-80.456918741482 l 0.904089253844,-129.427204123586 c 0,-47.267133399306 -19.60515763702,-125.193778511292 -110.81983036047,-125.197051488537 l -161.731855801571,-0.0058032844 z"
+             id="path1189"
+             sodipodi:nodetypes="cccccccccc"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,1.15058711224806,12.5868216178407)" />
+        <g
+             id="g21718"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,-2.53557531437449,8.90065919121818)">
+            <g
+                 id="g11505-5-3"
+                 transform="rotate(0.075722696781662,-322015.336674783,228916.551657352)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0" />
+            </g>
+            <g
+                 id="g11505-5-3-9"
+                 transform="matrix(-0.999999126673132,0.001321609992597,0.001321609992597,0.999999126673132,603.388387624325,449.017896925681)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6-2"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0-5" />
+            </g>
+        </g>
+        <g
+             id="g1094"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,-24.6525498741098,12.5868216178407)">
+            <g
+                 id="g11505-5-3-0"
+                 transform="rotate(-35.3134376039032,778.711135243909,13.9631734761501)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6-6"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0-6" />
+            </g>
+            <g
+                 id="g11505-5-3-0-5"
+                 transform="rotate(144.686562396097,225.105295050859,410.983653586252)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6-6-5"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0-6-9" />
+            </g>
+        </g>
+        <g
+             id="g1094-7"
+             transform="matrix(0.921540606655637,0,0,-0.921540606655637,-27.6260875220197,1190.4338090235)">
+            <g
+                 id="g11505-5-3-0-8"
+                 transform="rotate(-35.3134376039032,778.711135243909,13.9631734761501)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6-6-4"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0-6-7" />
+            </g>
+            <g
+                 id="g11505-5-3-0-5-5"
+                 transform="rotate(144.686562396097,225.105295050859,410.983653586252)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 116.991077212656,205.315952212496 68.008922787344,0.07488142808"
+                     id="path11224-5-6-6-5-1"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6-0-6-9-9" />
+            </g>
+        </g>
+        <g
+             id="g920"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,-24.6525498741098,12.5868216178407)">
+            <g
+                 id="g11131-7-7"
+                 transform="translate(-31.3304565205318,400.170039061926)">
+                <ellipse
+                     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                     id="path5790-9-0"
+                     cx="348.793670654297"
+                     cy="236.14274597168"
+                     rx="118.778388977051"
+                     ry="69.2873916625977" />
+                <text
+                     xml:space="preserve"
+                     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+                     x="316.742370605469"
+                     y="251.81169128418"
+                     id="text7356-9-5"><tspan
+                         sodipodi:role="line"
+                         id="tspan7354-3-9"
+                         x="316.742370605469"
+                         y="251.81169128418">fx</tspan></text>
+            </g>
+            <g
+                 id="g11505-5"
+                 transform="translate(-2.10720268935893,408.896296066251)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 60.3318788772604,205.390833640582 124.6681211227396,-2e-12"
+                     id="path11224-5"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-6" />
+            </g>
+            <g
+                 id="g11505-7-1"
+                 transform="matrix(-1,0,0,1,241.932761977939,452.765296566262)">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 60.3318788772604,205.390833640582 124.6681211227396,-2e-12"
+                     id="path11224-0-4"
+                     sodipodi:nodetypes="cc" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                     d="m 175,195 10,10 -10,10"
+                     id="path11421-4-4" />
+            </g>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="98.7601547241211"
+                 y="591.777282714844"
+                 id="text12619-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan12617-5"
+                     x="98.7601547241211"
+                     y="591.777282714844">引数</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="90.2759857177734"
+                 y="695.472717285156"
+                 id="text13217-0"><tspan
+                     sodipodi:role="line"
+                     id="tspan13215-4"
+                     x="90.2759857177734"
+                     y="695.472717285156">戻り値</tspan></text>
+        </g>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:0.921541px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.30713"
+             d="m 14.6647464784499,381.66383458343 529.509335166635,-7e-12"
+             id="path854" />
+        <g
+             id="g5731"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,6.67983075218188,14.429902831152)">
+            <path
+                 sodipodi:type="star"
+                 style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path1073"
+                 inkscape:flatsided="false"
+                 sodipodi:sides="5"
+                 sodipodi:cx="53.0926475524902"
+                 sodipodi:cy="59.4121017456055"
+                 sodipodi:r1="28.4419059753418"
+                 sodipodi:r2="13.8295946121216"
+                 sodipodi:arg1="0.942708257103724"
+                 sodipodi:arg2="1.57102678782168"
+                 inkscape:rounded="0"
+                 inkscape:randomized="0"
+                 d="m 69.8050770831383,82.4259392068657 -16.7156167131942,-9.1842432163993 -16.7198481576789,9.1765376446977 3.5693247223612,-18.7355834333157 -13.894123148109,-13.0658144600931 18.9215807084987,-2.3949841444492 8.1328078082709,-17.2516550717351 8.1248552763653,17.255401829529 18.920474797591,2.4037052635713 -13.9001439940311,13.0594089646352 z"
+                 inkscape:transform-center-x="-0.344499223477925"
+                 inkscape:transform-center-y="-2.3114363741658" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="104.654357910156"
+                 y="70.9949417114258"
+                 id="text3172"><tspan
+                     sodipodi:role="line"
+                     id="tspan3170"
+                     x="104.654357910156"
+                     y="70.9949417114258">純粋関数</tspan></text>
+        </g>
+        <g
+             id="g5726"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,1.15058711224806,8.90065919121818)">
+            <path
+                 sodipodi:type="star"
+                 style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path1073-0"
+                 inkscape:flatsided="false"
+                 sodipodi:sides="5"
+                 sodipodi:cx="53.0926475524902"
+                 sodipodi:cy="51.3825454711914"
+                 sodipodi:r1="28.4419059753418"
+                 sodipodi:r2="13.8295946121216"
+                 sodipodi:arg1="0.942708257103724"
+                 sodipodi:arg2="1.57102678782168"
+                 inkscape:rounded="0"
+                 inkscape:randomized="0"
+                 inkscape:transform-center-x="-0.344499223477925"
+                 inkscape:transform-center-y="-2.3114363741658"
+                 transform="translate(3.4664633357075,422.674292363274)"
+                 d="m 69.8050770831383,74.3963829324517 -16.7156167131942,-9.1842432163994 -16.7198481576789,9.1765376446977 3.5693247223612,-18.7355834333157 -13.894123148109,-13.0658144600931 18.9215807084987,-2.3949841444492 8.1328078082709,-17.2516550717351 8.1248552763653,17.255401829529 18.920474797591,2.4037052635713 -13.9001439940311,13.0594089646353 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="104.610122680664"
+                 y="485.639678955078"
+                 id="text3172-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan3170-5"
+                     x="104.610122680664"
+                     y="485.639678955078">非純粋関数</tspan></text>
+        </g>
+        <g
+             id="g13808"
+             transform="matrix(0.921540606655637,0,0,0.921540606655637,-28.3387123007323,12.5868216178407)">
+            <g
+                 id="g11131-7"
+                 transform="translate(-29.2232538311729,-8.7262570043249)">
+                <ellipse
+                     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                     id="path5790-9"
+                     cx="348.793670654297"
+                     cy="236.14274597168"
+                     rx="118.778388977051"
+                     ry="69.2873916625977" />
+                <text
+                     xml:space="preserve"
+                     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+                     x="316.742370605469"
+                     y="251.81169128418"
+                     id="text7356-9"><tspan
+                         sodipodi:role="line"
+                         id="tspan7354-3"
+                         x="316.742370605469"
+                         y="251.81169128418">fx</tspan></text>
+            </g>
+            <g
+                 id="g13639">
+                <g
+                     id="g11505">
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 60.3318788772604,205.390833640582 124.6681211227396,-2e-12"
+                         id="path11224"
+                         sodipodi:nodetypes="cc" />
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 175,195 10,10 -10,10"
+                         id="path11421" />
+                </g>
+                <g
+                     id="g11505-7"
+                     transform="matrix(-1,0,0,1,244.039964667298,43.8690005000112)">
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 60.3318788772604,205.390833640582 124.6681211227396,-2e-12"
+                         id="path11224-0"
+                         sodipodi:nodetypes="cc" />
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 175,195 10,10 -10,10"
+                         id="path11421-4" />
+                </g>
+                <text
+                     xml:space="preserve"
+                     style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="100.86735534668"
+                     y="182.881011962891"
+                     id="text12619"><tspan
+                         sodipodi:role="line"
+                         id="tspan12617"
+                         x="100.86735534668"
+                         y="182.881011962891">引数</tspan></text>
+                <text
+                     xml:space="preserve"
+                     style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="92.383186340332"
+                     y="286.576416015625"
+                     id="text13217"><tspan
+                         sodipodi:role="line"
+                         id="tspan13215"
+                         x="92.383186340332"
+                         y="286.576416015625">戻り値</tspan></text>
+            </g>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:16.5877px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.921541"
+             x="343.68603515625"
+             y="451.2919921875"
+             id="text2755"><tspan
+                 sodipodi:role="line"
+                 x="343.68603515625"
+                 y="451.2919921875"
+                 id="tspan2757"
+                 style="stroke-width:0.921541">コンソールからの入力</tspan><tspan
+                 sodipodi:role="line"
+                 x="343.68603515625"
+                 y="473.96240234375"
+                 id="tspan2761"
+                 style="stroke-width:0.921541">コンソールへの出力</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text13258"
+             style="line-height:1.25;font-family:Consolas;font-size:20px;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect13260)" />
+        <text
+             xml:space="preserve"
+             style="font-size:16.5877px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.921541"
+             x="451.771026611328"
+             y="594.10009765625"
+             id="text20674"><tspan
+                 sodipodi:role="line"
+                 id="tspan20672"
+                 x="451.771026611328"
+                 y="594.10009765625"
+                 style="stroke-width:0.921541">関数外の変数</tspan><tspan
+                 sodipodi:role="line"
+                 x="451.771026611328"
+                 y="616.7705078125"
+                 id="tspan20676"
+                 style="stroke-width:0.921541">へのアクセス</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:16.5877px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.921541"
+             x="351.845062255859"
+             y="740.764343261719"
+             id="text22734"><tspan
+                 sodipodi:role="line"
+                 id="tspan22732"
+                 x="351.845062255859"
+                 y="740.764343261719"
+                 style="stroke-width:0.921541">ファイルの読み書き</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:36.8616px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#b700ff;fill-opacity:1;stroke-width:0.921541"
+             x="402.889678955078"
+             y="683.380554199219"
+             id="text4079"><tspan
+                 sodipodi:role="line"
+                 id="tspan4077"
+                 x="402.889678955078"
+                 y="683.380554199219"
+                 style="stroke-width:0.921541">副作用</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18.4308px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.921541"
+             x="350.061614990234"
+             y="308.669769287109"
+             id="text8583"><tspan
+                 sodipodi:role="line"
+                 id="tspan8581"
+                 x="350.061614990234"
+                 y="308.669769287109"
+                 style="stroke-width:0.921541">同じ引数ならば</tspan><tspan
+                 sodipodi:role="line"
+                 x="350.061614990234"
+                 y="333.859130859375"
+                 id="tspan8585"
+                 style="stroke-width:0.921541">戻り値も全て同じ</tspan></text>
+    </g>
+</svg>
