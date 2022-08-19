@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="階乗-場合分け.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\haskell入門\pics\階乗-場合分け.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.06079905335291"
+         inkscape:cx="128.205242614178"
+         inkscape:cy="177.69623700568"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="45.3273982300342"
+             y="40.6613425298836"
+             width="205.306450806626"
+             height="41.3279219156194"
+             id="rect4321" />
+        <rect
+             x="45.3273963928223"
+             y="40.6613426208496"
+             width="205.306457519531"
+             height="41.3279228210449"
+             id="rect4321-8" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g19075">
+            <rect
+                 style="opacity:0.2923351159;fill:#00ff00;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect1859"
+                 width="534.5966796875"
+                 height="141.314834594727"
+                 x="27.9963340759277"
+                 y="30.6626510620117" />
+            <text
+                 xml:space="preserve"
+                 id="text4319"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4321)"><tspan
+                     x="45.328125"
+                     y="64.287109375"
+                     id="tspan2083">n ≠ 1 ならば</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="149.980361938477"
+                 y="127.983245849609"
+                 id="text14649"><tspan
+                     sodipodi:role="line"
+                     id="tspan14647"
+                     x="149.980361938477"
+                     y="127.983245849609">n × (n - 1)の階乗</tspan></text>
+        </g>
+        <g
+             id="g19068">
+            <rect
+                 style="opacity:0.292335;fill:#ffff00;stroke-width:2.7;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000;fill-opacity:1"
+                 id="rect1859-4"
+                 width="534.5966796875"
+                 height="141.314834594727"
+                 x="29.3294906616211"
+                 y="201.306976318359" />
+            <text
+                 xml:space="preserve"
+                 id="text4319-0"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4321-8)"
+                 transform="translate(1.33315273275147,170.64432102083)"><tspan
+                     x="45.328125"
+                     y="64.287109375"
+                     id="tspan2085">n = 1 ならば</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="151.313507080078"
+                 y="298.627563476562"
+                 id="text14649-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan14647-0"
+                     x="151.313507080078"
+                     y="298.627563476562">1</tspan></text>
+        </g>
+    </g>
+</svg>
