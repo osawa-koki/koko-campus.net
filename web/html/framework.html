@@ -35,8 +35,10 @@
 			<main>(((BODY)))</main>
 			<footer></footer>
 		</div>
+		<div id="scriptBox">
 		{{ range $_, $js := .JS }}
 			<script charset="utf-8" type="text/javascript" src="/?{{$js}}.js" defer></script>
 		{{ end }}
+		</div>
 	</body>
 </html>
