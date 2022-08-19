@@ -1,6 +1,7 @@
 "use strict";
 
 (() => {
+	if (!document.getElementById("subjectMainBox")) return;
 	const collapsers = Array.from(document.getElementById("subjectMainBox").getElementsByClassName("collapser"));
 	collapsers.forEach(collapser => {
 		const len = parseInt(collapser.dataset.count) || 1;
