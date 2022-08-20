@@ -1,0 +1,96 @@
+<h2>コメントアウト</h2>
+ここからは実際にOcamlを用いてプログラミングしていきます。<br />プログラムコード中にコメントアウト(メモ書き)をするには以下のように書きます。
+<code class="ocaml">
+	(* コメントアウト *)
+</code>
+<h2>エントリーポイント</h2>
+Ocamlではプログラムへのエントリーポイントを以下のように書きます。
+<code class="ocaml">
+	let () =
+		(* 処理... *)
+		(* 処理... *)
+		(* 処理... *)
+</code>
+「()」の代わりに「_」を使用することも可能です。
+<code class="ocaml">
+	let _ =
+		(* 処理... *)
+		(* 処理... *)
+		(* 処理... *)
+</code>
+そのままグローバルモジュールに処理をべた書きすることも可能ですが、可読性の観点からオススメしません。
+<code class="ocaml">
+	(* 処理... *)
+	(* 処理... *)
+	(* 処理... *)
+</code>
+<h2>標準入出力</h2>
+<h3>標準出力</h3>
+コンソール画面に表示するには以下の文を使用します。
+<ul>
+	<li>print_bytes</li>
+	<li>print_char</li>
+	<li>print_string</li>
+	<li>print_newline</li>
+	<li>print_endline</li>
+	<li>print_int</li>
+	<li>print_float</li>
+</ul>
+コンソール画面に出力するデータ型によって使用する関数を使い分けます。<br />データ型については後ほど説明しますが、整数・小数・文字列などのデータの種類を表すのもだと思ってください。
+<code class="ocaml">
+	let () = 
+		print_bytes (Bytes.of_string "Iam bytes!");
+		print_char 'A';
+		print_endline "Hello Ocaml";
+		print_newline ();
+		print_int 10;
+		print_float 10.25;
+</code>
+<img src="/?S0301/print.png" alt="標準出力" />
+<h3>標準入力</h3>
+以下のように書きます。
+<code class="ocaml">
+	read_line()
+</code>
+改行されるまでの1行を読み取ります。
+<p>末尾の改行文字は削除されます。</p>
+では、入力した文字を出力する簡単なプログラムを作成してみましょう♪
+<code class="ocaml">
+	let () = 
+		print_endline("I love " ^ read_line() ^ " !!!");
+</code>
+<img src="/?S0301/read_line.gif" alt="標準入出力" />
+<h2>変数</h2>
+変数とはプログラムの実行に際して必要となる一時的なデータを保存するための箱です。<br />変数は以下のように宣言します。
+<code class="ocaml">
+	let 変数 = 値;
+</code>
+注意するべき点は変数は不可変(イミュータブル)である点です。<br />関数型では一度変数に値を代入したらこれを変更することができません。<br /><br />もはや<strong>変</strong>数とも呼ばない気がしますね、、、<br />したがって以下のコードはエラーとなります。
+<code class="ocaml">
+	{- コンパイルエラー -}
+
+	x = "ocaml"
+	x = "ocaml"
+
+	main = do
+		putStr x
+	
+	{- &darr; コンソール &darr;
+	Multiple declarations of ‘x’
+	-}
+</code>
+ocamlでは変数の不可変という性質から変数に値を代入すると言う代わりに、変数に値を拘束すると言うことが多いです。
+<div class="separator"></div>
+値を変更できる真の変数も使用することができますが、ocamlを使用する上で特別な理由がない限りは使用するべきではありません。<br />参考までに紹介します。
+<code class="ocaml">
+	import Data.IORef -- 「Data.IORef」モジュールを使用
+
+	main = do 
+		v &lt;- newIORef "ocaml" -- vに「ocaml」を代入
+		show1 &lt;- readIORef v -- vの値をshow1に拘束
+		putStrLn show1 -- show1の値を出力
+
+		writeIORef v ("ocaml") -- vの値を更新
+		show2 &lt;- readIORef v -- vの値をshow2に拘束
+		putStrLn show2 -- show2の値を出力
+</code>
