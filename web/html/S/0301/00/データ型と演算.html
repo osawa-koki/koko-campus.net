@@ -12,22 +12,150 @@
 		</tr>
 		<tr>
 			<th class="nowrap">float</th>
-			<td></td>
+			<td>浮動小数点数型です。<br />「10.25」「99.9」のようにそのまま数字を書いて表現します。<br />「3」などの整数を浮動小数点数型とするためには「3.0」または省略して「3.」と書きます。<br />IEEE754規格(倍精度浮動小数点数記法)によってデータが格納されます。</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th class="nowrap">char</th>
+			<td>ASCII文字1文字を表します。<br />日本語文字は表現できません。<br />「'A'」「'<span class="en">\</span>n'(改行文字)」のようにシングルクォーテーションで囲んで表現します。</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th class="nowrap">string</th>
+			<td>文字列型です。<br />「"ABC"」「"あいうえお"」のようにダブルクォーテーションで囲んで表記します。</td>
 		</tr>
 		<tr>
-			<th></th>
-			<td></td>
+			<th class="nowrap">bool</th>
+			<td>真偽値型です。<br />「true」「false」と記述します。</td>
+		</tr>
+		<tr>
+			<th class="nowrap">unit</th>
+			<td>
+				「()」です。<br />中身を持たないタプル型ですが、実体は他の言語でいう、「null」や「nil」に該当します。
+				<p>タプル型については後ほど説明します。</p>
+			</td>
 		</tr>
 	</tbody>
 </table>
+<h2>データ型の明示</h2>
+変数を宣言するとコンパイラがその変数のデータ型を推論してくれますが、プログラマが明示的にデータ型を指定することも可能です。<br />以下のように書きます。
+<code class="ocaml">
+	let 変数 : データ型 = 値
+</code>
+動作上の変化はありませんが、コードの可読性を高めるため、または思わぬバグを防止するために書く場合もあります。
+<img src="/?S0301/explicitDataTypeDeclaration.gif" alt="データ型の明示" />
+<h2>演算</h2>
+<h3>算術演算</h3>
+「+」「-」「&times;」「&divide;」による演算を言います。
+<table>
+	<caption>算術演算</caption>
+	<tbody>
+		<tr>
+			<th>+</th>
+			<td>足し算です。<br />「10 + 25」は「35」、「9 + 9」は「18」となります。</td>
+		</tr>
+		<tr>
+			<th>-</th>
+			<td>引き算です。<br />「25 - 10」は「15」、「10 - 25」は「-15」となります。</td>
+		</tr>
+		<tr>
+			<th>*</th>
+			<td>掛け算です。<br />「5 * 2」は「10」、「-2 * 10」は「-20」となります。</td>
+		</tr>
+		<tr>
+			<th>/</th>
+			<td>割り算です。<br />「10 / 2」は「5」、「15 / 3」は「5」となります。</td>
+		</tr>
+	</tbody>
+</table>
+これらは全てint型同士の演算にのみ使用されます。<br />float型同士の演算では、演算子の後ろに「.(ドット)」を付します。<br /><br />データ型が異なるデータ同士の演算はできないため、データ型の変換を行う必要があります。
+<p>データ型の変換については後ほど説明します。</p>
+<code class="ocaml">
+	let () =
+		print_int (1 + 2); print_newline();
+		print_int (7 / 2); print_newline();
+		print_int (2 * 3); print_newline();
+		print_float (3.0 +. 5.0); print_newline();
+		print_float (7.0 /. 5.0); print_newline();
+		print_float (2.0 *. 5.0); print_newline();
 
+	(* &darr; コンソール &darr;
+	3
+	3
+	6
+	8.
+	1.4
+	10.
+	*)
+</code>
+<h3>関係演算</h3>
+2つの値の関係から真偽値を求める演算です。<br />比較演算とも呼びます。
+<table>
+	<caption>関係演算</caption>
+	<tbody>
+		<tr>
+			<th>&lt;</th>
+			<td>「小なり」<br />右の数字が左の数字よりも(同じを含まない)大きければ「真」、それ以外は「偽」となります。</td>
+		</tr>
+		<tr>
+			<th>&lt;=</th>
+			<td>「小なりイコール」<br />右の数字が左の数字以上(同じを含む)であれば「真」、それ以外は「偽」となります。</td>
+		</tr>
+		<tr>
+			<th>&gt;</th>
+			<td>「大なり」<br />右の数字が左の数字よりも(同じを含まない)小さければ「真」、それ以外は「偽」となります。</td>
+		</tr>
+		<tr>
+			<th>&gt;=</th>
+			<td>「大なりイコール」<br />右の数字が左の数字以下(同じを含む)であれば「真」、それ以外は「偽」となります。</td>
+		</tr>
+		<tr>
+			<th>=</th>
+			<td>「イコール(等価演算)」<br />左と右のデータが同じであれば「真」、異なれば「偽」となります。</td>
+		</tr>
+		<tr>
+			<th>&lt;&gt;</th>
+			<td>「ノットイコール(等価演算)」<br />「==」の結果を反転したものです。</td>
+		</tr>
+	</tbody>
+</table>
+<code class="ocaml">
+	let () =
+		print_string (if (1 = 1) then "true" else "false"); print_newline ();
+		print_string (if (1 &lt;&gt; 1) then "true" else "false"); print_newline ();
+		print_string (if (1 &lt;= 1) then "true" else "false"); print_newline ();
+		print_string (if (1 &lt; 1) then "true" else "false"); print_newline ();
+		print_string (if (1 &lt; 2) then "true" else "false"); print_newline ();
+		print_string (if (1.0 = 1.0) then "true" else "false"); print_newline ();
+
+	(* &darr; コンソール &darr;
+	true
+	false
+	true
+	false
+	true
+	true
+	*)
+</code>
+<h3>等価演算の対象</h3>
+早速ですが、以下の演算の結果を予測して下さい。
+<code class="ocaml">
+	let a : bool = 1.0 == 1.0
+</code>
+「true」になると思いますよね、、、
+<img src="/?S0301/physicalEquality.gif" alt="等価演算" />
+真偽値をそのままコンソール画面に出力することはできないので、条件分岐を用いて「true」「false」という文字列で出力しています。<br /><br />Ocamlでは等価・非等価演算子として「=」と「&lt;&gt;」を使用して下さい。<br />「==」と「!=」も似た動作をしますが、若干異なる結果となることがあります。
+<img src="/?S0301/physicalEquality.png" alt="等価演算" />
+<div class="separator"></div>
+理由は構造そのものの等価確認をするか、参照の等価確認をするかで結果が異なるからです。
+<img src="/?S0301/StructuralPhysical_Equality.png" alt="等価演算" />
+<p><a href="https://v2.ocaml.org/manual/expr.html">ocaml.org</a>より。</p>
+<h3>論理演算</h3>
+「かつ」「または」「ない」による演算です。<br />真偽値を対象として新たな真偽値を求めます。
+
+
+
+<h3>文字列の結合</h3>
+
+
+<h2>データ型の変換</h2>
 
 

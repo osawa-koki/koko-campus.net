@@ -63,34 +63,20 @@ Ocamlではプログラムへのエントリーポイントを以下のように
 <h2>変数</h2>
 変数とはプログラムの実行に際して必要となる一時的なデータを保存するための箱です。<br />変数は以下のように宣言します。
 <code class="ocaml">
-	let 変数 = 値;
+	let 変数 = 値
 </code>
-注意するべき点は変数は不可変(イミュータブル)である点です。<br />関数型では一度変数に値を代入したらこれを変更することができません。<br /><br />もはや<strong>変</strong>数とも呼ばない気がしますね、、、<br />したがって以下のコードはエラーとなります。
+関数型言語は変数は値を拘束することを目的とし、更新ができないという特徴を持ちますが、Ocamlでは更新に近い動作をします。<br />以下のコードを見て下さい。
 <code class="ocaml">
-	{- コンパイルエラー -}
+	let a = "AAA"
+	let a = "BBB"
 
-	x = "ocaml"
-	x = "ocaml"
+	let () =
+		print_endline a;
 
-	main = do
-		putStr x
-	
-	{- &darr; コンソール &darr;
-	Multiple declarations of ‘x’
-	-}
+	(* &darr; コンソール &darr;
+	BBB
+	*)
 </code>
-ocamlでは変数の不可変という性質から変数に値を代入すると言う代わりに、変数に値を拘束すると言うことが多いです。
-<div class="separator"></div>
-値を変更できる真の変数も使用することができますが、ocamlを使用する上で特別な理由がない限りは使用するべきではありません。<br />参考までに紹介します。
-<code class="ocaml">
-	import Data.IORef -- 「Data.IORef」モジュールを使用
+値の更新(再代入)ができていますね、、、<br />正確には後に行った変数束縛が前に行った変数束縛を隠しているだけなのですが、プログラマ視点からだと変数の再代入と同じ効果をもたらします。<br /><br />このようにOcamlは変数の更新が事実上可能ですが、関数型言語として扱う以上は原則として変数の更新は行わないことをオススメします。
 
-	main = do 
-		v &lt;- newIORef "ocaml" -- vに「ocaml」を代入
-		show1 &lt;- readIORef v -- vの値をshow1に拘束
-		putStrLn show1 -- show1の値を出力
 
-		writeIORef v ("ocaml") -- vの値を更新
-		show2 &lt;- readIORef v -- vの値をshow2に拘束
-		putStrLn show2 -- show2の値を出力
-</code>
