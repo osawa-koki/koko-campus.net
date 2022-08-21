@@ -16,3 +16,21 @@
     height: 75px;
   }
 }
+#toppageEntireBox #toppageMainFrame #toppageProgramsBox .programTitle {
+  margin: 20px 0 10px 0;
+  padding-left: 10px;
+  border-left: 5px red solid;
+  font-size: 20px;
+  font-weight: bold;
+}
+#toppageEntireBox #toppageMainFrame #toppageProgramsBox img {
+  border: 1px lightgrey solid;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 500px) {
+  #toppageEntireBox #toppageMainFrame #toppageProgramsBox img {
+    width: 75px;
+    height: 75px;
+  }
+}

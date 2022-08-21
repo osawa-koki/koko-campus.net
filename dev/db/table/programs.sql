@@ -1,6 +1,6 @@
-CREATE TABLE program(
+CREATE TABLE programs(
 	program CHAR(4) PRIMARY KEY,
-	name VARCHAR(25) UNIQUE,
+	program_name VARCHAR(25) UNIQUE,
 	description VARCHAR(300) DEFAULT '',
     importance INT DEFAULT 5,
     status CHAR(1) DEFAULT '1',

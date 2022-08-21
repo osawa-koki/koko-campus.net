@@ -21,16 +21,19 @@ func programModel(digit string) *string {
 	var description string
 
 	var SQL SQLbuilder
-	SQL.Add("SELECT name FROM program")
+	SQL.Add("SELECT program_name, description")
+	SQL.Add("FROM programs")
 	SQL.Add("WHERE program = ?;")
 	SQL.AddParam(digit)
 	if err := Select(&SQL).Scan(&name, &description); digit != toppageForProgramDigit && err == nil {
+		programMap.Title = name
+		programMap.Description = description
 		answer = programView(&programMap, digit)
 	} else {
 		programMap.Program = toppageForProgramDigit
 		var SQL SQLbuilder
-		SQL.Add("SELECT program, name, description")
-		SQL.Add("FROM program")
+		SQL.Add("SELECT program, program_name, description")
+		SQL.Add("FROM programs")
 		SQL.Add("ORDER BY RAND()")
 		SQL.Add("LIMIT 30;")
 		if Rows := SelectAll(&SQL); Rows != nil {
@@ -56,7 +59,7 @@ func programModel(digit string) *string {
 func getProgramName(digit string) string {
 	var name string
 	var SQL SQLbuilder
-	SQL.Add("SELECT name FROM program")
+	SQL.Add("SELECT program_name FROM programs")
 	SQL.Add("WHERE program = ?;")
 	SQL.AddParam(digit)
 	if er := Select(&SQL).Scan(&name); digit == "0000" || er != nil {

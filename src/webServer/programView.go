@@ -21,6 +21,8 @@ func programView(model *programStruct, digit string) *string {
 				Error(er.Error())
 			}
 			Error("subjectHTML出力失敗")
+		} else {
+			fmt.Println(er.Error())
 		}
 	}
 	errorHTML, _ := FileGetContents("html/P/0000.html")
