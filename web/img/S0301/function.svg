@@ -138,11 +138,11 @@
     <text
        xml:space="preserve"
        id="text1774"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1776)"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:144px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1776);display:inline"
        transform="matrix(0.57351765,0,0,0.57351765,352.10467,134.7549)"><tspan
          x="99.986328"
          y="158.27344"
-         id="tspan543">fx</tspan></text>
+         id="tspan660">fx</tspan></text>
     <ellipse
        style="fill:#00ffff;fill-opacity:1;stroke-width:1.85164"
        id="path5311"
@@ -167,17 +167,17 @@
     <text
        xml:space="preserve"
        id="text12073"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12075)"
-       transform="translate(24.663437,7.9989526)"><tspan
+       style="font-style:italic;font-size:14.6667px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12075);display:inline"
+       transform="translate(27.329754,9.3321113)"><tspan
          x="375.95117"
-         y="57.078125"
-         id="tspan545">私は受け取った数</tspan><tspan
+         y="55.765658"
+         id="tspan662">私は受け取った数</tspan><tspan
          x="375.95117"
-         y="78.945312"
-         id="tspan547">字の約数を計算し</tspan><tspan
+         y="75.810626"
+         id="tspan664">字の半径rから円の</tspan><tspan
          x="375.95117"
-         y="100.8125"
-         id="tspan549">て返しますよ!!</tspan></text>
+         y="95.855593"
+         id="tspan666">面積を返します。</tspan></text>
     <rect
        style="fill:#000000;fill-opacity:1;stroke-width:1.6"
        id="rect13435"
@@ -188,47 +188,47 @@
     <text
        xml:space="preserve"
        id="text36061"
-       style="font-style:italic;font-size:9px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect36063);fill:#fffffb;fill-opacity:1"
+       style="font-style:italic;font-size:9px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect36063);display:inline;fill:#fffffb;fill-opacity:1"
        transform="translate(-157.97931,-25.996596)"><tspan
          x="502.93359"
          y="293.77197"
-         id="tspan551">function fx (num) {
+         id="tspan668">function fx (num) {
 </tspan><tspan
          x="502.93359"
          y="305.02197"
-         id="tspan553">   $ary = [];
+         id="tspan670">   $ary = [];
 </tspan><tspan
          x="502.93359"
          y="316.27197"
-         id="tspan555">   for (i = 1; i &lt;= num / 2; i++) {
+         id="tspan672">   for (i = 1; i &lt;= num / 2; i++) {
 </tspan><tspan
          x="502.93359"
          y="327.52197"
-         id="tspan557">      if (num % i === 0) {
+         id="tspan674">      if (num % i === 0) {
 </tspan><tspan
          x="502.93359"
          y="338.77197"
-         id="tspan559">         ary.push(i);
+         id="tspan676">         ary.push(i);
 </tspan><tspan
          x="502.93359"
          y="350.02197"
-         id="tspan561">      }
+         id="tspan678">      }
 </tspan><tspan
          x="502.93359"
          y="361.27197"
-         id="tspan563">   }
+         id="tspan680">   }
 </tspan><tspan
          x="502.93359"
          y="372.52197"
-         id="tspan565">   ary.push(num);
+         id="tspan682">   ary.push(num);
 </tspan><tspan
          x="502.93359"
          y="383.77197"
-         id="tspan567">   return ary;
+         id="tspan684">   return ary;
 </tspan><tspan
          x="502.93359"
          y="395.02197"
-         id="tspan569">}
+         id="tspan686">}
 </tspan></text>
     <path
        sodipodi:type="star"
@@ -289,19 +289,19 @@
     <text
        xml:space="preserve"
        id="text56053"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect56055)"
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect56055);display:inline"
        transform="translate(17.116205,4.965848)"><tspan
          x="128.67578"
          y="36.035156"
-         id="tspan571">3</tspan></text>
+         id="tspan688">3</tspan></text>
     <text
        xml:space="preserve"
        id="text59175"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect59177)"
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect59177);display:inline"
        transform="rotate(19.677959,355.50296,647.90327)"><tspan
          x="34.878906"
          y="174.13867"
-         id="tspan573">[1, 3, 5, 15]</tspan></text>
+         id="tspan690">[1, 3, 5, 15]</tspan></text>
     <g
        id="g8586-3"
        transform="matrix(4.7938948,0,0,4.7938948,-129.89647,18.179926)">
@@ -325,19 +325,19 @@
     <text
        xml:space="preserve"
        id="text69830"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect69832)"
-       transform="translate(19.664091,10.99856)"><tspan
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect69832);display:inline"
+       transform="translate(20.33067,10.331981)"><tspan
          x="90.654297"
          y="155.86328"
-         id="tspan575">5</tspan></text>
+         id="tspan692">5</tspan></text>
     <text
        xml:space="preserve"
        id="text72518"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect72520)"
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect72520);display:inline"
        transform="translate(25.452511,5.6561136)"><tspan
          x="165.91211"
          y="180.73828"
-         id="tspan577">[1, 5, 7, 35]</tspan></text>
+         id="tspan694">[1, 5, 7, 35]</tspan></text>
     <g
        id="g8586-5"
        transform="matrix(4.7938948,0,0,4.7938948,-93.174344,139.84326)">
@@ -361,19 +361,19 @@
     <text
        xml:space="preserve"
        id="text77450"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect77452)"
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect77452);display:inline"
        transform="translate(8.0630734,1.9829895)"><tspan
          x="132.91797"
          y="274.06445"
-         id="tspan579">9</tspan></text>
+         id="tspan696">9</tspan></text>
     <text
        xml:space="preserve"
        id="text80607"
-       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect80609)"
+       style="font-style:italic;font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Italic';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect80609);display:inline"
        transform="rotate(-19.5517,1071.7027,244.91911)"><tspan
          x="213.99023"
          y="-1.1992188"
-         id="tspan581">[1, 3, 9, 11, 33, 99]</tspan></text>
+         id="tspan698">[1, 3, 9, 11, 33, 99]</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Yu Mincho';-inkscape-font-specification:'Yu Mincho, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ff0000;fill-opacity:1"
