@@ -113,18 +113,18 @@
 		</tr>
 		<tr>
 			<th>&lt;&gt;</th>
-			<td>「ノットイコール(等価演算)」<br />「==」の結果を反転したものです。</td>
+			<td>「ノットイコール(等価演算)」<br />「=」の結果を反転したものです。</td>
 		</tr>
 	</tbody>
 </table>
 <code class="ocaml">
 	let () =
-		print_string (if (1 = 1) then "true" else "false"); print_newline ();
-		print_string (if (1 &lt;&gt; 1) then "true" else "false"); print_newline ();
-		print_string (if (1 &lt;= 1) then "true" else "false"); print_newline ();
-		print_string (if (1 &lt; 1) then "true" else "false"); print_newline ();
-		print_string (if (1 &lt; 2) then "true" else "false"); print_newline ();
-		print_string (if (1.0 = 1.0) then "true" else "false"); print_newline ();
+		print_string (string_of_bool (1 = 1)); print_newline ();
+		print_string (string_of_bool (1 &lt;&gt; 1)); print_newline ();
+		print_string (string_of_bool (1 &lt;= 1)); print_newline ();
+		print_string (string_of_bool (1 &lt; 1)); print_newline ();
+		print_string (string_of_bool (1 &lt; 2)); print_newline ();
+		print_string (string_of_bool (1.0 = 1.0)); print_newline ();
 
 	(* &darr; コンソール &darr;
 	true
@@ -135,6 +135,9 @@
 	true
 	*)
 </code>
+真偽値を文字列にして
+
+
 <h3>等価演算の対象</h3>
 早速ですが、以下の演算の結果を予測して下さい。
 <code class="ocaml">
@@ -150,12 +153,63 @@
 <p><a href="https://v2.ocaml.org/manual/expr.html">ocaml.org</a>より。</p>
 <h3>論理演算</h3>
 「かつ」「または」「ない」による演算です。<br />真偽値を対象として新たな真偽値を求めます。
+<table>
+	<caption>論理演算</caption>
+	<thead>
+		<tr>
+			<th>かつ(AND)</th>
+			<th>または(OR)</th>
+		</tr>
+		<tr>
+			<th>&amp;&amp;</th>
+			<th>||</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>2つの条件式の両方が「真」の場合に「真」、どちらか一方でも「偽」の場合は「偽」となります。</td>
+			<td>2つの条件式のいずれか一方でも「真」の場合に「真」、両方とも「偽」の場合は「偽」となります。</td>
+		</tr>
+	</tbody>
+</table>
+また、真偽値を判定させる演算として否定演算(not)があります。
+<img src="/?S0301/truthTable.png" alt="真理値表" />
+<div class="separator"></div>
+<code class="ocaml">
+	let () =
+		print_string (string_of_bool true &amp;&amp; true); print_newline ();
+		print_string (string_of_bool true &amp;&amp; false); print_newline ();
+		print_string (string_of_bool true || true); print_newline ();
+		print_string (string_of_bool true || false); print_newline ();
+		print_string (string_of_bool not true); print_newline ();
 
-
-
+	(* &darr; コンソール &darr;
+	true
+	false
+	true
+	true
+	false
+	*)
+</code>
 <h3>文字列の結合</h3>
+「^」を用いて文字列を結合することが可能です。
+<code class="ocaml">
+	let () =
+		print_string ("A" ^ "B" ^ "C"); print_newline ();
 
-
+	(* &darr; コンソール &darr;
+	ABC
+	*)
+</code>
 <h2>データ型の変換</h2>
-
-
+データ型を変換する以下の関数を使用します。
+<code class="ocaml">
+	&lt;to&gt;_&lt;from&gt;
+</code>
+例えをいくつか紹介します。
+<code class="ocaml">
+	float_of_int 5 (* 5をfloat型に変換 *)
+	string_of_int 5 (* 5をstring型に変換 *)
+	int_of_float 5. (* 5.0をfloat型に変換 *)
+	string_of_bool false (* falseをstring型に変換 *)
+</code>
