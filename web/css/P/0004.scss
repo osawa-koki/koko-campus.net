@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+#buddhabrot {
+	#canvasBox {
+		position: relative;
+		margin: 50px auto;
+		width: 500px;
+		max-width: 100%;
+		aspect-ratio: 1 / 1;
+		* {
+			inset: 0;
+			position: absolute;
+		}
+		canvas {
+			transform: rotate(90deg);
+		}
+		#waiter {
+
+		}
+	}
+	#button {
+		width: 100px;
+		padding: 5px;
+		text-align: center;
+		background-color: aqua;
+		border: 1px black solid;
+		margin: 0 auto;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: blue;
+		}
+	}
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+	}
+}
