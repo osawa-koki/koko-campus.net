@@ -1,103 +1,84 @@
 "use strict";
 
-let interval,
-	g = [],
-	inc = 0,
-	outc = 0,
-	both = 0,
-	ary = [];
+let interval;
 
+const resultContainer = {
+	"in": 0,
+	"out": 0,
+	"all": 0
+};
 
 const [button, svg, inN, outN, inPCT, outPCT, pai] = getElm(["button", "svg", "NofIN", "NofOUT", "PCTofIN", "PCTofOUT", "pai"]);
 
 const groups = {};
+const lines = [];
 
 const main = () => {
-	let gr;
-	["lines", "circles", "points"].forEach(e => {
-		gr = document.createElementNS("http://www.w3.org/2000/svg", "g");
-		gr.id = `v1-svg_${e}`;
-		g.push(gr);
+	["lines", "needles"].forEach(group => {
+		const gr = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		gr.classList.add(group);
+		groups[group] = gr;
 		svg.appendChild(gr);
 	});
-	(function() { //g[0]の処理
-		let l,
-			sp,
-			i;
-		for (i = 0; i <= 100; i = i + 10) {
-			l = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
-			l.setAttribute("points", `0 ${i}, 100 ${i}`);
-			g[0].appendChild(l);
-			ary.push(i);
+	(function() { // linesの処理...
+		for (let i = 0; i <= 100; i = i + 10) {
+			const line = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+			line.setAttribute("points", `0 ${i}, 100 ${i}`);
+			groups["lines"].appendChild(line);
+			lines.push(i);
 		}
 	})();
 }
 
 button.addEventListener("click", run);
 
-const run = function() {
-	this.removeEventListener("click", run);
-	this.addEventListener("click", pause);
-	this.textContent = "一時停止";
+function run() {
+	button.removeEventListener("click", run);
+	button.addEventListener("click", pause);
+	button.textContent = "一時停止";
 	interval = setInterval(() => {
-		let e = document.createElementNS("http://www.w3.org/2000/svg", "polyline"),
-			x,
-			y,
-			r,
-			dx,
-			dy,
-			xx,
-			yy,
-			c,
-			a,
-			deg,
-			bool_check = false;
-		x = get_random(100);
-		y = get_random(100);
-		r = 5;
-		(function() { //yは三角関数を用いて算出
-			deg = get_random(360);
-			dx = Math.cos(Math.PI / 180 * deg) * r;
-			dy = Math.sin(Math.PI / 180 * deg) * r;
+		const needle = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+		const x = getRandom(100);
+		const y = getRandom(100);
+		const r = 5;
+		let IsOn = false;
+		let xx, yy;
+		(function() { // yは三角関数を用いて算出
+			const deg = getRandom(360);
+			const dx = Math.cos(Math.PI / 180 * deg) * r;
+			const dy = Math.sin(Math.PI / 180 * deg) * r;
 			xx = x + dx;
 			yy = y + dy;
-			ary.forEach(e => {
-				if (inRange(e, y, yy)) {
-					bool_check = true;
-				}
+			lines.forEach(line => {
+				if (inRange(line, y, yy)) IsOn = true;
 			});
-			if (bool_check) {
-				e.style["stroke"] = "red";
-				inc++;
-				ind.textContent = inc;
+			if (IsOn) {
+				needle.style["stroke"] = "red";
+				resultContainer.in++;
+				inN.textContent = resultContainer.in;
 			} else {
-				e.style["stroke"] = "blue";
-				outc++;
-				outd.textContent = outc;
+				needle.style["stroke"] = "blue";
+				resultContainer.out++;
+				outN.textContent = resultContainer.out;
 			}
-			in_ppn.textContent = (inc / both * 100).toFixed(5);
-			out_ppn.textContent = (outc / both * 100).toFixed(5);
+			PCTofIN.textContent = (resultContainer.in / resultContainer.all * 100).toFixed(5);
+			PCTofOUT.textContent = (resultContainer.out / resultContainer.all * 100).toFixed(5);
 		})();
-		e.setAttribute("points", `${x} ${y}, ${xx} ${yy}`);
-		c = Math.sqrt((x - 50) ** 2 + (y - 50) ** 2);
-		both++;
-		a = both / inc;
-		pai.textContent = a;
-		g[2].appendChild(e);
+		needle.setAttribute("points", `${x} ${y}, ${xx} ${yy}`);
+		const c = Math.sqrt((x - 50) ** 2 + (y - 50) ** 2);
+		resultContainer.all++;
+		pai.textContent = resultContainer.all / resultContainer.in;
+		groups["needles"].appendChild(needle);
 	}, 5);
 }
 const pause = function() {
-	this.addEventListener("click", run);
-	this.removeEventListener("click", pause);
-	this.textContent = "再開";
+	button.addEventListener("click", run);
+	button.removeEventListener("click", pause);
+	button.textContent = "再開";
 	clearInterval(interval);
 }
-const get_random = (x) => {
-	return Math.random() * x;
-}
-const inRange = (x, min, max) => {
-	return ((x - min) * (x - max) <= 0);
-}
-window.addEventListener("load", () => {
-	main();
-});
+const getRandom = n => Math.random() * n;
+const inRange = (x, min, max) => ((x - min) * (x - max) <= 0);
+
+
+main();
