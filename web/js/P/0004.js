@@ -16,30 +16,38 @@ const canvasRender = n => {
 
 button.addEventListener("click", run);
 function run() {
+	const obj = document.getElementById("waiter");
 	button.removeEventListener("click", run);
-	button.classList.add("off");
+	obj.classList.add("running");
+	button.classList.add("running");
+	ctx.fillStyle = `rgba(255, 255, 255, ${lighter})`;
 	setTimeout(() => {
 		for (let i = 0; i < parseInt(limitInput.value); i++) {
 			const cx = Math.random() * range * 2 - range;
 			const cy = Math.random() * range * 2 - range;
-			let [real, imag] = new Array(2).fill(2);
+			let [real, imag] = new Array(2).fill(0);
 			const xys = [];
+			let check = false;
 			for (let j = 0; j < infiniteJudge; j++) {
 				let [_real, _imag] = [
 					real ** 2 - imag ** 2 + cx,
-					real * imag + cy
+					2 * real * imag + cy
 				];
 				[real, imag] = [_real, _imag];
 				xys.push([real, imag]);
-				if (4 < (real ** 2 + imag ** 2)) break;
+				if (4 < (real ** 2 + imag ** 2)) {
+					check = true;
+					break;
+				}
 			}
-			ctx.fillStyle = `rgba(255, 255, 255, ${0.5})`;
+			if (!check) continue;
 			xys.forEach(xy => {
 				ctx.fillRect(canvasRender(xy[0]), canvasRender(xy[1]), 1, 1);
 			});
 		}
 		button.addEventListener("click", run);
-		button.classList.remove("off");
+		button.classList.remove("running");
+		obj.classList.remove("running");
 	}, 500);
 }
 function sync() {
