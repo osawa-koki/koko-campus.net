@@ -1,0 +1,33 @@
+@charset "utf8";
+
+#tree {
+	#canvas {
+		display: block;
+		width: 500px;
+		max-width: 100%;
+		aspect-ratio: 1 / 1;
+		border: 1px black solid;
+		margin: 50px auto;
+	}
+	#button {
+		display: block;
+		padding: 5px;
+		width: 120px;
+		text-align: center;
+		margin: 0 auto;
+		background-color: lightblue;
+		border: 1px solid black;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: blue;
+		}
+	}
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+		th, td {
+			padding: 5px 10px;
+		}
+	}
+}
