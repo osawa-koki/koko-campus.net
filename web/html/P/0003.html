@@ -1,0 +1,54 @@
+<script type="text/javascript" charset="utf-8" src="/?LIB/vue-2_6_14-dev.js"></script>
+<div id="julia">
+	<h2>ジュリア集合♪♪♪</h2>
+	<br />
+	<div id="canvasBox">
+		<canvas ref="canvas" width="500" height="500"></canvas>
+		<div id="waiter"></div>
+	</div>
+	<div id="button" v-on:click="run">スタート♪</div>
+	<div class="_">
+		<table>
+			<tbody>
+				<tr>
+					<th>色</th>
+					<td><input type="range" min="0" max="360" step="1" v-model.number="color" /></td>
+					<td v-bind:style="{backgroundColor: bgColor}"></td>
+				</tr>
+				<tr>
+					<th>漸化式の指数</th>
+					<td><input type="range" min="1" max="10" step="1" v-model.number="power" /></td>
+					<td>Z = Z<sup>{{"{{"}}power{{"}}"}}</sup> + C</td>
+				</tr>
+				<tr>
+					<th>漸化式の計算回数</th>
+					<td><input type="range" min="5" max="50" step="1" v-model.number="limit" /></td>
+					<td>{{"{{"}}limit{{"}}"}}回</td>
+				</tr>
+				<tr>
+					<th>発散判定値</th>
+					<td><input type="range" min="5" max="50" step="1" v-model="upto" /></td>
+					<td>{{"{{"}}upto{{"}}"}}</td>
+				</tr>
+				<tr>
+					<th>実数部</th>
+					<td><input type="range" min="0.5" max="1.5" step="0.1" v-model.number="real" /></td>
+					<td>{{"{{"}}real{{"}}"}}</td>
+				</tr>
+				<tr>
+					<th>虚数部</th>
+					<td><input type="range" min="0.01" max="1" step="0.01" v-model.number="imag" /></td>
+					<td>{{"{{"}}imag{{"}}"}}</td>
+				</tr>
+				<tr>
+					<th>実軸(Re)</th>
+					<td colspan="2"><input type="range" min="0" max="3" step="0.1" v-model.number="Re" /></td>
+				</tr>
+				<tr>
+					<th>虚軸(Im)</th>
+					<td colspan="2"><input type="range" min="0" max="3" step="0.1" v-model.number="Im" /></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
