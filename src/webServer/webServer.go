@@ -65,7 +65,14 @@ func controller(w http.ResponseWriter, r *http.Request) {
 	} else {
 		// セッションが必要なページ
 		RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
-		sessionController(&RR)
+		
+		// ログインが必要かで処理を制御
+		switch RR.snd {
+		case "M": // ログインが必要なページ
+			sessionController(&RR)
+		default: // ログインが不要なページ
+			pageController(&RR)
+		}
 	}
 }
 
@@ -87,7 +94,7 @@ func main() {
 			fmt.Println("failure on ListenAndServe")
 			Error("failure on ListenAndServe")
 		} else {
-			fmt.Println("success on ListenAndServe")		
+			fmt.Println("success on ListenAndServe")
 		}
 	}
 }
