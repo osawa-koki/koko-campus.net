@@ -1,0 +1,58 @@
+@charset "utf8";
+
+#buffonsNeedle {
+	svg {
+		display: block;
+		margin: 50px auto;
+		border: 1px black solid;
+		width: 500px;
+		max-width: 100%;
+		g {
+			&.lines {
+				fill: none;
+				stroke: grey;
+				stroke-width: 0.1;
+			}
+			&.needles {
+				fill: none;
+				stroke: blue;
+				stroke-width: 0.1;
+				stroke-opacity: 0.5;
+			}
+		}
+	}
+	#button {
+		padding: 5px;
+		text-align: center;
+		width: 100px;
+		margin: 0 auto;
+		border: 1px black solid;
+		background-color: lightblue;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: blue;
+		}
+	}
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+		.in {
+			background-color: rgba(blue, 0.3);
+		}
+		.out {
+			background-color: rgba(red, 0.3);
+		}
+		#paiContainer {
+			display: flex;
+			align-items: flex-start;
+			font-family: "consolas", "Consolas";
+			#paiDiv {
+				margin-right: 10px;
+			}
+		}
+		th, td {
+			padding: 5px 10px;
+		}
+	}
+}
