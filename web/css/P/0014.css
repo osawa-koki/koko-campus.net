@@ -20,6 +20,49 @@
   box-sizing: border-box;
   z-index: 1;
 }
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfLines line {
+  background-color: rgba(0, 0, 0, 0.3);
+  stroke-width: 1;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfhandler circle {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 1;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfhandler polyline {
+  stroke: black;
+  stroke-width: 3;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorRed {
+  fill: red;
+  stroke: none;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorBlue {
+  fill: blue;
+  stroke: none;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorRedCounter {
+  fill: red;
+  stroke: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorRedText {
+  fill: red;
+  stroke: none;
+  font-size: 12px;
+  font-weight: bold;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorRedLine {
+  fill: none;
+  stroke: red;
+  stroke-width: 1;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorBlueLine {
+  fill: none;
+  stroke: blue;
+  stroke-width: 1;
+}
 #bezier #mainWindow #mainLeftWindow #mainSVG #runningCircle {
   fill: transparent;
   stroke: black;
@@ -219,6 +262,8 @@
   flex-wrap: wrap;
 }
 #bezier #subWindow #logWindow svg {
+  width: 50px;
+  height: 50px;
   background-color: black;
   display: block;
   margin: 10px;
