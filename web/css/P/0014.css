@@ -28,9 +28,29 @@
   fill: yellow;
   stroke: black;
   stroke-width: 1;
+  cursor: pointer;
 }
 #bezier #mainWindow #mainLeftWindow #mainSVG #groupOfhandler polyline {
   stroke: black;
+  stroke-width: 3;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfExplanator polyline {
+  fill: none;
+  stroke-width: 1;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfExplanator polyline:nth-of-type(1) {
+  stroke: orange;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfExplanator polyline:nth-of-type(2) {
+  stroke: lime;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfExplanator polyline:nth-of-type(3) {
+  stroke: purple;
+  stroke-width: 2;
+}
+#bezier #mainWindow #mainLeftWindow #mainSVG #groupOfBezier {
+  fill: none;
+  stroke: aqua;
   stroke-width: 3;
 }
 #bezier #mainWindow #mainLeftWindow #mainSVG #groupOfProgressor #progressorRed {
@@ -169,7 +189,34 @@
   height: 300px;
   margin: 0 25px 30px 25px;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame svg {
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine {
+  display: flex;
+  align-items: center;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.arrowBox {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px black solid;
+  border-radius: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  margin-right: 25px;
+  cursor: pointer;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.arrowBox:hover {
+  top: 2px;
+  left: 2px;
+  box-shadow: none;
+  fill: white;
+  background-color: red;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.arrowBox path {
+  stroke-linejoin: round;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.icon {
+  width: 80px;
+  height: 80px;
   position: relative;
   display: block;
   border: 1px black solid;
@@ -177,16 +224,27 @@
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame svg:hover {
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.icon:hover {
   top: 2px;
   left: 2px;
   box-shadow: none;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame svg.importer:hover {
-  background-color: red;
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.icon path.bezier {
+  fill: none;
+  stroke: white;
+  stroke-width: 35;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame svg.importer:hover path {
-  fill: white;
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.icon circle {
+  fill: yellow;
+  stroke: black;
+  stroke-width: 5;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv {
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  margin: 10px 25px;
+  position: relative;
 }
 #bezier #mainWindow #mainRightWindow #mainRightButton {
   background-color: #00BFFF;

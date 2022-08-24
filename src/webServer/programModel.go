@@ -1,10 +1,14 @@
 package main
 
+const(
+	programIterCount = 10
+)
 type programStruct struct {
 	Program     string
 	Title       string
 	Description string
 	Suggestion  []map[string]string
+	Iter        [programIterCount][]int
 }
 
 func programModel(digit string) *string {
@@ -14,8 +18,13 @@ func programModel(digit string) *string {
 		Title:       "プログラム一覧",
 		Description: "JavaScriptで書かれたブラウザ上で簡単に動作するプログラム一覧です。",
 		Suggestion:  []map[string]string{},
+		Iter:        [programIterCount][]int{},
 	}
 	var answer *string
+
+	for i := 0; i < programIterCount; i++ {
+		programMap.Iter[i] = make([]int, i)
+	}
 
 	var name string
 	var description string

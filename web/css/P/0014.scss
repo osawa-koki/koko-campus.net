@@ -34,11 +34,33 @@
 						fill: yellow;
 						stroke: black;
 						stroke-width: 1;
+						cursor: pointer;
 					}
 					polyline {
 						stroke: black;
 						stroke-width: 3;
 					}
+				}
+				#groupOfExplanator {
+					polyline {
+						fill: none;
+						stroke-width: 1;
+						&:nth-of-type(1) {
+							stroke: orange;
+						}
+						&:nth-of-type(2) {
+							stroke: lime;
+						}
+						&:nth-of-type(3) {
+							stroke: purple;
+							stroke-width: 2;
+						}
+					}
+				}
+				#groupOfBezier {
+					fill: none;
+					stroke: aqua;
+					stroke-width: 3;
 				}
 				#groupOfProgressor {
 					#progressorRed {
@@ -165,23 +187,61 @@
 				flex-direction: column;
 				height: 300px;
 				margin: 0 25px 30px 25px;
-				svg {
-					position: relative;
-					display: block;
-					border: 1px black solid;
-					border-radius: 20px;
-					box-shadow: 2px 2px rgba(black, 0.3);
-					cursor: pointer;
-					&:hover {
-						top: 2px;
-						left: 2px;
-						box-shadow: none;
-					}
-					&.importer:hover {
-						background-color: red;
-						path {
+				.mainRightBottomOneLine {
+					display: flex;
+					align-items: center;
+					svg.arrowBox {
+						position: relative;
+						display: block;
+						width: 50px;
+						height: 50px;
+						border: 1px black solid;
+						border-radius: 20px;
+						box-shadow: 2px 2px rgba(black, 0.3);
+						margin-right: 25px;
+						cursor: pointer;
+						&:hover {
+							top: 2px;
+							left: 2px;
+							box-shadow: none;
 							fill: white;
+							background-color: red;
 						}
+						path {
+							stroke-linejoin: round;
+						}
+					}
+					svg.icon {
+						width: 80px;
+						height: 80px;
+						position: relative;
+						display: block;
+						border: 1px black solid;
+						border-radius: 20px;
+						box-shadow: 2px 2px rgba(black, 30%);
+						cursor: pointer;
+						&:hover {
+							top: 2px;
+							left: 2px;
+							box-shadow: none;
+						}
+						path.bezier {
+							fill: none;
+							stroke: white;
+							stroke-width: 35;
+						}
+						circle {
+							fill: yellow;
+							stroke: black;
+							stroke-width: 5;
+						}
+					}
+					.progressorDiv {
+						width: 300px;
+						height: 50px;
+						border: 1px solid black;
+						margin: 10px 25px;
+						position: relative;
 					}
 				}
 			}

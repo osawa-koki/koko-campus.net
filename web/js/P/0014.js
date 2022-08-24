@@ -1,11 +1,14 @@
 "use strict";
 
-const [leftButton, gridWidth, gridDense, speed, interval] = getElm(["mainLeftButton", "gridWidth", "gridDense", "speed", "interval"]);
-const [groupOfLines, groupOfBezier, groupOfhandler] = getElm(["groupOfLines", "groupOfBezier", "groupOfhandler"]);
-const [templateWindow, logWindow] = getElm(["templateWindow", "logWindow"]);
+// define const values.
+const [SVG_SIZE_MIN, SVG_SIZE_MAX] = [0, 300];
+const [bezierFormulaBox] = getElm(["bezierFormulaBox"]);
+const [leftButton, rightButton, gridWidth, gridDense, speed, interval] = getElm(["mainLeftButton", "mainRightButton", "gridWidth", "gridDense", "speed", "interval"]);
+const [groupOfLines, groupOfBezier, groupOfExplanator, groupOfhandler] = getElm(["groupOfLines", "groupOfBezier", "groupOfExplanator", "groupOfhandler"]);
+const [runningCircle, progressorRed, progressorRedCounter, progressorBlue, progressorRedLine, progressorBlueLine] = getElm(["runningCircle", "progressorRed", "progressorRedCounter", "progressorBlue", "progressorRedLine", "progressorBlueLine"]);
+const [mainWindow, templateWindow, logWindow, mainRightBottomFrame] = getElm(["mainWindow", "templateWindow", "logWindow", "mainRightButtomFrame"]);
 const bezier = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
-// マニピュレーター用の円と線を格納
 const handlers = {
 	circles: [],
 	polylines: [],
@@ -15,29 +18,25 @@ const progressors = {
 	B: null,
 }
 
-// 初期作業
+// init
 putLines();
 putPath();
 setDefault();
 bezierSync();
 currentImporter();
 
-// イベントハンドラの設定
+// set event handlers
 leftButton.addEventListener("click", go);
 gridWidth.addEventListener("input", putLines);
 gridDense.addEventListener("input", setDense);
-speed.addEventListener("input", function() {
-	this.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`;
-});
-interval.addEventListener("input", function() {
-	this.parentNode.nextElementSibling.textContent = (this.value <= 3) ? "低" : (this.value <= 7) ? "中" : "高";
-});
+speed.addEventListener("input", () => speed.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`);
+interval.addEventListener("input", () => interval.parentNode.nextElementSibling.textContent = (this.value <= 3) ? "低" : (this.value <= 7) ? "中" : "高");
 
 
 function setDefault() {
-	const cxcy = [50, 100, 250, 200]; // ベジェ曲線初期値
-	for (let i = 0; i < 2; i++) {
-		const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	const cxcy = [50, 100, 250, 200]; // default bezier value.
+	doNtimes(2, i => {
+		const [circle] = mkElmSVG(["circle"]);
 		const circleSettings = {
 			"r" : 15,
 			"cx" : cxcy[i * 2],
@@ -52,14 +51,14 @@ function setDefault() {
 		groupOfhandler.appendChild(circle);
 		handlers.circles.push(circle);
 		handlers.polylines.push(polyline);
-	}
+	});
 	manipuratorSync();
 }
 function setDense() {
 	Array.from(groupOfLines.getElementsByTagName("line")).forEach(line => {
 		line.style.stroke = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
 	});
-	document.getElementById("gridDenseShow").style.backgroundColor = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
+	document.getElementById("gridDenseShow").style.background100Color = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
 }
 function mousedown(event) {
 	event.preventDefault();
@@ -69,23 +68,20 @@ function mousedown(event) {
 	this.parentNode.appendChild(this);
 	this.addEventListener("mouseup", mouseup, false);
 	this.addEventListener("mouseleave", mouseup, false);
-	m_st2(false);
+	truncAndImport(false);
 }
 function mousemove(event) {
 	event.preventDefault();
 	this.setAttribute("cx", event.offsetX);
 	this.setAttribute("cy", event.offsetY);
 	manipuratorSync();
-	if (event.offsetX < -10 || 310 < event.offsetX) {
+	if (event.offsetX < SVG_SIZE_MIN - 10 || SVG_SIZE_MAX + 10 < event.offsetX) {
 		this.removeEventListener("mousemove", mousemove, false);
 		this.removeEventListener("touchmove", mousemove, false);
-		this.setAttribute("cx", (event.offsetX < 0) ? 0 : 300);
+		this.setAttribute("cx", (event.offsetX < SVG_SIZE_MIN) ? SVG_SIZE_MIN : SVG_SIZE_MAX);
 		manipuratorSync();
 	}
-	bezierSync();
-	const positions = obtainManipulatorPositions();
-	document.getElementById("bezierFormulaBox").textContent = `cubic-bezier(${rnd(positions[1][0] / 300)}, ${rnd((1 - (positions[1][1] / 300)))}, ${rnd(positions[2][0] / 300)}, ${rnd(1 - (positions[2][1] / 300))})`;
-	currentImporter();
+	mousemove_mouseup_common();
 }
 function mouseup(event) {
 	event.preventDefault();
@@ -95,80 +91,70 @@ function mouseup(event) {
 	this.style.fill = "yellow";
 	this.removeEventListener("mouseup", mouseup);
 	this.removeEventListener("mouseleave", mouseup);
-	if (event.offsetX < 0 || 300 < event.offsetX) {
-		this.setAttribute("cx", (event.offsetX < 0) ? 0 : 300);
+	if (event.offsetX < SVG_SIZE_MIN || SVG_SIZE_MAX < event.offsetX) {
+		this.setAttribute("cx", (event.offsetX < SVG_SIZE_MIN) ? SVG_SIZE_MIN : SVG_SIZE_MAX);
 	}
 	manipuratorSync();
+	putLogSVG();
+}
+function mousemove_mouseup_common() {
 	bezierSync();
 	const positions = obtainManipulatorPositions();
-	document.getElementById("bezierFormulaBox").textContent = `cubic-bezier(${rnd(positions[1][0] / 300)}, ${rnd((1 - (positions[1][1] / 300)))}, ${rnd(positions[2][0] / 300)}, ${rnd(1 - (positions[2][1] / 300))})`;
-	putLogSVG();
+	bezierFormulaBox.textContent = `cubic-bezier(${round100(positions[1][0] / SVG_SIZE_MAX)}, ${round100((1 - (positions[1][1] / SVG_SIZE_MAX)))}, ${round100(positions[2][0] / SVG_SIZE_MAX)}, ${round100(1 - (positions[2][1] / SVG_SIZE_MAX))})`;
 	currentImporter();
 }
 function manipuratorSync() {
-	handlers.polylines[0].setAttribute("points", `0 300, ${handlers.circles[0].getAttribute("cx")} ${handlers.circles[0].getAttribute("cy")}`)
-	handlers.polylines[1].setAttribute("points", `300 0, ${handlers.circles[1].getAttribute("cx")} ${handlers.circles[1].getAttribute("cy")}`)
+	doNtimes(2, i => handlers.polylines[i].setAttribute("points", `${(i === 0) ? SVG_SIZE_MIN : SVG_SIZE_MAX} ${(i === 1) ? SVG_SIZE_MIN : SVG_SIZE_MAX}, ${handlers.circles[i].getAttribute("cx")} ${handlers.circles[i].getAttribute("cy")}`));
 }
 function putLines() {
-	eraser(groupOfLines);
+	removeChildren(groupOfLines);
 	const range = gridWidth.value;
 	document.getElementById("gridWidthShow").textContent = `${range}等分`;
-	for (let i = 0; i < 300; i = i + 300 / range) {
-		const h = document.createElementNS("http://www.w3.org/2000/svg", "line");
-		const v = document.createElementNS("http://www.w3.org/2000/svg", "line");
-		h.setAttribute("x1", 0);
-		h.setAttribute("x2", 300);
-		["y1", "y2"].forEach(j => {
-			h.setAttribute(j, i);
-		});
-		v.setAttribute("y1", 0);
-		v.setAttribute("y2", 300);
-		["x1", "x2"].forEach(j => {
-			v.setAttribute(j, i);
-		});
-		groupOfLines.appendChild(h);
-		groupOfLines.appendChild(v);
+	for (let i = SVG_SIZE_MIN; i < SVG_SIZE_MAX; i = i + SVG_SIZE_MAX / range) {
+		const [h, v] = mkElmSVG(["line", "line"]);
+		h.setAttribute("x1", SVG_SIZE_MIN);
+		h.setAttribute("x2", SVG_SIZE_MAX);
+		["y1", "y2"].map(element => h.setAttribute(element, i));
+		v.setAttribute("y1", SVG_SIZE_MIN);
+		v.setAttribute("y2", SVG_SIZE_MAX);
+		["x1", "x2"].map(element => v.setAttribute(element, i))
+		append([h, v], groupOfLines);
 		setDense();
 	}
 }
 function putPath() {
-	bezier.style.stroke = "aqua";
-	bezier.style.strokeWidth = "3";
-	bezier.style.fill = "none";
 	groupOfBezier.appendChild(bezier);
 }
 function bezierSync() {
 	const pointsContainer = [];
-	for (let i = 0; i < 2; i++) {
+	doNtimes(2, i => {
 		const points = [];
 		const circle = handlers.circles[i];
 		points.push(circle.getAttribute("cx"));
 		points.push(circle.getAttribute("cy"));
-		pointsContainer.push(points.join(" "));
-	}
-	bezier.setAttribute("d", `m0 300 C ${pointsContainer.join(", ")}, 300 0`);
+		pointsContainer.push(points.join(SPACE));
+	});
+	bezier.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${pointsContainer.join(", ")}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 	return pointsContainer;
 }
 function go() {
 	this.removeEventListener("click", go);
 	this.addEventListener("click", pause);
 	this.textContent = "一時停止";
-	Array.from(document.getElementById("groupOfhandler").getElementsByTagName("circle")).forEach(e => {
-		e.removeEventListener("mousedown", mousedown);
-	});
+	Array.from(groupOfhandler.getElementsByTagName("circle")).forEach(e => e.removeEventListener("mousedown", mousedown));
 	bezierSync();
-	rd(obtainManipulatorPositions());
+	recursiveInitiator(obtainManipulatorPositions());
 }
 function obtainManipulatorPositions() {
 	const positions = [];
-	positions.push([0, 300]);
+	positions.push([SVG_SIZE_MIN, SVG_SIZE_MAX]);
 	positions.push([parseInt(handlers.circles[0].getAttribute("cx")), parseInt(handlers.circles[0].getAttribute("cy"))]);
 	positions.push([parseInt(handlers.circles[1].getAttribute("cx")), parseInt(handlers.circles[1].getAttribute("cy"))]);
-	positions.push([300, 0])
+	positions.push([SVG_SIZE_MAX, SVG_SIZE_MIN])
 	return positions
 }
 function pause() {
-	clearInterval(intervalId);
+	clearInterval(stopwatchObject.intervalId);
 	this.removeEventListener("click", pause);
 	this.addEventListener("click", restart);
 	this.textContent = "再実行"
@@ -177,281 +163,103 @@ function restart() {
 	this.removeEventListener("click", restart);
 	this.addEventListener("click", pause);
 	this.textContent = "一時停止"
-	rd(obtainManipulatorPositions(), false);
-}
-let intervalId;
-let count;
-function rd(ary, bl = true) {
-	let e, iv, real_speed, interval, speed, zz;
-	iv = document.getElementById("v3-interval").value;
-	real_speed = document.getElementById("v3-speed").value * 1000;
-	interval = 50 + (5 - iv) * 5;
-	speed = real_speed / interval;
-	if (bl) {
-		zz = document.getElementById("v3-svg_sh");
-		e = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
-		e.setAttribute("points", ary.map(j => j.join(",")).join(" "));
-		zz.appendChild(e);
-		for (let i = 0; i < ary.length; i++) {
-			e = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
-			zz.appendChild(e);
-		}
-		document.getElementById("runningCircle").classList.add("ok");
-		let tr = document.getElementById("groupOfhandler").getElementsByTagName("circle");
-		document.getElementById("runningCircle").setAttribute("cx", 0);
-		document.getElementById("runningCircle").setAttribute("cy", 300);
-		count = 0;
-	}
-	intervalId = setInterval(() => {
-		rd2(ary, count / speed);
-		count++;
-		if(count > speed) {
-			m_st();
-		}
-	}, interval);
-}
-function m_st(tf) {
-	document.getElementById("mainLeftButton").removeEventListener("click", pause);
-	document.getElementById("mainLeftButton").addEventListener("click", go);
-	document.getElementById("mainLeftButton").textContent = "実行";
-	Array.from(document.getElementById("groupOfhandler").getElementsByTagName("circle")).forEach(e => {
-		e.addEventListener("mousedown", md, false);
-	});
-	m_st2();
-}
-function m_st2(tf = true) {
-	clearInterval(intervalId);
-	let btn, now;
-	btn = document.getElementById("mainLeftButton");
-	btn.removeEventListener("click", pause);
-	btn.removeEventListener("click", restart);
-	btn.addEventListener("click", go);
-	btn.textContent = "実行";
-	now = document.getElementById("runningCircle");
-	now.classList.remove("ok");
-	now.setAttribute("cx", "-10");
-	now.setAttribute("cy", "-10");
-	let xx, yy;
-	xx = (tf) ? 300 : 0;
-	yy = (tf) ? 0 : 300;
-	document.getElementById("v3-crt-csr").setAttribute("d", `m-5 ${yy}, -10 -10 h-10 v20 h10z`);
-	document.getElementById("v3-crt-csrt").textContent = `${((300 - yy) / 3).toFixed(0)}%`;
-	let a, b;
-	a = document.getElementById("v3-crt-csrl");
-	a.setAttribute("x2", xx);
-	a.setAttribute("y1", yy);
-	a.setAttribute("y2", yy);
-	document.getElementById("v3-crt-cst").setAttribute("d", `m${xx} 305, -10 10 v10 h20 v-10z`);
-	b = document.getElementById("v3-crt-cstl");
-	b.setAttribute("x1", xx);
-	b.setAttribute("x2", xx);
-	b.setAttribute("y2", yy);
-}
-function rd2 (ary, ppn) {
-	let z;
-	if (ary.length !== 1) {
-		try {
-			z = document.getElementById("v3-svg_sh").getElementsByTagName("polyline")[5 - ary.length];
-			let list = [];
-			for (let i = 0; i < ary.length - 1; i++) {
-				let x = (ary[i + 1][0] - ary[i][0]) * ppn + ary[i][0];
-				let y = (ary[i + 1][1] - ary[i][1]) * ppn + ary[i][1];
-				list.push([x, y]);
-			}
-			z.setAttribute("points", list.map(j => j.join(",")).join(" "));
-			if (ary.length === 2) {
-				let xx = list[0][0];
-				let yy = list[0][1];
-				document.getElementById("runningCircle").setAttribute("cx", xx);
-				document.getElementById("runningCircle").setAttribute("cy", yy);
-				(function () {
-					document.getElementById("v3-crt-csr").setAttribute("d", `m-5 ${yy}, -10 -10 h-10 v20 h10z`);
-					document.getElementById("v3-crt-csrt").textContent = `${((300 - yy) / 3).toFixed(0)}%`;
-					document.getElementById("v3-crt-csrl").setAttribute("x2", xx);
-					document.getElementById("v3-crt-csrl").setAttribute("y1", yy);
-					document.getElementById("v3-crt-csrl").setAttribute("y2", yy);
-					document.getElementById("v3-crt-cst").setAttribute("d", `m${xx} 305, -10 10 v10 h20 v-10z`);
-					document.getElementById("v3-crt-cstl").setAttribute("x1", xx);
-					document.getElementById("v3-crt-cstl").setAttribute("x2", xx);
-					document.getElementById("v3-crt-cstl").setAttribute("y2", yy);
-				})();
-			}
-			rd2(list, ppn);
-		} catch (e) {}
-	}
-}
-function rnd(x) {
-	return Math.round(x * 100) / 100;
+	recursiveInitiator(obtainManipulatorPositions(), false);
 }
 
-window.addEventListener("load", () => {
-	add_cmp();
-	/*
-	Array.from(document.getElementsByClassName("importer")).forEach(e => {
-		e.addEventListener("click", put_ico);
-	});
-	Array.from(document.getElementsByClassName("v3-ico")).forEach(e => {
-		e.addEventListener("click", ani);
-	});
-	Array.from(document.getElementsByClassName("v3-ani")).forEach(e => {
-		e.addEventListener("animationend", rani);
-	});
-	*/
-	document.getElementById("mainRightButton").addEventListener("click", doa);
-});
-function add_cmp() {
-	if (1200 < window.innerWidth) {
-		//document.getElementById("wrapper").style.maxWidth = "1600px";
-		const z = document.getElementById("mainRightBottomFrame");
-		let fs = [
-			[
-				[50, 200],
-				[250, 100]
-			],
-			[
-				[0, 300],
-				[300, 0]
-			],
-			[
-				[0, 150],
-				[300, 150]
-			]
-		];
-		for (let i = 0; i < 3; i++) {
-			let bx = document.createElement("div");
-			bx.style.display = "flex";
-			bx.style.alignItems = "center";
-			let sp;
-			let arw = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-			arw.classList.add("x");
-			(function () {
-				sp = {
-					"width" : "50",
-					"height" : "50",
-					"viewBox" : "0 0 100 100",
-					"xmlns" : "http://www.w3.org/2000/svg",
-				};
-				arw.classList.add("importer");
-				arw.addEventListener("click", put_ico);
-				for (let k in sp) {
-					arw.setAttribute(k, sp[k]);
-				}
-				arw.style.marginRight = "25px";
-				let x = document.createElementNS("http://www.w3.org/2000/svg", "path");
-				x.setAttribute("d", "m 85,50 -60,35 0,-70 z");
-				x.style.strokeLinejoin = "round";
-				arw.appendChild(x);
-			})();
-			let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-			svg.classList.add("x");
-			(function () {
-				svg.classList.add("v3-ico");
-				svg.addEventListener("click", ani);
-				sp = {
-					"width" : "80",
-					"height" : "80",
-					"viewBox" : "-100 -100 500 500",
-					"xmlns" : "http://www.w3.org/2000/svg",
-				};
-				for (let k in sp) {
-					svg.setAttribute(k, sp[k]);
-				}
-				let gr = document.createElementNS("http://www.w3.org/2000/svg", "g");
-				gr.classList.add("v3-gr");
-				let e = document.createElementNS("http://www.w3.org/2000/svg", "path");
-				sp = {
-					"fill" : "none",
-					"stroke" : "#ffffff",
-					"stroke-width" : "40",
-				}
-				for (let k in sp) {
-					e.setAttribute(k, sp[k]);
-				}
-				gr.appendChild(e);
-				let g;
-				e.setAttribute("d", `m0 300 C${fs[i][0].join(" ")}, ${fs[i][1].join(" ")}, 300 0`);
-				(function () {
-					let e, p, st;
-					g = document.createElementNS("http://www.w3.org/2000/svg", "g")
-					//e = new Array(2).fill(document.createElementNS("http://www.w3.org/2000/svg", "circle")); ←これだと参照を渡してしまうため上書きされてしまう、、、
-					e = [];
-					for (let i = 0; i < 2; i++) {
-						e.push(document.createElementNS("http://www.w3.org/2000/svg", "circle"));
-					}
-					st = {
-						"fill" : "#FFFF00",
-						"stroke" : "#000000",
-						"stroke-width" : "5",
-					};
-					p = [
-						[0, 300],
-						[300, 0],
-					];
-					for (let i = 0; i < e.length; i++) {
-						e[i].setAttribute("r", 40);
-						e[i].setAttribute("cx", p[i][0]);
-						e[i].setAttribute("cy", p[i][1]);
-						for (let k in st) {
-							e[i].style[k] = st[k];
-						}
-					}
-					g.appendChild(e[0]);
-					g.appendChild(e[1]);
-				})();
-				svg.appendChild(gr);
-				svg.appendChild(g);
-			})();
-			let mv = document.createElement("div");
-			(function () {
-				sp = {
-					"width" : "300px",
-					"height" : "50px",
-					"border" : "1px #000000 solid",
-					"margin" : "10px 25px",
-					"position" : "relative",
-				};
-				for (let k in sp) {
-					mv.style[k] = sp[k];
-				}
-				let e = document.createElement("div");
-				e.classList.add("v3-ani");
-				e.addEventListener("animationend", rani);
-				sp = {
-					"position" : "absolute",
-					"top" : "0",
-					"left" : "0",
-					"bottom" : "0",
-					"box-sizing" : "border-box",
-					"border-right" : "1px #000000 solid",
-				};
-				for (let k in sp) {
-					e.style[k] = sp[k];
-				}
-				let e2 = document.createElement("div");
-				for (let k in sp) {
-					e2.style[k] = sp[k];
-				}
-				e2.style.zIndex = 1;
-				e2.style.borderRight = "5px black solid";
-				e2.addEventListener("animationend", rani);
-				e2.classList.add("v3-ani");
-				e2.classList.add("v3-ani_li");
-				mv.appendChild(e);
-				mv.appendChild(e2);
-			})();
-			bx.appendChild(arw);
-			bx.appendChild(svg);
-			bx.appendChild(mv);
-			z.appendChild(bx);
-		}
+const stopwatchObject = {
+	intervalId: null,
+	counter: 0,
+	reset: function() {this.counter = 0;}
+};
+function recursiveInitiator(points, tf = true) {
+	const intervalValue = interval.value;
+	const speedValue = speed.value * 1000;
+	const span = 50 + (5 - intervalValue) * 5;
+	const realSpeed = speedValue / span;
+	if (tf) {
+		const [polyline] = mkElmSVG(["polyline"]);
+		polyline.setAttribute("points", points.map(j => j.join(",")).join(SPACE));
+		groupOfExplanator.appendChild(polyline);
+		doNtimes(points.length, () => {
+			const [polyline] = mkElmSVG(["polyline"]);
+			groupOfExplanator.appendChild(polyline);
+		});
+		runningCircle.classList.add("ok");
+		runningCircle.setAttribute("cx", 0);
+		runningCircle.setAttribute("cy", 300);
+		stopwatchObject.reset();
 	}
+	stopwatchObject.intervalId = setInterval(() => {
+		recursiveMain(points, stopwatchObject.counter / realSpeed);
+		stopwatchObject.counter++;
+		if(realSpeed < stopwatchObject.counter) stopInterval();
+	}, span);
 }
-function put_ico() {
-	let z = bezier.getAttribute("d").match(/-?\d+\.?\d*/g);
+function stopInterval() {
+	leftButton.removeEventListener("click", pause);
+	leftButton.addEventListener("click", go);
+	leftButton.textContent = "実行";
+	Array.from(groupOfhandler.getElementsByTagName("circle")).forEach(circle => circle.addEventListener("mousedown", mousedown, false));
+	truncAndImport();
+}
+function truncAndImport(tf = true) {
+	clearInterval(stopwatchObject.intervalId);
+	leftButton.removeEventListener("click", pause);
+	leftButton.removeEventListener("click", restart);
+	leftButton.addEventListener("click", go);
+	leftButton.textContent = "実行";
+	runningCircle.classList.remove("ok");
+	runningCircle.setAttribute("cx", SVG_SIZE_MIN - 10);
+	runningCircle.setAttribute("cy", SVG_SIZE_MAX + 10);
+	const xx = (tf) ? SVG_SIZE_MAX : SVG_SIZE_MIN;
+	const yy = (tf) ? SVG_SIZE_MIN : SVG_SIZE_MAX;
+	progressorRed.setAttribute("d", `m -5 ${yy}, -10 -10 h-10 v20 h10 z`);
+	progressorRedCounter.textContent = `${((SVG_SIZE_MAX - yy) / 3).toFixed(0)}%`;
+	progressorRedLine.setAttribute("x2", xx);
+	progressorRedLine.setAttribute("y1", yy);
+	progressorRedLine.setAttribute("y2", yy);
+	progressorBlue.setAttribute("d", `m ${xx} 305, -10 10 v10 h20 v-10 z`);
+	progressorBlueLine.setAttribute("x1", xx);
+	progressorBlueLine.setAttribute("x2", xx);
+	progressorBlueLine.setAttribute("y2", yy);
+}
+function recursiveMain(points, proportion) {
+	if (points.length === 1) return;
+	const targetLine = groupOfExplanator.getElementsByTagName("polyline")[5 - points.length];
+	const dComponents = [];
+	doNtimes(points.length - 1, i => {
+		const x = (points[i + 1][0] - points[i][0]) * proportion + points[i][0];
+		const y = (points[i + 1][1] - points[i][1]) * proportion + points[i][1];
+		dComponents.push([x, y]);
+	});
+	targetLine.setAttribute("points", dComponents.map(j => j.join(",")).join(" "));
+	if (points.length === 2) {
+		const xx = dComponents[0][0];
+		const yy = dComponents[0][1];
+		runningCircle.setAttribute("cx", xx);
+		runningCircle.setAttribute("cy", yy);
+		progressorRed.setAttribute("d", `m ${SVG_SIZE_MIN - 5} ${yy}, -10 -10 h-10 v20 h10 z`);
+		progressorRedText.textContent = `${((SVG_SIZE_MAX - yy) / 3).toFixed(0)}%`;
+		progressorRedLine.setAttribute("x2", xx);
+		progressorRedLine.setAttribute("y1", yy);
+		progressorRedLine.setAttribute("y2", yy);
+		progressorBlue.setAttribute("d", `m ${xx} ${SVG_SIZE_MAX + 5}, -10 10 v10 h20 v-10 z`);
+		progressorBlueLine.setAttribute("x1", xx);
+		progressorBlueLine.setAttribute("x2", xx);
+		progressorBlueLine.setAttribute("y2", yy);
+	}
+	recursiveMain(dComponents, proportion);
+}
+
+
+rightButton.addEventListener("click", doa);
+///////////////////////
+function syncIcon() {
+	const dValue = bezier.getAttribute("d").match(/-?\d+\.?\d*/g);
 	let xy = this.nextElementSibling.getElementsByClassName("v3-gr")[0];
 	ers(xy);
 	let e = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	e.setAttribute("d", `m0 300 C${z[2]} ${z[3]}, ${z[4]} ${z[5]}, 300 0`);
+	e.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C${dValue[2]} ${dValue[3]}, ${dValue[4]} ${dValue[5]}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 	e.style.fill = "none";
 	e.style.stroke = "#ffffff";
 	e.style.strokeWidth = "40";
@@ -470,7 +278,7 @@ function ani(arg, obj = false) {
 }
 function gbz(x) {
 	let ds = x.match(/-?\d+\.?\d*/g);
-	return `cubic-bezier(${rnd(ds[2] / 300)}, ${rnd((1 - (ds[3] / 300)))}, ${rnd(ds[4] / 300)}, ${rnd(1 - (ds[5] / 300))})`;
+	return `cubic-bezier(${round100(ds[2] / 300)}, ${round100((1 - (ds[3] / 300)))}, ${round100(ds[4] / 300)}, ${round100(1 - (ds[5] / 300))})`;
 }
 function rani() {
 	this.classList.remove("v3-aniani");
@@ -500,16 +308,16 @@ window.addEventListener("load", () => {
 	});
 	document.getElementById("v3-s_cl").addEventListener("change", function() {
 		ar.forEach(e => {
-			e.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
+			e.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
 		});
-		this.parentNode.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
-		this.parentNode.nextElementSibling.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
+		this.parentNode.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
+		this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
 		setTimeout(() => {
-			this.parentNode.style.backgroundColor = "transparent";
+			this.parentNode.style.background100Color = "transparent";
 		}, 300);
 	});
 	document.getElementById("v3-s_cl").addEventListener("input", function() {
-		this.parentNode.nextElementSibling.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
+		this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
 	});
 	document.getElementById("v3-s_lr").addEventListener("change", function() {
 		this.parentNode.nextElementSibling.textContent = (parseInt(this.value) === 1) ? "あり" : "なし";
@@ -536,37 +344,34 @@ function putLogSVG() {
 	const positions = bezierSync();
 	const [svg, groupOfPaths, groupOfCircles, path] = mkElmSVG(["svg", "g", "g", "path"]);
 	svg.setAttribute("viewBox", "-50 -50 400 400");
-	path.setAttribute("d", `m0 300 C ${z.join(", ")}, 300 0`);
+	path.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${positions.join(", ")}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 	groupOfPaths.appendChild(path);
-	const xy = [[0, 300], [300, 0]];
-	for (let i = 0; i < 2; i++) {
-		const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+	const xy = [[SVG_SIZE_MIN, SVG_SIZE_MAX], [SVG_SIZE_MAX, SVG_SIZE_MIN]];
+	doNtimes(2, i => {
+		const [circle] = mkElmSVG(["circle"]);
 		circle.setAttribute("r", 30);
 		circle.setAttribute("cx", xy[i][0]);
 		circle.setAttribute("cy", xy[i][1]);
 		groupOfCircles.appendChild(circle);
-	}
-	svg.appendChild(groupOfPaths);
-	svg.appendChild(groupOfCircles);
-	svg.addEventListener("click", trnsfr);
+	});
+	append([groupOfPaths, groupOfCircles], svg);
+	svg.addEventListener("click", logBack);
 	logWindow.insertBefore(svg, logWindow.firstChild);
 }
-// ★★★
-function trnsfr() {
-	m_st2(false);
-	ers("v3-svg_sh");
-	let dd, d;
-	dd = this.getElementsByTagName("path")[0].getAttribute("d").match(/-?\d+\.?\d*/g).slice(2, 6); //マイナスも取得することを忘れずに!!
-	d = [dd.slice(0, 2), dd.slice(2, 4)];
-	for (let i = 0; i < d.length; i++) {
-		document.getElementById(`v3-cid${i}`).setAttribute("cx", d[i][0]); //setup[i][0]->document.getElementById(`v3-cid${i}`)
-		document.getElementById(`v3-cid${i}`).setAttribute("cy", d[i][1]); //setup[i][1]->document.getElementById(`v3-cid${i}`)
-	}
-	scrl(dd);
-	mt();
+
+function logBack() {
+	truncAndImport(false);
+	const dAttr = this.getElementsByTagName("path")[0].getAttribute("d").match(/-?\d+\.?\d*/g).slice(2, 6); //マイナスも取得することを忘れずに!!
+	const d = [dAttr.slice(0, 2), dAttr.slice(2, 4)];
+	doNtimes(d.length, i => {
+		handlers.circles[0].setAttribute("cx", d[i][0]);
+		handlers.circles[1].setAttribute("cy", d[i][1]);
+	});
+	scrollUp(dAttr);
+	manipuratorSync();
 	bezierSync();
 	const ary = obtainManipulatorPositions();
-	document.getElementById("bezierFormulaBox").textContent = `cubic-bezier(${rnd(ary[1][0] / 300)}, ${rnd((1 - (ary[1][1] / 300)))}, ${rnd(ary[2][0] / 300)}, ${rnd(1 - (ary[2][1] / 300))})`;
+	document.getElementById("bezierFormulaBox").textContent = `cubic-bezier(${round100(ary[1][0] / 300)}, ${round100((1 - (ary[1][1] / 300)))}, ${round100(ary[2][0] / 300)}, ${round100(1 - (ary[2][1] / 300))})`;
 	currentImporter();
 }
 function currentImporter() {
@@ -579,7 +384,7 @@ function currentImporter() {
 		pointsContainer.push(points);
 	}
 	const demoGroup = document.getElementById("groupOfCurrentDemoSVG");
-	eraser(demoGroup);
+	removeChildren(demoGroup);
 	const currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
 	currentPath.setAttribute("d", `m0 300 C ${pointsContainer.map(e => e.join(" ")).join(", ")}, 300 0`);
 	demoGroup.appendChild(currentPath);
@@ -674,7 +479,7 @@ function put_tmpl() {
 				"font-size" : "12px",
 				"border" : "1px black solid",
 				"border-radius" : "20px",
-				"background-color" : "rgba(255, 255, 255, 0.7)",
+				"background100-color" : "rgba(255, 255, 255, 0.7)",
 				"padding" : "1px 8px",
 				"white-space" : "nowrap",
 			};
@@ -688,53 +493,45 @@ function put_tmpl() {
 		})();
 	}
 }
-function scrl(d) {
-	d = [d[0] / 300, 1 - d[1] / 300, d[2] / 300, 1 - d[3] / 300]
-	d = g_bezier(d);
+function scrollUp(d) {
+	const positions = [d[0] / 300, 1 - d[1] / 300, d[2] / 300, 1 - d[3] / 300];
+	const bezierPoints = calcBezier(positions);
 	let count = 0;
-	let y = window.scrollY;
-	let sc = window.pageYOffset + document.getElementById("v3-ttl").getBoundingClientRect().top;
-	let ds = sc - y;
-	function st() {
+	const scrolled = window.scrollY;
+	const toWhere = window.pageYOffset + mainWindow.getBoundingClientRect().top;
+	const needToScroll = toWhere - scrolled;
+	function waitAndRun() {
 		if (count < 100) {
 			count++;
-			scrollTo(0, y + ds * d["y"][count]);
-			setTimeout(st, 15 * d["x"][count]);
+			scrollTo(0, scrolled + needToScroll * bezierPoints["y"][count]);
+			setTimeout(waitAndRun, 15 * bezierPoints["x"][count]);
 		}
 	}
-	st();
+	waitAndRun();
 }
-function g_bezier(d, step = 100, pct = true) {
-	let answer = {
+function calcBezier(d, step = 100, percent = true) {
+	const answer = {
 		"x" : [],
 		"y" : [],
 	};
-	function rd (ary, ppn) {
-		if (ary.length !== 1) {
-			let list = [];
-			for (let i = 0; i < ary.length - 1; i++) {
-				let x = (ary[i + 1][0] - ary[i][0]) * ppn + ary[i][0];
-				let y = (ary[i + 1][1] - ary[i][1]) * ppn + ary[i][1];
-				list.push([x, y]);
-			}
-			if (ary.length === 2) {
-				answer["x"].push((pct) ? list[0][0] / 100 : list[0][0]);
-				answer["y"].push((pct) ? list[0][1] / 100 : list[0][1]);
-			} else {
-				rd(list, ppn);
-			}
+	function recCalcPositions(ary, ppn) {
+		if (ary.length === 1) return;
+		const list = [];
+		for (let i = 0; i < ary.length - 1; i++) {
+			const x = (ary[i + 1][0] - ary[i][0]) * ppn + ary[i][0];
+			const y = (ary[i + 1][1] - ary[i][1]) * ppn + ary[i][1];
+			list.push([x, y]);
+		}
+		if (ary.length === 2) {
+			answer["x"].push(list[0][0] / (percent) ? 100 : 1);
+			answer["y"].push(list[0][1] / (percent) ? 100 : 1);
+		} else {
+			recCalsPositions(list, ppn);
 		}
 	}
-	let dd = [[0, 0], [d[0], d[1]], [d[2], d[3]], [100, 100]];
+	const positions = [[0, 0], [d[0], d[1]], [d[2], d[3]], [100, 100]];
 	for (let i = 0; i <= step; i++) {
-		let x = rd(dd, i / step);
+		recCalcPositions(positions, i / step);
 	}
 	return answer;
 }
-window.addEventListener("resize", () => {
-	if (window.innerWidth < 1500) {
-		document.getElementById("v3-announce").textContent = `横幅が1500px以上の端末で使用してください。現在使用している端末の横幅は${window.innerWidth}pxです。`;
-	} else {
-		document.getElementById("v3-announce").textContent = "簡単にベジェ曲線を作成・テストするツールです。";
-	}
-});
