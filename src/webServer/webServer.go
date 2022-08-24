@@ -9,13 +9,14 @@ import (
 )
 
 type RequestResponse struct {
-	request  *http.Request
-	response *http.ResponseWriter
-	snd      string
-	path     string
-	Login    bool
-	userID   string
-	Name     string
+	request     *http.Request
+	response    *http.ResponseWriter
+	snd         string
+	path        string
+	Login       bool
+	NeedToLogin bool
+	userID      string
+	Name        string
 }
 
 func setResponseHeaders(w *http.ResponseWriter) {
@@ -32,13 +33,14 @@ func setResponseHeadersSecurity(w *http.ResponseWriter) {
 func controller(w http.ResponseWriter, r *http.Request) {
 	path, _ := url.QueryUnescape(fmt.Sprint((*r).URL))
 	RR := RequestResponse{
-		request:  r,
-		response: &w,
-		snd:      strIndex(path, 1),
-		path:     r.URL.Path,
-		Login:    false,
-		userID:   "",
-		Name:     "ゲスト",
+		request:     r,
+		response:    &w,
+		snd:         strIndex(path, 1),
+		path:        r.URL.Path,
+		Login:       false,
+		NeedToLogin: false,
+		userID:      "",
+		Name:        "ゲスト",
 	}
 
 	setResponseHeaders(&w)
@@ -65,14 +67,11 @@ func controller(w http.ResponseWriter, r *http.Request) {
 	} else {
 		// セッションが必要なページ
 		RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
-		
-		// ログインが必要かで処理を制御
-		switch RR.snd {
-		case "M": // ログインが必要なページ
-			sessionController(&RR)
-		default: // ログインが不要なページ
-			pageController(&RR)
+
+		if (RR.snd == "M") {
+			RR.NeedToLogin = true;
 		}
+		sessionController(&RR)
 	}
 }
 

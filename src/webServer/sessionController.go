@@ -22,8 +22,12 @@ func sessionController(RR *RequestResponse) {
 			RR.Login = true
 			RR.userID = userID
 		}
-
-		loginController(RR)
+		switch RR.snd {
+		case "M":
+			loginController(RR)
+		default:
+			pageController(RR)
+		}
 	} else {
 		setCookieANDredirect(RR)
 	}
