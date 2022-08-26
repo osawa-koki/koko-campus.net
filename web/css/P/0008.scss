@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+#pythagorasTree {
+	canvas {
+		display: block;
+		margin: 50px auto;
+		width: 500px;
+		max-width: 100%;
+		border: 1px black solid;
+	}
+	#button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 150px;
+		height: 35px;
+		margin: 0 auto;
+		border: 1px black solid;
+		background-color: aliceblue;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: blue;
+		}
+		&.ng {
+			color: white;
+			background-color: gray;
+		}
+	}
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+		th, td {
+			padding: 5px 10px;
+			border: 1px black solid;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
