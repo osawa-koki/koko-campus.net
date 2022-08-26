@@ -71,8 +71,8 @@
 							<circle r="40" cx="300" cy="0"></circle>
 						</svg>
 						<div class="progressorDiv">
-							<div class="v3-ani" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 1px solid rgb(0, 0, 0);"></div>
-							<div class="v3-ani v3-ani_li" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 5px solid black; z-index: 1;"></div>
+							<div class="toAnimate" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 1px solid rgb(0, 0, 0);"></div>
+							<div class="toAnimate linearAnimation" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 5px solid black; z-index: 1;"></div>
 						</div>
 					</div>
 				{{ end }}
@@ -84,22 +84,22 @@
 				<tbody>
 					<tr>
 						<td>実行時間</td>
-						<td><input type="range" min="0.3" max="3" value="1" step="0.1" id="v3-s_sp"></td>
+						<td><input type="range" min="0.3" max="3" value="1" step="0.1" id="X_speed"></td>
 						<td>1.0秒</td>
 					</tr>
 					<tr>
 						<td>実行回数</td>
-						<td><input type="range" min="1" max="3" value="1" step="1" id="v3-s_ct"></td>
+						<td><input type="range" min="1" max="3" value="1" step="1" id="X_times"></td>
 						<td>1回</td>
 					</tr>
 					<tr>
 						<td>背景色</td>
-						<td><input type="range" min="0" max="360" value="1" step="1" id="v3-s_cl"></td>
+						<td><input type="range" min="0" max="360" value="1" step="1" id="X_color"></td>
 						<td style="background-color: #ff0000;"></td>
 					</tr>
 					<tr>
 						<td>リニア線</td>
-						<td><input type="range" min="0" max="1" value="1" step="1" id="v3-s_lr"></td>
+						<td><input type="range" min="0" max="1" value="1" step="1" id="X_line"></td>
 						<td>あり</td>
 					</tr>
 				</tbody>

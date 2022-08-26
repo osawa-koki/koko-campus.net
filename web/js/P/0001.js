@@ -33,7 +33,7 @@ function push() {
 	const list = Array.from(document.getElementsByTagName("input")).map(n => parseInt(n.value));
 	const results = make10(list);
 	const [resultTbody, calcTbody] = getElm(["resultTbody", "calcTbody"]);
-	[resultTbody, calcTbody].forEach(tbody => eraser(tbody));
+	[resultTbody, calcTbody].forEach(tbody => removeChildren(tbody));
 	results["all"].forEach(result => {
 		const [tr, td1, td2, td3] = mkElm(["tr", "td", "td", "td"]);
 		td1.textContent = pretifyOperant(result);

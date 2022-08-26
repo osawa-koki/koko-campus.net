@@ -246,6 +246,44 @@
   margin: 10px 25px;
   position: relative;
 }
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .toAnimated, #bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .linearAnimation {
+  background-color: red;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .linearAnimation {
+  background-color: transparent !important;
+}
+#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .onAnimation {
+  -webkit-animation-name: onAnimation;
+          animation-name: onAnimation;
+}
+@-webkit-keyframes onAnimation {
+  from {
+    right: 100%;
+  }
+  75%, to {
+    right: 0;
+  }
+}
+@keyframes onAnimation {
+  from {
+    right: 100%;
+  }
+  75%, to {
+    right: 0;
+  }
+}
 #bezier #mainWindow #mainRightWindow #mainRightButton {
   background-color: #00BFFF;
 }
@@ -357,48 +395,6 @@
   scrollbar-width: none;
 }
 
-.v3-ani, .v3-ani_li {
-  background-color: #ff0000;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-}
-
-.v3-ani_li {
-  background-color: transparent !important;
-}
-
-.v3-aniani {
-  -webkit-animation-name: v3-aniani;
-          animation-name: v3-aniani;
-}
-
-@-webkit-keyframes v3-aniani {
-  from {
-    right: 100%;
-  }
-  75%, to {
-    right: 0;
-  }
-}
-
-@keyframes v3-aniani {
-  from {
-    right: 100%;
-  }
-  75%, to {
-    right: 0;
-  }
-}
 .icon {
   background-color: #FF00FF;
 }

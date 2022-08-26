@@ -252,91 +252,70 @@ function recursiveMain(points, proportion) {
 }
 
 
-rightButton.addEventListener("click", doa);
-///////////////////////
-function syncIcon() {
+rightButton.addEventListener("click", doAnimation);
+
+Array.from(document.getElementsByClassName("arrowBox")).map(arrowBox => arrowBox.addEventListener("click", function syncIcon() {
 	const dValue = bezier.getAttribute("d").match(/-?\d+\.?\d*/g);
-	let xy = this.nextElementSibling.getElementsByClassName("v3-gr")[0];
-	ers(xy);
-	let e = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	e.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C${dValue[2]} ${dValue[3]}, ${dValue[4]} ${dValue[5]}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
-	e.style.fill = "none";
-	e.style.stroke = "#ffffff";
-	e.style.strokeWidth = "40";
-	xy.insertBefore(e, xy.firstChild)
+	const arrow = this.nextElementSibling.getElementsByClassName("arrow")[0];
+	arrow.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C${dValue[2]} ${dValue[3]}, ${dValue[4]} ${dValue[5]}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
+}));
+function animateIt(target, useThis = false) {
+	const targetBox = (useThis) ? this : target;
+	const bezierLine = calcBezierFormula(targetBox.getElementsByTagName("path")[0].getAttribute("d"));
+	const toAnimate = Array.from(targetBox.nextElementSibling.getElementsByClassName("toAnimate"));
+	toAnimate.forEach(mover => {
+		mover.style.animationTimingFunction = (!s.classList.contains("lineafinishedAnimationmation")) ? bezierLine : "linear";
+		mover.classList.add("onAnimation");
+	});
 }
-function ani(arg, obj = false) {
-	try {
-		let tt = (obj) ? arg : this;
-		let bz = gbz(tt.getElementsByTagName("path")[0].getAttribute("d"));
-		let an = Array.from(tt.nextElementSibling.getElementsByClassName("v3-ani"));
-		an.forEach(s => {
-			s.style.animationTimingFunction = (!s.classList.contains("v3-ani_li")) ? bz : "linear";
-			s.classList.add("v3-aniani");
-		});
-	} catch(e) {}
+function calcBezierFormula(target) {
+	const dElement = x.match(/-?\d+\.?\d*/g);
+	return `cubic-bezier(${round100(dElement[2] / 300)}, ${round100((1 - (dElement[3] / 300)))}, ${round100(dElement[4] / 300)}, ${round100(1 - (dElement[5] / 300))})`;
 }
-function gbz(x) {
-	let ds = x.match(/-?\d+\.?\d*/g);
-	return `cubic-bezier(${round100(ds[2] / 300)}, ${round100((1 - (ds[3] / 300)))}, ${round100(ds[4] / 300)}, ${round100(1 - (ds[5] / 300))})`;
+function finishedAnimation() {
+	this.classList.remove("onAnimation");
 }
-function rani() {
-	this.classList.remove("v3-aniani");
-}
-function doa() {
+function doAnimation() {
 	Array.from(document.getElementsByClassName("v3-ico")).forEach(e => {
-		ani(e, true);
+		animateIt(e, true);
 	});
 }
-window.addEventListener("load", () => {
-	if (window.innerWidth < 1200) {
-		document.getElementById("v3-width_judge").style.display = "none";
-		document.getElementById("v3-announce").textContent = `横幅が1200px以上の端末で使用してください。現在使用している端末の横幅はは${window.innerWidth}pxです。`;
+
+const [X_speed, X_times, X_color, X_line] = getElm(["X_speed", "X_times", "X_color", "X_line"]);
+
+const toAnimateItems = Array.from(document.getElementsByClassName("toAnimate"));
+X_speed.addEventListener("input", function() {
+	toAnimateItem.forEach(toAnimateItem => toAnimateItem.style.animationDuration = this.value * 1.5 + "s");
+	this.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`;
+});
+X_times.addEventListener("input", function() {
+	toAnimateItems.forEach(toAnimateItem => toAnimateItem.style.animationIterationCount = this.value);
+	this.parentNode.nextElementSibling.textContent = `${this.value}回`;
+});
+X_color.addEventListener("change", function() {
+	toAnimateItems.forEach(toAnimateItem => toAnimateItem.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`);
+	this.parentNode.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
+	this.parentNode.nextElementSibling.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
+	setTimeout(() => this.parentNode.style.backgroundColor = "transparent", 300);
+});
+X_color.addEventListener("input", function() {
+	this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
+});
+X_line.addEventListener("change", function() {
+	this.parentNode.nextElementSibling.textContent = (parseInt(this.value) === 1) ? "あり" : "なし";
+	if (parseInt(this.value) === 1) {
+		const pausedElement = document.getElementsByClassName("animationPaused");
+		doNtimes(pausedElement.length, i => {
+			pausedElement[i].classList.add("v3-ani");
+			pausedElement[i].classList.remove("animationPaused");
+		});
+	} else {
+		const animationLinear = document.getElementsByClassName("linearAnimation");
+		doNtimes(animationLinear.length, i => {
+			animationLinear[i].classList.add("animationPaused");
+			animationLinear[i].classList.remove("toAnimate");
+		});
 	}
-	const ar = Array.from(document.getElementsByClassName("v3-ani"));
-	document.getElementById("v3-s_sp").addEventListener("input", function() {
-		ar.forEach(e => {
-			e.style.animationDuration = this.value * 1.5 + "s";
-		});
-		this.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`;
-	});
-	document.getElementById("v3-s_ct").addEventListener("input", function() {
-		ar.forEach(e => {
-			e.style.animationIterationCount = this.value;
-		});
-		this.parentNode.nextElementSibling.textContent = `${this.value}回`;
-	});
-	document.getElementById("v3-s_cl").addEventListener("change", function() {
-		ar.forEach(e => {
-			e.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
-		});
-		this.parentNode.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
-		this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
-		setTimeout(() => {
-			this.parentNode.style.background100Color = "transparent";
-		}, 300);
-	});
-	document.getElementById("v3-s_cl").addEventListener("input", function() {
-		this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
-	});
-	document.getElementById("v3-s_lr").addEventListener("change", function() {
-		this.parentNode.nextElementSibling.textContent = (parseInt(this.value) === 1) ? "あり" : "なし";
-		if (parseInt(this.value) === 1) {
-			let x = document.getElementsByClassName("v3-ani_li-paused");
-			x = Array.from(x);
-			for (let i = 0; i < x.length; i++) {
-				x[i].classList.add("v3-ani");
-				x[i].classList.remove("v3-ani_li-paused");
-			}
-		} else {
-			let x = document.getElementsByClassName("v3-ani_li");
-			x = Array.from(x);
-			for (let i = 0; i < x.length; i++) {
-				x[i].classList.add("v3-ani_li-paused");
-				x[i].classList.remove("v3-ani");
-			}
-		}
-	});
 });
 
 // マウスアップ時の処理(ログ生成)
@@ -371,34 +350,30 @@ function logBack() {
 	manipuratorSync();
 	bezierSync();
 	const ary = obtainManipulatorPositions();
-	document.getElementById("bezierFormulaBox").textContent = `cubic-bezier(${round100(ary[1][0] / 300)}, ${round100((1 - (ary[1][1] / 300)))}, ${round100(ary[2][0] / 300)}, ${round100(1 - (ary[2][1] / 300))})`;
+	bezierFormulaBox.textContent = `cubic-bezier(${round100(ary[1][0] / SVG_SIZE_MAX)}, ${round100((1 - (ary[1][1] / SVG_SIZE_MAX)))}, ${round100(ary[2][0] / SVG_SIZE_MAX)}, ${round100(1 - (ary[2][1] / SVG_SIZE_MAX))})`;
 	currentImporter();
 }
 function currentImporter() {
 	const pointsContainer = [];
-	for (let i = 0; i < 2; i++) {
+	doNtimes(2, i => {
 		const points = [];
 		const circle = handlers.circles[i];
 		points.push(circle.getAttribute("cx"));
 		points.push(circle.getAttribute("cy"));
 		pointsContainer.push(points);
-	}
+	});
 	const demoGroup = document.getElementById("groupOfCurrentDemoSVG");
 	removeChildren(demoGroup);
-	const currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	currentPath.setAttribute("d", `m0 300 C ${pointsContainer.map(e => e.join(" ")).join(", ")}, 300 0`);
+	const [currentPath] = mkElmSVG("path");
+	currentPath.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${pointsContainer.map(e => e.join(" ")).join(", ")}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 	demoGroup.appendChild(currentPath);
 }
-window.addEventListener("load", () => {
-	document.getElementById("currentdemoSVG").addEventListener("click", ani);
-	document.getElementById("currentDemoProgressorA").addEventListener("animationend", rani);
-	document.getElementById("currentDemoProgressorB").addEventListener("animationend", rani);
-});
-window.addEventListener("load", () => {
-	put_tmpl();
-});
-function put_tmpl() {
-	const z = {
+
+document.getElementById("currentdemoSVG").addEventListener("click", doAnimate);
+map(element => document.getElementById(element).addEventListener("animationend", finishedAnimation), getElm(["currentDemoProgressorA", "currentDemoProgressorB"]));
+
+function putTemplate() {
+	const templates = {
 		"linear" : [[0.0, 0.0], [1.0, 1.0]],
 		"ease" : [[0.25, 0.1], [0.25, 1.0]],
 		"ease-in" : [[0.42, 0], [1.0, 1.0]],
@@ -409,90 +384,83 @@ function put_tmpl() {
 		"オススメ４" : [[0.0, 0.3], [1.0, 1.0]],
 		"オススメ５" : [[0.2, 0.2], [0.3, 0.9]],
 	};
-	const p = document.getElementById("templateWindow");
-	for (let k in z) {
-		(function () {
-			const pb = document.createElement("div");
-			const pu = {
-				"position" : "relative",
-			}
-			for (let k in pu) {
-				pb.style[k] = pu[k];
-			}
-			const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-			svg.classList.add("x");
-			let pp;
-			pp = {
-				"width" : 80,
-				"heigth" : 80,
-				"viewBox" : "-50 -50 400 400",
-				"xmlns" : "http://www.w3.org/2000/svg",
-			};
-			for (let k in pp) {
-				svg.setAttribute(k ,pp[k]);
-			}
-			(function () {
-				let gp, gc, xy;
-				gp = document.createElementNS("http://www.w3.org/2000/svg", "g");
-				(function () {
-					let kj, kp;
-					kj = document.createElementNS("http://www.w3.org/2000/svg", "path");
-					let mx = z[k].map(mp => mp.map(mk => mk * 300));
-					kj.setAttribute("d", `m0 300 C ${mx[0][0]} ${300 - mx[0][1]}, ${mx[1][0]} ${300 - mx[1][1]}, 300 0`);
-					const zp = {
-						"fill" : "transparent",
-						"stroke" : "black",
-						"stroke-width" : "10",
-					};
-					for (let k in zp) {
-						kj.style[k] = zp[k];
-					}
-					gp.appendChild(kj);
-				})();
-				gc = document.createElementNS("http://www.w3.org/2000/svg", "g");
-				(function () {
-					xy = [
-						[0, 300],
-						[300, 0],
-					];
-					for (let i = 0; i < 2; i++) {
-						let x, px;
-						x = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-						x.setAttribute("r", 20);
-						x.setAttribute("cx", xy[i][0]);
-						x.setAttribute("cy", xy[i][1]);
-						gc.appendChild(x);
-					}
-				})();
-				svg.appendChild(gp);
-				svg.appendChild(gc);
-			})();
-			const txt = document.createElement("div");
-			txt.textContent = k;
-			const pr = {
-				"position" : "absolute",
-				"display" : "inline-block",
-				"left" : "50%",
-				"bottom" : "10%",
-				"transform" : "translateX(-50%)",
-				"text-align" : "center",
-				"font-size" : "12px",
-				"border" : "1px black solid",
-				"border-radius" : "20px",
-				"background100-color" : "rgba(255, 255, 255, 0.7)",
-				"padding" : "1px 8px",
-				"white-space" : "nowrap",
-			};
-			for (let k in pr) {
-				txt.style[k] = pr[k];
-			}
-			pb.appendChild(svg);
-			pb.appendChild(txt);
-			pb.addEventListener("click", trnsfr);
-			p.appendChild(pb);
-		})();
+	for (let k in templates) {
+		const pb = document.createElement("div");
+		const pu = {
+			"position" : "relative",
+		}
+		for (let k in pu) {
+			pb.style[k] = pu[k];
+		}
+		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+		svg.classList.add("x");
+		let pp;
+		pp = {
+			"width" : 80,
+			"heigth" : 80,
+			"viewBox" : "-50 -50 400 400",
+			"xmlns" : "http://www.w3.org/2000/svg",
+		};
+		for (let k in pp) {
+			svg.setAttribute(k ,pp[k]);
+		}
+		let gp, gc, xy;
+		gp = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		let kj, kp;
+		kj = document.createElementNS("http://www.w3.org/2000/svg", "path");
+		let mx = z[k].map(mp => mp.map(mk => mk * 300));
+		kj.setAttribute("d", `m0 300 C ${mx[0][0]} ${300 - mx[0][1]}, ${mx[1][0]} ${300 - mx[1][1]}, 300 0`);
+		const zp = {
+			"fill" : "transparent",
+			"stroke" : "black",
+			"stroke-width" : "10",
+		};
+		for (let k in zp) {
+			kj.style[k] = zp[k];
+		}
+		gp.appendChild(kj);
+		gc = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		xy = [
+			[0, 300],
+			[300, 0],
+		];
+		for (let i = 0; i < 2; i++) {
+			let x, px;
+			x = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+			x.setAttribute("r", 20);
+			x.setAttribute("cx", xy[i][0]);
+			x.setAttribute("cy", xy[i][1]);
+			gc.appendChild(x);
+		}
+		svg.appendChild(gp);
+		svg.appendChild(gc);
+		const txt = document.createElement("div");
+		txt.textContent = k;
+		const pr = {
+			"position" : "absolute",
+			"display" : "inline-block",
+			"left" : "50%",
+			"bottom" : "10%",
+			"transform" : "translateX(-50%)",
+			"text-align" : "center",
+			"font-size" : "12px",
+			"border" : "1px black solid",
+			"border-radius" : "20px",
+			"background100-color" : "rgba(255, 255, 255, 0.7)",
+			"padding" : "1px 8px",
+			"white-space" : "nowrap",
+		};
+		for (let k in pr) {
+			txt.style[k] = pr[k];
+		}
+		pb.appendChild(svg);
+		pb.appendChild(txt);
+		pb.addEventListener("click", trnsfr);
+		templateWindow.appendChild(pb);
 	}
 }
+putTemplate();
+
 function scrollUp(d) {
 	const positions = [d[0] / 300, 1 - d[1] / 300, d[2] / 300, 1 - d[3] / 300];
 	const bezierPoints = calcBezier(positions);

@@ -42,6 +42,7 @@ const apply = fx => arg => fx(arg);
 const append = ([a, ...b], parent) => (a !== undefined) ? [parent.appendChild(a), append(b, parent)] : [];
 
 const doNtimes = (n, fx, i = 0) => (i < n) ? [fx(i), doNtimes(n, fx, i + 1)] : [];
+const loop = ([a, ...b], fx) => (a !== undefined) ? [fx(a), ]
 
 const round = n => i => Math.round(i * n) / n;
 const round100 = round(100);

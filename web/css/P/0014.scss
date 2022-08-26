@@ -241,7 +241,30 @@
 						height: 50px;
 						border: 1px solid black;
 						margin: 10px 25px;
-						position: relative;
+						position: relative;	
+						.toAnimated, .linearAnimation {
+							background-color: red;
+							animation-duration: 1.5s;
+							animation-delay: 0s;
+							animation-iteration-count: 1;
+							animation-direction: normal;
+							animation-fill-mode: none;
+							animation-play-state: running;
+						}
+						.linearAnimation {
+							background-color: transparent !important;
+						}
+						.onAnimation {
+							animation-name: onAnimation;
+						}
+						@keyframes onAnimation {
+							from {
+								right: 100%;
+							}
+							75%, to {
+								right: 0;
+							}
+						}
 					}
 				}
 			}
@@ -363,32 +386,6 @@
 	}
 }
 
-
-
-
-.v3-ani, .v3-ani_li {
-	background-color: #ff0000;
-	animation-duration: 1.5s;
-	animation-delay: 0s;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-fill-mode: none;
-	animation-play-state: running;
-}
-.v3-ani_li {
-	background-color: transparent !important;
-}
-.v3-aniani {
-	animation-name: v3-aniani;
-}
-@keyframes v3-aniani {
-	from {
-		right: 100%;
-	}
-	75%, to {
-		right: 0;
-	}
-}
 
 .icon {
 	background-color: #FF00FF;
