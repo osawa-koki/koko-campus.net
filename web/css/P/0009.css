@@ -1,0 +1,29 @@
+#tree #canvas {
+  display: block;
+  width: 500px;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px black solid;
+  margin: 50px auto;
+}
+#tree #button {
+  display: block;
+  padding: 5px;
+  width: 120px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: lightblue;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#tree #button:hover {
+  color: white;
+  background-color: blue;
+}
+#tree table {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+#tree table th, #tree table td {
+  padding: 5px 10px;
+}

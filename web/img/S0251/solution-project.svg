@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg20"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="solution-project.svg"
+   inkscape:export-filename="solution-project.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.73851712"
+     inkscape:cx="226.12881"
+     inkscape:cy="345.28651"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.984749;fill:none;stroke:#ff0000;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect287"
+       width="530.7934"
+       height="308.72678"
+       x="39.267879"
+       y="44.684135" />
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';opacity:0.984749;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       x="172.10219"
+       y="90.722343"
+       id="text1158"><tspan
+         sodipodi:role="line"
+         id="tspan1156"
+         x="172.10219"
+         y="90.722343">ソリューション</tspan></text>
+    <g
+       id="g2548"
+       transform="translate(20.310971,0.67702735)">
+      <text
+         xml:space="preserve"
+         style="font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';opacity:0.984749;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+         x="53.553635"
+         y="189.56908"
+         id="text1684"><tspan
+           sodipodi:role="line"
+           id="tspan1682"
+           x="53.553635"
+           y="189.56908">プロジェクト</tspan></text>
+      <rect
+         style="opacity:0.984749;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2.94879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2144"
+         width="151.70647"
+         height="159.83086"
+         x="41.950405"
+         y="148.92152" />
+    </g>
+    <g
+       id="g2548-6"
+       transform="translate(188.21499,0.67702735)">
+      <text
+         xml:space="preserve"
+         style="font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';opacity:0.984749;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+         x="53.553635"
+         y="189.56908"
+         id="text1684-9"><tspan
+           sodipodi:role="line"
+           id="tspan1682-5"
+           x="53.553635"
+           y="189.56908">プロジェクト</tspan></text>
+      <rect
+         style="opacity:0.984749;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2.94879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2144-0"
+         width="151.70647"
+         height="159.83086"
+         x="41.950405"
+         y="148.92152" />
+    </g>
+    <g
+       id="g2548-7"
+       transform="translate(356.11902,0.67702745)">
+      <text
+         xml:space="preserve"
+         style="font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';opacity:0.984749;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+         x="53.553635"
+         y="189.56908"
+         id="text1684-7"><tspan
+           sodipodi:role="line"
+           id="tspan1682-53"
+           x="53.553635"
+           y="189.56908">プロジェクト</tspan></text>
+      <rect
+         style="opacity:0.984749;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2.94879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2144-7"
+         width="151.70647"
+         height="159.83086"
+         x="41.950405"
+         y="148.92152" />
+    </g>
+  </g>
+</svg>

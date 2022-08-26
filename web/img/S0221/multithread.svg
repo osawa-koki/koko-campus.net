@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="マルチスレッド処理.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\go入門\pics\マルチスレッド処理.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="454.607140831946"
+         inkscape:cy="513.93270613113"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter16325"
+             x="-0.0264176791919179"
+             y="-0.030504508385638"
+             width="1.05283535838384"
+             height="1.06100901677128">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.14890771037186"
+                 id="feGaussianBlur16327" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter16325-6"
+             x="-0.0264176791919179"
+             y="-0.030504508385638"
+             width="1.05283535838384"
+             height="1.06100901677128">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.14890771037186"
+                 id="feGaussianBlur16327-0" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter21163"
+             x="-0.0180366575119127"
+             y="-0.0785220598014726"
+             width="1.03613328398406"
+             height="1.14639116392686">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="1.04596968060242"
+                 id="feGaussianBlur21165" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter21367"
+             x="-0.112752154017772"
+             y="-0.111147054946966"
+             width="1.28774290798777"
+             height="1.30976258317692">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.944928473017631"
+                 id="feGaussianBlur21369" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter24215"
+             x="-0.00590814200633466"
+             y="-0.112085829263754"
+             width="1.01174377513714"
+             height="1.22658400303338">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="1.10752965729579"
+                 id="feGaussianBlur24217" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter21367-2"
+             x="-0.112752154017771"
+             y="-0.111147054946966"
+             width="1.28774290798777"
+             height="1.30976258317692">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.944928473017631"
+                 id="feGaussianBlur21369-1" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.166937;fill:#0000ff;stroke:#000000;stroke-width:0.594565;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-3-1"
+             width="174.40544128418"
+             height="49.4054374694824"
+             x="383.42333984375"
+             y="651.205139160156" />
+        <rect
+             style="opacity:0.166937;fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.55063;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-5-8"
+             width="149.449371337891"
+             height="49.4493713378906"
+             x="233.952011108398"
+             y="651.183166503906" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;mix-blend-mode:normal;fill:#ff9392;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter16325-6);stop-color:#000000"
+             id="path16189-8"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="182.64274597168"
+             sodipodi:cy="199.973815917969"
+             sodipodi:r1="217.615447998047"
+             sodipodi:r2="108.807723999023"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             transform="matrix(0,0.042913620340198,-1.03095878107892,0,557.568444179563,666.664737015844)"
+             inkscape:transform-center-x="-56.0881411724685"
+             d="m 371.10325219392,308.781539916992 h -376.92101244448036 l 188.46050622224038,-326.4231719970701 z" />
+        <rect
+             style="opacity:0.166937;fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:0.635424;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843"
+             width="199.36457824707"
+             height="49.3645782470703"
+             x="34.6298408508301"
+             y="89.2893524169922" />
+        <rect
+             style="opacity:0.166937;fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.55063;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-5"
+             width="149.449371337891"
+             height="49.4493713378906"
+             x="233.952011108398"
+             y="89.246955871582" />
+        <rect
+             style="opacity:0.166937;fill:#0000ff;stroke:#000000;stroke-width:0.594565;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-3"
+             width="174.40544128418"
+             height="49.4054374694824"
+             x="383.42333984375"
+             y="89.2689208984375" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;mix-blend-mode:normal;fill:#ff9392;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter16325);stop-color:#000000"
+             id="path16189"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="182.64274597168"
+             sodipodi:cy="199.973815917969"
+             sodipodi:r1="217.615447998047"
+             sodipodi:r2="108.807723999023"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 371.10325219392,308.781539916992 h -376.92101244448036 l 188.46050622224038,-326.4231719970701 z"
+             transform="matrix(0,0.042913620340198,-1.65774505383187,0,551.085026432022,105.431059439918)"
+             inkscape:transform-center-x="-90.1877362254763" />
+        <rect
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#555453;stroke-width:0.522045;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect15828"
+             width="573.232971191406"
+             height="209.280624389648"
+             x="16.0105628967285"
+             y="14.6774044036865" />
+        <rect
+             style="fill:none;fill-opacity:1;stroke:#555453;stroke-width:0.491523;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect15828-6"
+             width="573.162719726562"
+             height="267.869354248047"
+             x="16.0456409454346"
+             y="252.684127807617" />
+        <rect
+             style="opacity:0.166937;fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:0.635424;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-7"
+             width="199.36457824707"
+             height="49.3645782470703"
+             x="34.6298408508301"
+             y="651.225524902344" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="99.9869079589844"
+             y="685.253662109375"
+             id="text3379-25"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377-1"
+                 x="99.9869079589844"
+                 y="685.253662109375">処理A</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="436.986206054688"
+             y="685.253662109375"
+             id="text3379-7-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377-7-8"
+                 x="436.986206054688"
+                 y="685.253662109375">処理C</tspan></text>
+        <g
+             id="g16116"
+             transform="translate(0.257849117946876,-12)">
+            <g
+                 id="g7086-2"
+                 transform="translate(-0.257849117946876,249.980703877561)">
+                <rect
+                     style="opacity:0.166937;fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:0.635424;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+                     id="rect843-33"
+                     width="199.36457824707"
+                     height="49.3645782470703"
+                     x="34.6298408508301"
+                     y="89.2893524169922" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="99.9869079589844"
+                     y="123.317451477051"
+                     id="text3379-1"><tspan
+                         sodipodi:role="line"
+                         id="tspan3377-3"
+                         x="99.9869079589844"
+                         y="123.317451477051">処理A</tspan></text>
+            </g>
+            <g
+                 id="g7081-5"
+                 transform="translate(-199.580019375515,309.387678670042)">
+                <rect
+                     style="opacity:0.166937;fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.55063;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+                     id="rect843-5-0"
+                     width="149.449371337891"
+                     height="49.4493713378906"
+                     x="233.952011108398"
+                     y="89.246955871582" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="275.674011230469"
+                     y="123.317451477051"
+                     id="text3379-2-2"><tspan
+                         sodipodi:role="line"
+                         id="tspan3377-0-3"
+                         x="275.674011230469"
+                         y="123.317451477051">処理B</tspan></text>
+            </g>
+            <g
+                 id="g7076-6"
+                 transform="translate(-349.051348110867,368.815077351683)">
+                <rect
+                     style="opacity:0.166937;fill:#0000ff;stroke:#000000;stroke-width:0.594565;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.734657;paint-order:markers stroke fill;stop-color:#000000"
+                     id="rect843-3-9"
+                     width="174.40544128418"
+                     height="49.4054374694824"
+                     x="383.42333984375"
+                     y="89.2689208984375" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="436.986206054688"
+                     y="123.317451477051"
+                     id="text3379-7-1"><tspan
+                         sodipodi:role="line"
+                         id="tspan3377-7-9"
+                         x="436.986206054688"
+                         y="123.317451477051">処理C</tspan></text>
+            </g>
+        </g>
+        <rect
+             style="fill:none;fill-opacity:1;stroke:#555453;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect15828-9"
+             width="573.203002929688"
+             height="234.432830810547"
+             x="16.1014671325684"
+             y="549.208618164062" />
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="41.079044342041"
+             y="57.3258285522461"
+             id="text9262"><tspan
+                 sodipodi:role="line"
+                 id="tspan9260"
+                 x="41.079044342041"
+                 y="57.3258285522461">シングルスレッド処理(同期)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="41.079044342041"
+             y="591.675170898438"
+             id="text9262-6"><tspan
+                 sodipodi:role="line"
+                 id="tspan9260-3"
+                 x="41.079044342041"
+                 y="591.675170898438">シングルスレッド処理(非同期)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="41.860294342041"
+             y="298.385986328125"
+             id="text9262-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan9260-1"
+                 x="41.860294342041"
+                 y="298.385986328125">マルチスレッド処理</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="221.97119140625"
+             y="165.310638427734"
+             id="text17931"><tspan
+                 sodipodi:role="line"
+                 id="tspan17929"
+                 x="221.97119140625"
+                 y="165.310638427734">※上から順に実行するため、</tspan><tspan
+                 sodipodi:role="line"
+                 x="221.97119140625"
+                 y="189.911224365234"
+                 id="tspan17933">  時間がかかる処理があるとそこで</tspan><tspan
+                 sodipodi:role="line"
+                 x="221.97119140625"
+                 y="214.511810302734"
+                 id="tspan17935">  ストップしてしまう、、、</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="283.820922851562"
+             y="487.065002441406"
+             id="text17931-9"><tspan
+                 sodipodi:role="line"
+                 x="283.820922851562"
+                 y="487.065002441406"
+                 id="tspan17935-6">※複数の処理を並列して実行</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="436.986206054688"
+             y="123.317451477051"
+             id="text3379-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377-7"
+                 x="436.986206054688"
+                 y="123.317451477051">処理C</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="275.674011230469"
+             y="123.317451477051"
+             id="text3379-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377-0"
+                 x="275.674011230469"
+                 y="123.317451477051">処理B</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="99.9869079589844"
+             y="123.317451477051"
+             id="text3379"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377"
+                 x="99.9869079589844"
+                 y="123.317451477051">処理A</tspan></text>
+        <path
+             style="fill:none;stroke:#ffadad;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter21163)"
+             d="m 28.7519110426149,675.918408571053 c 51.5520774063005,-65.586080097658 151.4640822950701,-69.441820505501 204.5627769261451,-9e-12"
+             id="path20781"
+             sodipodi:nodetypes="cc" />
+        <path
+             style="opacity:0.78282;mix-blend-mode:normal;fill:none;stroke:#ffaaa9;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter21367)"
+             d="m 208.569190870001,666.727224249507 c 0,0 24.745497098759,9.191184321537 24.745497098759,9.191184321537 l -5.18477072338,-23.331468448317"
+             id="path21200" />
+        <path
+             style="opacity:0.78282;fill:none;stroke:#ffaaa9;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter21367-2)"
+             d="m 87.488878019902,718.48440589741 c 0,0 24.745497098759,9.191184321537 24.745497098759,9.191184321537 l -5.18477072338,-23.331468448317"
+             id="path21200-4"
+             transform="rotate(150.824546674041,78.4938087244145,700.573620521515)" />
+        <path
+             style="opacity:0.962723;mix-blend-mode:normal;fill:none;stroke:#ffaeb0;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter24215)"
+             d="m 577.866277371259,693.358091948152 c -133.691279129528,47.810447354664 -416.169148057182,49.027496547227 -542.0442242879239,-6e-12"
+             id="path21550"
+             sodipodi:nodetypes="cc" />
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="198.906661987305"
+             y="631.140869140625"
+             id="text22767"><tspan
+                 sodipodi:role="line"
+                 id="tspan22765"
+                 x="198.906661987305"
+                 y="631.140869140625">※時間がかかる処理は一旦スキップ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="263.480621337891"
+             y="752.275939941406"
+             id="text25689"><tspan
+                 sodipodi:role="line"
+                 id="tspan25687"
+                 x="263.480621337891"
+                 y="752.275939941406">※ループをして条件を満たしていたら</tspan><tspan
+                 sodipodi:role="line"
+                 x="263.480621337891"
+                 y="776.876525878906"
+                 id="tspan25691">  スキップした処理を実行</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="275.674011230469"
+             y="685.253662109375"
+             id="text3379-2-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan3377-0-1"
+                 x="275.674011230469"
+                 y="685.253662109375">処理B</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,373 @@
+@charset "UTF-8";
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
+}
+
+/**/
+#subjectIndexBox {
+  border: 1px solid fuchsia;
+  margin: 0 auto 100px auto;
+  max-width: 400px;
+  text-align: center;
+  padding: 25px 0;
+}
+#subjectIndexBox div.indexTitle {
+  font-size: 16px;
+  margin: 10px 0;
+}
+#subjectIndexBox ul {
+  display: inline-block;
+  text-align: left;
+  margin-left: 35px;
+  margin-right: 20px;
+}
+#subjectIndexBox ul li {
+  cursor: pointer;
+}
+#subjectIndexBox ul li:hover {
+  color: red;
+  text-decoration: underline;
+  -webkit-text-decoration-color: grey;
+          text-decoration-color: grey;
+}
+
+/**/
+main h1:not(.x), main h2:not(.x), main h3:not(.x), main h4:not(.x), main h5:not(.x), main h6:not(.x) {
+  padding-left: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+main h1:not(.x) {
+  font-size: 28px;
+  border-left: 7px double green;
+  letter-spacing: 3.5px;
+  margin-bottom: 50px;
+}
+main h2:not(.x) {
+  font-size: 25px;
+  border-left: 6px solid red;
+  letter-spacing: 3px;
+}
+main div.separator-h2:not(.x) {
+  height: 3px;
+  background-color: lightgrey;
+  margin-top: 30px;
+  letter-spacing: 2.5px;
+}
+main h3:not(.x) {
+  font-size: 23px;
+  border-left: 5px solid blue;
+  letter-spacing: 2px;
+}
+main h4:not(.x) {
+  font-size: 21px;
+  border-left: 4px solid lime;
+  letter-spacing: 1.5px;
+}
+main h5:not(.x) {
+  font-size: 19px;
+  border-left: 3px solid orange;
+  letter-spacing: 1px;
+}
+main h6:not(.x) {
+  font-size: 17px;
+  border-left: 2px solid yellow;
+  letter-spacing: 1px;
+}
+
+/**/
+noscript {
+  margin: 30px auto;
+}
+
+/**/
+#subjectMainBox table:not(.x) {
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+#subjectMainBox table:not(.x) th, #subjectMainBox table:not(.x) td {
+  padding: 10px 15px;
+  background-color: white;
+  word-break: break-word;
+}
+#subjectMainBox table:not(.x) thead th {
+  background-color: lightgray;
+}
+#subjectMainBox ul:not(.x), #subjectMainBox ol:not(.x) {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 20px 20px 20px 40px;
+  margin: 25px 0;
+}
+#subjectMainBox ul.n, #subjectMainBox ol.n, #subjectMainBox table ul, #subjectMainBox table ol {
+  display: block !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 10px 10px 10px 40px !important;
+}
+#subjectMainBox a.link {
+  display: block;
+  max-width: 300px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  margin: 50px 0;
+  padding: 0 25px;
+  height: 75px;
+  line-height: 75px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#subjectMainBox a.linkProgram {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 50px 0;
+  cursor: pointer;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#subjectMainBox a.linkSubject {
+  display: block;
+  width: 150px;
+  height: 75px;
+  border: 1px solid black;
+  margin: 50px 0;
+  cursor: pointer;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#subjectMainBox div.subjectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+#subjectMainBox div.subjectsContainer a {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+#subjectMainBox div.bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#subjectMainBox img:not(.x) {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 25px 0;
+  background-color: white;
+  cursor: pointer;
+}
+#subjectMainBox *.max-300w {
+  max-width: 300px;
+}
+#subjectMainBox *.max-400w {
+  max-width: 400px;
+}
+#subjectMainBox *.max-500w {
+  max-width: 500px;
+}
+#subjectMainBox *.no-max {
+  max-width: none !important;
+}
+#subjectMainBox p:not(.x) {
+  text-indent: -1rem;
+  margin: 10px 1rem;
+  font-size: 0.95rem;
+}
+#subjectMainBox p:not(.x) + #subjectMainBox p:not(.x) {
+  margin-top: 0 !important;
+}
+#subjectMainBox p:not(.x)::before {
+  content: "※";
+}
+#subjectMainBox div.result {
+  position: relative;
+  border-width: 1px 1px 1px 7px;
+  border-style: solid;
+  border-color: black black black blue;
+  padding: 50px 25px 25px 25px;
+  margin: 30px 0;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 800px;
+}
+#subjectMainBox div.result::before {
+  content: "結果";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 10px;
+  background-color: aqua;
+}
+#subjectMainBox div.quote {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid black;
+  background-color: rgba(255, 200, 200, 0.1);
+}
+#subjectMainBox div.quote div:nth-of-type(1) {
+  border-bottom: 1px dotted black;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#subjectMainBox div.column {
+  margin: 30px 0;
+  padding: 25px;
+  border: 1px solid black;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+#subjectMainBox div.scroll-600w {
+  overflow-x: auto;
+}
+#subjectMainBox div.scroll-600w table {
+  min-width: 600px;
+}
+#subjectMainBox .border {
+  border: 1px solid black;
+}
+#subjectMainBox div.solution {
+  margin: 25px 0;
+  padding: 25px;
+  max-width: 500px;
+  overflow-x: auto;
+  border: 1px dotted black;
+  white-space: nowrap;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
+}
+#subjectMainBox span.cancel {
+  text-decoration: line-through;
+}
+#subjectMainBox div.separator {
+  height: 1px;
+  background-color: lightgrey;
+  margin: 15px 0;
+}
+#subjectMainBox div.separator2 {
+  height: 2px;
+  background-color: grey;
+  margin: 15px 0;
+}
+#subjectMainBox img.絵文字 {
+  display: inline;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+#subjectMainBox .en {
+  font-family: "consolas", "code";
+}
+#subjectMainBox .ja {
+  font-family: "kyokasho";
+}
+#subjectMainBox .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#subjectMainBox .r-border {
+  margin: 25px 0;
+  padding: 25px;
+  border: 1px black solid;
+  border-radius: 25px;
+  background-color: white;
+}
+#subjectMainBox div.superSeparator {
+  height: 2px;
+  background-color: black;
+  margin: 15px 0;
+  padding: 0;
+  border: none;
+}
+#subjectMainBox .title {
+  font-size: 1.2rem;
+  border-bottom: 1px black solid;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+#subjectMainBox .button {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: rgba(255, 0, 0, 0.3);
+  margin: 25px 0;
+  cursor: pointer;
+}
+#subjectMainBox .button:hover {
+  background-color: red;
+  color: white;
+}
+#subjectMainBox div.how {
+  background-color: rgba(0, 255, 0, 0.15);
+  margin: 25px 0;
+  border: 1px grey solid;
+  padding: 25px;
+}
+#subjectMainBox .explanation {
+  margin: 25px 0;
+  padding: 25px;
+  border: 1px black solid;
+  background-color: #CCFFFF;
+  text-indent: 0;
+  font-size: 1rem;
+}
+#subjectMainBox .explanation:before {
+  content: "";
+}
+#subjectMainBox div.exam {
+  font-size: 0.95rem;
+  margin: 25px 0;
+  padding: 1rem;
+  border: 1px grey solid;
+  background-color: rgb(240, 240, 240);
+}
+#subjectMainBox #message {
+  border: 1px solid black;
+  border-radius: 25px;
+  margin: 0 0 50px 0;
+  padding: 25px;
+  text-indent: 0;
+  font-size: 1rem;
+}
+#subjectMainBox #message:before {
+  content: "";
+}
+#subjectMainBox svg {
+  display: block;
+  width: 100%;
+  background-color: white;
+  margin: 25px 0;
+}
+#subjectMainBox .margin {
+  margin: 25px 0;
+}
+#subjectMainBox .center {
+  text-align: center;
+}
+#subjectMainBox span.underline {
+  -webkit-text-decoration-color: orange;
+          text-decoration-color: orange;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+}
+#subjectMainBox .nowrap {
+  white-space: nowrap;
+  word-break: normal;
+}

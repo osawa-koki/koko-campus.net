@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400"
+   version="1.1"
+   id="svg20"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="UPDATE.svg"
+   inkscape:export-filename="UPDATE.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.4770342"
+     inkscape:cx="151.65526"
+     inkscape:cy="226.80585"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1065"
+       x="-0.030072608"
+       y="-0.09903788"
+       width="1.0601452"
+       height="1.1980758">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2408394"
+         id="feGaussianBlur1067" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1280"
+       x="-0.038489884"
+       y="-0.10949725"
+       width="1.0769798"
+       height="1.2189945">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.5715463"
+         id="feGaussianBlur1282" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2015"
+       x="-0.034616509"
+       y="-0.069146485"
+       width="1.069233"
+       height="1.138293">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.0662752"
+         id="feGaussianBlur2017" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3300"
+       x="-0.016736215"
+       y="-0.96024041"
+       width="1.0334724"
+       height="2.9204808">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1670461"
+         id="feGaussianBlur3302" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3300-2"
+       x="-0.016736215"
+       y="-0.96024041"
+       width="1.0334724"
+       height="2.9204808">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1670461"
+         id="feGaussianBlur3302-8" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3300-2-9"
+       x="-0.016736215"
+       y="-0.96024041"
+       width="1.0334724"
+       height="2.9204808">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1670461"
+         id="feGaussianBlur3302-8-0" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.986928;fill:#00ff00;fill-opacity:0.99215686;filter:url(#filter3300)"
+       id="rect2608"
+       width="310.75787"
+       height="5.4162588"
+       x="29.112392"
+       y="123.21989" />
+    <rect
+       style="opacity:0.986928;fill:#ffff00;fill-opacity:0.984314;filter:url(#filter3300-2)"
+       id="rect2608-7"
+       width="310.75787"
+       height="5.4162588"
+       x="30.804968"
+       y="192.27719"
+       transform="matrix(0.73227303,0,0,1,5.1623212,0)" />
+    <rect
+       style="opacity:0.986928;fill:#ff9400;fill-opacity:0.694118;filter:url(#filter3300-2-9)"
+       id="rect2608-7-4"
+       width="310.75787"
+       height="5.4162588"
+       x="30.804968"
+       y="192.27719"
+       transform="matrix(0.536221,0,0,1,10.182049,68.380274)" />
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#000000"
+       x="41.976009"
+       y="123.21989"
+       id="text237"><tspan
+         sodipodi:role="line"
+         x="41.976009"
+         y="123.21989"
+         id="tspan239">UPDATE テーブル名</tspan><tspan
+         sodipodi:role="line"
+         x="41.976009"
+         y="156.55327"
+         id="tspan243" /><tspan
+         sodipodi:role="line"
+         x="41.976009"
+         y="192.99863"
+         id="tspan245">SET 列名 = 値</tspan><tspan
+         sodipodi:role="line"
+         x="41.976009"
+         y="226.332"
+         id="tspan247" /><tspan
+         sodipodi:role="line"
+         x="41.976009"
+         y="262.77734"
+         id="tspan249">WHERE 条件</tspan></text>
+    <path
+       id="path411"
+       d="m 575.47752,58.90182 c 0,21.68705 -48.19572,39.267876 -107.64815,39.267876 -37.71878,0 -70.90662,-7.076447 -90.13055,-17.788379 -4.28856,-2.389667 -57.98258,11.627032 -60.77654,8.913715 -2.39071,-2.321708 45.90447,-21.335208 44.75036,-23.841979 -0.98085,-2.13045 -1.49142,-4.319092 -1.49142,-6.551233 0,-21.687051 48.19572,-39.26788 107.64815,-39.26788 59.45243,0 107.64815,17.580829 107.64815,39.26788 z"
+       sodipodi:nodetypes="ssssssss"
+       style="fill:#00ff00;fill-opacity:1;filter:url(#filter1065)"
+       transform="matrix(1,0,0,1.194277,0,-12.45882)" />
+    <path
+       id="path1121"
+       style="fill:#ffff00;filter:url(#filter1280)"
+       d="m 537.56372,240.34649 c 10e-6,27.66969 -50.4691,50.1004 -112.72589,50.1004 -62.25679,0 -112.7259,-22.43071 -112.72589,-50.1004 0,-0.9724 0.0623,-1.93833 0.18532,-2.89704 0.32128,-2.50453 -60.89197,-26.96337 -59.77277,-29.3561 1.21966,-2.60748 74.32225,8.73848 76.41521,6.29679 16.1709,-18.86537 47.77353,-24.14404 95.89813,-24.14404 62.25679,0 112.72588,22.43071 112.72589,50.10039 z"
+       sodipodi:nodetypes="ssssssss" />
+    <path
+       id="path1284"
+       style="opacity:0.69281;fill:#ff9500;filter:url(#filter2015)"
+       d="m 341.22432,348.33316 c 0,24.1175 -47.58948,43.66859 -106.29408,43.66859 -58.70461,0 -106.29409,-19.55109 -106.29409,-43.66859 0,-6.04316 9.75828,-14.50775 15.16038,-19.74175 4.35601,-4.22047 -10.02925,-39.24473 -2.83471,-42.66219 8.32968,-3.95667 21.74535,26.55933 33.00974,24.03657 15.09348,-3.38032 42.55779,-5.30122 60.95868,-5.30122 58.7046,0 106.29408,19.55109 106.29408,43.66859 z"
+       sodipodi:nodetypes="ssssssss"
+       transform="matrix(1.0670632,0,0,1.0670632,-23.027944,-26.782419)" />
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:Consolas;-inkscape-font-specification:Consolas;opacity:0.986928;fill:#000000;fill-opacity:1"
+       x="375.75296"
+       y="53.485558"
+       id="text2142"><tspan
+         sodipodi:role="line"
+         x="375.75296"
+         y="53.485558"
+         id="tspan2404">更新対象のテーブル名</tspan><tspan
+         sodipodi:role="line"
+         x="375.75296"
+         y="78.997322"
+         id="tspan374">を指定します。</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:Consolas;-inkscape-font-specification:Consolas;opacity:0.986928;fill:#000000;fill-opacity:1"
+       x="344.60947"
+       y="233.57617"
+       id="text2458"><tspan
+         sodipodi:role="line"
+         x="344.60947"
+         y="233.57617"
+         id="tspan2464">更新対象の列に値を</tspan><tspan
+         sodipodi:role="line"
+         x="344.60947"
+         y="259.08795"
+         id="tspan438">セットします。</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:Consolas;-inkscape-font-specification:Consolas;opacity:0.986928;fill:#000000;fill-opacity:1"
+       x="159.10262"
+       y="337.16211"
+       id="text2468"><tspan
+         sodipodi:role="line"
+         id="tspan2466"
+         x="159.10262"
+         y="337.16211">更新する行の</tspan><tspan
+         sodipodi:role="line"
+         x="159.10262"
+         y="362.67389"
+         id="tspan2470">条件を課します。</tspan></text>
+  </g>
+</svg>

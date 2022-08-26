@@ -1,11 +1,10 @@
 package main
 
-import "net/http"
-
-func subjectsAPI(r *http.Request) string {
+func subjectsAPI(RR *RequestResponse) string {
 	var answer string
 	var success bool = false
 	var errorMessage []string = []string{}
+	r := RR.request
 
 	switch r.PostFormValue("action") {
 	case "getPages":
@@ -48,7 +47,8 @@ func subjectsAPI(r *http.Request) string {
 			answer = jsonEncode(jsonStruct)
 
 		}
-
+	case "notes":
+		answer = notesAPI(RR)
 	}
 
 	return answer

@@ -1,0 +1,27 @@
+#sierpinskiGasket canvas {
+  display: block;
+  margin: 50px auto;
+  border: 1px black solid;
+  width: 500px;
+  max-width: 100%;
+}
+#sierpinskiGasket #button {
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  border: 1px black solid;
+  background-color: lightblue;
+  cursor: pointer;
+}
+#sierpinskiGasket #button:hover {
+  color: white;
+  background-color: blue;
+}
+#sierpinskiGasket table {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+#sierpinskiGasket table th, #sierpinskiGasket table td {
+  padding: 5px 10px;
+}

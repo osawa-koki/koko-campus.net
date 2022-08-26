@@ -1,0 +1,299 @@
+#manageBookmarkBox {
+  margin-bottom: 100px;
+}
+#manageBookmarkBox #bookmarkedBox {
+  display: grid;
+  gap: 10px;
+}
+@media screen and (max-width: 500px) {
+  #manageBookmarkBox #bookmarkedBox {
+    font-size: 13px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  #manageBookmarkBox #bookmarkedBox {
+    font-size: 14px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1001px) {
+  #manageBookmarkBox #bookmarkedBox {
+    font-size: 15px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem {
+  position: relative;
+  border: 1px black solid;
+  display: grid;
+}
+@media screen and (max-width: 500px) {
+  #manageBookmarkBox #bookmarkedBox .bookmarkedItem {
+    height: 60px;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  #manageBookmarkBox #bookmarkedBox .bookmarkedItem {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  #manageBookmarkBox #bookmarkedBox .bookmarkedItem {
+    height: 100px;
+  }
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toPage {
+  grid-template-rows: 1.1fr 1fr 0.9fr;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toPage * {
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toPage .subject {
+  font-weight: bold;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson {
+  grid-template-rows: 2fr 1.5fr;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson * {
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson .subject {
+  font-weight: bold;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toLesson .lesson {
+  font-weight: normal;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem.toSubject {
+  grid-template-rows: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem .star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  fill: yellow;
+  stroke: black;
+  -webkit-animation: shining 3s ease 0s infinite normal none running;
+          animation: shining 3s ease 0s infinite normal none running;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  #manageBookmarkBox #bookmarkedBox .bookmarkedItem .star {
+    width: 20px;
+    height: 20px;
+  }
+}
+@-webkit-keyframes shining {
+  from {
+    fill: yellow;
+  }
+  15% {
+    fill: rgba(255, 165, 0, 0.8);
+  }
+  30% {
+    fill: yellow;
+  }
+}
+@keyframes shining {
+  from {
+    fill: yellow;
+  }
+  15% {
+    fill: rgba(255, 165, 0, 0.8);
+  }
+  30% {
+    fill: yellow;
+  }
+}
+#manageBookmarkBox #bookmarkedBox .bookmarkedItem .star.off {
+  fill: lightgray;
+  -webkit-animation: none;
+          animation: none;
+}
+#manageBookmarkBox #subjectsSuggestionForBookmark {
+  margin: 50px 0;
+  overflow-y: auto;
+}
+@media screen and (max-width: 500px) {
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: 30px;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab #SLPtabSubject {
+    color: white;
+    background-color: blue;
+    border-color: blue;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab #SLPtabLesson {
+    background-color: yellow;
+    border-color: yellow;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab #SLPtabPage {
+    color: white;
+    background-color: red;
+    border-color: red;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage {
+    overflow-y: auto;
+    display: none;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject.on, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson.on, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage.on {
+    display: block;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject {
+    background-color: rgba(0, 0, 255, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage {
+    height: 250px;
+    border: 1px gray solid;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject div, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson div, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage div {
+    padding: 3px;
+    text-align: center;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark .usedJustOnceLesson, #manageBookmarkBox #subjectsSuggestionForBookmark .usedJustOncePage {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+  }
+}
+@media screen and (min-width: 501px) {
+  #manageBookmarkBox #subjectsSuggestionForBookmark {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 300px;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #SLPtab {
+    display: none;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject {
+    background-color: rgba(0, 0, 255, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage {
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage {
+    overflow-y: auto;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject div, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson div, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage div {
+    padding: 3px;
+    text-align: center;
+    cursor: pointer;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject div:hover, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson div:hover, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage div:hover {
+    border: 3px black double;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnSubject::-webkit-scrollbar, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnLesson::-webkit-scrollbar, #manageBookmarkBox #subjectsSuggestionForBookmark #bookmarkOnPage::-webkit-scrollbar {
+    width: 0;
+  }
+  #manageBookmarkBox #subjectsSuggestionForBookmark .usedJustOnceLesson, #manageBookmarkBox #subjectsSuggestionForBookmark .usedJustOncePage {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50%;
+  }
+}
+#manageBookmarkBox #currentBookmarkingBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  max-width: 100%;
+  color: white;
+  background-color: black;
+}
+#manageBookmarkBox #currentBookmarkingBox #bookmarkingSubject {
+  font-size: 1.05em;
+  font-weight: bold;
+}
+#manageBookmarkBox #currentBookmarkingBox #bookmarkingSubject, #manageBookmarkBox #currentBookmarkingBox #bookmarkingLesson, #manageBookmarkBox #currentBookmarkingBox #bookmarkingPage {
+  padding: 5px 10px;
+  text-align: center;
+}
+#manageBookmarkBox #currentBookmarkingBox .star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  fill: yellow;
+  stroke: black;
+  -webkit-animation: rotater 3s ease 0s infinite normal none running;
+          animation: rotater 3s ease 0s infinite normal none running;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  #manageBookmarkBox #currentBookmarkingBox .star {
+    width: 20px;
+    height: 20px;
+  }
+}
+@-webkit-keyframes rotater {
+  from {
+    fill: yellow;
+  }
+  15% {
+    fill: rgba(255, 165, 0, 0.8);
+    transform: rotate(0deg);
+  }
+  30% {
+    fill: yellow;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotater {
+  from {
+    fill: yellow;
+  }
+  15% {
+    fill: rgba(255, 165, 0, 0.8);
+    transform: rotate(0deg);
+  }
+  30% {
+    fill: yellow;
+    transform: rotate(360deg);
+  }
+}
+#manageBookmarkBox #currentBookmarkingBox .star.off {
+  fill: lightgray;
+  -webkit-animation: none;
+          animation: none;
+}

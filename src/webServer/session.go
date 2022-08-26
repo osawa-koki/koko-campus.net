@@ -2,7 +2,6 @@ package main
 
 import (
 	"crypto/rand"
-	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
@@ -28,10 +27,15 @@ func setCookieANDredirect(RR *RequestResponse) {
 		Path:     "/",
 		Secure:   true, // 一時的な対応
 		HttpOnly: true,
+		SameSite: http.SameSiteStrictMode,
 	}
 	if SessionAdd(cookieValue, RR.request) {
 		http.SetCookie(*RR.response, cookie)
-		http.Redirect(*RR.response, RR.request, fmt.Sprint(RR.request.URL), http.StatusFound)
+		if RR.NeedToLogin {
+			http.Redirect(*RR.response, RR.request, "/R03", http.StatusFound)
+		} else {
+			pageController(RR)
+		}
 	} else {
 		Error("cookieの追加に失敗しました。")
 		(*RR.response).WriteHeader(http.StatusInternalServerError)

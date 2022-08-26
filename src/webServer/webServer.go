@@ -9,13 +9,14 @@ import (
 )
 
 type RequestResponse struct {
-	request  *http.Request
-	response *http.ResponseWriter
-	snd      string
-	path     string
-	Login    bool
-	userID   string
-	Name     string
+	request     *http.Request
+	response    *http.ResponseWriter
+	snd         string
+	path        string
+	Login       bool
+	NeedToLogin bool
+	userID      string
+	Name        string
 }
 
 func setResponseHeaders(w *http.ResponseWriter) {
@@ -32,13 +33,14 @@ func setResponseHeadersSecurity(w *http.ResponseWriter) {
 func controller(w http.ResponseWriter, r *http.Request) {
 	path, _ := url.QueryUnescape(fmt.Sprint((*r).URL))
 	RR := RequestResponse{
-		request: r,
-		response: &w,
-		snd: strIndex(path, 1),
-		path: r.URL.Path,
-		Login: false,
-		userID: "",
-		Name: "ゲスト",
+		request:     r,
+		response:    &w,
+		snd:         strIndex(path, 1),
+		path:        r.URL.Path,
+		Login:       false,
+		NeedToLogin: false,
+		userID:      "",
+		Name:        "ゲスト",
 	}
 
 	setResponseHeaders(&w)
@@ -65,6 +67,10 @@ func controller(w http.ResponseWriter, r *http.Request) {
 	} else {
 		// セッションが必要なページ
 		RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
+
+		if (RR.snd == "M") {
+			RR.NeedToLogin = true;
+		}
 		sessionController(&RR)
 	}
 }
@@ -74,7 +80,20 @@ func main() {
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
-	if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
-		Error("ListenAndServeに失敗")
+
+	if os.Getenv("DEBUG") == "ON" {
+		fmt.Println("DEBUG MODE")
+		if er := http.ListenAndServe("", nil); er != nil {
+			Error("failure on ListenAndServe")
+			fmt.Println("failure on ListenAndServe")
+		}
+	} else {
+		fmt.Println("OPERATION MODE")
+		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
+			fmt.Println("failure on ListenAndServe")
+			Error("failure on ListenAndServe")
+		} else {
+			fmt.Println("success on ListenAndServe")
+		}
 	}
 }

@@ -122,6 +122,8 @@ func mypageAPI(RR *RequestResponse) string {
 			Schedule:     schedules,
 		}
 		answer = jsonEncode(jsonStruct)
+	case "bookmark":
+		answer = bookmarkAPI(RR)
 
 	}
 

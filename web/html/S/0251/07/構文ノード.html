@@ -1,0 +1,135 @@
+<h2>GetLocation</h2>
+次はある構文ノードのファイル上の位置を取得しましょう♪<br />構文ノードクラスの「GetLocation」メソッドを使用します。
+<code class="csharp">
+	Location loc = node.GetLocation();
+</code>
+これを文字列化して出力してみましょう♪
+<img src="/?S0251/GetLocation.gif" alt="GetLocation" />
+あくまでも表示用ですので、実際には取得できた「Location」クラスのオブジェクトに対してさらなる操作を行います。
+<h2>Location</h2>
+「GetLocation」メソッドで取得できる「Location」クラスには以下のプロパティ・メソッドが搭載されています。
+<div class="collapser" data-count="2">Locationクラスプロパティ</div>
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>IsInMetadata</th>
+				<td>Returns true if the location is in metadata.</td>
+			</tr>
+			<tr>
+				<th>IsInSource</th>
+				<td>Returns true if the location represents a specific location in a source code file.</td>
+			</tr>
+			<tr>
+				<th>Kind</th>
+				<td>Location kind (None/SourceFile/MetadataFile).</td>
+			</tr>
+			<tr>
+				<th>MetadataModule</th>
+				<td>Returns the metadata module the location is associated with or null if the module is not available.</td>
+			</tr>
+			<tr>
+				<th>None</th>
+				<td>A location of kind LocationKind.None.</td>
+			</tr>
+			<tr>
+				<th>SourceSpan</th>
+				<td>The location within the syntax tree that this location is associated with.</td>
+			</tr>
+			<tr>
+				<th>SourceTree</th>
+				<td>The syntax tree this location is located in or null if not in a syntax tree.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.location?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="collapser" data-count="2">Locationクラスメソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>Create(String, TextSpan, LinePositionSpan)</th>
+				<td>Creates an instance of a Location for a span in a file.</td>
+			</tr>
+			<tr>
+				<th>Create(SyntaxTree, TextSpan)</th>
+				<td>Creates an instance of a Location for a span in a SyntaxTree.</td>
+			</tr>
+			<tr>
+				<th>Equals(Object)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetDebuggerDisplay()</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetHashCode()</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetLineSpan()</th>
+				<td>Gets the location in terms of path, line and column.</td>
+			</tr>
+			<tr>
+				<th>GetMappedLineSpan()</th>
+				<td>Gets the location in terms of path, line and column after applying source line mapping directives (#line in C# or #ExternalSource in VB).</td>
+			</tr>
+			<tr>
+				<th>ToString()</th>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.location?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+「Kind」プロパティで当該ノードの情報を取得できます。<br />具体的にはソースファイルかバイナリファイルかを判定できます。<br /><br />「SourceTree」では当該ロケーションを有するノードを含む構文ツリーを取得可能です。<br /><br />「GetLineSpan」ではロケーションの行に関する情報を扱う「FileLinePositionSpan」オブジェクトを取得可能です。<br />ロケーションのパスや行番号は、「FileLinePositionSpan」オブジェクトに格納されています。
+<h3>FileLinePositionSpan</h3>
+「Location」オブジェクトのプロパティとして取得可能なオブジェクトで、ソースコードファイル内の当該構文ノードの範囲を、ファイル名・行番号・行内のオフセットで表現します。
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>EndLinePosition</th>
+				<td>Gets the LinePosition of the end of the span.</td>
+			</tr>
+			<tr>
+				<th>HasMappedPath</th>
+				<td>True if the Path is a mapped path.</td>
+			</tr>
+			<tr>
+				<th>IsValid</th>
+				<td>Returns true if the span represents a valid location.</td>
+			</tr>
+			<tr>
+				<th>Path</th>
+				<td>Path, or null if the span represents an invalid value.</td>
+			</tr>
+			<tr>
+				<th>Span</th>
+				<td>Gets the span.</td>
+			</tr>
+			<tr>
+				<th>StartLinePosition</th>
+				<td>Gets the LinePosition of the start of the span.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+ソースファイルのパスを取得するには「Path」プロパティを、行番号を取得するには「StartLinePosition」プロパティの「Line」プロパティを使用します。
+<p>行番号は「0」から始まるため、実際に行番と対応させるためには「+1」する必要があります。</p>
+<code class="csharp">
+	IEnumerable&lt;SyntaxNode&gt; nodes = root.DescendantNodes().Where(a =&gt; FilterStatement(a) &amp;&amp; a.ToString().Contains("sql"));
+	foreach (SyntaxNode node in nodes)
+	{
+		Console.WriteLine(" _____ _____ _____ _____ _____ ");
+		FileLinePositionSpan span = node.GetLocation().GetLineSpan();
+		Console.WriteLine($"{node} ___ {span.Path}({span.StartLinePosition.Line + 1})");
+		Console.WriteLine(" _____ _____ _____ _____ _____ ");
+	}
+</code>
+<img src="/?S0251/GetLocation_GetLineSpan.gif" alt="GetLocation GetLineSpan" />

@@ -116,6 +116,7 @@ noscript {
 		th, td {
 			padding: 10px 15px;
 			background-color: white;
+			word-break: break-word;
 		}
 		thead {
 			th {
@@ -142,7 +143,10 @@ noscript {
 		color: black;
 		text-decoration: none;
 		margin: 50px 0;
-		padding: 25px;
+		padding: 0 25px;
+		height: 75px;
+		line-height: 75px;
+		box-sizing: border-box;
 		cursor: pointer;
 		background-position: right;
 		background-size: contain;
@@ -190,6 +194,7 @@ noscript {
 		max-width: 600px;
 		margin: 25px 0;
 		background-color: white;
+		cursor: pointer;
 	}
 	* {
 		&.max-300w {
@@ -382,6 +387,15 @@ noscript {
 	}
 	.center {
 		text-align: center;
+	}
+	span.underline {
+		text-decoration-color: orange;
+		text-decoration-line: underline;
+		text-decoration-thickness: 2px;
+	}
+	.nowrap {
+		white-space: nowrap;
+		word-break: normal;
 	}
 }
 

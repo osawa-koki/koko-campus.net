@@ -1,0 +1,52 @@
+#buffonsNeedle svg {
+  display: block;
+  margin: 50px auto;
+  border: 1px black solid;
+  width: 500px;
+  max-width: 100%;
+}
+#buffonsNeedle svg g.lines {
+  fill: none;
+  stroke: grey;
+  stroke-width: 0.1;
+}
+#buffonsNeedle svg g.needles {
+  fill: none;
+  stroke: blue;
+  stroke-width: 0.1;
+  stroke-opacity: 0.5;
+}
+#buffonsNeedle #button {
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  margin: 0 auto;
+  border: 1px black solid;
+  background-color: lightblue;
+  cursor: pointer;
+}
+#buffonsNeedle #button:hover {
+  color: white;
+  background-color: blue;
+}
+#buffonsNeedle table {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+#buffonsNeedle table .in {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+#buffonsNeedle table .out {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+#buffonsNeedle table #paiContainer {
+  display: flex;
+  align-items: flex-start;
+  font-family: "consolas", "Consolas";
+}
+#buffonsNeedle table #paiContainer #paiDiv {
+  margin-right: 10px;
+}
+#buffonsNeedle table th, #buffonsNeedle table td {
+  padding: 5px 10px;
+}

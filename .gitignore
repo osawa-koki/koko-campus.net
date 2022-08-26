@@ -1,21 +1,18 @@
 /DBbackup/
 /dev/db/contents/
 /logFiles/
-img/
 bin/
-go.*
-alter.sql
+.vs/
 *.pdf
 *.csv
 *.txt
-*.png
-*.css
 *.env
 *.user
 *.crt
 *.key
 *.code-workspace
 .~lock*
+*.ods
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,go,linux,macos
@@ -127,3 +124,4 @@ $RECYCLE.BIN/
 
 
 
+*.log

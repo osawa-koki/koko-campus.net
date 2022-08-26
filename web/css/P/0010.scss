@@ -1,0 +1,31 @@
+@charset "utf8";
+
+#sierpinskiCarpet {
+	canvas {
+		display: block;
+		margin: 50px auto;
+		border: 1px black solid;
+		width: 500px;
+		max-width: 100%;
+	}
+	#button {
+		padding: 5px;
+		text-align: center;
+		width: 100px;
+		margin: 0 auto;
+		border: 1px black solid;
+		background-color: lightblue;
+		cursor: pointer;
+		&:hover {
+			color: white;
+			background-color: blue;
+		}
+	}
+	table {
+		margin: 30px auto;
+		border-collapse: collapse;
+		th, td {
+			padding: 5px 10px;
+		}
+	}
+}

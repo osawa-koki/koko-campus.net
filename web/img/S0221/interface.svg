@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="インターフェース.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\go入門\pics\インターフェース.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.50019640780845"
+         inkscape:cx="272.630968765939"
+         inkscape:cy="280.963211087637"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid843" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="347.287872314453"
+             y="182.64274597168"
+             width="213.547592163086"
+             height="185.21826171875"
+             id="rect12137" />
+        <rect
+             x="66.6579360961914"
+             y="183.97590637207"
+             width="194.641174316406"
+             height="164.645111083984"
+             id="rect9025" />
+        <rect
+             x="66.6579360961914"
+             y="183.97590637207"
+             width="194.641174316406"
+             height="164.645111083984"
+             id="rect9025-5" />
+        <rect
+             x="347.287872314453"
+             y="182.64274597168"
+             width="266.337982177734"
+             height="202.186599731445"
+             id="rect12137-1" />
+        <rect
+             x="347.287872314453"
+             y="182.64274597168"
+             width="266.337982177734"
+             height="202.186599731445"
+             id="rect12137-1-2" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.479846;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.912921;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21525-5"
+             width="256.080352783203"
+             height="300.764099121094"
+             x="40.0631637573242"
+             y="49.8325157165527" />
+        <rect
+             style="fill:#74ff6e;fill-opacity:1;stroke:#000000;stroke-width:1.46425;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21153-8-9-7"
+             width="199.303405761719"
+             height="220.865097045898"
+             x="68.3026733398438"
+             y="108.940551757812" />
+        <text
+             xml:space="preserve"
+             style="font-size:33.3235px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.833087"
+             x="127.916900634766"
+             y="91.4197387695312"
+             id="text1901-1"><tspan
+                 sodipodi:role="line"
+                 id="tspan1899-3"
+                 x="127.916900634766"
+                 y="91.4197387695312"
+                 style="stroke-width:0.833087">構造体</tspan></text>
+        <rect
+             style="opacity:0.1669367909;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:0.912921;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect21525-5-2"
+             width="256.080352783203"
+             height="300.764099121094"
+             x="328.143524169922"
+             y="49.8325157165527" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.833087"
+             x="348.123901367188"
+             y="93.3051071166992"
+             id="text1901-1-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan1899-3-0"
+                 x="348.123901367188"
+                 y="93.3051071166992"
+                 style="font-size:28px;stroke-width:0.833087">インターフェース</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:26.6588px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.833087"
+             x="101.316146850586"
+             y="142.548828125"
+             id="text3621-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan3619-8"
+                 x="101.316146850586"
+                 y="142.548828125"
+                 style="stroke-width:0.833087">プロパティ</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text9023-3"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect9025-5)"
+             transform="matrix(0.833087074721077,0,0,0.833087074721077,34.1225742601756,28.8987392729412)"><tspan
+                 x="66.658203125"
+                 y="201.330078125"
+                 id="tspan3363">x = 10
+</tspan><tspan
+                 x="66.658203125"
+                 y="226.330078125"
+                 id="tspan3365">y = hello&quot;
+</tspan><tspan
+                 x="66.658203125"
+                 y="251.330078125"
+                 id="tspan3367">z = obj[0]
+</tspan></text>
+        <g
+             id="g9136"
+             transform="matrix(0.747928764509544,0,0,0.747928764509544,113.853317181929,-278.551617915864)">
+            <rect
+                 style="fill:#8bffff;fill-opacity:1;stroke:#000000;stroke-width:1.20302;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect21153-8-0"
+                 width="226.681777954102"
+                 height="131.079467773438"
+                 x="343.684326171875"
+                 y="532.598999023438" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.899851"
+                 x="410.243957519531"
+                 y="562.830444335938"
+                 id="text5219-9"><tspan
+                     sodipodi:role="line"
+                     id="tspan5217-3"
+                     x="410.243957519531"
+                     y="562.830444335938"
+                     style="font-size:24px;stroke-width:0.899851">メソッド</tspan></text>
+            <rect
+                 style="fill:#8bffff;fill-opacity:1;stroke:#000000;stroke-width:1.20302;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect21153-8-0-2"
+                 width="226.681777954102"
+                 height="131.079467773438"
+                 x="343.684295654297"
+                 y="685.678466796875" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.899851"
+                 x="410.243927001953"
+                 y="715.909912109375"
+                 id="text5219-9-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan5217-3-0"
+                     x="410.243927001953"
+                     y="715.909912109375"
+                     style="font-size:24px;stroke-width:0.899851">メソッド</tspan></text>
+            <text
+                 xml:space="preserve"
+                 id="text12135-0"
+                 style="font-size:15.5581px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12137-1)"
+                 transform="matrix(0.8998507692256,0,0,0.8998507692256,50.6843021213791,425.935935849461)"><tspan
+                     x="347.287109375"
+                     y="196.141964477487"
+                     id="tspan3369">func (self, sct) add() { 
+</tspan><tspan
+                     x="347.287109375"
+                     y="215.589596313424"
+                     id="tspan3371">    ....
+</tspan><tspan
+                     x="347.287109375"
+                     y="235.037228149362"
+                     id="tspan3373">}</tspan></text>
+            <text
+                 xml:space="preserve"
+                 id="text12135-0-2"
+                 style="font-size:15.5581px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12137-1-2)"
+                 transform="matrix(0.8998507692256,0,0,0.8998507692256,55.0659707676369,578.254762003405)"><tspan
+                     x="347.287109375"
+                     y="196.141964477487"
+                     id="tspan3375">func (self, sct) del() { 
+</tspan><tspan
+                     x="347.287109375"
+                     y="215.589596313424"
+                     id="tspan3377">    ....
+</tspan><tspan
+                     x="347.287109375"
+                     y="235.037228149362"
+                     id="tspan3379">}</tspan></text>
+        </g>
+        <g
+             id="g1148"
+             transform="matrix(0.855303109868554,-0.002948308989536,0.002948308989536,0.855303109868553,69.0119528496321,-315.932445307189)">
+            <g
+                 id="g1101">
+                <g
+                     id="g964-8"
+                     transform="translate(-9.99999999999999,614.619443893433)">
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 248.337479160844,-10.0000000000003 91.662520839156,3e-13"
+                         id="path878-2"
+                         sodipodi:nodetypes="cc" />
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 335,-15 5,5 -5,5"
+                         id="path880-1" />
+                </g>
+            </g>
+            <g
+                 id="g1101-1"
+                 transform="matrix(-1,0,0,1,568.337479160844,22.0000000000003)">
+                <g
+                     id="g964-8-2"
+                     transform="translate(-9.99999999999999,614.619443893433)">
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 248.337479160844,-10.0000000000003 91.662520839156,3e-13"
+                         id="path878-2-6"
+                         sodipodi:nodetypes="cc" />
+                    <path
+                         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         d="m 335,-15 5,5 -5,5"
+                         id="path880-1-1" />
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

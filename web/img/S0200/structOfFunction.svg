@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="関数の構造.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.500196408"
+         inkscape:cx="253.3001666"
+         inkscape:cy="182.9760414"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="251.9670078"
+             y="319.2915258"
+             width="94.65427277"
+             height="30.66265174"
+             id="rect69714" />
+        <rect
+             x="160.645632"
+             y="319.2915258"
+             width="72.65715305"
+             height="35.32870744"
+             id="rect64382" />
+        <rect
+             x="316.6252082"
+             y="61.32530349"
+             width="44.66081884"
+             height="33.99554868"
+             id="rect53184" />
+        <rect
+             x="247.9675315"
+             y="53.99293024"
+             width="54.65950963"
+             height="37.99502499"
+             id="rect46802" />
+        <rect
+             x="162.6453701"
+             y="54.65950963"
+             width="71.99057366"
+             height="26.66317543"
+             id="rect43584" />
+        <rect
+             x="67.99109735"
+             y="59.32556533"
+             width="59.32556533"
+             height="44.66081885"
+             id="rect38465" />
+        <rect
+             x="24.66343727"
+             y="30.66265174"
+             width="581.9238037"
+             height="403.9471077"
+             id="rect3093" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text3091"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3093)"
+             transform="translate(64.65820042,-5.999214472)"><tspan
+                 x="24.6640625"
+                 y="53.22167969"
+                 id="tspan71649"><tspan
+     style="fill:#ff0000"
+     id="tspan71641">int</tspan> <tspan
+     style="fill:#0000ff"
+     id="tspan71643">pai_r2</tspan> (<tspan
+     style="fill:#00b400"
+     id="tspan71645">int</tspan> <tspan
+     style="fill:#ff7800"
+     id="tspan71647">r</tspan>) {
+</tspan><tspan
+                 x="24.6640625"
+                 y="85.72167969"
+                 id="tspan71651">
+</tspan><tspan
+                 x="24.6640625"
+                 y="118.2216797"
+                 id="tspan71653">    int r2, ccm;
+</tspan><tspan
+                 x="24.6640625"
+                 y="150.7216797"
+                 id="tspan71655">
+</tspan><tspan
+                 x="24.6640625"
+                 y="183.2216797"
+                 id="tspan71657">    r2 = r * 2;
+</tspan><tspan
+                 x="24.6640625"
+                 y="215.7216797"
+                 id="tspan71659">
+</tspan><tspan
+                 x="24.6640625"
+                 y="248.2216797"
+                 id="tspan71661">    ccm = r2 * 3.14;
+</tspan><tspan
+                 x="24.6640625"
+                 y="280.7216797"
+                 id="tspan71663">
+</tspan><tspan
+                 x="24.6640625"
+                 y="313.2216797"
+                 id="tspan71669">    <tspan
+     style="fill:#0046ff"
+     id="tspan71665">return</tspan> <tspan
+     style="fill:#ffbe00"
+     id="tspan71667">ccm</tspan>;
+</tspan><tspan
+                 x="24.6640625"
+                 y="345.7216797"
+                 id="tspan71671">
+</tspan><tspan
+                 x="24.6640625"
+                 y="378.2216797"
+                 id="tspan71673">}</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text38463"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect38465)"
+             transform="translate(2,2)"><tspan
+                 x="67.99023438"
+                 y="71.13867188"
+                 id="tspan71675">戻り値の</tspan><tspan
+                 x="67.99023438"
+                 y="87.5390625"
+                 id="tspan71677">データ型</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stroke-opacity:1"
+             id="path41249"
+             cx="93.65440369"
+             cy="76.98992157"
+             rx="34.32883835"
+             ry="24.99672699" />
+        <text
+             xml:space="preserve"
+             id="text43582"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect43584)"
+             transform="translate(2,6)"><tspan
+                 x="162.6445312"
+                 y="66.47265625"
+                 id="tspan71679">関数名</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:1.05356;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path43928"
+             cx="180.9763031"
+             cy="69.6583252"
+             rx="31.06916046"
+             ry="13.07151604" />
+        <text
+             xml:space="preserve"
+             id="text46800"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect46802)"
+             transform="translate(0,6)"><tspan
+                 x="247.9667969"
+                 y="65.8046875"
+                 id="tspan71681">引数の</tspan><tspan
+                 x="247.9667969"
+                 y="82.20507812"
+                 id="tspan71683">データ型</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#00b400;stroke-width:1.26142;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path50110"
+             cx="272.9642334"
+             cy="75.32347107"
+             rx="34.29812622"
+             ry="21.96640778" />
+        <text
+             xml:space="preserve"
+             id="text53182"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect53184)"
+             transform="translate(1.999738157)"><tspan
+                 x="316.625"
+                 y="73.13867188"
+                 id="tspan71685">引数の</tspan><tspan
+                 x="316.625"
+                 y="89.5390625"
+                 id="tspan71687">名前</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#ff6400;stroke-width:1.14784;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path56460"
+             cx="337.9559937"
+             cy="76.98992157"
+             rx="28.02241135"
+             ry="22.35648918" />
+        <text
+             xml:space="preserve"
+             id="text64380"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect64382)"
+             transform="translate(-14,2)"><tspan
+                 x="160.6464844"
+                 y="331.1035156"
+                 id="tspan71689">戻り値の宣言</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#0032ff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path67806"
+             cx="182.3084106"
+             cy="329.6235046"
+             rx="49.66016388"
+             ry="12.99829769" />
+        <text
+             xml:space="preserve"
+             id="text69712"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect69714)"
+             transform="translate(-2,4)"><tspan
+                 x="251.9667969"
+                 y="331.1035156"
+                 id="tspan71691">戻り値の指定</tspan></text>
+        <ellipse
+             style="opacity:0.930481;fill:none;fill-opacity:1;stroke:#ffa500;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path71082"
+             cx="283.6289978"
+             cy="330.9571838"
+             rx="46.32726669"
+             ry="12.99829769" />
+    </g>
+</svg>

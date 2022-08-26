@@ -22,12 +22,10 @@ func sessionController(RR *RequestResponse) {
 			RR.Login = true
 			RR.userID = userID
 		}
-
-		// ログインが必要かで処理を制御
 		switch RR.snd {
-		case "M": // ログインが必要なページ(限定列挙)
+		case "M":
 			loginController(RR)
-		default: // ログインが不要なページ
+		default:
 			pageController(RR)
 		}
 	} else {

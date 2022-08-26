@@ -1,0 +1,180 @@
+@charset "UTF-8";
+#subjectIndexContainer > div > div {
+  font-size: 20px;
+  margin: 25px 0;
+}
+#subjectIndexContainer > div > div:nth-of-type(1) {
+  border-left: 3px green solid;
+  padding-left: 10px;
+  margin-top: 25px;
+}
+#subjectIndexContainer > div > div > div {
+  font-size: 18px;
+}
+#subjectIndexContainer > div > div > div > div {
+  font-size: 16px;
+}
+#subjectIndexContainer div.subjectsBox {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid grey;
+  padding: 10px;
+}
+#subjectIndexContainer div.subjectsBox > div {
+  width: 100%;
+}
+#subjectIndexContainer div.subjectsBox a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid grey;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#subjectMainBox .step {
+  position: relative;
+  margin: 25px 0;
+  padding: 50px 15px 15px 15px;
+  background-color: rgb(255, 255, 220);
+  border: 1px black solid;
+  text-indent: 1rem !important;
+  font-size: 1rem;
+}
+#subjectMainBox .step:before {
+  content: "対策" !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.5rem;
+  border-right: 1px black solid;
+  border-bottom: 1px black solid;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+#subjectMainBox .step ul, #subjectMainBox .step ol {
+  margin: 0 25px;
+  border: none;
+  display: block;
+  padding: 0;
+}
+#subjectMainBox svg .pc {
+  fill: #000000;
+  fill-opacity: 1;
+  stroke: none;
+}
+#subjectMainBox svg .monitor {
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: none;
+}
+#subjectMainBox svg .server {
+  fill: #000064;
+  fill-opacity: 1;
+  stroke: #000000;
+  stroke-width: 0.1;
+}
+#subjectMainBox svg .window {
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: #000000;
+  stroke-width: 0.1;
+}
+#subjectMainBox svg .bad_face {
+  fill: #000000;
+  fill-opacity: 0.5;
+  stroke: #000000;
+  stroke-width: 0.2;
+}
+#subjectMainBox svg .bad_eyes {
+  fill: #000000;
+  fill-opacity: 1;
+  stroke: #000000;
+  stroke-width: 0.1;
+}
+#subjectMainBox svg .e_node_face {
+  fill: #80d5ff;
+}
+#subjectMainBox svg .d_node_face {
+  fill: #ff80ff;
+}
+#subjectMainBox svg .white {
+  fill: white;
+}
+#subjectMainBox svg .key {
+  fill: #ffffff;
+  fill-opacity: 1;
+  stroke: #000000;
+  stroke-width: 0.5;
+}
+#subjectMainBox svg polyline {
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+}
+#subjectMainBox .bg-white {
+  background-color: white;
+}
+#subjectMainBox .sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+#subjectMainBox .margin-left_25 {
+  margin-left: 25px;
+}
+#subjectMainBox iframe {
+  display: block;
+  margin: 25px 0;
+}
+#subjectMainBox iframe#iframe1 {
+  opacity: 0.5;
+}
+#subjectMainBox iframe#iframe2 {
+  opacity: 0.001;
+}
+#subjectMainBox .fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+#subjectMainBox .fraction .fraction_n, #subjectMainBox .fraction .fraction_d {
+  display: block;
+}
+#subjectMainBox .fraction .fraction_n {
+  border-bottom: 1px solid #000000;
+}
+#subjectMainBox pre.todokede {
+  border: 2px black solid;
+  padding: 10px;
+  margin: 25px 0;
+  overflow-x: auto;
+}
+#subjectMainBox li.information-security_list {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#subjectMainBox li.information-security_list.visited {
+  color: purple;
+}
+#subjectMainBox #ssltls_protocol {
+  border-collapse: separate;
+  background-color: black;
+}
+#subjectMainBox .red {
+  color: red;
+}
+#subjectMainBox #fqdn {
+  padding: 5px 10px;
+  border: 1px black solid;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+#subjectMainBox #fqdn span {
+  cursor: pointer;
+}

@@ -1,0 +1,31 @@
+@charset "utf8";
+@import "../00.scss";
+
+#fixedBox {
+	#zoomedImgBox {
+		&.on {
+			position: fixed;
+			inset: 0;
+			top: 60px;
+			@include sb {
+				top: 50px;
+			}
+			background-color: rgba(black, 0.8);
+			z-index: 20;
+		}
+		img {
+			&.zoomed {
+				position: fixed;
+				z-index: 25;
+				top: 10px;
+				right: 10px;
+				bottom: 10px;
+				left: 10px;
+				max-width: calc(100% - 20px);
+				margin: auto;
+				background-color: white;
+			}
+		}
+	}
+}
+

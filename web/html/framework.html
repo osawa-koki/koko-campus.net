@@ -4,10 +4,16 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{.Title}}</title>
+		{{ range $_, $css := .CSSLIB }}
+			<link rel="stylesheet" href="{{$css}}">
+		{{ end }}
 		{{ range $_, $css := .CSS }}
 			<link rel="stylesheet" href="/?{{$css}}.css">
 		{{ end }}
 		<link rel="icon" type="image/png" href="/?00/01.png" />
+		{{ range $_, $js := .JSLIB }}
+			<script charset="utf-8" type="text/javascript" src="{{$js}}"></script>
+		{{ end }}
 		{{ range $_, $js := .JSFX }}
 			<script charset="utf-8" type="text/javascript" src="/?{{$js}}.js"></script>
 		{{ end }}
@@ -29,8 +35,10 @@
 			<main>(((BODY)))</main>
 			<footer></footer>
 		</div>
+		<div id="scriptBox">
 		{{ range $_, $js := .JS }}
 			<script charset="utf-8" type="text/javascript" src="/?{{$js}}.js" defer></script>
 		{{ end }}
+		</div>
 	</body>
 </html>

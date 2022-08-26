@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="800"
+   viewBox="0 0 600 800"
+   version="1.1"
+   id="svg20"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Array_and_Collections.svg"
+   inkscape:export-filename="Array_and_Collections.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview22"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0444209"
+     inkscape:cx="462.45722"
+     inkscape:cy="393.5195"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs17">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3755"
+       x="-0.041161248"
+       y="-0.05522484"
+       width="1.0823225"
+       height="1.1104497">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3284934"
+         id="feGaussianBlur3757" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3755-9"
+       x="-0.041161248"
+       y="-0.050246792"
+       width="1.0823225"
+       height="1.1004936">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3284934"
+         id="feGaussianBlur3757-3" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3755-9-8"
+       x="-0.032929996"
+       y="-0.066279585"
+       width="1.06586"
+       height="1.1325592">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.3284934"
+         id="feGaussianBlur3757-3-8" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1.05845;stroke-dasharray:none;stroke-opacity:1"
+       id="rect239"
+       width="564.58655"
+       height="217.34525"
+       x="20.415081"
+       y="34.906353" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.978979;stroke-dasharray:none;stroke-opacity:1"
+       id="rect239-8"
+       width="564.03638"
+       height="494.29376"
+       x="20.690197"
+       y="281.62952" />
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="37.913811"
+       y="93.458656"
+       id="text1043"><tspan
+         sodipodi:role="line"
+         id="tspan1041"
+         x="37.913811"
+         y="93.458656">配列</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="31.666405"
+       y="348.5415"
+       id="text1043-6"><tspan
+         sodipodi:role="line"
+         id="tspan1041-3"
+         x="31.666405"
+         y="348.5415">コレクション</tspan></text>
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488"
+       width="80.559258"
+       height="49.788357"
+       x="93.576683"
+       y="125.42836" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-8"
+       width="80.559258"
+       height="49.788357"
+       x="194.87216"
+       y="125.42836" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-9"
+       width="80.559258"
+       height="49.788357"
+       x="296.16763"
+       y="125.42836" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-1"
+       width="80.559258"
+       height="49.788357"
+       x="397.4631"
+       y="125.42836" />
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="61.277977"
+       y="158.60378"
+       id="text1587"><tspan
+         sodipodi:role="line"
+         id="tspan1585"
+         x="61.277977"
+         y="158.60378">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="497.88358"
+       y="158.60378"
+       id="text1591"><tspan
+         sodipodi:role="line"
+         id="tspan1589"
+         x="497.88358"
+         y="158.60378">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="107.23646"
+       y="154.81343"
+       id="text1613"><tspan
+         sodipodi:role="line"
+         id="tspan1611"
+         x="107.23646"
+         y="154.81343">りんご</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="209.74576"
+       y="154.81343"
+       id="text2395"><tspan
+         sodipodi:role="line"
+         id="tspan2393"
+         x="209.74576"
+         y="154.81343">バナナ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="318.63528"
+       y="154.77698"
+       id="text2399"><tspan
+         sodipodi:role="line"
+         id="tspan2397"
+         x="318.63528"
+         y="154.77698">もも</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="410.75394"
+       y="154.52176"
+       id="text2403"><tspan
+         sodipodi:role="line"
+         id="tspan2401"
+         x="410.75394"
+         y="154.52176">ぶどう</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="117.76861"
+       y="217.78496"
+       id="text2407"><tspan
+         sodipodi:role="line"
+         id="tspan2405"
+         x="117.76861"
+         y="217.78496">[0]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="219.97815"
+       y="217.78496"
+       id="text2407-7"><tspan
+         sodipodi:role="line"
+         id="tspan2405-8"
+         x="219.97815"
+         y="217.78496">[1]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="322.18771"
+       y="217.78496"
+       id="text2407-0"><tspan
+         sodipodi:role="line"
+         id="tspan2405-2"
+         x="322.18771"
+         y="217.78496">[2]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="424.39725"
+       y="217.78496"
+       id="text2407-4"><tspan
+         sodipodi:role="line"
+         id="tspan2405-1"
+         x="424.39725"
+         y="217.78496">[3]</tspan></text>
+    <path
+       id="path3699"
+       style="opacity:1;mix-blend-mode:normal;fill:#00ffff;fill-opacity:1;filter:url(#filter3755)"
+       d="m 571.51447,209.68558 c -10e-6,13.21988 -17.3402,23.9367 -38.73041,23.9367 -21.39021,0 -38.73041,-10.71682 -38.73041,-23.9367 0,-5.78789 3.32383,-11.096 8.85616,-15.23497 1.35921,-1.01688 -9.15388,-17.66799 -7.54461,-18.53351 1.4501,-0.77991 15.00061,14.21057 16.62822,13.56934 6.00656,-2.36641 13.13951,-3.73757 20.79064,-3.73757 21.39022,0 38.73041,10.71683 38.73041,23.93671 z"
+       sodipodi:nodetypes="ssssssss" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="508.5094"
+       y="217.69409"
+       id="text3753"><tspan
+         sodipodi:role="line"
+         id="tspan3751"
+         x="508.5094"
+         y="217.69409">固定</tspan></text>
+    <g
+       id="g3952"
+       transform="translate(-2.8724051,51.703292)">
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1488-94"
+         width="80.559258"
+         height="49.788357"
+         x="126.61412"
+         y="368.33173" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1488-8-4"
+         width="80.559258"
+         height="49.788357"
+         x="227.90959"
+         y="368.33173" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1488-9-2"
+         width="80.559258"
+         height="49.788357"
+         x="329.20508"
+         y="368.33173" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1488-1-5"
+         width="80.559258"
+         height="49.788357"
+         x="430.50055"
+         y="368.33173" />
+      <text
+         xml:space="preserve"
+         style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="94.315414"
+         y="401.50714"
+         id="text1587-2"><tspan
+           sodipodi:role="line"
+           id="tspan1585-1"
+           x="94.315414"
+           y="401.50714">{</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="559.64508"
+         y="404.37955"
+         id="text1591-1"><tspan
+           sodipodi:role="line"
+           id="tspan1589-2"
+           x="559.64508"
+           y="404.37955">}</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="140.2739"
+         y="397.7168"
+         id="text1613-2"><tspan
+           sodipodi:role="line"
+           id="tspan1611-6"
+           x="140.2739"
+           y="397.7168">りんご</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="242.78319"
+         y="397.7168"
+         id="text2395-5"><tspan
+           sodipodi:role="line"
+           id="tspan2393-6"
+           x="242.78319"
+           y="397.7168">バナナ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="351.67273"
+         y="397.68036"
+         id="text2399-3"><tspan
+           sodipodi:role="line"
+           id="tspan2397-3"
+           x="351.67273"
+           y="397.68036">もも</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="443.79138"
+         y="397.42514"
+         id="text2403-7"><tspan
+           sodipodi:role="line"
+           id="tspan2401-7"
+           x="443.79138"
+           y="397.42514">ぶどう</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="150.80605"
+         y="460.68832"
+         id="text2407-78"><tspan
+           sodipodi:role="line"
+           id="tspan2405-0"
+           x="150.80605"
+           y="460.68832">[0]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="253.01558"
+         y="460.68832"
+         id="text2407-7-2"><tspan
+           sodipodi:role="line"
+           id="tspan2405-8-6"
+           x="253.01558"
+           y="460.68832">[1]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="355.22516"
+         y="460.68832"
+         id="text2407-0-8"><tspan
+           sodipodi:role="line"
+           id="tspan2405-2-9"
+           x="355.22516"
+           y="460.68832">[2]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="457.43469"
+         y="460.68832"
+         id="text2407-4-2"><tspan
+           sodipodi:role="line"
+           id="tspan2405-1-9"
+           x="457.43469"
+           y="460.68832">[3]</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="69.895195"
+         y="347.561"
+         id="text3442"><tspan
+           sodipodi:role="line"
+           id="tspan3440"
+           x="69.895195"
+           y="347.561">@ リスト</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="524.69269"
+         y="405.00912"
+         id="text3583"><tspan
+           sodipodi:role="line"
+           id="tspan3581"
+           x="524.69269"
+           y="405.00912">...</tspan></text>
+      <path
+         id="path3699-3"
+         style="fill:#00ffff;fill-opacity:1;filter:url(#filter3755-9)"
+         d="m 575.61708,451.77197 c 0,13.21988 -17.3402,23.9367 -38.73041,23.9367 -21.39021,0 -38.73041,-10.71682 -38.73041,-23.9367 0,-5.78789 3.32383,-11.096 8.85616,-15.23497 1.35921,-1.01688 3.0327,-1.84236 4.64197,-2.70788 1.4501,-0.77991 2.81403,-1.61506 4.44164,-2.25629 4.20036,-1.65482 8.95154,-2.82295 14.04555,-3.37584 2.19048,-0.23774 4.42984,-15.9428 6.73057,-15.9428 1.71367,0 3.41587,15.64985 5.07072,15.7832 19.00114,1.53109 33.67421,11.57381 33.67421,23.73458 z"
+         sodipodi:nodetypes="ssssssssss" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+         x="513.0907"
+         y="459.78049"
+         id="text3753-8"><tspan
+           sodipodi:role="line"
+           id="tspan3751-3"
+           x="513.0907"
+           y="459.78049">可変</tspan></text>
+    </g>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-94-5"
+       width="80.559258"
+       height="49.788357"
+       x="122.73161"
+       y="605.29291" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-8-4-0"
+       width="80.559258"
+       height="49.788357"
+       x="224.02708"
+       y="605.29291" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-9-2-2"
+       width="80.559258"
+       height="49.788357"
+       x="325.32257"
+       y="605.29291" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.787879;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1488-1-5-9"
+       width="80.559258"
+       height="49.788357"
+       x="426.61804"
+       y="605.29291" />
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="90.432907"
+       y="638.46832"
+       id="text1587-2-4"><tspan
+         sodipodi:role="line"
+         id="tspan1585-1-4"
+         x="90.432907"
+         y="638.46832">{</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="555.76257"
+       y="641.34076"
+       id="text1591-1-0"><tspan
+         sodipodi:role="line"
+         id="tspan1589-2-2"
+         x="555.76257"
+         y="641.34076">}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="136.39139"
+       y="634.67798"
+       id="text1613-2-8"><tspan
+         sodipodi:role="line"
+         id="tspan1611-6-0"
+         x="136.39139"
+         y="634.67798">りんご</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="238.90068"
+       y="634.67798"
+       id="text2395-5-9"><tspan
+         sodipodi:role="line"
+         id="tspan2393-6-2"
+         x="238.90068"
+         y="634.67798">バナナ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="347.79022"
+       y="634.64154"
+       id="text2399-3-0"><tspan
+         sodipodi:role="line"
+         id="tspan2397-3-7"
+         x="347.79022"
+         y="634.64154">もも</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'Rockwell Extra Bold';-inkscape-font-specification:'Rockwell Extra Bold, Normal';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="439.90887"
+       y="634.38635"
+       id="text2403-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan2401-7-8"
+         x="439.90887"
+         y="634.38635">ぶどう</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="134.73695"
+       y="686.81702"
+       id="text2407-78-3"><tspan
+         sodipodi:role="line"
+         id="tspan2405-0-1"
+         x="134.73695"
+         y="686.81702">[apple]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="236.94649"
+       y="686.81702"
+       id="text2407-7-2-8"><tspan
+         sodipodi:role="line"
+         id="tspan2405-8-6-3"
+         x="236.94649"
+         y="686.81702">[banana]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="339.15607"
+       y="686.81702"
+       id="text2407-0-8-0"><tspan
+         sodipodi:role="line"
+         id="tspan2405-2-9-5"
+         x="339.15607"
+         y="686.81702">[peach]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="441.3656"
+       y="686.81702"
+       id="text2407-4-2-1"><tspan
+         sodipodi:role="line"
+         id="tspan2405-1-9-2"
+         x="441.3656"
+         y="686.81702">[grape]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="66.012688"
+       y="584.52222"
+       id="text3442-4"><tspan
+         sodipodi:role="line"
+         id="tspan3440-9"
+         x="66.012688"
+         y="584.52222">@ ディクショナリー</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="520.81018"
+       y="641.97034"
+       id="text3583-4"><tspan
+         sodipodi:role="line"
+         id="tspan3581-2"
+         x="520.81018"
+         y="641.97034">...</tspan></text>
+    <path
+       id="path3699-3-3"
+       style="fill:#00ffff;fill-opacity:1;filter:url(#filter3755-9-8)"
+       d="m 576.76128,699.14562 c 0,13.21988 -17.3402,23.9367 -38.73041,23.9367 -21.39021,0 -38.73041,-10.71682 -38.73041,-23.9367 0,-1.10817 -19.59602,-7.82388 -19.36016,-8.89203 0.2028,-0.91842 20.20776,3.80488 20.57416,2.9227 1.43317,-3.4506 4.07981,-6.6005 7.64216,-9.26564 1.35921,-1.01688 3.0327,-1.84236 4.64197,-2.70788 1.4501,-0.77991 2.81403,-1.61506 4.44164,-2.25629 4.20036,-1.65482 8.95154,-2.82295 14.04555,-3.37584 2.19048,-0.23774 3.50229,-0.59339 5.80302,-0.59339 1.71367,0 4.34342,0.30044 5.99827,0.43379 19.00114,1.53109 33.67421,11.57381 33.67421,23.73458 z"
+       sodipodi:nodetypes="ssssssssssss" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       x="513.39709"
+       y="705.95734"
+       id="text3753-8-3"><tspan
+         sodipodi:role="line"
+         id="tspan3751-3-4"
+         x="513.39709"
+         y="705.95734">任意</tspan></text>
+  </g>
+</svg>

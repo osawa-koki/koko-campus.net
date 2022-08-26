@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
 			"display" : "block",
 			"position" : "relative",
 			"font-size" : "15px",
-			"font-family" : `"consolas", "Consolas", "code"`,
+			"font-family" : `"consolas", "Consolas"`,
 			"line-height" : "18px",
 			"letter-spacing" : "1px",
 			"margin" : "30px 0",
@@ -28,23 +28,23 @@ window.addEventListener("load", function() {
 		for (i in style) {
 			e.style[i] = style[i];
 		}
-		txt = e.innerHTML.replace(/^\n/g, "").replace(/\n$/g, "").split("\n"); //最初と最後の改行文字を削除した後に、改行文字で区切って配列に変換
+		txt = e.innerHTML.replace(/^\n/g, "").replace(/\n$/g, "").split("\n"); // 最初と最後の改行文字を削除した後に、改行文字で区切って配列に変換
 		min = Infinity;
 		txt.forEach(j => {
-			try {min = ((j.match(/\t/g ) || []).length < min) ? j.match(/\t/g).length : min} catch (error) {}; //最初のインデントの最小値を取得
+			try {min = ((j.match(/\t/g ) || []).length < min) ? j.match(/\t/g).length : min} catch (error) {}; // 最初のインデントの最小値を取得
 		});
-		min = (min === Infinity) ? 0 : min; //無限ループ防止
+		min = (min === Infinity) ? 0 : min; // 無限ループ防止
 		for (let i = 0; i < txt.length; i++) {
 			for (let j = 0; j < min; j++) {
-				txt[i] = txt[i].replace("\t", ""); //全ての行から最小のインデント分のタブ文字を削除
+				txt[i] = txt[i].replace("\t", ""); // 全ての行から最小のインデント分のタブ文字を削除
 			}
 		}
-		if (e.classList.contains("dummy")) { //中身を変更しない(code_cuterは不使用)
+		if (e.classList.contains("dummy")) { // 中身を変更しない(code_cuterは不使用)
 			e.innerHTML = txt.join("\n").replace(/\n/g, "<br />").replace(/\t/g, "&nbsp".repeat(4));
-			e.classList.remove("dummy"); //左上に表示する際に邪魔にならないように削除
+			e.classList.remove("dummy"); // 左上に表示する際に邪魔にならないように削除
 
-		} else { //中身を変更する(デフォルト)
-			e.innerHTML = code_cuter(txt.join("\n")).replace(/\n/g, "<br />").replace(/\t/g, "&nbsp".repeat(4));
+		} else { // 中身を変更する(デフォルト)
+			e.innerHTML = code_cuter(txt.join("\n"), e.classList).replace(/\n/g, "<br />").replace(/\t/g, "&nbsp".repeat(4));
 		}
 		(function() {
 			let i, elm, style, cn, nm;
@@ -62,7 +62,7 @@ window.addEventListener("load", function() {
 				elm.style[i] = style[i];
 			}
 			nm = {
-				"cs" : "C#",
+				"csharp" : "C#",
 				"vb-net" : "vb.net",
 				"-dot-" : "."
 			},
@@ -74,34 +74,14 @@ window.addEventListener("load", function() {
 			e.appendChild(elm);
 		})();
 	});
-	(function() {
-		let fontface;
-		fontface = new FontFace(
-			"code",
-			"url(https://koko-campus.org/font-family/consolas.ttf)",
-			{style: "normal", weight: 500}
-		);
-		fontface.load()
-		.then(function(loadedFace) {
-			document.fonts.add(loadedFace);
-			code.forEach(e => {
-				e.style["font-family"] = "code";
-			});
-		})
-		.catch(error => {
-			code.forEach(e => {
-				e.style["font-family"] = "consolas, consola, monospace";
-			});
-		});
-	});
 });
-const code_cuter = (txt, cls) => {
-	let k;
-	for (k of z) {
-		let r, cb;
-		r = new RegExp(k["preg"], "gsm");
-		cb = k["cbfx"];
-		txt = txt.replace(r, cb);
+const code_cuter = (txt, clsList) => {
+	for (let k of z) {
+		if (!k["lang"] || clsList.contains(k["lang"])) {
+			const r = new RegExp(k["preg"], "gsm");
+			const cb = k["cbfx"];
+			txt = txt.replace(r, cb);
+		}
 	}
 	return txt;
 }
@@ -117,7 +97,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `[ \\t]'[^']*?\n|[ \\t]'[^']*?$`,  //vb
+		"preg" : `[ \\t]'[^']*?\n|[ \\t]'[^']*?$`, // vb
+		"lang" : "vb-net",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				m = m.split("");
@@ -131,7 +112,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `^'[^']*?\n|^'[^']*?$`,  //vb
+		"preg" : `^'[^']*?\n|^'[^']*?$`,  // vb
+		"lang": "vb.net",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				m = m.split("");
@@ -145,7 +127,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `[ \\t]-{2,} .*?\n|[ \\t]-{2,} .*?$`, //hs
+		"preg" : `[ \\t]-{2,} .*?\n|[ \\t]-{2,} .*?$`, // hs
+		"lang" : "haskell",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				m = m.split("");
@@ -159,7 +142,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `! .*?(\n|$)`, //fortran
+		"preg" : `! .*?(\n|$)`, // fortran
+		"lang" : "fortran",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				m = m.split("");
@@ -179,11 +163,36 @@ const z = [
 				temp = "";
 			m = m.split("");
 			m = m.map(cbm => {
-				if (cbm === "&" && check) { //&エスケープ処理の開始
+				if (cbm === "&" && check) { // &エスケープ処理の開始
 					check = false;
 					temp += cbm;
 					return;
-				} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
+					check = true;
+					cbm = temp + cbm;
+					temp = "";
+				} else if (!check) { // &エスケープ処理の途中
+					temp += cbm;
+					return;
+				}
+				return `<span style='color: grey; font-size: 0.95rem;'>${cbm}</span>`;
+			});
+			return m.join("");
+		},
+	},
+	{
+		"preg" : `{-.*?-}`, // hs
+		"lang" : "haskell",
+		"cbfx" : function(m) {
+			let check = true,
+				temp = "";
+			m = m.split("");
+			m = m.map(cbm => {
+				if (cbm === "&" && check) { // &エスケープ処理の開始
+					check = false;
+					temp += cbm;
+					return;
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 					check = true;
 					cbm = temp + cbm;
 					temp = "";
@@ -197,21 +206,22 @@ const z = [
 		},
 	},
 	{
-		"preg" : `{-.*?-}`, //hs
+		"preg" : `\\(\\*.*?\\*\\)`, // ocaml
+		"lang" : "ocaml",
 		"cbfx" : function(m) {
 			let check = true,
 				temp = "";
 			m = m.split("");
 			m = m.map(cbm => {
-				if (cbm === "&" && check) { //&エスケープ処理の開始
+				if (cbm === "&" && check) { // &エスケープ処理の開始
 					check = false;
 					temp += cbm;
 					return;
-				} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 					check = true;
 					cbm = temp + cbm;
 					temp = "";
-				} else if (!check) { //&エスケープ処理の途中
+				} else if (!check) { // &エスケープ処理の途中
 					temp += cbm;
 					return;
 				}
@@ -228,15 +238,15 @@ const z = [
 					temp = "";
 				m = m.split("");
 				m = m.map(cbm => {
-					if (cbm === "&" && check) { //&エスケープ処理の開始
+					if (cbm === "&" && check) { // &エスケープ処理の開始
 						check = false;
 						temp += cbm;
 						return;
-					} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+					} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 						check = true;
 						cbm = temp + cbm;
 						temp = "";
-					} else if (!check) { //&エスケープ処理の途中
+					} else if (!check) { // &エスケープ処理の途中
 						temp += cbm;
 						return;
 					}
@@ -249,21 +259,21 @@ const z = [
 		},
 	},
 	{
-		"preg" : `# .+?\\n|# .+?$`, //py
+		"preg" : `# .+?\\n|# .+?$`, // py
 		"cbfx" : function(m) {
 			let check = true,
 				temp = "";
 			m = m.split("");
 			m = m.map(cbm => {
-				if (cbm === "&" && check) { //&エスケープ処理の開始
+				if (cbm === "&" && check) { // &エスケープ処理の開始
 					check = false;
 					temp += cbm;
 					return;
-				} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 					check = true;
 					cbm = temp + cbm;
 					temp = "";
-				} else if (!check) { //&エスケープ処理の途中
+				} else if (!check) { // &エスケープ処理の途中
 					temp += cbm;
 					return;
 				}
@@ -273,21 +283,21 @@ const z = [
 		},
 	},
 	{
-		"preg" : `=begin.*?=end`, //rb
+		"preg" : `=begin.*?=end`, // rb
 		"cbfx" : function(m) {
 			let check = true,
 				temp = "";
 			m = m.split("");
 			m = m.map(cbm => {
-				if (cbm === "&" && check) { //&エスケープ処理の開始
+				if (cbm === "&" && check) { // &エスケープ処理の開始
 					check = false;
 					temp += cbm;
 					return;
-				} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 					check = true;
 					cbm = temp + cbm;
 					temp = "";
-				} else if (!check) { //&エスケープ処理の途中
+				} else if (!check) { // &エスケープ処理の途中
 					temp += cbm;
 					return;
 				}
@@ -303,15 +313,15 @@ const z = [
 				temp = "";
 			m = m.split("");
 			m = m.map(cbm => {
-				if (cbm === "&" && check) { //&エスケープ処理の開始
+				if (cbm === "&" && check) { // &エスケープ処理の開始
 					check = false;
 					temp += cbm;
 					return;
-				} else if (cbm === ";" && !check) { //&エスケープ処理の終了
+				} else if (cbm === ";" && !check) { // &エスケープ処理の終了
 					check = true;
 					cbm = temp + cbm;
 					temp = "";
-				} else if (!check) { //&エスケープ処理の途中
+				} else if (!check) { // &エスケープ処理の途中
 					temp += cbm;
 					return;
 				}
@@ -321,7 +331,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `function ([a-zA-Z0-9_]+)\\((.*?)\\)`, //json内である為、バックスラッシュに対してもエスケープ処理が必要
+		"preg" : `function ([a-zA-Z0-9_]+)\\((.*?)\\)`, // json内である為、バックスラッシュに対してもエスケープ処理が必要
 		"cbfx" : function(m, m1, m2) {
 			let p;
 			p = new Array;
@@ -334,7 +344,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `def ([a-zA-Z0-9_]+)\\((.*?)\\)`, //json内である為、バックスラッシュに対してもエスケープ処理が必要
+		"preg" : `def ([a-zA-Z0-9_]+)\\((.*?)\\)`, // json内である為、バックスラッシュに対してもエスケープ処理が必要
 		"cbfx" : function(m, m1, m2) {
 			let p;
 			p = new Array;
@@ -347,7 +357,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `fn ([a-zA-Z0-9_]+)\\((.*?)\\)`, //json内である為、バックスラッシュに対してもエスケープ処理が必要
+		"preg" : `fn ([a-zA-Z0-9_]+)\\((.*?)\\)`, // json内である為、バックスラッシュに対してもエスケープ処理が必要
 		"cbfx" : function(m, m1, m2) {
 			let p;
 			p = new Array;
@@ -360,7 +370,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `func ([a-zA-Z0-9_]+)\\((.*?)\\)`, //json内である為、バックスラッシュに対してもエスケープ処理が必要
+		"preg" : `func ([a-zA-Z0-9_]+)\\((.*?)\\)`, // json内である為、バックスラッシュに対してもエスケープ処理が必要
 		"cbfx" : function(m, m1, m2) {
 			let p;
 			p = new Array;
@@ -513,7 +523,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(With|Try|Catch|If|Select|For) `, //vb
+		"preg" : `(With|Try|Catch|If|Select|For) `, // vb
+		"lang" : "vb-net",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m}</span> `
@@ -523,7 +534,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(Sub|Class|Function|Namespace|Structure) `, //vb
+		"preg" : `(Sub|Class|Function|Namespace|Structure) `, // vb
+		"lang" : "vb-net",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m}</span> `
@@ -533,7 +545,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `Public|Private`, //vb, java
+		"preg" : `Public|Private`, // vb, java
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: purple;'>${m}</span>`
@@ -543,7 +555,7 @@ const z = [
 		},
 	},
 	{
-		"preg" : `((?:Select )?Case) ([^\\n]+)`, //vb
+		"preg" : `((?:Select )?Case) ([^\\n]+)`, // vb
 		"cbfx" : function(m, m1, m2) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m1}</span> <span style='color: orange;'>${m2}</span>`;
@@ -573,7 +585,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(If|ElseIf) (.+?) (Then)`, //vb
+		"preg" : `(If|ElseIf) (.+?) (Then)`, // vb
+		"lang" : "vb-net",
 		"cbfx" : function(m, m1, m2, m3) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m1}</span> <span style='color: orange;'>${m2}</span> <span style='color: blue;'>${m3}</span>`;
@@ -583,7 +596,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `Else`, //vb
+		"preg" : `Else`, // vb
+		"lang" : "vb-net",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m}</span>`;
@@ -603,7 +617,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(program|end program|stop|PROGRAM|END PROGRAM|STOP)`, //fortran
+		"preg" : `(program|end program|stop|PROGRAM|END PROGRAM|STOP)`, // fortran
+		"lang" : "fortran",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: red;'>${m}</span> `;
@@ -613,7 +628,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(write|WRITE|read|READ)`, //fortran
+		"preg" : `(write|WRITE|read|READ)`, // fortran
+		"lang": "fortran",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: blue;'>${m}</span> `;
@@ -623,7 +639,8 @@ const z = [
 		},
 	},
 	{
-		"preg" : `(implicit none)`, //fortran
+		"preg" : `(implicit none)`, // fortran
+		"lang" : "fortran",
 		"cbfx" : function(m) {
 			if (!m.match(/<|>/)) {
 				return `<span style='color: orange;'>${m}</span> `;

@@ -1,0 +1,186 @@
+<h2>列挙体</h2>
+要素を限定列挙するためのデータ型です。<br />限定列挙された要素以外を受け付けないため、思わぬバグを防止することが可能です。<br /><br />例えとしてポケモンのタイプを想定して下さい。<br />「くさ」「みず」「でんき」「...」とありますが、これを文字列として管理すると、「くさ」を「草」「クサ」と指定することも可能で、これによって不具合が発生する危険性もあります。<br /><br />列挙型であらかじめ要素を限定列挙しておくことで、要素の指定方法錯誤によるバグを防ぐことが可能です。
+<div class="separator"></div>
+列挙体の実体は整数型のデータです。<br />しかしながら、整数型として管理すると整数型が取ることができる値全てを指定できてしまう点、当該整数がどの値を示すのか分かりにくい点から限定列挙されるデータに関しては列挙型の使用が推奨されます。
+<h2>列挙体の定義</h2>
+列挙体は以下のように定義します。
+<code class="c">
+	enum 列挙体タグ {
+		列挙定数1,
+		列挙定数2,
+		列挙定数3
+	};
+</code>
+enumの定義も文ですので最後に「;(セミコロン)」を付けます。<br />例えば、月に関する列挙体は以下のように定義します。
+<code class="c">
+	enum Month {
+		January,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	};
+</code>
+「enum」は「enumeration」の略で「イニューム」と発音します。
+<h2>列挙体のインスタンスの生成</h2>
+インスタンスとは定義された列挙体(模型)から中のデータを指定して作成されたデータを言います。<br />以下のように記述します。
+<code class="c">
+	enum 列挙体タグ 変数;
+	変数 = メンバ名;
+</code>
+<img src="/?S0200/enum.png" alt="列挙型" />
+例えば僕は誕生日が10月25日なので僕の誕生月変数を作成してみましょう♪
+<code class="c">
+	int main() {
+		enum Month kokoBirthmonth;
+		kokoBirthmonth = October;
+		printf("%i", kokoBirthmonth);
+		return 0;
+	}
+
+	/* &darr; コンソール &darr;
+	9
+	*/
+</code>
+番号は「0」から割り振られてしまうので、現実のものと異なってしまいますね、、、<br />ということで、これを修正しましょう♪<br />列挙体の定義の際に「メンバ = 整数」とすることでそのメンバが該当する数字を指定できます。<br />整数を指定した場合、それ以降のメンバには指定した数字以降の整数が割り振られます。<br />月は「1」から始めたいので先ほどの「enum month」列挙体を定義しなおしましょう♪
+<code class="c">
+	enum Month {
+		January = 1,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	};
+
+	int main() {
+		enum Month kokoBirthmonth;
+		kokoBirthmonth = October;
+		printf("%i", kokoBirthmonth);
+		return 0;
+	}
+
+	/* &darr; コンソール &darr;
+	10
+	*/
+</code>
+途中から連番を変更することもできます。
+<code class="c">
+	enum Month {
+		January = 1,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August = 10000,
+		September,
+		October,
+		November,
+		December
+	};
+
+	int main() {
+		enum Month kokoBirthmonth;
+		kokoBirthmonth = October;
+		printf("%i", kokoBirthmonth);
+		return 0;
+	}
+
+	/* &darr; コンソール &darr;
+	10002
+	*/
+</code>
+<h2>列挙体の型</h2>
+質問です。<br />以下のコードで定義されている列挙体のデータ型は何でしょうか???
+<code class="c">
+	enum Month {
+		January = 1,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	};
+</code>
+<ol>
+	<li>enum型</li>
+	<li>Month型</li>
+	<li>enum Month型</li>
+</ol>
+<br /><br /><br />
+正解は「3」の「enum Month型」です。<br />したがって、ここから列挙体インスタンスを生成するには以下のコードのように「enum Month」と書く必要があります。
+<code class="c">
+	enum Month koko_birthmonth;
+</code>
+いちいち「enum Month」って書くのは大変ですね、、、<br />ということで型に別名を付けましょう♪<br />「typedef」宣言で型に別名を付けることが可能です。
+<h3>typedef宣言</h3>
+typedef宣言は以下のように記述します。
+<code class="c">
+	typedef 書き換える型名 書き換え先の型名
+</code>
+これを用いて先ほどの「enum Month」型を「MONTH」型として定義しましょう♪
+<code class="c">
+	typedef enum Month {
+		January = 1,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	} MONTH;
+</code>
+複数行になっているので少し分かりにくいかもしれません。<br />これで「enum Month」型を「MONTH」型として定義することができました。<br />これ以降はインスタンスを生成する際には「MONTH」型とします。
+<code class="c">
+	typedef enum Month {
+		January = 1,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		September,
+		October,
+		November,
+		December
+	} MONTH;
+
+	int main() {
+		MONTH kokoBirthmonth; /*「MONTH」型として使用*/
+		kokoBirthmonth = October;
+		printf("%i", kokoBirthmonth);
+		return 0;
+	}
+
+	/* &darr; コンソール &darr;
+	10
+	*/
+</code>

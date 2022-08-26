@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="800"
+     height="1000"
+     viewBox="0 0 800 1000"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="switch-説明.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\go入門\pics\switch-説明.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.530399526956313"
+         inkscape:cx="392.157212495274"
+         inkscape:cy="758.861913602634"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="g1258">
+        <inkscape:grid
+             type="xygrid"
+             id="grid22703" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <rect
+             x="366.61865234375"
+             y="569.2587890625"
+             width="137.370849609375"
+             height="68.2475814819336"
+             id="rect11915" />
+        <rect
+             x="367.647399902344"
+             y="844.646301269531"
+             width="118.778388977051"
+             height="70.7014236450195"
+             id="rect8131" />
+        <rect
+             x="375.188873291016"
+             y="861.614624023438"
+             width="114.064956665039"
+             height="49.9623374938965"
+             id="rect3267" />
+        <rect
+             x="394.985260009766"
+             y="187.594436645508"
+             width="149.887008666992"
+             height="77.3002166748047"
+             id="rect3873" />
+        <rect
+             x="421.278167724609"
+             y="23.9968585968018"
+             width="147.980621337891"
+             height="57.3258285522461"
+             id="rect8328" />
+        <rect
+             x="25.3300170898438"
+             y="23.9968585968018"
+             width="760.313903808594"
+             height="1200.18383789062"
+             id="rect9323" />
+        <rect
+             x="408.613159179688"
+             y="29.3294925689697"
+             width="149.313781738281"
+             height="50.6600341796875"
+             id="rect24943" />
+        <rect
+             x="37.9950256347656"
+             y="61.9918823242188"
+             width="556.593811035156"
+             height="695.242309570312"
+             id="rect3555" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text9321"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect9323)"
+             transform="matrix(0.928058885894466,0,0,0.928058885894466,-0.844043500843573,-11.1219276287293)"><tspan
+                 x="25.330078125"
+                 y="63.37109375"
+                 id="tspan1363"><tspan
+     style="fill:#ab00ff"
+     id="tspan1361">switch </tspan>エントリー文; (対象の値) {
+</tspan><tspan
+                 x="25.330078125"
+                 y="113.37109375"
+                 id="tspan1365">
+</tspan><tspan
+                 x="25.330078125"
+                 y="168.0390625"
+                 id="tspan1369">    <tspan
+     style="fill:#ff8500"
+     id="tspan1367">case</tspan> 値1, 値2, 値3 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="218.0390625"
+                 id="tspan1371">
+</tspan><tspan
+                 x="25.330078125"
+                 y="268.0390625"
+                 id="tspan1379">        <tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1373">//</tspan><tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1375">処理</tspan><tspan
+     style="font-size:32px;fill:#7a7c7c"
+     id="tspan1377">1</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="318.0390625"
+                 id="tspan1381">
+</tspan><tspan
+                 x="25.330078125"
+                 y="372.70703125"
+                 id="tspan1385">    <tspan
+     style="fill:#ff8c00"
+     id="tspan1383">case</tspan> 値4, 値5 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="422.70703125"
+                 id="tspan1387">
+</tspan><tspan
+                 x="25.330078125"
+                 y="472.70703125"
+                 id="tspan1395">        <tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1389">//</tspan><tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1391">処理</tspan><tspan
+     style="font-size:32px;fill:#7a757a"
+     id="tspan1393">2</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="522.70703125"
+                 id="tspan1397">
+</tspan><tspan
+                 x="25.330078125"
+                 y="577.375"
+                 id="tspan1401">    <tspan
+     style="fill:#ff9100"
+     id="tspan1399">case</tspan> 値6, 値7 :
+</tspan><tspan
+                 x="25.330078125"
+                 y="627.375"
+                 id="tspan1403">
+</tspan><tspan
+                 x="25.330078125"
+                 y="677.375"
+                 id="tspan1411">        <tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1405">//</tspan><tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1407">処理</tspan><tspan
+     style="font-size:32px;fill:#767778"
+     id="tspan1409">3</tspan>
+</tspan><tspan
+                 x="25.330078125"
+                 y="727.375"
+                 id="tspan1413">
+</tspan><tspan
+                 x="25.330078125"
+                 y="777.375"
+                 id="tspan1417">    <tspan
+     style="fill:#ff9a00"
+     id="tspan1415">default</tspan> :
+</tspan><tspan
+                 x="25.330078125"
+                 y="827.375"
+                 id="tspan1419">
+</tspan><tspan
+                 x="25.330078125"
+                 y="877.375"
+                 id="tspan1427">        <tspan
+     style="font-size:32.3255px;fill:#7e7f7d"
+     id="tspan1421">//No! </tspan><tspan
+     style="font-size:32.3255px;fill:#7e7f7d"
+     id="tspan1423">マッチ</tspan><tspan
+     style="fill:#7c7b80"
+     id="tspan1425">
+</tspan></tspan><tspan
+                 x="25.330078125"
+                 y="927.375"
+                 id="tspan1431"><tspan
+                     style="fill:#7c7b80"
+                     id="tspan1429">
+</tspan></tspan><tspan
+                 x="25.330078125"
+                 y="977.375"
+                 id="tspan1435"><tspan
+                     style="font-size:32px"
+                     id="tspan1433">}</tspan></tspan></text>
+        <text
+             xml:space="preserve"
+             id="text8326"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect8328)"
+             transform="translate(284.059208511333,-7.77021874014367)"><tspan
+                 x="421.27734375"
+                 y="43.0849609375"
+                 id="tspan1441"><tspan
+     style="fill:#ff0000"
+     id="tspan1437">●</tspan><tspan
+     style="fill:#ff0000"
+     id="tspan1439">true</tspan>
+</tspan><tspan
+                 x="421.27734375"
+                 y="70.5849609375"
+                 id="tspan1447"><tspan
+                     style="fill:#0000ff"
+                     id="tspan1443">●</tspan><tspan
+                     style="fill:#0000ff"
+                     id="tspan1445">false</tspan></tspan></text>
+        <text
+             xml:space="preserve"
+             id="text3265"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3267)" />
+        <path
+             style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 295,227 h 425 v 733 h -625"
+             id="path16653"
+             sodipodi:nodetypes="cccc" />
+        <g
+             id="g1230"
+             style="stroke:#ff0000;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 225,160 v 45"
+                 id="path16651" />
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 217,197 8,8 8,-8"
+                 id="path17677" />
+        </g>
+        <g
+             id="g1238"
+             style="stroke:#ff0000;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 225,345 v 55"
+                 id="path16781" />
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 217,392 8,8 8,-8"
+                 id="path17677-7" />
+        </g>
+        <g
+             id="g1246"
+             style="stroke:#ff0000;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 225,535 v 55"
+                 id="path16781-5" />
+            <path
+                 style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 217,582 8,8 8,-8"
+                 id="path17677-9" />
+        </g>
+        <g
+             id="g1254"
+             style="stroke:#009b00;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 225,720 v 55"
+                 id="path16781-5-1" />
+            <path
+                 style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 217,767 8,8 8,-8"
+                 id="path17677-8" />
+        </g>
+        <g
+             id="g1258"
+             style="stroke:#009b00;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 260,820 v 140"
+                 id="path17218" />
+            <path
+                 style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 252,952 8,8 8,-8"
+                 id="path17677-8-1" />
+            <path
+                 style="fill:none;stroke:#009b00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 103,952 -8,8 8,8"
+                 id="path17677-8-1-7" />
+        </g>
+        <g
+             id="g1250"
+             style="stroke:#0000ff;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 215,535 v 25 h -65 v 120"
+                 id="path16779-13" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 142,672 8,8 8,-8"
+                 id="path17677-2" />
+        </g>
+        <g
+             id="g1242"
+             style="stroke:#0000ff;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 215,345 v 25 h -65 v 120"
+                 id="path16779-1" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 142,482 8,8 8,-8"
+                 id="path17677-25" />
+        </g>
+        <g
+             id="g1234"
+             style="stroke:#0000ff;stroke-opacity:1">
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 215,160 v 25 h -65 v 120"
+                 id="path16779" />
+            <path
+                 style="fill:none;stroke:#0000ff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 142,297 8,8 8,-8"
+                 id="path17677-99" />
+        </g>
+        <g
+             id="g1265"
+             style="fill:none;fill-opacity:1;stroke:#00a400;stroke-opacity:1">
+            <path
+                 style="fill:none;fill-opacity:1;stroke:#00a400;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 300,415 h 420"
+                 id="path17081" />
+            <path
+                 style="fill:none;fill-opacity:1;stroke:#00a400;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 300,607 h 420"
+                 id="path17081-5" />
+            <path
+                 style="fill:none;fill-opacity:1;stroke:#00a400;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 712,423 8,-8 -8,-8"
+                 id="path17677-8-2" />
+            <path
+                 style="fill:none;fill-opacity:1;stroke:#00a400;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 712,615 8,-8 -8,-8"
+                 id="path17677-8-9" />
+            <path
+                 style="fill:none;fill-opacity:1;stroke:#00a400;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 712,235 8,-8 -8,-8"
+                 id="path17677-8-4" />
+        </g>
+    </g>
+</svg>

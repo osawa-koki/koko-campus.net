@@ -1,0 +1,1654 @@
+<h2>Compilation</h2>
+プロジェクトをコンパイルすることで生成されるオブジェクトで、セマンティックモデルを使用するための基となるデータです。<br />復習になりますが、プロジェクトをコンパイルして「Compilation」オブジェクトを生成してみましょう♪
+<code class="csharp">
+	Compilation compiledProject = await project.GetCompilationAsync();
+</code>
+「Compilation」オブジェクトは以下のプロパティ・メソッドを持ちます。
+<div class="collapser" data-count="2">「Compilation」プロパティ</div>
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>Assembly</th>
+				<td>The IAssemblySymbol that represents the assembly being created.</td>
+			</tr>
+			<tr>
+				<th>AssemblyName</th>
+				<td>Simple assembly name, or null if not specified.</td>
+			</tr>
+			<tr>
+				<th>CommonAssembly</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonDynamicType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonGlobalNamespace</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonObjectType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonOptions</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonScriptClass</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonScriptGlobalsType</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonSourceModule</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CommonSyntaxTrees</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>DirectiveReferences</th>
+				<td>Unique metadata references specified via #r directive in the source code of this compilation.</td>
+			</tr>
+			<tr>
+				<th>DynamicType</th>
+				<td>The TypeSymbol for the type 'dynamic' in this Compilation.</td>
+			</tr>
+			<tr>
+				<th>ExternalReferences</th>
+				<td>Metadata references passed to the compilation constructor.</td>
+			</tr>
+			<tr>
+				<th>GlobalNamespace</th>
+				<td>The root namespace that contains all namespaces and types defined in source code or in referenced metadata, merged into a single namespace hierarchy.</td>
+			</tr>
+			<tr>
+				<th>IsCaseSensitive</th>
+				<td>Returns true if this is a case sensitive compilation, false otherwise. Case sensitivity affects compilation features such as name lookup as well as choosing what names to emit when there are multiple different choices (for example between a virtual method and an override).</td>
+			</tr>
+			<tr>
+				<th>Language</th>
+				<td>Gets the source language ("C#" or "Visual Basic").</td>
+			</tr>
+			<tr>
+				<th>ObjectType</th>
+				<td>The INamedTypeSymbol for the .NET System.Object type, which could have a TypeKind of Error if there was no COR Library in this Compilation.</td>
+			</tr>
+			<tr>
+				<th>Options</th>
+				<td>Gets the options the compilation was created with.</td>
+			</tr>
+			<tr>
+				<th>ReferencedAssemblyNames</th>
+				<td>Assembly identities of all assemblies directly referenced by this compilation.</td>
+			</tr>
+			<tr>
+				<th>References</th>
+				<td>All metadata references -- references passed to the compilation constructor as well as references specified via #r directives.</td>
+			</tr>
+			<tr>
+				<th>ScriptClass</th>
+				<td>A symbol representing the implicit Script class. This is null if the class is not defined in the compilation.</td>
+			</tr>
+			<tr>
+				<th>ScriptCompilationInfo</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>SourceModule</th>
+				<td>Gets the IModuleSymbol for the module being created by compiling all of the source code.</td>
+			</tr>
+			<tr>
+				<th>SyntaxTrees</th>
+				<td>Gets the syntax trees (parsed from source code) that this compilation was created with.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.compilation?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="collapser" data-count="2">「Compilation」メソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>AddReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation with additional metadata references.</td>
+			</tr>
+			<tr>
+				<th>AddReferences(MetadataReference[])</th>
+				<td>Creates a new compilation with additional metadata references.</td>
+			</tr>
+			<tr>
+				<th>AddSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td>Creates a new compilation with additional syntax trees.</td>
+			</tr>
+			<tr>
+				<th>AddSyntaxTrees(SyntaxTree[])</th>
+				<td>Creates a new compilation with additional syntax trees.</td>
+			</tr>
+			<tr>
+				<th>AppendDefaultVersionResource(Stream)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementLocations(Int32, ImmutableArray&lt;Location&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementNames(Int32, ImmutableArray&lt;String&gt;)</th>
+				<td>Check that if any names are provided, and their number matches the expected cardinality. Returns a normalized version of the element names (empty array if all the names are null).</td>
+			</tr>
+			<tr>
+				<th>CheckTupleElementNullableAnnotations(Int32, ImmutableArray&lt;NullableAnnotation&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ClassifyCommonConversion(ITypeSymbol, ITypeSymbol)</th>
+				<td>Classifies a conversion from source to destination according to this compilation's programming language.	</td>	</tr>
+			<tr>	<th>	Clone()	</th>	<td>	Creates a new compilation equivalent to this one with different symbol instances.	</td>	</tr>
+			<tr>	<th>	CommonAddSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonBindScriptClass()	</th>	<td>	Resolves a symbol that represents script container (Script class). Uses the full name of the container class stored in ScriptClassName to find the symbol.	</td>	</tr>
+			<tr>	<th>	CommonClone()	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonContainsSyntaxTree(SyntaxTree)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateArrayTypeSymbol(ITypeSymbol, Int32, NullableAnnotation)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateErrorNamespaceSymbol(INamespaceSymbol, String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateErrorTypeSymbol(INamespaceOrTypeSymbol, String, Int32)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateFunctionPointerTypeSymbol(ITypeSymbol, RefKind, ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;RefKind&gt;, SignatureCallingConvention, ImmutableArray&lt;INamedTypeSymbol&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateNativeIntegerTypeSymbol(Boolean)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreatePointerTypeSymbol(ITypeSymbol)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonCreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetAssemblyOrModuleSymbol(MetadataReference)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetCompilationNamespace(INamespaceSymbol)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetEntryPoint(CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonGetSemanticModel(SyntaxTree, Boolean)	</th>	<td>	Gets a SemanticModel for the given syntaxTree. If Microsoft.CodeAnalysis.Compilation.SemanticModelProvider is non-null, it attempts to use Microsoft.CodeAnalysis.SemanticModelProvider.GetSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,Microsoft.CodeAnalysis.Compilation,System.Boolean) to get a semantic model. Otherwise, it creates a new semantic model using Microsoft.CodeAnalysis.Compilation.CreateSemanticModel(Microsoft.CodeAnalysis.SyntaxTree,System.Boolean).	</td>	</tr>
+			<tr>	<th>	CommonGetTypeByMetadataName(String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonRemoveAllSyntaxTrees()	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonRemoveSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonReplaceSyntaxTree(SyntaxTree, SyntaxTree)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithAssemblyName(String)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithOptions(CompilationOptions)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	CommonWithReferences(IEnumerable&lt;MetadataReference&gt;)	</th>	<td>	Creates a new compilation with the specified references.	</td>	</tr>
+			<tr>	<th>	CommonWithScriptCompilationInfo(ScriptCompilationInfo)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	ContainsSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)	</th>	<td>	Return true if there is a source declaration symbol name that meets given predicate.	</td>	</tr>
+			<tr>	<th>	ContainsSymbolsWithName(String, SymbolFilter, CancellationToken)	</th>	<td>	Return true if there is a source declaration symbol name that matches the provided name. This may be faster than ContainsSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken) when predicate is just a simple string check. name is case sensitive or not depending on the target language.	</td>	</tr>
+			<tr>	<th>	ContainsSyntaxTree(SyntaxTree)	</th>	<td>	Returns true if this compilation contains the specified tree. False otherwise.	</td>	</tr>
+			<tr>	<th>	CreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new anonymous type symbol with the given member types, names, and source locations. Anonymous type members will be readonly by default. Writable properties are supported in VB and can be created by passing in false in the appropriate locations in memberIsReadOnly.	</td>	</tr>
+			<tr>	<th>	CreateAnonymousTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Boolean&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new anonymous type symbol with the given member types, names, source locations, and nullable annotations. Anonymous type members will be readonly by default. Writable properties are supported in VB and can be created by passing in false in the appropriate locations in memberIsReadOnly.	</td>	</tr>
+			<tr>	<th>	CreateArrayTypeSymbol(ITypeSymbol, Int32)	</th>	<td>	Returns a new ArrayTypeSymbol representing an array type tied to the base types of the COR Library in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateArrayTypeSymbol(ITypeSymbol, Int32, NullableAnnotation)	</th>	<td>	Returns a new ArrayTypeSymbol representing an array type tied to the base types of the COR Library in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateDefaultWin32Resources(Boolean, Boolean, Stream, Stream)	</th>	<td>	Create a stream filled with default win32 resources.	</td>	</tr>
+			<tr>	<th>	CreateErrorNamespaceSymbol(INamespaceSymbol, String)	</th>	<td>	Returns a new INamespaceSymbol representing an error (missing) namespace with the given name.	</td>	</tr>
+			<tr>	<th>	CreateErrorTypeSymbol(INamespaceOrTypeSymbol, String, Int32)	</th>	<td>	Returns a new INamedTypeSymbol representing an error type with the given name and arity in the given optional container.	</td>	</tr>
+			<tr>	<th>	CreateFunctionPointerTypeSymbol(ITypeSymbol, RefKind, ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;RefKind&gt;, SignatureCallingConvention, ImmutableArray&lt;INamedTypeSymbol&gt;)	</th>	<td>	Returns a new IFunctionPointerTypeSymbol representing a function pointer type tied to types in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateNativeIntegerTypeSymbol(Boolean)	</th>	<td>	Returns a new INamedTypeSymbol representing a native integer.	</td>	</tr>
+			<tr>	<th>	CreatePointerTypeSymbol(ITypeSymbol)	</th>	<td>	Returns a new IPointerTypeSymbol representing a pointer type tied to a type in this Compilation.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given element types, names, and locations.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(ImmutableArray&lt;ITypeSymbol&gt;, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given element types and (optional) element names, locations, and nullable annotations.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given underlying type and element names and locations. The underlying type needs to be tuple-compatible.	</td>	</tr>
+			<tr>	<th>	CreateTupleTypeSymbol(INamedTypeSymbol, ImmutableArray&lt;String&gt;, ImmutableArray&lt;Location&gt;, ImmutableArray&lt;NullableAnnotation&gt;)	</th>	<td>	Returns a new INamedTypeSymbol with the given underlying type and (optional) element names, locations, and nullable annotations. The underlying type needs to be tuple-compatible.	</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, Stream, IEnumerable&lt;EmbeddedText&gt;, CancellationToken)	</th>	<td>		</td>	</tr>
+			<tr>	<th>	Emit(Stream, Stream, Stream, Stream, IEnumerable&lt;ResourceDescription&gt;, EmitOptions, IMethodSymbol, Stream, IEnumerable&lt;EmbeddedText&gt;, Stream, CancellationToken)	</th>	<td>	Emit the IL for the compiled source code into the specified stream.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Func&lt;ISymbol,Boolean&gt;, Stream, Stream, Stream, CancellationToken)	</th>	<td>	Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Func&lt;ISymbol, Boolean&gt;, Stream, Stream, Stream, ICollection&lt;MethodDefinitionHandle&gt;, CancellationToken)	</th>	<td>	Obsolete. Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	EmitDifference(EmitBaseline, IEnumerable&lt;SemanticEdit&gt;, Stream, Stream, Stream, ICollection&lt;MethodDefinitionHandle&gt;, CancellationToken)	</th>	<td>	Obsolete. Emit the differences between the compilation and the previous generation for Edit and Continue. The differences are expressed as added and changed symbols, and are emitted as metadata, IL, and PDB deltas. A representation of the current compilation is returned as an EmitBaseline for use in a subsequent Edit and Continue.	</td>	</tr>
+			<tr>	<th>	GetAssemblyOrModuleSymbol(MetadataReference)	</th>	<td>	Gets the IAssemblySymbol or IModuleSymbol for a metadata reference used to create this compilation.	</td>	</tr>
+			<tr>	<th>	GetCompilationNamespace(INamespaceSymbol)	</th>	<td>	Gets the corresponding compilation namespace for the specified module or assembly namespace.	</td>	</tr>
+			<tr>	<th>	GetDeclarationDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during symbol declaration.	</td>	</tr>
+			<tr>	<th>	GetDiagnostics(CancellationToken)	</th>	<td>	Gets all the diagnostics for the compilation, including syntax, declaration, and binding. Does not include any diagnostics that might be produced during emit, see EmitResult.	</td>	</tr>
+			<tr>	<th>	GetEntryPoint(CancellationToken)	</th>	<td>	Returns the Main method that will serves as the entry point of the assembly, if it is executable (and not a script).	</td>	</tr>
+			<tr>	<th>	GetMetadataReference(IAssemblySymbol)	</th>	<td>	Gets the MetadataReference that corresponds to the assembly symbol.	</td>	</tr>
+			<tr>	<th>	GetMethodBodyDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during the analysis of method bodies and field initializers.	</td>	</tr>
+			<tr>	<th>	GetParseDiagnostics(CancellationToken)	</th>	<td>	Gets the diagnostics produced during the parsing stage.	</td>	</tr>
+			<tr>	<th>	GetRequiredLanguageVersion(Diagnostic)	</th>	<td>	Returns the required language version found in a Diagnostic, if any is found. Returns null if none is found.	</td>	</tr>
+			<tr>	<th>	GetSemanticModel(SyntaxTree, Boolean)	</th>	<td>	Gets a new SemanticModel for the specified syntax tree.	</td>	</tr>
+			<tr>	<th>	GetSpecialType(SpecialType)	</th>	<td>	Get the symbol for the predefined type from the Cor Library referenced by this compilation.	</td>	</tr>
+			<tr>	<th>	GetSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)	</th>	<td>	Return source declaration symbols whose name meets given predicate.	</td>	</tr>
+			<tr>	<th>	GetSymbolsWithName(String, SymbolFilter, CancellationToken)	</th>	<td>	Return source declaration symbols whose name matches the provided name. This may be faster than GetSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken) when predicate is just a simple string check. name is case sensitive or not depending on the target language.	</td>	</tr>
+			<tr>	<th>	GetTypeByMetadataName(String)	</th>	<td>	Gets the type within the compilation's assembly and all referenced assemblies (other than those that can only be referenced via an extern alias) using its canonical CLR metadata name. This lookup follows the following order: If the type is found in the compilation's assembly, that type is returned. Next, the core library (the library that defines System.Object and has no assembly references) is searched. If the type is found there, that type is returned. Finally, all remaining referenced non-extern assemblies are searched. If one and only one type matching the provided metadata name is found, that single type is returned. Accessibility is ignored for this check.	</td>	</tr>
+			<tr>	<th>	GetTypesByMetadataName(String)	</th>	<td>	Gets all types with the compilation's assembly and all referenced assemblies that have the given canonical CLR metadata name. Accessibility to the current assembly is ignored when searching for matching type names.</td>
+			</tr>
+			<tr>
+				<th>GetUnreferencedAssemblyIdentities(Diagnostic)</th>
+				<td>Given a Diagnostic reporting unreferenced AssemblyIdentitys, returns the actual AssemblyIdentity instances that were not referenced.</td>
+			</tr>
+			<tr>
+				<th>GetUsedAssemblyReferences(CancellationToken)</th>
+				<td>Unique metadata assembly references that are considered to be used by this compilation. For example, if a type declared in a referenced assembly is referenced in source code within this compilation, the reference is considered to be used. Etc. The returned set is a subset of references returned by References API. The result is undefined if the compilation contains errors.</td>
+			</tr>
+			<tr>
+				<th>HasImplicitConversion(ITypeSymbol, ITypeSymbol)</th>
+				<td>Returns true if there is an implicit (C#) or widening (VB) conversion from fromType to toType. Returns false if either fromType or toType is null, or if no such conversion exists.</td>
+			</tr>
+			<tr>
+				<th>IsSymbolAccessibleWithin(ISymbol, ISymbol, ITypeSymbol)</th>
+				<td>Checks if symbol is accessible from within within. An optional qualifier of type throughType is used to resolve protected access for instance members. All symbols are required to be from this compilation or some assembly referenced (References) by this compilation. within is required to be an INamedTypeSymbol or IAssemblySymbol.</td>
+			</tr>
+			<tr>
+				<th>RemoveAllReferences()</th>
+				<td>Creates a new compilation without any metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveAllSyntaxTrees()</th>
+				<td>Creates a new compilation without any syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>RemoveReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation without the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveReferences(MetadataReference[])</th>
+				<td>Creates a new compilation without the specified metadata references.</td>
+			</tr>
+			<tr>
+				<th>RemoveSyntaxTrees(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td>Creates a new compilation without the specified syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>RemoveSyntaxTrees(SyntaxTree[])</th>
+				<td>Creates a new compilation without the specified syntax trees. Preserves metadata info for use with trees added later.</td>
+			</tr>
+			<tr>
+				<th>ReplaceReference(MetadataReference, MetadataReference)</th>
+				<td>Creates a new compilation with an old metadata reference replaced with a new metadata reference.</td>
+			</tr>
+			<tr>
+				<th>ReplaceSyntaxTree(SyntaxTree, SyntaxTree)</th>
+				<td>Creates a new compilation with an old syntax tree replaced with a new syntax tree. Reuses metadata from old compilation object.</td>
+			</tr>
+			<tr>
+				<th>SyntaxTreeCommonFeatures(IEnumerable&lt;SyntaxTree&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ToMetadataReference(ImmutableArray&lt;String&gt;, Boolean)</th>
+				<td>Creates a metadata reference for this compilation.</td>
+			</tr>
+			<tr>
+				<th>WithAssemblyName(String)</th>
+				<td>Creates a compilation with the specified assembly name.</td>
+			</tr>
+			<tr>
+				<th>WithOptions(CompilationOptions)</th>
+				<td>Creates a new compilation with the specified compilation options.</td>
+			</tr>
+			<tr>
+				<th>WithReferences(IEnumerable&lt;MetadataReference&gt;)</th>
+				<td>Creates a new compilation with the specified references.</td>
+			</tr>
+			<tr>
+				<th>WithReferences(MetadataReference[])</th>
+				<td>Creates a new compilation with the specified references.</td>
+			</tr>
+			<tr>
+				<th>WithScriptCompilationInfo(ScriptCompilationInfo)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>WithAnalyzers(Compilation, ImmutableArray&lt;DiagnosticAnalyzer&gt;, AnalyzerOptions, CancellationToken)</th>
+				<td>Returns a new compilation with attached diagnostic analyzers.</td>
+			</tr>
+			<tr>
+				<th>WithAnalyzers(Compilation, ImmutableArray&lt;DiagnosticAnalyzer&gt;, CompilationWithAnalyzersOptions)</th>
+				<td>Returns a new compilation with attached diagnostic analyzers.</td>
+			</tr>
+			<tr>
+				<th>Emit(Compilation, String, String, String, String, IEnumerable&lt;ResourceDescription&gt;, CancellationToken)</th>
+				<td>Emit the IL for the compilation into the specified stream.</td>
+			</tr>
+			<tr>
+				<th>AliasImports(Compilation)</th>
+				<td>Gets the compilation AliasImports property.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(Compilation, ITypeSymbol, ITypeSymbol)</th>
+				<td>Determines what kind of conversion there is between the specified types.</td>
+			</tr>
+			<tr>
+				<th>GetSpecialType(Compilation, SpecialType)</th>
+				<td>Gets the special type symbol in current compilation.</td>
+			</tr>
+			<tr>
+				<th>MemberImports(Compilation)</th>
+				<td>Gets the compilation MemberImports property.</td>
+			</tr>
+			<tr>
+				<th>RootNamespace(Compilation)</th>
+				<td>Gets the compilation RootNamespace property.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.compilation?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="separator"></div>
+以下のプロパティ・メソッドをよく使用します。
+<table>
+	<tbody>
+		<tr>
+			<th>SyntaxTrees</th>
+			<td>コンパイル対象のドキュメントから生成される構文ツリー一覧を保持します。</td>
+		</tr>
+		<tr>
+			<th>GetSemanticModel(SyntaxTree, Boolean)</th>
+			<td>引数として渡した構文ツリーを対象としたセマンティックモデルを生成します。</td>
+		</tr>
+		<tr>
+			<th>GetSymbolsWithName(Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)</th>
+			<td>シンボル情報を名前から求めます。</td>
+		</tr>
+	</tbody>
+</table>
+<h2>セマンティックモデル</h2>
+「Compilation」内の構文ノードのツリーについて意味的な解析をするためのオブジェクトです。<br />「Compilation」オブジェクトの「GetSemanticModel」を使用することで取得可能です。<br />第一引数に対象となる構文ツリー情報を渡します。
+<code class="csharp">
+	IEnumerable&lt;Project&gt; projects = solution.Projects;
+	foreach (Project project in projects)
+	{
+		Compilation compiledProject = await project.GetCompilationAsync(); // ★★★
+		IEnumerable&lt;Document&gt; documents = project.Documents;
+		foreach (Document document in documents)
+		{
+			SemanticModel model = compiledProject.GetSemanticModel(await document.GetSyntaxTreeAsync()); // ★★★
+			SyntaxNode root = document.GetSyntaxRootAsync().Result;
+			IEnumerable&lt;SyntaxNode&gt; nodes = root.DescendantNodes().Where(a =&gt; FilterStatement(a) &amp;&amp; a.ToString().Contains("sql"));
+			foreach (SyntaxNode node in nodes)
+			{
+				Console.WriteLine(" _____ _____ _____ _____ _____ ");
+				Console.WriteLine($"{node}");
+				Console.WriteLine(" _____ _____ _____ _____ _____ ");
+			}
+		}
+	}
+</code>
+「SemanticModel」オブジェクトは以下のプロパティ・メソッドを有します。
+<div class="collapser" data-count="2">「SemanticModel」プロパティ</div>
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>Compilation</th>
+				<td>The compilation this model was obtained from.</td>
+			</tr>
+			<tr>
+				<th>CompilationCore</th>
+				<td>The compilation this model was obtained from.</td>
+			</tr>
+			<tr>
+				<th>IgnoresAccessibility</th>
+				<td>Returns true if this is a SemanticModel that ignores accessibility rules when answering semantic questions.</td>
+			</tr>
+			<tr>
+				<th>IsSpeculativeSemanticModel</th>
+				<td>Returns true if this is a speculative semantic model created with any of the TryGetSpeculativeSemanticModel methods.</td>
+			</tr>
+			<tr>
+				<th>Language</th>
+				<td>Gets the source language ("C#" or "Visual Basic").</td>
+			</tr>
+			<tr>
+				<th>OriginalPositionForSpeculation</th>
+				<td>If this is a speculative semantic model, returns the original position at which the speculative model was created. Otherwise, returns 0.</td>
+			</tr>
+			<tr>
+				<th>ParentModel</th>
+				<td>If this is a speculative semantic model, then returns its parent semantic model. Otherwise, returns null.</td>
+			</tr>
+			<tr>
+				<th>ParentModelCore</th>
+				<td>If this is a speculative semantic model, then returns its parent semantic model. Otherwise, returns null.</td>
+			</tr>
+			<tr>
+				<th>RootCore</th>
+				<td>Root of this semantic model</td>
+			</tr>
+			<tr>
+				<th>SyntaxTree</th>
+				<td>The syntax tree this model was obtained from.</td>
+			</tr>
+			<tr>
+				<th>SyntaxTreeCore</th>
+				<td>The syntax tree this model was obtained from.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.semanticmodel?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="collapser" data-count="2">「SemanticModel」メソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>AnalyzeControlFlowCore(SyntaxNode)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlowCore(SyntaxNode, SyntaxNode)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlowCore(SyntaxNode)</th>
+				<td>Analyze data-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlowCore(SyntaxNode, SyntaxNode)</th>
+				<td>Analyze data-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>GetAliasInfoCore(SyntaxNode, CancellationToken)</th>
+				<td>If "nameSyntax" resolves to an alias name, return the IAliasSymbol corresponding to A. Otherwise return null.</td>
+			</tr>
+			<tr>
+				<th>GetConstantValue(SyntaxNode, CancellationToken)</th>
+				<td>If the node provided has a constant value an Optional value will be returned with HasValue set to true and with Value set to the constant. If the node does not have an constant value, an Optional will be returned with HasValue set to false.</td>
+			</tr>
+			<tr>
+				<th>GetConstantValueCore(SyntaxNode, CancellationToken)</th>
+				<td>If the node provided has a constant value an Optional value will be returned with HasValue set to true and with Value set to the constant. If the node does not have an constant value, an Optional will be returned with HasValue set to false.</td>
+			</tr>
+			<tr>
+				<th>GetDeclarationDiagnostics(Nullable&lt;TextSpan&gt;, CancellationToken)</th>
+				<td>Get all of the declaration errors within the syntax tree associated with this object. Does not get errors involving incorrect syntax, compiling method bodies or initializers.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbolCore(SyntaxNode, CancellationToken)</th>
+				<td>Gets the symbol associated with a declaration syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbolsCore(SyntaxNode, CancellationToken)</th>
+				<td>Gets the symbol associated with a declaration syntax node. Unlike Microsoft.CodeAnalysis.SemanticModel.GetDeclaredSymbolForNode(Microsoft.CodeAnalysis.SyntaxNode,System.Threading.CancellationToken), this method returns all symbols declared by a given declaration syntax node. Specifically, in the case of field declaration syntax nodes, which can declare multiple symbols, this method returns all declared symbols.</td>
+			</tr>
+			<tr>
+				<th>GetDiagnostics(Nullable&lt;TextSpan&gt;, CancellationToken)</th>
+				<td>Get all the errors within the syntax tree associated with this object. Includes errors involving compiling method bodies or initializers, in addition to the errors returned by GetDeclarationDiagnostics.</td>
+			</tr>
+			<tr>
+				<th>GetEnclosingSymbol(Int32, CancellationToken)</th>
+				<td>Given a position in the SyntaxTree for this SemanticModel returns the innermost Symbol that the position is considered inside of.</td>
+			</tr>
+			<tr>
+				<th>GetEnclosingSymbolCore(Int32, CancellationToken)</th>
+				<td>Given a position in the SyntaxTree for this SemanticModel returns the innermost Symbol that the position is considered inside of.</td>
+			</tr>
+			<tr>
+				<th>GetMemberGroupCore(SyntaxNode, CancellationToken)</th>
+				<td>When getting information for a symbol that resolves to a method group or property group, from which a method is then chosen; the chosen method or property is present in Symbol; all methods in the group that was consulted are placed in this property.</td>
+			</tr>
+			<tr>
+				<th>GetMethodBodyDiagnostics(Nullable&lt;TextSpan&gt;, CancellationToken)</th>
+				<td>Get all of the method body and initializer errors within the syntax tree associated with this object. Does not get errors involving incorrect syntax or declarations.</td>
+			</tr>
+			<tr>
+				<th>GetNullableContext(Int32)</th>
+				<td>Gets the NullableContext at a position in the file.</td>
+			</tr>
+			<tr>
+				<th>GetOperation(SyntaxNode, CancellationToken)</th>
+				<td>Gets the operation corresponding to the expression or statement syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetOperationCore(SyntaxNode, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetPreprocessingSymbolInfo(SyntaxNode)</th>
+				<td>If nameSyntax is an identifier name syntax node, return the PreprocessingSymbolInfo corresponding to it.</td>
+			</tr>
+			<tr>
+				<th>GetPreprocessingSymbolInfoCore(SyntaxNode)</th>
+				<td>If nameSyntax is an identifier name syntax node, return the PreprocessingSymbolInfo corresponding to it.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeAliasInfoCore(Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the name in the context of the specified location and sees if it resolves to an alias name. If it does, return the AliasSymbol corresponding to it. Otherwise, return null.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfoCore(Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the node in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeTypeInfoCore(Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the node in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfoCore(SyntaxNode, CancellationToken)</th>
+				<td>Gets symbol information about a syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetSyntaxDiagnostics(Nullable&lt;TextSpan&gt;, CancellationToken)</th>
+				<td>Get all of the syntax errors within the syntax tree associated with this object. Does not get errors involving declarations or compiling method bodies or initializers.</td>
+			</tr>
+			<tr>
+				<th>GetTopmostNodeForDiagnosticAnalysis(ISymbol, SyntaxNode)</th>
+				<td>Takes a Symbol and syntax for one of its declaring syntax reference and returns the topmost syntax node to be used by syntax analyzer.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfoCore(SyntaxNode, CancellationToken)</th>
+				<td>Gets type information about a syntax node.</td>
+			</tr>
+			<tr>
+				<th>IsAccessible(Int32, ISymbol)</th>
+				<td>Determines if the symbol is accessible from the specified location.</td>
+			</tr>
+			<tr>
+				<th>IsAccessibleCore(Int32, ISymbol)</th>
+				<td>Determines if the symbol is accessible from the specified location.</td>
+			</tr>
+			<tr>
+				<th>IsEventUsableAsField(Int32, IEventSymbol)</th>
+				<td>Field-like events can be used as fields in types that can access private members of the declaring type of the event.</td>
+			</tr>
+			<tr>
+				<th>IsEventUsableAsFieldCore(Int32, IEventSymbol)</th>
+				<td>Field-like events can be used as fields in types that can access private members of the declaring type of the event.</td>
+			</tr>
+			<tr>
+				<th>LookupBaseMembers(Int32, String)</th>
+				<td>Gets the available base type members in the context of the specified location. Akin to calling LookupSymbols(Int32, INamespaceOrTypeSymbol, String, Boolean) with the container set to the immediate base type of the type in which position occurs. However, the accessibility rules are different: protected members of the base type will be visible. Consider the following example: public class Base { protected void M() { } } public class Derived : Base { void Test(Base b) { b.M(); // Error - cannot access protected member. base.M(); } } Protected members of an instance of another type are only accessible if the instance is known to be "this" instance (as indicated by the "base" keyword).</td>
+			</tr>
+			<tr>
+				<th>LookupBaseMembersCore(Int32, String)</th>
+				<td>Backing implementation of LookupBaseMembers(Int32, String).</td>
+			</tr>
+			<tr>
+				<th>LookupLabels(Int32, String)</th>
+				<td>Gets the available named label symbols in the context of the specified location and optional container. Only members that are accessible and visible from the given location are returned.</td>
+			</tr>
+			<tr>
+				<th>LookupLabelsCore(Int32, String)</th>
+				<td>Backing implementation of LookupLabels(Int32, String).</td>
+			</tr>
+			<tr>
+				<th>LookupNamespacesAndTypes(Int32, INamespaceOrTypeSymbol, String)</th>
+				<td>Gets the available named namespace and type symbols in the context of the specified location and optional container. Only members that are accessible and visible from the given location are returned.</td>
+			</tr>
+			<tr>
+				<th>LookupNamespacesAndTypesCore(Int32, INamespaceOrTypeSymbol, String)</th>
+				<td>Backing implementation of LookupNamespacesAndTypes(Int32, INamespaceOrTypeSymbol, String).</td>
+			</tr>
+			<tr>
+				<th>LookupStaticMembers(Int32, INamespaceOrTypeSymbol, String)</th>
+				<td>Gets the available named static member symbols in the context of the specified location and optional container. Only members that are accessible and visible from the given location are returned. Non-reduced extension methods are considered, since they are static methods.</td>
+			</tr>
+			<tr>
+				<th>LookupStaticMembersCore(Int32, INamespaceOrTypeSymbol, String)</th>
+				<td>Backing implementation of LookupStaticMembers(Int32, INamespaceOrTypeSymbol, String).</td>
+			</tr>
+			<tr>
+				<th>LookupSymbols(Int32, INamespaceOrTypeSymbol, String, Boolean)</th>
+				<td>Gets the available named symbols in the context of the specified location and optional container. Only symbols that are accessible and visible from the given location are returned.</td>
+			</tr>
+			<tr>
+				<th>LookupSymbolsCore(Int32, INamespaceOrTypeSymbol, String, Boolean)</th>
+				<td>Backing implementation of LookupSymbols(Int32, INamespaceOrTypeSymbol, String, Boolean).</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, StatementSyntax)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, StatementSyntax, StatementSyntax)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, ConstructorInitializerSyntax)</th>
+				<td>Analyze data-flow within a ConstructorInitializerSyntax.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, ExpressionSyntax)</th>
+				<td>Analyze data-flow within an ExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, PrimaryConstructorBaseTypeSyntax)</th>
+				<td>Analyze data-flow within a ArgumentList initializer.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, StatementSyntax)</th>
+				<td>Analyze data-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, StatementSyntax, StatementSyntax)</th>
+				<td>Analyze data-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol, Boolean)</th>
+				<td>Determines what type of conversion, if any, would be used if a given expression was converted to a given type. If isExplicitInSource is true, the conversion produced is that which would be used if the conversion were done for a cast expression.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol, Boolean)</th>
+				<td>Determines what type of conversion, if any, would be used if a given expression was converted to a given type. If isExplicitInSource is true, the conversion produced is that which would be used if the conversion were done for a cast expression.</td>
+			</tr>
+			<tr>
+				<th>GetAliasInfo(SemanticModel, IdentifierNameSyntax, CancellationToken)</th>
+				<td>If nameSyntax resolves to an alias name, return the AliasSymbol corresponding to A. Otherwise return null.</td>
+			</tr>
+			<tr>
+				<th>GetAwaitExpressionInfo(SemanticModel, AwaitExpressionSyntax)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetCollectionInitializerSymbolInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Returns what 'Add' method symbol(s), if any, corresponds to the given expression syntax within Initializer.</td>
+			</tr>
+			<tr>
+				<th>GetConstantValue(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetConversion(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AccessorDeclarationSyntax, CancellationToken)</th>
+				<td>Given a syntax node that declares a property or member accessor, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AnonymousObjectCreationExpressionSyntax, CancellationToken)</th>
+				<td>Given a syntax node of anonymous object creation expression, get the anonymous object type symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AnonymousObjectMemberDeclaratorSyntax, CancellationToken)</th>
+				<td>Given a syntax node of anonymous object creation initializer, get the anonymous object property symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ArgumentSyntax, CancellationToken)</th>
+				<td>Given a syntax node of a tuple argument, get the tuple element symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, BaseMethodDeclarationSyntax, CancellationToken)</th>
+				<td>Given a base method declaration syntax, get the corresponding method symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, BasePropertyDeclarationSyntax, CancellationToken)</th>
+				<td>Given a syntax node that declares a property, indexer or an event, get the corresponding declared symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, BaseTypeDeclarationSyntax, CancellationToken)</th>
+				<td>Given a type declaration, get the corresponding type symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, CatchDeclarationSyntax, CancellationToken)</th>
+				<td>Given a catch declaration, get the symbol for the exception variable</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, CompilationUnitSyntax, CancellationToken)</th>
+				<td>Given a compilation unit syntax, get the corresponding Simple Program entry point symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, DelegateDeclarationSyntax, CancellationToken)</th>
+				<td>Given a delegate declaration, get the corresponding type symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EnumMemberDeclarationSyntax, CancellationToken)</th>
+				<td>Given a enum member declaration, get the corresponding field symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EventDeclarationSyntax, CancellationToken)</th>
+				<td>Given a syntax node that declares a (custom) event, get the corresponding event symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ExternAliasDirectiveSyntax, CancellationToken)</th>
+				<td>Given an extern alias declaration get the corresponding symbol for the alias that was introduced.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, FileScopedNamespaceDeclarationSyntax, CancellationToken)</th>
+				<td>Given a namespace declaration syntax node, get the corresponding namespace symbol for the declaration assembly.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ForEachStatementSyntax, CancellationToken)</th>
+				<td>Given a foreach statement, get the symbol for the iteration variable</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, IndexerDeclarationSyntax, CancellationToken)</th>
+				<td>Given a syntax node that declares an indexer, get the corresponding declared symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, JoinIntoClauseSyntax, CancellationToken)</th>
+				<td>Get the query range variable declared in a join into clause.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, LabeledStatementSyntax, CancellationToken)</th>
+				<td>Given a labeled statement syntax, get the corresponding label symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, MemberDeclarationSyntax, CancellationToken)</th>
+				<td>Given a member declaration syntax, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, NamespaceDeclarationSyntax, CancellationToken)</th>
+				<td>Given a namespace declaration syntax node, get the corresponding namespace symbol for the declaration assembly.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ParameterSyntax, CancellationToken)</th>
+				<td>Given a parameter declaration syntax node, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, PropertyDeclarationSyntax, CancellationToken)</th>
+				<td>Given a syntax node that declares a property, get the corresponding declared symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, QueryClauseSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, QueryContinuationSyntax, CancellationToken)</th>
+				<td>Get the query range variable declared in a query continuation clause.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, SingleVariableDesignationSyntax, CancellationToken)</th>
+				<td>Given a variable declarator syntax, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, SwitchLabelSyntax, CancellationToken)</th>
+				<td>Given a switch label syntax, get the corresponding label symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TupleElementSyntax, CancellationToken)</th>
+				<td>Given a tuple element syntax, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TupleExpressionSyntax, CancellationToken)</th>
+				<td>Given a syntax node of tuple expression, get the tuple type symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TypeParameterSyntax, CancellationToken)</th>
+				<td>Given a type parameter declaration (field or method), get the corresponding symbol</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, UsingDirectiveSyntax, CancellationToken)</th>
+				<td>Given a using declaration get the corresponding symbol for the using alias that was introduced.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, VariableDeclaratorSyntax, CancellationToken)</th>
+				<td>Given a variable declarator syntax, get the corresponding symbol.</td>
+			</tr>
+			<tr>
+				<th>GetDeconstructionInfo(SemanticModel, AssignmentExpressionSyntax)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetDeconstructionInfo(SemanticModel, ForEachVariableStatementSyntax)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetForEachStatementInfo(SemanticModel, CommonForEachStatementSyntax)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetForEachStatementInfo(SemanticModel, ForEachStatementSyntax)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetIndexerGroup(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Returns the list of accessible, non-hidden indexers that could be invoked with the given expression as receiver.</td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, ConstructorInitializerSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetQueryClauseInfo(SemanticModel, QueryClauseSyntax, CancellationToken)</th>
+				<td>Gets the semantic information associated with a query clause.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeAliasInfo(SemanticModel, Int32, IdentifierNameSyntax, SpeculativeBindingOption)</th>
+				<td>Binds the name in the context of the specified location and sees if it resolves to an alias name. If it does, return the AliasSymbol corresponding to it. Otherwise, return null.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeConversion(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, AttributeSyntax)</th>
+				<td>Bind the attribute in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about an attribute that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, ConstructorInitializerSyntax)</th>
+				<td>Bind the constructor initializer in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about a constructor initializer that did not actually appear in the source code. NOTE: This will only work in locations where there is already a constructor initializer.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, CrefSyntax, SpeculativeBindingOption)</th>
+				<td>Binds the CrefSyntax expression in the context of the specified location and gets symbol information. This method is used to get symbol information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td>Binds the expression in the context of the specified location and gets symbol information. This method is used to get symbol information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, PrimaryConstructorBaseTypeSyntax)</th>
+				<td>Bind the constructor initializer in the context of the specified location and get semantic information about symbols. This method is used to get semantic information about a constructor initializer that did not actually appear in the source code. NOTE: This will only work in locations where there is already a constructor initializer. PrimaryConstructorBaseTypeSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeTypeInfo(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td>Binds the expression in the context of the specified location and gets type information. This method is used to get type information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td>Returns what symbol(s), if any, the given attribute syntax bound to in the program.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, ConstructorInitializerSyntax, CancellationToken)</th>
+				<td>Returns what symbol(s), if any, the given constructor initializer syntax bound to in the program.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, CrefSyntax, CancellationToken)</th>
+				<td>Gets the semantic information associated with a documentation comment cref.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Returns what symbol(s), if any, the given expression syntax bound to in the program. An AliasSymbol will never be returned by this method. What the alias refers to will be returned instead. To get information about aliases, call GetAliasInfo. If binding the type name C in the expression "new C(...)" the actual constructor bound to will be returned (or all constructor if overload resolution failed). This occurs as long as C unambiguously binds to a single type that has a constructor. If C ambiguously binds to multiple types, or C binds to a static class, then type(s) are returned.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, OrderingSyntax, CancellationToken)</th>
+				<td>Gets the semantic information for an ordering clause in an orderby query clause.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, PrimaryConstructorBaseTypeSyntax, CancellationToken)</th>
+				<td>Returns what symbol(s), if any, the given constructor initializer syntax bound to in the program.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, SelectOrGroupClauseSyntax, CancellationToken)</th>
+				<td>Gets the semantic information associated with a select or group clause.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td>Gets type information about an attribute.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, ConstructorInitializerSyntax, CancellationToken)</th>
+				<td>Gets type information about a constructor initializer.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Gets type information about an expression.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, SelectOrGroupClauseSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, ArrowExpressionClauseSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with an expression body that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of an expression body that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, AttributeSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with an attribute that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of an attribute that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, ConstructorInitializerSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a constructor initializer that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a constructor initializer that did not appear in source code. NOTE: This will only work in locations where there is already a constructor initializer.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, CrefSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a cref syntax node that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a cref syntax that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, EqualsValueClauseSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with an initializer that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a field initializer or default parameter value that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, PrimaryConstructorBaseTypeSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a constructor initializer that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a constructor initializer that did not appear in source code. NOTE: This will only work in locations where there is already a constructor initializer.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, StatementSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a statement that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a statement that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, TypeSyntax, SemanticModel, SpeculativeBindingOption)</th>
+				<td>Get a SemanticModel object that is associated with a type syntax node that did not appear in this source code. This can be used to get detailed semantic information about sub-parts of a type syntax that did not appear in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModelForMethodBody(SemanticModel, Int32, AccessorDeclarationSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a method body that did not appear in this source code. Given position must lie within an existing method body of the Root syntax node for this SemanticModel. Locals and labels declared within this existing method body are not considered to be in scope of the speculated method body.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModelForMethodBody(SemanticModel, Int32, BaseMethodDeclarationSyntax, SemanticModel)</th>
+				<td>Get a SemanticModel object that is associated with a method body that did not appear in this source code. Given position must lie within an existing method body of the Root syntax node for this SemanticModel. Locals and labels declared within this existing method body are not considered to be in scope of the speculated method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, SyntaxNode)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, SyntaxNode, SyntaxNode)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, SyntaxNode)</th>
+				<td>Analyze data-flow within a part of a method body. note (for C#): ConstructorInitializerSyntax and PrimaryConstructorBaseTypeSyntax are treated by this API as regular statements</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, SyntaxNode, SyntaxNode)</th>
+				<td>Analyze data-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>GetAliasInfo(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>If "nameSyntax" resolves to an alias name, return the IAliasSymbol corresponding to A. Otherwise return null.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>Gets the symbol associated with a declaration syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>Gets a list of method or indexed property symbols for a syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeAliasInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the name in the context of the specified location and sees if it resolves to an alias name. If it does, return the AliasSymbol corresponding to it. Otherwise, return null.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the node in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeTypeInfo(SemanticModel, Int32, SyntaxNode, SpeculativeBindingOption)</th>
+				<td>Binds the node in the context of the specified location and get semantic information such as type, symbols and diagnostics. This method is used to get semantic information about an expression that did not actually appear in the source code.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>Gets symbol information about a syntax node.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>Gets type information about a syntax node.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, StatementSyntax)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeControlFlow(SemanticModel, StatementSyntax, StatementSyntax)</th>
+				<td>Analyze control-flow within a part of a method body.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, ExpressionSyntax)</th>
+				<td>Analyze data-flow within an expression.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, StatementSyntax)</th>
+				<td>Analyze data-flow within a statement.</td>
+			</tr>
+			<tr>
+				<th>AnalyzeDataFlow(SemanticModel, StatementSyntax, StatementSyntax)</th>
+				<td>Analyze data-flow within a set of contiguous statements.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(SemanticModel, ExpressionSyntax, ITypeSymbol)</th>
+				<td>Determines what kind of conversion there is between the expression syntax and a specified type.</td>
+			</tr>
+			<tr>
+				<th>ClassifyConversion(SemanticModel, Int32, ExpressionSyntax, ITypeSymbol)</th>
+				<td>Determines what kind of conversion there is between the expression syntax and a specified type.</td>
+			</tr>
+			<tr>
+				<th>GetAggregateClauseSymbolInfo(SemanticModel, AggregateClauseSyntax, CancellationToken)</th>
+				<td>Returns information about methods associated with AggregateClauseSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetAliasInfo(SemanticModel, IdentifierNameSyntax, CancellationToken)</th>
+				<td>If "nameSyntax" resolves to an alias name, return the AliasSymbol corresponding to A. Otherwise return null.</td>
+			</tr>
+			<tr>
+				<th>GetAwaitExpressionInfo(SemanticModel, AwaitExpressionSyntax, CancellationToken)</th>
+				<td>Gets the corresponding AwaitExpressionInfo containing semantic info for a specified AwaitExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetCollectionInitializerSymbolInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Returns what 'Add' method symbol(s), if any, corresponds to the given expression syntax within Initializer.</td>
+			</tr>
+			<tr>
+				<th>GetCollectionRangeVariableSymbolInfo(SemanticModel, CollectionRangeVariableSyntax, CancellationToken)</th>
+				<td>Returns information about methods associated with CollectionRangeVariableSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetConversion(SemanticModel, SyntaxNode, CancellationToken)</th>
+				<td>Gets the corresponding TypeInfo containing semantic info for a specified ExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AccessorStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding MethodSymbol for a specified AccessorStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AggregationRangeVariableSyntax, CancellationToken)</th>
+				<td>Gets the corresponding RangeVariableSymbol for a specified AggregationRangeVariableSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, AnonymousObjectCreationExpressionSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified AnonymousObjectCreationExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, CatchStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding LocalSymbol for a specified CatchStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, CollectionRangeVariableSyntax, CancellationToken)</th>
+				<td>Gets the corresponding RangeVariableSymbol for a specified CollectionRangeVariableSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, DeclareStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding symbol for a specified DeclareStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, DelegateStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified DelegateStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EnumBlockSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified EnumBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EnumMemberDeclarationSyntax, CancellationToken)</th>
+				<td>Gets the corresponding FieldSymbol for a specified EnumMemberDeclarationSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EnumStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified EnumStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EventBlockSyntax, CancellationToken)</th>
+				<td>Gets the corresponding EventSymbol for a specified EventBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, EventStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding EventSymbol for a specified EventStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ExpressionRangeVariableSyntax, CancellationToken)</th>
+				<td>Gets the corresponding RangeVariableSymbol for a specified ExpressionRangeVariableSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, FieldInitializerSyntax, CancellationToken)</th>
+				<td>Gets the corresponding PropertySymbol for a specified FieldInitializerSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, LabelStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding LabelSymbol for a specified LabelStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, MethodBlockBaseSyntax, CancellationToken)</th>
+				<td>Gets the corresponding MethodSymbol for a specified MethodBlockBaseSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, MethodStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding MethodSymbol for a specified MethodStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ModifiedIdentifierSyntax, CancellationToken)</th>
+				<td>Gets the corresponding symbol for a specified identifier.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, NamespaceBlockSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamespaceSymbol for a specified NamespaceBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, NamespaceStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamespaceSymbol for a specified NamespaceStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, OperatorStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding MethodSymbol for a specified OperatorStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, ParameterSyntax, CancellationToken)</th>
+				<td>Gets the corresponding ParameterSymbol for a specified ParameterSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, PropertyBlockSyntax, CancellationToken)</th>
+				<td>Gets the corresponding PropertySymbol for a specified PropertyBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, PropertyStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding PropertySymbol for a specified PropertyStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, SimpleImportsClauseSyntax, CancellationToken)</th>
+				<td>Gets the corresponding AliasSymbol for a specified AliasImportsClauseSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, SubNewStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding MethodSymbol for a specified SubNewStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TupleElementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding symbol for a specified tuple element.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TypeBlockSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified TypeBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TypeParameterSyntax, CancellationToken)</th>
+				<td>Gets the corresponding TypeParameterSymbol Symbol for a specified TypeParameterSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetDeclaredSymbol(SemanticModel, TypeStatementSyntax, CancellationToken)</th>
+				<td>Gets the corresponding NamedTypeSymbol for a specified TypeStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetForEachStatementInfo(SemanticModel, ForEachBlockSyntax)</th>
+				<td>Gets the corresponding ForEachStatementInfo containing semantic info for a specified ForBlockSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetForEachStatementInfo(SemanticModel, ForEachStatementSyntax)</th>
+				<td>Gets the corresponding ForEachStatementInfo containing semantic info for a specified ForEachStatementSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td>Gets the corresponding ImmutableArray of Symbols for a specified AttributeSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetMemberGroup(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Gets the corresponding ImmutableArray of Symbols for a specified ExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetPreprocessingSymbolInfo(SemanticModel, IdentifierNameSyntax)</th>
+				<td>If the given node is within a preprocessing directive, gets the preprocessing symbol info for it.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeAliasInfo(SemanticModel, Int32, IdentifierNameSyntax, SpeculativeBindingOption)</th>
+				<td>Binds the name in the context of the specified location and sees if it resolves to an alias name. If it does, return the AliasSymbol corresponding to it. Otherwise, return null.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeConversion(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeMemberGroup(SemanticModel, Int32, ExpressionSyntax)</th>
+				<td>Gets the corresponding ImmutableArray of Symbols for a speculating an ExpressionSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, AttributeSyntax)</th>
+				<td>Gets the corresponding SymbolInfo containing semantic info for specified AttributeSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeSymbolInfo(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td>Gets the corresponding SymbolInfo containing semantic info for a specified AttributeSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSpeculativeTypeInfo(SemanticModel, Int32, ExpressionSyntax, SpeculativeBindingOption)</th>
+				<td>Gets the corresponding TypeInfo containing semantic info for a speculating an ExpressionSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td>Gets the corresponding SymbolInfo containing semantic info for a specified AttributeSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, CrefReferenceSyntax, CancellationToken)</th>
+				<td>Gets the corresponding SymbolInfo containing semantic info for a specified CrefReferenceSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, ExpressionRangeVariableSyntax, CancellationToken)</th>
+				<td>Returns Select method associated with ExpressionRangeVariableSyntax within a LetClauseSyntax, or Microsoft.CodeAnalysis.SymbolInfo.None otherwise if none is.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td>Gets the corresponding SymbolInfo containing semantic info for a specified ExpressionSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, FunctionAggregationSyntax, CancellationToken)</th>
+				<td>Returns aggregate function associated with FunctionAggregationSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, OrderingSyntax, CancellationToken)</th>
+				<td>Returns OrderBy/OrderByDescending/ThenBy/ThenByDescending method associated with OrderingSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetSymbolInfo(SemanticModel, QueryClauseSyntax, CancellationToken)</th>
+				<td>Returns symbol information for a query clause.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, AttributeSyntax, CancellationToken)</th>
+				<td>Gets the corresponding TypeInfo containing semantic info for a specified AttributeSyntax.</td>
+			</tr>
+			<tr>
+				<th>GetTypeInfo(SemanticModel, ExpressionSyntax, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>OptionCompareText(SemanticModel)</th>
+				<td>Gets the Semantic Model OptionCompareText property.</td>
+			</tr>
+			<tr>
+				<th>OptionExplicit(SemanticModel)</th>
+				<td>Gets the Semantic Model OptionExplicit property.</td>
+			</tr>
+			<tr>
+				<th>OptionInfer(SemanticModel)</th>
+				<td>Gets the Semantic Model OptionInfer property.</td>
+			</tr>
+			<tr>
+				<th>OptionStrict(SemanticModel)</th>
+				<td>Gets the Semantic Model OptionStrict property.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, AttributeSyntax, SemanticModel)</th>
+				<td>Gets the SemanticModel for a AttributeSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, EqualsValueSyntax, SemanticModel)</th>
+				<td>Gets the SemanticModel for a EqualsValueSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, ExecutableStatementSyntax, SemanticModel)</th>
+				<td>Gets the SemanticModel for a ExecutableStatementSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, RangeArgumentSyntax, SemanticModel)</th>
+				<td>Gets the SemanticModel for a RangeArgumentSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModel(SemanticModel, Int32, TypeSyntax, SemanticModel, SpeculativeBindingOption)</th>
+				<td>Gets the SemanticModel for a TypeSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+			<tr>
+				<th>TryGetSpeculativeSemanticModelForMethodBody(SemanticModel, Int32, MethodBlockBaseSyntax, SemanticModel)</th>
+				<td>Gets the SemanticModel for a MethodBlockBaseSyntax at a given position, used in Semantic Info for items not appearing in source code.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.semanticmodel?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="separator"></div>
+セマンティックモデルからシンボル情報を取得するためには、「GetSymbolInfo」メソッドで取得可能な「SymbolInfo」オブジェクトの「Symbol」を参照します。<br />「ISymbol」型のデータです。
+<code class="csharp">
+	ISymbol symbol = model.GetSymbolInfo(node).Symbol;
+</code>
+「ISymbol」オブジェクトは以下のプロパティ・メソッドを有します。
+<div class="collapser">「ISymbol」プロパティ</div>
+<div class="scroll-600w">
+	<table>
+		<caption>プロパティ</caption>
+		<tbody>
+			<tr>
+				<th>CanBeReferencedByName</th>
+				<td>Returns true if this symbol can be referenced by its name in code.</td>
+			</tr>
+			<tr>
+				<th>ContainingAssembly</th>
+				<td>Gets the IAssemblySymbol for the containing assembly. Returns null if the symbol is shared across multiple assemblies.</td>
+			</tr>
+			<tr>
+				<th>ContainingModule</th>
+				<td>Gets the IModuleSymbol for the containing module. Returns null if the symbol is shared across multiple modules.</td>
+			</tr>
+			<tr>
+				<th>ContainingNamespace</th>
+				<td>Gets the INamespaceSymbol for the nearest enclosing namespace. Returns null if the symbol isn't contained in a namespace.	</td>	</tr>
+			<tr>	<th>	ContainingSymbol	</th>	<td>	Gets the ISymbol for the immediately containing symbol.	</td>	</tr>
+			<tr>	<th>	ContainingType	</th>	<td>	Gets the INamedTypeSymbol for the containing type. Returns null if the symbol is not contained within a type.	</td>	</tr>
+			<tr>	<th>	DeclaredAccessibility	</th>	<td>	Gets a Accessibility indicating the declared accessibility for the symbol. Returns NotApplicable if no accessibility is declared.	</td>	</tr>
+			<tr>	<th>	DeclaringSyntaxReferences	</th>	<td>	Get the syntax node(s) where this symbol was declared in source. Some symbols (for example, partial classes) may be defined in more than one location. This property should return one or more syntax nodes only if the symbol was declared in source code and also was not implicitly declared (see the IsImplicitlyDeclared property). Note that for namespace symbol, the declaring syntax might be declaring a nested namespace. For example, the declaring syntax node for N1 in "namespace N1.N2 {...}" is the entire NamespaceDeclarationSyntax for N1.N2. For the global namespace, the declaring syntax will be the CompilationUnitSyntax.	</td>	</tr>
+			<tr>	<th>	HasUnsupportedMetadata	</th>	<td>	Indicates that this symbol uses metadata that cannot be supported by the language. Examples include: Pointer types in VB ByRef return type Required custom modifiers This is distinguished from, for example, references to metadata symbols defined in assemblies that weren't referenced. Symbols where this returns true can never be used successfully, and thus should never appear in any IDE feature. This is set for metadata symbols, as follows: Type - if a type is unsupported (for example, a pointer type) Method - parameter or return type is unsupported Field - type is unsupported Event - type is unsupported Property - type is unsupported Parameter - type is unsupported</td>
+			</tr>
+			<tr>
+				<th>IsAbstract</th>
+				<td>Gets a value indicating whether the symbol is abstract.</td>
+			</tr>
+			<tr>
+				<th>IsDefinition</th>
+				<td>Gets a value indicating whether the symbol is the original definition. Returns false if the symbol is derived from another symbol, by type substitution for instance.</td>
+			</tr>
+			<tr>
+				<th>IsExtern</th>
+				<td>Gets a value indicating whether the symbol is defined externally.</td>
+			</tr>
+			<tr>
+				<th>IsImplicitlyDeclared</th>
+				<td>Returns true if this symbol was automatically created by the compiler, and does not have an explicit corresponding source code declaration.</td>
+			</tr>
+			<tr>
+				<th>IsOverride</th>
+				<td>Gets a value indicating whether the symbol is an override of a base class symbol.</td>
+			</tr>
+			<tr>
+				<th>IsSealed</th>
+				<td>Gets a value indicating whether the symbol is sealed.</td>
+			</tr>
+			<tr>
+				<th>IsStatic</th>
+				<td>Gets a value indicating whether the symbol is static.</td>
+			</tr>
+			<tr>
+				<th>IsVirtual</th>
+				<td>Gets a value indicating whether the symbol is virtual.</td>
+			</tr>
+			<tr>
+				<th>Kind</th>
+				<td>Gets the SymbolKind indicating what kind of symbol it is.</td>
+			</tr>
+			<tr>
+				<th>Language</th>
+				<td>Gets the source language ("C#" or "Visual Basic").</td>
+			</tr>
+			<tr>
+				<th>Locations</th>
+				<td>Gets the locations where the symbol was originally defined, either in source or metadata. Some symbols (for example, partial classes) may be defined in more than one location.</td>
+			</tr>
+			<tr>
+				<th>MetadataName</th>
+				<td>Gets the name of a symbol as it appears in metadata. Most of the time, this is the same as the Name property, with the following exceptions: The metadata name of generic types includes the "`1", "`2" etc. suffix that indicates the number of type parameters (it does not include, however, names of containing types or namespaces). The metadata name of explicit interface names have spaces removed, compared to the name property. The length of names is limited to not exceed metadata restrictions.</td>
+			</tr>
+			<tr>
+				<th>MetadataToken</th>
+				<td>Gets the metadata token associated with this symbol, or 0 if the symbol is not loaded from metadata.</td>
+			</tr>
+			<tr>
+				<th>Name</th>
+				<td>Gets the symbol name. Returns the empty string if unnamed.</td>
+			</tr>
+			<tr>
+				<th>OriginalDefinition</th>
+				<td>Gets the ISymbol for the original definition of the symbol. If this symbol is derived from another symbol, by type substitution for instance, this gets the original symbol, as it was defined in source or metadata.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.isymbol?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="collapser">「ISymbol」メソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>Accept(SymbolVisitor)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Accept&lt;TResult&gt;(SymbolVisitor&lt;TResult&gt;)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Equals(ISymbol, SymbolEqualityComparer)</th>
+				<td>Determines if this symbol is equal to another, according to the rules of the provided SymbolEqualityComparer</td>
+			</tr>
+			<tr>
+				<th>GetAttributes()</th>
+				<td>Gets the attributes for the symbol. Returns an empty IEnumerable&lt;T&gt; if there are no attributes.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentationCommentId()</th>
+				<td>Returns the Documentation Comment ID for the symbol, or null if the symbol doesn't support documentation comments.</td>
+			</tr>
+			<tr>
+				<th>GetDocumentationCommentXml(CultureInfo, Boolean, CancellationToken)</th>
+				<td>Gets the XML (as text) for the comment associated with the symbol.</td>
+			</tr>
+			<tr>
+				<th>ToDisplayParts(SymbolDisplayFormat)</th>
+				<td>Convert a symbol to an array of string parts, each of which has a kind. Useful for colorizing the display string.</td>
+			</tr>
+			<tr>
+				<th>ToDisplayString(SymbolDisplayFormat)</th>
+				<td>Converts the symbol to a string representation.</td>
+			</tr>
+			<tr>
+				<th>ToMinimalDisplayParts(SemanticModel, Int32, SymbolDisplayFormat)</th>
+				<td>Convert a symbol to an array of string parts, each of which has a kind. May be tailored to a specific location in the source code. Useful for colorizing the display string.</td>
+			</tr>
+			<tr>
+				<th>ToMinimalDisplayString(SemanticModel, Int32, SymbolDisplayFormat)</th>
+				<td>Convert a symbol to a string that can be displayed to the user. May be tailored to a specific location in the source code.</td>
+			</tr>
+			<tr>
+				<th>IsMustOverride(ISymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>IsNotOverridable(ISymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>IsOverridable(ISymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>IsOverrides(ISymbol)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>IsShared(ISymbol)</th>
+				<td>Determines if symbol is Shared.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/microsoft.codeanalysis.isymbol?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<h2>定義の取得</h2>
+「Locations」プロパティでは当該シンボルが定義された位置を表します。<br />「IdentifierName」の構文ノードに対してセマンティックモデルから「ISymbol」を生成し、そこから「Location」プロパティを参照することで、当該ノード(変数等)が定義された場所を特定することが可能です。<br /><br />では、「sql」という文字が含まれる文一覧から、当該文を構成している変数等一覧を洗い出し、その定義元を表示してみましょう♪
+<code class="csharp">
+	SemanticModel model = compiledProject.GetSemanticModel(await document.GetSyntaxTreeAsync());
+	SyntaxNode root = document.GetSyntaxRootAsync().Result;
+	IEnumerable&lt;SyntaxNode&gt; nodes = root.DescendantNodes().Where(a =&gt; FilterStatement(a) && a.ToString().Contains("sql"));
+	foreach (SyntaxNode node in nodes)
+	{
+		Console.WriteLine(" _____ _____ _____ _____ _____ ");
+		Console.WriteLine(node.ToString());
+		IEnumerable&lt;SyntaxNode&gt; items = node.DescendantNodes().Where(a =&gt; a.IsKind(SyntaxKind.IdentifierName));
+		foreach (SyntaxNode item in items)
+		{
+			IEnumerable&lt;Location&gt; Ilocs = model.GetSymbolInfo(item).Symbol.Locations;
+			foreach (Location location in Ilocs)
+			{
+				if (location.SourceTree == null) continue;
+				SyntaxNode defNode = location.SourceTree.GetRoot().FindNode(location.SourceSpan);
+				while (true)
+				{
+					defNode = defNode.Parent;
+					if (defNode == null) break;
+					if (FilterStatement(defNode)) break;
+				}
+				if (defNode == null) continue;
+				Console.WriteLine($"\t{defNode} ___ {location.GetLineSpan().Path}({location.GetLineSpan().StartLinePosition.Line})");
+			}
+		}
+		Console.WriteLine(" _____ _____ _____ _____ _____ ");
+	}
+</code>
+<img src="/?S0251/ISymbol_Location.gif" alt="ISymbol Location" />
+<h2>全ての参照の取得</h2>
+「SymbolFinder」静的クラスを使用します。<br />「SymbolFinder」クラスには以下のメソッドが搭載されています。
+<div class="collapser" data-count="2">「SymbolFinder」メソッド</div>
+<div class="scroll-600w">
+	<table>
+		<caption>メソッド</caption>
+		<tbody>
+			<tr>
+				<th>FindCallersAsync(ISymbol, Solution, CancellationToken)</th>
+				<td>Finds all the callers of a specified symbol.</td>
+			</tr>
+			<tr>
+				<th>FindCallersAsync(ISymbol, Solution, IImmutableSet&lt;Document&gt;, CancellationToken)</th>
+				<td>Finds all the callers of a specified symbol.</td>
+			</tr>
+			<tr>
+				<th>FindDeclarationsAsync(Project, String, Boolean, CancellationToken)</th>
+				<td>Find the declared symbols from either source, referenced projects or metadata assemblies with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindDeclarationsAsync(Project, String, Boolean, SymbolFilter, CancellationToken)</th>
+				<td>Find the declared symbols from either source, referenced projects or metadata assemblies with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindDerivedClassesAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Finds the derived classes of the given type. Implementations of an interface are not considered "derived", but can be found with FindImplementationsAsync(ISymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken).</td>
+			</tr>
+			<tr>
+				<th>FindDerivedClassesAsync(INamedTypeSymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Finds all the derived classes of the given type. Implementations of an interface are not considered "derived", but can be found with FindImplementationsAsync(ISymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken).</td>
+			</tr>
+			<tr>
+				<th>FindDerivedInterfacesAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Finds the derived interfaces of the given interfaces.</td>
+			</tr>
+			<tr>
+				<th>FindImplementationsAsync(INamedTypeSymbol, Solution, Boolean, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Finds the accessible class or struct types that implement the given interface.</td>
+			</tr>
+			<tr>
+				<th>FindImplementationsAsync(ISymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Finds all the accessible symbols that implement an interface or interface member. For an INamedTypeSymbol this will be both immediate and transitive implementations.</td>
+			</tr>
+			<tr>
+				<th>FindImplementedInterfaceMembersAsync(ISymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Find symbols for declarations that implement members of the specified interface symbol</td>
+			</tr>
+			<tr>
+				<th>FindOverridesAsync(ISymbol, Solution, IImmutableSet&lt;Project&gt;, CancellationToken)</th>
+				<td>Find symbols for members that override the specified member symbol.</td>
+			</tr>
+			<tr>
+				<th>FindReferencesAsync(ISymbol, Solution, CancellationToken)</th>
+				<td>Finds all references to a symbol throughout a solution</td>
+			</tr>
+			<tr>
+				<th>FindReferencesAsync(ISymbol, Solution, IFindReferencesProgress, IImmutableSet&lt;Document&gt;, CancellationToken)</th>
+				<td>Finds all references to a symbol throughout a solution</td>
+			</tr>
+			<tr>
+				<th>FindReferencesAsync(ISymbol, Solution, IImmutableSet&lt;Document&gt;, CancellationToken)</th>
+				<td>Finds all references to a symbol throughout a solution</td>
+			</tr>
+			<tr>
+				<th>FindSimilarSymbols&lt;TSymbol&gt;(TSymbol, Compilation, CancellationToken)</th>
+				<td>Finds symbols in the given compilation that are similar to the specified symbol. A found symbol may be the exact same symbol instance if the compilation is the origin of the specified symbol, or it may be a different symbol instance if the compilation is not the originating compilation. Multiple symbols may be returned if there are ambiguous matches. No symbols may be returned if the compilation does not define or have access to a similar symbol.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Project, Func&lt;String,Boolean&gt;, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with a matching name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Project, Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with a matching name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Project, String, Boolean, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Project, String, Boolean, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Solution, Func&lt;String,Boolean&gt;, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with a matching name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Solution, Func&lt;String,Boolean&gt;, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with a matching name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Solution, String, Boolean, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsAsync(Solution, String, Boolean, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified name.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsWithPatternAsync(Project, String, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified pattern. This pattern is matched using heuristics that may change from release to release. So, the set of symbols matched by a given pattern may change between releases. For example, new symbols may be matched by a pattern and/or symbols previously matched by a pattern no longer are. However, the set of symbols matched by a specific release will be consistent for a specific pattern.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsWithPatternAsync(Project, String, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified pattern. This pattern is matched using heuristics that may change from release to release. So, the set of symbols matched by a given pattern may change between releases. For example, new symbols may be matched by a pattern and/or symbols previously matched by a pattern no longer are. However, the set of symbols matched by a specific release will be consistent for a specific pattern.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsWithPatternAsync(Solution, String, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified pattern. This pattern is matched using heuristics that may change from release to release. So, the set of symbols matched by a given pattern may change between releases. For example, new symbols may be matched by a pattern and/or symbols previously matched by a pattern no longer are. However, the set of symbols matched by a specific release will be consistent for a specific pattern.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDeclarationsWithPatternAsync(Solution, String, SymbolFilter, CancellationToken)</th>
+				<td>Find the symbols for declarations made in source with the specified pattern. This pattern is matched using heuristics that may change from release to release. So, the set of symbols matched by a given pattern may change between releases. For example, new symbols may be matched by a pattern and/or symbols previously matched by a pattern no longer are. However, the set of symbols matched by a specific release will be consistent for a specific pattern.</td>
+			</tr>
+			<tr>
+				<th>FindSourceDefinitionAsync(ISymbol, Solution, CancellationToken)</th>
+				<td>Finds the definition symbol declared in source code for a corresponding reference symbol. Returns null if no such symbol can be found in the specified solution.</td>
+			</tr>
+			<tr>
+				<th>FindSymbolAtPosition(SemanticModel, Int32, Workspace, CancellationToken)</th>
+				<td>Obsolete. Obsolete. Use FindSymbolAtPositionAsync(SemanticModel, Int32, Workspace, CancellationToken).</td>
+			</tr>
+			<tr>
+				<th>FindSymbolAtPositionAsync(Document, Int32, CancellationToken)</th>
+				<td></td>
+			</tr>
+			<tr>
+				<th>FindSymbolAtPositionAsync(SemanticModel, Int32, Workspace, CancellationToken)</th>
+				<td>Finds the symbol that is associated with a position in the text of a document.</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.findsymbols.symbolfinder?view=roslyn-dotnet-4.2.0">MS公式ドキュメント</a>より。</p>
+<div class="separator"></div>
+「FindReferencesAsync」メソッドを使用して、全ての参照を検索可能です。<br />第一引数では検索対象となるシンボル情報を、第二引数ではソリューションを指定します。<br /><br />では、「sql」を含む分に対して、当該文に含まれるすべての変数等の定義元と参照を表示してみましょう♪
+<code class="csharp">
+	Console.WriteLine(" _____ _____ _____ _____ _____ ");
+	Console.WriteLine(node.ToString());
+	IEnumerable&lt;SyntaxNode&gt; items = node.DescendantNodes().Where(a =&gt; a.IsKind(SyntaxKind.IdentifierName));
+	foreach (SyntaxNode item in items)
+	{
+		Console.WriteLine($"\t ***** ***** {item} ***** ***** ");
+		ISymbol symbol = model.GetSymbolInfo(item).Symbol;
+		IEnumerable&lt;Location&gt; Ilocs = symbol.Locations;
+		foreach (Location location in Ilocs)
+		{
+			if (location.SourceTree == null) continue;
+			SyntaxNode defNode = location.SourceTree.GetRoot().FindNode(location.SourceSpan);
+			while (true)
+			{
+				defNode = defNode.Parent;
+				if (defNode == null) break;
+				if (FilterStatement(defNode)) break;
+			}
+			if (defNode == null) continue;
+			Console.WriteLine($"\tD: {defNode} ___ {location.GetLineSpan().Path}({location.GetLineSpan().StartLinePosition.Line})");
+		}
+		IEnumerable&lt;ReferencedSymbol&gt; Refs = await SymbolFinder.FindReferencesAsync(symbol, solution);
+		foreach (ReferencedSymbol Ref in Refs)
+		{
+			foreach (ReferenceLocation RefLoc in Ref.Locations)
+			{
+				if (RefLoc.Location.SourceTree == null) continue;
+				SyntaxNode defNode = RefLoc.Location.SourceTree.GetRoot().FindNode(RefLoc.Location.SourceSpan);
+				while (true)
+				{
+					defNode = defNode.Parent;
+					if (defNode == null) break;
+					if (FilterStatement(defNode)) break;
+				}
+				if (defNode == null) continue;
+				Console.WriteLine($"\tR: {defNode} ___ {RefLoc.Location.GetLineSpan().Path}({RefLoc.Location.GetLineSpan().StartLinePosition.Line})");
+			}
+		}
+	}
+	Console.WriteLine(" _____ _____ _____ _____ _____ ");
+</code>
+<img src="/?S0251/SymbolFinder_FindReferencesAsync.gif" alt="SymbolFinder FindReferencesAsync" />
+「Console」や「WriteLine」などのC#にデフォルトで搭載されているキーワードに関しても定義をたどってしまっていることが確認できます。<br />次はより柔軟に必要なノードの定義元だけをたどるように修正を加えましょう♪
