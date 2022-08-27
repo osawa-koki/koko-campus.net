@@ -272,7 +272,7 @@ function animateIt(target) {
 }
 function calcBezierFormula(target) {
 	const dElement = target.match(/-?\d+\.?\d*/g);
-	return `cubic-bezier(${round100(dElement[2] / 300)}, ${round100((1 - (dElement[3] / 300)))}, ${round100(dElement[4] / 300)}, ${round100(1 - (dElement[5] / 300))})`;
+	return `cubic-bezier(${round100(dElement[2] / SVG_SIZE_MAX)}, ${round100((1 - (dElement[3] / SVG_SIZE_MAX)))}, ${round100(dElement[4] / SVG_SIZE_MAX)}, ${round100(1 - (dElement[5] / SVG_SIZE_MAX))})`;
 }
 function finishedAnimation() {
 	this.classList.remove("onAnimation");
@@ -410,7 +410,6 @@ putTemplate();
 function scrollUp(d) {
 	const positions = [d[0] / SVG_SIZE_MAX, 1 - d[1] / SVG_SIZE_MAX, d[2] / SVG_SIZE_MAX, 1 - d[3] / SVG_SIZE_MAX];
 	const bezierPoints = calcBezier(positions);
-	console.log(bezierPoints);
 	let count = 0;
 	const scrolled = window.scrollY;
 	const toWhere = window.pageYOffset + mainWindow.getBoundingClientRect().top;

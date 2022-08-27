@@ -1,3 +1,19 @@
+@charset "UTF-8";
+@media screen and (max-width: 1200px) {
+  #bezier::before {
+    content: "1200px以上の端末を使用して下さい。";
+    position: fixed;
+    inset: 0;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px black solid;
+    display: block;
+    padding: 25px;
+    z-index: 999;
+  }
+}
 #bezier #mainWindow {
   display: flex;
   justify-content: center;
