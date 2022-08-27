@@ -48,15 +48,13 @@
 		<div id="mainRightWindow">
 			<div id="mainRightTopFrame">
 				<svg id="currentdemoSVG" class="icon" width="80" height="80" viewBox="-100 -100 500 500" xmlns="http://www.w3.org/2000/svg">
-					<g id="groupOfCurrentDemoSVG"></g>
-					<g>
-						<circle r="40" cx="0" cy="300"></circle>
-						<circle r="40" cx="300" cy="0"></circle>
-					</g>
+					<path id="currentdemoPath"></path>
+					<circle r="40" cx="0" cy="300"></circle>
+					<circle r="40" cx="300" cy="0"></circle>
 				</svg>
 				<div id="currentDemoProgressor">
-					<div id="currentDemoProgressorA" class="v3-ani"></div>
-					<div id="currentDemoProgressorB" class="v3-ani v3-ani_li"></div>
+					<div id="currentDemoProgressorA" class="toAnimate"></div>
+					<div id="currentDemoProgressorB" class="toAnimate linearAnimation"></div>
 				</div>
 			</div>
 			<div id="mainRightBottomFrame">
@@ -71,8 +69,8 @@
 							<circle r="40" cx="300" cy="0"></circle>
 						</svg>
 						<div class="progressorDiv">
-							<div class="toAnimate" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 1px solid rgb(0, 0, 0);"></div>
-							<div class="toAnimate linearAnimation" style="position: absolute; top: 0px; left: 0px; bottom: 0px; box-sizing: border-box; border-right: 5px solid black; z-index: 1;"></div>
+							<div class="toAnimate"></div>
+							<div class="toAnimate linearAnimation"></div>
 						</div>
 					</div>
 				{{ end }}
@@ -95,7 +93,7 @@
 					<tr>
 						<td>背景色</td>
 						<td><input type="range" min="0" max="360" value="1" step="1" id="X_color"></td>
-						<td style="background-color: #ff0000;"></td>
+						<td style="background-color: red;"></td>
 					</tr>
 					<tr>
 						<td>リニア線</td>

@@ -22,6 +22,7 @@ const SPACE = " ";
 
 const eq = (a, b) => a === b;
 const map = (fx, [a, ...b]) => (a !== undefined) ? [fx(a), ...map(fx, b)] : [];
+const looper = ([a, ...b], fx) => (a !== undefined) ? [fx(a), looper(b, fx)] : [];
 const getElm = ([a, ...b]) => (a !== undefined) ? [document.getElementById(a), ...getElm(b)] : [];
 const mkElm = ([a, ...b]) => (a !== undefined) ? [document.createElement(a), ...mkElm(b)] : [];
 const mkElmSVG = ([a, ...b]) => (a !== undefined) ? [document.createElementNS(NAMESPACE_OF_SVG, a), ...mkElmSVG(b)] : [];
@@ -42,7 +43,6 @@ const apply = fx => arg => fx(arg);
 const append = ([a, ...b], parent) => (a !== undefined) ? [parent.appendChild(a), append(b, parent)] : [];
 
 const doNtimes = (n, fx, i = 0) => (i < n) ? [fx(i), doNtimes(n, fx, i + 1)] : [];
-const loop = ([a, ...b], fx) => (a !== undefined) ? [fx(a), ]
 
 const round = n => i => Math.round(i * n) / n;
 const round100 = round(100);

@@ -137,24 +137,6 @@
 					border: 1px solid black;
 					margin: 10px 25px;
 					position: relative;
-					#currentDemoProgressorA {
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						bottom: 0px;
-						box-sizing: border-box;
-						border-right: 1px solid rgb(0, 0, 0);
-					}
-					#currentDemoProgressorB {
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						bottom: 0px;
-						box-sizing: border-box;
-						border-right: 5px solid black;
-						background-color: transparent;
-						z-index: 1;
-					}
 				}
 				#currentdemoSVG {
 					display: block;
@@ -219,6 +201,7 @@
 						border: 1px black solid;
 						border-radius: 20px;
 						box-shadow: 2px 2px rgba(black, 30%);
+						background-color: #FF00FF;
 						cursor: pointer;
 						&:hover {
 							top: 2px;
@@ -242,30 +225,43 @@
 						border: 1px solid black;
 						margin: 10px 25px;
 						position: relative;	
-						.toAnimated, .linearAnimation {
-							background-color: red;
-							animation-duration: 1.5s;
-							animation-delay: 0s;
-							animation-iteration-count: 1;
-							animation-direction: normal;
-							animation-fill-mode: none;
-							animation-play-state: running;
-						}
-						.linearAnimation {
-							background-color: transparent !important;
-						}
-						.onAnimation {
-							animation-name: onAnimation;
-						}
-						@keyframes onAnimation {
-							from {
-								right: 100%;
-							}
-							75%, to {
-								right: 0;
-							}
-						}
 					}
+				}
+			}
+			.toAnimate, .linearAnimation {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				bottom: 0px;
+				box-sizing: border-box;
+				background-color: red;
+				animation-duration: 1.5s;
+				animation-delay: 0s;
+				animation-iteration-count: 1;
+				animation-direction: normal;
+				animation-fill-mode: none;
+				animation-play-state: running;
+			}
+			.toAnimate {
+				border-right: 1px solid black;
+			}
+			.linearAnimation {
+				border-right: 5px solid black;
+				background-color: transparent;
+				z-index: 1;
+			}
+			.linearAnimation {
+				background-color: transparent !important;
+			}
+			.onAnimation {
+				animation-name: onAnimation;
+			}
+			@keyframes onAnimation {
+				from {
+					right: 100%;
+				}
+				75%, to {
+					right: 0;
 				}
 			}
 			#mainRightButton {
@@ -307,27 +303,49 @@
 		#templateWindow {
 			margin: 30px auto;
 			padding: 0 15px;
-			border: 3px #FF00FF solid;
+			border: 3px fuchsia solid;
 			border-radius: 25px;
 			box-sizing: border-box;
 			width: 1000px;
 			height: 100px;
 			overflow-x: hidden;
-			background-color: #FFCCCC;
+			background-color: pink;
 			display: flex;
 			align-items: flex-start;
 			align-content: center;
 			flex-wrap: nowrap;
-			> div {
+			.explanationBox {
+				position: relative;
 				margin: auto 10px;
 				width: 80px;
 				height: 80px;
 				cursor: pointer;
 				svg {
+					width: 80px;
+					height: 80px;
 					border: 1px black solid;
 					position: absolute;
 					box-sizing: border-box;
 					background-color: #FFFFCC;
+					path {
+						fill: transparent;
+						stroke: black;
+						stroke-width: 7;
+					}
+				}
+				.text {
+					position : absolute;
+					display : inline-block;
+					left : 50%;
+					bottom : 10%;
+					transform : translateX(-50%);
+					text-align : center;
+					font-size : 12px;
+					border : 1px black solid;
+					border-radius : 20px;
+					background-color : rgba(white, 0.7);
+					padding : 1px 8px;
+					white-space : nowrap;
 				}
 			}
 		}
@@ -384,11 +402,6 @@
 			scrollbar-width: none;
 		}
 	}
-}
-
-
-.icon {
-	background-color: #FF00FF;
 }
 
 

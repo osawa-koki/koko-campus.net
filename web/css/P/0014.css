@@ -140,24 +140,6 @@
   margin: 10px 25px;
   position: relative;
 }
-#bezier #mainWindow #mainRightWindow #mainRightTopFrame #currentDemoProgressor #currentDemoProgressorA {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  box-sizing: border-box;
-  border-right: 1px solid rgb(0, 0, 0);
-}
-#bezier #mainWindow #mainRightWindow #mainRightTopFrame #currentDemoProgressor #currentDemoProgressorB {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  box-sizing: border-box;
-  border-right: 5px solid black;
-  background-color: transparent;
-  z-index: 1;
-}
 #bezier #mainWindow #mainRightWindow #mainRightTopFrame #currentdemoSVG {
   display: block;
   position: relative;
@@ -222,6 +204,7 @@
   border: 1px black solid;
   border-radius: 20px;
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: #FF00FF;
   cursor: pointer;
 }
 #bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine svg.icon:hover {
@@ -246,7 +229,12 @@
   margin: 10px 25px;
   position: relative;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .toAnimated, #bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .linearAnimation {
+#bezier #mainWindow #mainRightWindow .toAnimate, #bezier #mainWindow #mainRightWindow .linearAnimation {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  box-sizing: border-box;
   background-color: red;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
@@ -261,10 +249,18 @@
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .linearAnimation {
+#bezier #mainWindow #mainRightWindow .toAnimate {
+  border-right: 1px solid black;
+}
+#bezier #mainWindow #mainRightWindow .linearAnimation {
+  border-right: 5px solid black;
+  background-color: transparent;
+  z-index: 1;
+}
+#bezier #mainWindow #mainRightWindow .linearAnimation {
   background-color: transparent !important;
 }
-#bezier #mainWindow #mainRightWindow #mainRightBottomFrame .mainRightBottomOneLine .progressorDiv .onAnimation {
+#bezier #mainWindow #mainRightWindow .onAnimation {
   -webkit-animation-name: onAnimation;
           animation-name: onAnimation;
 }
@@ -319,29 +315,51 @@
 #bezier #subWindow #templateWindow {
   margin: 30px auto;
   padding: 0 15px;
-  border: 3px #FF00FF solid;
+  border: 3px fuchsia solid;
   border-radius: 25px;
   box-sizing: border-box;
   width: 1000px;
   height: 100px;
   overflow-x: hidden;
-  background-color: #FFCCCC;
+  background-color: pink;
   display: flex;
   align-items: flex-start;
   align-content: center;
   flex-wrap: nowrap;
 }
-#bezier #subWindow #templateWindow > div {
+#bezier #subWindow #templateWindow .explanationBox {
+  position: relative;
   margin: auto 10px;
   width: 80px;
   height: 80px;
   cursor: pointer;
 }
-#bezier #subWindow #templateWindow > div svg {
+#bezier #subWindow #templateWindow .explanationBox svg {
+  width: 80px;
+  height: 80px;
   border: 1px black solid;
   position: absolute;
   box-sizing: border-box;
   background-color: #FFFFCC;
+}
+#bezier #subWindow #templateWindow .explanationBox svg path {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 7;
+}
+#bezier #subWindow #templateWindow .explanationBox .text {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  border: 1px black solid;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1px 8px;
+  white-space: nowrap;
 }
 #bezier #subWindow #logWindow {
   margin: 30px auto;
@@ -393,10 +411,6 @@
 }
 #bezier #subWindow #logWindow, #bezier #subWindow #templateWindow {
   scrollbar-width: none;
-}
-
-.icon {
-  background-color: #FF00FF;
 }
 
 @media screen and (max-width: 1199px) {

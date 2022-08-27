@@ -2,11 +2,11 @@
 
 // define const values.
 const [SVG_SIZE_MIN, SVG_SIZE_MAX] = [0, 300];
-const [bezierFormulaBox] = getElm(["bezierFormulaBox"]);
+const [bezierFormulaBox,currentdemoSVG, currentdemoPath] = getElm(["bezierFormulaBox", "currentdemoSVG", "currentdemoPath"]);
 const [leftButton, rightButton, gridWidth, gridDense, speed, interval] = getElm(["mainLeftButton", "mainRightButton", "gridWidth", "gridDense", "speed", "interval"]);
 const [groupOfLines, groupOfBezier, groupOfExplanator, groupOfhandler] = getElm(["groupOfLines", "groupOfBezier", "groupOfExplanator", "groupOfhandler"]);
 const [runningCircle, progressorRed, progressorRedCounter, progressorBlue, progressorRedLine, progressorBlueLine] = getElm(["runningCircle", "progressorRed", "progressorRedCounter", "progressorBlue", "progressorRedLine", "progressorBlueLine"]);
-const [mainWindow, templateWindow, logWindow, mainRightBottomFrame] = getElm(["mainWindow", "templateWindow", "logWindow", "mainRightButtomFrame"]);
+const [mainWindow, templateWindow, logWindow, mainRightBottomFrame] = getElm(["mainWindow", "templateWindow", "logWindow", "mainRightBottomFrame"]);
 const bezier = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
 const handlers = {
@@ -29,8 +29,8 @@ currentImporter();
 leftButton.addEventListener("click", go);
 gridWidth.addEventListener("input", putLines);
 gridDense.addEventListener("input", setDense);
-speed.addEventListener("input", () => speed.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`);
-interval.addEventListener("input", () => interval.parentNode.nextElementSibling.textContent = (this.value <= 3) ? "低" : (this.value <= 7) ? "中" : "高");
+speed.addEventListener("input", () => speed.parentNode.nextElementSibling.textContent = `${parseFloat(speed.value).toFixed(1)}秒`);
+interval.addEventListener("input", () => interval.parentNode.nextElementSibling.textContent = (interval.value <= 3) ? "低" : (interval.value <= 7) ? "中" : "高");
 
 
 function setDefault() {
@@ -46,7 +46,7 @@ function setDefault() {
 			circle.setAttribute(circleSetting, circleSettings[circleSetting]);
 		}
 		circle.addEventListener("mousedown", mousedown, false);
-		const polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+		const [polyline] = mkElmSVG(["polyline"]);
 		groupOfhandler.appendChild(polyline);
 		groupOfhandler.appendChild(circle);
 		handlers.circles.push(circle);
@@ -58,10 +58,11 @@ function setDense() {
 	Array.from(groupOfLines.getElementsByTagName("line")).forEach(line => {
 		line.style.stroke = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
 	});
-	document.getElementById("gridDenseShow").style.background100Color = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
+	document.getElementById("gridDenseShow").style.backgroundColor = `rgba(0, 0, 0, ${gridDense.value * 0.05})`;
 }
 function mousedown(event) {
 	event.preventDefault();
+	removeChildren(groupOfExplanator);
 	this.setAttribute("r", 20);
 	this.style.fill = "red";
 	this.addEventListener("mousemove", mousemove, false);
@@ -150,8 +151,8 @@ function obtainManipulatorPositions() {
 	positions.push([SVG_SIZE_MIN, SVG_SIZE_MAX]);
 	positions.push([parseInt(handlers.circles[0].getAttribute("cx")), parseInt(handlers.circles[0].getAttribute("cy"))]);
 	positions.push([parseInt(handlers.circles[1].getAttribute("cx")), parseInt(handlers.circles[1].getAttribute("cy"))]);
-	positions.push([SVG_SIZE_MAX, SVG_SIZE_MIN])
-	return positions
+	positions.push([SVG_SIZE_MAX, SVG_SIZE_MIN]);
+	return positions;
 }
 function pause() {
 	clearInterval(stopwatchObject.intervalId);
@@ -185,8 +186,8 @@ function recursiveInitiator(points, tf = true) {
 			groupOfExplanator.appendChild(polyline);
 		});
 		runningCircle.classList.add("ok");
-		runningCircle.setAttribute("cx", 0);
-		runningCircle.setAttribute("cy", 300);
+		runningCircle.setAttribute("cx", SVG_SIZE_MIN);
+		runningCircle.setAttribute("cy", SVG_SIZE_MAX);
 		stopwatchObject.reset();
 	}
 	stopwatchObject.intervalId = setInterval(() => {
@@ -256,36 +257,39 @@ rightButton.addEventListener("click", doAnimation);
 
 Array.from(document.getElementsByClassName("arrowBox")).map(arrowBox => arrowBox.addEventListener("click", function syncIcon() {
 	const dValue = bezier.getAttribute("d").match(/-?\d+\.?\d*/g);
-	const arrow = this.nextElementSibling.getElementsByClassName("arrow")[0];
+	const arrow = this.nextElementSibling.getElementsByClassName("bezier")[0];
 	arrow.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C${dValue[2]} ${dValue[3]}, ${dValue[4]} ${dValue[5]}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 }));
-function animateIt(target, useThis = false) {
-	const targetBox = (useThis) ? this : target;
+function animateIt(target) {
+	const targetBox = (this != window && this) ? this : target;
 	const bezierLine = calcBezierFormula(targetBox.getElementsByTagName("path")[0].getAttribute("d"));
 	const toAnimate = Array.from(targetBox.nextElementSibling.getElementsByClassName("toAnimate"));
 	toAnimate.forEach(mover => {
-		mover.style.animationTimingFunction = (!s.classList.contains("lineafinishedAnimationmation")) ? bezierLine : "linear";
+		mover.style.animationTimingFunction = (!targetBox.classList.contains("linearAnimation")) ? bezierLine : "linear";
+		mover.addEventListener("animationend", finishedAnimation);
 		mover.classList.add("onAnimation");
 	});
 }
 function calcBezierFormula(target) {
-	const dElement = x.match(/-?\d+\.?\d*/g);
+	const dElement = target.match(/-?\d+\.?\d*/g);
 	return `cubic-bezier(${round100(dElement[2] / 300)}, ${round100((1 - (dElement[3] / 300)))}, ${round100(dElement[4] / 300)}, ${round100(1 - (dElement[5] / 300))})`;
 }
 function finishedAnimation() {
 	this.classList.remove("onAnimation");
 }
 function doAnimation() {
-	Array.from(document.getElementsByClassName("v3-ico")).forEach(e => {
-		animateIt(e, true);
+	Array.from(document.getElementsByClassName("icon")).forEach(icon => {
+		animateIt(icon);
 	});
 }
+
+looper(mainRightBottomFrame.getElementsByClassName("icon"), element => element.addEventListener("click", animateIt));
 
 const [X_speed, X_times, X_color, X_line] = getElm(["X_speed", "X_times", "X_color", "X_line"]);
 
 const toAnimateItems = Array.from(document.getElementsByClassName("toAnimate"));
 X_speed.addEventListener("input", function() {
-	toAnimateItem.forEach(toAnimateItem => toAnimateItem.style.animationDuration = this.value * 1.5 + "s");
+	toAnimateItems.forEach(toAnimateItem => toAnimateItem.style.animationDuration = this.value * 1.5 + "s");
 	this.parentNode.nextElementSibling.textContent = `${parseFloat(this.value).toFixed(1)}秒`;
 });
 X_times.addEventListener("input", function() {
@@ -299,14 +303,14 @@ X_color.addEventListener("change", function() {
 	setTimeout(() => this.parentNode.style.backgroundColor = "transparent", 300);
 });
 X_color.addEventListener("input", function() {
-	this.parentNode.nextElementSibling.style.background100Color = `hsla(${this.value}, 100%, 50%, 1)`;
+	this.parentNode.nextElementSibling.style.backgroundColor = `hsla(${this.value}, 100%, 50%, 1)`;
 });
 X_line.addEventListener("change", function() {
 	this.parentNode.nextElementSibling.textContent = (parseInt(this.value) === 1) ? "あり" : "なし";
 	if (parseInt(this.value) === 1) {
 		const pausedElement = document.getElementsByClassName("animationPaused");
 		doNtimes(pausedElement.length, i => {
-			pausedElement[i].classList.add("v3-ani");
+			pausedElement[i].classList.add("toAnimate");
 			pausedElement[i].classList.remove("animationPaused");
 		});
 	} else {
@@ -340,7 +344,7 @@ function putLogSVG() {
 
 function logBack() {
 	truncAndImport(false);
-	const dAttr = this.getElementsByTagName("path")[0].getAttribute("d").match(/-?\d+\.?\d*/g).slice(2, 6); //マイナスも取得することを忘れずに!!
+	const dAttr = this.getElementsByTagName("path")[0].getAttribute("d").match(/-?\d+\.?\d*/g).slice(2, 6); // マイナスも取得することを忘れずに!!
 	const d = [dAttr.slice(0, 2), dAttr.slice(2, 4)];
 	doNtimes(d.length, i => {
 		handlers.circles[0].setAttribute("cx", d[i][0]);
@@ -362,15 +366,12 @@ function currentImporter() {
 		points.push(circle.getAttribute("cy"));
 		pointsContainer.push(points);
 	});
-	const demoGroup = document.getElementById("groupOfCurrentDemoSVG");
-	removeChildren(demoGroup);
-	const [currentPath] = mkElmSVG("path");
-	currentPath.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${pointsContainer.map(e => e.join(" ")).join(", ")}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
-	demoGroup.appendChild(currentPath);
+	currentdemoPath.setAttribute("d", `m ${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${pointsContainer.map(e => e.join(" ")).join(", ")}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
 }
 
-document.getElementById("currentdemoSVG").addEventListener("click", doAnimate);
-map(element => document.getElementById(element).addEventListener("animationend", finishedAnimation), getElm(["currentDemoProgressorA", "currentDemoProgressorB"]));
+currentdemoSVG.addEventListener("click", animateIt);
+looper(getElm(["currentDemoProgressorA", "currentDemoProgressorB"]), element => element.addEventListener("animationend", finishedAnimation));
+
 
 function putTemplate() {
 	const templates = {
@@ -384,86 +385,32 @@ function putTemplate() {
 		"オススメ４" : [[0.0, 0.3], [1.0, 1.0]],
 		"オススメ５" : [[0.2, 0.2], [0.3, 0.9]],
 	};
-	for (let k in templates) {
-		const pb = document.createElement("div");
-		const pu = {
-			"position" : "relative",
-		}
-		for (let k in pu) {
-			pb.style[k] = pu[k];
-		}
-		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-		svg.classList.add("x");
-		let pp;
-		pp = {
-			"width" : 80,
-			"heigth" : 80,
-			"viewBox" : "-50 -50 400 400",
-			"xmlns" : "http://www.w3.org/2000/svg",
-		};
-		for (let k in pp) {
-			svg.setAttribute(k ,pp[k]);
-		}
-		let gp, gc, xy;
-		gp = document.createElementNS("http://www.w3.org/2000/svg", "g");
-		let kj, kp;
-		kj = document.createElementNS("http://www.w3.org/2000/svg", "path");
-		let mx = z[k].map(mp => mp.map(mk => mk * 300));
-		kj.setAttribute("d", `m0 300 C ${mx[0][0]} ${300 - mx[0][1]}, ${mx[1][0]} ${300 - mx[1][1]}, 300 0`);
-		const zp = {
-			"fill" : "transparent",
-			"stroke" : "black",
-			"stroke-width" : "10",
-		};
-		for (let k in zp) {
-			kj.style[k] = zp[k];
-		}
-		gp.appendChild(kj);
-		gc = document.createElementNS("http://www.w3.org/2000/svg", "g");
-		xy = [
-			[0, 300],
-			[300, 0],
-		];
-		for (let i = 0; i < 2; i++) {
-			let x, px;
-			x = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-			x.setAttribute("r", 20);
-			x.setAttribute("cx", xy[i][0]);
-			x.setAttribute("cy", xy[i][1]);
-			gc.appendChild(x);
-		}
-		svg.appendChild(gp);
-		svg.appendChild(gc);
-		const txt = document.createElement("div");
-		txt.textContent = k;
-		const pr = {
-			"position" : "absolute",
-			"display" : "inline-block",
-			"left" : "50%",
-			"bottom" : "10%",
-			"transform" : "translateX(-50%)",
-			"text-align" : "center",
-			"font-size" : "12px",
-			"border" : "1px black solid",
-			"border-radius" : "20px",
-			"background100-color" : "rgba(255, 255, 255, 0.7)",
-			"padding" : "1px 8px",
-			"white-space" : "nowrap",
-		};
-		for (let k in pr) {
-			txt.style[k] = pr[k];
-		}
-		pb.appendChild(svg);
-		pb.appendChild(txt);
-		pb.addEventListener("click", trnsfr);
-		templateWindow.appendChild(pb);
-	}
+	for (let templateName in templates) {
+		const [explanationBox, text] = mkElm(["div", "div"]);
+		const [svg, path, circle1, circle2] = mkElmSVG(["svg", "path", "circle", "circle"]);
+		const modifiedPoints = map(points => map(point => point * SVG_SIZE_MAX, points), templates[templateName]);
+		svg.setAttribute("viewBox", `-50 -50 400 400`);
+		path.setAttribute("d", `m${SVG_SIZE_MIN} ${SVG_SIZE_MAX} C ${modifiedPoints[0][0]} ${SVG_SIZE_MAX - modifiedPoints[0][1]}, ${modifiedPoints[1][0]} ${SVG_SIZE_MAX - modifiedPoints[1][1]}, ${SVG_SIZE_MAX} ${SVG_SIZE_MIN}`);
+		circle1.setAttribute("cx", SVG_SIZE_MIN);
+		circle1.setAttribute("cy", SVG_SIZE_MAX);
+		circle2.setAttribute("cx", SVG_SIZE_MAX);
+		circle2.setAttribute("cy", SVG_SIZE_MIN);
+		looper([circle1, circle2], circle => circle.setAttribute("r", 20));
+		explanationBox.classList.add("explanationBox");
+		text.textContent = templateName;
+		text.classList.add("text");
+		svg.addEventListener("click", logBack);
+		append([path, circle1, circle2], svg);
+		append([svg, text], explanationBox);
+		templateWindow.appendChild(explanationBox);
+	};
 }
 putTemplate();
 
 function scrollUp(d) {
-	const positions = [d[0] / 300, 1 - d[1] / 300, d[2] / 300, 1 - d[3] / 300];
+	const positions = [d[0] / SVG_SIZE_MAX, 1 - d[1] / SVG_SIZE_MAX, d[2] / SVG_SIZE_MAX, 1 - d[3] / SVG_SIZE_MAX];
 	const bezierPoints = calcBezier(positions);
+	console.log(bezierPoints);
 	let count = 0;
 	const scrolled = window.scrollY;
 	const toWhere = window.pageYOffset + mainWindow.getBoundingClientRect().top;
@@ -491,10 +438,10 @@ function calcBezier(d, step = 100, percent = true) {
 			list.push([x, y]);
 		}
 		if (ary.length === 2) {
-			answer["x"].push(list[0][0] / (percent) ? 100 : 1);
-			answer["y"].push(list[0][1] / (percent) ? 100 : 1);
+			answer["x"].push((percent) ? list[0][0] / 100 : list[0][0]);
+			answer["y"].push((percent) ? list[0][1] / 100 : list[0][1]);
 		} else {
-			recCalsPositions(list, ppn);
+			recCalcPositions(list, ppn);
 		}
 	}
 	const positions = [[0, 0], [d[0], d[1]], [d[2], d[3]], [100, 100]];
