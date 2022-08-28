@@ -1,0 +1,20 @@
+#sudokuSolver #button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  margin: 50px auto;
+  background-color: lightblue;
+  border: 1px black solid;
+  box-shadow: 2px 2px lightgray;
+  cursor: pointer;
+}
+#sudokuSolver #button:hover {
+  top: 2px;
+  left: 2px;
+  color: white;
+  background-color: blue;
+  box-shadow: none;
+}
