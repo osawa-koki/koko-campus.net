@@ -74,6 +74,6 @@ const NxN = (a, b, c = null) => [new Array(a).fill(new Array(b).fill(c))];
 const NxNfx = (a, b, fx) => [new Array(a).fill(new Array(b).fill(fx()))];
 
 const fromAtoB = (a, b, step = 1, eq = true, i = 0) => (((eq) ? ltEq : lt)(a + i, b)) ? [a + i, ...fromAtoB(a, b, step, eq, i + step)] : [];
+
 const flatter = ([a, ...b]) => (a !== undefined) ? (Array.isArray(a)) ? [...flatter(a)] : [a, ...flatter(b)] : []; // ★★★
 const mixupMesh = (a, b, i = 0) =>  (i < a.length * b.length) ? [[a[Math.floor(i / b.length)], b[i % b.length]], ...mixupMesh(a, b, i + 1)] : [];
-

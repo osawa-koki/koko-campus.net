@@ -2,8 +2,50 @@
 
 
 #sudokuSolver {
+	$ITEM_COUNT: 9;
 	#sudokuBox {
-
+		display: grid;
+		grid-template-columns: repeat($ITEM_COUNT, 1fr);
+		grid-template-rows: repeat($ITEM_COUNT, 1fr);
+		gap: 0;
+		width: 100%;
+		max-width: 450px;
+		margin: 50px auto;
+		border: 1px black solid;
+		overflow: hidden;
+		aspect-ratio: 1 / 1;
+		input {
+			border: 1px lightgray solid;
+			width: 100%;
+			display: block;
+			text-align: center;
+			font-size: 20px;
+			font-family: "consolas";
+			box-sizing: border-box;
+			-moz-appearance: textfield;
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			&:nth-of-type(3n) {
+				border-right: 1px black solid;
+			}
+			&:nth-of-type(9n) {
+				border-right: 1px lightgray solid;
+			}
+			&:nth-of-type(n+28):nth-of-type(-n+36),
+			&:nth-of-type(n+55):nth-of-type(-n+63) {
+				border-top: 1px black solid;
+			}
+			&:focus {
+				background-color: lightgoldenrodyellow;
+			}
+			&.warning {
+				color: white;
+				background-color: lightcoral;
+			}
+		}
 	}
 	#button {
 		position: relative;
@@ -24,8 +66,59 @@
 			background-color: blue;
 			box-shadow: none;
 		}
+		&.invalid {
+			color: white;
+			background-color: gray;
+			box-shadow: none;
+			top: 2px;
+			left: 2px;
+			cursor: not-allowed;
+		}
 	}
-
+	#resultContainer {
+		margin: 50px auto;
+		display: flex;
+		flex-wrap: wrap;
+		.sudokuBox {
+			display: grid;
+			grid-template-columns: repeat($ITEM_COUNT, 1fr);
+			grid-template-rows: repeat($ITEM_COUNT, 1fr);
+			gap: 0;
+			width: 100%;
+			max-width: 200px;
+			margin-top: 10px;
+			margin-right: 10px;
+			border: 1px purple solid;
+			overflow: hidden;
+			aspect-ratio: 1 / 1;
+			div {
+				border: 1px lightpink solid;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 12px;
+				font-family: "consolas";
+				box-sizing: border-box;
+				-moz-appearance: textfield;
+				&::-webkit-outer-spin-button,
+				&::-webkit-inner-spin-button {
+					-webkit-appearance: none;
+					margin: 0;
+				}
+				&:nth-of-type(3n) {
+					border-right: 1px purple solid;
+				}
+				&:nth-of-type(9n) {
+					border-right: 1px lightpink solid;
+				}
+				&:nth-of-type(n+28):nth-of-type(-n+36),
+				&:nth-of-type(n+55):nth-of-type(-n+63) {
+					border-top: 1px purple solid;
+				}
+			}
+		}
+	}
 
 }
 
