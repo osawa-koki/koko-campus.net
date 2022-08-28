@@ -240,7 +240,7 @@ function recursiveMain(points, proportion) {
 		runningCircle.setAttribute("cx", xx);
 		runningCircle.setAttribute("cy", yy);
 		progressorRed.setAttribute("d", `m ${SVG_SIZE_MIN - 5} ${yy}, -10 -10 h-10 v20 h10 z`);
-		progressorRedText.textContent = `${((SVG_SIZE_MAX - yy) / 3).toFixed(0)}%`;
+		progressorRedCounter.textContent = `${((SVG_SIZE_MAX - yy) / 3).toFixed(0)}%`;
 		progressorRedLine.setAttribute("x2", xx);
 		progressorRedLine.setAttribute("y1", yy);
 		progressorRedLine.setAttribute("y2", yy);
