@@ -21,14 +21,28 @@ const SPACE = " ";
 /* fx */
 
 const eq = (a, b) => a === b;
+const ne = (a, b) => a !== b;
+const gt = (a, b) => a > b;
+const gtEq = (a, b) => a >= b;
+const lt = (a, b) => a < b;
+const ltEq = (a, b) => a <= b;
+
+const apply = fx => arg => fx(arg);
+const rec = fx => fx(fx);
+
 const map = (fx, [a, ...b]) => (a !== undefined) ? [fx(a), ...map(fx, b)] : [];
-const looper = ([a, ...b], fx) => (a !== undefined) ? [fx(a), looper(b, fx)] : [];
+const looper = ([a, ...b], fx) => (a !== undefined) ? [fx(a), ...looper(b, fx)] : [];
+const any = ([a, ...b], fx) => (a !== undefined) ? fx(a) || any(b) : false;
+const all = ([a, ...b], fx) => (a !== undefined) ? fx(a) && all(b) : true;
+const countSatisfy = ([a, ...b], fx, i = 0) => (a !== undefined) ? countSatisfy(b, fx, i + (fx(a) ? 1 : 0)) : i;
+
 const getElm = ([a, ...b]) => (a !== undefined) ? [document.getElementById(a), ...getElm(b)] : [];
 const mkElm = ([a, ...b]) => (a !== undefined) ? [document.createElement(a), ...mkElm(b)] : [];
 const mkElmSVG = ([a, ...b]) => (a !== undefined) ? [document.createElementNS(NAMESPACE_OF_SVG, a), ...mkElmSVG(b)] : [];
 const zFill = (n, len) => (Array(len).join("0") + n).slice(-len);
 const URLencodeAssoc = obj => Object.keys(obj).map(key => key + "=" + encodeURIComponent(obj[key])).join("&");
 const between = (a, b) => c => a <= c.length && c.length <= b;
+const switcher = (tf, afx, bfx, arg = null) => (tf) ? afx(arg) : bfx(arg);
 
 const regex = a => b => b.match(a);
 const mailCheck = regex(mailRegex);
@@ -38,11 +52,13 @@ const regexGrouping = (a, b) => a.match(b).groups;
 
 const removeChildren = parent => (parent.firstChild) ? [parent.removeChild(parent.firstChild), removeChildren(parent)] : [];
 
-const apply = fx => arg => fx(arg);
-
 const append = ([a, ...b], parent) => (a !== undefined) ? [parent.appendChild(a), append(b, parent)] : [];
 
 const doNtimes = (n, fx, i = 0) => (i < n) ? [fx(i), doNtimes(n, fx, i + 1)] : [];
 
 const round = n => i => Math.round(i * n) / n;
 const round100 = round(100);
+
+const NxN = (a, b, c = null) => [new Array(a).fill(new Array(b).fill(c))];
+
+
