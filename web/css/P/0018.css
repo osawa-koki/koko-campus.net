@@ -72,22 +72,50 @@
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-#sudokuSolver #resultContainer .sudokuBox {
+#sudokuSolver #resultContainer .sudokuContainer {
+  width: 100%;
+  max-width: 200px;
+  margin: 5px;
+}
+@media screen and (max-width: 500px) {
+  #sudokuSolver #resultContainer .sudokuContainer {
+    max-width: 150px;
+  }
+}
+#sudokuSolver #resultContainer .sudokuContainer.zoomed {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#sudokuSolver #resultContainer .sudokuContainer.zoomed .sudokuBox {
+  width: 90%;
+  max-width: 500px;
+  max-height: 500px;
+  background-color: white;
+  aspect-ratio: 1/1;
+  font-size: 20px;
+}
+#sudokuSolver #resultContainer .sudokuContainer.zoomed .sudokuBox div {
+  aspect-ratio: 1/1;
+}
+#sudokuSolver #resultContainer .sudokuContainer .sudokuBox {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(9, 1fr);
   gap: 0;
-  width: 100%;
-  max-width: 200px;
-  margin-top: 10px;
-  margin-right: 10px;
-  border: 1px purple solid;
   overflow: hidden;
   aspect-ratio: 1/1;
 }
-#sudokuSolver #resultContainer .sudokuBox div {
-  border: 1px lightpink solid;
+#sudokuSolver #resultContainer .sudokuContainer .sudokuBox div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -97,16 +125,150 @@
   box-sizing: border-box;
   -moz-appearance: textfield;
 }
-#sudokuSolver #resultContainer .sudokuBox div::-webkit-outer-spin-button, #sudokuSolver #resultContainer .sudokuBox div::-webkit-inner-spin-button {
+#sudokuSolver #resultContainer .sudokuContainer .sudokuBox div::-webkit-outer-spin-button, #sudokuSolver #resultContainer .sudokuContainer .sudokuBox div::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-#sudokuSolver #resultContainer .sudokuBox div:nth-of-type(3n) {
-  border-right: 1px purple solid;
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) {
+  border: 1px purple solid;
 }
-#sudokuSolver #resultContainer .sudokuBox div:nth-of-type(9n) {
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div {
+  border: none;
+  cursor: pointer;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div:nth-of-type(3n) {
   border-right: 1px lightpink solid;
 }
-#sudokuSolver #resultContainer .sudokuBox div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuBox div:nth-of-type(n+55):nth-of-type(-n+63) {
-  border-top: 1px purple solid;
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div:nth-of-type(9n) {
+  border-right: none !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px lightpink solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0) div.original {
+  background-color: lightgoldenrodyellow;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0).zoomed {
+  border: none;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0).zoomed div {
+  border: 1px rgba(211, 211, 211, 0.5) solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0).zoomed div:nth-of-type(3n) {
+  border-right: 1px purple solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0).zoomed div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+0).zoomed div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px purple solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) {
+  border: 1px red solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div {
+  border: none;
+  cursor: pointer;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div:nth-of-type(3n) {
+  border-right: 1px orange solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div:nth-of-type(9n) {
+  border-right: none !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px orange solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1) div.original {
+  background-color: lightgoldenrodyellow;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1).zoomed {
+  border: none;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1).zoomed div {
+  border: 1px rgba(211, 211, 211, 0.5) solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1).zoomed div:nth-of-type(3n) {
+  border-right: 1px red solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1).zoomed div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+1).zoomed div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px red solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) {
+  border: 1px blue solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div {
+  border: none;
+  cursor: pointer;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div:nth-of-type(3n) {
+  border-right: 1px skyblue solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div:nth-of-type(9n) {
+  border-right: none !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px skyblue solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2) div.original {
+  background-color: lightgoldenrodyellow;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2).zoomed {
+  border: none;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2).zoomed div {
+  border: 1px rgba(211, 211, 211, 0.5) solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2).zoomed div:nth-of-type(3n) {
+  border-right: 1px blue solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2).zoomed div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+2).zoomed div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px blue solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) {
+  border: 1px green solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div {
+  border: none;
+  cursor: pointer;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div:nth-of-type(3n) {
+  border-right: 1px lime solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div:nth-of-type(9n) {
+  border-right: none !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px lime solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3) div.original {
+  background-color: lightgoldenrodyellow;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3).zoomed {
+  border: none;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3).zoomed div {
+  border: 1px rgba(211, 211, 211, 0.5) solid;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3).zoomed div:nth-of-type(3n) {
+  border-right: 1px green solid !important;
+}
+#sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3).zoomed div:nth-of-type(n+28):nth-of-type(-n+36), #sudokuSolver #resultContainer .sudokuContainer:nth-of-type(4n+3).zoomed div:nth-of-type(n+55):nth-of-type(-n+63) {
+  border-top: 1px green solid !important;
+}
+#sudokuSolver #resultContainer .memoryProtecterAlert {
+  margin: 50px auto;
+  border: 1px black solid;
+  width: 100%;
+  padding: 25px;
+}
+#sudokuSolver #resultContainer .memoryProtecterAlert .restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  border: 1px black solid;
+  margin-top: 25px;
+  cursor: pointer;
+}
+#sudokuSolver #resultContainer .memoryProtecterAlert .restart:hover {
+  background-color: yellow;
 }

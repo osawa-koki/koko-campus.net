@@ -1,5 +1,6 @@
 @charset "utf8";
 
+@import "../00.scss";
 
 #sudokuSolver {
 	$ITEM_COUNT: 9;
@@ -79,47 +80,122 @@
 		margin: 50px auto;
 		display: flex;
 		flex-wrap: wrap;
-		.sudokuBox {
-			display: grid;
-			grid-template-columns: repeat($ITEM_COUNT, 1fr);
-			grid-template-rows: repeat($ITEM_COUNT, 1fr);
-			gap: 0;
+		justify-content: center;
+		.sudokuContainer {
 			width: 100%;
+			@include sb {
+				max-width: 150px;
+			}
 			max-width: 200px;
-			margin-top: 10px;
-			margin-right: 10px;
-			border: 1px purple solid;
-			overflow: hidden;
-			aspect-ratio: 1 / 1;
-			div {
-				border: 1px lightpink solid;
-				width: 100%;
+			margin: 5px;
+			&.zoomed {
+				position: fixed;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				font-size: 12px;
-				font-family: "consolas";
-				box-sizing: border-box;
-				-moz-appearance: textfield;
-				&::-webkit-outer-spin-button,
-				&::-webkit-inner-spin-button {
-					-webkit-appearance: none;
-					margin: 0;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				margin: 0;
+				background-color: rgba(black, 0.9);
+				.sudokuBox {
+					width: 90%;
+					max-width: 500px;
+					max-height: 500px;
+					background-color: white;
+					aspect-ratio: 1 / 1;
+					font-size: 20px;
+					div {
+						aspect-ratio: 1 / 1;
+					}
 				}
-				&:nth-of-type(3n) {
-					border-right: 1px purple solid;
+			}
+			.sudokuBox {
+				display: grid;
+				grid-template-columns: repeat($ITEM_COUNT, 1fr);
+				grid-template-rows: repeat($ITEM_COUNT, 1fr);
+				gap: 0;
+				overflow: hidden;
+				aspect-ratio: 1 / 1;
+				div {
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 12px;
+					font-family: "consolas";
+					box-sizing: border-box;
+					-moz-appearance: textfield;
+					&::-webkit-outer-spin-button,
+					&::-webkit-inner-spin-button {
+						-webkit-appearance: none;
+						margin: 0;
+					}
 				}
-				&:nth-of-type(9n) {
-					border-right: 1px lightpink solid;
+			}
+			$colorThemes: [purple lightpink], [red orange], [blue skyblue], [green lime];
+			$colorThemesCount: length($colorThemes);
+			$i: 0;
+			@each $colorTheme in $colorThemes {
+				&:nth-of-type(#{$colorThemesCount}n+#{$i}) {
+					$outsideBorder: nth($colorTheme, 1);
+					$insideBorder: nth($colorTheme, 2);
+					border: 1px #{$outsideBorder} solid;
+					div {
+						border: none;
+						&:nth-of-type(3n) {
+							border-right: 1px #{$insideBorder} solid;
+						}
+						&:nth-of-type(9n) {
+							border-right: none !important;
+						}
+						&:nth-of-type(n+28):nth-of-type(-n+36),
+						&:nth-of-type(n+55):nth-of-type(-n+63) {
+							border-top: 1px #{$insideBorder} solid;
+						}
+						cursor: pointer;
+						&.original {
+							background-color: lightgoldenrodyellow;
+						}
+					}
+					&.zoomed {
+						border: none;
+						div {
+							border: 1px rgba(lightgray, 0.5) solid;
+							&:nth-of-type(3n) {
+								border-right: 1px #{$outsideBorder} solid !important;
+							}
+							&:nth-of-type(n+28):nth-of-type(-n+36),
+							&:nth-of-type(n+55):nth-of-type(-n+63) {
+								border-top: 1px #{$outsideBorder} solid !important;
+							}
+						}
+					}
 				}
-				&:nth-of-type(n+28):nth-of-type(-n+36),
-				&:nth-of-type(n+55):nth-of-type(-n+63) {
-					border-top: 1px purple solid;
+				$i: $i+1;
+			}
+		}
+		.memoryProtecterAlert {
+			margin: 50px auto;
+			border: 1px black solid;
+			width: 100%;
+    		padding: 25px;
+			.restart {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 150px;
+				height: 35px;
+				border: 1px black solid;
+				margin-top: 25px;
+				cursor: pointer;
+				&:hover {
+					background-color: yellow;
 				}
 			}
 		}
 	}
-
 }
 
 

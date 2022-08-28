@@ -21,6 +21,19 @@ const rowCheck = (numbers, row, number, allowOne = false) => countSatisfy(obtain
 const columnCheck = (numbers, column, number, allowOne = false) => countSatisfy(obtainAllIndexesOfColumn(column), index => numbers[index] == number) === ((allowOne) ? 1 : 0);
 const blockCheck = (numbers, [row, column], number, allowOne = false) => countSatisfy(obtainAllIndexesOfBlock(row, column), index => numbers[index] == number) === ((allowOne) ? 1 : 0);
 
+const original = [];
+const memoryProtecter = {
+	MAX: 1000,
+	current: 0,
+	locked: false,
+	reset: function() {
+		this.current = 0;
+		this.locked = false;
+	},
+	stop: function() {
+		return this.MAX < this.current;
+	},
+};
 
 (() => { // init
 	const items = doNtimes(ITEM_COUNT ** 2, () => {
@@ -35,6 +48,10 @@ const blockCheck = (numbers, [row, column], number, allowOne = false) => countSa
 })();
 
 function inputCheck() {
+	if (this.value === "0") {
+		this.value = "";
+		return;
+	}
 	this.value = this.value.slice(-1);
 	looper(itemBoxes, element => element.classList.remove("warning"));
 	const numbers = map(input => input.value || 0, itemBoxes);
@@ -67,44 +84,99 @@ button.addEventListener("click", solverInit);
 
 function solverInit() {
 	if (this.classList.contains("invalid")) return;
+	memoryProtecter.reset();
 	removeChildren(resultContainer);
 	const numbers = map(input => parseInt(input.value) || 0, itemBoxes);
+	original.splice(0);
+	push(numbers, original);
 	solver(numbers);
 }
 
 
 function solver(numbers, index = 0) {
-	if (ITEM_COUNT ** 2 <= index) {
-		resultPlacer(numbers);
-		return true;
-	}
-	if (numbers[index] !== 0) {
-		if (solver(numbers, index + 1)) return true;
-		return false;
-	}
+	memoryProtecter.current++;
+	if (memoryProtecter.stop()) {
+		if (!memoryProtecter.locked) {
+			memoryProtecter.locked = true;
+			pause(numbers, index); // オーバーフロー防止後の再開処理については未実装
+		}
+		return;
+	};
+	if (ITEM_COUNT ** 2 === index) return resultPlacer(numbers); // stop rec
+	if (numbers[index] !== 0) return solver(numbers, index + 1);
 	if (numbers[index] === 0) {
 		for (let i = 1; i <= ITEM_COUNT; i++) {
 			if (!validationCheck(numbers, index2rowcolumn(index), i)) continue;
 			numbers[index] = i;
-			if (solver(numbers, 0, index + 1)) return true;
+			solver(numbers, index + 1);
 		}
 		numbers[index] = 0;
-		return false;
+		return;
 	}
 }
 
 function resultPlacer(numbers) {
-	const [box] = mkElm(["div"]);
-	box.classList.add("sudokuBox");
+	const [boxOut, boxIn] = mkElm(["div", "div"]);
+	boxOut.classList.add("sudokuContainer");
+	boxIn.classList.add("sudokuBox");
 	append(doNtimes(ITEM_COUNT ** 2, i => {
 		const number = numbers[i];
 		const [item] = mkElm(["div"]);
 		item.textContent = number;
+		if (number === original[i]) {
+			item.classList.add("original");
+		}
 		return item;
-	}), box);
-	append([box], resultContainer);
+	}), boxIn);
+	boxOut.addEventListener("click", zoom);
+	append([boxIn], boxOut);
+	append([boxOut], resultContainer);
+	return true;
 }
 
+
+// オーバーフロー防止後の再開処理については未実装
+const tempRepo = {
+	numbers: [],
+	index: 0,
+	reset: function() {
+		this.numbers.splice(0);
+		this.index = 0;
+	},
+};
+function pause(numbers, index) {
+	tempRepo.numbers.splice(0);
+	const copiedNumbers = numbers.slice(0, numbers.length);
+	push(copiedNumbers, tempRepo.numbers);
+	tempRepo.index = index;
+	const [box, info, button] = mkElm(["div", "div", "div"]);
+	box.classList.add("memoryProtecterAlert");
+	info.textContent = "大量の計算によるオーバーフロー防止のため、処理を中断しました。";
+	button.textContent = "RESTART";
+	button.classList.add("restart");
+	button.addEventListener("click", restart);
+	//append([info, button], box);
+	append([info], box);
+	append([box], resultContainer);
+}
+function restart() {
+	this.parentNode.remove();
+	memoryProtecter.reset();
+	const numbers = tempRepo.numbers.slice(0, tempRepo.numbers.length);
+	const index = tempRepo.index;
+	tempRepo.reset();
+	solver(numbers, index);
+}
+
+
+function zoom(event) {
+	event.stopPropagation();
+	if (this.classList.contains("zoomed")) {
+		this.classList.remove("zoomed");
+		return;
+	}
+	this.classList.add("zoomed");
+}
 
 
 
