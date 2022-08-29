@@ -3,6 +3,7 @@ package main
 type ToppageModelStruct struct {
 	Subjects            []map[string][]map[string]string
 	Programs            []map[string]string
+	Games               []map[string]string
 	News                []string
 	Recommendation      []string
 	QuestionaireId      string
@@ -10,15 +11,16 @@ type ToppageModelStruct struct {
 }
 
 /*
-htmlレンダリング用の構造体を生成、view関数に渡して生成されたhtmlをControllerへ返却します。
+HTMLレンダリング用の構造体を生成、「view」関数に渡して生成されたHTMLをControllerへ返却します。
 【引数】なし
-【戻り値】html文字列
+【戻り値】HTML文字列
 */
 func ToppageModel() *string {
 	// 準固定ページであるため、例外処理は省略
 	model := ToppageModelStruct{
 		Subjects:            []map[string][]map[string]string{},
 		Programs:            []map[string]string{},
+		Games:               []map[string]string{},
 		News:                []string{},
 		Recommendation:      []string{},
 		QuestionaireId:      "",
@@ -79,8 +81,34 @@ func ToppageModel() *string {
 				var description string
 				Rows.Scan(&program, &programName, &description)
 				answer = append(answer, map[string]string{
-					"code": program,
-					"name": programName,
+					"code":        program,
+					"name":        programName,
+					"description": description,
+				})
+			}
+		}
+		return answer
+	})()
+
+	model.Games = (func() []map[string]string {
+		var answer []map[string]string
+
+		var SQL SQLbuilder
+
+		SQL.Add("SELECT game, game_name, description")
+		SQL.Add("FROM games")
+		SQL.Add("WHERE status = '1'")
+		SQL.Add("ORDER BY importance asc, game asc;")
+
+		if Rows := SelectAll(&SQL); Rows != nil {
+			for Rows.Next() {
+				var game string
+				var gameName string
+				var description string
+				Rows.Scan(&game, &gameName, &description)
+				answer = append(answer, map[string]string{
+					"code":        game,
+					"name":        gameName,
 					"description": description,
 				})
 			}

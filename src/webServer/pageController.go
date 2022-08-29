@@ -52,8 +52,8 @@ func pageController(RR *RequestResponse) {
 		strHTML = RegisterController(RR, digit)
 	case "M": // Need To Login
 		urlCheck = true
-		tmplMap.addCSS("M/00", "M/" + digit)
-		tmplMap.addJS("M/00", "M/" + digit)
+		tmplMap.addCSS("M/00", "M/"+digit)
+		tmplMap.addJS("M/00", "M/"+digit)
 		tmplMap.Title = "マイページ"
 		strHTML = MypageController(RR, digit)
 	case "P":
@@ -69,8 +69,11 @@ func pageController(RR *RequestResponse) {
 			tmplMap.addJS("P/0000")
 		}
 		strHTML = programController(digit)
+	case "G":
+		urlCheck = true
+		strHTML = gameController(tmplMap, RR)
 	case "B":
-		backOfficeController(RR, digit)
+		strHTML = backOfficeController(RR, digit)
 	case "A":
 		isPage = false
 		APIdata = API(RR)

@@ -23,12 +23,14 @@ const blockCheck = (numbers, [row, column], number, allowOne = false) => countSa
 
 const original = [];
 const memoryProtecter = {
-	MAX: 1000,
+	MAX: 0,
+	step: 1000,
 	current: 0,
 	locked: false,
 	reset: function() {
 		this.current = 0;
 		this.locked = false;
+		this.MAX += this.step;
 	},
 	stop: function() {
 		return this.MAX < this.current;
@@ -145,9 +147,8 @@ const tempRepo = {
 	},
 };
 function pause(numbers, index) {
-	tempRepo.numbers.splice(0);
-	const copiedNumbers = numbers.slice(0, numbers.length);
-	push(copiedNumbers, tempRepo.numbers);
+	tempRepo.reset();
+	push(map((a, i) => (i < index) ? a : 0, numbers), tempRepo.numbers);
 	tempRepo.index = index;
 	const [box, info, button] = mkElm(["div", "div", "div"]);
 	box.classList.add("memoryProtecterAlert");
@@ -164,8 +165,7 @@ function restart() {
 	memoryProtecter.reset();
 	const numbers = tempRepo.numbers.slice(0, tempRepo.numbers.length);
 	const index = tempRepo.index;
-	tempRepo.reset();
-	solver(numbers, index);
+	solver(numbers, index - 1);
 }
 
 

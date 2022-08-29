@@ -37,7 +37,7 @@
 					window.alert(response.ErrorMessage.join("\n"))
 				}
 			})
-			.catch(() => {
+			.catch(ex => {
 				window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
 			});
 		});
@@ -143,8 +143,8 @@
 			.then(response => response.json())
 			.then(response => {
 				if (response.Success) {
-					eraser(bL);
-					eraser(bP);
+					removeChildren(bL);
+					removeChildren(bP);
 					response.Lessons.forEach(lessonMap => {
 						const elm = document.createElement("div");
 						elm.dataset.subject = response.Subject;
@@ -183,7 +183,7 @@
 							.then(response => response.json())
 							.then(response => {
 								if (response.Success) {
-									eraser(bP);
+									removeChildren(bP);
 									response.Pages.forEach(pageMap => {
 										const elm = document.createElement("div");
 										elm.dataset.subject = response.Subject;
