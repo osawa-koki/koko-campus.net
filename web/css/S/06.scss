@@ -1,0 +1,30 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+#star {
+    position: fixed;
+    left: 10px;
+    bottom: 90px;
+
+    @include fb {
+        bottom: 220px;
+    }
+
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    fill: yellow;
+    stroke: black;
+    z-index: 10;
+    transition: .25s;
+    cursor: pointer;
+
+    &.off {
+        fill: lightgray;
+    }
+
+    &:hover {
+        fill: rgba(orange, 0.8);
+    }
+}
