@@ -1,0 +1,115 @@
+#reversi #mainFrame #board {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 2px black solid;
+  aspect-ratio: 1/1;
+}
+#reversi #mainFrame #board div.cell {
+  position: relative;
+  width: 100%;
+  border: 1px white solid;
+  background-color: green;
+  box-sizing: border-box;
+}
+#reversi #mainFrame #board div.cell::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 500px) {
+  #reversi #mainFrame #board div.cell::before {
+    inset: 3px;
+  }
+}
+#reversi #mainFrame #board div.cell.white::before {
+  background-color: white;
+}
+#reversi #mainFrame #board div.cell.black::before {
+  background-color: black;
+}
+#reversi #mainFrame #board div.cell.likely {
+  background-color: rgba(0, 128, 0, 0.7);
+  cursor: pointer;
+}
+#reversi #mainFrame #yourSide, #reversi #mainFrame #mySide {
+  width: 100%;
+  min-height: 100px;
+  margin: 25px auto;
+  border: 1px black solid;
+}
+#reversi #mainFrame #yourSide .botImgBox {
+  position: relative;
+  max-height: 150px;
+  aspect-ratio: 1/1;
+}
+#reversi #mainFrame #yourSide .botImgBox img.bot {
+  height: 100%;
+}
+#reversi #mainFrame #yourSide .botImgBox::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-family: "consolas";
+  z-index: 1;
+  top: 0;
+  right: 0;
+  transform-origin: center 40px;
+}
+#reversi #mainFrame #yourSide.solving .botImgBox::before {
+  content: "?";
+  -webkit-animation: solving 1s linear 0s infinite normal none running;
+          animation: solving 1s linear 0s infinite normal none running;
+}
+@-webkit-keyframes solving {
+  from {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes solving {
+  from {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+#reversi #mainFrame #yourSide.solved .botImgBox::before {
+  content: "!";
+  -webkit-animation: solved 1s ease 0s infinite normal running;
+          animation: solved 1s ease 0s infinite normal running;
+}
+@-webkit-keyframes solved {
+  from, 20% {
+    color: red;
+  }
+  to {
+    color: black;
+  }
+}
+@keyframes solved {
+  from, 20% {
+    color: red;
+  }
+  to {
+    color: black;
+  }
+}

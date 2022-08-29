@@ -1,0 +1,118 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+#reversi {
+	$ITEM_COUNT: 8;
+	#mainFrame {
+		#board {
+			display: grid;
+			grid-template-rows: repeat($ITEM_COUNT, 1fr);
+			grid-template-columns: repeat($ITEM_COUNT, 1fr);
+			width: 100%;
+			max-width: 500px;
+			margin: 50px auto;
+			border: 2px black solid;
+			aspect-ratio: 1 / 1;
+			div.cell {
+				position: relative;
+				width: 100%;
+				border: 1px white solid;
+				background-color: green;
+				box-sizing: border-box;
+				&::before {
+					content: "";
+					position: absolute;
+					inset: 5px;
+					@include sb {
+						inset: 3px;
+					}
+					border-radius: 50%;
+				}
+				&.white::before {
+					background-color: white;
+				}
+				&.black::before {
+					background-color: black;
+				}
+				&.likely {
+					background-color: rgba(green, 0.7);
+					cursor: pointer;
+				}
+			}
+		}
+		#yourSide, #mySide {
+			width: 100%;
+			min-height: 100px;
+			margin: 25px auto;
+			border: 1px black solid;
+		}
+		#yourSide {
+			.botImgBox {
+				position: relative;
+				max-height: 150px;
+				aspect-ratio: 1 / 1;
+				img.bot {
+					height: 100%;
+				}
+				&::before {
+					$Qheight: 50;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					font-size: #{$Qheight}px;
+					width: #{$Qheight}px;
+					height: #{$Qheight}px;
+					font-weight: bold;
+					font-family: "consolas";
+					z-index: 1;
+					top: 0;
+					right: 0;
+					transform-origin: center #{$Qheight - 10}px;
+				}
+			}
+			&.solving {
+				.botImgBox {
+					&::before {
+						content: "?";
+						animation: solving 1s linear 0s infinite normal none running;
+						@keyframes solving {
+							from {
+								transform: rotate(-30deg);
+							}
+							50% {
+								
+								transform: rotate(30deg);
+							}
+							to {
+								transform: rotate(-30deg);
+							}
+						}
+					}
+				}
+			}
+			&.solved {
+				.botImgBox {
+					&::before {
+						content: "!";
+						animation: solved 1s ease 0s infinite normal running;
+						@keyframes solved {
+							from, 20% {
+								color: red;
+							}
+							to{
+								color: black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+

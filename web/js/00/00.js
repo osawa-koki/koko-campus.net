@@ -27,6 +27,13 @@ const gtEq = (a, b) => a >= b;
 const lt = (a, b) => a < b;
 const ltEq = (a, b) => a <= b;
 
+const fst = a => a[0];
+const snd = a => a[1];
+const last = a => a[a.length - 1];
+
+const min = ([a, b, ...c]) => (fst(c) !== undefined) ? min([(a < b) ? a : b, ...c]) : (a < b) ? a : b;
+const max = ([a, b, ...c]) => (fst(c) !== undefined) ? max([(b < a) ? a : b, ...c]) : (b < a) ? a : b;
+
 const and = (a, b) => a && b;
 const or = (a, b) => a || b;
 const xor = (a, b) => (a || b) && !(a && b);
@@ -39,7 +46,7 @@ const rec = fx => fx(fx);
 
 const filter = (fx, [a, ...b], i = 0) => (a !== undefined) ? (fx(a, i)) ? [a, ...filter(fx, b)] : [...filter(fx, b)] : [];
 const map = (fx, [a, ...b], i = 0) => (a !== undefined) ? [fx(a, i), ...map(fx, b, i + 1)] : [];
-const looper = ([a, ...b], fx) => (a !== undefined) ? [fx(a), ...looper(b, fx)] : [];
+const looper = ([a, ...b], fx, i = 0) => (a !== undefined) ? [fx(a, i), ...looper(b, fx, i + 1)] : [];
 const any = ([a, ...b], fx) => (a !== undefined) ? or(fx(a), any(b, fx)) : false;
 const all = ([a, ...b], fx) => (a !== undefined) ? and(fx(a), all(b, fx)) : true;
 const anyIndex = ([a, ...b], fx, i = 0) => (a !== undefined) ? or(fx(a, i), anyIndex(b, fx, i + 1)) : false;
@@ -67,6 +74,7 @@ const push = ([a, ...b], list) => (a !== undefined) ? [list.push(a), ...push(b, 
 
 const doNtimes = (n, fx, i = 0) => (i < n) ? [fx(i), ...doNtimes(n, fx, i + 1)] : [];
 
+const random = (a, b) => Math.floor(Math.random() * (b + 1 - a) + a);
 const round = n => i => Math.round(i * n) / n;
 const round100 = round(100);
 
@@ -77,3 +85,6 @@ const fromAtoB = (a, b, step = 1, eq = true, i = 0) => (((eq) ? ltEq : lt)(a + i
 
 const flatter = ([a, ...b]) => (a !== undefined) ? (Array.isArray(a)) ? [...flatter(a)] : [a, ...flatter(b)] : []; // ★★★
 const mixupMesh = (a, b, i = 0) =>  (i < a.length * b.length) ? [[a[Math.floor(i / b.length)], b[i % b.length]], ...mixupMesh(a, b, i + 1)] : [];
+
+const removeClassifiedItems = a => looper(Array.from(document.getElementsByClassName(a)), b => b.classList.remove(a));
+
