@@ -22,7 +22,8 @@
 			"extensions": [
 				"golang.Go",
 				"mhutchie.git-graph",
-				"glenn2223.live-sass"
+				"glenn2223.live-sass",
+				"GitHub.copilot"
 			]
 		}
 	},
