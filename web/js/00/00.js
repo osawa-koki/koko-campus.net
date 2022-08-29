@@ -37,8 +37,8 @@ const falsy = a => !truthy(a);
 const apply = fx => arg => fx(arg);
 const rec = fx => fx(fx);
 
-const filter = (fx, [a, ...b]) => (a !== undefined) ? (fx(a)) ? [a, ...filter(fx, b)] : [...filter(fx, b)] : [];
-const map = (fx, [a, ...b]) => (a !== undefined) ? [fx(a), ...map(fx, b)] : [];
+const filter = (fx, [a, ...b], i = 0) => (a !== undefined) ? (fx(a, i)) ? [a, ...filter(fx, b)] : [...filter(fx, b)] : [];
+const map = (fx, [a, ...b], i = 0) => (a !== undefined) ? [fx(a, i), ...map(fx, b, i + 1)] : [];
 const looper = ([a, ...b], fx) => (a !== undefined) ? [fx(a), ...looper(b, fx)] : [];
 const any = ([a, ...b], fx) => (a !== undefined) ? or(fx(a), any(b, fx)) : false;
 const all = ([a, ...b], fx) => (a !== undefined) ? and(fx(a), all(b, fx)) : true;

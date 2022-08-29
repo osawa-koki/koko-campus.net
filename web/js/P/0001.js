@@ -21,14 +21,14 @@ Array.from(document.getElementById("inputBox").getElementsByTagName("input")).fo
 		let ok = true;
 		Array.from(document.getElementsByTagName("input")).forEach(event => {if (event.value === "") ok = false});
 		if (ok) {
-			button.addEventListener("click", push);
+			button.addEventListener("click", start);
 			button.classList.remove("pushed");
 		}
 	});
 });
 
-function push() {
-	button.removeEventListener("click", push);
+function start() {
+	button.removeEventListener("click", start);
 	button.classList.add("pushed");
 	const list = Array.from(document.getElementsByTagName("input")).map(n => parseInt(n.value));
 	const results = make10(list);
