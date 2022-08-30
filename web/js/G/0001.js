@@ -13,6 +13,13 @@ const CELL_STATE = {
 	black: 2,
 }
 
+const TIME = {
+	thinkingTime: 1000,
+	comeUpWith: 700,
+	fstPutSurroundFollows: 300,
+	turnOut: 300,
+}
+
 const env = {
 	myself: CELL_STATE.white,
 	you: function() {
@@ -34,16 +41,16 @@ const cellStatuses = new Array(ITEM_COUNT ** 2).fill(CELL_STATE.free);
 
 const whereAmI = self => cells.indexOf(self);
 
-const offsetToNext = [1, 9, 8, 7, -1, -9, -8, -7];
+const offsetToNext = [-9, -8, -7, -1, 1, 7, 8, 9];
 const toTheEdge = index => [
-	(ITEM_COUNT - 1) - (index % ITEM_COUNT),
-	min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), ((ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT)]), 
-	(ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / 8,
-	min([index % ITEM_COUNT, (ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT]),
-    index % 8,
-    min([index % ITEM_COUNT, (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
+	min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
     (index - (index % ITEM_COUNT)) / ITEM_COUNT,
-    min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
+    min([index % ITEM_COUNT, (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
+    index % 8,
+	(ITEM_COUNT - 1) - (index % ITEM_COUNT),
+	min([index % ITEM_COUNT, (ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT]),
+	(ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / 8,
+	min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), ((ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT)]), 
 ]; 
 
 
@@ -54,6 +61,7 @@ function setter(index, state) {
 }
 
 function areasToPutItem(index, state) {
+	if (cellStatuses[index] !== CELL_STATE.free) return [];
 	const puttableCells = [];
 	const squareNumbers = toTheEdge(index);
 	doNtimes(ITEM_COUNT, i => {
@@ -66,12 +74,13 @@ function areasToPutItem(index, state) {
 		for (let tillEnd = 0; tillEnd < squareNumber - 1; tillEnd++) {
 			const targetIndex = index + offset * 2 + offset * tillEnd;
 			const targetState = cellStatuses[targetIndex];
-			if (targetState === CELL_STATE.free) continue;
+			if (targetState === CELL_STATE.free) break;
 			if (targetState === state) {
 				push(possiblyToPut, puttableCells);
 				break;
+			} else {
+				possiblyToPut.push(targetIndex);
 			}
-			possiblyToPut.push(targetIndex);
 		};
 	});
 	return puttableCells;
@@ -87,30 +96,27 @@ function likelyToPut(index, state) {
 function likelyToPutFromThis() {
 	if (!env.my_turn) return;
 	Array.from(document.getElementsByClassName("likely")).map(element => (element !== this) ? element.classList.remove("likely") : null);
-	const myPosition = whereAmI(this);
-	const puttableCells = likelyToPut(myPosition, env.myself);
+	const index = whereAmI(this);
+	const puttableCells = likelyToPut(index, env.myself);
 	if (!puttableCells) return;
 	if (!this.classList.contains("likely")) {
 		this.classList.add("likely");
 		return;
 	}
-	setter(myPosition, env.myself);
+	setter(index, env.myself);
 	setTimeout(() => {
 		looper(puttableCells, cell => setter(cell, env.myself));
 		botInit();
-		setTimeout(() => {
-			botSolver();
-			setTimeout(() => {
-				botEnd();
-			}, 1000);
-		}, 1000);
-	}, 100);
+	}, TIME.fstPutSurroundFollows);
 }
 
 
 function botInit() {
 	env.my_turn = false;
 	yourSide.classList.add("solving");
+	setTimeout(() => {
+		botSolver();
+	}, TIME.thinkingTime);
 }
 
 function botSolver() {
@@ -122,15 +128,17 @@ function botSolver() {
 			if (puttablePoints.length === 0) return null;
 			return {index: point, puttablePoints: puttablePoints};
 		}));
+		if (DEBUG_MODE) {
+		}
 		const selected = turningCount[random(1, turningCount.length) - 1];
 		setter(selected.index, env.you());
-		console.log(" ##### ##### ##### ");
-		console.log(turningCount);
-		console.log(selected);
 		setTimeout(() => {
 			looper(selected.puttablePoints, cell => setter(cell, env.you()));
-		}, 1000);
-	}, 700);
+			setTimeout(() => {
+				botEnd();
+			}, TIME.turnOut);
+		}, TIME.fstPutSurroundFollows);
+	}, TIME.comeUpWith);
 }
 
 function botEnd() {
@@ -163,6 +171,9 @@ function reset() {
 	});
 }
 
+
+
+
 const debug = {
 	syncChecker: function() {
 		doNtimes(ITEM_COUNT ** 2, i => {
@@ -175,6 +186,14 @@ const debug = {
 	showIndex: function() {
 		looper(cells, (cell, i) => {
 			cell.textContent = i;
+		});
+	},
+	autoSyncChecker: function() {
+		doNtimes(ITEM_COUNT ** 2, i => {
+			const object = cells[i];
+			const state = cellStatuses[i];
+			if (object.classList.contains("black") && state !== CELL_STATE.black) console.log(`WARNING : ${i} diff`);
+			if (object.classList.contains("white") && state !== CELL_STATE.white) console.log(`WARNING : ${i} diff`);
 		});
 	},
 };
