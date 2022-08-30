@@ -6,10 +6,10 @@ type gameStruct struct {
 	PlayStyle   string
 	Description string
 	Suggestion  []map[string]string
-	Iter        [programIterCount][]int
+	UserImg     string
 }
 
-func gameModel(digit string, style string, DB_style string) *string {
+func gameModel(digit string, style string, DB_style string, userImg string) *string {
 	const toppageForGameDigit = "0000"
 	var gameMap gameStruct = gameStruct{
 		Game:        digit,
@@ -17,6 +17,7 @@ func gameModel(digit string, style string, DB_style string) *string {
 		PlayStyle:   DB_style,
 		Description: "JavaScriptで動作する簡単なゲームです。",
 		Suggestion:  []map[string]string{},
+		UserImg:     userImg,
 	}
 	var answer *string
 

@@ -43,13 +43,17 @@
 		}
 		#yourSide, #mySide {
 			width: 100%;
-			min-height: 100px;
+			height: 80px;
 			margin: 25px auto;
 			border: 1px black solid;
 		}
 		#yourSide {
+			position: relative;
 			.botImgBox {
-				position: relative;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
 				max-height: 150px;
 				aspect-ratio: 1 / 1;
 				img.bot {
@@ -67,8 +71,8 @@
 					font-weight: bold;
 					font-family: "consolas";
 					z-index: 1;
-					top: 0;
-					right: 0;
+					bottom: 70%;
+					left: 50%;
 					transform-origin: center #{$Qheight - 10}px;
 				}
 			}
@@ -96,16 +100,28 @@
 				.botImgBox {
 					&::before {
 						content: "!";
-						animation: solved 1s ease 0s infinite normal running;
-						@keyframes solved {
-							from, 20% {
-								color: red;
-							}
-							to{
-								color: black;
-							}
-						}
+						color: red;
 					}
+				}
+			}
+		}
+		#mySide {
+			position: relative;
+			#resetButton {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 150px;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				border-right: 1px black solid;
+				background-color: pink;
+				cursor: pointer;
+				&:hover {
+					color: white;
+					background-color: red;
 				}
 			}
 		}

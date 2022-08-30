@@ -38,12 +38,18 @@
 }
 #reversi #mainFrame #yourSide, #reversi #mainFrame #mySide {
   width: 100%;
-  min-height: 100px;
+  height: 80px;
   margin: 25px auto;
   border: 1px black solid;
 }
-#reversi #mainFrame #yourSide .botImgBox {
+#reversi #mainFrame #yourSide {
   position: relative;
+}
+#reversi #mainFrame #yourSide .botImgBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   max-height: 150px;
   aspect-ratio: 1/1;
 }
@@ -61,8 +67,8 @@
   font-weight: bold;
   font-family: "consolas";
   z-index: 1;
-  top: 0;
-  right: 0;
+  bottom: 70%;
+  left: 50%;
   transform-origin: center 40px;
 }
 #reversi #mainFrame #yourSide.solving .botImgBox::before {
@@ -94,22 +100,25 @@
 }
 #reversi #mainFrame #yourSide.solved .botImgBox::before {
   content: "!";
-  -webkit-animation: solved 1s ease 0s infinite normal running;
-          animation: solved 1s ease 0s infinite normal running;
+  color: red;
 }
-@-webkit-keyframes solved {
-  from, 20% {
-    color: red;
-  }
-  to {
-    color: black;
-  }
+#reversi #mainFrame #mySide {
+  position: relative;
 }
-@keyframes solved {
-  from, 20% {
-    color: red;
-  }
-  to {
-    color: black;
-  }
+#reversi #mainFrame #mySide #resetButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: 1px black solid;
+  background-color: pink;
+  cursor: pointer;
+}
+#reversi #mainFrame #mySide #resetButton:hover {
+  color: white;
+  background-color: red;
 }

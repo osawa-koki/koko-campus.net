@@ -22,7 +22,7 @@ func gameController(tmplMap *TmplMapStruct, RR *RequestResponse) *string {
 	tmplMap.addCSS("G/00", "G/99", "G/"+digit)
 	tmplMap.addJS("G/00", "G/99", "G/"+digit)
 
-	answer = gameModel(digit, style, style_DB)
+	answer = gameModel(digit, style, style_DB, iif(RR.Login, "/?M/" + RR.userID, "") + ".png")
 	return answer
 }
 
