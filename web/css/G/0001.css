@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #reversi #mainFrame #board {
   display: grid;
   grid-template-rows: repeat(8, 1fr);
@@ -105,7 +106,7 @@
 #reversi #mainFrame #mySide {
   position: relative;
 }
-#reversi #mainFrame #mySide #resetButton {
+#reversi #mainFrame #mySide #button {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -118,7 +119,7 @@
   background-color: pink;
   cursor: pointer;
 }
-#reversi #mainFrame #mySide #resetButton:hover {
+#reversi #mainFrame #mySide #button:hover {
   color: white;
   background-color: red;
 }
@@ -206,4 +207,34 @@
 #reversi #settingFrame #settingBox #settingAdjuster .title {
   font-family: bold;
   margin: 10px 0;
+}
+#reversi #settingFrame #settingBox #settingAdjuster .title::before {
+  content: "★";
+  margin-right: 10px;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #yourColorBox {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 300px;
+  height: 35px;
+  cursor: pointer;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnBlack, #reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnWhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  border: 1px black solid;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnBlack.selected, #reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnWhite.selected {
+  border: 3px red double;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnBlack {
+  color: white;
+  background-color: black;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnWhite {
+  color: black;
+  background-color: white;
 }

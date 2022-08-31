@@ -5,6 +5,7 @@ const DEBUG_MODE = true;
 
 const ITEM_COUNT = 8;
 const DIRECTION_COUNT= 8;
+const CENTER_POINTS_COUNT = 4;
 const CENTER_POINTS = [[27, 28], [36, 35]];
 
 const CELL_STATE = {
@@ -20,16 +21,21 @@ const TIME = {
 	turnOut: 300,
 }
 
+const setting = {
+	myColor: null,
+	botIntelligence: null,
+}
+
 const env = {
 	myself: CELL_STATE.white,
 	you: function() {
 		return (this.myself === CELL_STATE.black) ? CELL_STATE.white : CELL_STATE.black;
 	},
-	my_turn: true,
-	counter: 4,
+	my_turn: false,
+	counter: CENTER_POINTS_COUNT,
 	skipped: false,
 	reset: function() {
-		this.counter = 4;
+		this.counter = CENTER_POINTS_COUNT;
 	},
 }
 
@@ -46,10 +52,10 @@ const toTheEdge = index => [
 	Math.min(index % ITEM_COUNT, (index - (index % ITEM_COUNT)) / ITEM_COUNT),
     (index - (index % ITEM_COUNT)) / ITEM_COUNT,
 	Math.min((ITEM_COUNT - 1) - (index % ITEM_COUNT), (index - (index % ITEM_COUNT)) / ITEM_COUNT),
-    index % 8,
+    index % ITEM_COUNT,
 	(ITEM_COUNT - 1) - (index % ITEM_COUNT),
 	Math.min(index % ITEM_COUNT, (ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT),
-	(ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / 8,
+	(ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT,
 	Math.min((ITEM_COUNT - 1) - (index % ITEM_COUNT), ((ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT)),
 ]; 
 
@@ -97,17 +103,32 @@ function likelyToPut(index, state) {
 	return puttableCells;
 }
 
+function yourTurn() {
+	const possiblePoints = takePossiblePoints(env.myself);
+	if (possiblePoints.length === 0) {
+		if (env.skipped) {
+			gameEnd();
+		} else {
+			env.skipped = true;
+			skipped();
+		}
+		env.my_turn = false;
+		return;
+	}
+	env.skipped = false;
+}
+
 function likelyToPutFromThis() {
 	if (!env.my_turn) return;
 	Array.from(document.getElementsByClassName("likely")).map(element => (element !== this) ? element.classList.remove("likely") : null);
 	const index = whereAmI(this);
 	const puttableCells = likelyToPut(index, env.myself);
-
 	if (!puttableCells) return;
 	if (!this.classList.contains("likely")) {
 		this.classList.add("likely");
 		return;
 	}
+	env.my_turn = false;
 	setter(index, env.myself);
 	setTimeout(() => {
 		looper(puttableCells, cell => setter(cell, env.myself));
@@ -117,35 +138,52 @@ function likelyToPutFromThis() {
 
 
 function botInit() {
-	env.my_turn = false;
 	yourSide.classList.add("solving");
 	setTimeout(() => {
 		botSolver();
 	}, TIME.thinkingTime);
 }
 
+function takePossiblePoints(state) {
+	return filter(numbers => numbers !== null, looper(fromAtoB(0, ITEM_COUNT ** 2, 1, false), point => {
+		const puttablePoints = areasToPutItem(point, state);
+		if (puttablePoints.length === 0) return null;
+		return {index: point, puttablePoints: puttablePoints};
+	}));
+}
+
 function botSolver() {
 	yourSide.classList.remove("solving")
 	yourSide.classList.add("solved");
 	setTimeout(() => {
-		const turningCount = filter(numbers => numbers !== null, looper(fromAtoB(0, ITEM_COUNT ** 2, 1, false), point => {
-			const puttablePoints = areasToPutItem(point, env.you());
-			if (puttablePoints.length === 0) return null;
-			return {index: point, puttablePoints: puttablePoints};
-		}));
-		if (turningCount.length === 0) {
-			skipped();
+		const possiblePoints = takePossiblePoints(env.you());
+		if (possiblePoints.length === 0) {
+			if (env.skipped) {
+				gameEnd();
+			} else {
+				env.skipped = true;
+				skipped();
+			}
 			return;
 		}
-		const selected = turningCount[random(1, turningCount.length) - 1];
+		env.skipped = false;
+		const selected = botAlgo[strongth](possiblePoints);
 		setter(selected.index, env.you());
 		setTimeout(() => {
 			looper(selected.puttablePoints, cell => setter(cell, env.you()));
 			setTimeout(() => {
 				botEnd();
+				yourTurn();
 			}, TIME.turnOut);
 		}, TIME.fstPutSurroundFollows);
 	}, TIME.comeUpWith);
+}
+
+
+const botAlgo = {
+	"weak": function(possiblePoints) {
+		return possiblePoints[random(1, possiblePoints.length) - 1];
+	},
 }
 
 function botEnd() {
@@ -155,31 +193,49 @@ function botEnd() {
 
 
 const [yourSide, mySide, botImg] = getElm(["yourSide", "mySide", "botImg"]);
+const [button, yourOnBlack, yourOnWhite] = getElm(["button", "yourOnBlack", "yourOnWhite"]);
 const BOT_IMAGES_RANGE = [20, 25];
 
-(() => { // init
-	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
+looper([yourOnBlack, yourOnWhite], colorSelector => {
+	colorSelector.addEventListener("click", function() {
+		if (this === yourOnBlack) {
+			yourOnBlack.classList.add("selected");
+			yourOnWhite.classList.remove("selected");
+			setting.myColor = CELL_STATE.black;
+		} else {
+			yourOnWhite.classList.add("selected");
+			yourOnBlack.classList.remove("selected");
+			setting.myColor = CELL_STATE.white;
+		}
+	});
+});
 
-	append(doNtimes(ITEM_COUNT ** 2, () => {
-		const [cell] = mkElm(["div"]);
-		cell.classList.add("cell");
-		cell.addEventListener("click", likelyToPutFromThis);
-		cells.push(cell);
-		return cell;
-	}), board);
+button.addEventListener("click", function() {
 	reset();
-})();
-
+	importSetting();
+	startUpPrompt();
+	initter();
+});
 
 function reset() {
+	doNtimes(ITEM_COUNT ** 2, i => {
+		cellStatuses[i] = CELL_STATE.free;
+		cells[i].classList.remove(...filter(a => a !== "cell", cells[i].classList));
+	});
 	looper(CENTER_POINTS, (points, _) => {
 		setter(points[0], CELL_STATE.white)
 		setter(points[1], CELL_STATE.black)
 	});
 }
 
+function skipped(state) {
+
+}
 
 
+function gameEnd() {
+
+}
 
 const debug = {
 	syncChecker: function() {
@@ -204,6 +260,22 @@ const debug = {
 		});
 	},
 };
+
+
+
+(() => { // init
+	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
+	append(doNtimes(ITEM_COUNT ** 2, () => {
+		const [cell] = mkElm(["div"]);
+		cell.classList.add("cell");
+		cell.addEventListener("click", likelyToPutFromThis);
+		cells.push(cell);
+		return cell;
+	}), board);
+	reset();
+	yourOnBlack.click();
+})();
+
 
 if (DEBUG_MODE) {
 	debug.showIndex();
