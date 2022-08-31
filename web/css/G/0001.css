@@ -122,3 +122,88 @@
   color: white;
   background-color: red;
 }
+#reversi #settingFrame #settingImg, #reversi #settingFrame #settingBox {
+  position: fixed;
+}
+#reversi #settingFrame #settingImg {
+  width: 50px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 3;
+  cursor: pointer;
+}
+#reversi #settingFrame #settingImg:hover {
+  -webkit-animation: settingHover 10s ease 0s infinite normal running;
+          animation: settingHover 10s ease 0s infinite normal running;
+}
+@-webkit-keyframes settingHover {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes settingHover {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+#reversi #settingFrame #settingImg.on {
+  -webkit-animation: settingRotate 3s ease 0s infinite normal running;
+          animation: settingRotate 3s ease 0s infinite normal running;
+}
+@-webkit-keyframes settingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  30%, 40% {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes settingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  30%, 40% {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+#reversi #settingFrame #settingImg.on + #settingBox {
+  display: block;
+  top: 75px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+#reversi #settingFrame #settingBox {
+  inset: 100% 100% 0 0;
+  transition: all 1s ease;
+}
+#reversi #settingFrame #settingBox #settingAdjuster {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+}
+#reversi #settingFrame #settingBox #settingAdjuster .title {
+  font-family: bold;
+  margin: 10px 0;
+}

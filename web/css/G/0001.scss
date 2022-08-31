@@ -126,6 +126,75 @@
 			}
 		}
 	}
+	#settingFrame {
+		#settingImg, #settingBox {
+			position: fixed;
+
+		}
+		#settingImg {
+			width: 50px;
+			bottom: 10px;
+			left: 10px;
+			z-index: 3;
+			cursor: pointer;
+			&:hover {
+				animation: settingHover 10s ease 0s infinite normal running;
+				@keyframes settingHover {
+					from {
+						transform: rotate(0deg);
+					}
+					50% {
+						transform: rotate(360deg);
+					}
+					to {
+						transform: rotate(0deg);
+					}
+				}
+			}
+			&.on {
+				$settingMargin: 15;
+				animation: settingRotate 3s ease 0s infinite normal running;
+				@keyframes settingRotate {
+					from {
+						transform: rotate(0deg);
+					}
+					30%, 40% {
+						transform: rotate(-180deg);
+					}
+					to {
+						transform: rotate(720deg);
+					}
+				}
+				& + #settingBox {
+					display: block;
+					top: #{$headerHeight + $settingMargin}px;
+					right: #{$settingMargin + 5}px;
+					bottom: #{$settingMargin + 5}px;
+					left: #{$settingMargin + 5}px;
+					border: 2px black solid;
+					border-radius: 10px;
+					background-color: rgba(white, 0.95);
+				}
+			}
+			
+		}
+		#settingBox {
+			inset: 100% 100% 0 0;
+			transition: all 1s ease;
+			#settingAdjuster {
+				max-width: 700px;
+				margin: 0 auto;
+				padding: 25px;
+				.title {
+					font-family: bold;
+					margin: 10px 0;
+				}
+				input {
+
+				}
+			}
+		}
+	}
 }
 
 

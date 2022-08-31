@@ -16,7 +16,7 @@ const CELL_STATE = {
 const TIME = {
 	thinkingTime: 1000,
 	comeUpWith: 700,
-	fstPutSurroundFollows: 300,
+	fstPutSurroundFollows: 150,
 	turnOut: 300,
 }
 
@@ -43,14 +43,14 @@ const whereAmI = self => cells.indexOf(self);
 
 const offsetToNext = [-9, -8, -7, -1, 1, 7, 8, 9];
 const toTheEdge = index => [
-	min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
+	Math.min(index % ITEM_COUNT, (index - (index % ITEM_COUNT)) / ITEM_COUNT),
     (index - (index % ITEM_COUNT)) / ITEM_COUNT,
-    min([index % ITEM_COUNT, (index - (index % ITEM_COUNT)) / ITEM_COUNT]),
+	Math.min((ITEM_COUNT - 1) - (index % ITEM_COUNT), (index - (index % ITEM_COUNT)) / ITEM_COUNT),
     index % 8,
 	(ITEM_COUNT - 1) - (index % ITEM_COUNT),
-	min([index % ITEM_COUNT, (ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT]),
+	Math.min(index % ITEM_COUNT, (ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT),
 	(ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / 8,
-	min([(ITEM_COUNT - 1) - (index % ITEM_COUNT), ((ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT)]), 
+	Math.min((ITEM_COUNT - 1) - (index % ITEM_COUNT), ((ITEM_COUNT * (ITEM_COUNT - 1) + (index % ITEM_COUNT) - index) / ITEM_COUNT)),
 ]; 
 
 
@@ -64,7 +64,7 @@ function areasToPutItem(index, state) {
 	if (cellStatuses[index] !== CELL_STATE.free) return [];
 	const puttableCells = [];
 	const squareNumbers = toTheEdge(index);
-	doNtimes(ITEM_COUNT, i => {
+	doNtimes(DIRECTION_COUNT, i => {
 		const possiblyToPut = [];
 		const offset = offsetToNext[i];
 		const squareNumber = squareNumbers[i];
@@ -73,16 +73,20 @@ function areasToPutItem(index, state) {
 		possiblyToPut.push(index + offset);
 		for (let tillEnd = 0; tillEnd < squareNumber - 1; tillEnd++) {
 			const targetIndex = index + offset * 2 + offset * tillEnd;
+			if (targetIndex < 0 || ITEM_COUNT ** 2 - 1 < targetIndex) break;
 			const targetState = cellStatuses[targetIndex];
 			if (targetState === CELL_STATE.free) break;
+			if (DEBUG_MODE && state === env.you()) console.log(` TARGET | ${index} -> ${targetIndex} (${targetState})`);
 			if (targetState === state) {
 				push(possiblyToPut, puttableCells);
+				if (DEBUG_MODE && state === env.you()) console.log(` TARGET_END | ${index} -> ${targetIndex} (${targetState})`);
 				break;
 			} else {
 				possiblyToPut.push(targetIndex);
 			}
 		};
 	});
+	if (DEBUG_MODE && state === env.you()) console.log(" ##### ##### ##### ##### ##### ");
 	return puttableCells;
 }
 
@@ -98,6 +102,7 @@ function likelyToPutFromThis() {
 	Array.from(document.getElementsByClassName("likely")).map(element => (element !== this) ? element.classList.remove("likely") : null);
 	const index = whereAmI(this);
 	const puttableCells = likelyToPut(index, env.myself);
+
 	if (!puttableCells) return;
 	if (!this.classList.contains("likely")) {
 		this.classList.add("likely");
@@ -128,7 +133,9 @@ function botSolver() {
 			if (puttablePoints.length === 0) return null;
 			return {index: point, puttablePoints: puttablePoints};
 		}));
-		if (DEBUG_MODE) {
+		if (turningCount.length === 0) {
+			skipped();
+			return;
 		}
 		const selected = turningCount[random(1, turningCount.length) - 1];
 		setter(selected.index, env.you());
@@ -201,4 +208,39 @@ const debug = {
 if (DEBUG_MODE) {
 	debug.showIndex();
 }
+
+
+
+const [settingImg, settingBox] = getElm(["settingImg", "settingBox"]);
+
+settingImg.addEventListener("click", function() {
+	if (this.classList.contains("on")) {
+		this.classList.remove("on");
+	} else {
+		this.classList.add("on");
+
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+const EVALUATE_FX_PARAMS = [
+	 30, -12,  0, -1, -1,  0, -12,  30,
+	-12, -15, -3, -3, -3, -3, -15, -12,
+	  0,  -3,  0, -1, -1,  0,  -3,   0,
+	 -1,  -3,  0, -1, -1, -1,  -3,  -1,
+	 -1,  -3,  0, -1, -1, -1,  -3,  -1,
+	  0,  -3,  0, -1, -1,  0,  -3,   0,
+	-12, -15, -3, -3, -3, -3, -15, -12,
+	 30, -12,  0, -1, -1,  0, -12,  30,
+]
+
 
