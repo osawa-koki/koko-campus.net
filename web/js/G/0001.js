@@ -1,12 +1,13 @@
 "use strict";
 
-const DEBUG_MODE = false;
-
 
 const ITEM_COUNT = 8;
 const DIRECTION_COUNT= 8;
 const CENTER_POINTS_COUNT = 4;
 const CENTER_POINTS = [[27, 28], [36, 35]];
+
+
+
 
 const CELL_STATE = {
 	free: 0,
@@ -21,14 +22,22 @@ const TIME = {
 	turnOut: 300,
 }
 
+const GAME_END_STATUS = {
+	init: 0,
+	normal: 1,
+	skipped: 2,
+	reset: 3,
+};
+
+const BOT_INTELLIGENCE = 0;
+
 const setting = {
-	myColor: null,
 	botIntelligence: 0,
 	savelog: null,
 }
 
 const env = {
-	myself: CELL_STATE.white,
+	myself: null,
 	you: function() {
 		return (this.myself === CELL_STATE.black) ? CELL_STATE.white : CELL_STATE.black;
 	},
@@ -38,9 +47,13 @@ const env = {
 	reset: function() {
 		this.counter = CENTER_POINTS_COUNT;
 	},
+	finished: function() {
+		if (0 < countSatisfy(cellStatuses, cellStatus => cellStatus === CELL_STATE.free)) return false;
+		gameEnd(GAME_END_STATUS.normal);
+	},
 }
 
-const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
+
 const [board] = getElm(["board"]);
 const cells = [];
 const cellStatuses = new Array(ITEM_COUNT ** 2).fill(CELL_STATE.free);
@@ -105,47 +118,6 @@ function likelyToPut(index, state) {
 	return puttableCells;
 }
 
-function yourTurn() {
-	const possiblePoints = takePossiblePoints(env.myself);
-	if (possiblePoints.length === 0) {
-		if (env.skipped) {
-			gameEnd();
-		} else {
-			env.skipped = true;
-			skipped();
-		}
-		env.my_turn = false;
-		return;
-	}
-	env.skipped = false;
-}
-
-function likelyToPutFromThis() {
-	if (!env.my_turn) return;
-	Array.from(document.getElementsByClassName("likely")).map(element => (element !== this) ? element.classList.remove("likely") : null);
-	const index = whereAmI(this);
-	const puttableCells = likelyToPut(index, env.myself);
-	if (!puttableCells) return;
-	if (!this.classList.contains("likely")) {
-		this.classList.add("likely");
-		return;
-	}
-	env.my_turn = false;
-	setter(index, env.myself);
-	setTimeout(() => {
-		looper(puttableCells, cell => setter(cell, env.myself));
-		botInit();
-	}, TIME.fstPutSurroundFollows);
-}
-
-
-function botInit() {
-	battlingField.classList.add("solving");
-	setTimeout(() => {
-		botSolver();
-	}, TIME.thinkingTime);
-}
-
 function takePossiblePoints(state) {
 	return filter(numbers => numbers !== null, looper(fromAtoB(0, ITEM_COUNT ** 2, 1, false), point => {
 		const puttablePoints = areasToPutItem(point, state);
@@ -154,67 +126,6 @@ function takePossiblePoints(state) {
 	}));
 }
 
-function botSolver() {
-	battlingField.classList.remove("solving")
-	battlingField.classList.add("solved");
-	setTimeout(() => {
-		const possiblePoints = takePossiblePoints(env.you());
-		if (possiblePoints.length === 0) {
-			if (env.skipped) {
-				gameEnd();
-			} else {
-				env.skipped = true;
-				skipped();
-			}
-			return;
-		}
-		env.skipped = false;
-		const selected = botAlgo[setting.botIntelligence](possiblePoints);
-		setter(selected.index, env.you());
-		setTimeout(() => {
-			looper(selected.puttablePoints, cell => setter(cell, env.you()));
-			setTimeout(() => {
-				botEnd();
-				yourTurn();
-			}, TIME.turnOut);
-		}, TIME.fstPutSurroundFollows);
-	}, TIME.comeUpWith);
-}
-
-
-const botAlgo = [
-	function(possiblePoints) {
-		return possiblePoints[random(1, possiblePoints.length) - 1];
-	},
-];
-
-function botEnd() {
-	env.my_turn = true;
-	battlingField.classList.remove("solved");
-}
-
-
-const [battlingField, annouceBoard, botImg] = getElm(["battlingField", "annouceBoard", "botImg"]);
-const BOT_IMAGES_RANGE = [20, 25];
-
-looper([yourOnBlack, yourOnWhite], colorSelector => {
-	colorSelector.addEventListener("click", function() {
-		if (this === yourOnBlack) {
-			yourOnBlack.classList.add("selected");
-			yourOnWhite.classList.remove("selected");
-		} else {
-			yourOnWhite.classList.add("selected");
-			yourOnBlack.classList.remove("selected");
-		}
-	});
-});
-
-startButton.addEventListener("click", function() {
-	reset();
-	importSetting();
-	startUpPrompt();
-	initter();
-});
 
 function reset() {
 	doNtimes(ITEM_COUNT ** 2, i => {
@@ -228,13 +139,64 @@ function reset() {
 }
 
 function skipped(state) {
-
+	annouceBoard.textContent = `[${(state === env.myself) ? "ME" : "BOT"}] skipped...`;
+	setTimeout(() => {
+		annouceBoard.textContent = "";
+	}, 1000);
 }
 
 
-function gameEnd(normalEnd = true) {
-	
+
+
+
+function gameEnd(index) {
+	// 0 :-> 初期状態
+	// 1 :-> ゲーム終了 (通常)
+	// 2 :-> ゲーム終了 (skipped)
+	// 3 :-> ゲームリセット
+	onBoardAnnouncer.classList.add("on");
+	removeChildren(resultContainer);
+	[
+		(function() {
+			const [title] = mkElm(["div"]);
+			title.textContent = "Welcome to reversi program!!!";
+			title.classList.add("title");
+			const text = [
+				"一回目のクリックで置けるマスの場合には白くなり、二回目のクリックで実際に駒を置きます。",
+				"左下の歯車ボタンから各種設定が可能です。",
+				"",
+				"規定値では以下の設定となっています。",
+				"あなたの色 -> 黒 (先攻)",
+				`ボットの強さ -> 普通 (${BOT_INTELLIGENCE} / 5)`,
+			];
+			append([title], resultContainer);
+			appendText(text, resultContainer);
+		}),
+		(function(skiiped) {
+			console.log(111);
+		}),
+		(function() {
+			const text = [
+				"一回目のクリックで置けるマスの場合には白くなり、二回目のクリックで実際に駒を置きます。",
+				"左下の歯車ボタンから各種設定が可能です。",
+				"",
+				"規定値では以下の設定となっています。",
+				"あなたの色 -> 黒 (先攻)",
+				`ボットの強さ -> 普通 (${BOT_INTELLIGENCE} / 5)`,
+			];
+			append([title], resultContainer);
+			appendText(text, resultContainer);
+		}),
+		(function() {
+			const text = [
+				"ゲームがリセットされました。",
+				"下記スタートボタンから新しいゲームを開始できます。",
+			];
+			appendText(text, resultContainer);
+		}),
+	][index]((index === GAME_END_STATUS.skipped) ? true : false);
 }
+
 
 const debug = {
 	syncChecker: function() {
@@ -261,88 +223,13 @@ const debug = {
 };
 
 
-
-const [intelligence, settingStatusOn, settingLogOff, settingLogButtonOff] = getElm(["intelligence", "settingStatusOn", "settingLogOff", "settingLogButtonOff"])
-const [onBoardAnnouncer, resultContainer] = getElm(["onBoardAnnouncer", "resultContainer"]);
-const [setting2default, resetButton] = getElm(["setting2default", "resetButton"]);
-
-(() => { // init
-	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
-	append(doNtimes(ITEM_COUNT ** 2, () => {
-		const [cell] = mkElm(["div"]);
-		cell.classList.add("cell");
-		cell.addEventListener("click", likelyToPutFromThis);
-		cells.push(cell);
-		return cell;
-	}), board);
-	reset();
-	setDefaultSetting();
-	gameEnd(false);
-})();
-
-
-function setDefaultSetting() {
-	yourOnBlack.click();
-	intelligence.value = 1;
-	settingStatusOn.click();
-	settingLogOff.click();
-	settingLogButtonOff.click();
-}
-
-function importSetting() {
-	env.myself = (yourOnBlack.classList.contains("selected")) ? CELL_STATE.black : CELL_STATE.white;
-	env.my_turn = env.myself === CELL_STATE.black;
-	setting.botIntelligence = parseInt(intelligence.value);
-	setting.savelog = settingLogOff === false;
-}
-
-setting2default.addEventListener("click", function() {
-	setDefaultSetting();
+const logbackButtons = Array.from(document.querySelectorAll("input[name=logbackButtonSelector]"));
+settingLogOff.addEventListener("change", function() {
+	looper(logbackButtons, input => input.disabled = true);
+	settingLogButtonOff.checked = true;
 });
-
-resetButton.addEventListener("click", function() {
-	if (!window.confirm("ゲームをリセットしますか???")) return;
-	gameEnd(false);
-	reset();
+settingLogOn.addEventListener("change", function() {
+	looper(logbackButtons, input => input.disabled = false);
 });
-
-
-if (DEBUG_MODE) {
-	debug.showIndex();
-}
-
-
-
-const [settingImg, settingBox] = getElm(["settingImg", "settingBox"]);
-
-settingImg.addEventListener("click", function() {
-	if (this.classList.contains("on")) {
-		this.classList.remove("on");
-	} else {
-		this.classList.add("on");
-
-	}
-});
-
-
-
-
-
-
-
-
-
-
-
-const EVALUATE_FX_PARAMS = [
-	 30, -12,  0, -1, -1,  0, -12,  30,
-	-12, -15, -3, -3, -3, -3, -15, -12,
-	  0,  -3,  0, -1, -1,  0,  -3,   0,
-	 -1,  -3,  0, -1, -1, -1,  -3,  -1,
-	 -1,  -3,  0, -1, -1, -1,  -3,  -1,
-	  0,  -3,  0, -1, -1,  0,  -3,   0,
-	-12, -15, -3, -3, -3, -3, -15, -12,
-	 30, -12,  0, -1, -1,  0, -12,  30,
-]
 
 

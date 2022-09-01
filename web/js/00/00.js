@@ -70,6 +70,8 @@ const regexGrouping = (a, b) => a.match(b).groups;
 const removeChildren = parent => (parent.firstChild) ? [parent.removeChild(parent.firstChild), removeChildren(parent)] : [];
 
 const append = ([a, ...b], parent) => (a !== undefined) ? [parent.appendChild(a), ...append(b, parent)] : [];
+const mkBr = () => document.createElement("br");
+const appendText = ([a, ...b], parent) => (a !== undefined && 1 <= b.length) ? [append([document.createTextNode(a), mkBr()], parent), appendText(b, parent)] : (b.length === 0) ? append([document.createTextNode(a)], parent) : [];
 const push = ([a, ...b], list) => (a !== undefined) ? [list.push(a), ...push(b, list)] : [];
 
 const doNtimes = (n, fx, i = 0) => (i < n) ? [fx(i), ...doNtimes(n, fx, i + 1)] : [];

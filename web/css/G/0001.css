@@ -43,37 +43,45 @@
 #reversi #mainFrame #boardContainer #onBoardAnnouncer {
   position: absolute;
   display: none;
+  z-index: 9;
 }
 #reversi #mainFrame #boardContainer #onBoardAnnouncer.on {
   inset: -25px 25px;
   display: block;
   color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 25px;
 }
-#reversi #mainFrame #boardContainer #onBoardAnnouncer #button {
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer {
+  margin: 25px;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #startButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 50px auto;
   width: 150px;
   height: 35px;
   border: 1px black solid;
+  color: black;
   background-color: pink;
   cursor: pointer;
 }
-#reversi #mainFrame #boardContainer #onBoardAnnouncer #button:hover {
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #startButton:hover {
   color: white;
   background-color: red;
 }
-#reversi #mainFrame #battlingField, #reversi #mainFrame #annouceBoard {
+#reversi #mainFrame #battlingField {
+  position: relative;
   width: 100%;
   height: 80px;
   margin: 25px auto;
   border: 1px black solid;
-}
-#reversi #mainFrame #battlingField {
-  position: relative;
 }
 #reversi #mainFrame #battlingField .myImgBox, #reversi #mainFrame #battlingField .botImgBox {
   position: absolute;
@@ -137,7 +145,12 @@
   color: red;
 }
 #reversi #mainFrame #annouceBoard {
-  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 50px;
+  padding: 25px;
+  border: 1px lightgray solid;
 }
 #reversi #settingFrame #settingImg, #reversi #settingFrame #settingBox {
   position: fixed;
@@ -146,8 +159,8 @@
   width: 50px;
   bottom: 10px;
   left: 10px;
-  z-index: 3;
   cursor: pointer;
+  z-index: 300;
 }
 #reversi #settingFrame #settingImg:hover {
   -webkit-animation: settingHover 10s ease 0s infinite normal running;
@@ -213,9 +226,10 @@
 }
 #reversi #settingFrame #settingBox {
   inset: 100% 100% 0 0;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   overflow-y: auto;
   scrollbar-width: 0;
+  z-index: 99;
 }
 #reversi #settingFrame #settingBox::-webkit-scrollbar {
   display: none;
