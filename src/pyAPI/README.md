@@ -53,8 +53,10 @@ setting.json
 ## 参考
 
 ### プロジェクト構成
-- https://fastapi.tiangolo.com/tutorial/bigger-applications/
-- https://note.com/yusugomori/n/n9f2c0422dfcd
+- [FastAPI ディレクトリ設計｜巣籠 悠輔｜note](https://note.com/yusugomori/n/n9f2c0422dfcd)
+- [Bigger Applications - Multiple Files - FastAPI](https://fastapi.tiangolo.com/tutorial/bigger-applications/)
+- [Project Generation - Template - FastAPI](https://fastapi.tiangolo.com/project-generation/)
 
-### alembic
-- https://zenn.dev/yusugomori/articles/a3d5dc8baf9e386a58e5
+### Alembic
+- [FastAPI x MySQL on Docker ~ マイグレーション・API作成 ~](https://zenn.dev/yusugomori/articles/a3d5dc8baf9e386a58e5)
+- [DBマイグレーションツールのAlembicの使い方](https://zenn.dev/shimakaze_soft/articles/4c0784d9a87751)
