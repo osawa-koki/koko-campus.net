@@ -4,12 +4,29 @@
 
 
 ## 実行方法
+1. MySQLにデータベース（`DB_PYAPI_DATABASE_NAME`）を作成
+
+2. 環境変数を設定
+```
+$ export DB_PYAPI_DATABASE_NAME=<fastAPI用のMySQLのDB名>
+$ export PYAPI_SECRET_TOKEN=<適当な文字列>
+```
+
+3. Pythonのパッケージ（ライブラリ）をインストール
 ```
 $ pip install -r requirements.txt
+```
+
+4. DBマイグレーション
+```
 $ alembic upgrade head
+```
+
+5. Webサーバーを起動
+```
 $ uvicorn app.main:app --port 8888 --reload
 ```
-もしくは、VSCodeの[デバッガーで実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)
+もしくは、[デバッガーで`run_debug.py`を実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)
 
 
 ## 開発環境
@@ -38,3 +55,6 @@ setting.json
 ### プロジェクト構成
 - https://fastapi.tiangolo.com/tutorial/bigger-applications/
 - https://note.com/yusugomori/n/n9f2c0422dfcd
+
+### alembic
+- https://zenn.dev/yusugomori/articles/a3d5dc8baf9e386a58e5
