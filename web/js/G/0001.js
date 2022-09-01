@@ -47,6 +47,7 @@ const env = {
 	reset: function() {
 		this.counter = CENTER_POINTS_COUNT;
 	},
+	gameEndLock: false,
 	finished: function() {
 		if (0 < countSatisfy(cellStatuses, cellStatus => cellStatus === CELL_STATE.free)) return false;
 		gameEnd(GAME_END_STATUS.normal);
@@ -146,6 +147,7 @@ function reset() {
 		setter(points[1], CELL_STATE.black)
 	});
 	botProgressor.style.background = "";
+	env.gameEndLock = false;
 }
 
 
@@ -155,6 +157,8 @@ function gameEnd(index) {
 	// 1 :-> ゲーム終了 (通常)
 	// 2 :-> ゲーム終了 (skipped)
 	// 3 :-> ゲームリセット
+	if (env.gameEndLock) return;
+	env.gameEndLock = true;
 	onBoardAnnouncer.classList.add("on");
 	removeChildren(resultContainer);
 	[
@@ -173,7 +177,7 @@ function gameEnd(index) {
 			append([title], resultContainer);
 			appendText(text, resultContainer);
 		}),
-		(function(skiiped) {
+		(function(skipped) {
 			const [text, textBox] = [
 				document.createTextNode(""),
 				document.createElement("div"),
@@ -190,7 +194,7 @@ function gameEnd(index) {
 						return;
 					}
 					text.nodeValue += GAME_SET.shift();
-				}, 100);
+				}, 200);
 			});
 			promiseController.then(() => {
 				const [blackWhiteBox, blackBox, whiteBox] = mkElm(["div", "div", "div"]);
@@ -222,7 +226,7 @@ function gameEnd(index) {
 							const [div] = mkElm(["div"]);
 							blackWhiteOrder[1].appendChild(div);
 						}
-					}, 300);
+					}, 100);
 				});
 				promiseController.then(result => {
 					const [resultTextBox] = mkElm(["div"]);

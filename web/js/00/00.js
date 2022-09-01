@@ -27,12 +27,18 @@ const gtEq = (a, b) => a >= b;
 const lt = (a, b) => a < b;
 const ltEq = (a, b) => a <= b;
 
+const add = (a, b) => a + b;
+const reduce = (a, b) => a - b;
+const times = (a, b) => a * b;
+const divide = (a, b) => a / b;
+const power = (a, b) => a ** b;
+
 const fst = a => a[0];
 const snd = a => a[1];
 const last = a => a[a.length - 1];
 
-const min = ([a, b, ...c]) => (fst(c) !== undefined) ? min([(a < b) ? a : b, ...c]) : (a < b) ? a : b;
-const max = ([a, b, ...c]) => (fst(c) !== undefined) ? max([(b < a) ? a : b, ...c]) : (b < a) ? a : b;
+const min = ([a, b, ...c]) => (fst(c) !== undefined) ? min([(a <= b) ? a : b, ...c]) : (a <= b) ? a : b;
+const max = ([a, b, ...c]) => (fst(c) !== undefined) ? max([(b <= a) ? a : b, ...c]) : (b <= a) ? a : b;
 
 const and = (a, b) => a && b;
 const or = (a, b) => a || b;
@@ -52,6 +58,9 @@ const all = ([a, ...b], fx) => (a !== undefined) ? and(fx(a), all(b, fx)) : true
 const anyIndex = ([a, ...b], fx, i = 0) => (a !== undefined) ? or(fx(a, i), anyIndex(b, fx, i + 1)) : false;
 const allIndex = ([a, ...b], fx, i = 0) => (a !== undefined) ? and(fx(a, i), allIndex(b, fx, i + 1)) : true;
 const countSatisfy = ([a, ...b], fx, i = 0) => (a !== undefined) ? countSatisfy(b, fx, i + (fx(a) ? 1 : 0)) : i;
+const minFx = ([a, b, ...c], fx, eq = true) => (fst(c) !== undefined) ? minFx([((eq) ? ltEq : lt)(fx(a), fx(b)) ? a : b, ...c], fx) : ((eq) ? ltEq : lt)(fx(a), fx(b)) ? a : b;
+const maxFx = ([a, b, ...c], fx, eq = true) => (fst(c) !== undefined) ? maxFx([((eq) ? gtEq : gt)(fx(a), fx(b)) ? a : b, ...c], fx) : ((eq) ? gtEq : gt)(fx(a), fx(b)) ? a : b;
+const reducer = ([a, ...b], fx, fxComprehensive = add) => (a !== undefined && 0 < b.length) ? fxComprehensive(fx(a), reducer(b, fx, fxComprehensive)) : fx(a);
 
 const getElm = ([a, ...b]) => (a !== undefined) ? [document.getElementById(a), ...getElm(b)] : [];
 const mkElm = ([a, ...b]) => (a !== undefined) ? [document.createElement(a), ...mkElm(b)] : [];

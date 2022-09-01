@@ -2,7 +2,7 @@
 
 const DEBUG_MODE = false;
 
-const BOT_INTELLIGENCE = 0;
+const BOT_INTELLIGENCE = 2;
 
 const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
 
@@ -16,7 +16,6 @@ function yourTurn() {
 			env.skipped = true;
 			skipped();
 		}
-		env.my_turn = false;
 		return;
 	}
 	env.skipped = false;
@@ -87,18 +86,21 @@ function botSolver() {
 
 const botAlgo = [
 	(function(possiblePoints) { // 単純にランダムを返す一番弱いアルゴリズム
-		return possiblePoints[random(1, possiblePoints.length) - 1];
+		return possiblePoints[random(0, possiblePoints.length - 1)];
 	}),
-	(function() {
+	(function(possiblePoints) { // 前半は最も少ないコマ数を、後半はできるだけ多くを
+		const adoptedFx = (countSatisfy(cellStatuses, cellStatus => cellStatus !== CELL_STATE.free) < ITEM_COUNT ** 2 / 2) ? minFx : maxFx;
+		const powerfulSelect = adoptedFx(possiblePoints, pointObject => pointObject.puttablePoints.length);
+		return powerfulSelect;
+	}),
+	(function(possiblePoints) { // 評価関数で最大になるように (再帰一階層)
+		const powerfulSelect = maxFx(possiblePoints, pointObject => (pointObject !== undefined) ? SIMPLE_EVALUATE_FX(pointObject) : -999);
+		return powerfulSelect;
+	}),
+	(function(possiblePoints) {
 		// ここにアルゴリズムを追加してっちょ
 	}),
-	(function() {
-		// ここにアルゴリズムを追加してっちょ
-	}),
-	(function() {
-		// ここにアルゴリズムを追加してっちょ
-	}),
-	(function() {
+	(function(possiblePoints) {
 		// ここにアルゴリズムを追加してっちょ
 	}),
 ];
@@ -131,8 +133,8 @@ startButton.addEventListener("click", function() {
 	if (env.you() === CELL_STATE.black) botInit();
 });
 
-function skipped(state) {
-	annouceBoard.textContent = `[${(state === env.myself) ? "ME" : "BOT"}] skipped...`;
+function skipped() {
+	annouceBoard.textContent = `[${(env.my_turn) ? "ME" : "BOT"}] skipped...`;
 	setTimeout(() => {
 		annouceBoard.textContent = "";
 		if (env.my_turn) {
@@ -142,7 +144,7 @@ function skipped(state) {
 			env.my_turn = true;
 			battlingField.classList.remove("solved");
 		}
-	}, 1000);
+	}, 3000);
 }
 
 function updateStatus() {
@@ -214,7 +216,9 @@ settingImg.addEventListener("click", function() {
 	}
 });
 
-
+function SIMPLE_EVALUATE_FX(possiblePoints) {
+	return reducer([possiblePoints.index, ...possiblePoints.puttablePoints], index => EVALUATE_FX_PARAMS[index], (a, b) => a + b);
+}
 
 const EVALUATE_FX_PARAMS = [
 	30, -12,  0, -1, -1,  0, -12,  30,
