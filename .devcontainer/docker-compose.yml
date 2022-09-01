@@ -48,6 +48,7 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
       - ./initdb.d:/docker-entrypoint-initdb.d
+      - ./mysql-my.cnf:/etc/mysql/conf.d/my.cnf
     env_file:
       # Ensure that the variables in .env match the same variables in devcontainer.json
       - db.env

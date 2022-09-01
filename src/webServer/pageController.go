@@ -38,8 +38,8 @@ func pageController(RR *RequestResponse) {
 		tmplMap.addCSS("S/00", "S/01", "S/02", "S/03", "S/04", "S/05", "S/99")
 		tmplMap.addJS("S/00", "S/01", "S/02", "S/04", "99/00")
 		if RR.Login {
-			tmplMap.addJS("S/70")
-			tmplMap.addCSS("S/70")
+			tmplMap.addJS("S/06", "S/70")
+			tmplMap.addCSS("S/06", "S/70")
 		}
 		SubjMap := RegexGetParam(`/(S(?P<Subject>\d+))?(L(?P<Lesson>\d+))?(P(?P<Page>\d+))?`, RR.path)
 		tmplMap.addCSS("S/" + SubjMap["Subject"])

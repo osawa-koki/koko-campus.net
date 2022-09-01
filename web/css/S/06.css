@@ -1,0 +1,24 @@
+#star {
+  position: fixed;
+  left: 10px;
+  bottom: 90px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  fill: yellow;
+  stroke: black;
+  z-index: 10;
+  transition: 0.25s;
+  cursor: pointer;
+}
+@media screen and (min-width: 1001px) {
+  #star {
+    bottom: 220px;
+  }
+}
+#star.off {
+  fill: lightgray;
+}
+#star:hover {
+  fill: rgba(255, 165, 0, 0.8);
+}

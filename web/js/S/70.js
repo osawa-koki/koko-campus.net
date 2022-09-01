@@ -116,10 +116,10 @@
     });
 
     
-    //noteBoxContent以外の場所をクリックしらメモを閉じる
+    //notePreviewIgnore以外の場所をクリックしらメモを閉じる
     document.addEventListener("click", (e) => {
-        if(!e.target.closest(".noteBoxContent")) {
-            //noteBoxContent以外の場所をクリックした場合の処理
+        if(!e.target.closest(".notePreviewIgnore")) {
+            //notePreviewIgnore以外の場所をクリックした場合の処理
             previewState = CLOSE;
             updatePreview(previewState);
         }

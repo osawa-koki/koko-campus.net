@@ -5,7 +5,11 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
-
+	
+	"features": {
+		"python": "3.10"
+	},
+	
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -22,7 +26,8 @@
 			"extensions": [
 				"golang.Go",
 				"mhutchie.git-graph",
-				"glenn2223.live-sass"
+				"glenn2223.live-sass",
+				"GitHub.copilot"
 			]
 		}
 	},
