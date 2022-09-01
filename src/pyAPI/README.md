@@ -5,8 +5,9 @@
 
 ## 実行方法
 ```
-pip install -r requirements.txt
-uvicorn app.main:app --port 8888 --reload
+$ pip install -r requirements.txt
+$ alembic upgrade head
+$ uvicorn app.main:app --port 8888 --reload
 ```
 もしくは、VSCodeの[デバッガーで実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)
 

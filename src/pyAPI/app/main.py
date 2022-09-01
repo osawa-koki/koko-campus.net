@@ -4,7 +4,6 @@ from fastapi.staticfiles import StaticFiles
 from . import database
 from .routers import emoji, note
 
-database.Base.metadata.create_all(bind=database.engine)
 
 app = FastAPI()
 
