@@ -86,8 +86,20 @@ function botSolver() {
 
 
 const botAlgo = [
-	(function(possiblePoints) {
+	(function(possiblePoints) { // 単純にランダムを返す一番弱いアルゴリズム
 		return possiblePoints[random(1, possiblePoints.length) - 1];
+	}),
+	(function() {
+		// ここにアルゴリズムを追加してっちょ
+	}),
+	(function() {
+		// ここにアルゴリズムを追加してっちょ
+	}),
+	(function() {
+		// ここにアルゴリズムを追加してっちょ
+	}),
+	(function() {
+		// ここにアルゴリズムを追加してっちょ
 	}),
 ];
 
