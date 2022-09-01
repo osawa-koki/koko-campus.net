@@ -1,5 +1,8 @@
 @charset "UTF-8";
-#reversi #mainFrame #board {
+#reversi #mainFrame #boardContainer {
+  position: relative;
+}
+#reversi #mainFrame #boardContainer #board {
   display: grid;
   grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(8, 1fr);
@@ -9,55 +12,79 @@
   border: 2px black solid;
   aspect-ratio: 1/1;
 }
-#reversi #mainFrame #board div.cell {
+#reversi #mainFrame #boardContainer #board div.cell {
   position: relative;
   width: 100%;
   border: 1px white solid;
   background-color: green;
   box-sizing: border-box;
 }
-#reversi #mainFrame #board div.cell::before {
+#reversi #mainFrame #boardContainer #board div.cell::before {
   content: "";
   position: absolute;
   inset: 5px;
   border-radius: 50%;
 }
 @media screen and (max-width: 500px) {
-  #reversi #mainFrame #board div.cell::before {
+  #reversi #mainFrame #boardContainer #board div.cell::before {
     inset: 3px;
   }
 }
-#reversi #mainFrame #board div.cell.white::before {
+#reversi #mainFrame #boardContainer #board div.cell.white::before {
   background-color: white;
 }
-#reversi #mainFrame #board div.cell.black::before {
+#reversi #mainFrame #boardContainer #board div.cell.black::before {
   background-color: black;
 }
-#reversi #mainFrame #board div.cell.likely {
+#reversi #mainFrame #boardContainer #board div.cell.likely {
   background-color: rgba(0, 128, 0, 0.7);
   cursor: pointer;
 }
-#reversi #mainFrame #yourSide, #reversi #mainFrame #mySide {
+#reversi #mainFrame #boardContainer #onBoardAnnouncer {
+  position: absolute;
+  display: none;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer.on {
+  inset: -25px 25px;
+  display: block;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  width: 150px;
+  height: 35px;
+  border: 1px black solid;
+  background-color: pink;
+  cursor: pointer;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #button:hover {
+  color: white;
+  background-color: red;
+}
+#reversi #mainFrame #battlingField, #reversi #mainFrame #annouceBoard {
   width: 100%;
   height: 80px;
   margin: 25px auto;
   border: 1px black solid;
 }
-#reversi #mainFrame #yourSide {
+#reversi #mainFrame #battlingField {
   position: relative;
 }
-#reversi #mainFrame #yourSide .botImgBox {
+#reversi #mainFrame #battlingField .myImgBox, #reversi #mainFrame #battlingField .botImgBox {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
   max-height: 150px;
-  aspect-ratio: 1/1;
 }
-#reversi #mainFrame #yourSide .botImgBox img.bot {
+#reversi #mainFrame #battlingField .myImgBox img.me, #reversi #mainFrame #battlingField .myImgBox img.bot, #reversi #mainFrame #battlingField .botImgBox img.me, #reversi #mainFrame #battlingField .botImgBox img.bot {
   height: 100%;
 }
-#reversi #mainFrame #yourSide .botImgBox::before {
+#reversi #mainFrame #battlingField .myImgBox::before, #reversi #mainFrame #battlingField .botImgBox::before {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +99,13 @@
   left: 50%;
   transform-origin: center 40px;
 }
-#reversi #mainFrame #yourSide.solving .botImgBox::before {
+#reversi #mainFrame #battlingField .myImgBox {
+  left: 0;
+}
+#reversi #mainFrame #battlingField .botImgBox {
+  right: 0;
+}
+#reversi #mainFrame #battlingField.solving .botImgBox::before {
   content: "?";
   -webkit-animation: solving 1s linear 0s infinite normal none running;
           animation: solving 1s linear 0s infinite normal none running;
@@ -99,29 +132,12 @@
     transform: rotate(-30deg);
   }
 }
-#reversi #mainFrame #yourSide.solved .botImgBox::before {
+#reversi #mainFrame #battlingField.solved .botImgBox::before {
   content: "!";
   color: red;
 }
-#reversi #mainFrame #mySide {
+#reversi #mainFrame #annouceBoard {
   position: relative;
-}
-#reversi #mainFrame #mySide #button {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  border-right: 1px black solid;
-  background-color: pink;
-  cursor: pointer;
-}
-#reversi #mainFrame #mySide #button:hover {
-  color: white;
-  background-color: red;
 }
 #reversi #settingFrame #settingImg, #reversi #settingFrame #settingBox {
   position: fixed;
@@ -198,6 +214,11 @@
 #reversi #settingFrame #settingBox {
   inset: 100% 100% 0 0;
   transition: all 1s ease;
+  overflow-y: auto;
+  scrollbar-width: 0;
+}
+#reversi #settingFrame #settingBox::-webkit-scrollbar {
+  display: none;
 }
 #reversi #settingFrame #settingBox #settingAdjuster {
   max-width: 700px;
@@ -206,7 +227,7 @@
 }
 #reversi #settingFrame #settingBox #settingAdjuster .title {
   font-family: bold;
-  margin: 10px 0;
+  margin: 50px 0 10px 0;
 }
 #reversi #settingFrame #settingBox #settingAdjuster .title::before {
   content: "★";
@@ -237,4 +258,51 @@
 #reversi #settingFrame #settingBox #settingAdjuster #yourColorBox #yourOnWhite {
   color: black;
   background-color: white;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #intelligenceContainer {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #intelligenceContainer #intelligence {
+  margin: 0 5px;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #setting2default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  width: 150px;
+  height: 35px;
+  border: 1px black solid;
+  background-color: pink;
+  cursor: pointer;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #setting2default:hover {
+  color: white;
+  background-color: red;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #resetButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  width: 150px;
+  height: 35px;
+  border: 1px black solid;
+  background-color: lightgray;
+  cursor: pointer;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #resetButton:hover {
+  color: white;
+  background-color: gray;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #settingWarning {
+  color: red;
+  margin: 25px 0;
+}
+#reversi #settingFrame #settingBox #settingAdjuster #settingWarning::before {
+  content: "!";
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
 }

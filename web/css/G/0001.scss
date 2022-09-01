@@ -5,58 +5,88 @@
 #reversi {
 	$ITEM_COUNT: 8;
 	#mainFrame {
-		#board {
-			display: grid;
-			grid-template-rows: repeat($ITEM_COUNT, 1fr);
-			grid-template-columns: repeat($ITEM_COUNT, 1fr);
-			width: 100%;
-			max-width: 500px;
-			margin: 50px auto;
-			border: 2px black solid;
-			aspect-ratio: 1 / 1;
-			div.cell {
-				position: relative;
+		#boardContainer {
+			position: relative;
+			#board {
+				display: grid;
+				grid-template-rows: repeat($ITEM_COUNT, 1fr);
+				grid-template-columns: repeat($ITEM_COUNT, 1fr);
 				width: 100%;
-				border: 1px white solid;
-				background-color: green;
-				box-sizing: border-box;
-				&::before {
-					content: "";
-					position: absolute;
-					inset: 5px;
-					@include sb {
-						inset: 3px;
+				max-width: 500px;
+				margin: 50px auto;
+				border: 2px black solid;
+				aspect-ratio: 1 / 1;
+				div.cell {
+					position: relative;
+					width: 100%;
+					border: 1px white solid;
+					background-color: green;
+					box-sizing: border-box;
+					&::before {
+						content: "";
+						position: absolute;
+						inset: 5px;
+						@include sb {
+							inset: 3px;
+						}
+						border-radius: 50%;
 					}
-					border-radius: 50%;
+					&.white::before {
+						background-color: white;
+					}
+					&.black::before {
+						background-color: black;
+					}
+					&.likely {
+						background-color: rgba(green, 0.7);
+						cursor: pointer;
+					}
 				}
-				&.white::before {
-					background-color: white;
+			}
+			#onBoardAnnouncer {
+				position: absolute;
+				display: none;
+				&.on {
+					inset: -25px 25px;
+					display: block;
+					color: white;
+					background-color: rgba(black, 0.7);
+					border-radius: 25px;
 				}
-				&.black::before {
-					background-color: black;
+				#resultContainer {
+					
 				}
-				&.likely {
-					background-color: rgba(green, 0.7);
+				#button {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 50px 0;
+					width: 150px;
+					height: 35px;
+					border: 1px black solid;
+					background-color: pink;
 					cursor: pointer;
+					&:hover {
+						color: white;
+						background-color: red;
+					}	
 				}
 			}
 		}
-		#yourSide, #mySide {
+		#battlingField, #annouceBoard {
 			width: 100%;
 			height: 80px;
 			margin: 25px auto;
 			border: 1px black solid;
 		}
-		#yourSide {
+		#battlingField {
 			position: relative;
-			.botImgBox {
+			.myImgBox, .botImgBox {
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				left: 0;
 				max-height: 150px;
-				aspect-ratio: 1 / 1;
-				img.bot {
+				img.me, img.bot {
 					height: 100%;
 				}
 				&::before {
@@ -75,6 +105,12 @@
 					left: 50%;
 					transform-origin: center #{$Qheight - 10}px;
 				}
+			}
+			.myImgBox {
+				left: 0;
+			}
+			.botImgBox {
+				right: 0;
 			}
 			&.solving {
 				.botImgBox {
@@ -105,25 +141,8 @@
 				}
 			}
 		}
-		#mySide {
+		#annouceBoard {
 			position: relative;
-			#button {
-				position: absolute;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 150px;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				border-right: 1px black solid;
-				background-color: pink;
-				cursor: pointer;
-				&:hover {
-					color: white;
-					background-color: red;
-				}
-			}
 		}
 	}
 	#settingFrame {
@@ -181,13 +200,18 @@
 		#settingBox {
 			inset: 100% 100% 0 0;
 			transition: all 1s ease;
+			overflow-y: auto;
+			scrollbar-width: 0;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 			#settingAdjuster {
 				max-width: 700px;
 				margin: 0 auto;
 				padding: 25px;
 				.title {
 					font-family: bold;
-					margin: 10px 0;
+					margin: 50px 0 10px 0;
 					&::before {
 						content: "★";
 						margin-right: 10px;
@@ -217,6 +241,53 @@
 					#yourOnWhite {
 						color: black;
 						background-color: white;
+					}
+				}
+				#intelligenceContainer {
+					display: flex;
+					flex-wrap: no-wrap;
+					#intelligence {
+						margin: 0 5px;
+					}
+				}
+				#setting2default {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 50px 0;
+					width: 150px;
+					height: 35px;
+					border: 1px black solid;
+					background-color: pink;
+					cursor: pointer;
+					&:hover {
+						color: white;
+						background-color: red;
+					}	
+				}
+				#resetButton {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 50px 0;
+					width: 150px;
+					height: 35px;
+					border: 1px black solid;
+					background-color: lightgray;
+					cursor: pointer;
+					&:hover {
+						color: white;
+						background-color: gray;
+					}
+				}
+				#settingWarning {
+					color: red;
+					margin: 25px 0;
+					&::before {
+						content: "!";
+						font-size: 20px;
+						font-weight: bold;
+						margin-right: 10px;
 					}
 				}
 			}

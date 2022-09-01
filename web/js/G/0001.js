@@ -1,6 +1,6 @@
 "use strict";
 
-const DEBUG_MODE = true;
+const DEBUG_MODE = false;
 
 
 const ITEM_COUNT = 8;
@@ -23,7 +23,8 @@ const TIME = {
 
 const setting = {
 	myColor: null,
-	botIntelligence: null,
+	botIntelligence: 0,
+	savelog: null,
 }
 
 const env = {
@@ -31,7 +32,7 @@ const env = {
 	you: function() {
 		return (this.myself === CELL_STATE.black) ? CELL_STATE.white : CELL_STATE.black;
 	},
-	my_turn: false,
+	my_turn: true,
 	counter: CENTER_POINTS_COUNT,
 	skipped: false,
 	reset: function() {
@@ -39,6 +40,7 @@ const env = {
 	},
 }
 
+const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
 const [board] = getElm(["board"]);
 const cells = [];
 const cellStatuses = new Array(ITEM_COUNT ** 2).fill(CELL_STATE.free);
@@ -138,7 +140,7 @@ function likelyToPutFromThis() {
 
 
 function botInit() {
-	yourSide.classList.add("solving");
+	battlingField.classList.add("solving");
 	setTimeout(() => {
 		botSolver();
 	}, TIME.thinkingTime);
@@ -153,8 +155,8 @@ function takePossiblePoints(state) {
 }
 
 function botSolver() {
-	yourSide.classList.remove("solving")
-	yourSide.classList.add("solved");
+	battlingField.classList.remove("solving")
+	battlingField.classList.add("solved");
 	setTimeout(() => {
 		const possiblePoints = takePossiblePoints(env.you());
 		if (possiblePoints.length === 0) {
@@ -167,7 +169,7 @@ function botSolver() {
 			return;
 		}
 		env.skipped = false;
-		const selected = botAlgo[strongth](possiblePoints);
+		const selected = botAlgo[setting.botIntelligence](possiblePoints);
 		setter(selected.index, env.you());
 		setTimeout(() => {
 			looper(selected.puttablePoints, cell => setter(cell, env.you()));
@@ -180,20 +182,19 @@ function botSolver() {
 }
 
 
-const botAlgo = {
-	"weak": function(possiblePoints) {
+const botAlgo = [
+	function(possiblePoints) {
 		return possiblePoints[random(1, possiblePoints.length) - 1];
 	},
-}
+];
 
 function botEnd() {
 	env.my_turn = true;
-	yourSide.classList.remove("solved");
+	battlingField.classList.remove("solved");
 }
 
 
-const [yourSide, mySide, botImg] = getElm(["yourSide", "mySide", "botImg"]);
-const [button, yourOnBlack, yourOnWhite] = getElm(["button", "yourOnBlack", "yourOnWhite"]);
+const [battlingField, annouceBoard, botImg] = getElm(["battlingField", "annouceBoard", "botImg"]);
 const BOT_IMAGES_RANGE = [20, 25];
 
 looper([yourOnBlack, yourOnWhite], colorSelector => {
@@ -201,16 +202,14 @@ looper([yourOnBlack, yourOnWhite], colorSelector => {
 		if (this === yourOnBlack) {
 			yourOnBlack.classList.add("selected");
 			yourOnWhite.classList.remove("selected");
-			setting.myColor = CELL_STATE.black;
 		} else {
 			yourOnWhite.classList.add("selected");
 			yourOnBlack.classList.remove("selected");
-			setting.myColor = CELL_STATE.white;
 		}
 	});
 });
 
-button.addEventListener("click", function() {
+startButton.addEventListener("click", function() {
 	reset();
 	importSetting();
 	startUpPrompt();
@@ -233,8 +232,8 @@ function skipped(state) {
 }
 
 
-function gameEnd() {
-
+function gameEnd(normalEnd = true) {
+	
 }
 
 const debug = {
@@ -263,6 +262,10 @@ const debug = {
 
 
 
+const [intelligence, settingStatusOn, settingLogOff, settingLogButtonOff] = getElm(["intelligence", "settingStatusOn", "settingLogOff", "settingLogButtonOff"])
+const [onBoardAnnouncer, resultContainer] = getElm(["onBoardAnnouncer", "resultContainer"]);
+const [setting2default, resetButton] = getElm(["setting2default", "resetButton"]);
+
 (() => { // init
 	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
 	append(doNtimes(ITEM_COUNT ** 2, () => {
@@ -273,8 +276,35 @@ const debug = {
 		return cell;
 	}), board);
 	reset();
-	yourOnBlack.click();
+	setDefaultSetting();
+	gameEnd(false);
 })();
+
+
+function setDefaultSetting() {
+	yourOnBlack.click();
+	intelligence.value = 1;
+	settingStatusOn.click();
+	settingLogOff.click();
+	settingLogButtonOff.click();
+}
+
+function importSetting() {
+	env.myself = (yourOnBlack.classList.contains("selected")) ? CELL_STATE.black : CELL_STATE.white;
+	env.my_turn = env.myself === CELL_STATE.black;
+	setting.botIntelligence = parseInt(intelligence.value);
+	setting.savelog = settingLogOff === false;
+}
+
+setting2default.addEventListener("click", function() {
+	setDefaultSetting();
+});
+
+resetButton.addEventListener("click", function() {
+	if (!window.confirm("ゲームをリセットしますか???")) return;
+	gameEnd(false);
+	reset();
+});
 
 
 if (DEBUG_MODE) {
