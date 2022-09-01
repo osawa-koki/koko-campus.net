@@ -49,6 +49,11 @@ setting.json
 }
 ```
 
+### pytest
+```
+sh scripts/test.sh
+```
+
 
 ## 参考
 
