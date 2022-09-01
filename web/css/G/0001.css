@@ -60,6 +60,50 @@
   font-weight: bold;
   margin: 10px 0;
 }
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .GAMESET {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 10px 0;
+  text-align: center;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox {
+  width: 50%;
+  min-height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 10px;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox div, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox div {
+  border-radius: 50%;
+  width: 30px;
+  aspect-ratio: 1/1;
+  margin: 3px;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox {
+  background-color: white;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox div {
+  background-color: black;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox {
+  background-color: black;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox div {
+  background-color: white;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .resultTextBox {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  text-align: center;
+}
 #reversi #mainFrame #boardContainer #onBoardAnnouncer #startButton {
   display: flex;
   justify-content: center;
@@ -143,6 +187,14 @@
 #reversi #mainFrame #battlingField.solved .botImgBox::before {
   content: "!";
   color: red;
+}
+#reversi #mainFrame #battlingField #botProgressor {
+  position: absolute;
+  top: calc(100% + 3px);
+  right: 0;
+  bottom: -10px;
+  left: 0;
+  transition: all 1s ease;
 }
 #reversi #mainFrame #annouceBoard {
   font-size: 20px;

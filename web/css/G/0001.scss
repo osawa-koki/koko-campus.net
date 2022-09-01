@@ -61,6 +61,50 @@
 						font-weight: bold;
 						margin: 10px 0;
 					}
+					.GAMESET {
+						font-size: 20px;
+						font-weight: bold;
+						letter-spacing: 3px;
+						margin: 10px 0;
+						text-align: center;
+					}
+					.blackWhiteBox {
+						display: flex;
+						flex-wrap: nowrap;
+						.blackBox, .whiteBox {
+							width: 50%;
+							min-height: 150px;
+							display: flex;
+							flex-wrap: wrap;
+							align-content: flex-start;
+							padding: 10px;
+							div {
+								border-radius: 50%;
+								width: 30px;
+								aspect-ratio: 1 / 1;
+								margin: 3px;
+							}
+						}
+						.blackBox {
+							background-color: white;
+							div {
+								background-color: black;
+							}
+						}
+						.whiteBox {
+							background-color: black;
+							div {
+								background-color: white;
+							}
+						}
+					}
+					.resultTextBox {
+						font-size: 25px;
+						font-weight: bold;
+						letter-spacing: 2px;
+						margin: 10px 0;
+						text-align: center;
+					}
 				}
 				#startButton {
 					display: flex;
@@ -144,6 +188,14 @@
 						color: red;
 					}
 				}
+			}
+			#botProgressor {
+				position: absolute;
+				top: calc(100% + 3px);
+				right: 0;
+				bottom: -10px;
+				left: 0;
+				transition: all 1s ease;
 			}
 		}
 		#annouceBoard {

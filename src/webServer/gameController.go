@@ -19,10 +19,15 @@ func gameController(tmplMap *TmplMapStruct, RR *RequestResponse) *string {
 		}
 	}
 
-	suffix := "_" + style
+	tmplMap.addCSS("G/00", "G/99")
+	tmplMap.addJS("G/00", "G/99")
 
-	tmplMap.addCSS("G/00", "G/99", "G/"+digit, "G/"+digit+suffix)
-	tmplMap.addJS("G/00", "G/99", "G/"+digit, "G/"+digit+suffix)
+	if digit != "0000" && style != "0" {
+		suffix := "_" + style
+	
+		tmplMap.addCSS("G/99", "G/"+digit, "G/"+digit+suffix)
+		tmplMap.addJS("G/99", "G/"+digit, "G/"+digit+suffix)
+	}
 
 	answer = gameModel(digit, style, style_DB, iif(RR.Login, "/?M00/" + RR.userID, "/?M00/0000") + ".png")
 	return answer

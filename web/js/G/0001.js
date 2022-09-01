@@ -29,10 +29,10 @@ const GAME_END_STATUS = {
 	reset: 3,
 };
 
-const BOT_INTELLIGENCE = 0;
 
 const setting = {
-	botIntelligence: 0,
+	botIntelligence: null,
+	status: null,
 	savelog: null,
 }
 
@@ -58,6 +58,14 @@ const [board] = getElm(["board"]);
 const cells = [];
 const cellStatuses = new Array(ITEM_COUNT ** 2).fill(CELL_STATE.free);
 
+
+
+const [intelligence, settingStatusOn, settingLogOn, settingLogOff, settingLogButtonOff] = getElm(["intelligence", "settingStatusOn", "settingLogOn", "settingLogOff", "settingLogButtonOff"])
+const [onBoardAnnouncer, resultContainer] = getElm(["onBoardAnnouncer", "resultContainer"]);
+const [setting2default, resetButton] = getElm(["setting2default", "resetButton"]);
+
+const [battlingField, annouceBoard, botImg, botProgressor] = getElm(["battlingField", "annouceBoard", "botImg", "botProgressor"]);
+
 // fx
 
 const whereAmI = self => cells.indexOf(self);
@@ -79,6 +87,7 @@ function setter(index, state) {
 	cells[index].classList.remove(...filter(a => a !== "cell", cells[index].classList));
 	cells[index].classList.add((state === CELL_STATE.white) ? "white" : (state === CELL_STATE.black) ? "black" : "");
 	cellStatuses[index] = state;
+	env.skipped = false;
 }
 
 function areasToPutItem(index, state) {
@@ -136,16 +145,8 @@ function reset() {
 		setter(points[0], CELL_STATE.white)
 		setter(points[1], CELL_STATE.black)
 	});
+	botProgressor.style.background = "";
 }
-
-function skipped(state) {
-	annouceBoard.textContent = `[${(state === env.myself) ? "ME" : "BOT"}] skipped...`;
-	setTimeout(() => {
-		annouceBoard.textContent = "";
-	}, 1000);
-}
-
-
 
 
 
@@ -167,26 +168,71 @@ function gameEnd(index) {
 				"",
 				"規定値では以下の設定となっています。",
 				"あなたの色 -> 黒 (先攻)",
-				`ボットの強さ -> 普通 (${BOT_INTELLIGENCE} / 5)`,
+				`ボットの強さ -> 普通 (${BOT_INTELLIGENCE + 1} / 5)`,
 			];
 			append([title], resultContainer);
 			appendText(text, resultContainer);
 		}),
 		(function(skiiped) {
-			console.log(111);
-		}),
-		(function() {
-			const text = [
-				"一回目のクリックで置けるマスの場合には白くなり、二回目のクリックで実際に駒を置きます。",
-				"左下の歯車ボタンから各種設定が可能です。",
-				"",
-				"規定値では以下の設定となっています。",
-				"あなたの色 -> 黒 (先攻)",
-				`ボットの強さ -> 普通 (${BOT_INTELLIGENCE} / 5)`,
+			const [text, textBox] = [
+				document.createTextNode(""),
+				document.createElement("div"),
 			];
-			append([title], resultContainer);
-			appendText(text, resultContainer);
+			textBox.classList.add("GAMESET");
+			append([text], textBox);
+			append([textBox], resultContainer);
+			const GAME_SET = "GAME SET".split("");
+			const promiseController = new Promise(resolve => {
+				const intervalId = setInterval(() => {
+					if (GAME_SET.length === 0) {
+						clearInterval(intervalId);
+						resolve(); // RESOLVE!!!
+						return;
+					}
+					text.nodeValue += GAME_SET.shift();
+				}, 100);
+			});
+			promiseController.then(() => {
+				const [blackWhiteBox, blackBox, whiteBox] = mkElm(["div", "div", "div"]);
+				blackWhiteBox.classList.add("blackWhiteBox");
+				blackBox.classList.add("blackBox");
+				whiteBox.classList.add("whiteBox");
+				const blackWhiteOrder = (env.myself === CELL_STATE.black) ? [blackBox, whiteBox] : [whiteBox, blackBox];
+				append(blackWhiteOrder, blackWhiteBox);
+				append([blackWhiteBox], resultContainer);
+				const [myCount, yourCount] = [
+					countSatisfy(cellStatuses, cellStatus => cellStatus === env.myself),
+					countSatisfy(cellStatuses, cellStatus => cellStatus === env.you()),
+				];
+				let counter = 0;
+				const promiseController = new Promise(resolve => {
+					const intervalId = setInterval(() => {
+						counter++;
+						if (myCount < counter && yourCount && counter) {
+							clearInterval(intervalId);
+							setTimeout(() => {
+								resolve((myCount === yourCount) ? 0 : (yourCount < myCount) ? 1 : 2); // RESOLVE!!!
+							}, 300);
+						}
+						if (counter < myCount) {
+							const [div] = mkElm(["div"]);
+							blackWhiteOrder[0].appendChild(div);
+						}
+						if (counter < yourCount) {
+							const [div] = mkElm(["div"]);
+							blackWhiteOrder[1].appendChild(div);
+						}
+					}, 300);
+				});
+				promiseController.then(result => {
+					const [resultTextBox] = mkElm(["div"]);
+					resultTextBox.classList.add("resultTextBox");
+					resultTextBox.textContent = (result === 0) ? "DRAW" : (result === 1) ? "WIN!!!" : "LOSE...";
+					append([resultTextBox], resultContainer);
+				});
+			});
 		}),
+		(function() {}), // DUMMY...
 		(function() {
 			const text = [
 				"ゲームがリセットされました。",
@@ -194,7 +240,7 @@ function gameEnd(index) {
 			];
 			appendText(text, resultContainer);
 		}),
-	][index]((index === GAME_END_STATUS.skipped) ? true : false);
+	][(index === GAME_END_STATUS.skipped) ? index - 1 : index]((index === GAME_END_STATUS.skipped) ? true : false);
 }
 
 

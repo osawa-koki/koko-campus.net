@@ -2,8 +2,9 @@
 
 const DEBUG_MODE = false;
 
-const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
+const BOT_INTELLIGENCE = 0;
 
+const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
 
 function yourTurn() {
 	if (env.finished()) return;
@@ -21,6 +22,11 @@ function yourTurn() {
 	env.skipped = false;
 }
 
+
+function commonAfterPlace(state) {
+	if (setting.status) updateStatus();
+}
+
 function likelyToPutFromThis() {
 	if (!env.my_turn) return;
 	Array.from(document.getElementsByClassName("likely")).map(element => (element !== this) ? element.classList.remove("likely") : null);
@@ -35,6 +41,7 @@ function likelyToPutFromThis() {
 	setter(index, env.myself);
 	setTimeout(() => {
 		looper(puttableCells, cell => setter(cell, env.myself));
+		commonAfterPlace(env.myself);
 		botInit();
 	}, TIME.fstPutSurroundFollows);
 }
@@ -68,6 +75,7 @@ function botSolver() {
 		setter(selected.index, env.you());
 		setTimeout(() => {
 			looper(selected.puttablePoints, cell => setter(cell, env.you()));
+			commonAfterPlace(env.you());
 			setTimeout(() => {
 				botEnd();
 				yourTurn();
@@ -89,13 +97,6 @@ function botEnd() {
 }
 
 
-
-
-const [intelligence, settingStatusOn, settingLogOn, settingLogOff, settingLogButtonOff] = getElm(["intelligence", "settingStatusOn", "settingLogOn", "settingLogOff", "settingLogButtonOff"])
-const [onBoardAnnouncer, resultContainer] = getElm(["onBoardAnnouncer", "resultContainer"]);
-const [setting2default, resetButton] = getElm(["setting2default", "resetButton"]);
-
-const [battlingField, annouceBoard, botImg] = getElm(["battlingField", "annouceBoard", "botImg"]);
 const BOT_IMAGES_RANGE = [20, 25];
 
 looper([yourOnBlack, yourOnWhite], colorSelector => {
@@ -114,10 +115,33 @@ startButton.addEventListener("click", function() {
 	reset();
 	importSetting();
 	onBoardAnnouncer.classList.remove("on");
+	updateStatus();
 	if (env.you() === CELL_STATE.black) botInit();
 });
 
+function skipped(state) {
+	annouceBoard.textContent = `[${(state === env.myself) ? "ME" : "BOT"}] skipped...`;
+	setTimeout(() => {
+		annouceBoard.textContent = "";
+		if (env.my_turn) {
+			env.my_turn = false;
+			botInit();
+		} else {
+			env.my_turn = true;
+			battlingField.classList.remove("solved");
+		}
+	}, 1000);
+}
 
+function updateStatus() {
+	if (!setting.status) return;
+	const [me, you] = [
+		countSatisfy(cellStatuses, cellStatus => cellStatus === env.myself),
+		countSatisfy(cellStatuses, cellStatus => cellStatus === env.you()),
+	];
+	const me_and_you = (me + you) / 100;
+	botProgressor.style.background = `linear-gradient(to right, yellow 0% ${me/me_and_you-1}%, red ${me/me_and_you-1}% ${me/me_and_you+1}%, skyblue ${me/me_and_you+1}% 100%)`;
+}
 
 (() => { // init
 	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
@@ -146,6 +170,7 @@ function importSetting() {
 	env.myself = (yourOnBlack.classList.contains("selected")) ? CELL_STATE.black : CELL_STATE.white;
 	env.my_turn = env.myself === CELL_STATE.black;
 	setting.botIntelligence = parseInt(intelligence.value);
+	setting.status = settingStatusOn.checked;
 	setting.savelog = settingLogOff === false;
 }
 
@@ -166,7 +191,6 @@ if (DEBUG_MODE) {
 }
 
 
-
 const [settingImg, settingBox] = getElm(["settingImg", "settingBox"]);
 
 settingImg.addEventListener("click", function() {
@@ -177,11 +201,6 @@ settingImg.addEventListener("click", function() {
 
 	}
 });
-
-
-
-
-
 
 
 
