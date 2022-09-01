@@ -1,0 +1,1 @@
+CREATE DATABASE koko_pyapi;

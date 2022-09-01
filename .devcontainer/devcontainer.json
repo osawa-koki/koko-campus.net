@@ -5,7 +5,11 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspace",
-
+	
+	"features": {
+		"python": "3.10"
+	},
+	
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
