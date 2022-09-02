@@ -44,6 +44,11 @@
   position: absolute;
   display: none;
   z-index: 9;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+#reversi #mainFrame #boardContainer #onBoardAnnouncer::-webkit-scrollbar {
+  display: none;
 }
 #reversi #mainFrame #boardContainer #onBoardAnnouncer.on {
   inset: -25px 25px;
@@ -61,8 +66,9 @@
   margin: 10px 0;
 }
 #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .GAMESET {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  font-family: "游明朝";
   letter-spacing: 3px;
   margin: 10px 0;
   text-align: center;
@@ -73,17 +79,36 @@
 }
 #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox {
   width: 50%;
-  min-height: 150px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   padding: 10px;
 }
+@media screen and (max-width: 500px) {
+  #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox {
+    min-height: 100px;
+  }
+}
+@media screen and (min-width: 501px) {
+  #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox {
+    min-height: 150px;
+  }
+}
 #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox div, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox div {
   border-radius: 50%;
-  width: 30px;
   aspect-ratio: 1/1;
-  margin: 3px;
+}
+@media screen and (max-width: 500px) {
+  #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox div, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox div {
+    width: 10px;
+    margin: 2px;
+  }
+}
+@media screen and (min-width: 501px) {
+  #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox div, #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .whiteBox div {
+    margin: 3px;
+    width: 30px;
+  }
 }
 #reversi #mainFrame #boardContainer #onBoardAnnouncer #resultContainer .blackWhiteBox .blackBox {
   background-color: white;
