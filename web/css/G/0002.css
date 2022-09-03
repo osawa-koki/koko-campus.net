@@ -84,49 +84,669 @@
   background-color: lightgoldenrodyellow;
   box-sizing: border-box;
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div {
+#shogi #boardContainer #mainBoardBox #board div.cell.movable {
+  background-color: rgba(250, 250, 210, 0.05);
+  cursor: crosshair;
+}
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma {
   position: absolute;
   inset: 0;
   border: 1px black solid;
-  background-color: gold;
+  background: gold;
   -webkit-clip-path: polygon(50% 10%, 30% 20%, 20% 80%, 80% 80%, 70% 20%);
           clip-path: polygon(50% 10%, 30% 20%, 20% 80%, 80% 80%, 70% 20%);
+  z-index: 7;
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma::before {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  z-index: 10;
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.ofYours {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.touched {
+  -webkit-animation: shine 2s ease 0s infinite normal running;
+          animation: shine 2s ease 0s infinite normal running;
+}
+@-webkit-keyframes shine {
+  0% {
+    background: linear-gradient(150deg, gold 0%, white 20%, gold 40% 100%);
+  }
+  1% {
+    background: linear-gradient(150deg, gold 1%, white 21%, gold 41% 100%);
+  }
+  2% {
+    background: linear-gradient(150deg, gold 2%, white 22%, gold 42% 100%);
+  }
+  3% {
+    background: linear-gradient(150deg, gold 3%, white 23%, gold 43% 100%);
+  }
+  4% {
+    background: linear-gradient(150deg, gold 4%, white 24%, gold 44% 100%);
+  }
+  5% {
+    background: linear-gradient(150deg, gold 5%, white 25%, gold 45% 100%);
+  }
+  6% {
+    background: linear-gradient(150deg, gold 6%, white 26%, gold 46% 100%);
+  }
+  7% {
+    background: linear-gradient(150deg, gold 7%, white 27%, gold 47% 100%);
+  }
+  8% {
+    background: linear-gradient(150deg, gold 8%, white 28%, gold 48% 100%);
+  }
+  9% {
+    background: linear-gradient(150deg, gold 9%, white 29%, gold 49% 100%);
+  }
+  10% {
+    background: linear-gradient(150deg, gold 10%, white 30%, gold 50% 100%);
+  }
+  11% {
+    background: linear-gradient(150deg, gold 11%, white 31%, gold 51% 100%);
+  }
+  12% {
+    background: linear-gradient(150deg, gold 12%, white 32%, gold 52% 100%);
+  }
+  13% {
+    background: linear-gradient(150deg, gold 13%, white 33%, gold 53% 100%);
+  }
+  14% {
+    background: linear-gradient(150deg, gold 14%, white 34%, gold 54% 100%);
+  }
+  15% {
+    background: linear-gradient(150deg, gold 15%, white 35%, gold 55% 100%);
+  }
+  16% {
+    background: linear-gradient(150deg, gold 16%, white 36%, gold 56% 100%);
+  }
+  17% {
+    background: linear-gradient(150deg, gold 17%, white 37%, gold 57% 100%);
+  }
+  18% {
+    background: linear-gradient(150deg, gold 18%, white 38%, gold 58% 100%);
+  }
+  19% {
+    background: linear-gradient(150deg, gold 19%, white 39%, gold 59% 100%);
+  }
+  20% {
+    background: linear-gradient(150deg, gold 20%, white 40%, gold 60% 100%);
+  }
+  21% {
+    background: linear-gradient(150deg, gold 21%, white 41%, gold 61% 100%);
+  }
+  22% {
+    background: linear-gradient(150deg, gold 22%, white 42%, gold 62% 100%);
+  }
+  23% {
+    background: linear-gradient(150deg, gold 23%, white 43%, gold 63% 100%);
+  }
+  24% {
+    background: linear-gradient(150deg, gold 24%, white 44%, gold 64% 100%);
+  }
+  25% {
+    background: linear-gradient(150deg, gold 25%, white 45%, gold 65% 100%);
+  }
+  26% {
+    background: linear-gradient(150deg, gold 26%, white 46%, gold 66% 100%);
+  }
+  27% {
+    background: linear-gradient(150deg, gold 27%, white 47%, gold 67% 100%);
+  }
+  28% {
+    background: linear-gradient(150deg, gold 28%, white 48%, gold 68% 100%);
+  }
+  29% {
+    background: linear-gradient(150deg, gold 29%, white 49%, gold 69% 100%);
+  }
+  30% {
+    background: linear-gradient(150deg, gold 30%, white 50%, gold 70% 100%);
+  }
+  31% {
+    background: linear-gradient(150deg, gold 31%, white 51%, gold 71% 100%);
+  }
+  32% {
+    background: linear-gradient(150deg, gold 32%, white 52%, gold 72% 100%);
+  }
+  33% {
+    background: linear-gradient(150deg, gold 33%, white 53%, gold 73% 100%);
+  }
+  34% {
+    background: linear-gradient(150deg, gold 34%, white 54%, gold 74% 100%);
+  }
+  35% {
+    background: linear-gradient(150deg, gold 35%, white 55%, gold 75% 100%);
+  }
+  36% {
+    background: linear-gradient(150deg, gold 36%, white 56%, gold 76% 100%);
+  }
+  37% {
+    background: linear-gradient(150deg, gold 37%, white 57%, gold 77% 100%);
+  }
+  38% {
+    background: linear-gradient(150deg, gold 38%, white 58%, gold 78% 100%);
+  }
+  39% {
+    background: linear-gradient(150deg, gold 39%, white 59%, gold 79% 100%);
+  }
+  40% {
+    background: linear-gradient(150deg, gold 40%, white 60%, gold 80% 100%);
+  }
+  41% {
+    background: linear-gradient(150deg, gold 41%, white 61%, gold 81% 100%);
+  }
+  42% {
+    background: linear-gradient(150deg, gold 42%, white 62%, gold 82% 100%);
+  }
+  43% {
+    background: linear-gradient(150deg, gold 43%, white 63%, gold 83% 100%);
+  }
+  44% {
+    background: linear-gradient(150deg, gold 44%, white 64%, gold 84% 100%);
+  }
+  45% {
+    background: linear-gradient(150deg, gold 45%, white 65%, gold 85% 100%);
+  }
+  46% {
+    background: linear-gradient(150deg, gold 46%, white 66%, gold 86% 100%);
+  }
+  47% {
+    background: linear-gradient(150deg, gold 47%, white 67%, gold 87% 100%);
+  }
+  48% {
+    background: linear-gradient(150deg, gold 48%, white 68%, gold 88% 100%);
+  }
+  49% {
+    background: linear-gradient(150deg, gold 49%, white 69%, gold 89% 100%);
+  }
+  50% {
+    background: linear-gradient(150deg, gold 50%, white 70%, gold 90% 100%);
+  }
+  51% {
+    background: linear-gradient(150deg, gold 51%, white 71%, gold 91% 100%);
+  }
+  52% {
+    background: linear-gradient(150deg, gold 52%, white 72%, gold 92% 100%);
+  }
+  53% {
+    background: linear-gradient(150deg, gold 53%, white 73%, gold 93% 100%);
+  }
+  54% {
+    background: linear-gradient(150deg, gold 54%, white 74%, gold 94% 100%);
+  }
+  55% {
+    background: linear-gradient(150deg, gold 55%, white 75%, gold 95% 100%);
+  }
+  56% {
+    background: linear-gradient(150deg, gold 56%, white 76%, gold 96% 100%);
+  }
+  57% {
+    background: linear-gradient(150deg, gold 57%, white 77%, gold 97% 100%);
+  }
+  58% {
+    background: linear-gradient(150deg, gold 58%, white 78%, gold 98% 100%);
+  }
+  59% {
+    background: linear-gradient(150deg, gold 59%, white 79%, gold 99% 100%);
+  }
+  60% {
+    background: linear-gradient(150deg, gold 60%, white 80%, gold 100% 100%);
+  }
+  61% {
+    background: linear-gradient(150deg, gold 61%, white 81%, gold 101% 100%);
+  }
+  62% {
+    background: linear-gradient(150deg, gold 62%, white 82%, gold 102% 100%);
+  }
+  63% {
+    background: linear-gradient(150deg, gold 63%, white 83%, gold 103% 100%);
+  }
+  64% {
+    background: linear-gradient(150deg, gold 64%, white 84%, gold 104% 100%);
+  }
+  65% {
+    background: linear-gradient(150deg, gold 65%, white 85%, gold 105% 100%);
+  }
+  66% {
+    background: linear-gradient(150deg, gold 66%, white 86%, gold 106% 100%);
+  }
+  67% {
+    background: linear-gradient(150deg, gold 67%, white 87%, gold 107% 100%);
+  }
+  68% {
+    background: linear-gradient(150deg, gold 68%, white 88%, gold 108% 100%);
+  }
+  69% {
+    background: linear-gradient(150deg, gold 69%, white 89%, gold 109% 100%);
+  }
+  70% {
+    background: linear-gradient(150deg, gold 70%, white 90%, gold 110% 100%);
+  }
+  71% {
+    background: linear-gradient(150deg, gold 71%, white 91%, gold 111% 100%);
+  }
+  72% {
+    background: linear-gradient(150deg, gold 72%, white 92%, gold 112% 100%);
+  }
+  73% {
+    background: linear-gradient(150deg, gold 73%, white 93%, gold 113% 100%);
+  }
+  74% {
+    background: linear-gradient(150deg, gold 74%, white 94%, gold 114% 100%);
+  }
+  75% {
+    background: linear-gradient(150deg, gold 75%, white 95%, gold 115% 100%);
+  }
+  76% {
+    background: linear-gradient(150deg, gold 76%, white 96%, gold 116% 100%);
+  }
+  77% {
+    background: linear-gradient(150deg, gold 77%, white 97%, gold 117% 100%);
+  }
+  78% {
+    background: linear-gradient(150deg, gold 78%, white 98%, gold 118% 100%);
+  }
+  79% {
+    background: linear-gradient(150deg, gold 79%, white 99%, gold 119% 100%);
+  }
+  80% {
+    background: linear-gradient(150deg, gold 80%, white 100%, gold 120% 100%);
+  }
+  81% {
+    background: linear-gradient(150deg, gold 81%, white 101%, gold 121% 100%);
+  }
+  82% {
+    background: linear-gradient(150deg, gold 82%, white 102%, gold 122% 100%);
+  }
+  83% {
+    background: linear-gradient(150deg, gold 83%, white 103%, gold 123% 100%);
+  }
+  84% {
+    background: linear-gradient(150deg, gold 84%, white 104%, gold 124% 100%);
+  }
+  85% {
+    background: linear-gradient(150deg, gold 85%, white 105%, gold 125% 100%);
+  }
+  86% {
+    background: linear-gradient(150deg, gold 86%, white 106%, gold 126% 100%);
+  }
+  87% {
+    background: linear-gradient(150deg, gold 87%, white 107%, gold 127% 100%);
+  }
+  88% {
+    background: linear-gradient(150deg, gold 88%, white 108%, gold 128% 100%);
+  }
+  89% {
+    background: linear-gradient(150deg, gold 89%, white 109%, gold 129% 100%);
+  }
+  90% {
+    background: linear-gradient(150deg, gold 90%, white 110%, gold 130% 100%);
+  }
+  91% {
+    background: linear-gradient(150deg, gold 91%, white 111%, gold 131% 100%);
+  }
+  92% {
+    background: linear-gradient(150deg, gold 92%, white 112%, gold 132% 100%);
+  }
+  93% {
+    background: linear-gradient(150deg, gold 93%, white 113%, gold 133% 100%);
+  }
+  94% {
+    background: linear-gradient(150deg, gold 94%, white 114%, gold 134% 100%);
+  }
+  95% {
+    background: linear-gradient(150deg, gold 95%, white 115%, gold 135% 100%);
+  }
+  96% {
+    background: linear-gradient(150deg, gold 96%, white 116%, gold 136% 100%);
+  }
+  97% {
+    background: linear-gradient(150deg, gold 97%, white 117%, gold 137% 100%);
+  }
+  98% {
+    background: linear-gradient(150deg, gold 98%, white 118%, gold 138% 100%);
+  }
+  99% {
+    background: linear-gradient(150deg, gold 99%, white 119%, gold 139% 100%);
+  }
+}
+@keyframes shine {
+  0% {
+    background: linear-gradient(150deg, gold 0%, white 20%, gold 40% 100%);
+  }
+  1% {
+    background: linear-gradient(150deg, gold 1%, white 21%, gold 41% 100%);
+  }
+  2% {
+    background: linear-gradient(150deg, gold 2%, white 22%, gold 42% 100%);
+  }
+  3% {
+    background: linear-gradient(150deg, gold 3%, white 23%, gold 43% 100%);
+  }
+  4% {
+    background: linear-gradient(150deg, gold 4%, white 24%, gold 44% 100%);
+  }
+  5% {
+    background: linear-gradient(150deg, gold 5%, white 25%, gold 45% 100%);
+  }
+  6% {
+    background: linear-gradient(150deg, gold 6%, white 26%, gold 46% 100%);
+  }
+  7% {
+    background: linear-gradient(150deg, gold 7%, white 27%, gold 47% 100%);
+  }
+  8% {
+    background: linear-gradient(150deg, gold 8%, white 28%, gold 48% 100%);
+  }
+  9% {
+    background: linear-gradient(150deg, gold 9%, white 29%, gold 49% 100%);
+  }
+  10% {
+    background: linear-gradient(150deg, gold 10%, white 30%, gold 50% 100%);
+  }
+  11% {
+    background: linear-gradient(150deg, gold 11%, white 31%, gold 51% 100%);
+  }
+  12% {
+    background: linear-gradient(150deg, gold 12%, white 32%, gold 52% 100%);
+  }
+  13% {
+    background: linear-gradient(150deg, gold 13%, white 33%, gold 53% 100%);
+  }
+  14% {
+    background: linear-gradient(150deg, gold 14%, white 34%, gold 54% 100%);
+  }
+  15% {
+    background: linear-gradient(150deg, gold 15%, white 35%, gold 55% 100%);
+  }
+  16% {
+    background: linear-gradient(150deg, gold 16%, white 36%, gold 56% 100%);
+  }
+  17% {
+    background: linear-gradient(150deg, gold 17%, white 37%, gold 57% 100%);
+  }
+  18% {
+    background: linear-gradient(150deg, gold 18%, white 38%, gold 58% 100%);
+  }
+  19% {
+    background: linear-gradient(150deg, gold 19%, white 39%, gold 59% 100%);
+  }
+  20% {
+    background: linear-gradient(150deg, gold 20%, white 40%, gold 60% 100%);
+  }
+  21% {
+    background: linear-gradient(150deg, gold 21%, white 41%, gold 61% 100%);
+  }
+  22% {
+    background: linear-gradient(150deg, gold 22%, white 42%, gold 62% 100%);
+  }
+  23% {
+    background: linear-gradient(150deg, gold 23%, white 43%, gold 63% 100%);
+  }
+  24% {
+    background: linear-gradient(150deg, gold 24%, white 44%, gold 64% 100%);
+  }
+  25% {
+    background: linear-gradient(150deg, gold 25%, white 45%, gold 65% 100%);
+  }
+  26% {
+    background: linear-gradient(150deg, gold 26%, white 46%, gold 66% 100%);
+  }
+  27% {
+    background: linear-gradient(150deg, gold 27%, white 47%, gold 67% 100%);
+  }
+  28% {
+    background: linear-gradient(150deg, gold 28%, white 48%, gold 68% 100%);
+  }
+  29% {
+    background: linear-gradient(150deg, gold 29%, white 49%, gold 69% 100%);
+  }
+  30% {
+    background: linear-gradient(150deg, gold 30%, white 50%, gold 70% 100%);
+  }
+  31% {
+    background: linear-gradient(150deg, gold 31%, white 51%, gold 71% 100%);
+  }
+  32% {
+    background: linear-gradient(150deg, gold 32%, white 52%, gold 72% 100%);
+  }
+  33% {
+    background: linear-gradient(150deg, gold 33%, white 53%, gold 73% 100%);
+  }
+  34% {
+    background: linear-gradient(150deg, gold 34%, white 54%, gold 74% 100%);
+  }
+  35% {
+    background: linear-gradient(150deg, gold 35%, white 55%, gold 75% 100%);
+  }
+  36% {
+    background: linear-gradient(150deg, gold 36%, white 56%, gold 76% 100%);
+  }
+  37% {
+    background: linear-gradient(150deg, gold 37%, white 57%, gold 77% 100%);
+  }
+  38% {
+    background: linear-gradient(150deg, gold 38%, white 58%, gold 78% 100%);
+  }
+  39% {
+    background: linear-gradient(150deg, gold 39%, white 59%, gold 79% 100%);
+  }
+  40% {
+    background: linear-gradient(150deg, gold 40%, white 60%, gold 80% 100%);
+  }
+  41% {
+    background: linear-gradient(150deg, gold 41%, white 61%, gold 81% 100%);
+  }
+  42% {
+    background: linear-gradient(150deg, gold 42%, white 62%, gold 82% 100%);
+  }
+  43% {
+    background: linear-gradient(150deg, gold 43%, white 63%, gold 83% 100%);
+  }
+  44% {
+    background: linear-gradient(150deg, gold 44%, white 64%, gold 84% 100%);
+  }
+  45% {
+    background: linear-gradient(150deg, gold 45%, white 65%, gold 85% 100%);
+  }
+  46% {
+    background: linear-gradient(150deg, gold 46%, white 66%, gold 86% 100%);
+  }
+  47% {
+    background: linear-gradient(150deg, gold 47%, white 67%, gold 87% 100%);
+  }
+  48% {
+    background: linear-gradient(150deg, gold 48%, white 68%, gold 88% 100%);
+  }
+  49% {
+    background: linear-gradient(150deg, gold 49%, white 69%, gold 89% 100%);
+  }
+  50% {
+    background: linear-gradient(150deg, gold 50%, white 70%, gold 90% 100%);
+  }
+  51% {
+    background: linear-gradient(150deg, gold 51%, white 71%, gold 91% 100%);
+  }
+  52% {
+    background: linear-gradient(150deg, gold 52%, white 72%, gold 92% 100%);
+  }
+  53% {
+    background: linear-gradient(150deg, gold 53%, white 73%, gold 93% 100%);
+  }
+  54% {
+    background: linear-gradient(150deg, gold 54%, white 74%, gold 94% 100%);
+  }
+  55% {
+    background: linear-gradient(150deg, gold 55%, white 75%, gold 95% 100%);
+  }
+  56% {
+    background: linear-gradient(150deg, gold 56%, white 76%, gold 96% 100%);
+  }
+  57% {
+    background: linear-gradient(150deg, gold 57%, white 77%, gold 97% 100%);
+  }
+  58% {
+    background: linear-gradient(150deg, gold 58%, white 78%, gold 98% 100%);
+  }
+  59% {
+    background: linear-gradient(150deg, gold 59%, white 79%, gold 99% 100%);
+  }
+  60% {
+    background: linear-gradient(150deg, gold 60%, white 80%, gold 100% 100%);
+  }
+  61% {
+    background: linear-gradient(150deg, gold 61%, white 81%, gold 101% 100%);
+  }
+  62% {
+    background: linear-gradient(150deg, gold 62%, white 82%, gold 102% 100%);
+  }
+  63% {
+    background: linear-gradient(150deg, gold 63%, white 83%, gold 103% 100%);
+  }
+  64% {
+    background: linear-gradient(150deg, gold 64%, white 84%, gold 104% 100%);
+  }
+  65% {
+    background: linear-gradient(150deg, gold 65%, white 85%, gold 105% 100%);
+  }
+  66% {
+    background: linear-gradient(150deg, gold 66%, white 86%, gold 106% 100%);
+  }
+  67% {
+    background: linear-gradient(150deg, gold 67%, white 87%, gold 107% 100%);
+  }
+  68% {
+    background: linear-gradient(150deg, gold 68%, white 88%, gold 108% 100%);
+  }
+  69% {
+    background: linear-gradient(150deg, gold 69%, white 89%, gold 109% 100%);
+  }
+  70% {
+    background: linear-gradient(150deg, gold 70%, white 90%, gold 110% 100%);
+  }
+  71% {
+    background: linear-gradient(150deg, gold 71%, white 91%, gold 111% 100%);
+  }
+  72% {
+    background: linear-gradient(150deg, gold 72%, white 92%, gold 112% 100%);
+  }
+  73% {
+    background: linear-gradient(150deg, gold 73%, white 93%, gold 113% 100%);
+  }
+  74% {
+    background: linear-gradient(150deg, gold 74%, white 94%, gold 114% 100%);
+  }
+  75% {
+    background: linear-gradient(150deg, gold 75%, white 95%, gold 115% 100%);
+  }
+  76% {
+    background: linear-gradient(150deg, gold 76%, white 96%, gold 116% 100%);
+  }
+  77% {
+    background: linear-gradient(150deg, gold 77%, white 97%, gold 117% 100%);
+  }
+  78% {
+    background: linear-gradient(150deg, gold 78%, white 98%, gold 118% 100%);
+  }
+  79% {
+    background: linear-gradient(150deg, gold 79%, white 99%, gold 119% 100%);
+  }
+  80% {
+    background: linear-gradient(150deg, gold 80%, white 100%, gold 120% 100%);
+  }
+  81% {
+    background: linear-gradient(150deg, gold 81%, white 101%, gold 121% 100%);
+  }
+  82% {
+    background: linear-gradient(150deg, gold 82%, white 102%, gold 122% 100%);
+  }
+  83% {
+    background: linear-gradient(150deg, gold 83%, white 103%, gold 123% 100%);
+  }
+  84% {
+    background: linear-gradient(150deg, gold 84%, white 104%, gold 124% 100%);
+  }
+  85% {
+    background: linear-gradient(150deg, gold 85%, white 105%, gold 125% 100%);
+  }
+  86% {
+    background: linear-gradient(150deg, gold 86%, white 106%, gold 126% 100%);
+  }
+  87% {
+    background: linear-gradient(150deg, gold 87%, white 107%, gold 127% 100%);
+  }
+  88% {
+    background: linear-gradient(150deg, gold 88%, white 108%, gold 128% 100%);
+  }
+  89% {
+    background: linear-gradient(150deg, gold 89%, white 109%, gold 129% 100%);
+  }
+  90% {
+    background: linear-gradient(150deg, gold 90%, white 110%, gold 130% 100%);
+  }
+  91% {
+    background: linear-gradient(150deg, gold 91%, white 111%, gold 131% 100%);
+  }
+  92% {
+    background: linear-gradient(150deg, gold 92%, white 112%, gold 132% 100%);
+  }
+  93% {
+    background: linear-gradient(150deg, gold 93%, white 113%, gold 133% 100%);
+  }
+  94% {
+    background: linear-gradient(150deg, gold 94%, white 114%, gold 134% 100%);
+  }
+  95% {
+    background: linear-gradient(150deg, gold 95%, white 115%, gold 135% 100%);
+  }
+  96% {
+    background: linear-gradient(150deg, gold 96%, white 116%, gold 136% 100%);
+  }
+  97% {
+    background: linear-gradient(150deg, gold 97%, white 117%, gold 137% 100%);
+  }
+  98% {
+    background: linear-gradient(150deg, gold 98%, white 118%, gold 138% 100%);
+  }
+  99% {
+    background: linear-gradient(150deg, gold 99%, white 119%, gold 139% 100%);
+  }
+}
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.ofYours {
   transform: rotate(180deg);
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.walker::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.walker::before {
   content: "歩";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.flyer::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.flyer::before {
   content: "飛";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.corner::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.corner::before {
   content: "角";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.flaver::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.flaver::before {
   content: "香";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.horser::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.horser::before {
   content: "桂";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.silver::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.silver::before {
   content: "銀";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.golder::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.golder::before {
   content: "金";
 }
-#shogi #boardContainer #mainBoardBox #board div.cell div.kinger::before {
+#shogi #boardContainer #mainBoardBox #board div.cell div.koma.kinger::before {
   content: "王";
 }
 #shogi #boardContainer #mainBoardBox #board div.cell.likely {
   background-color: rgba(250, 250, 210, 0.7);
   cursor: pointer;
+}
+#shogi #boardContainer #mainBoardBox #board div.cell.debugNumber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
 }

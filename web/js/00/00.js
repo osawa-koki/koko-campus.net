@@ -28,7 +28,7 @@ const lt = (a, b) => a < b;
 const ltEq = (a, b) => a <= b;
 
 const add = (a, b) => a + b;
-const reduce = (a, b) => a - b;
+const minus = (a, b) => a - b;
 const times = (a, b) => a * b;
 const divide = (a, b) => a / b;
 const power = (a, b) => a ** b;
@@ -61,13 +61,14 @@ const countSatisfy = ([a, ...b], fx, i = 0) => (a !== undefined) ? countSatisfy(
 const minFx = ([a, b, ...c], fx, eq = true) => (fst(c) !== undefined) ? minFx([((eq) ? ltEq : lt)(fx(a), fx(b)) ? a : b, ...c], fx) : ((eq) ? ltEq : lt)(fx(a), fx(b)) ? a : b;
 const maxFx = ([a, b, ...c], fx, eq = true) => (fst(c) !== undefined) ? maxFx([((eq) ? gtEq : gt)(fx(a), fx(b)) ? a : b, ...c], fx) : ((eq) ? gtEq : gt)(fx(a), fx(b)) ? a : b;
 const reducer = ([a, ...b], fx, fxComprehensive = add) => (a !== undefined && 0 < b.length) ? fxComprehensive(fx(a), reducer(b, fx, fxComprehensive)) : fx(a);
+const finder = ([a, ...b], fx) => (a !== undefined) ? (fx(a)) ? a : finder(b, fx) : null;
 
 const getElm = ([a, ...b]) => (a !== undefined) ? [document.getElementById(a), ...getElm(b)] : [];
 const mkElm = ([a, ...b]) => (a !== undefined) ? [document.createElement(a), ...mkElm(b)] : [];
 const mkElmSVG = ([a, ...b]) => (a !== undefined) ? [document.createElementNS(NAMESPACE_OF_SVG, a), ...mkElmSVG(b)] : [];
 const zFill = (n, len) => (Array(len).join("0") + n).slice(-len);
 const URLencodeAssoc = obj => Object.keys(obj).map(key => key + "=" + encodeURIComponent(obj[key])).join("&");
-const between = (a, b) => c => and(a <= c.length, c.length <= b);
+const between = (a, b, eq1 = true, eq2 = true) => c => and(((eq1) ? ltEq : lt)(a, c.length), ((eq1) ? ltEq : lt)(c.length, b));
 const switcher = (tf, afx, bfx, arg = null) => (tf) ? afx(arg) : bfx(arg);
 
 const regex = a => b => b.match(a);
