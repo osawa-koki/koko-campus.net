@@ -1,9 +1,7 @@
 "use strict";
 
-const DEBUG_MODE = true;
+const DEBUG_MODE = false;
 
-const [board] = getElm(["board"]);
-const cells = [];
 
 
 

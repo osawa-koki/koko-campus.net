@@ -2,6 +2,8 @@
 
 const ITEM_COUNT = 9;
 const ITEM_COUNT_V = ITEM_COUNT ** 2;
+const [board] = getElm(["board"]);
+const cells = [];
 
 const CELL_STATE = {
 	free: 0,
@@ -26,6 +28,17 @@ const koma = {
 	kinger: 7,
 };
 
+const komaName = {
+	0: "walker",
+	1: "flyer",
+	2: "corner",
+	3: "flaver",
+	4: "horser",
+	5: "silver",
+	6: "golder",
+	7: "kinger",
+};
+
 const komas = {
 	yours: [],
 	mine: [],
@@ -46,6 +59,7 @@ const komaInstance = (koma, team, index) => ({
 	belong: team,
 	index: index,
 	evoluted: false,
+	documentObject: null,
 });
 
 
@@ -55,12 +69,30 @@ function mover() {
 }
 
 
-function reset() {
+function setter() {
 
 }
 
 
+function reset() {
+	// 元のデータを全て削除
+	for (const key in komaOrder) {
+		const value = komaOrder[key];
+		looper(value, v => {
+			{ // your
+				const [komaObj] = mkElm(["div"]);
+				komaObj.classList.add("ofYours");
+				komaObj.classList.add(komaName[key]);
+				cells[v].appendChild(komaObj);
+			}
+			{ // me
+				const [komaObj] = mkElm(["div"]);
+				komaObj.classList.add("ofMine");
+				komaObj.classList.add(komaName[key]);
+				cells[ITEM_COUNT_V - v - 1].appendChild(komaObj);
+			}
+		});
+	}
+}
 
-(() => { // init
 
-})();

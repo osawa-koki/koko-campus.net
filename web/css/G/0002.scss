@@ -91,6 +91,63 @@
 					border: 1px gray solid;
 					background-color: $boardColor;
 					box-sizing: border-box;
+					div {
+						position: absolute;
+						inset: 0;
+						border: 1px black solid;
+						background-color: gold;
+						clip-path: polygon(50% 10%, 30% 20%, 20% 80%, 80% 80%, 70% 20%);
+						&::before {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100%;
+							height: 100%;
+						}
+						&.ofYours {
+							transform: rotate(180deg);
+						}
+						&.walker {
+							&::before {
+								content: "歩";
+							}
+						}
+						&.flyer {
+							&::before {
+								content: "飛";
+							}
+						}
+						&.corner {
+							&::before {
+								content: "角";
+							}
+						}
+						&.flaver {
+							&::before {
+								content: "香";
+							}
+						}
+						&.horser {
+							&::before {
+								content: "桂";
+							}
+						}
+						&.silver {
+							&::before {
+								content: "銀";
+							}
+						}
+						&.golder {
+							&::before {
+								content: "金";
+							}
+						}
+						&.kinger {
+							&::before {
+								content: "王";
+							}
+						}
+					}
 					&.likely {
 						background-color: rgba($boardColor, 0.7);
 						cursor: pointer;
