@@ -1,0 +1,89 @@
+#shogi #battlingField {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin: 25px auto;
+  border: 1px black solid;
+}
+#shogi #battlingField .myImgBox, #shogi #battlingField .botImgBox {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  max-height: 150px;
+}
+#shogi #battlingField .myImgBox img.me, #shogi #battlingField .myImgBox img.bot, #shogi #battlingField .botImgBox img.me, #shogi #battlingField .botImgBox img.bot {
+  height: 100%;
+}
+#shogi #battlingField .myImgBox::before, #shogi #battlingField .botImgBox::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  font-family: "consolas";
+  z-index: 1;
+  bottom: 70%;
+  left: 50%;
+  transform-origin: center 40px;
+}
+#shogi #battlingField .myImgBox {
+  left: 0;
+}
+#shogi #battlingField .botImgBox {
+  right: 0;
+}
+#shogi #battlingField.solving .botImgBox::before {
+  content: "?";
+  -webkit-animation: solving 1s linear 0s infinite normal none running;
+          animation: solving 1s linear 0s infinite normal none running;
+}
+@-webkit-keyframes solving {
+  from {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes solving {
+  from {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+#shogi #battlingField.solved .botImgBox::before {
+  content: "!";
+  color: red;
+}
+#shogi #boardContainer #mainBoardBox #board {
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 2px black solid;
+  aspect-ratio: 1/1;
+}
+#shogi #boardContainer #mainBoardBox #board div.cell {
+  position: relative;
+  width: 100%;
+  border: 1px gray solid;
+  background-color: lightgoldenrodyellow;
+  box-sizing: border-box;
+}
+#shogi #boardContainer #mainBoardBox #board div.cell.likely {
+  background-color: rgba(250, 250, 210, 0.7);
+  cursor: pointer;
+}
