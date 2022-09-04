@@ -53,6 +53,11 @@
   border: 1px black solid;
   width: 100%;
   height: 100%;
+  overflow-x: auto;
+  scrollbar-width: 0;
+}
+#binaryEditer #editerContainer #editerBox::-webkit-scrollbar {
+  display: none;
 }
 #binaryEditer #editerContainer #editerBox #editerX, #binaryEditer #editerContainer #editerBox #editerY {
   scrollbar-width: 0;
@@ -64,7 +69,9 @@
 #binaryEditer #editerContainer #editerBox #editerX {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   width: 70%;
+  min-width: 350px;
   background-color: white;
   overflow-y: auto;
 }
@@ -74,13 +81,25 @@
   align-items: center;
   text-align: center;
   font-size: 16px;
+  border: none;
   width: 35px;
   height: 35px;
   cursor: crosshair;
 }
 #binaryEditer #editerContainer #editerBox #editerY {
   width: 30%;
+  min-width: 250px;
   background-color: rgba(211, 211, 211, 0.3);
+}
+#binaryEditer #editerContainer #editerBox #editerY table {
+  margin: 25px auto;
+}
+#binaryEditer #editerContainer #editerBox #editerY table th, #binaryEditer #editerContainer #editerBox #editerY table td {
+  font-weight: normal;
+  padding: 5px;
+}
+#binaryEditer #editerContainer #editerBox #editerY table td {
+  min-width: 100px;
 }
 #binaryEditer #editerContainer #editerBox #loading {
   position: absolute;
