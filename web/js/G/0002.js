@@ -73,7 +73,7 @@ const obtainMyObject = doc => finder(komas, komaObj => komaObj.doc === doc);
 const whereAmI = obj => obtainMyObject(obj).index;
 
 function takeYourKoma(cellIndex, belong) { // 相手の駒が存在する場合にはそれを取得
-	
+	//////////////
 }
 
 
