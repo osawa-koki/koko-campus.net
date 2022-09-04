@@ -39,7 +39,7 @@ internal class Program
 		string? path;
 		while (true)
 		{
-			Console.WriteLine("\n置換後文字列を入力して下さい。\n");
+			Console.WriteLine("\n対象ディレクトリを入力して下さい。\n");
 			path = Console.ReadLine();
 			if (path == null) continue;
 			Console.WriteLine($"「{path}」 を対象に置換を実行します。\nよろしいですか???\n\nY -> YES\nN -> NO");
