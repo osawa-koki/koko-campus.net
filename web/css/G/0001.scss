@@ -47,6 +47,11 @@
 				position: absolute;
 				display: none;
 				z-index: 9;
+				overflow-y: auto;
+				scrollbar-width: none;
+				&::-webkit-scrollbar { 
+					display: none;
+				}
 				&.on {
 					inset: -25px 25px;
 					display: block;
@@ -62,8 +67,9 @@
 						margin: 10px 0;
 					}
 					.GAMESET {
-						font-size: 20px;
+						font-size: 25px;
 						font-weight: bold;
+						font-family: "游明朝";
 						letter-spacing: 3px;
 						margin: 10px 0;
 						text-align: center;
@@ -73,16 +79,27 @@
 						flex-wrap: nowrap;
 						.blackBox, .whiteBox {
 							width: 50%;
-							min-height: 150px;
+							@include sb {
+								min-height: 100px;
+							}
+							@include tbfb {
+								min-height: 150px;
+							}
 							display: flex;
 							flex-wrap: wrap;
 							align-content: flex-start;
 							padding: 10px;
 							div {
 								border-radius: 50%;
-								width: 30px;
+								@include sb {
+									width: 10px;
+									margin: 2px;
+								}
+								@include tbfb {
+									margin: 3px;
+									width: 30px;
+								}
 								aspect-ratio: 1 / 1;
-								margin: 3px;
 							}
 						}
 						.blackBox {

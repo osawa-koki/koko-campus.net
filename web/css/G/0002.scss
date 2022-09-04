@@ -1,0 +1,238 @@
+@charset "utf8";
+
+@import "../00.scss";
+
+#shogi {
+	$ITEM_COUNT: 9;
+	#battlingField {
+		position: relative;
+		width: 100%;
+		height: 80px;
+		margin: 25px auto;
+		border: 1px black solid;
+		.myImgBox, .botImgBox {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			max-height: 150px;
+			img.me, img.bot {
+				height: 100%;
+			}
+			&::before {
+				$Qheight: 50;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				font-size: #{$Qheight}px;
+				width: #{$Qheight}px;
+				height: #{$Qheight}px;
+				font-weight: bold;
+				font-family: "consolas";
+				z-index: 1;
+				bottom: 70%;
+				left: 50%;
+				transform-origin: center #{$Qheight - 10}px;
+			}
+		}
+		.myImgBox {
+			left: 0;
+		}
+		.botImgBox {
+			right: 0;
+		}
+		&.solving {
+			.botImgBox {
+				&::before {
+					content: "?";
+					animation: solving 1s linear 0s infinite normal none running;
+					@keyframes solving {
+						from {
+							transform: rotate(-30deg);
+						}
+						50% {
+							
+							transform: rotate(30deg);
+						}
+						to {
+							transform: rotate(-30deg);
+						}
+					}
+				}
+			}
+		}
+		&.solved {
+			.botImgBox {
+				&::before {
+					content: "!";
+					color: red;
+				}
+			}
+		}
+	}
+	#boardContainer {
+		$boardColor: lightgoldenrodyellow;
+		#mainBoardBox {
+			display: grid;
+			@include sbtb {
+				grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: 70px auto 70px;
+			}
+			@include fb {
+				grid-template-columns: 1fr 3fr 1fr;
+				grid-template-rows: repeat(2, 300px);
+			}
+			gap: 10px;
+			margin: 25px auto;
+			#yourWare, #myWare {
+				border: 1px black solid;
+				background-color: $boardColor;
+			}
+			#yourWare {
+				@include sbtb {
+					grid-row: 1 / 2;
+					grid-column: 1 / 2;
+				}
+				@include fb {
+					grid-row: 1 / 2;
+					grid-column: 1 / 2;
+				}
+			}
+			#myWare {
+				@include sbtb {
+					grid-row: 3 / 4;
+					grid-column: 2 / 3;
+				}
+				@include fb {
+					grid-row: 2 / 3;
+					grid-column: 3 / 4;
+				}
+				
+			}
+			#board {
+				@include sbtb {
+					grid-row: 2 / 3;
+					grid-column: 1 / 3;
+				}
+				@include fb {
+					grid-row: 1 / 3;
+					grid-column: 2 / 3;
+				}
+				display: grid;
+				grid-template-rows: repeat($ITEM_COUNT, 1fr);
+				grid-template-columns: repeat($ITEM_COUNT, 1fr);
+				@include sb {
+					min-width: 300px;
+					max-width: 350px;
+				}
+				@include tb {
+					min-width: 350px;
+					max-width: 500px;
+				}
+				@include fb {
+					min-width: 500px;
+					max-width: 650px;
+				}
+				border: 2px black solid;
+				margin: auto;
+				aspect-ratio: 1 / 1;
+				div.cell {
+					position: relative;
+					width: 100%;
+					border: 1px gray solid;
+					background-color: $boardColor;
+					box-sizing: border-box;
+					&.movable {
+						background-color: rgba($boardColor, 0.05);
+						cursor: crosshair;
+					}
+					&.likely {
+						background-color: rgba($boardColor, 0.7);
+						cursor: pointer;
+					}
+					&.debugNumber {
+						position: absolute;
+						top: 0;
+						left: 0;
+						font-size: 10px;
+					}
+				}
+			}
+			div.koma {
+				position: absolute;
+				inset: 0;
+				border: 1px black solid;
+				background: gold;
+				clip-path: polygon(50% 10%, 30% 20%, 20% 80%, 80% 80%, 70% 20%);
+				z-index: 7;
+				&::before {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					height: 100%;
+					z-index: 10;
+				}
+				&.touched {
+					animation: shine 2s ease 0s infinite normal running;
+					$touchedColor: gold;
+					@include keyframes(shine) {
+						@for $i from 0 to 100 {
+							#{$i}#{"%"} {
+								background: linear-gradient(150deg, $touchedColor #{$i}#{"%"}, white #{$i+20}#{"%"}, $touchedColor #{$i+40}#{"%"} 100%);
+							}
+						}
+					}
+				}
+				&.ofYours {
+					transform: rotate(180deg);
+				}
+				&.walker {
+					&::before {
+						content: "歩";
+					}
+				}
+				&.flyer {
+					&::before {
+						content: "飛";
+					}
+				}
+				&.corner {
+					&::before {
+						content: "角";
+					}
+				}
+				&.flaver {
+					&::before {
+						content: "香";
+					}
+				}
+				&.horser {
+					&::before {
+						content: "桂";
+					}
+				}
+				&.silver {
+					&::before {
+						content: "銀";
+					}
+				}
+				&.golder {
+					&::before {
+						content: "金";
+					}
+				}
+				&.kinger {
+					&::before {
+						content: "王";
+					}
+				}
+			}
+		}
+		#subBoardBox {
+
+		}
+	}
+}
+
+
