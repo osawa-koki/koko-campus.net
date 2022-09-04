@@ -31,9 +31,7 @@
   border: 1px black solid;
   cursor: pointer;
 }
-
 .button:hover {
   color: white;
   background-color: blue;
 }
-/*# sourceMappingURL=part.css.map */
