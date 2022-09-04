@@ -36,3 +36,12 @@ $sb: 500;
 
 $headerHeight: 60;
 $footerHeight: 60;
+
+
+@mixin keyframes($animation-name) {
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+

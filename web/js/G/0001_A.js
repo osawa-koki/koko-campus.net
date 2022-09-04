@@ -6,7 +6,7 @@ const BOT_INTELLIGENCE = 2;
 
 const [startButton, yourOnBlack, yourOnWhite] = getElm(["startButton", "yourOnBlack", "yourOnWhite"]);
 
-function yourTurn() {
+function myTurn() {
 	if (env.finished()) return;
 	const possiblePoints = takePossiblePoints(env.myself);
 	if (possiblePoints.length === 0) {
@@ -77,7 +77,7 @@ function botSolver() {
 			commonAfterPlace(env.you());
 			setTimeout(() => {
 				botEnd();
-				yourTurn();
+				myTurn();
 			}, TIME.turnOut);
 		}, TIME.fstPutSurroundFollows);
 	}, TIME.comeUpWith);
@@ -143,6 +143,7 @@ function skipped() {
 		} else {
 			env.my_turn = true;
 			battlingField.classList.remove("solved");
+			myTurn();
 		}
 	}, 3000);
 }

@@ -2,6 +2,7 @@
 /dev/db/contents/
 /logFiles/
 bin/
+standalone/
 .vs/
 *.pdf
 *.csv
