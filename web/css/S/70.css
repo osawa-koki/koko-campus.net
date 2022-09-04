@@ -1,3 +1,33 @@
+.gg-notes {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 20px;
+  height: 22px;
+  border: 2px solid;
+  border-radius: 3px;
+}
+.gg-notes::before, .gg-notes::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  height: 2px;
+  background: currentColor;
+  left: 2px;
+}
+.gg-notes::before {
+  box-shadow: 0 4px 0, 0 8px 0;
+  width: 12px;
+  top: 2px;
+}
+.gg-notes::after ::after {
+  width: 6px;
+  top: 14px;
+}
+
 #noteBox {
   display: flex;
   flex-direction: column;
@@ -43,54 +73,48 @@
   }
 }
 
-.gg-notes {
+#noteBox .gg-notes {
   background: #fff;
   --ggs: 2.0;
 }
-
-.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green {
+#noteBox .gg-spinner, #noteBox .gg-circle, #noteBox .gg-circle-red, #noteBox .gg-circle-green {
   transform: scale(var(--ggs, 1));
 }
-
-.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green,
-.gg-spinner::after,
-.gg-circle::after,
-.gg-circle-red::after,
-.gg-circle-green::after,
-.gg-spinner::before,
-.gg-circle::before,
-.gg-circle-red::before,
-.gg-circle-green::before {
+#noteBox .gg-spinner, #noteBox .gg-circle, #noteBox .gg-circle-red, #noteBox .gg-circle-green,
+#noteBox .gg-spinner::after,
+#noteBox .gg-circle::after,
+#noteBox .gg-circle-red::after,
+#noteBox .gg-circle-green::after,
+#noteBox .gg-spinner::before,
+#noteBox .gg-circle::before,
+#noteBox .gg-circle-red::before,
+#noteBox .gg-circle-green::before {
   box-sizing: border-box;
   position: relative;
   display: block;
   width: 20px;
   height: 20px;
 }
-
-.gg-spinner::after, .gg-circle::after, .gg-circle-red::after, .gg-circle-green::after,
-.gg-spinner::before,
-.gg-circle::before,
-.gg-circle-red::before,
-.gg-circle-green::before {
+#noteBox .gg-spinner::after, #noteBox .gg-circle::after, #noteBox .gg-circle-red::after, #noteBox .gg-circle-green::after,
+#noteBox .gg-spinner::before,
+#noteBox .gg-circle::before,
+#noteBox .gg-circle-red::before,
+#noteBox .gg-circle-green::before {
   content: "";
   position: absolute;
   border-radius: 100px;
 }
-
-.gg-spinner::before, .gg-circle::before, .gg-circle-red::before, .gg-circle-green::before {
+#noteBox .gg-spinner::before, #noteBox .gg-circle::before, #noteBox .gg-circle-red::before, #noteBox .gg-circle-green::before {
   -webkit-animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
           animation: spinner 1s cubic-bezier(0.6, 0, 0.4, 1) infinite;
   border: 3px solid transparent;
   border-top-color: currentColor;
 }
-
-.gg-spinner::after, .gg-circle::after, .gg-circle-red::after, .gg-circle-green::after {
+#noteBox .gg-spinner::after, #noteBox .gg-circle::after, #noteBox .gg-circle-red::after, #noteBox .gg-circle-green::after {
   border: 3px solid;
   opacity: 0.2;
   background: #000;
 }
-
 @-webkit-keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -99,7 +123,6 @@
     transform: rotate(359deg);
   }
 }
-
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -108,23 +131,20 @@
     transform: rotate(359deg);
   }
 }
-.gg-spinner, .gg-circle, .gg-circle-red, .gg-circle-green {
+#noteBox .gg-spinner, #noteBox .gg-circle, #noteBox .gg-circle-red, #noteBox .gg-circle-green {
   --ggs: 0.65;
 }
-
-.gg-circle:before, .gg-circle-red:before, .gg-circle-green:before {
+#noteBox .gg-circle:before, #noteBox .gg-circle-red:before, #noteBox .gg-circle-green:before {
   content: none;
 }
-.gg-circle:after, .gg-circle-red:after, .gg-circle-green:after {
+#noteBox .gg-circle:after, #noteBox .gg-circle-red:after, #noteBox .gg-circle-green:after {
   opacity: 1;
 }
-
-.gg-circle-green:after {
+#noteBox .gg-circle-green:after {
   color: #03AF7A;
   background: #03AF7A;
 }
-
-.gg-circle-red:after {
+#noteBox .gg-circle-red:after {
   color: #FF4B00;
   background: #FF4B00;
 }
