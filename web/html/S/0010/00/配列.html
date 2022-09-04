@@ -13,7 +13,7 @@
 	//...
 </code>
 このような複数のデータを包括して保存するためには配列を使用します。
-<img src="/?S0010/array.png" alt="配列" />
+<img src="/?S00/0010/array.png" alt="配列" />
 <h2>配列の定義</h2>
 配列は「[](スクエアブラケット)」を使用して定義します。<br />要素は「,(カンマ)」で区切って表現します。
 <code class="javascript">
@@ -108,7 +108,7 @@ forループは既に<a href="/S0010L00P03" class="pageSensitive">文法</a>の�
 		parent.appendChild(elm);
 	}
 </code>
-<img class="no-max" src="/?S0010/loopingArrayWithForStatement.gif" alt="配列の走査(forループ)" />
+<img class="no-max" src="/?S00/0010/loopingArrayWithForStatement.gif" alt="配列の走査(forループ)" />
 <h3>for of</h3>
 forによる配列の走査の進化バージョンだと思ってください。<br />以下のように書きます。
 <code class="javascript">
@@ -136,7 +136,7 @@ forによる配列の走査の進化バージョンだと思ってください�
 		parent.appendChild(elm);
 	}
 </code>
-<img class="no-max" src="/?S0010/loopingArrayWithForOfStatement.gif" alt="配列の走査" />
+<img class="no-max" src="/?S00/0010/loopingArrayWithForOfStatement.gif" alt="配列の走査" />
 <h3>forEach</h3>
 配列の要素を即時関数の引数に渡して実行されます。<br />即時関数とは名前がなくて、すぐに実行される関数です。<br />ここでは覚えなくてもok!です。<br />以下のように記述します。
 <code class="javascript">
@@ -173,7 +173,7 @@ forループと異なり、配列の要素が「e」にそのまま代入され�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/loopingArrayWithForEachOfStatement.gif" alt="配列の走査(forEach)" />
+<img class="no-max" src="/?S00/0010/loopingArrayWithForEachOfStatement.gif" alt="配列の走査(forEach)" />
 <h2>要素の追加</h2>
 配列に要素を追加する方法には以下の3通りあります。
 <ul>
@@ -201,7 +201,7 @@ forループと異なり、配列の要素が「e」にそのまま代入され�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/push.gif" alt="pushメソッド" />
+<img class="no-max" src="/?S00/0010/push.gif" alt="pushメソッド" />
 <h3>unshift</h3>
 配列の先頭に要素を追加します。<br />これもpushメソッド同様に破壊的なメソッドであるため、元の配列を変更します。
 <code class="html">
@@ -221,7 +221,7 @@ forループと異なり、配列の要素が「e」にそのまま代入され�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/unshift.gif" alt="unshiftメソッド" />
+<img class="no-max" src="/?S00/0010/unshift.gif" alt="unshiftメソッド" />
 <h3>splice</h3>
 任意の位置に配列の要素を追加します。<br />先頭・最後に追加することも可能ですが、原則としてpushメソッドとunshiftメソッドで追加できない先頭・最後以外に追加する際に用いるべきです。<br />以下のように書きます。
 <code class="javascript">
@@ -245,7 +245,7 @@ spliceメソッドは要素の削除・置換・追加全てに使用できま�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/addElementWithSplice.gif" alt="spliceメソッド" />
+<img class="no-max" src="/?S00/0010/addElementWithSplice.gif" alt="spliceメソッド" />
 <h2>要素の削除</h2>
 配列から要素を削除する方法には以下の3通りあります。
 <ul>
@@ -273,7 +273,7 @@ spliceメソッドは要素の削除・置換・追加全てに使用できま�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/shift.gif" alt="shiftメソッド" />
+<img class="no-max" src="/?S00/0010/shift.gif" alt="shiftメソッド" />
 <h3>pop</h3>
 配列の最後の要素を削除します。<br />破壊的メソッドですので、元の配列を変更します。
 <code class="html">
@@ -294,7 +294,7 @@ spliceメソッドは要素の削除・置換・追加全てに使用できま�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/pop.gif" alt="popメソッド" />
+<img class="no-max" src="/?S00/0010/pop.gif" alt="popメソッド" />
 <h3>splice</h3>
 spliceメソッドは既に説明済みですね♪<br />削除・置換・追加全てを行えるメソッドです。<br />追加する要素はないため、第三引数以降は設定しません。<br />破壊的メソッドであるため、元の配列を変更します。
 <code class="javascript">
@@ -320,4 +320,4 @@ spliceメソッドは既に説明済みですね♪<br />削除・置換・追�
 		parent.appendChild(elm);
 	});
 </code>
-<img class="no-max" src="/?S0010/deleteElementWithSplice.gif" alt="spliceメソッド" />
+<img class="no-max" src="/?S00/0010/deleteElementWithSplice.gif" alt="spliceメソッド" />

@@ -144,7 +144,7 @@
 <span id="href_ckey"></span>
 <h2>共通鍵暗号方式</h2>
 共通鍵暗号方式は暗号化と復号に同じ鍵(アルゴリズム)を用いる暗号手法です。
-<img src="/?S9912/共通鍵暗号方式.png" alt="共通鍵暗号方式" />
+<img src="/?S00/9912/共通鍵暗号方式.png" alt="共通鍵暗号方式" />
 <div class="scroll-600w">
 	<table>
 		<caption>共通鍵暗号方式</caption>
@@ -242,27 +242,27 @@
 <div class="explanation">
 	<div class="title">ECB</div>
 	「Electronic Code Book」の略で、単にブロックに分割してそれぞれを独立して暗号化する方法です。<br />ブロック暗号方式を採用する意味があまりないような、、、って感じです。
-	<img src="/?S9912/ecb.png" alt="ECB暗号モード" />
+	<img src="/?S00/9912/ecb.png" alt="ECB暗号モード" />
 </div>
 <div class="explanation">
 	<div class="title">CBC</div>
 	「Cipher Block Chaining」の略で、初期ブロックの暗号ブロックと次の平文ブロックを排他的論理和(XOR)演算をしてその結果を暗号化する方法です。<br />最初の平文ブロックに対しては前の暗号ブロックの代わりに初期ベクトル(IV)が与えられます。
-	<img src="/?S9912/cbc.png" alt="CBC暗号モード" />
+	<img src="/?S00/9912/cbc.png" alt="CBC暗号モード" />
 </div>
 <div class="explanation">
 	<div class="title">CFB</div>
 	「Cipher Feedback」の略で、最初にIVを暗号化して最初の平文ブロックとの排他的論理和演算(XOR演算)によって最初の暗号をブロックを生成します。<br />以降はひとつ前に生成された暗号ブロックを暗号化してその結果と次の平文ブロックを排他的論理和演算をして暗号化する流れを繰り返します。
-	<img src="/?S9912/cfb.png" alt="CFB暗号モード" />
+	<img src="/?S00/9912/cfb.png" alt="CFB暗号モード" />
 </div>
 <div class="explanation">
 	<div class="title">OFB</div>
 	「Output Feedback」の略で、最初にIVを暗号化します。次に暗号化されたIVと最初の平文ブロックを排他的論理和演算(XOR演算)して暗号ブロックを生成します。暗号されたIVを再度暗号化して、それと次の平文ブロックを排他的論理和演算(XOR演算)して二つ目の暗号ブロックを生成します。2回暗号化されたIVをさらに暗号化してその結果と次の平文ブロックを排他的論理和演算(XOR演算)して、、、
-	<img src="/?S9912/ofb.png" alt="OFB暗号モード" />
+	<img src="/?S00/9912/ofb.png" alt="OFB暗号モード" />
 </div>
 <span id="href_pkey"></span>
 <h2>公開鍵暗号方式</h2>
 別名、「非対称鍵暗号方式」です。暗号と復号に異なる鍵(アルゴリズム)を用いる暗号化手法です。
-<img src="/?S9912/公開鍵暗号方式.png" alt="公開鍵暗号方式" />
+<img src="/?S00/9912/公開鍵暗号方式.png" alt="公開鍵暗号方式" />
 次に公開鍵暗号方式の利点と欠点について学びましょう♪
 <div class="scroll-600w">
 	<table>

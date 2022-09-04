@@ -1,6 +1,6 @@
 <h2>ファイル操作</h2>
 ここでは、ファイルの読み込みとファイルへの書き込み方法について学びます。<br />ファイル操作は以下の3つの手順を踏みます。
-<img src="/?S0221/manipulatingFile.png" alt="ファイル操作" />
+<img src="/?S00/0221/manipulatingFile.png" alt="ファイル操作" />
 <h2>ファイルを開く</h2>
 ファイルを開くにはosパッケージに用意されているOpenFile関数を使用します。
 <code class="go">
@@ -63,7 +63,7 @@
 		}
 	}
 </code>
-<img src="/?S0221/judgingFileExisting.gif" alt="ファイルの操作" />
+<img src="/?S00/0221/judgingFileExisting.gif" alt="ファイルの操作" />
 ファイルを開けるかどうかだけ判定するため、開いた際のファイル構造体は使用しないため、「_(アンダースコア)」で捨てています。
 <h2>ファイル操作</h2>
 ここでは以下の2つを学びます。
@@ -164,7 +164,7 @@ ioutilパッケージに用意されているReadAll関数を使用します。<
 		}
 	}
 </code>
-<img src="/?S0221/writingFile.gif" alt="ファイル操作" />
+<img src="/?S00/0221/writingFile.gif" alt="ファイル操作" />
 typeコマンドはwindowsのコマンドでファイルの中身を表示します。<br />linuxでいうcatコマンドに該当します。<br /><br />次はファイルに追記するプログラムを作成しましょう♪<br />OpenFile関数のモードを変更するだけです。
 <code class="go">
 	import (
@@ -192,7 +192,7 @@ typeコマンドはwindowsのコマンドでファイルの中身を表示しま
 		}
 	}
 </code>
-<img src="/?S0221/appendingFile.gif" alt="ファイル操作" />
+<img src="/?S00/0221/appendingFile.gif" alt="ファイル操作" />
 <h2>ReadFile関数</h2>
 ioutilパッケージに用意されているファイルの読み込み専用の関数です。<br />ファイルを開いて、閉じる操作を省略できます。<br />ファイルの内容を単に読み込みだけならReadFile関数を使用しましょう♪<br />以下のように書きます。
 <code class="go">

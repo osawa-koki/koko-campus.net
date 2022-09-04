@@ -4,7 +4,7 @@
 -->
 <h2>オブジェクト構造</h2>
 JavaScriptは「window」オブジェクトをルートとした木構造をとっています。
-<img src="/?S0010/window.png" alt="windowオブジェクト" />
+<img src="/?S00/0010/window.png" alt="windowオブジェクト" />
 <h2>ドキュメント</h2>
 JavaScriptでHTMLを操作する際にはドキュメントオブジェクトを変更します。<br />ドキュメントオブジェクトはwindowオブジェクトのdocumentにあります。<br />したがって、以下のコードで取得できます。
 <code class="javascript">
@@ -37,7 +37,7 @@ idはHTMLドキュメント内で一意(オンリーワン)であるため、こ
 <code class="javascript">
 	document.getElementById("pikapika");
 </code>
-<img src="/?S0010/getElementById.gif" alt="getElementById" />
+<img src="/?S00/0010/getElementById.gif" alt="getElementById" />
 <h3>タグ名で取得</h3>
 html要素のタグ名で要素を取得します。<br />タグ名で要素を取得するためのコードは以下のようになります。
 <code class="javascript">
@@ -54,7 +54,7 @@ html要素のタグ名で要素を取得します。<br />タグ名で要素を�
 <code class="javascript">
 	document.getElementsByTagName("li");
 </code>
-<img src="/?S0010/getElementsByTagName.gif" alt="getElementsByTag" />
+<img src="/?S00/0010/getElementsByTagName.gif" alt="getElementsByTag" />
 タグ名で取得する場合にはクラスで取得する場合と同様に、配列型に似た複数のデータを包括するhtmlcollection型を取得するので、その中の特定の要素を取得するにはインデックス番号で指定する必要があります。<br />インデックス番号は上にある要素から順に「0」から始まる整数が振られます。
 <p>インデックス番号は「0」から始まることに注意してください。</p>
 <code class="javascript">
@@ -80,14 +80,14 @@ getElementsByTagName同様に、「getElement<strong>s</strong>ByClassName」と
 <code class="javascript">
 	document.getElementsByClassName("pikapika");
 </code>
-<img src="/?S0010/getElementsByClassName.gif" alt="getElementsByClassName" />
+<img src="/?S00/0010/getElementsByClassName.gif" alt="getElementsByClassName" />
 クラス名で取得する場合には配列型に似た複数のデータを包括するhtmlcollection型を取得するので、その中の特定の要素を取得するにはインデックス番号で指定する必要があります。
 <h2>documentオブジェクトの操作</h2>
 先ほどは、documentオブジェクトを取得しましたね♪<br />ここでは取得したdocumentオブジェクトを簡単に操作してみましょう♪
-<img src="/?S0010/manipulatingDocumentObject.png" alt="documentオブジェクト" />
+<img src="/?S00/0010/manipulatingDocumentObject.png" alt="documentオブジェクト" />
 <h3>textContent</h3>
 要素の中身は「textContent」プロパティで操作します。
-<img src="/?S0010/textContentProperty.png" alt="textContentプロパティ" />
+<img src="/?S00/0010/textContentProperty.png" alt="textContentプロパティ" />
 以下のコードで要素の中身を変更します。
 <code class="javascript">
 	オブジェクト.textContent = "変更後のデータ";
@@ -105,15 +105,15 @@ getElementsByTagName同様に、「getElement<strong>s</strong>ByClassName」と
 	obj = document.getElementById("target"); //要素を変数に格納
 	obj.textContent = "ほうじ茶"; //要素の中身を変更
 </code>
-<img src="/?S0010/textContent.gif" alt="textContent" />
+<img src="/?S00/0010/textContent.gif" alt="textContent" />
 <h3>style</h3>
 要素のスタイルを操作します。
-<img src="/?S0010/manipulatingStyleAttr.png" alt="documentオブジェクト" />
+<img src="/?S00/0010/manipulatingStyleAttr.png" alt="documentオブジェクト" />
 「style」プロパティはさらに下にcssプロパティを持ちます。
-<img src="/?S0010/styleProperty.png" alt="styleプロパティ" />
+<img src="/?S00/0010/styleProperty.png" alt="styleプロパティ" />
 cssで使用するプロパティと同じですが、cssと異なり「-(ハイフン)」を使用できません。<br />「font-size」のように「-(ハイフン)」を使用する場合は「fontSize」のようにハイフンを省略して、ハイフンの次の文字を大文字にします。
 <p>ハイフンを用いて各単語を結合する記法をケバブケース、2単語名以降の最初の文字を大文字にして結合する記法をキャメル記法と呼びます。</p>
-<img src="/?S0010/notation.png" alt="記法" />
+<img src="/?S00/0010/notation.png" alt="記法" />
 では実際に要素のスタイルを変更してみましょう♪
 <code class="html">
 	&lt;ul&gt;
@@ -129,7 +129,7 @@ cssで使用するプロパティと同じですが、cssと異なり「-(ハイ
 	obj[1].style.color = "red"; //2つ目の「li」要素のフォント色を赤に
 	obj[2].style.backgroundColor = "cyan"; //3つ目の「li」要素の背景色を水色に
 </code>
-<img class="no-max" src="/?S0010/updatingStyleProperty.gif" alt="style" />
+<img class="no-max" src="/?S00/0010/updatingStyleProperty.gif" alt="style" />
 <h3>createElement</h3>
 jsでHTML要素を作成します。<br />以下のコードで要素を作成できます。
 <code class="javascript">
@@ -161,7 +161,7 @@ jsでHTML要素を作成します。<br />以下のコードで要素を作成�
 	obj.textContent = "ライチュウ"; //作成した要素の中身を設定
 	pr.appendChild(obj); //作成した要素を追加
 </code>
-<img src="/?S0010/appendChild.gif" alt="appendChild" />
+<img src="/?S00/0010/appendChild.gif" alt="appendChild" />
 <h2>classList</h2>
 ドキュメントオブジェクトのclassListプロパティを使用してクラスを操作できます。<br />クラスの操作に関しては以下の4つをメソッドを使用します。
 <ul>

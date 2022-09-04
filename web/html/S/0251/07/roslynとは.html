@@ -2,11 +2,11 @@
 2014年に開発された.NETコンパイラプラットフォームです。<br />コンパイラが行う各工程(字句解析・構文解析・意味解析・最適化・コード生成)ごとに専用のAPIが提供され、開発者の介入を可能にします。<br /><br />例えば、特定のキーワードに色付けをしたり、独自に設定したコーディング規約に沿わないコードのコンパイル時に警告を出力したりすることが可能になります。<br />僕の場合は、SQL文を組み立てている処理を洗い出して、エスケープ処理・バインド機構を使用していないSQLインジェクションの脆弱性があるコードを見つけるプログラム開発に使用しました。<br /><br />コードを分析する簡単な方法として、テキストファイル全体を正規表現でチェックする手法がありますが、roslynを使用すればより強力で正確なチェックが可能になります。
 <h2>環境構築</h2>
 では、早速roslynでコード解析をする環境を構築しましょう♪<br />「Visual Studio Installer」を起動し、「Visual Studio 拡張機能開発」機能をインストールしてください。
-<img src="/?S0251/roslynInstaller.png" alt="roslynインストール" />
+<img src="/?S00/0251/roslynInstaller.png" alt="roslynインストール" />
 右側に表示される「.NET compiler Platform SDK」にチェックが入っていることを確認してください。<br /><br />インストールが完了したら、プロジェクトを作成しましょう♪<br />コード解析用のテンプレートプロジェクトがあるため、今回はそれを使用しましょう♪
-<img src="/?S0251/StandaloneCodeAnalysisTool.png" alt="コード解析テンプレートプロジェクト" />
+<img src="/?S00/0251/StandaloneCodeAnalysisTool.png" alt="コード解析テンプレートプロジェクト" />
 以下のようなテンプレートプロジェクトが生成されます。
-<img src="/?S0251/templateOfRoslynProject.png" alt="roslynテンプレートプロジェクト" />
+<img src="/?S00/0251/templateOfRoslynProject.png" alt="roslynテンプレートプロジェクト" />
 これでroslynを使用したコード解析が可能になる環境の構築が完了です。
 <h2>roslyn学習サイト</h2>
 僕がroslynの学習をする際に使用したサイトを紹介します。

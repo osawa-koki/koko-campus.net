@@ -19,10 +19,10 @@
 <h2>DoS攻撃</h2>
 DoS攻撃とは、サービス(Service)の(of)否定(Denial)攻撃の略で、大量のデータ・パケットを送り付けてCPU・メモリやネットワーク帯域を溢れさせる攻撃です。
 DoS攻撃はあくまでも大量のデータを送り付けてサービスを停止させる攻撃の総称です。
-<img src="/?S9912/DoS攻撃.png" alt="DoS攻撃" />
+<img src="/?S00/9912/DoS攻撃.png" alt="DoS攻撃" />
 <h2>DDoS攻撃</h2>
 DoS攻撃の分散型(Distributed)バージョンで、<span class="underline">インターネット上で多数の踏み台のサーバから</span>一斉にデータ・パケットを送り付けてサービスを停止させます。
-<img src="/?S9912/DDoS攻撃.png" alt="DDoS攻撃" />
+<img src="/?S00/9912/DDoS攻撃.png" alt="DDoS攻撃" />
 <div class="exam">
 	&#9836;&#9836;&#9836; 令和元年秋試験午前&#8545;問13 &#9836;&#9836;&#9836;
 	<div class="separator"></div>
@@ -44,7 +44,7 @@ DoS攻撃のお金を浪費させる(Economic)バージョンです。<br /><br 
 	<div class="title">ICMP</div>
 	Internet Control Message Protocolの略で、TCP/IPでいうネットワーク層においてノードに対する通信状態の確認をするために使われるプロトコルです。<br />「Ping監視」(死活監視/可用性監視)に用いられます。
 </div>
-<img src="/?S9912/ping-flood.png" alt="ping flood攻撃" />
+<img src="/?S00/9912/ping-flood.png" alt="ping flood攻撃" />
 <div class="step">
 	<ul>
 		<li>FWの適切な設定</li>
@@ -53,7 +53,7 @@ DoS攻撃のお金を浪費させる(Economic)バージョンです。<br /><br 
 </div>
 <h2>smurf攻撃</h2>
 ICMP Flood攻撃の反射させて攻撃するバージョンです。<br />ICMP Flood攻撃は攻撃者が標的に直接大量のデータを送信するのに対して、smurf攻撃では<span class="underline">発信元IPアドレスを標的に設定して、</span>対策がなされていないホストに大量に送信することで標的サイトに大量の応答が返ってくることでDoS攻撃を実現します。
-<img src="/?S9912/smurf.png" alt="smurf" />
+<img src="/?S00/9912/smurf.png" alt="smurf" />
 <div class="step">
 	<ul>
 		<li>FWでICMP echo replyを遮断する。</li>
@@ -74,10 +74,10 @@ TCPの接続開始要求(SYN)を大量に送り付けます。<br />SYNを受け
 		<li>SYN Flood攻撃対策が可能なFWを使用する。</li>
 	</ul>
 </div>
-<img src="/?S9912/syn-flood.png" alt="syn flood" />
+<img src="/?S00/9912/syn-flood.png" alt="syn flood" />
 <h2>Connection Flood攻撃</h2>
 標的ホストに対して大量にTCPコネクションを確立することで、標的のTCPコネクションを占領する攻撃のことを指します。<br /><br />この攻撃では実際にTCPコネクションを確立するためIPアドレスの偽装は困難ですが、実際にTCPコネクションを確立するということは攻撃の影響が確実に出るということを意味します。
-<img src="/?S9912/connection-flood.png" alt="connection flood" />
+<img src="/?S00/9912/connection-flood.png" alt="connection flood" />
 <div class="step">
 	<ul>
 		<li>ロードバランサの使用</li>
@@ -86,7 +86,7 @@ TCPの接続開始要求(SYN)を大量に送り付けます。<br />SYNを受け
 </div>
 <h2>UDP Flood攻撃</h2>
 標的ホストのUDPポートに対して、大量のパケットを送り付けてサービスを停止させる攻撃を指します。<br /><br />UDPはコネクションレスであるため、攻撃者を特定することは困難です。
-<img src="/?S9912/udp-flood.png" alt="udp flood" />
+<img src="/?S00/9912/udp-flood.png" alt="udp flood" />
 <div class="step">
 	<ul>
 		<li>FWを適切に設定する。</li>
@@ -102,7 +102,7 @@ TCPの接続開始要求(SYN)を大量に送り付けます。<br />SYNを受け
 </div>
 <h2>リフレクション攻撃</h2>
 別名、「反射攻撃」ですが、後述するアンプリファイア攻撃と合わせて「反射・増幅型攻撃」と呼ばれることが多いです。<br /><br />リフレクション(reflection)とは「反射」の意味で、直接標的サイトに大量のデータを送り付けるのではなく、発信元のIPアドレスを標的のIPアドレスに偽装したパケットを踏み台とするノードに大量に送り付けて、その応答パケットを標的サイトに送られるよう仕向けて(反射させて)標的サイトを可用性を損なわせる攻撃を指します。<br /><br />前述したsmurf攻撃がリフレクション攻撃に該当します。
-<img src="/?S9912/リフレクション攻撃.png" alt="リフレクション攻撃" />
+<img src="/?S00/9912/リフレクション攻撃.png" alt="リフレクション攻撃" />
 <div class="step">
 	<ul>
 		<li>適切なアクセス制限をかける。</li>
@@ -118,7 +118,7 @@ TCPの接続開始要求(SYN)を大量に送り付けます。<br />SYNを受け
 </div>
 <h2>アンプリファイア攻撃</h2>
 別名、「増幅攻撃」ですが、前述したリフレクション攻撃と合わせて「反射・増幅型攻撃」と呼ばれることが多いです。<br /><br />リフレクション攻撃はなぜ攻撃者は自分で標的に直接大量のデータを送らずに、踏み台を利用して反射させて大量のデータを送ると思いますか???<br /><br /><br />答えは踏み台を利用した方が強力になるからです。<br />攻撃者のコンピュータ資源だけをフル稼働させても標的に対してサービスを停止させる程のダメージを与えることってかなり難しいんです。<br />そこで、利用できるコンピュータ資源を使っちゃえって感じです。<br /><br />アンプリファイア攻撃はリフレクション攻撃とほとんど同義です。要求パケットを反射させて応答パケットで攻撃するのがリフレクション攻撃ですが、要求パケットに対する応答パケットの方が大きい場合はその分だけより強力な増大された(アンプリファイド)攻撃をすることが可能になります。換言すれば、反射させる際にパケットが大きく増長する(増幅率が高い)場合は攻撃者自身が豊富なコンピュータ資源を有していなくても十分な攻撃が可能になります。
-<img src="/?S9912/アンプリファイア攻撃.png" alt="アンプリファイア攻撃" />
+<img src="/?S00/9912/アンプリファイア攻撃.png" alt="アンプリファイア攻撃" />
 「反射・増幅型攻撃」はその性質上、<span class="underline">コネクションを確立しないUDPであること</span>と<span class="underline">問い合わせ元を制限しない</span>機能が攻撃対象となりますが、この2つを満たす機能として「NTP」「DNS」「SSDP」「RIP」があげられます。
 <div class="step">
 	<ul>

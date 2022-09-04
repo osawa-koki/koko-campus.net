@@ -11,10 +11,10 @@ Go言語は2009年にgoogleによって開発されたプログラミング言�
 僕は「VS code」をオススメします。<br />理由はGo言語用の様々なプラグインが使用可能だからです。<br />以下のリンクからダウンロードして下さい。
 <a href="https://code.visualstudio.com/" class="link VScode">visual studio code</a>
 特に設定することなく使用可能です。<br />左側の拡張機能メニューからgo言語用のプラグインを使用することをオススメします。
-<img src="/?S0221/VScodeExt.png" alt="vs code" class="max-400w" />
+<img src="/?S00/0221/VScodeExt.png" alt="vs code" class="max-400w" />
 <h2>コンパイルとビルド</h2>
 コンピュータは我々が書いた英語みたいなコードを直接実行することはできません。<br />コンピュータが実行することができるのは「0」と「1」だけで書かれたバイナリデータと呼ばれるものだけです。<br />そのため、我々が書いたコード(ソースコード)をコンピュータが実行できるように変換する必要があります。<br />これを「<strong>コンパイル</strong>」ないしは「<strong>ビルド</strong>」と呼びます。
-<img src="/?S0221/compile.png" alt="コンパイルの説明画像" />
+<img src="/?S00/0221/compile.png" alt="コンパイルの説明画像" />
 <h3>コンパイル</h3>
 プログラミングでは、英語っぽいコード(<strong>ソースコード</strong>)を入力しますがコンピュータはこのコードを直接実行することはできません。<br /><br />コンピュータが我々が書いたソースコードを実行するためには一度ソースコードをコンピュータが実行できるコード(<strong>実行可能プログラム</strong>)へ変換する必要があります。<br /><br />この作業を「<strong>コンパイル</strong>」と呼びます。
 <h3>ビルド</h3>
@@ -23,13 +23,13 @@ Go言語は2009年にgoogleによって開発されたプログラミング言�
 では早速Goコンパイラをインストールしましょう♪<br />以下のリンクからインストーラをダウンロードします。
 <a href="https://go.dev/dl/" class="link golang">go</a>
 インストーラがダウンロードされたらそのまま起動します。<br />設定は全てデフォルトでok!です。<br />そのまま進めてください。
-<img src="/?S0221/installingGoCompiler.gif" alt="goコンパイラのインストール" />
+<img src="/?S00/0221/installingGoCompiler.gif" alt="goコンパイラのインストール" />
 インストールが完了したらシェルで以下のコマンドを実行してください。
 <code class="shell">
 	go version
 </code>
 バージョンが表示されたらGoコンパイラのインストールに成功しています。
-<img src="/?S0221/confirmingGoInstallation.gif" alt="goコンパイラのインストール" />
+<img src="/?S00/0221/confirmingGoInstallation.gif" alt="goコンパイラのインストール" />
 <h2>goコマンド</h2>
 goコマンドを確認しましょう♪<br />通常使用するコマンド(引数)は以下の3つです。
 <ul>
@@ -58,7 +58,7 @@ goコマンドを確認しましょう♪<br />通常使用するコマンド(�
 <code class="shell">
 	go run hello.go
 </code>
-<img src="/?S0221/go-run.gif" alt="go runコマンド" />
+<img src="/?S00/0221/go-run.gif" alt="go runコマンド" />
 <h3>build</h3>
 ソースコードをビルドします。
 <code class="go">
@@ -69,6 +69,6 @@ goコマンドを確認しましょう♪<br />通常使用するコマンド(�
 	go build hello.go
 </code>
 カレントディレクトリに実行可能プログラム(windowsならexeファイル)が生成されます。
-<img src="/?S0221/go-build.gif" alt="go buildコマンド" />
+<img src="/?S00/0221/go-build.gif" alt="go buildコマンド" />
 <h3>import</h3>
 パッケージをインポートするためのコマンドです。<br />後ほど説明します。
