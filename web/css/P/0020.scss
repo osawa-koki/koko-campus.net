@@ -54,6 +54,11 @@
 			border: 1px black solid;
 			width: 100%;
 			height: 100%;
+			overflow-x: auto;
+			scrollbar-width: 0;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 			#editerX, #editerY {
 				scrollbar-width: 0;
 				height: 100%;
@@ -64,7 +69,9 @@
 			#editerX {
 				display: flex;
 				flex-wrap: wrap;
+				align-content: flex-start;
 				width: 70%;
+				min-width: 350px;
 				background-color: white;
 				overflow-y: auto;
 				.hex {
@@ -74,6 +81,7 @@
 					align-items: center;
 					text-align: center;
 					font-size: 16px;
+					border: none;
 					width: #{$hexBoxWidth}px;
 					height: #{$hexBoxWidth}px;
 					cursor: crosshair;
@@ -81,7 +89,18 @@
 			}
 			#editerY {
 				width: 30%;
+				min-width: 250px;
 				background-color: rgba(lightgray, 0.3);
+				table {
+					margin: 25px auto;
+					th, td {
+						font-weight: normal;
+						padding: 5px;
+					}
+					td {
+						min-width: 100px;
+					}
+				}
 			}
 			#loading {
 				position: absolute;
