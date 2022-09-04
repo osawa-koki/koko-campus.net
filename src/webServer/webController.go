@@ -3,13 +3,15 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"regexp"
 	"strings"
 )
 
 // 静的ページ
 func WebController(w *http.ResponseWriter, path string) {
-	reg := `/\?(?P<Category>[\w\d]+)/(?P<Name>[\w\d\-]+)\.(?P<Ext>\w+)`
-	Params := RegexGetParam(reg, path)
+	reg := `/\?(?P<Category>[\w\d]+)/(?P<Name>[\w\d\-\.]+)\.(?P<Ext>\w+)`
+	dotRegex := regexp.MustCompile(`\.{2,}`) // [SEC] ディレクトリトラバーサル対策
+	Params := RegexGetParam(reg, dotRegex.ReplaceAllString(path, ".")) // [SEC] ディレクトリトラバーサル対策
 	var (
 		Category = Params["Category"]
 		Name     = Params["Name"]

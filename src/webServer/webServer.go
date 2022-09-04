@@ -45,7 +45,7 @@ func controller(w http.ResponseWriter, r *http.Request) {
 
 	setResponseHeaders(&w)
 	switch RR.snd {
-	case "R", "M":
+	case "R", "M": // [SEC] クリックジャッキング・XSS対策
 		setResponseHeadersSecurity(&w)
 	}
 
