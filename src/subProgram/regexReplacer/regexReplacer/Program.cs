@@ -49,7 +49,7 @@ internal class Program
 				if (Console.ReadKey().Key == ConsoleKey.Y) break;
 			}
 
-			var files = Directory.GetFiles(path, "*.html", SearchOption.AllDirectories);
+			var files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Where(f => Regex.IsMatch(f, @"\.(html|css|scss)", RegexOptions.IgnoreCase));
 
 			int i = 0;
 			foreach (var file in files)
@@ -71,8 +71,9 @@ internal class Program
 				Console.WriteLine($"finish replacing {file}.");
 			}
 
+			return 0;
 		}
 
-		return 0;
+		return 1;
 	}
 }
