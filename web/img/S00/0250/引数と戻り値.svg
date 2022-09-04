@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="引数と戻り値.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vb入門\pics\値渡しと参照渡し.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.530399526956313"
+         inkscape:cx="124.434500118693"
+         inkscape:cy="515.649027007008"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid4387" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g2616"
+             transform="translate(6.80240150156807,7.54148487955329)">
+            <circle
+                 style="opacity:0.243112;fill:#00ff00;stroke:#000001;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path843"
+                 cx="460.606353759766"
+                 cy="200.640380859375"
+                 r="116.651390075684" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:100px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="407.946563720703"
+                 y="235.969100952148"
+                 id="text2010"><tspan
+                     sodipodi:role="line"
+                     id="tspan2008"
+                     x="407.946563720703"
+                     y="235.969100952148">fx</tspan></text>
+        </g>
+        <g
+             id="g4508"
+             transform="translate(-13.1975984984319,17.5414848795533)">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 40,150 h 275"
+                 id="path4422" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 295,130 20,20 -20,20"
+                 id="path4424" />
+        </g>
+        <g
+             id="g4508-3"
+             transform="matrix(-1,0,0,1,343.766220214523,96.9836290473422)">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 40,150 h 275"
+                 id="path4422-1" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 295,130 20,20 -20,20"
+                 id="path4424-7" />
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="137.632095336914"
+             y="139.517471313477"
+             id="text6296"><tspan
+                 sodipodi:role="line"
+                 id="tspan6294"
+                 x="137.632095336914"
+                 y="139.517471313477">引数</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="122.549133300781"
+             y="293.175231933594"
+             id="text7290"><tspan
+                 sodipodi:role="line"
+                 id="tspan7288"
+                 x="122.549133300781"
+                 y="293.175231933594">戻り値</tspan></text>
+    </g>
+</svg>

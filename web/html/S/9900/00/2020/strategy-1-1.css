@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+
+
+
+/* ----------損益計算書と貸借対照表のまとめ表---------- */
+#bs_pl_table td {
+	font-size: 25px;
+	text-align: center;
+	padding: 0 15px;
+}
+/* ----------損益計算書と貸借対照表のまとめ表---------- */
+
+
+
+
+/* ----------損益分岐分析qのボックス---------- */
+#q_break_even {
+	width: 600px;
+	font-size: 25px;
+}
+/* ----------損益分岐分析qのボックス---------- */
+
+
+.order_item_table {
+	width: 400px;
+}
+
+.qc_img {
+	width: 500px;
+	height: 500px;
+	margin-left: 50px;
+}
+
+h6 {
+	font-size: 20px;
+	margin-left: 30px;
+}
+
+.break_even_analysis_img {
+	width: 700px;
+	margin-left: 30px;
+}
+
+
+.accounting_img {
+	width: 700px;
+}
+
+
+
+
+
+#check_table {
+	margin-left: 25px;
+}
+
+
+#check_table td {
+	text-align: center;
+	width: 100px;
+	height: 50px;
+}
+
+.its_checked {
+    content: '';
+    width: 20px;
+    height: 10px;
+    border-left: 3px solid #9c9c9c;
+    border-bottom: 3px solid #9c9c9c;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    margin-left: 40px;
+}
+
+.its_all_checked {
+    content: '';
+    width: 20px;
+    height: 10px;
+    border-left: 3px solid red;
+    border-bottom: 3px solid red;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+#scatter_plot_div {
+	display: flex;
+	margin: 30px auto auto 25px;
+}
+
+
+.scatter_plot_class {
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+
+#scatter_plot0 {
+	background-color: orange;
+}
+#scatter_plot1 {
+	background-color: yellow;
+}
+#scatter_plot2 {
+	background-color: skyblue;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="700"
+     viewBox="0 0 600 700"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ポケモン-ステータス.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\sql入門\pics\ポケモン-ステータス.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="-23.9968578738271"
+         inkscape:cy="352.620494868181"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <linearGradient
+             inkscape:collect="always"
+             id="linearGradient20770">
+            <stop
+                 style="stop-color:#009a00;stop-opacity:0.3938411669"
+                 offset="0"
+                 id="stop20766" />
+            <stop
+                 style="stop-color:#00ae00;stop-opacity:0.9137254953"
+                 offset="0.0846182331"
+                 id="stop21032" />
+            <stop
+                 style="stop-color:#ff0000;stop-opacity:0.5591572123"
+                 offset="0.4775893986"
+                 id="stop21034" />
+            <stop
+                 style="stop-color:#0000ff;stop-opacity:0.1843137294"
+                 offset="0.9428659678"
+                 id="stop21100" />
+            <stop
+                 style="stop-color:#0000ff;stop-opacity:0.3484602917"
+                 offset="1"
+                 id="stop20768" />
+        </linearGradient>
+        <linearGradient
+             inkscape:collect="always"
+             xlink:href="#linearGradient20770"
+             id="linearGradient20772"
+             x1="163.978530883789"
+             y1="343.954956054688"
+             x2="431.943450927734"
+             y2="346.621276855469"
+             gradientUnits="userSpaceOnUse"
+             gradientTransform="matrix(1,0,0,0.708288351696432,0,98.5045558467996)" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.304647;fill:url(#linearGradient20772);fill-opacity:1;stroke-width:1.6832;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect20654"
+             width="270.631225585938"
+             height="59.4884376525879"
+             x="162.645370483398"
+             y="313.796020507812"
+             ry="19.3631172180176" />
+        <text
+             xml:space="preserve"
+             style="font-size:40px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="206.639602661133"
+             y="357.286529541016"
+             id="text1505"><tspan
+                 sodipodi:role="line"
+                 id="tspan1503"
+                 x="206.639602661133"
+                 y="357.286529541016">ステータス</tspan></text>
+        <g
+             id="g19276"
+             transform="translate(3.33263508307266)">
+            <ellipse
+                 style="opacity:0.304647;fill:#ff0000;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path11835-6"
+                 cx="294.628082275391"
+                 cy="111.985336303711"
+                 rx="78.656364440918"
+                 ry="47.3271369934082" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="248.633850097656"
+                 y="121.983764648438"
+                 id="text4273"><tspan
+                     sodipodi:role="line"
+                     id="tspan4271"
+                     x="248.633850097656"
+                     y="121.983764648438">種族値</tspan></text>
+        </g>
+        <g
+             id="g19281"
+             transform="translate(-6.66579385384084,8.66552734375)">
+            <ellipse
+                 style="opacity:0.304647;fill:#00ad00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path11835"
+                 cx="99.9869079589844"
+                 cy="169.977737426758"
+                 rx="78.656364440918"
+                 ry="47.3271369934082" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="53.3263511657715"
+                 y="178.643280029297"
+                 id="text6477"><tspan
+                     sodipodi:role="line"
+                     id="tspan6475"
+                     x="53.3263511657715"
+                     y="178.643280029297">個体値</tspan></text>
+        </g>
+        <g
+             id="g19271">
+            <ellipse
+                 style="opacity:0.304647;fill:#003cff;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path11835-1"
+                 cx="499.934539794922"
+                 cy="178.643264770508"
+                 rx="78.656364440918"
+                 ry="47.3271369934082" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="454.607147216797"
+                 y="189.308532714844"
+                 id="text8615"><tspan
+                     sodipodi:role="line"
+                     id="tspan8613"
+                     x="454.607147216797"
+                     y="189.308532714844">努力値</tspan></text>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="40.6605567932129"
+             y="118.652702331543"
+             id="text15094"><tspan
+                 sodipodi:role="line"
+                 id="tspan15092"
+                 x="40.6605567932129"
+                 y="118.652702331543">最大31</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="221.381195068359"
+             y="53.0617752075195"
+             id="text15094-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan15092-8"
+                 x="221.381195068359"
+                 y="53.0617752075195">ポケモンに依存</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="479.939270019531"
+             y="119.985336303711"
+             id="text16142"><tspan
+                 sodipodi:role="line"
+                 id="tspan16140"
+                 x="479.939270019531"
+                 y="119.985336303711">最大252</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.304647;fill:#003cff;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path20094"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="219.97119140625"
+             sodipodi:cy="254.633331298828"
+             sodipodi:r1="88.8027877807617"
+             sodipodi:r2="44.4013938903809"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 296.876661551268,299.034725189209 h -153.810940290036 l 76.905470145018,-133.204181671143 z"
+             inkscape:transform-center-y="6.05064683078984"
+             transform="matrix(0.141916097534927,0.167840011244209,0.66613991890655,-0.563250544388368,209.764234674569,366.731661649966)"
+             inkscape:transform-center-x="9.33170798035235" />
+        <path
+             sodipodi:type="star"
+             style="opacity:0.304647;fill:#009000;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path20094-2"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="219.97119140625"
+             sodipodi:cy="254.633331298828"
+             sodipodi:r1="88.8027877807617"
+             sodipodi:r2="44.4013938903809"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="6.05064683078984"
+             transform="matrix(-0.141916097534927,0.167840011244209,-0.66613991890655,-0.563250544388368,395.479656452566,363.084025922552)"
+             inkscape:transform-center-x="-9.33170798035184"
+             d="m 296.876661551268,299.034725189209 h -153.810940290036 l 76.905470145018,-133.204181671143 z" />
+        <path
+             sodipodi:type="star"
+             style="opacity:0.304647;fill:#ff0000;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path20460"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="177.310119628906"
+             sodipodi:cy="478.60400390625"
+             sodipodi:r1="109.878486633301"
+             sodipodi:r2="54.9392433166504"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 272.467680382734,533.5432472229 h -190.3151215076551 l 95.1575607538271,-164.817729949951 z"
+             inkscape:transform-center-y="23.4701460107984"
+             transform="matrix(0.201933393319,0,0,-0.854403662269138,262.870711965285,629.945641147011)" />
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="40.2551231384277"
+             y="490.602416992188"
+             id="text23708"><tspan
+                 sodipodi:role="line"
+                 id="tspan23706"
+                 x="40.2551231384277"
+                 y="490.602416992188">(種族値×2＋個体値＋努力値÷4)×レベル÷100＋レベル＋10</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="41.4504356384277"
+             y="449.274505615234"
+             id="text26398"><tspan
+                 sodipodi:role="line"
+                 id="tspan26396"
+                 x="41.4504356384277"
+                 y="449.274505615234">HP</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="43.1848106384277"
+             y="612.747680664062"
+             id="text23708-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan23706-4"
+                 x="43.1848106384277"
+                 y="612.747680664062">能力値＝{(種族値×2＋個体値＋努力値÷4)×レベル÷100＋5}</tspan><tspan
+                 sodipodi:role="line"
+                 x="43.1848106384277"
+                 y="640.081665039062"
+                 id="tspan33689">        ×性格補正</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="41.4504356384277"
+             y="571.419738769531"
+             id="text26398-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan26396-9"
+                 x="41.4504356384277"
+                 y="571.419738769531">HP以外</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="300"
+     height="150"
+     viewBox="0 0 300 150"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="vb.net.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\pics\subjects\vb.net入門.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.60766019510142"
+         inkscape:cx="158.615608433294"
+         inkscape:cy="217.396686852691"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="21.55196253"
+             y="59.37785596"
+             width="70.94548817"
+             height="61.12583224"
+             id="rect15119" />
+        <clipPath
+             clipPathUnits="userSpaceOnUse"
+             id="clipPath3444">
+            <path
+                 d="m 11.52,162 c 0,-80.323 123.787,-145.439 276.48,-145.439 v 0 c 152.693,0 276.481,65.116 276.481,145.439 v 0 c 0,80.322 -123.788,145.439 -276.481,145.439 v 0 c -152.693,0 -276.48,-65.117 -276.48,-145.439"
+                 id="path3446" />
+        </clipPath>
+        <radialGradient
+             cx="0"
+             cy="0"
+             fx="0"
+             fy="0"
+             gradientTransform="matrix(363.05789,0,0,-363.05789,177.52002,256.30713)"
+             gradientUnits="userSpaceOnUse"
+             id="radialGradient3452"
+             r="1"
+             spreadMethod="pad">
+            <stop
+                 id="stop3454"
+                 offset="0"
+                 style="stop-opacity:1;stop-color:#aeb2d5" />
+            <stop
+                 id="stop3456"
+                 offset="0.3"
+                 style="stop-opacity:1;stop-color:#aeb2d5" />
+            <stop
+                 id="stop3458"
+                 offset="0.75"
+                 style="stop-opacity:1;stop-color:#484c89" />
+            <stop
+                 id="stop3460"
+                 offset="1"
+                 style="stop-opacity:1;stop-color:#484c89" />
+        </radialGradient>
+        <clipPath
+             clipPathUnits="userSpaceOnUse"
+             id="clipPath3468">
+            <path
+                 d="m 0,324 h 576 v -324 h -576 z"
+                 id="path3470" />
+        </clipPath>
+        <clipPath
+             clipPathUnits="userSpaceOnUse"
+             id="clipPath3480">
+            <path
+                 d="m 0,324 h 576 v -324 h -576 z"
+                 id="path3482" />
+        </clipPath>
+        <rect
+             x="21.5519619"
+             y="59.37785721"
+             width="70.94548798"
+             height="61.1258316"
+             id="rect15119-5" />
+        <rect
+             x="21.5519619"
+             y="59.37785721"
+             width="70.94548798"
+             height="61.1258316"
+             id="rect15119-7" />
+        <rect
+             x="21.5519619"
+             y="59.37785721"
+             width="70.94548798"
+             height="61.1258316"
+             id="rect15119-8" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             style="fill:#00ff00;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.43682307;fill-opacity:0.3357400596;opacity:0.6272285251"
+             d="m 145.035911419814,77.8234771094565 160.998909395889,91.3665051301195 5e-12,-176.03222417560459 h -14.617516540384 z"
+             id="path9553" />
+        <path
+             style="fill:#00ffff;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.43682307;fill-opacity:0.3357400596;opacity:0.6272285251"
+             d="m 291.106293124633,-6.84224193241659 -289.86224913692086,167.94593834113459 h -11.81841788326503 l -10e-14,-168.56796033499273 z"
+             id="path9240" />
+        <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:72px;line-height:1.25;font-family:'Century Gothic';-inkscape-font-specification:'Century Gothic, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+             x="33.2736701965332"
+             y="92.4134063720703"
+             id="text2164"><tspan
+                 sodipodi:role="line"
+                 id="tspan2162"
+                 x="33.2736701965332"
+                 y="92.4134063720703">VB.NET</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="214.999389648438"
+             y="129.466857910156"
+             id="text11079"><tspan
+                 sodipodi:role="line"
+                 id="tspan11077"
+                 x="214.999389648438"
+                 y="129.466857910156">入門</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.737439222;fill:#ff0000;fill-opacity:0.33574;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.436823;paint-order:markers stroke fill;stop-color:#000000"
+             id="path11667"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="-85.2170104980469"
+             sodipodi:cy="202.157150268555"
+             sodipodi:r1="103.57740020752"
+             sodipodi:r2="51.7887001037598"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 4.48364933961263,253.945850372314 h -179.40131967531863 l 89.7006598376591,-155.3661003112788 z"
+             transform="matrix(0,0.044371768694742,-1.638818564981,0,436.184731233485,133.78382891809)"
+             inkscape:transform-center-x="-42.4361423439812" />
+    </g>
+</svg>

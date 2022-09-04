@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ユースケース図.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\ユースケース図.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.0608"
+         inkscape:cx="216.82"
+         inkscape:cy="191.84"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <circle
+             style="fill:white;stroke:black;stroke-width:0.781815;stop-color:black"
+             id="path843"
+             cx="60.993"
+             cy="157.65"
+             r="21.106" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 35.328,203.98 h 53.993"
+             id="path878" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 61.992,178.98 v 46.99"
+             id="path993" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 39.662,248.3 22.33,-22.33 22.831,22.83"
+             id="path995" />
+        <circle
+             style="fill:white;stroke:black;stroke-width:0.781815;stop-color:black"
+             id="path843-9"
+             cx="543.27"
+             cy="231.63"
+             r="21.106" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 517.6,277.96 h 54"
+             id="path878-1" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 544.27,252.96 v 46.99"
+             id="path993-5" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 521.94,322.28 22.33,-22.33 22.83,22.83"
+             id="path995-6" />
+        <rect
+             style="fill:white;stroke:black;stop-color:black"
+             id="rect1136"
+             width="337.96"
+             height="219.97"
+             x="136.65"
+             y="88.655" />
+        <rect
+             style="fill:white;stroke:none;stroke-width:1.05069;stop-color:black"
+             id="rect1138"
+             width="205.31"
+             height="43.328"
+             x="191.97"
+             y="67.991" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="195.91"
+             y="99.827"
+             id="text3958"><tspan
+                 sodipodi:role="line"
+                 id="tspan3956"
+                 x="195.91"
+                 y="99.827">出退勤システム</tspan></text>
+        <ellipse
+             style="fill:white;stroke:black;stop-color:black;stroke-opacity:1"
+             id="path5470"
+             cx="269.63"
+             cy="164.98"
+             rx="103.65"
+             ry="26.33" />
+        <ellipse
+             style="fill:white;stroke:black;stroke-opacity:1;stop-color:black"
+             id="path5470-5"
+             cx="340.62"
+             cy="245.3"
+             rx="103.65"
+             ry="26.33" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 165.98,165.98 h -69.993"
+             id="path5629" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 445.28,245.3 h 62.65"
+             id="path5631" />
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="198.64"
+             y="170.65"
+             id="text7321"><tspan
+                 sodipodi:role="line"
+                 id="tspan7319"
+                 x="198.64"
+                 y="170.65">出退勤登録をする</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="276.2"
+             y="250.4"
+             id="text7321-9"><tspan
+                 sodipodi:role="line"
+                 id="tspan7319-9"
+                 x="276.2"
+                 y="250.4">給与を計算する</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="31.329"
+             y="278.63"
+             id="text14656"><tspan
+                 sodipodi:role="line"
+                 id="tspan14654"
+                 x="31.329"
+                 y="278.63">労働者</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="513.27"
+             y="350.62"
+             id="text15716"><tspan
+                 sodipodi:role="line"
+                 id="tspan15714"
+                 x="513.27"
+                 y="350.62">人事部</tspan></text>
+    </g>
+</svg>

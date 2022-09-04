@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="プロトタイプモデル.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.5002"
+         inkscape:cx="259.97"
+         inkscape:cy="329.62"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g18153">
+            <path
+                 style="fill:#fdffff;fill-opacity:0.8;stroke:black;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="path15583"
+                 sodipodi:type="arc"
+                 sodipodi:cx="297.53"
+                 sodipodi:cy="327.6"
+                 sodipodi:rx="241.22"
+                 sodipodi:ry="241.22"
+                 sodipodi:start="3.7548"
+                 sodipodi:end="5.6691"
+                 sodipodi:open="true"
+                 sodipodi:arc-type="arc"
+                 d="m 100.26,188.78 a 241.22,241.22 0 0 1 197.16,-102.4 241.22,241.22 0 0 1 197.26,102.23" />
+            <path
+                 id="path17366-8-5"
+                 style="stroke:black;stroke-width:5;stop-color:black"
+                 inkscape:transform-center-x="-5.2989"
+                 inkscape:transform-center-y="-3.099"
+                 d="m 110.99,133.51 42.5,36.92 -53.23,18.35 z" />
+        </g>
+        <g
+             id="g18190">
+            <path
+                 id="path17785-2"
+                 style="fill:blue;stroke:blue;stroke-width:4.07775;stop-color:black"
+                 inkscape:transform-center-x="-8.6062"
+                 inkscape:transform-center-y="0.00058583"
+                 d="m 373.53,299.95 v -59.63 l 51.64,29.81 z" />
+            <rect
+                 style="fill:blue;fill-opacity:1;stroke:blue;stroke-width:4.07774;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect17761"
+                 width="231.41"
+                 height="12.301"
+                 x="168.56"
+                 y="263.98" />
+        </g>
+        <g
+             id="g18186">
+            <g
+                 id="g18158">
+                <rect
+                     style="fill:#fdffff;fill-opacity:0.8;stroke:black;stroke-width:1.14762;stroke-opacity:1;stop-color:black"
+                     id="rect843"
+                     width="182.07"
+                     height="67.318"
+                     x="13.864"
+                     y="236.04" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="76.79"
+                     y="279.93"
+                     id="text10369"><tspan
+                         sodipodi:role="line"
+                         id="tspan10367"
+                         x="76.79"
+                         y="279.93">作成</tspan></text>
+            </g>
+            <g
+                 id="g18165">
+                <rect
+                     style="fill:#fdffff;fill-opacity:0.8;stroke:black;stroke-width:1.14762;stroke-opacity:1;stop-color:black"
+                     id="rect843-2"
+                     width="182.07"
+                     height="67.318"
+                     x="213.11"
+                     y="236.04" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="218.12"
+                     y="263.08"
+                     id="text12907"><tspan
+                         sodipodi:role="line"
+                         x="218.12"
+                         y="263.08"
+                         id="tspan12909">プロトタイプ</tspan></text>
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="246.75"
+                     y="294.42"
+                     id="text13179"><tspan
+                         sodipodi:role="line"
+                         id="tspan13177"
+                         x="246.75"
+                         y="294.42">(試作品)</tspan></text>
+            </g>
+            <g
+                 id="g18170">
+                <rect
+                     style="fill:#fdffff;fill-opacity:0.8;stroke:black;stroke-width:1.14762;stroke-opacity:1;stop-color:black"
+                     id="rect843-6"
+                     width="182.07"
+                     height="67.318"
+                     x="412.35"
+                     y="237.83" />
+                <text
+                     xml:space="preserve"
+                     style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="433.82"
+                     y="281.5"
+                     id="text14119"><tspan
+                         sodipodi:role="line"
+                         id="tspan14117"
+                         x="433.82"
+                         y="281.5">使用・評価</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>

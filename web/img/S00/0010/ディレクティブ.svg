@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="200"
+     viewBox="0 0 600 200"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ディレクティブ.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vue.js入門\pics\ディレクティブ.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="295.9612471"
+         inkscape:cy="241.9683169"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="433.2766113"
+             y="190.6417084"
+             width="117.3179703"
+             height="38.66160583"
+             id="rect28179" />
+        <rect
+             x="285.29599"
+             y="203.9732971"
+             width="99.98690796"
+             height="26.66317558"
+             id="rect27051" />
+        <rect
+             x="155.9795837"
+             y="195.9743347"
+             width="87.98847961"
+             height="27.99633408"
+             id="rect25197" />
+        <rect
+             x="17.33106422"
+             y="209.3059235"
+             width="149.3137817"
+             height="26.66317558"
+             id="rect19433" />
+        <rect
+             x="31.99580956"
+             y="77.32321167"
+             width="697.2420654"
+             height="153.3132629"
+             id="rect2961" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text2959"
+             style="font-size:34px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2961)"
+             transform="translate(-15.32949296,-8.67574392)"><tspan
+                 x="31.99609375"
+                 y="106.8232422"
+                 id="tspan871"><tspan
+     style="fill:#ff0000"
+     id="tspan863">v-bind</tspan> <tspan
+     style="fill:#0000ff"
+     id="tspan865">:value</tspan> <tspan
+     style="fill:#ff9c00"
+     id="tspan867">.sync</tspan> = <tspan
+     style="fill:#00b900"
+     id="tspan869">&quot;message&quot;</tspan></tspan></text>
+        <text
+             xml:space="preserve"
+             id="text19431"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19433)"
+             transform="translate(-12.66422279,-85.29882813)"><tspan
+                 x="17.33203125"
+                 y="228.9941406"
+                 id="tspan873">ディレクティブ</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text25195"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect25197)"
+             transform="translate(32.22198486,-72.55273438)"><tspan
+                 x="155.9804688"
+                 y="215.6621094"
+                 id="tspan875">引数</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text27049"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect27051)"
+             transform="translate(17.26052856,-80.39453125)"><tspan
+                 x="285.296875"
+                 y="223.6601562"
+                 id="tspan877">修飾子</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text28177"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect28179)"
+             transform="translate(64.65846223,-67.02539063)"><tspan
+                 x="433.2773438"
+                 y="210.3300781"
+                 id="tspan879">値</tspan></text>
+    </g>
+</svg>

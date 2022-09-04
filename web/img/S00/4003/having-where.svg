@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="having-where.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\sql-server\pics\having-where.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="243.97"
+         inkscape:cy="463.27"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter15105"
+             x="-0.15962"
+             y="-0.36687"
+             width="1.3192"
+             height="1.7337">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="13.654"
+                 id="feGaussianBlur15107" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter15105-5"
+             x="-0.15962"
+             y="-0.36687"
+             width="1.3192"
+             height="1.7337">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="13.654"
+                 id="feGaussianBlur15107-8" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <ellipse
+             style="fill:yellow;fill-opacity:0.53286;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black;filter:url(#filter15105)"
+             id="path14971"
+             cx="439.94"
+             cy="185.98"
+             rx="102.65"
+             ry="44.661" />
+        <ellipse
+             style="fill:yellow;fill-opacity:0.53286;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter15105-5);stop-color:black"
+             id="path14971-8"
+             cx="453.27"
+             cy="621.25"
+             rx="102.65"
+             ry="44.661" />
+        <path
+             id="path1335"
+             style="fill:aqua;fill-opacity:0.53286;stroke:black;stroke-width:0.695156;stroke-linejoin:round;stop-color:black"
+             inkscape:transform-center-y="10.285"
+             d="m 319.85,161.5 h -17.22 -17.22 l 8.61,30.85 8.61,30.86 8.6,-30.86 z"
+             inkscape:transform-center-x="-0.0020893" />
+        <path
+             id="path1335-7"
+             style="fill:aqua;fill-opacity:0.53286;stroke:black;stroke-width:0.695156;stroke-linejoin:round;stop-color:black"
+             inkscape:transform-center-y="10.285"
+             d="m 319.85,376.62 h -17.22 -17.22 l 8.61,30.85 8.61,30.86 8.6,-30.86 z"
+             inkscape:transform-center-x="-0.0020893" />
+        <path
+             id="path1335-6"
+             style="fill:aqua;fill-opacity:0.53286;stroke:black;stroke-width:0.695156;stroke-linejoin:round;stop-color:black"
+             inkscape:transform-center-y="10.285"
+             d="m 319.85,591.73 h -17.22 -17.22 l 8.61,30.85 8.61,30.86 8.6,-30.86 z"
+             inkscape:transform-center-x="-0.0020893" />
+        <g
+             id="g9223">
+            <rect
+                 style="fill:white;fill-opacity:0.53286;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect847"
+                 width="454.61"
+                 height="69.324"
+                 x="75.989"
+                 y="47.994"
+                 ry="1.1665" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="218.91"
+                 y="93.593"
+                 id="text4737"><tspan
+                     sodipodi:role="line"
+                     id="tspan4735"
+                     x="218.91"
+                     y="93.593">元のテーブル</tspan></text>
+        </g>
+        <g
+             id="g9218"
+             transform="translate(0,52.436)">
+            <rect
+                 style="fill:white;fill-opacity:0.53286;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect847-7"
+                 width="454.61"
+                 height="69.324"
+                 x="75.989"
+                 y="211.64"
+                 ry="1.1665" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="247.62"
+                 y="256.36"
+                 id="text5269"><tspan
+                     sodipodi:role="line"
+                     id="tspan5267"
+                     x="247.62"
+                     y="256.36">検索結果</tspan></text>
+        </g>
+        <g
+             id="g9213"
+             transform="translate(0,104.87)">
+            <rect
+                 style="fill:white;fill-opacity:0.53286;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect847-7-9"
+                 width="454.61"
+                 height="69.324"
+                 x="75.989"
+                 y="375.29"
+                 ry="1.1665" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="204.69"
+                 y="420.56"
+                 id="text6659"><tspan
+                     sodipodi:role="line"
+                     id="tspan6657"
+                     x="204.69"
+                     y="420.56">グループ化結果</tspan></text>
+        </g>
+        <g
+             id="g9208"
+             transform="translate(0,157.31)">
+            <rect
+                 style="fill:white;fill-opacity:0.53286;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect847-7-3"
+                 width="454.61"
+                 height="69.324"
+                 x="75.989"
+                 y="538.93"
+                 ry="1.1665" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="247.46"
+                 y="583.65"
+                 id="text7521"><tspan
+                     sodipodi:role="line"
+                     id="tspan7519"
+                     x="247.46"
+                     y="583.65">集計結果</tspan></text>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="351.96"
+             y="175.97"
+             id="text10173"><tspan
+                 sodipodi:role="line"
+                 id="tspan10171"
+                 x="351.96"
+                 y="175.97">WHERE句による</tspan><tspan
+                 sodipodi:role="line"
+                 x="351.96"
+                 y="214.24"
+                 id="tspan10175">絞り込み</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="350.62"
+             y="611.92"
+             id="text13083"><tspan
+                 sodipodi:role="line"
+                 id="tspan13081"
+                 x="350.62"
+                 y="611.92">HANING句による</tspan><tspan
+                 sodipodi:role="line"
+                 x="350.62"
+                 y="650.19"
+                 id="tspan13085">絞り込み</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="186.64"
+             y="191.98"
+             id="text16466"><tspan
+                 sodipodi:role="line"
+                 id="tspan16464"
+                 x="186.64"
+                 y="191.98">検索</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="102.09"
+             y="412.02"
+             id="text17922"><tspan
+                 sodipodi:role="line"
+                 id="tspan17920"
+                 x="102.09"
+                 y="412.02">グループ化</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="185.76"
+             y="630.58"
+             id="text19972"><tspan
+                 sodipodi:role="line"
+                 id="tspan19970"
+                 x="185.76"
+                 y="630.58">集計</tspan></text>
+    </g>
+</svg>

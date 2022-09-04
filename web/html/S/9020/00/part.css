@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.scroll-600 {
+	overflow-x: auto;
+}
+.scroll-600 > * {
+	width: 600px;
+}

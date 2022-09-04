@@ -1,0 +1,260 @@
+<?php
+require(__DIR__. "/../../framework/ver3/common.php");
+$obj = array(
+	"made" => "2022-03-01",
+	"updated" => "2022-03-01"
+);
+head($obj);
+?>
+<div class="hidden">
+	<code class="python">
+		import tkinter as tk
+		from tkinter import ttk
+
+
+		root = tk.Tk()
+		root.title("koko's lesson")
+		root.geometry("600x250+100+100")
+		root.configure(bg="white")
+
+		background = tk.PhotoImage(file="logo.png")
+		canvas = tk.Canvas(bg="white", width = 600, height = 300)
+		canvas.place(x = 0, y = 0)
+		img = tk.PhotoImage(file = "logo.png")
+		canvas.create_image(100, 100, image = img)
+
+		lbl = tk.Label(root, text = "tkinter", font = ("consolas", 50), background='white')
+		lbl.place(x=50, y=20)
+
+		ent = tk.Entry(root, font = ("consolas", 35), background='white', width = 7)
+		ent.place(x = 330, y = 70)
+
+		btn = ttk.Button(
+			root,
+			text="study♪",
+			style="office.TButton"
+		)
+		btn.place(x = 140, y = 150)
+		style = ttk.Style()
+		style.configure("office.TButton", font=25, anchor="c")
+
+
+		root.mainloop()
+	</code>
+</div>
+<h2>tkinter</h2>
+tkinterとはpythonで簡単にguiアプリケーションを作成するためのモジュールです。<br />tclという言語のツールキットであるtcl/tkをpython用に拡張したもので、一般的なguiアプリケーションでしたら、簡単に作成できます。<br /><br />また、Tk8.5からはttkと呼ばれるTkテーマ付きウィジェット(Tk themed widgets)が導入され、より美しいUIが使えるようになりました。<br />ここではttkも含めて学習します。<br /><br />pythonの基礎的な知識を必要とするため、python入門の学習が終了していない方は以下のリンクから学習してください。<br />5時間あれば一通りの学習は終了する量です。
+<a href="../../python入門/branch/branch" class="link-subject to-python入門"></a>
+<h2>tkinterモジュールの雛形</h2>
+<code class="python">
+	import tkinter as tk #tkinterモジュールをtkという名前でインポート
+
+	root = tk.Tk()
+
+	#処理...
+	#処理...
+	#処理...
+
+	root.mainloop()
+</code>
+<img src="../pics/tk-雛形.gif" alt="tkinter 雛形" />
+一般的にtkinterモジュールは名前が長いため、tkという名前でインポートすることが多いです。<br />これ以降もtkinterをtkとして扱います。<br /><br />また、メインとなる部分は「root」変数に代入することが多いです。
+<h2>tkinterの構造</h2>
+tkinterでデスクトップ上に配置する部品は階層構造をとります。
+<img src="../pics/階層.png" alt="tkinter 階層" />
+<table>
+	<tbody>
+		<tr>
+			<th>root</th>
+			<td>最も上位に位置するtkinterの部品です。<br />名前はなんでもoK!ですが、ここではrootと呼ぶことにします。</td>
+		</tr>
+		<tr>
+			<th>Frame</th>
+			<td>ボタンやラベル・エントリーなどの下位の部品(ウィジェット)をまとめるために使用されます。<br />また、Frameは管理可能性の向上のために入れ子にすることもあります。<br />Frame自体はデザイン上は影響を持ちません。</td>
+		</tr>
+		<tr>
+			<th>ウィジェット</th>
+			<td>ボタンやラベル・エントリーなどのguiアプリケーションを構成する要素のことを指します。<br />正確にはFrameもウィジェットとして認識されますが、ここでウィジェットと言えばFrameを除いたものを指すこととします。</td>
+		</tr>
+	</tbody>
+</table>
+<h2>名前付き引数</h2>
+名前付き引数はpython入門では説明しませんでした。<br />関数に複数の引数を渡す際にはその順番で引数を指定しました。<br /><br />名前付き引数はその順番ではなく、その名前で引数を指定します。<br />tkinterモジュールでは引数が大量に存在し、かつそのすべてを使用するわけではないため順番ではなく名前で引数を指定します。<br /><br />名前で引数は以下のように記述します。
+<code class="python">
+	関数名(名前 = 値)
+</code>
+複数の名前付き引数を使用する際には通常の引数と同様に「,(カンマ)」で区切って表します。
+<code class="python">
+	関数名(名前1 = 値1, 名前2 = 値2, 名前3 = 値3)
+</code>
+<h2>root</h2>
+tkinterアプリの基盤となる要素です。<br />rootに関しては主に以下の設定をします。
+<code class="python">
+	root = tk.Tk()
+	root.title("タイトル")
+	root.geometry("横幅x縦幅+横の表示位置+縦の表示位置")
+	root.minsize(width = 最小横幅サイズ, height = 最小縦幅サイズ)
+	root.maxsize(width = 最大横幅サイズ, height = 最大縦幅サイズ)
+	root.configure(bg = "背景色")
+
+	root.mainloop()
+</code>
+<h3>titleメソッド</h3>
+rootオブジェクト対してtitleメソッドを実行することで左上に表示されるタイトル設定することができます。<br />タイトルはtitleメソッドの引数に指定します。
+<code class="python">
+	root.title("タイトル")
+</code>
+<h3>geometryメソッド</h3>
+アプリの画面サイズと表示位置を指定します。<br />表示位置を省略して以下のように記述することもできます。
+<code class="python">
+	root.geometry("横幅x縦幅")
+</code>
+横幅と縦幅の間の文字は「x(エックス)」です。<br /><br />また、単位はピクセルです。
+<h3>mainloopメソッド</h3>
+guiアプリケーションはアプリが起動している最中は常に動作し続けます。<br />他のプログラムと異なり一番最後の行まで到達したら終わりではありません。<br />ユーザが閉じるボタンを押すまでは動作し続ける必要があります。<br /><br />これを実現するためのメソッドです。<br />無限ループっぽいですが、全ての処理をループさせるわけではありません。<br />アプリ起動中にユーザの操作(クリック・タイプ・etc...)などのアクションを待ち続けるために使用します。
+<h3>minsizeメソッド</h3>
+rootオブジェクトの最小サイズを指定することができます。<br />以下のように記述します。
+<code class="python">
+	root.minsize(width = 横幅, height = 縦幅)
+</code>
+<img src="../pics/root-minsize.gif" alt="tkinter root.minsize()" />
+<h3>maxsizeメソッド</h3>
+rootオブジェクトの最大サイズを指定することができます。<br />以下のように記述します。
+<code class="python">
+	root.maxsize(width = 横幅, height = 縦幅)
+</code>
+<img src="../pics/root-maxsize.gif" alt="tkinter root.maxsize()" />
+<h3>configure</h3>
+背景色やメニューバーを設置するために使用します。<br />背景色は以下のように記述します。
+<code class="python">
+	root.configure(bg = "背景色")
+</code>
+「#FF0000」や「#000」などの16進数表記と「red」「blue」などの色名指定が可能です。
+<p>メニューバーの配置については後ほど説明します。</p>
+<h2>Frame</h2>
+ウィジェットのコンテナとして機能します。<br />以下のように作成します。
+<code class="python">
+	frame = ttk.Frame(rootオブジェクト)
+</code>
+第一引数にはFrameを配置するrootオブジェクトを指定します。<br />第二引数以下には以下の要素を指定します。
+<div class="scroll-600w">
+	<table>
+		<tbody>
+			<tr>
+				<th>width</th>
+				<td>横幅を指定します。</td>
+			</tr>
+			<tr>
+				<th>height</th>
+				<td>縦幅を指定します。</td>
+			</tr>
+			<tr>
+				<th>borderwidth</th>
+				<td>枠の長さを指定します。</td>
+			</tr>
+			<tr>
+				<th>relief</th>
+				<td>枠のスタイルを指定します。</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<h3>relief</h3>
+枠のスタイルとしては以下のスタイルを設定可能です。
+<ul>
+	<li>flat(デフォルト)</li>
+	<li>groove</li>
+	<li>raised</li>
+	<li>ridge</li>
+	<li>solid</li>
+	<li>sunken</li>
+</ul>
+違いは実際に見た方が早いです♪
+<img src="../pics/relief.png" alt="relief" />
+<div class="hidden">
+	<code class="python">
+		from tkinter import *
+		from tkinter import ttk
+
+	
+		root = Tk()
+		root.title("koko's lesson")
+		root.geometry("500x300+100+100")
+		root.configure(bg="white")
+
+		frame1 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15)
+		frame1.place(x = 10, y = 10)
+		frame1.propagate(0)
+
+		frame2 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15, relief = "groove")
+		frame2.place(x = 120, y = 10)
+		frame2.propagate(0)
+
+		frame3 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15, relief = "raised")
+		frame3.place(x = 230, y = 10)
+		frame3.propagate(0)
+
+		frame4 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15, relief = "ridge")
+		frame4.place(x = 10, y = 80)
+		frame4.propagate(0)
+
+		frame5 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15, relief = "solid")
+		frame5.place(x = 120, y = 80)
+		frame5.propagate(0)
+
+		frame6 = ttk.Frame(root, width = 100, height = 50, borderwidth = 15, relief = "sunken")
+		frame6.place(x = 230, y = 80)
+		frame6.propagate(0)
+
+		label1 = ttk.Label(
+			frame1,
+			text='flat',
+			foreground='black',
+		)
+		label1.pack()
+
+		label2 = ttk.Label(
+			frame2,
+			text='groove',
+			foreground='black',
+		)
+		label2.pack()
+
+		label3 = ttk.Label(
+			frame3,
+			text='raised',
+			foreground='black',
+		)
+		label3.pack()
+
+		label4 = ttk.Label(
+			frame4,
+			text='ridge',
+			foreground='black',
+		)
+		label4.pack()
+
+		label5 = ttk.Label(
+			frame5,
+			text='solid',
+			foreground='black',
+		)
+		label5.pack()
+
+		label6 = ttk.Label(
+			frame6,
+			text='sunken',
+			foreground='black',
+		)
+		label6.pack()
+
+		root.mainloop()
+	</code>
+</div>
+<h3>配置メソッド</h3>
+先ほどのコードでは実際にFrameオブジェクトを作成して変数に代入しただけです。<br />実際に画面上に配置していません。<br /><br />ウィジェットを実際に配置するにはplace・pack・gridメソッドのいずれかを使用する必要があります。<br />これら配置メソッドに関しては後ほど詳しく説明するので、とりあえずここではもっとも簡単に配置することができるpackメソッドを使用しましょう♪
+<code class="python">
+	frame.pack()
+</code>
+これで、実際に画面にFrameオブジェクトが配置されます。
+<?php footer(); ?>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="http-req.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\http\pics\http-req.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.0608"
+         inkscape:cx="329"
+         inkscape:cy="266.31"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="34.662"
+             y="54.659"
+             id="text1439"><tspan
+                 sodipodi:role="line"
+                 id="tspan1437"
+                 x="34.662"
+                 y="54.659">① リクエストライン</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="34.662"
+             y="98.65"
+             id="text1641"><tspan
+                 sodipodi:role="line"
+                 id="tspan1639"
+                 x="34.662"
+                 y="98.65">② ヘッダ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="34.662"
+             y="301.3"
+             id="text2503"><tspan
+                 sodipodi:role="line"
+                 id="tspan2501"
+                 x="34.662"
+                 y="301.3">③ ボディ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="122.65"
+             y="135.98"
+             id="text6049"><tspan
+                 sodipodi:role="line"
+                 id="tspan6047"
+                 x="122.65"
+                 y="135.98">Request</tspan><tspan
+                 sodipodi:role="line"
+                 x="122.65"
+                 y="165.98"
+                 id="tspan6051">General</tspan><tspan
+                 sodipodi:role="line"
+                 x="122.65"
+                 y="195.98"
+                 id="tspan6053">Entity</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="122.65"
+             y="341.96"
+             id="text8133"><tspan
+                 sodipodi:role="line"
+                 id="tspan8131"
+                 x="122.65"
+                 y="341.96">GETメソッドの場合は無し</tspan><tspan
+                 sodipodi:role="line"
+                 x="122.65"
+                 y="374.76"
+                 id="tspan8135">データはパーセントエンコードされる</tspan></text>
+        <rect
+             style="opacity:1;fill:none;stroke:blue;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect10931"
+             width="373.3"
+             height="33.937"
+             x="25.008"
+             y="226.24" />
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="115.44"
+             y="249.93"
+             id="text11889"><tspan
+                 sodipodi:role="line"
+                 id="tspan11887"
+                 x="115.44"
+                 y="249.93">CRLF (改行コード)</tspan></text>
+    </g>
+</svg>

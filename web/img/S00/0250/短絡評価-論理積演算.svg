@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="500"
+     viewBox="0 0 600 500"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="短絡評価-論理積演算.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vb中級\pics\短絡評価-論理積演算.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="118.65"
+         inkscape:cy="368.62"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid962" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1287"
+             x="-0.025078"
+             y="-0.0078869"
+             width="1.0502"
+             height="1.0158">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.89155"
+                 id="feGaussianBlur1289" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1807"
+             x="-0.011085"
+             y="-0.01308"
+             width="1.0222"
+             height="1.0262">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.39279"
+                 id="feGaussianBlur1809" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="mix-blend-mode:normal;fill:#ffc8c8;fill-opacity:1;stroke-linejoin:round;stroke-dasharray:1, 4;filter:url(#filter1807);stop-color:black"
+             id="rect1527"
+             width="85.046"
+             height="72.071"
+             x="457.94"
+             y="11.249"
+             ry="11.98" />
+        <rect
+             style="mix-blend-mode:normal;fill:#c8c8ff;fill-opacity:1;stroke-linejoin:round;stroke-dasharray:1, 4;filter:url(#filter1287);stop-color:black"
+             id="rect1169"
+             width="85.322"
+             height="271.3"
+             x="457.94"
+             y="117.32"
+             ry="10.665" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 4;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 203.31,21.333 v 363.957"
+             id="path858" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 4;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 409.28,21.331 v 363.959"
+             id="path858-0" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 79.33,124.66 -40,80 40,80"
+             id="path997" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 236.03,61.136 -40,45.764 40,45.76"
+             id="path997-9" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 234.78,251.54 -40,45.76 40,45.76"
+             id="path997-9-1" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="123.54"
+             y="113.32"
+             id="text1683"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681"
+                 x="123.54"
+                 y="113.32">真</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="299.29"
+             y="259.92"
+             id="text1683-5"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-7"
+                 x="299.29"
+                 y="259.92">真</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="487.93"
+             y="58.61"
+             id="text1683-5-6"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-7-5"
+                 x="487.93"
+                 y="58.61">真</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:red;fill-opacity:1"
+             x="299.29"
+             y="55.944"
+             id="text1683-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-2"
+                 x="299.29"
+                 y="55.944">真</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="123.98"
+             y="309.91"
+             id="text1683-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1"
+                 x="123.98"
+                 y="309.91">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="299.73"
+             y="362.01"
+             id="text1683-7-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1-2"
+                 x="299.73"
+                 y="362.01">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="488.37"
+             y="369.35"
+             id="text1683-7-2-6"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1-2-4"
+                 x="488.37"
+                 y="369.35">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="488.37"
+             y="265.88"
+             id="text1683-7-2-6-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1-2-4-8"
+                 x="488.37"
+                 y="265.88">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="488.37"
+             y="162.41"
+             id="text1683-7-2-6-0-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1-2-4-8-1"
+                 x="488.37"
+                 y="162.41">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="299.73"
+             y="158.04"
+             id="text1683-7-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan1681-1-5"
+                 x="299.73"
+                 y="158.04">偽</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="17.331"
+             y="37.328"
+             id="text4220"><tspan
+                 sodipodi:role="line"
+                 id="tspan4218"
+                 x="17.331"
+                 y="37.328">論理積演算</tspan></text>
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 376.94,44.661 h 66"
+             id="path4731" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 376.94,251.3 h 66"
+             id="path4731-3" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 376.94,354.62 h 66"
+             id="path4731-8" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 376.94,147.98 h 66"
+             id="path4731-31" />
+        <rect
+             style="fill:none;fill-opacity:1;stroke:#00b400;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:black"
+             id="rect1833"
+             width="482.71"
+             height="152.76"
+             x="89.529"
+             y="227.16"
+             ry="11.031" />
+        <rect
+             style="fill:#32ff32;stroke-width:0.965465;stroke-linejoin:round;stroke-dasharray:0.965465, 3.86186;stop-color:black;fill-opacity:0.8"
+             id="rect5681"
+             width="232.64"
+             height="81.99"
+             x="8.6655"
+             y="323.29"
+             ry="10.169" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="125.21"
+             y="441.42"
+             id="text2907"><tspan
+                 sodipodi:role="line"
+                 id="tspan2905"
+                 x="125.21"
+                 y="441.42">A</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="304.96"
+             y="441.42"
+             id="text3835"><tspan
+                 sodipodi:role="line"
+                 id="tspan3833"
+                 x="304.96"
+                 y="441.42">B</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="470.4"
+             y="442.55"
+             id="text6743"><tspan
+                 sodipodi:role="line"
+                 id="tspan6741"
+                 x="470.4"
+                 y="442.55">結果</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="18.664"
+             y="347.95"
+             id="text1517"><tspan
+                 sodipodi:role="line"
+                 x="18.664"
+                 y="347.95"
+                 id="tspan1519">「A」が偽だった場合は</tspan><tspan
+                 sodipodi:role="line"
+                 x="18.664"
+                 y="369.82"
+                 id="tspan1523">「B」の値がいずれであっても</tspan><tspan
+                 sodipodi:role="line"
+                 x="18.664"
+                 y="391.69"
+                 id="tspan1527">最終的な結果は「偽」になる。</tspan></text>
+    </g>
+</svg>

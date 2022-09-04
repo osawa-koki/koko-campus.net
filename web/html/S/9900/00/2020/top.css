@@ -1,0 +1,218 @@
+
+
+
+
+
+
+
+.login_as {
+	width: 400px;
+	border: 1px black dashed;
+	margin: 30px;
+}
+
+
+
+
+
+
+
+
+.paragraph {
+	margin-left: 10px;
+}
+
+h3 {
+	margin-left: 20px;
+}
+
+h5 {
+	margin-left: 30px;
+}
+
+
+.text {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+.ribbon9 {
+  display: inline-block;
+  position: relative;
+  height: 100px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  height:100px
+}
+.ribbon9:before {/*左側のリボン端*/
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 5px;
+  left: -75px;
+  z-index: -2;
+  border: 40px solid #56adf3;
+  border-left-color: transparent;/*山形に切り抜き*/
+}
+
+.ribbon9:after {/*右側のリボン端*/
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 5px;
+  right: -75px;
+  z-index: -2;
+  border: 40px solid #56adf3;
+  border-right-color: transparent;/*山形に切り抜き*/
+}
+
+.ribbon9 h3 {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 80px;
+  height:80px;
+  width:400px;
+  font-size: 35px;
+  color: #FFF;
+  background: #2196F3;/*真ん中の背景色*/
+}
+.ribbon9 h3:before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-right: solid 15px #397eb5;/*左の折り返し部分*/
+}
+.ribbon9 h3:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  right: 0;
+  border: none;
+  border-bottom: solid 10px transparent;
+  border-left: solid 15px #397eb5;/*右の折り返し部分*/
+}
+
+
+
+h1 {
+	text-align: center;
+}
+
+
+.hidden {
+	display: none;
+	margin-left: 20px;
+
+}
+
+
+.about {
+	text-align: center;
+}
+
+
+table {
+	width: 80%;
+	margin-left: 30px;
+}
+
+th {
+	width: 35%;
+}
+
+td {
+	width: 65%;
+}
+
+
+/* 出題範囲のelementtree処理 */
+h2 {
+	margin-left: 20px;
+}
+
+h4 {
+	margin-left: 120px;
+}
+
+h6 {
+	margin-left: 220px;
+	color: skyblue;
+}
+
+
+.str_sub1 {
+	border: 2px red solid;
+	margin-bottom: 20px;
+}
+
+.str_sub2 {
+	border: 1px deeppink solid;
+	width: 70%;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+.man_sub1 {
+	border: 2px blue solid;
+	margin-bottom: 20px;
+}
+
+.man_sub2 {
+	border: 1px skyblue solid;
+	width: 70%;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+
+.tec_sub1 {
+	border: 2px Lime solid;
+	margin-bottom: 20px;
+}
+
+.tec_sub2 {
+	border: 1px yellowgreen solid;
+	width: 70%;
+	margin-left: 10%;
+	margin-bottom: 15px;
+}
+
+.button_area {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.button {
+	border-radius: 50px 0;
+	display: block;
+	width: 300px;
+	height: 70px;
+	line-height: 70px;
+	margin: 0 auto;
+	font-size: 30px;
+	border: 1px black solid;
+	background: linear-gradient(70deg, yellow, pink);
+}
+
+
+
+.go_mypage {
+	text-align: center;
+	margin-bottom: 50px;
+}

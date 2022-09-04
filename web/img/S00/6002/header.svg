@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="header.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\http\pics\header.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.5002"
+         inkscape:cx="268.63"
+         inkscape:cy="238.97"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter19409-4"
+             x="-0.026571"
+             y="-0.2481"
+             width="1.0531"
+             height="1.4962">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.9259"
+                 id="feGaussianBlur19411-1" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter19409-4-3"
+             x="-0.026571"
+             y="-0.2481"
+             width="1.0531"
+             height="1.4962">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.9259"
+                 id="feGaussianBlur19411-1-8" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter19409-4-1"
+             x="-0.026571"
+             y="-0.2481"
+             width="1.0531"
+             height="1.4962">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.9259"
+                 id="feGaussianBlur19411-1-83" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.2;fill:blue;fill-opacity:1;stroke:none;stroke-linejoin:round;filter:url(#filter19409-4);stop-color:black"
+             id="rect19253-1"
+             width="535.26"
+             height="57.325"
+             x="19.331"
+             y="19.331"
+             transform="matrix(0.98971,0,0,1.3616,0.50049,-4.7045)" />
+        <rect
+             style="opacity:0.2;fill:#00b400;fill-opacity:1;stroke:none;stroke-linejoin:round;filter:url(#filter19409-4-1);stop-color:black"
+             id="rect19253-1-1"
+             width="535.26"
+             height="57.325"
+             x="19.676"
+             y="273.3"
+             transform="matrix(0.99742,0,0,1.736,-2.056,-196.89)" />
+        <rect
+             style="opacity:0.2;fill:red;fill-opacity:1;stroke:none;stroke-linejoin:round;filter:url(#filter19409-4-3);stop-color:black"
+             id="rect19253-1-5"
+             width="535.26"
+             height="57.325"
+             x="19.331"
+             y="76.656"
+             transform="matrix(0.99736,0,0,2.8827,-1.6958,-116.3)" />
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="37.994"
+             y="42.661"
+             id="text3529"><tspan
+                 sodipodi:role="line"
+                 id="tspan3527"
+                 x="37.994"
+                 y="42.661"
+                 style="fill:blue;fill-opacity:1">Cache-Control</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="67.661"
+                 style="fill:blue;fill-opacity:1"
+                 id="tspan1923">Connection</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="92.661"
+                 id="tspan3531"
+                 style="fill:blue;fill-opacity:1">Date</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="117.66"
+                 id="tspan3533"
+                 style="fill:red;fill-opacity:1">Accept</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="142.66"
+                 id="tspan3535"
+                 style="fill:red;fill-opacity:1">Accept-Charset</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="167.66"
+                 id="tspan3537"
+                 style="fill:red;fill-opacity:1">Accept-Language</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="192.66"
+                 id="tspan3543"
+                 style="fill:red;fill-opacity:1">Host</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="217.66"
+                 id="tspan3545"
+                 style="fill:red;fill-opacity:1">Set-Cookie</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="242.66"
+                 style="fill:red;fill-opacity:1"
+                 id="tspan2552">Referer</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="267.66"
+                 id="tspan3547"
+                 style="fill:red;fill-opacity:1">User-Agent</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="292.66"
+                 id="tspan3549"
+                 style="fill:#00b400;fill-opacity:1">Location</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="317.66"
+                 id="tspan3551"
+                 style="fill:#00b400;fill-opacity:1">Content-Type</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="342.66"
+                 id="tspan3553"
+                 style="fill:#00b400;fill-opacity:1">Expires</tspan><tspan
+                 sodipodi:role="line"
+                 x="37.994"
+                 y="367.66"
+                 id="tspan3555"
+                 style="fill:#00b400;fill-opacity:1">Last-Modified</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="251.97"
+             y="55.992"
+             id="text14559"><tspan
+                 sodipodi:role="line"
+                 id="tspan14557"
+                 x="251.97"
+                 y="55.992">共通ヘッダフィールド</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="248.45"
+             y="196.65"
+             id="text15553"><tspan
+                 sodipodi:role="line"
+                 id="tspan15551"
+                 x="248.45"
+                 y="196.65">リクエストヘッダフィールド</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="248.53"
+             y="339.29"
+             id="text17399"><tspan
+                 sodipodi:role="line"
+                 id="tspan17397"
+                 x="248.53"
+                 y="339.29">レスポンスヘッダフィールド</tspan></text>
+    </g>
+</svg>

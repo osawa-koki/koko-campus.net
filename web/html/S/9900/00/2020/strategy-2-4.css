@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+
+
+#valley_of_death th {
+	border: 1px black solid;
+}
+#valley_of_death td {
+	text-align: left;
+}
+#valley_of_death .arrow {
+	text-align: center;
+}
+
+#googlemap {
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+#color {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+#color table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+#color table input {
+  width: 100%;
+}
+
+#color table th {
+  padding: 3px 5px;
+}
+
+#color table .red {
+  background-color: red;
+}
+
+#color table .green {
+  background-color: green;
+}
+
+#color table .blue {
+  background-color: blue;
+}
+
+#color table .center {
+  text-align: center;
+}
+/*# sourceMappingURL=part.css.map */

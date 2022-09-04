@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="300"
+     height="70"
+     viewBox="0 0 300 70"
+     version="1.1"
+     id="svg5"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     sodipodi:docname="new!.svg"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko\pics\cherry-bg.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         inkscape:zoom="1.1"
+         inkscape:cx="25.454545"
+         inkscape:cy="212.27273"
+         inkscape:window-width="1920"
+         inkscape:window-height="1027"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1"
+         units="px"
+         viewbox-width="1200">
+        <inkscape:grid
+             type="xygrid"
+             id="grid824" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:1;fill:#7dffff;fill-opacity:0.502347;stroke:#000200;stroke-width:1.102;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="new-bg"
+             width="300"
+             height="70"
+             x="0"
+             y="0"
+             rx="5" />
+        <text
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;line-height:1.25;font-family:'UD Digi Kyokasho NP-B';-inkscape-font-specification:'UD Digi Kyokasho NP-B, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect2873)"
+             transform="rotate(-19.744806,132.71505,-26.080782)"
+             xml:space="preserve"
+             id="text36"><tspan
+                 x="0"
+                 y="0"
+                 id="tspan904">New!</tspan></text>
+        <circle
+             style="fill:#ffff00;fill-opacity:0.988263;stroke-width:0.602;stroke:#000200;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             cx="150"
+             cy="35"
+             r="10"
+             class="bg-img-circle0"
+             id="circle8" />
+        <circle
+             style="fill:#ffff00;fill-opacity:0.988263;stroke-width:0.602;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             cx="200"
+             cy="35"
+             r="10"
+             class="bg-img-circle1"
+             id="circle10" />
+        <circle
+             style="fill:#ffff00;fill-opacity:0.988263;stroke-width:0.702;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             cx="250"
+             cy="35"
+             r="10"
+             class="bg-img-circle2"
+             id="circle12" />
+    </g>
+</svg>

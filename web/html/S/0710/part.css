@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.padding-rl {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+.border-separator {
+	border-bottom: 1px black dashed;
+	margin-bottom: 10px;
+}
+.sublimetext {
+	font-family: "sublimetext";
+}
+.kyokasho {
+	font-weight: "kyokasho";
+}
+#delete-yank-put {
+	border-collapse: collapse;
+}
+#delete-yank-put thead td {
+	background-color: #FFFFCC;
+}
+#delete-yank-put td {
+	padding: 3px 10px;
+}
+.xtable-padding td {
+	padding: 3px 1rem;
+}
+
+
+
+
+
+
+

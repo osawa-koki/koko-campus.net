@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="300"
+     viewBox="0 0 600 300"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="イベント処理.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vba(excel)\pics\イベント処理.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="251.3004283"
+         inkscape:cy="348.6210186"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="22.6636982"
+             y="77.32321167"
+             width="689.243103"
+             height="250.6338501"
+             id="rect2961" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text2959"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2961)"
+             transform="translate(-9.332111398,-24.66788861)"><tspan
+                 x="22.6640625"
+                 y="100.9472656"
+                 id="tspan903"><tspan
+     style="fill:#ff0000"
+     id="tspan885">Private</tspan> <tspan
+     style="fill:#0000ff"
+     id="tspan887">Sub</tspan> <tspan
+     style="fill:#008300"
+     id="tspan889">フォ</tspan><tspan
+     style="fill:#008300"
+     id="tspan891">ー</tspan><tspan
+     style="fill:#008300"
+     id="tspan893">ムオブジェクト</tspan><tspan
+     style="fill:#008300"
+     id="tspan895">名</tspan><tspan
+     style="fill:#008300"
+     id="tspan897">_</tspan><tspan
+     style="fill:#008300"
+     id="tspan899">イベント</tspan><tspan
+     style="fill:#008300"
+     id="tspan901">名</tspan>()
+</tspan><tspan
+                 x="22.6640625"
+                 y="130.9472656"
+                 id="tspan905">
+</tspan><tspan
+                 x="22.6640625"
+                 y="160.9472656"
+                 id="tspan907">
+</tspan><tspan
+                 x="22.6640625"
+                 y="193.7480469"
+                 id="tspan925">    <tspan
+     style="fill:#8c8d8f"
+     id="tspan909">'</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan911">イベント</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan913">が</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan915">発火</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan917">された</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan919">場合</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan921">の</tspan><tspan
+     style="fill:#8c8d8f"
+     id="tspan923">処理</tspan>
+</tspan><tspan
+                 x="22.6640625"
+                 y="223.7480469"
+                 id="tspan927">
+</tspan><tspan
+                 x="22.6640625"
+                 y="253.7480469"
+                 id="tspan929">
+</tspan><tspan
+                 x="22.6640625"
+                 y="283.7480469"
+                 id="tspan933"><tspan
+                     style="fill:#0000ff"
+                     id="tspan931">End Sub</tspan></tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="87.98847961"
+             y="103.9863815"
+             id="text7401"><tspan
+                 sodipodi:role="line"
+                 id="tspan7399"
+                 x="87.98847961"
+                 y="103.9863815" /><tspan
+                 sodipodi:role="line"
+                 id="tspan7403"
+                 x="87.98847961"
+                 y="136.4863892" /></text>
+    </g>
+</svg>
