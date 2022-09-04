@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="600"
+     viewBox="0 0 600 600"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="法人の分類.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\npo会計\pics\法人の分類.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="381.2834084"
+         inkscape:cy="152.6466793"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="367.9518127"
+             y="378.6170654"
+             width="189.3085632"
+             height="179.9764404"
+             id="rect23857" />
+        <rect
+             x="403.947113"
+             y="306.6265259"
+             width="189.308548"
+             height="86.65531921"
+             id="rect21142" />
+        <rect
+             x="115.9848099"
+             y="299.9607239"
+             width="185.3090668"
+             height="75.99005127"
+             id="rect16760" />
+        <rect
+             x="353.2870789"
+             y="151.9801025"
+             width="178.64328"
+             height="57.32582855"
+             id="rect10709" />
+        <rect
+             x="66.6579361"
+             y="154.6464233"
+             width="217.3048859"
+             height="79.98952484"
+             id="rect7623" />
+        <rect
+             x="169.3111572"
+             y="30.66265106"
+             width="203.9732971"
+             height="71.99057007"
+             id="rect1637" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text1635"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect1637)"
+             transform="translate(78.65636743,-5.332635083)"><tspan
+                 x="169.3105469"
+                 y="66.09960938"
+                 id="tspan26300">法人</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 283.9628181,73.32373239 v 38.66160431"
+             id="path5337" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 142.6479884,145.9806235 v -33.3289692 h 261.2991191 v 30.6626517"
+             id="path5339" />
+        <text
+             xml:space="preserve"
+             id="text7621"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect7623)"
+             transform="translate(7.998952621)"><tspan
+                 x="66.65820312"
+                 y="180.2402344"
+                 id="tspan26302"> 営利法人
+</tspan><tspan
+                 x="66.65820312"
+                 y="215.7744141"
+                 id="tspan26304">(株式会社)</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text10707"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect10709)"
+             transform="translate(-14.66474648,3.999476312)"><tspan
+                 x="353.2871094"
+                 y="177.5742188"
+                 id="tspan26306">非営利法人</tspan></text>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1.18903px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 402.6139487,202.3069745 v 54.6595095"
+             id="path5337-0" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 209.2991191,288.9638656 v -33.3289692 h 261.2991191 v 30.6626517"
+             id="path5339-3" />
+        <text
+             xml:space="preserve"
+             id="text16758"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect16760)"
+             transform="translate(25.33001664,-3.999476313)"><tspan
+                 x="115.984375"
+                 y="325.5546875"
+                 id="tspan26308">パブリック
+</tspan><tspan
+                 x="115.984375"
+                 y="361.0888672"
+                 id="tspan26310">セクター</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text21140"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect21142)"
+             transform="translate(-9.332111399,-10.66527017)"><tspan
+                 x="403.9472656"
+                 y="332.2207031"
+                 id="tspan26312">プライベート
+</tspan><tspan
+                 x="403.9472656"
+                 y="367.7548828"
+                 id="tspan26314">セクター</tspan></text>
+        <rect
+             style="opacity:0.875248;fill:none;stroke:#000000;stroke-width:0.831698;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:markers stroke fill"
+             id="rect21891"
+             width="174.8121033"
+             height="134.817337"
+             x="383.1987305"
+             y="390.5313721" />
+        <text
+             xml:space="preserve"
+             id="text23855"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect23857)"
+             transform="translate(41.99423944,27.99633419)"><tspan
+                 x="367.9511719"
+                 y="400.2734375"
+                 id="tspan26316">・学校法人
+</tspan><tspan
+                 x="367.9511719"
+                 y="430.3408203"
+                 id="tspan26318">・医療法人
+</tspan><tspan
+                 x="367.9511719"
+                 y="460.4082031"
+                 id="tspan26320">・NPO法人</tspan></text>
+    </g>
+</svg>

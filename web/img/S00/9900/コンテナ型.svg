@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="コンテナ型.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\コンテナ型.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="13.332"
+         inkscape:cy="321.96"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="fill:white;fill-opacity:1;stroke:blue;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect843"
+             width="521.27"
+             height="49.327"
+             x="39.994"
+             y="279.96" />
+        <rect
+             style="fill:white;fill-opacity:1;stroke:red;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect843-2"
+             width="521.27"
+             height="49.327"
+             x="39.994"
+             y="216.63" />
+        <rect
+             style="fill:white;fill-opacity:1;stroke:#009600;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect843-2-5"
+             width="273.84"
+             height="49.869"
+             x="70.385"
+             y="149.03" />
+        <rect
+             style="fill:white;fill-opacity:1;stroke:#009600;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect843-2-5-9"
+             width="273.84"
+             height="49.869"
+             x="70.385"
+             y="82.71" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="217.3"
+             y="314.96"
+             id="text5359"><tspan
+                 sodipodi:role="line"
+                 id="tspan5357"
+                 x="217.3"
+                 y="314.96">ハードウェア</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="172.74"
+             y="251.41"
+             id="text6287"><tspan
+                 sodipodi:role="line"
+                 id="tspan6285"
+                 x="172.74"
+                 y="251.41">ホストOS(カーネル)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="20.662"
+             y="38.662"
+             id="text8308"><tspan
+                 sodipodi:role="line"
+                 id="tspan8306"
+                 x="20.662"
+                 y="38.662">★(コンテナ型)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="158.55"
+             y="183.01"
+             id="text10680"><tspan
+                 sodipodi:role="line"
+                 id="tspan10678"
+                 x="158.55"
+                 y="183.01">コンテナ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="110.93"
+             y="116.93"
+             id="text14708"><tspan
+                 sodipodi:role="line"
+                 id="tspan14706"
+                 x="110.93"
+                 y="116.93">アプリケーション</tspan></text>
+        <path
+             id="rect17794"
+             style="fill:none;stroke:#009600;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stop-color:black"
+             d="m 69.99,66.18 h 272.63 c 9.23,0 16.67,5.11 16.67,11.45 v 119.55 c 0,6.34 -7.44,11.45 -16.67,11.45 h -272.63 c -9.232,0 -16.664,-5.11 -16.664,-11.45 v -119.55 c 0,-6.34 7.432,-11.45 16.664,-11.45 z" />
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#009600;fill-opacity:1"
+             x="371.28"
+             y="163.97"
+             id="text19242"><tspan
+                 sodipodi:role="line"
+                 id="tspan19240"
+                 x="371.28"
+                 y="163.97">仮想マシン</tspan></text>
+    </g>
+</svg>

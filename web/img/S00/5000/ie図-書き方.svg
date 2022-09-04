@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ie図-書き方.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\データベース理論\pics\ie図-書き方.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.0608"
+         inkscape:cx="108.41"
+         inkscape:cy="129.62"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1902"
+             x="-0.12182"
+             y="-0.054176"
+             width="1.2436"
+             height="1.1084">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.5219"
+                 id="feGaussianBlur1904" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter1902-8"
+             x="-0.12182"
+             y="-0.054176"
+             width="1.2436"
+             height="1.1084">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.5219"
+                 id="feGaussianBlur1904-0" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.25;fill:blue;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter1902);stop-color:black"
+             id="rect1790"
+             width="89.084"
+             height="200.32"
+             x="254.88"
+             y="59.16"
+             ry="20.739" />
+        <rect
+             style="opacity:0.25;fill:lime;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter1902-8);stop-color:black"
+             id="rect1790-2"
+             width="89.084"
+             height="200.32"
+             x="129.27"
+             y="57.977"
+             ry="20.739" />
+        <rect
+             style="opacity:0.8;fill:none;stroke:black;stroke-width:0.80376;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect847"
+             width="120.19"
+             height="147.51"
+             x="379.84"
+             y="77.89" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 379.28,151.97 h -359.957"
+             id="path1160" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 325.28,91.987 -46.66,20.663 45.76,20.24"
+             id="path1275"
+             sodipodi:nodetypes="ccc" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 278.62,112.65 h 45.79"
+             id="path1443" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 301.2,176.87 v 40.3"
+             id="path1560" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 173.93,175.23 v 40.3"
+             id="path1560-2" />
+        <ellipse
+             style="opacity:0.8;fill:none;stroke:black;stroke-width:0.871531;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="path1686"
+             cx="174.23"
+             cy="111.36"
+             rx="16.739"
+             ry="17.151" />
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="254.13"
+             y="369.06"
+             id="text2950"><tspan
+                 sodipodi:role="line"
+                 id="tspan2948"
+                 x="254.13"
+                 y="369.06">以上 or Just</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#00af00;fill-opacity:1"
+             x="97.54"
+             y="369.18"
+             id="text6032"><tspan
+                 sodipodi:role="line"
+                 id="tspan6030"
+                 x="97.54"
+                 y="369.18">「0 OK!」or「0 NG!」</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="280.31"
+             y="42.421"
+             id="text10323"><tspan
+                 sodipodi:role="line"
+                 id="tspan10321"
+                 x="280.31"
+                 y="42.421">以上</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:blue;fill-opacity:1"
+             x="278.07"
+             y="288.95"
+             id="text11803"><tspan
+                 sodipodi:role="line"
+                 id="tspan11801"
+                 x="278.07"
+                 y="288.95">Just</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#00b100;fill-opacity:1"
+             x="123.71"
+             y="43.835"
+             id="text13427"><tspan
+                 sodipodi:role="line"
+                 id="tspan13425"
+                 x="123.71"
+                 y="43.835">「0 OK!」</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:22px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#00b800;fill-opacity:1"
+             x="123.71"
+             y="289.88"
+             id="text19177"><tspan
+                 sodipodi:role="line"
+                 id="tspan19175"
+                 x="123.71"
+                 y="289.88">「0 NG!」</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="411.72"
+             y="161.71"
+             id="text20836"><tspan
+                 sodipodi:role="line"
+                 id="tspan20834"
+                 x="411.72"
+                 y="161.71">実体</tspan></text>
+    </g>
+</svg>

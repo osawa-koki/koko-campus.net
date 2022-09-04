@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="500"
+     height="300"
+     viewBox="0 0 500 300"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="企業実体の公準.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\財務会計総論\pics\企業実体の公準.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.500196408"
+         inkscape:cx="303.2936205"
+         inkscape:cy="216.3050106"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid4199" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:'UD Digi Kyokasho N-R';-inkscape-font-specification:'UD Digi Kyokasho N-R, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+             x="113.9850769"
+             y="152.646698"
+             id="text1373"><tspan
+                 sodipodi:role="line"
+                 id="tspan1371"
+                 x="113.9850769"
+                 y="152.646698">企業</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:36px;line-height:1.25;font-family:'UD Digi Kyokasho N-R';-inkscape-font-specification:'UD Digi Kyokasho N-R, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+             x="350.2644653"
+             y="149.7195129"
+             id="text1373-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan1371-7"
+                 x="350.2644653"
+                 y="149.7195129">株主</tspan></text>
+        <g
+             id="g4164"
+             transform="matrix(0.8038602835,-0.816049451,0.816049451,0.8038602835,-230.150592,80.45621937)">
+            <rect
+                 style="fill:#000000;fill-opacity:1;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect3912"
+                 width="105.3195419"
+                 height="16.66448402"
+                 x="47.99031067"
+                 y="263.2988586"
+                 ry="8.332242012" />
+            <circle
+                 style="fill:none;fill-opacity:0.371486;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 id="path3936"
+                 cx="196.6409149"
+                 cy="271.9638672"
+                 r="47.32713699" />
+        </g>
+        <path
+             style="fill:none;stroke:#000000;stroke-width:4.953;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 268.3217686,56.83112947 21.792414,21.792414 -21.792414,21.79241403 21.792414,21.792414 -21.792414,21.792414 21.792414,21.792414 -21.792414,21.7924141 21.792414,21.792414 -21.792414,21.792414"
+             id="path4201" />
+    </g>
+</svg>

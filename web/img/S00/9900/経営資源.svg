@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="経営資源.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\経営資源.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="393.28"
+         inkscape:cy="348.62"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:48px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;opacity:1"
+             x="205.3"
+             y="211.3"
+             id="text3411"><tspan
+                 sodipodi:role="line"
+                 id="tspan3409"
+                 x="205.3"
+                 y="211.3">経営資源</tspan></text>
+        <ellipse
+             style="opacity:1;fill:#0000ff;fill-opacity:0.12441;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill;stop-color:#000000"
+             id="path5385"
+             cx="167.31"
+             cy="111.32"
+             rx="129.98"
+             ry="80.656" />
+        <ellipse
+             style="opacity:1;fill:#00ff00;fill-opacity:0.12441;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill;stop-color:#000000"
+             id="path5385-8"
+             cx="161.31"
+             cy="282.63"
+             rx="129.98"
+             ry="80.656" />
+        <ellipse
+             style="opacity:1;fill:#ffff00;fill-opacity:0.28638;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill;stop-color:#000000"
+             id="path5385-86"
+             cx="443.94"
+             cy="106.66"
+             rx="129.98"
+             ry="80.656" />
+        <ellipse
+             style="opacity:1;fill:#ff0000;fill-opacity:0.12441;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:markers stroke fill;stop-color:#000000"
+             id="path5385-6"
+             cx="439.94"
+             cy="278.63"
+             rx="129.98"
+             ry="80.656" />
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="129.83"
+             y="124.12"
+             id="text8335"><tspan
+                 sodipodi:role="line"
+                 id="tspan8333"
+                 x="129.83"
+                 y="124.12">ヒト</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="411.04"
+             y="119.6"
+             id="text8999"><tspan
+                 sodipodi:role="line"
+                 id="tspan8997"
+                 x="411.04"
+                 y="119.6">モノ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="124.54"
+             y="295.85"
+             id="text9773"><tspan
+                 sodipodi:role="line"
+                 id="tspan9771"
+                 x="124.54"
+                 y="295.85">カネ</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="403.94"
+             y="291.64"
+             id="text11031"><tspan
+                 sodipodi:role="line"
+                 id="tspan11029"
+                 x="403.94"
+                 y="291.64">情報</tspan></text>
+    </g>
+</svg>

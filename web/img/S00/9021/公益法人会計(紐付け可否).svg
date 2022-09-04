@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="公益法人会計(紐付け可否).svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\npo会計\pics\公益法人会計(紐付け可否).png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.060799053"
+         inkscape:cx="137.6320987"
+         inkscape:cy="205.0341197"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="33.32896927"
+             y="54.6595096"
+             width="135.9821946"
+             height="55.99266836"
+             id="rect2169" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g10943"
+             transform="translate(-44,3.918054267)">
+            <text
+                 xml:space="preserve"
+                 id="text2167"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2169)"
+                 transform="translate(76.98944529,21.33054033)"><tspan
+                     x="33.328125"
+                     y="80.25390625"
+                     id="tspan879">基本資産</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="110.2667923"
+                 y="202.746933"
+                 id="text3957"><tspan
+                     sodipodi:role="line"
+                     id="tspan3955"
+                     x="110.2667923"
+                     y="202.746933">特定資産</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="70.6574173"
+                 y="303.9602051"
+                 id="text5281"><tspan
+                     sodipodi:role="line"
+                     id="tspan5279"
+                     x="70.6574173"
+                     y="303.9602051">その他固定資産</tspan></text>
+        </g>
+        <g
+             id="g10951"
+             transform="translate(22)">
+            <text
+                 xml:space="preserve"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="450.4621277"
+                 y="106.6527023"
+                 id="text6077"><tspan
+                     sodipodi:role="line"
+                     id="tspan6075"
+                     x="450.4621277"
+                     y="106.6527023">負債</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="398.3605652"
+                 y="306.6264954"
+                 id="text6807"><tspan
+                     sodipodi:role="line"
+                     id="tspan6805"
+                     x="398.3605652"
+                     y="306.6264954">一般正味資産</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="398.6144714"
+                 y="206.6903687"
+                 id="text7669"><tspan
+                     sodipodi:role="line"
+                     id="tspan7667"
+                     x="398.6144714"
+                     y="206.6903687">指定正味資産</tspan></text>
+        </g>
+        <g
+             id="g11072">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 451.9408233,99.98690781 h -257.2996428"
+                 id="path10986" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 215.0551747,79.73955914 -20.4973162,20.49731616 21.7888137,21.7888137"
+                 id="path10988" />
+        </g>
+        <g
+             id="g11072-9"
+             transform="rotate(-20.61563533,718.0570575,72.93202764)">
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 372.7552322,99.98690781 h -178.1140517"
+                 id="path10986-8"
+                 sodipodi:nodetypes="cc" />
+            <path
+                 style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 215.0551747,79.73955914 -20.4973162,20.49731616 21.7888137,21.7888137"
+                 id="path10988-5" />
+        </g>
+        <g
+             id="g11685"
+             transform="matrix(0.4363644084,-0.4363644084,0.4363644084,0.4363644084,341.8711994,-13.19397987)">
+            <rect
+                 style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect11227"
+                 width="23.56714058"
+                 height="82.95633698"
+                 x="-164.027298"
+                 y="64.10262299" />
+            <rect
+                 style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect11227-4"
+                 width="23.56714058"
+                 height="82.95633698"
+                 x="94.73989868"
+                 y="111.2369003"
+                 transform="rotate(90)" />
+        </g>
+        <g
+             id="g11685-7"
+             transform="matrix(0.4363644084,-0.4363644084,0.4363644084,0.4363644084,353.0272268,133.2269861)">
+            <rect
+                 style="opacity:1;fill:#ff0000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect11227-49"
+                 width="23.56714058"
+                 height="82.95633698"
+                 x="-164.027298"
+                 y="64.10262299" />
+            <rect
+                 style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 id="rect11227-4-5"
+                 width="23.56714058"
+                 height="82.95633698"
+                 x="94.73989868"
+                 y="111.2369003"
+                 transform="rotate(90)" />
+        </g>
+    </g>
+</svg>
