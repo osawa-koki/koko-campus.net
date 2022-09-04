@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.to-sql_server {
+  background-image: url(../pics/sql-server.png);
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+table td.トランザクション分離レベル-安全 {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+table td.トランザクション分離レベル-危険 {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+/*# sourceMappingURL=part.css.map */

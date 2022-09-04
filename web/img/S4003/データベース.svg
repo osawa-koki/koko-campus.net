@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     sodipodi:docname="データベース.svg"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\sql-server\pics\データベース.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="-35.995"
+         inkscape:cy="35.329"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="239.9685789"
+             y="292.6283504"
+             width="99.98690787"
+             height="46.660557"
+             id="rect34886" />
+        <rect
+             x="465.2724113"
+             y="96.65401094"
+             width="85.32216138"
+             height="44.66081885"
+             id="rect27994" />
+        <rect
+             x="337.9557486"
+             y="100.6534873"
+             width="87.98847892"
+             height="43.99423946"
+             id="rect22786" />
+        <rect
+             x="203.973292"
+             y="95.98743155"
+             width="93.32111401"
+             height="49.32687455"
+             id="rect19230" />
+        <rect
+             x="332.6231135"
+             y="200.6403951"
+             width="109.3190193"
+             height="38.66160437"
+             id="rect14426" />
+        <rect
+             x="39.32818376"
+             y="311.9591525"
+             width="87.32189954"
+             height="65.32477981"
+             id="rect8908" />
+        <rect
+             x="137.3153535"
+             y="32.6623899"
+             width="351.9539157"
+             height="50.66003332"
+             id="rect4420" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             id="rect1141"
+             style="opacity:0.5656401945;fill:#00ad00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             d="m 48.5181418856507,385.94903980844 a 33.3289680480957,63.9916229248047 0 0 1 -0.525390625,-10.666015625 33.3289680480957,63.9916229248047 0 0 1 33.330078125,-63.990234375 33.3289680480957,63.9916229248047 0 0 1 33.3281250000003,63.990234375 33.3289680480957,63.9916229248047 0 0 1 -0.470703125,10.666015625 z" />
+        <rect
+             style="opacity:0.883436;fill:#77faff;fill-opacity:1;stroke-width:5.65901;stroke-linecap:round;stroke-linejoin:bevel;paint-order:markers stroke fill"
+             id="rect918"
+             width="389.9489441"
+             height="248.4922485"
+             x="185.975647"
+             y="22.6637001"
+             ry="42.4370079" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#e04141;fill-opacity:0.981177;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path17100-4"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="104.6529617"
+             sodipodi:cy="153.9798431"
+             sodipodi:r1="36.81304932"
+             sodipodi:r2="18.40652466"
+             sodipodi:arg1="0.5235987756"
+             sodipodi:arg2="1.570796327"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="-5.229288409"
+             transform="matrix(-0.1625944054,-0.1269798463,-0.6155024603,0.7881349639,571.9908399,77.13764132)"
+             inkscape:transform-center-x="-3.072791631"
+             d="m 136.5339976,172.3863678 -63.76207177,0 31.88103587,-55.219574 z" />
+        <rect
+             style="opacity:0.883436;fill:#ffff4c;fill-opacity:1;stroke-width:5.51284;stroke-linecap:round;stroke-linejoin:bevel;paint-order:markers stroke fill"
+             id="rect5720-4"
+             width="104.677948"
+             height="79.21574402"
+             x="456.7108459"
+             y="79.95000458"
+             ry="0.3023501039" />
+        <rect
+             style="opacity:0.883436;fill:#ffff4c;fill-opacity:1;stroke-width:5.51284;stroke-linecap:round;stroke-linejoin:bevel;paint-order:markers stroke fill"
+             id="rect5720-3"
+             width="104.677948"
+             height="79.21574402"
+             x="327.7495422"
+             y="79.95000458"
+             ry="0.3023501039" />
+        <text
+             xml:space="preserve"
+             id="text4418"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect4420)"
+             transform="matrix(0.9391972757,0,0,0.9391972757,193.7698662,2.633763866)"><tspan
+                 x="137.31"
+                 y="52.35"
+                 id="tspan891">データベース</tspan></text>
+        <rect
+             style="opacity:0.883436;fill:#ffff4c;fill-opacity:1;stroke-width:5.51284;stroke-linecap:round;stroke-linejoin:bevel;paint-order:markers stroke fill"
+             id="rect5720"
+             width="104.677948"
+             height="79.21574402"
+             x="198.7881622"
+             y="79.95000458"
+             ry="0.3023501039" />
+        <ellipse
+             style="opacity:0.883436;fill:#29ff4c;fill-opacity:1;stroke:#000000;stroke-width:2.09403;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path6167"
+             cx="383.2831421"
+             cy="220.6377869"
+             rx="89.84120941"
+             ry="22.51668549" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#e04141;fill-opacity:0.981177;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path11262"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="54.65950775"
+             sodipodi:cy="111.3187561"
+             sodipodi:r1="126.1878967"
+             sodipodi:r2="63.09394836"
+             sodipodi:arg1="0.5235987756"
+             sodipodi:arg2="1.570796327"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 163.941432,174.4127045 -218.56384847,0 109.28192422,-189.28184513 z"
+             inkscape:transform-center-y="-5.719058297"
+             transform="matrix(0.0315824184,0.0888004069,-0.9421847442,0.3350938791,314.1338054,247.8060112)"
+             inkscape:transform-center-x="-27.99738408" />
+        <text
+             xml:space="preserve"
+             id="text14424"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect14426)"
+             transform="matrix(1.736018645,0,0,1.736018645,-234.9349513,-147.5911762)"><tspan
+                 x="332.62"
+                 y="217.99"
+                 id="tspan893">DBMS</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#e04141;fill-opacity:0.981177;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path17100"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="104.6529617"
+             sodipodi:cy="153.9798431"
+             sodipodi:r1="36.81304932"
+             sodipodi:r2="18.40652466"
+             sodipodi:arg1="0.5235987756"
+             sodipodi:arg2="1.570796327"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 136.5339976,172.3863678 -63.76207177,0 31.88103587,-55.219574 z"
+             inkscape:transform-center-y="-5.229288409"
+             transform="matrix(0.1625944054,-0.1269798463,0.6155024603,0.7881349639,177.5306191,79.90731071)"
+             inkscape:transform-center-x="3.072791644" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#e04141;fill-opacity:0.981177;stroke:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="path17100-4-5"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="104.6529617"
+             sodipodi:cy="153.9798431"
+             sodipodi:r1="36.81304932"
+             sodipodi:r2="18.40652466"
+             sodipodi:arg1="0.5235987756"
+             sodipodi:arg2="1.570796327"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="-5.623307277"
+             transform="matrix(-0.2062797728,0.0018913188,0.0149224166,0.6142882394,400.1669723,88.22308539)"
+             inkscape:transform-center-x="-0.2746697652"
+             d="m 136.5339976,172.3863678 -63.76207177,0 31.88103587,-55.219574 z" />
+        <text
+             xml:space="preserve"
+             id="text19228"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect19230)"
+             transform="translate(15.99790526,0.6665793858)"><tspan
+                 x="203.97"
+                 y="111.74"
+                 id="tspan895">会員情報
+</tspan><tspan
+                 x="203.97"
+                 y="133.61"
+                 id="tspan897">デーブル</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text22784"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect22786)"
+             transform="translate(7.998952629,-2.666317543)"><tspan
+                 x="337.96"
+                 y="116.4"
+                 id="tspan899">科目
+</tspan><tspan
+                 x="337.96"
+                 y="138.27"
+                 id="tspan901">デーブル</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text27992"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect27994)"
+             transform="translate(12.66500833,2.666317543)"><tspan
+                 x="465.27"
+                 y="112.4"
+                 id="tspan903">システム
+</tspan><tspan
+                 x="465.27"
+                 y="134.27"
+                 id="tspan905">テーブル</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text34884"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect34886);fill:#da3636;fill-opacity:0.9623529315"><tspan
+                 x="239.97"
+                 y="313.45"
+                 id="tspan907">SQL</tspan></text>
+        <circle
+             style="opacity:0.56564;fill:#00ad00;stroke-width:1.82042;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path1572"
+             cx="83.1037673950195"
+             cy="285.181854248047"
+             r="19.1118793487549" />
+    </g>
+</svg>

@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+
+
+
+#from2to10_table th {
+	padding: 0 15px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+#from2to10_table td {
+	width: 100px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+
+#test {
+	max-width: 800px;
+	overflow-x: scroll;
+}
+
+
+
+
+#from2, #from10 {
+	height: 30px;
+	font-size: 20px;
+	margin-left: 100px;
+}
+
+
+
+#from2_button, #from10_button {
+	margin-left: 100px;
+	height: 30px;
+	font-size: 20px;
+	padding: 0 30px;
+	border: 1px black solid;
+	background-color: lightgrey;
+}
+
+
+
+
+#warn_from2 {
+	margin-left: 100px;
+}
+
+
+
+
+
+#from2_div {
+	max-width: 650px;
+	overflow-x: scroll;
+	margin-left: 25px;
+}
+
+
+#from2_table {
+	border-collapse: collapse;
+}
+
+
+
+#from2_table th {
+	min-width: 100px;
+	max-width: 100px;
+	padding: 0 10px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+#from2_table td {
+	min-width: 120px;
+	max-width: 120px;
+	padding: 0 10px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+#result_from2, #result_from10 {
+	font-size: 25px;
+	font-weight: bold;
+	margin-left: 100px;
+}
+
+
+
+
+#from10to2_div {
+	width: 600px;
+	margin-left: 25px;
+}
+
+.left_bottom_line {
+	display: inline-block;
+	border-left: 1px black solid;
+	border-bottom: 1px black solid;
+	width: 100px;
+	margin: 5px;
+	border-radius: -20px;
+	text-align: center;
+}
+
+
+.left_bottom_noline {
+	display: inline-block;
+	width: 100px;
+	margin: 5px;
+	text-align: center;
+	color: red;
+}
+
+
+
+
+
+
+
+
+#from10_div_base {
+	margin-left: 25px;
+	width: 600px;
+	max-height: 400px;
+	overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+
+
+.from10_cell_0 {
+	min-width: 100px;
+	max-width: 100px;
+	height: 30px;
+	text-align: right;
+}
+
+.from10_cell_1 {
+	min-width: 200px;
+	max-width: 100px;
+	height: 30px;
+	text-align: center;
+	border-left: 1px black solid;
+	border-bottom: 1px black solid;
+}
+
+.from10_cell_2 {
+	min-width: 50px;
+	max-width: 50px;
+	height: 30px;
+	text-align: center;
+	color: red;
+}
+.from10_cell_remainder {
+	min-width: 50px;
+	max-width: 50px;
+	height: 30px;
+	text-align: center;
+}
+.from10_cell_final {
+	min-width: 200px;
+	max-width: 100px;
+	height: 30px;
+	text-align: center;
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+#logical_operation_button_div {
+	display: flex;
+	margin-left: 25px;
+}
+
+
+
+
+.logical_operation_button {
+	width: 150px;
+	height: 50px;
+	text-align: center;
+}
+
+#logical_operation_button0 {
+	background-color: skyblue;
+}
+
+#logical_operation_button1 {
+	background-color: red;
+}
+
+
+#logical_operation_button2 {
+	background-color: blue;
+}
+
+#logical_operation_button3 {
+	background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

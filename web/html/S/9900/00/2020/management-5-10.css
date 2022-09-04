@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+
+
+
+#pert_div {
+	position: relative;
+	margin: 0 auto;
+	width: 650px;
+	height: 800px;
+	border: 1px black solid;
+}
+
+
+.connected_point_class {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 25px;
+	font-weight: bold;
+	border: 3px black solid;
+	border-radius: 50%;
+	background-color: white;
+	z-index: 1;
+}
+
+
+#connected_point0 {
+	top: 50px;
+	left: 310px;
+}
+
+#connected_point1 {
+	top: 200px;
+	left: 310px;
+}
+
+#connected_point2 {
+	top: 350px;
+	left: 210px;
+}
+
+#connected_point3 {
+	top: 350px;
+	left: 410px;
+}
+
+#connected_point4 {
+	top: 500px;
+	left: 310px;
+}
+
+#connected_point5 {
+	top: 650px;
+	left: 310px;
+}
+
+
+.arrow_before {
+	position: absolute;
+	width: 5px;
+	height: 110px;
+	background-color: skyblue;
+}
+
+.arrow_before::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 95px;
+    left: -18px;
+    border: 20px skyblue solid;
+    border-color: skyblue transparent transparent transparent;
+}
+
+
+
+
+#arrow_before0 {
+	top: 85px;
+	left: 325px;
+}
+#arrow_before1 {
+    top: 245px;
+    left: 310px;
+    transform-origin: right top;
+    transform: rotate(30deg);
+}
+
+#arrow_before2 {
+    top: 245px;
+    left: 340px;
+    transform-origin: left top;
+    transform: rotate(-30deg);
+}
+
+#arrow_before3 {
+    top: 390px;
+    left: 240px;
+    transform-origin: left top;
+    transform: rotate(-30deg);
+}
+
+#arrow_before4 {
+    top: 390px;
+    left: 410px;
+    transform-origin: right top;
+    transform: rotate(30deg);
+}
+
+
+
+#arrow_before5 {
+	top: 535px;
+	left: 325px;
+}
+
+
+#arrow_before6 {
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: skyblue;
+    border-color: skyblue;
+    top: 365px;
+    left: 250px;
+}
+
+#arrow_before6::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: -8px;
+    left: -10px;
+    border: 10px skyblue solid;
+    border-color: transparent skyblue transparent transparent;
+}
+
+
+
+
+
+
+
+.time_class {
+	position: absolute;
+	padding: 5px;
+	color: blue;
+	background-color: white;
+	border: 1px black solid;
+	font-size: 15px;
+	font-weight: bold;
+	z-index: 1;
+}
+
+#time0 {
+	top: 120px;
+	left: 315px;
+}
+
+#time1 {
+	top: 270px;
+	left: 270px;
+}
+
+#time2 {
+	top: 270px;
+	left: 360px;
+}
+
+#time3 {
+	top: 410px;
+	left: 260px;
+}
+
+#time4 {
+	top: 410px;
+	left: 375px;
+}
+
+#time5 {
+	top: 570px;
+	left: 315px;
+}
+
+#time6 {
+	position: absolute;
+	padding: 5px;
+	color: blue;
+	background-color: white;
+	border: 1px black solid;
+	font-size: 10px;
+	font-weight: bold;
+	z-index: 1;
+	top: 350px;
+	left: 300px;
+}
+
+
+
+
+
+
+#start {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	bottom: 50px;
+	left: 50px;
+	border: 1px black solid;
+	background-color: lightyellow;
+}
+
+#timer {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	bottom: 50px;
+	right: 50px;
+	border: 1px black solid;
+	background-color: lightyellow;
+}
+
+
+.arrow_after::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    left: -10px;
+    border: 10px skyblue solid;
+    border-color: red transparent transparent transparent;
+    z-index: -1;
+}
+
+
+
+#arrow_after0 {
+	position: absolute;
+	top: 70px;
+	left: 327px;
+	width: 3px;
+	height: 0px;/* 120pxまで伸ばします♪ */
+	background-color: red;
+	z-index: -1;
+}
+
+
+#arrow_after1 {
+    position: absolute;
+    top: 220px;
+    left: 327px;
+    width: 3px;
+    height: 0px;/* 150pxまで伸ばします♪ */
+    background-color: red;
+    transform-origin: left top;
+    transform: rotate(34deg);
+    z-index: -1;
+}
+
+
+
+#arrow_after2 {
+    position: absolute;
+    top: 220px;
+    left: 327px;
+    width: 3px;
+    height: 0px;/* 150pxまで伸ばします♪ */
+    background-color: red;
+    transform-origin: right top;
+    transform: rotate(-34deg);
+    z-index: -1;
+}
+
+#arrow_after3 {
+    position: absolute;
+    top: 370px;
+    left: 225px;
+    width: 3px;
+    height: 0px;/* 150pxまで伸ばします♪ */
+    background-color: red;
+    transform-origin: right top;
+    transform: rotate( -34deg);
+    z-index: -1;
+}
+
+#arrow_after4 {
+    position: absolute;
+    top: 370px;
+    left: 425px;
+    width: 3px;
+    height: 0px;/* 150pxまで伸ばします♪ */
+    background-color: red;
+    transform-origin: left top;
+    transform: rotate(34deg);
+    z-index: -1;
+}
+
+
+#arrow_after5 {
+	position: absolute;
+	top: 520px;
+	left: 327px;
+	width: 3px;
+	height: 0px;/* 120pxまで伸ばします♪ */
+	background-color: red;
+	z-index: -1;
+}
+
+
+#arrow_after6 {
+    position: absolute;
+    top: 365px;
+    right: 230px;
+    width: 0px;
+    height: 3px;
+    background-color: red;
+    z-index: -1;
+}
+
+
+#arrow_after6::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: -9px;
+    left: -15px;
+    border: 10px solid;
+    border-color: transparent red transparent transparent;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

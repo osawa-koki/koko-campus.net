@@ -1,0 +1,13 @@
+@charset "UTF-8";
+.to-mysql {
+  background-image: url(../pics/mysql-logo.png);
+}
+
+table td.トランザクション分離レベル-安全 {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+table td.トランザクション分離レベル-危険 {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+/*# sourceMappingURL=part.css.map */

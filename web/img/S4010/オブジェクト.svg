@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="オブジェクト.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vba(excel)\pics\オブジェクト.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="214.6385621"
+         inkscape:cy="188.6419661"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="121.3174481"
+             y="183.9759104"
+             width="145.314306"
+             height="150.6469411"
+             id="rect12224" />
+        <rect
+             x="318.6249462"
+             y="135.9821946"
+             width="154.6464174"
+             height="46.66055698"
+             id="rect10392" />
+        <rect
+             x="122.6506069"
+             y="137.3153534"
+             width="151.9800999"
+             height="54.6595096"
+             id="rect7416" />
+        <rect
+             x="167.9780051"
+             y="35.99528681"
+             width="354.620233"
+             height="70.65741485"
+             id="rect2825" />
+        <rect
+             x="121.3174515"
+             y="183.9759064"
+             width="145.3143005"
+             height="150.6469421"
+             id="rect12224-2" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             id="text2823"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect2825)"
+             transform="translate(2.66422279,1.333158771)"><tspan
+                 x="167.9785156"
+                 y="71.43359375"
+                 id="tspan883">オブジェクト<tspan
+     style="font-size:28px"
+     id="tspan877">(</tspan><tspan
+     style="font-size:28px"
+     id="tspan879">セル</tspan><tspan
+     style="font-size:28px"
+     id="tspan881">)</tspan></tspan></text>
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 295.9612471,85.32216133 v 282.62965937"
+             id="path5342" />
+        <text
+             xml:space="preserve"
+             id="text7414"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect7416)"
+             transform="translate(-14)"><tspan
+                 x="122.6503906"
+                 y="162.9082031"
+                 id="tspan885">プロパティ</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text10390"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect10392)"
+             transform="translate(50,2)"><tspan
+                 x="318.625"
+                 y="161.5761719"
+                 id="tspan887">メソッド</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text12222"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12224)"
+             transform="translate(-10)"><tspan
+                 x="121.3183594"
+                 y="203.6640625"
+                 id="tspan889">・データ
+</tspan><tspan
+                 x="121.3183594"
+                 y="230.9980469"
+                 id="tspan891">・背景色
+</tspan><tspan
+                 x="121.3183594"
+                 y="258.3320312"
+                 id="tspan893">・文字色
+</tspan><tspan
+                 x="121.3183594"
+                 y="285.6660156"
+                 id="tspan895">・文字の並び
+</tspan><tspan
+                 x="121.3183594"
+                 y="313"
+                 id="tspan897">  ・・・</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text12222-8"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect12224-2)"
+             transform="translate(223.4700828,3.473692659)"><tspan
+                 x="121.3183594"
+                 y="203.6640625"
+                 id="tspan899">・データの削除
+</tspan><tspan
+                 x="121.3183594"
+                 y="230.9980469"
+                 id="tspan901">・データの更新
+</tspan><tspan
+                 x="121.3183594"
+                 y="258.3320312"
+                 id="tspan903">  ・・・</tspan></text>
+        <rect
+             style="fill:#ffffff;fill-opacity:0;stroke:#ff0000;stroke-width:6.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+             id="rect31325"
+             width="531.9303589"
+             height="282.6296692"
+             x="27.99633408"
+             y="85.32215881"
+             ry="80.817276" />
+    </g>
+</svg>

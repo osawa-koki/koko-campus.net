@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="プロシージャと関数.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vb入門\pics\プロシージャと関数.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.06079905335291"
+         inkscape:cx="436.46343625268"
+         inkscape:cy="307.786850834773"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="94.6542727744831"
+             y="193.308021863381"
+             width="158.644860526298"
+             height="173.64394346865"
+             id="rect11856" />
+        <rect
+             x="94.6542739868164"
+             y="193.308029174805"
+             width="177.975669129697"
+             height="174.310515542963"
+             id="rect11856-2" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.343598;fill:#00f200;fill-opacity:1;stroke:#000001;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843"
+             width="170.644332885742"
+             height="211.3056640625"
+             x="82.6547927856445"
+             y="155.646286010742"
+             ry="22" />
+        <rect
+             style="opacity:0.343598;fill:#00f200;fill-opacity:1;stroke:#000001;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-4"
+             width="170.644332885742"
+             height="211.3056640625"
+             x="349.953125"
+             y="155.646286010742"
+             ry="22" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="90.6532211303711"
+             y="49.0327796936035"
+             id="text1903"><tspan
+                 sodipodi:role="line"
+                 id="tspan1901"
+                 x="90.6532211303711"
+                 y="49.0327796936035">サブルーチン</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="406.614196777344"
+             y="47.9937171936035"
+             id="text2963"><tspan
+                 sodipodi:role="line"
+                 id="tspan2961"
+                 x="406.614196777344"
+                 y="47.9937171936035">関数</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="120.650344848633"
+             y="177.976684570312"
+             id="text7621"><tspan
+                 sodipodi:role="line"
+                 id="tspan7619"
+                 x="120.650344848633"
+                 y="177.976684570312">一連の処理</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="393.327972412109"
+             y="179.218276977539"
+             id="text7621-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan7619-1"
+                 x="393.327972412109"
+                 y="179.218276977539">一連の処理</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text11854"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect11856)"><tspan
+                 x="94.654296875"
+                 y="205.4560546875"
+                 id="tspan2191">Private Sub pcd()
+</tspan><tspan
+                 x="94.654296875"
+                 y="222.9560546875"
+                 id="tspan2193">
+</tspan><tspan
+                 x="94.654296875"
+                 y="240.4560546875"
+                 id="tspan2195">   Dim x, y As ...
+</tspan><tspan
+                 x="94.654296875"
+                 y="257.9560546875"
+                 id="tspan2197">
+</tspan><tspan
+                 x="94.654296875"
+                 y="275.4560546875"
+                 id="tspan2199">   Label.Text = ...
+</tspan><tspan
+                 x="94.654296875"
+                 y="292.9560546875"
+                 id="tspan2201">
+</tspan><tspan
+                 x="94.654296875"
+                 y="310.4560546875"
+                 id="tspan2203">   Button.Back...
+</tspan><tspan
+                 x="94.654296875"
+                 y="327.9560546875"
+                 id="tspan2205">
+</tspan><tspan
+                 x="94.654296875"
+                 y="345.4560546875"
+                 id="tspan2207">End Sub</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text11854-3"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect11856-2)"
+             transform="translate(270.882034073933,-0.46409511883786)"><tspan
+                 x="94.654296875"
+                 y="205.4560546875"
+                 id="tspan2209">Private Function fx
+</tspan><tspan
+                 x="94.654296875"
+                 y="222.9560546875"
+                 id="tspan2211"> (z AS Integer)
+</tspan><tspan
+                 x="94.654296875"
+                 y="240.4560546875"
+                 id="tspan2213">
+</tspan><tspan
+                 x="94.654296875"
+                 y="257.9560546875"
+                 id="tspan2215">   Dim x As ...
+</tspan><tspan
+                 x="94.654296875"
+                 y="275.4560546875"
+                 id="tspan2217">
+</tspan><tspan
+                 x="94.654296875"
+                 y="292.9560546875"
+                 id="tspan2219">   x = 25 * z...
+</tspan><tspan
+                 x="94.654296875"
+                 y="310.4560546875"
+                 id="tspan2221">
+</tspan><tspan
+                 x="94.654296875"
+                 y="327.9560546875"
+                 id="tspan2223">   Return x
+</tspan><tspan
+                 x="94.654296875"
+                 y="345.4560546875"
+                 id="tspan2225">
+</tspan><tspan
+                 x="94.654296875"
+                 y="362.9560546875"
+                 id="tspan2227">End Function</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ffa200;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path26781"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="376.617340087891"
+             sodipodi:cy="91.3213729858398"
+             sodipodi:r1="53.2763328552246"
+             sodipodi:r2="26.6381664276123"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 422.755997760991,117.959539413452 h -92.2773153462 l 46.1386576731,-79.9144992828368 z"
+             inkscape:transform-center-y="9.9660996956017"
+             transform="matrix(0.129926890933879,0,0,-0.748257168388124,365.511474768299,160.551101914062)" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ffa200;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path26781-6"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="376.617340087891"
+             sodipodi:cy="91.3213729858398"
+             sodipodi:r1="53.2763328552246"
+             sodipodi:r2="26.6381664276123"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="9.9660996956017"
+             transform="matrix(0.129926890933879,0,0,-0.748257168388124,122.378182064693,166.351632961811)"
+             d="m 422.755997760991,117.959539413452 h -92.2773153462 l 46.1386576731,-79.9144992828368 z" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#ffa200;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path26781-2"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="376.617340087891"
+             sodipodi:cy="91.3213729858398"
+             sodipodi:r1="53.2763328552246"
+             sodipodi:r2="26.6381664276123"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="-9.96609969560214"
+             transform="matrix(0.129926890933879,0,0,0.748257168388124,402.932928183929,43.8195569688383)"
+             d="m 422.755997760991,117.959539413452 h -92.2773153462 l 46.1386576731,-79.9144992828368 z" />
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="127.31665802002"
+             y="113.318496704102"
+             id="text28091"><tspan
+                 sodipodi:role="line"
+                 id="tspan28089"
+                 x="127.31665802002"
+                 y="113.318496704102">引数</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="367.449737548828"
+             y="109.673889160156"
+             id="text28091-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan28089-7"
+                 x="367.449737548828"
+                 y="109.673889160156">引数</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="466.103210449219"
+             y="111.007041931152"
+             id="text28091-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan28089-9"
+                 x="466.103210449219"
+                 y="111.007041931152">戻り値</tspan></text>
+        <rect
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0001;stroke-width:0.9176;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect30304"
+             width="63.7407341003418"
+             height="26.4122848510742"
+             x="458.232116699219"
+             y="92.1131362915039"
+             ry="13.2061424255371" />
+        <rect
+             style="fill:none;fill-opacity:1;stroke:#ff0001;stroke-width:0.905814;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect30304-0"
+             width="62.0860710144043"
+             height="26.4240703582764"
+             x="379.736511230469"
+             y="310.078979492188"
+             ry="13.2120351791382" />
+    </g>
+</svg>

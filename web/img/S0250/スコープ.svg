@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="500"
+     viewBox="0 0 600 500"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="スコープ.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\vb入門\pics\スコープ.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.06079905335291"
+         inkscape:cx="340.309504292046"
+         inkscape:cy="367.176044104575"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter14985"
+             x="-0.0315467451777315"
+             y="-0.0694951417376234"
+             width="1.06309349035546"
+             height="1.13899028347525">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="2.67647960236864"
+                 id="feGaussianBlur14987" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.244367;fill:#8a8a8a;fill-opacity:1;stroke:#000001;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect13289"
+             width="305.430145263672"
+             height="213.046951293945"
+             x="105.580787658691"
+             y="94.2685623168945" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="45.3273963928223"
+             y="49.3268737792969"
+             id="text6191"><tspan
+                 sodipodi:role="line"
+                 id="tspan6189"
+                 x="45.3273963928223"
+                 y="49.3268737792969">Private Function fx()</tspan><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="89.3268737792969"
+                 id="tspan6193" /><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="129.326873779297"
+                 id="tspan6195">    Dim x AS Integer</tspan><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="169.326873779297"
+                 id="tspan6197" /><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="209.326873779297"
+                 id="tspan6199">    x = 10</tspan><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="249.326873779297"
+                 id="tspan6201" /><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="289.326873779297"
+                 id="tspan6203">    Return x</tspan><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="329.326873779297"
+                 id="tspan6205" /><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="369.326873779297"
+                 id="tspan6207">End Function</tspan><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="409.326873779297"
+                 id="tspan12009" /><tspan
+                 sodipodi:role="line"
+                 x="45.3273963928223"
+                 y="449.326873779297"
+                 id="tspan12011">x = x + 10</tspan></text>
+        <circle
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0001;stroke-width:4.13965;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13519"
+             cx="194.29753112793"
+             cy="121.502151489258"
+             r="18.3412036895752" />
+        <circle
+             style="fill:none;fill-opacity:1;stroke:#ff0001;stroke-width:4.13965;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13519-1"
+             cx="124.317054748535"
+             cy="201.640274047852"
+             r="18.3412036895752" />
+        <circle
+             style="fill:none;fill-opacity:1;stroke:#ff0001;stroke-width:4.13965;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13519-6"
+             cx="247.134307861328"
+             cy="281.129852294922"
+             r="18.3412036895752" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 294.117909526644,308.258193638502 c 0,0 162.027602138466,36.147240142353 -146.116269155865,109.351530465035"
+             id="path13823"
+             sodipodi:nodetypes="cc" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 154.129096981899,398.991683777302 -6.12745661112,18.618040326235 19.325055129448,8.248499514646"
+             id="path13991"
+             sodipodi:nodetypes="ccc" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 26.8665398408815,437.76283634285 212.5756047059215,-1.2e-11"
+             id="path14125" />
+        <path
+             style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 26.866539840881,443.76283634285 212.575604705922,-1.2e-11"
+             id="path14125-8" />
+        <path
+             id="path14275"
+             style="opacity:0.345902;fill:#ffff00;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000;filter:url(#filter14985)"
+             d="m 530.732009887695,420.437774658203 c -1e-12,21.345865405842 -45.581909043084,38.650108337402 -101.810043334961,38.650108337402 -56.228134291877,0 -101.810043334961,-17.30424293156 -101.810043334961,-38.650108337402 0,-8.536047484832 7.289179103207,-16.425783511873 19.633458881941,-22.821085730559 3.350820362635,-1.735986974023 -19.918357424403,-29.661299602296 -16.684014735705,-30.902341654443 3.607285235694,-1.384142962719 38.66717016632,22.427908490182 44.802227487143,20.965719524805 15.66478625173,-3.733441499319 34.197442334782,-5.892400477205 54.058371701582,-5.892400477205 56.228134291877,0 101.81004333496,17.30424293156 101.810043334961,38.650108337402 z"
+             sodipodi:nodetypes="ssssssss" />
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="345.965606689453"
+             y="414.781646728516"
+             id="text16135"><tspan
+                 sodipodi:role="line"
+                 id="tspan16133"
+                 x="345.965606689453"
+                 y="414.781646728516">関数内で宣言した変数に</tspan><tspan
+                 sodipodi:role="line"
+                 x="345.965606689453"
+                 y="433.915435791016"
+                 id="tspan16137">関数外でアクセスできない</tspan></text>
+    </g>
+</svg>

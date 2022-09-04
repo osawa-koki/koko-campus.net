@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+
+
+
+#ifame_common_frame {
+	width: 500px;
+	height: 500px;
+	margin-left: 30px;
+}
+
+
+#common_frame th {
+	border: 1px black solid;
+}
+#common_frame td {
+  text-align: center;
+}
+
+#common_frame .arrow {
+	font-size: 30px;
+	font-weight: 1000;
+}
+
+
+#common_frame .circle {
+	border: 1px black solid;
+	border-radius: 50%;
+}
+
+#common_frame .vertical {
+	writing-mode: vertical-lr;
+}
+
+
+#common_frame .this_sec {
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+}
+
+
+
+
+
+
+.balloon {
+	margin-left: 10px;
+	text-align: left;
+}
+
+.balloon1-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  width: 500px;
+  height: 50px;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.balloon1-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon1-left:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+.balloon1-left p {
+  margin: 0;
+  padding: 0;
+}
+
+
+.balloon2-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  width: 500px;
+  height: 100px;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.balloon2-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  margin-top: -12px;
+  border: 12px solid transparent;
+  border-right: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon2-left:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -14px;
+  border: 14px solid transparent;
+  border-right: 14px solid #555;
+  z-index: 1;
+}
+
+.balloon2-left p {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+/*以下、①背景色など*/
+.line-bc {
+  padding: 20px 10px;
+  max-width: 650px;
+  margin: 15px auto;
+  text-align: right;
+  font-size: 14px;
+  background: #7da4cd;
+
+}
+
+/*以下、②左側のコメント*/
+.balloon6 {
+  width: 100%;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.balloon6 .faceicon {
+  float: left;
+  margin-right: -50px;
+  width: 40px;
+}
+
+.balloon6 .faceicon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.balloon6 .chatting {
+  width: 100%;
+  text-align: left;
+}
+.says {
+  display: inline-block;
+  position: relative; 
+  margin: 0 0 0 50px;
+  padding: 10px;
+  max-width: 400px;
+  border-radius: 12px;
+  background: #edf1ee;
+}
+
+.says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 8px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.says p {
+  margin: 0;
+  padding: 0;
+}
+
+/*以下、③右側の緑コメント*/
+.mycomment {
+  margin: 10px 0;
+}
+.mycomment p {
+  display: inline-block;
+  position: relative; 
+  margin: 0 10px 0 0;
+  padding: 8px;
+  max-width: 400px;
+  border-radius: 12px;
+  background: #30e852;
+  font-size: 15px:
+}
+
+.mycomment p:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 8px solid transparent;
+  border-left: 18px solid #30e852;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+
+
+
+
+
+
+
+.balloon4 {
+    position: relative;
+    margin: 2em 0 2em 40px;
+    padding: 15px;
+    background: #30e852;
+    border-radius: 30px;
+    width: 280px;
+    right: -250px;
+}
+
+.balloon4:before {
+    content: "";
+    position: absolute;
+    right: -40px;
+    width: 13px;
+    height: 12px;
+    bottom: 35px;
+    background: #30e852;
+    border-radius: 50%;
+}
+
+.balloon4:after {
+    content: "";
+    position: absolute;
+    right: -22px;
+    width: 20px;
+    height: 18px;
+    bottom: 30px;
+    background: #30e852;
+    border-radius: 50%;
+}
+.balloon4 p {
+  margin: 0; 
+  padding: 0;
+}
+
+
+

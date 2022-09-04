@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+/* ----------産業財産権jqueryのためのcss---------- */
+.right_table0 {
+	width: 80%;
+	margin-left: 10%;
+	border: 3px red solid;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.right_table1 {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 30px;
+}
+#copyright {
+	border: 2px orange dashed;
+}
+#industry_property_rights {
+	border: 2px pink dashed;
+}
+.right_table2 {
+	margin-left: 35%;
+}
+/* ----------産業財産権jqueryのためのcss---------- */
+
+
+
+
+/* ----------その他諸法規jqueryのためのcss---------- */
+.law_table0 {
+	width: 80%;
+	margin-left: 10%;
+	border: 3px red solid;
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+.law_table1 {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 30px;
+}
+#about_labor {
+	border: 2px green dashed;
+}
+#about_labor_contract {
+	border: 2px blue dashed;
+}
+#security_related_law {
+	border: 2px lime dashed;
+}
+#other_law {
+	border: 2px skyblue dashed;
+}
+.law_table2 {
+	margin-left: 35%;
+}
+/* ----------その他諸法規jqueryのためのcss---------- */
+
+
+
+
+.table_note {
+	margin-left: 20px;
+}
+
+
+.law_act {
+	width: 80%;
+	margin-left: 10%;
+}
+
+
+
+/* ----------画像のcss---------- */
+.law_img {
+	width: 80%;
+	margin-left: 10%;
+}
+/* ----------画像のcss---------- */
+
+
+
