@@ -1,11 +1,3 @@
-<?php
-require(__DIR__. "/../../framework/ver3/common.php");
-$obj = array(
-	"made" => "2022-01-20",
-	"updated" => "2022-01-20"
-);
-head($obj);
-?>
 <h2>列挙型</h2>
 構造体の簡素化バージョンだと思えばok!です。<br /><a href="https://doc.rust-jp.rs/book-ja/ch06-01-defining-an-enum.html">公式ドキュメント</a>によると構造体と比べた時の列挙型の利点として以下の2つがあげられています。
 <ul>
@@ -59,9 +51,10 @@ head($obj);
 		println!("{:?}", ip4);
 		println!("{:?}", ip6);
 	}
+
 	/* &darr; コンソール &darr;
-	V4("127.0.0.1")
-	V6("::1")
+	V4('127.0.0.1')
+	V6('::1')
 	*/
 </code>
 <h2>メソッドの定義</h2>
@@ -75,7 +68,7 @@ head($obj);
 
 	impl 列挙型名 {
 		fn メソッド名(&amp;self) {
-			//メソッドの処理
+			// メソッドの処理
 		}
 	}
 </code>
@@ -101,12 +94,12 @@ head($obj);
 		ip6.print();
 	}
 	/* &darr; コンソール &darr;
-	IPアドレスはV4("127.0.0.1")
-	IPアドレスはV6("::1")
+	IPアドレスはV4('127.0.0.1')
+	IPアドレスはV6('::1')
 	*/
 </code>
 <h2>null型とenum型</h2>
-他の言語に存在するデータが存在しないことを表すnull型でrustではenumを用いて表します。<br />具体的にはenumが複数の列挙子の中のいずれかのひとつのみを表すという性質を利用してnull型を疑似的に再現します。<br />具体的には以下のOption列挙型データを用いてrustではnull・非null判定を行います。
+他の言語に存在するデータが存在しないことを表すnull型でRustではenumを用いて表します。<br />具体的にはenumが複数の列挙子の中のいずれかのひとつのみを表すという性質を利用してnull型を疑似的に再現します。<br />具体的には以下のOption列挙型データを用いてRustではnull・非null判定を行います。
 <code class="rust">
 	enum Option&lt;T&gt; {
 		Some(T),
@@ -127,7 +120,7 @@ head($obj);
 		println!("{}", x + y);
 	}
 	/* &darr; コンソール &darr;
-	no implementation for `u8 + Option<u8>`
+	no implementation for `u8 + Option&lt;u8&gt;`
 	*/
 </code>
 上の演算を実行するにはOption&lt;u8&gt;から中身を取り出してから実行する必要があります。<br />エラーハンドリングの授業で詳しく説明しますが、Option列挙型のデータから中身を取り出すにはunwrapメソッドを使用します。
@@ -149,4 +142,3 @@ head($obj);
 
 
 
-<?php footer(); ?>
