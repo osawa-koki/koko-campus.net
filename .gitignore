@@ -5,7 +5,6 @@
 bin/
 obj/
 standalone/
-.vs/
 
 # ファイル
 *.csv
