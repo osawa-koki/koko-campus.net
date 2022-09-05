@@ -1,11 +1,3 @@
-<?php
-require(__DIR__. "/../../framework/ver3/common.php");
-$obj = array(
-	"made" => "2022-02-20",
-	"updated" => "2022-02-20"
-);
-head($obj);
-?>
 <h2>変数</h2>
 変数とはプログラムを実行する際に使用する一時的なデータを保存するための箱です。<br />変数を使用するには以下の3つの手順を踏む必要があります。
 <ol>
@@ -69,7 +61,7 @@ head($obj);
 	*/
 </code>
 <h2>データ型</h2>
-では、今度はデータ型について学びましょう♪<br />先ほどは整数を表すint型を使用しましたが、javaでは以下のようなデータ型があります。
+では、今度はデータ型について学びましょう♪<br />先ほどは整数を表すint型を使用しましたが、Javaでは以下のようなデータ型があります。
 <table>
 	<caption>データ型</caption>
 	<tbody>
@@ -87,7 +79,7 @@ head($obj);
 		</tr>
 		<tr>
 			<th>int</th>
-			<td>整数型です。<br />「10」「25」「-99」とそのまま表記します。<br />文字列型として扱うには「"10"」「"25"」「""99"」と書きます。<br />約±2<sup>31</sup>までの値を格納できます。</td>
+			<td>整数型です。<br />「10」「25」「-99」とそのまま表記します。<br />文字列型として扱うには「"10"」「"25"」「"99"」と書きます。<br />約±2<sup>31</sup>までの値を格納できます。</td>
 		</tr>
 		<tr>
 			<th>short</th>
@@ -168,11 +160,11 @@ head($obj);
 <code class="java">
 	public class koko {
 		public static void main(String[] args) {
-			System.out.println(10 + 3); //13
-			System.out.println(10 - 3); //7
-			System.out.println(10 * 3); //30
-			System.out.println(10 / 3); //3
-			System.out.println(10 % 3); //1
+			System.out.println(10 + 3); // 13
+			System.out.println(10 - 3); // 7
+			System.out.println(10 * 3); // 30
+			System.out.println(10 / 3); // 3
+			System.out.println(10 % 3); // 1
 		}
 	}
 </code>
@@ -211,12 +203,12 @@ boolean型(真偽値型)を求めるための演算です。<br />左の値と�
 <code class="java">
 	public class koko {
 		public static void main(String[] args) {
-			System.out.println(5 &lt; 10);&nbsp;&nbsp; //true
-			System.out.println(10 &lt; 10);&nbsp; //false
-			System.out.println(10 &lt;= 5);&nbsp; //false
-			System.out.println(10 &lt;= 10); //true
-			System.out.println(10 == 10); //true
-			System.out.println(10 != 10); //false
+			System.out.println(5 &lt; 10);&nbsp;&nbsp; // true
+			System.out.println(10 &lt; 10);&nbsp; // false
+			System.out.println(10 &lt;= 5);&nbsp; // false
+			System.out.println(10 &lt;= 10); // true
+			System.out.println(10 == 10); // true
+			System.out.println(10 != 10); // false
 		}
 	}
 </code>
@@ -245,12 +237,12 @@ boolean型(真偽値型)を求めるための演算です。<br />左の値と�
 <code class="java">
 	public class koko {
 		public static void main(String[] args) {
-			System.out.println(true &amp;&amp; true);&nbsp;&nbsp; //true
-			System.out.println(true &amp;&amp; false);&nbsp //false
-			System.out.println(true || true);&nbsp;&nbsp; //true
-			System.out.println(true || false);&nbsp //true
-			System.out.println(!true);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp //false
-			System.out.println(!false);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //true
+			System.out.println(true &amp;&amp; true);&nbsp;&nbsp; // true
+			System.out.println(true &amp;&amp; false);&nbsp // false
+			System.out.println(true || true);&nbsp;&nbsp; // true
+			System.out.println(true || false);&nbsp // true
+			System.out.println(!true);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // false
+			System.out.println(!false);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // true
 		}
 	}
 </code>
@@ -265,7 +257,7 @@ boolean型(真偽値型)を求めるための演算です。<br />左の値と�
 	<li>double</li>
 </ul>
 これらは全て数字を意味するのですが、それぞれサイズが異なります。<br />例えば、整数は小数でも表現できるため、「10」をdouble型として扱うことができますが、逆に「99.99」をint型として扱うことはできません。<br /><br />このように数字型にはサイズがあります。
-<img src="../pics/データ型のサイズ.png" alt="データ型のサイズ" />
+<img src="/?S00/0202/sizeOfDataType.png" alt="データ型のサイズ" />
 <h3>暗黙の型変換</h3>
 数字型同士の演算でデータ型が異なる値を演算した場合は、自動で大きい方のデータ型に変換されます。<br />これを暗黙の型変換と呼びます。<br />例えば、int型とdouble型の演算ではその結果はdouble型となり、short型とint型の演算ではその結果はint型となります。<br /><br />例えば、以下のコードを見てください。<br />以下の演算はint型とdouble型の演算ですので、その結果は自動的にdouble型に変換されます。
 <code class="java">
@@ -330,8 +322,8 @@ boolean型(真偽値型)を求めるための演算です。<br />左の値と�
 			String s1, s2;
 			s1 = "10";
 			s2 = "25";
-			System.out.println(s1 + s2); //文字列型の結合
-			System.out.println(Integer.parseInt(s1) + Integer.parseInt(s2)); //整数型の加算演算
+			System.out.println(s1 + s2); // 文字列型の結合
+			System.out.println(Integer.parseInt(s1) + Integer.parseInt(s2)); // 整数型の加算演算
 		}
 	}
 
@@ -361,4 +353,3 @@ boolean型(真偽値型)を求めるための演算です。<br />左の値と�
 	1025
 	*/
 </code>
-<?php footer(); ?>

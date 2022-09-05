@@ -1,11 +1,3 @@
-<?php
-require(__DIR__. "/../../framework/ver3/common.php");
-$obj = array(
-	"made" => "2022-02-21",
-	"updated" => "2022-02-21"
-);
-head($obj);
-?>
 <h2>オーバーロード</h2>
 ひとつのクラス内に同一名の引数のデータ型ないしは引数の種類が異なるメソッドを複数定義することを言います。<br /><br />この場合はメソッド実行時に与えられた引数を基に、それに合ったメソッドが実行されます。
 <code class="java">
@@ -74,7 +66,7 @@ head($obj);
 </code>
 <h2>継承</h2>
 あるクラスが他のクラスの性質(メンバ)を継承して再定義することなく使用することができる性質を継承と言います。
-<img src="../pics/継承.png" alt="継承" />
+<img src="/?S00/0202/inheritance.png" alt="継承" />
 継承元のクラスを「基本クラス・スーパークラス・親クラス」と呼び、継承するクラスを「派生クラス・サブクラス・子クラス」と呼びます。<br /><br />継承するには以下のように書きます。
 <code class="java">
 	class 子クラス extends 親クラス {
@@ -86,7 +78,7 @@ head($obj);
 	class 子クラス extends 親クラス {
 		子クラス (引数1, 引数2, 引数3) {
 			super(親クラスコンストラクタの引数);
-			//子クラスのコンストラクタ内の処理...
+			// 子クラスのコンストラクタ内の処理...
 		}
 	}
 </code>
@@ -168,7 +160,7 @@ head($obj);
 		}
 		String type1;
 		String type2;
-		public void i_am() { //オーバーライド!!
+		public void i_am() { // オーバーライド!!
 			System.out.println("図鑑番号は " + this.no);
 			System.out.println("名前は " + this.name);
 			System.out.println("タイプ1は " + this.type1);
@@ -215,7 +207,7 @@ head($obj);
 		public static void main(String[] args) {
 			pokemon pikachu;
 			pikachu = new pokemon(25, "ピカチュウ");
-			pikachu.no = 999; //noプロパティに直接アクセスしちゃダメ!!
+			pikachu.no = 999; // noプロパティに直接アクセスしちゃダメ!!
 			pikachu.i_am();
 		}
 	}
@@ -238,7 +230,7 @@ head($obj);
 直接アクセスしてはいけないnoプロパティに直接アクセスしているため、コンパイルエラーとなります。<br /><br />これで、pokemonクラスのプロパティに直接する必要がなくなりました。<br />コンストラクタの引数に渡して、それをi_amメソッドで取得するだけでok!になったので、クラス内部でどのような処理が行われているかを意識する必要がなくなりました。<br /><br />このように、クラスの内部の処理を外部から隠蔽することをカプセル化と呼びます。<br />大規模なシステムではコードの管理可能性を向上させるためによく用いられます。
 <h2>多態性</h2>
 同じ名前のメソッドを呼び出しても、インスタンスの種類によって異なる処理が実行される性質を言います。<br />ポリモフィズムとも呼ばれます。<br /><br />これは、ひとつの親クラスを継承して複数の子クラスを生成できる性質を利用します。<br /><br />例えば、Animalクラスを親クラスとしてPersonクラスとDogクラスを生成するとします。
-<img src="../pics/多態性.png" alt="多態性" />
+<img src="/?S00/0202/polymorphism.png" alt="多態性" />
 では、これらのクラスを定義してみましょう♪<br />プロパティは定義しません。<br />メソッドとして挨拶をするgreetメソッドを定義します。
 <code class="java">
 	class Animal {
@@ -261,18 +253,18 @@ Animalクラスでは挨拶は存在しないので、greetメソッドではと
 <code class="java">
 	public class koko {
 		public static void main(String[] args) {
-			Animal p = new Person(); //PersonインスタンスをAnimal型として扱う
-			Animal d = new Dog(); //DogインスタンスをAnimal型として扱う
+			Animal p = new Person(); // PersonインスタンスをAnimal型として扱う
+			Animal d = new Dog(); // DogインスタンスをAnimal型として扱う
 		}
 	}
 </code>
-変数pをAnimal型として宣言して、そこにPersonクラスを初期化したものを格納しています。<br />これはPersonクラスがAnimalクラスから派生したものであるから可能です。<br /><br />Animal型として宣言した変数にpokemonクラスを初期化したものを代入しようとするとエラーとなります。
+変数「p」をAnimal型として宣言して、そこにPersonクラスを初期化したものを格納しています。<br />これはPersonクラスがAnimalクラスから派生したものであるから可能です。<br /><br />Animal型として宣言した変数にpokemonクラスを初期化したものを代入しようとするとエラーとなります。
 <code class="java">
 	/* コンパイルエラー */
 
 	public class koko {
 		public static void main(String[] args) {
-			Animal pikachu = new pokemon(); //pokemonインスタンスをAnimal型として扱うことはできない、、、
+			Animal pikachu = new pokemon(); // pokemonインスタンスをAnimal型として扱うことはできない、、、
 		}
 	}
 
@@ -326,13 +318,13 @@ Animalクラスでは挨拶は存在しないので、greetメソッドではと
 	ワンワン!!
 	*/
 </code>
-p変数もd変数も同じAnimalクラスから生成したAnimalインスタンスです。<br /><br />大切なのでもう一度言います。<br />p変数もd変数も同じAnimalクラスから生成したAnimalインスタンスです。<br /><br />しかし、greetメソッドによって実行される処理が変わります。<br /><br />このように、同じ名前のメソッドを呼び出しても、インスタンスの種類によって異なる処理が実行される性質を多態性(ポリモフィズム)と言います。
+「p」変数もd変数も同じAnimalクラスから生成したAnimalインスタンスです。<br /><br />大切なのでもう一度言います。<br />「p」変数も「d」変数も同じAnimalクラスから生成したAnimalインスタンスです。<br /><br />しかし、greetメソッドによって実行される処理が変わります。<br /><br />このように、同じ名前のメソッドを呼び出しても、インスタンスの種類によって異なる処理が実行される性質を多態性(ポリモフィズム)と言います。
 <h2>抽象クラス</h2>
 継承することを目的とするクラスで、継承せずにそれ自体のインスタンスを生成することはできません。<br /><br />例えば、食べ物(food)クラスからラーメン(ramen)クラスとパスタ(pasta)クラスを生成する場合を想定してください。<br />ここで定義する食べ物クラスはあくまでもラーメンクラスとパスタクラスを生成するためにあります。<br />食べ物クラスからインスタンスを直接生成することはありません。<br /><br />このように継承することだけに定義するクラスは抽象クラスと呼ばれ、abstract修飾子を用いて定義します。
 <code class="java">
 	public class koko {
 		public static void main(String[] args) {
-			food xxx = new food(); //foodクラスから直接インスタンス生成不可
+			food xxx = new food(); // foodクラスから直接インスタンス生成不可
 		}
 	}
 	abstract class food {
@@ -364,7 +356,7 @@ p変数もd変数も同じAnimalクラスから生成したAnimalインスタン
 クラスにインターフェースを実装するには以下のように記述します。
 <code class="java">
 	class クラス名 implements 実装するインターフェース {
-		//クラスの中身
+		// クラスの中身
 	}
 </code>
 <div class="separator"></div>
@@ -432,4 +424,3 @@ intfインターフェースを実装しているクラスがintfインターフ
 	*/
 </code>
 kクラスはintfインターフェースを実装しているからmethod3も定義してね♪<br />って怒られてしまいます。<br /><br />このようにクラスが実装するべきメソッドを規定するのがインターフェースです。<br /><br />利用しなくてもプログラムを十分かけますが、どのクラスがそのメソッドを定義するべきかを明確にすることで思わぬバグを防ぐことができます。
-<?php footer(); ?>

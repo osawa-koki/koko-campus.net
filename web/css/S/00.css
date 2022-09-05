@@ -7,7 +7,6 @@ body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
 }
 
-/**/
 #subjectIndexBox {
   border: 1px solid fuchsia;
   margin: 0 auto 100px auto;
@@ -261,7 +260,7 @@ noscript {
   background-color: grey;
   margin: 15px 0;
 }
-#subjectMainBox img.絵文字 {
+#subjectMainBox img.picChar {
   display: inline;
   width: 1.2rem;
   height: 1.2rem;

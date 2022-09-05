@@ -1,11 +1,3 @@
-<?php
-require(__DIR__. "/../../framework/ver3/common.php");
-$obj = array(
-	"made" => "2022-02-21",
-	"updated" => "2022-02-21"
-);
-head($obj);
-?>
 <h2>ファイル操作</h2>
 今まではコンソール画面から入出力する簡単なプログラムを作成していましたが、これでは実用的ではありませんよね、、、<br />一般的なプログラムはデータをストレージにファイルとして保存して永続化します。<br />ということでファイルを操作する方法を学びましょう♪<br /><br />ファイル操作では以下の2つの処理を学びます。
 <ul>
@@ -15,26 +7,27 @@ head($obj);
 <h2>ファイルの読み込み</h2>
 最初に全体像を示します。
 <code class="java">
-/* 必要なモジュールをインポート */
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+	/* 必要なモジュールをインポート */
 
-/* メイン処理内 */
-try {
-	File file = new File("ファイルへのパス");
-	FileReader filereader = new FileReader(file);
-	int fs;
-	while((fs = filereader.read()) != -1) {
-		System.out.print((char)fs);
+	import java.io.File;
+	import java.io.FileReader;
+	import java.io.FileNotFoundException;
+	import java.io.IOException;
+
+	/* メイン処理内 */
+	try {
+		File file = new File("ファイルへのパス");
+		FileReader filereader = new FileReader(file);
+		int fs;
+		while((fs = filereader.read()) != -1) {
+			System.out.print((char)fs);
+		}
+		filereader.close();
+	} catch (FileNotFoundException e) {
+		System.out.println(e);
+	} catch (IOException e) {
+		System.out.println(e);
 	}
-	filereader.close();
-} catch (FileNotFoundException e) {
-	System.out.println(e);
-} catch (IOException e) {
-	System.out.println(e);
-}
 </code>
 なんだか複雑ですね、、、<br />ひとつずつ解説していきますね♪
 <h3>モジュールのインポート</h3>
@@ -70,7 +63,7 @@ javaではファイルストリームという名称は用いられていませ�
 	<li>ファイルリーダーの取得</li>
 </ol>
 <h4>ファイル型データの取得</h4>
-Fileクラスのコンストラクタにファイルへのパスを指定してファイル型データを取得します。<br />windowsではファイルのパスで、ディレクトリの区切りとして「<span class="en">\</span>」を使用しますが、これは文字列内でエスケープ文字として扱われるため、「<span class="en">\\</span>」と二回重ねてこれに対してエスケープ処理をする必要があります。
+Fileクラスのコンストラクタにファイルへのパスを指定してファイル型データを取得します。<br />Windowsではファイルのパスで、ディレクトリの区切りとして「<span class="en">\</span>」を使用しますが、これは文字列内でエスケープ文字として扱われるため、「<span class="en">\\</span>」と二回重ねてこれに対してエスケープ処理をする必要があります。
 <h4>ファイルリーダーの取得</h4>
 FileReaderクラスのコンストラクタに先ほど作成したFile型のデータを指定してファイルリーダーインスタンスを生成します。
 <h3>ファイルリーダーから文字の読み込み</h3>
@@ -164,4 +157,3 @@ Fileクラスのコンストラクタにファイルへのパスを指定して�
 </code>
 <h3>IOException</h3>
 実行時に発生するエラーデータを取得するデータ型です。
-<?php footer(); ?>
