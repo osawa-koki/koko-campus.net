@@ -1,11 +1,3 @@
-<?php
-require(__DIR__. "/../../framework/ver3/common.php");
-$obj = array(
-	"made" => "2022-04-28",
-	"updated" => "2022-04-28"
-);
-head($obj);
-?>
 <h2>DateTime</h2>
 現在の日付、時刻を扱うためにはDateTimeオブジェクトを使用します。<br />DateTimeオブジェクトを使用する際には、その下にある「Today」「Now」プロパティを呼び出します。
 <table>
@@ -322,4 +314,3 @@ Substarctメソッドで取得される値はTimeSpanオブジェクトで、「
 </code>
 文字列として受け取った値をDateTime型にパースして、成功したらDateTimeオブジェクトに代入して戻り値としてTrueを返し、失敗したら戻り値としてFalseを返します。<br /><br />これを利用してエラー処理を行います。
 <img src="../pics/DateTime.TryParse.gif" alt="DateTime型 パース" />
-<?php footer(); ?>

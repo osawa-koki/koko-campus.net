@@ -35,7 +35,7 @@
 		Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 			Dim lang As New Collection()
 			lang.Add("python", "py")
-			lang.Add("vb.net", "vb")
+			lang.Add("VB.NET", "vb")
 			lang.Add("rust", "rs")
 			lang.Add("c++", "cpp", 2)
 			Label1.Text = lang(1)
@@ -59,7 +59,7 @@
 	Dim lang As New Collection() From {
 		"python",
 		"rust",
-		"vb.net"
+		"VB.NET"
 	}
 	lang.Add("c/c++")
 	Label1.Text = lang.Count() '「4」
