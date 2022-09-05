@@ -137,6 +137,15 @@ Rustでは文字列型を表すのに「&amp;str」と「String」型があり�
 		eprint!("入力された文字は {}", word);
 	}
 </code>
+<!--
+<code class="rust">
+	fn main() {
+		let mut word = ""; // 空文字列を宣言 (&amp;str型)
+		std::io::stdin().read_line(&amp;mut word).ok();
+		eprint!("入力された文字は {}", word);
+	}
+</code>
+-->
 <img src="/?S00/0220/str-string_error.png" alt="str型とString型" />
 解決策は以下の二通りあります。
 <ul>
