@@ -5,6 +5,7 @@
 bin/
 obj/
 standalone/
+secret/
 
 # ファイル
 *.csv
