@@ -5,7 +5,7 @@
 bin/
 obj/
 standalone/
-.vs/
+secret/
 
 # ファイル
 *.csv
@@ -411,7 +411,7 @@ FodyWeavers.xsd
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
+# *.code-workspace # コメントアウト!!!
 
 # Local History for Visual Studio Code
 .history/
