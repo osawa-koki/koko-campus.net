@@ -18,7 +18,7 @@ func pyAPI(RR *RequestResponse) string {
 }
 
 const (
-	pyAPIdomain = "http://localhost:8888/"
+	pyAPIdomain = "http://localhost:8888"
 )
 
 func createPath2pyAPI(request *http.Request) string {
