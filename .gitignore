@@ -13,7 +13,6 @@ secret/
 *.env
 *.user
 *.~lock*
-*.ods
 src/pyAPI/tmp/
 
 
