@@ -1,3 +1,4 @@
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <h2>配列・ベクタ・スライス</h2>
 Rustでは、他の言語でいう配列に該当するデータ型は以下の3種類あります。
 <ul>
@@ -23,3 +24,83 @@ Rustでは、他の言語でいう配列に該当するデータ型は以下の3
 		</tr>
 	</tbody>
 </table>
+<img src="/?S00/0220/array-vector-slice.png" alt="配列・ベクタ・スライス" />
+<h2>配列</h2>
+<div class="quote">
+	<div>配列 (<a href="https://doc.rust-jp.rs/rust-by-example-ja/primitives/array.html">rust.jp</a>より)</div>
+	<div>配列はTという単一の型（訳注: ジェネリック型でも可）のオブジェクトの集合です。<br />それらのオブジェクトはメモリ上の連続した領域に保存されます。<br />配列は[]を用いて生成されます。<br />長さはコンパイル時には決定されていて、[T; length]という形で指定できます。</div>
+</div>
+配列は連続したメモリ空間に格納されるデータ型で、配列の要素へのアクセスが高速に可能であるという反面、配列の初期化時にそのサイズを決定しないといけないため、拡張性がないという問題があります。<br />配列は以下のように初期化します。
+<code class="rust">
+	let array_of_pokemon: [&amp;str; 5] = ["ピカチュウ", "ライチュウ", "コオリッポ", "チコリータ", "カビゴン"];
+</code>
+配列の要素は「0」から始まるインデックス番号で管理されます。
+<code class="rust">
+	let mut array_of_pokemon: [&amp;str; 5] = ["ピカチュウ", "ライチュウ", "コオリッポ", "チコリータ", "カビゴン"];
+
+	array_of_pokemon[1] = "テッカグヤ";
+
+	println!("{}番目の要素[配列] - {}", 0, array_of_pokemon[0]);
+	println!("{}番目の要素[配列] - {}", 1, array_of_pokemon[1]);
+
+	/* &darr; コンソール &darr;
+	0番目の要素[配列] - ピカチュウ
+	1番目の要素[配列] - テッカグヤ
+	*/
+</code>
+ミュータブル宣言をすれば、配列の要素を更新可能です。<br />言い換えれば、ミュータブル宣言をしなければ要素は変換不可能です。
+<img src="/?S00/0220/updateElementOfArray_immutable.png" alt="配列 イミュータブル" />
+<code class="rust">
+	let array_of_pokemon: [&amp;str; 5] = ["ピカチュウ", "ライチュウ", "コオリッポ", "チコリータ", "カビゴン"];
+	array_of_pokemon[1] = "テッカグヤ";
+
+	println!("{}番目の要素[配列] - {}", 0, array_of_pokemon[0]);
+	println!("{}番目の要素[配列] - {}", 1, array_of_pokemon[1]);
+
+	/* &darr; コンソール &darr;
+	0番目の要素[配列] - ピカチュウ
+	1番目の要素[配列] - テッカグヤ
+	*/
+</code>
+<h2>ベクタ</h2>
+<div class="quote">
+	<div>ベクタ (<a href="https://doc.rust-jp.rs/rust-by-example-ja/std/vec.html">rust.jp</a>より)</div>
+	<div>「ベクタ」はサイズを変更可能な配列です。<br />スライスと同様、そのサイズはコンパイル時には不定ですが、いつでも要素を追加したり削除したりすることができます。<br />ベクタは3つの要素で、その特徴が完全に決まります。</div>
+	<ul>
+		<li>データへのポインタ</li>
+		<li>長さ</li>
+		<li>容量 ... あらかじめメモリ上にベクタのために確保された領域</li>
+	</ul>
+</div>
+配列との最大の相違点はサイズを後から変更できることです。<br />では、早速ベクタ型のデータを生成してみましょう♪
+<code class="rust">
+	let v: Vec&lt;データ型&gt; = Vec::new();
+</code>
+一般的にはベクタは後から要素を追加・削除することを想定するため、ミュータブルとして宣言します。
+<code class="rust">
+	let mut v: Vec&lt;データ型&gt; = Vec::new();
+</code>
+マクロを使用してより簡単に?記述することもできます。
+<code class="rust">
+	let v: Vec&lt;i32&gt; = vec![];
+</code>
+<code class="rust">
+	let vector_of_browser = vec!["chrome", "firefox", "opera", "internet explorer", "edge"];
+</code>
+ベクタは配列と同様にインデックス番号からアクセス可能です。
+<code class="ruby">
+	let vector_of_browser = vec!["chrome", "firefox", "opera", "internet explorer", "edge"];
+
+	println!("{}番目の要素[ベクタ] - {}", 0, vector_of_browser[0]);
+	println!("{}番目の要素[ベクタ] - {}", 1, vector_of_browser[1]);
+
+	/* &darr; コンソール &darr;
+	0番目の要素[ベクタ] - chrome
+	1番目の要素[ベクタ] - firefox
+	*/
+</code>
+
+
+
+
+

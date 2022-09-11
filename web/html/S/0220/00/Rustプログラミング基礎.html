@@ -190,5 +190,5 @@ std::io::stdin()で返されたコンソールの標準入力へのハンドル�
 <h4>.expect()</h4>
 エラーが発生した場合にプログラムを強制的にクラッシュさせます。<br /><a href="https://doc.rust-jp.rs/book-ja/ch02-00-guessing-game-tutorial.html">公式ドキュメント</a>ではこちらが採用されています。<br />引数にはエラー発生時の表示文字列を指定します。
 <code class="rust">
-	std::io::stdin().read_line(&amp;mut word).expect("ダメ!!")();
+	std::io::stdin().read_line(&amp;mut word).expect("ダメ!!");
 </code>
