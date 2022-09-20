@@ -84,14 +84,14 @@ func main() {
 	if os.Getenv("DEBUG") == "ON" {
 		fmt.Println("DEBUG MODE")
 		if er := http.ListenAndServe("", nil); er != nil {
-			Error("failure on ListenAndServe")
 			fmt.Println("failure on ListenAndServe")
+			fmt.Println(er.Error())
 		}
 	} else {
 		fmt.Println("OPERATION MODE")
 		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
 			fmt.Println("failure on ListenAndServe")
-			Error("failure on ListenAndServe")
+			fmt.Println(er.Error())
 		} else {
 			fmt.Println("success on ListenAndServe")
 		}
