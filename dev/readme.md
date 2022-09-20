@@ -71,10 +71,57 @@ FTPであればFTPS(FTP over SSH)を、DBアクセスならば「Standard TCP/IP
 4. その他開発用のソフトウェア準備  
 
 
+
+
+# 環境変数の登録
+
+「/etc/profile」に以下の内容を登録する。
+
+
+```profile                                                            
+export PATH=$PATH:/usr/local/go/bin
+
+export DB_HOST=localhost
+export DB_PORT=3306
+export DB_USER=root
+export DB_PASSWORD=pw1234
+export DB_DATABASE_NAME=koko
+
+export TLS_CERT=/home/koko-campus.net/dev/key/debug.crt
+export TLS_PRIVKEY=/home/koko-campus.net/dev/key/debug.key
+
+export DOMAIN=koko-campus.net
+
+export SMTP_SERVER=smtp20.gmoserver.jp
+export SMTP_PORT=587
+export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
+```
+
+
+
 # GoによるWEBサーバ構築
 
-```go
-Go version -> 1.15.08
+以下のコマンドでGo言語コンパイラをインストールする。
+
+
+```bash
+# 古いバージョンのGoコンパイラをアンインストール
+sudo rm -rf /usr/local/go
+
+# Goコンパイラをダウンロード
+go1.19.1linux-amd64.tar.gz
+# ファイルを解凍
+sudo tar -C /usr/local -xzf go1.19.1.linux-amd64.tar.gz
+
+ls /usr/local/go
+
+export PATH=$PATH:/usr/local/go/bin
+```
+
+
+```bash
+go version
+# -> 1.19.1
 // 原則として最新のバージョンを使用する。
 ```
 
