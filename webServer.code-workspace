@@ -11,6 +11,6 @@
 		}
 	],
 	"settings": {
-		"terminal.integrated.cwd": ""
+		"terminal.integrated.cwd": "src\\webServer"
 	}
 }
