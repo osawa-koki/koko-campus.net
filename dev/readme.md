@@ -109,7 +109,7 @@ export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
 sudo rm -rf /usr/local/go
 
 # Goコンパイラをダウンロード
-go1.19.1linux-amd64.tar.gz
+wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
 # ファイルを解凍
 sudo tar -C /usr/local -xzf go1.19.1.linux-amd64.tar.gz
 
