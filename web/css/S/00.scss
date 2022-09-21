@@ -9,6 +9,19 @@ body {
 	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
 }
 
+#subjectExplainingBox {
+	margin: 50px 0 !important;
+	th {
+		background-color: lightgray !important;
+	}
+	td {
+		background-color: white !important;
+		a {
+			color: blue !important;
+			text-decoration: none !important;
+		}
+	}
+}
 
 #subjectIndexBox {
 	border: 1px solid fuchsia;
@@ -249,6 +262,10 @@ noscript {
 			border-bottom: 1px dotted black;
 			margin-bottom: 20px;
 			padding-bottom: 20px;
+		}
+		ul, ol {
+			margin: 0;
+			border: none;
 		}
 	}
 	div.column {
