@@ -1,3 +1,19 @@
+<table id="subjectExplainingBox">
+	<tbody>
+		<tr>
+			<th>教科</th>
+			<td><a href="/S{{ .PathS }}">{{ .Name }}</a></td>
+		</tr>
+		<tr>
+			<th>レッスン</th>
+			<td><a href="/S{{ .PathS }}L{{ .PathL }}">{{ .Lesson }}</a></td>
+		</tr>
+		<tr>
+			<th>ページ</th>
+			<td><a href="/S{{ .PathS }}L{{ .PathL }}P{{ .PathP }}">{{ .Page }}</a></td>
+		</tr>
+	</tbody>
+</table>
 <h1>{{ .Page }}</h1>
 <div id="subjectMainBox">
 	<section id="subjectIndexBox"></section>

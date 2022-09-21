@@ -3,15 +3,15 @@
 		<tbody>
 			<tr>
 				<th>教科</th>
-				<td>{{ .Name }}</td>
+				<td><a href="/S{{ .PathS }}">{{ .Name }}</a></td>
 			</tr>
 			<tr>
 				<th>レッスン</th>
-				<td>{{ .Lesson }}</td>
+				<td><a href="/S{{ .PathS }}L{{ .PathL }}" class="{{ if eq .PathL "" }}disabled{{ end }}">{{ .Lesson }}</a></td>
 			</tr>
 			<tr>
 				<th>ページ</th>
-				<td>{{ .Page }}</td>
+				<td><a href="/S{{ .PathS }}L{{ .PathL }}P{{ .PathP }}" class="disabled">{{ .Page }}</a></td>
 			</tr>
 		</tbody>
 	</table>

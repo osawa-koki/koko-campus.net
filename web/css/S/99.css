@@ -2,6 +2,14 @@
 #subjectError .subjectErrorTable th {
   background-color: lightgray;
 }
+#subjectError .subjectErrorTable td a {
+  text-decoration: none;
+  color: blue;
+}
+#subjectError .subjectErrorTable td a.disabled {
+  color: black;
+  pointer-events: none;
+}
 #subjectError .subjectImgBox {
   margin: 25px -5px;
   display: flex;
