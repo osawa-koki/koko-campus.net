@@ -1,0 +1,132 @@
+<h2>rugクレート</h2>
+rugクレートとは、任意精度の数値を扱うためのクレートです。
+<a href="https://crates.io/crates/rug" class="link cratesLogo">crates.io</a>
+<a href="https://docs.rs/rug/1.17.0" class="link rustLogo">rustdoc</a>
+<h3>インストール</h3>
+「Cargo.toml」ファイルに以下のように依存関係を追加します。
+<code class="Cargo-dot-toml dummy">
+	rug = "1.17.0"
+</code>
+使用するファイルの先頭に以下のように書きます。
+<code class="rust">
+	extern crate rug;
+	use rug::*;
+</code>
+<div class="separator"></div>
+rugクレートでは大きく以下の4つの機能を提供しています。
+<ul>
+	<li>Integer(整数)</li>
+	<li>Float(浮動小数点数)</li>
+	<li>Rational(有理数)</li>
+	<li>Complex(複素数)</li>
+</ul>
+<h2>Integer</h2>
+任意の精度の整数を扱うことができます。<br />Integer型では以下のメソッドを確認しましょう♪
+<ul>
+	<li>new</li>
+	<li>assign</li>
+	<li>from</li>
+</ul>
+<h3>new</h3>
+任意精度整数型のデータを初期化します。<br />初期化とは、専用のメモリ空間を確保して実際に変数を使用できる状態にすることだと認識して下さい。
+<code class="rust">
+	let mut int = Integer::new();
+</code>
+これで、intという変数で任意精度整数を扱うことができるようになりました。
+<h3>assign</h3>
+初期化した変数に実際に値を代入します。<br />残念ながら、「=」は使用できません。
+<code class="rust">
+	/* コンパイルエラー */
+
+	int = 10;
+
+	/* &darr; コンソール &darr;
+	expected struct `rug::Integer`, found integer
+	*/
+</code>
+これはassignメソッドを使用することで解決します。
+<code class="rust">
+	int.assign(10);
+</code>
+
+<h3>from</h3>
+プリミティブ型から任意精度整数型を生成します。
+<code class="rust">
+	Integer::from(プリミティブ型)
+</code>
+先ほど、任意精度整数型変数への代入は「=」を使用できないと説明しましたが、任意精度整数型は「=」による代入を禁止しているわけではなく、プリミティブ型から任意精度整数型への暗黙の型変換ができないため、エラーが発生しています。<br /><br />したがって、assignの代わりに以下のように書くことは可能です。
+<code class="rust">
+	rug_int = Integer::from(10);
+</code>
+<div class="separator"></div>
+では、実際に巨大な数を扱ってみましょう♪<br />プリミティブ型として最初に扱うことができる最大値を取得します。
+<code class="rust">
+	println!("max of u64 -> {}", std::u64::MAX);
+
+	/* &darr; コンソール &darr;
+	max of u64 -> 18446744073709551615
+	*/
+</code>
+これを超える値は扱うことができません。
+<code class="rust">
+	/* コンパイルエラー */
+
+	let big: u64 = 18446744073709551616;
+
+	/* &darr; コンソール &darr;
+	the literal `18446744073709551616` does not fit into the type `u64` whose range is `0..=18446744073709551615`
+	*/
+</code>
+ということで、任意精度整数型を使用して整数を扱いましょう♪
+<code class="rust">
+	let norm_max = std::u64::MAX; // 18446744073709551615
+    let mut rug_int = Integer::new();
+    rug_int = Integer::from(norm_max); // rugデータ型にu64の最大値を格納
+	println!("rugクレートを使えばok! -> {}", rug_int.clone() * rug_int.clone()); // 340282366920938463426481119284349108225
+</code>
+cloneメソッドを使用しているのは所有権の問題があるからです。<br />u64の最大値に2乗であるものすごく大きな数字も扱えていることが確認できます。
+<h2>Float</h2>
+
+
+
+
+<h2>Rational</h2>
+comming soon...
+
+
+
+<h2>Complex</h2>
+
+
+
+
+
+<h2>incomplete</h2>
+<a href="https://docs.rs/rug/latest/rug/index.html#incomplete-computation-values">Rust公式ページ</a>では、不完全値について以下の場合に生じると説明しています。
+<div class="quote">
+	<div>不完全値 (<a href="https://docs.rs/rug/latest/rug/index.html#incomplete-computation-values">Rust公式ページ</a>)</div>
+	<div>
+		<ul>
+			<li>Sometimes we need to assign the result to an object that already exists. Since Rug types require memory allocations, this can help reduce the number of allocations. (While the allocations might not affect performance noticeably for computationally intensive functions, they can have a much more significant effect on faster functions like addition.)</li>
+			<li>For the Float and Complex number types, we need to know the precision when we create a value, and the operation itself does not convey information about what precision is desired for the result.</li>
+		</ul>
+	</div>
+</div>
+例えば、巨大整数のべき乗は不完全値を返します。
+<code class="rust">
+	println!("{:?}", Integer::i_pow_u(10, 100));
+
+	/* &darr; コンソール &darr;
+	IPowUIncomplete { base: 10, exponent: 100 }
+	*/
+</code>
+デフォルトの出力形式では出力できないため、「:?」とデバグ目的出力を指定しています。<br />「10<sup>100</sup>」の計算はまだ完成していません。<br />これを完成させるには、上で紹介してたrugのデータ型に変換する必要があります。<br />ここでは任意精度整数型に変換します。
+<code class="rust">
+	println!("{}", Integer::from(Integer::i_pow_u(10, 100)));
+
+	/* &darr; コンソール &darr;
+	10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	*/
+</code>
+どの演算が不完全値を返すのかをすべて覚えるのは大変ですので、コンパイル時のエラー出力で、「incomplete...」的な文が出力されたら、対象となる部分をrugが用意する専用のデータ型に変換してみて下さい。
+
