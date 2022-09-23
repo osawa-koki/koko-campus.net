@@ -1,25 +1,23 @@
-<h2>pypi</h2>
-<p class="pypi-bg x">「ぱいぱい」と呼びます。<br />別に卑猥だなんて思ったことはないです、、、<br />pypiとは<a href="https://pypi.org/">python公式サイト</a>では「The Python Package Index (PyPI) is a repository of software for the Python programming language.」と説明されています。<br />みんなのモジュールの保管庫みたいな感じですね♪<br />これを使用すれば、第三者が作ってくれたpythonの機能(モジュール)を僕たちも使うことができます。<br />これを使用するにはpipというパッケージ管理ツールを使用します。</p>
 <h2>pip</h2>
-pythonのパッケージ(モジュール)を管理するツールです。<br />python3.4以降だと標準でインストールされています。<br />これを使用するにはシェルを使用します。<br />windowsでいうコマンドプロンプトですね♪<br /><br />まずはコマンドプロンプトを開きましょう♪<br />スタートメニューから「コマンドプロンプト」の入力してください。
-<img src="../pics/cmd.png" alt="コマンドプロンプトの説明画像" />
+Pythonのパッケージ(モジュール)を管理するツールです。<br />python3.4以降だと標準でインストールされています。<br />これを使用するにはシェルを使用します。<br />Windowsでいうコマンドプロンプトですね♪<br /><br />まずはコマンドプロンプトを開きましょう♪<br />スタートメニューから「コマンドプロンプト」の入力してください。
+<img src="/?S00/0103/cmd.png" alt="コマンドプロンプト" />
 <h2>list</h2>
 インストールされているパッケージの一覧を表示します。<br />以下のコードを打ち込んでください。
 <code class="shell">
 	python -m pip list
 </code>
-<img src="../pics/pip-list.png" alt="pip listの説明画像" />
+<img src="/?S00/0103/pip-list.png" alt="pip list" />
 このコマンドを実行するとインストール済みのパッケージとそのバージョンが表示されます。<br />僕は既に幾つかのパッケージをインストールしてありますのでたくさん出てきますが、皆さんはデフォルトでインストールされているパッケージだけが表示されると思います。
 <h2>install</h2>
 ではパッケージをインストールしてみましょう♪<br />pipでパッケージをインストールするには以下のコマンドを実行します。
 <code class="shell">
 	pip install パッケージ名
 </code>
-ここでは試しに「pandas」というパッケージをインストールしてみましょう♪<br />ちなみにpandasとは2二次元配列のデータ処理を得意とするパッケージです。<br />エクセルのプログラマーバージョンだと思ってください。<br />AIとかRPAとかに興味ある方は間違いなく使うパッケージです。
+ここでは試しに「pandas」というパッケージをインストールしてみましょう♪<br />ちなみにpandasとは二次元配列のデータ処理を得意とするパッケージです。<br />エクセルのプログラマーバージョンだと思ってください。<br />AIとかRPAとかに興味ある方は間違いなく使うパッケージです。
 <code class="shell">
 	pip install pandas
 </code>
-<img src="../pics/pip-install.gif" alt="pip installの説明画像" />
+<img src="/?S00/0103/pip-install.gif" alt="pip install" />
 もう一度以下のコマンドを実行してインストール済みパッケージ一覧を表示してください。<br />pandasが表示されていると思います。
 <code class="shell">
 	python -m pip list
@@ -82,6 +80,3 @@ pipを用いてインストール済みのパッケージをアンインスト�
 	</tbody>
 </table>
 不必要なパッケージをインストールしてもストレージを圧迫するだけなので使うときに適時インストールすることをオススメします。
-<div class="separator2"></div>
-これで、python入門-ver1は終了です。<br />python中級編で会いましょう♪
-<a href="../../python中級/branch" class="link-subject to-python中級"></a>
