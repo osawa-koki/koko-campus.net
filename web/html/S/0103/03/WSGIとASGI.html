@@ -1,5 +1,7 @@
 <h2>WSGIとASGI</h2>
-「WSGI」「ASGI」はそれぞれ、「Web Server Gateway Interface」「Asynchronous Server Gateway Interface」の略で、WEBサーバとWEBアプリケーションが通信するための、標準化されたインタフェース定義のことを言います。<br />一般的にはWEBシステムは以下の3つから構成されます。
+「WSGI」「ASGI」はそれぞれ、「Web Server Gateway Interface」「Asynchronous Server Gateway Interface」の略で、WEBサーバとWEBアプリケーションが通信するための、標準化されたインタフェース定義のことを言います。<br />なんだかよくわかりりませんね、、、(´;ω;｀)<br /><br />ということで、一般的なWEbシステムの仕組みについて説明します。<br />これはWEB三層システムと呼ばれます。
+<h2>WEB三層システム</h2>
+一般的にはWEBシステムは以下の3つから構成されます。
 <ul>
 	<li>WEBサーバ</li>
 	<li>APサーバ</li>
@@ -14,20 +16,53 @@
 		</tr>
 		<tr>
 			<th>APサーバ</th>
-			<td>動的に生成する必要がある部分を担います。<br /></td>
+			<td>アプリケーションサーバの略です。<br />動的に生成する必要がある部分を担います。<br />動的に生成するにあたって必要となるデータ、ないしは永続化する必要があるデータに関してはDBサーバに問合せを行います。</td>
 		</tr>
 		<tr>
 			<th>DBサーバ</th>
-			<td></td>
+			<td>データベースサーバの略です。<br />APサーバからの問合せを受けてSQLを実行し、その結果を必要に応じて返します。</td>
 		</tr>
 	</tbody>
 </table>
-
-
-
-
-
-
+<img src="/?S00/0103/web3layer-scheme.png" alt="WEB三層システム" />
+問題なのはWEBサーバとAPサーバ間のやり取りです。<br />Perlなどを使用している古いシステムでは標準入出力を通して送受信を行うCGIという仕組みを使用することが多かったですが、これには無駄なオーバヘッドが生じるという問題や、保守性の問題などから最近は使用されなくなっています。<br /><br />WEBサーバにApacheを採用している場合にはPHP用のモジュールを使用することで簡単にPHPプログラムを動作させることができ、現在でも一般的に使用されています。<br />それ以外にはJavaのサーブレットなどがありますね♪<br /><br />FastAPIが採用しているuvicornはこれとは若干異なるWSGI、さらにはその進化系であるASGIを使用しています。
+<h2>WSGI</h2>
+「Web Server Gateway Interface」の略で、WEBサーバとWEBアプリケーションが通信するための、標準化されたインタフェース定義のことを言います。<br />前述したWEB三層システムのWEBサーバ-APサーバ間の通信を標準化したものだと認識してください。
+<img src="/?S00/0103/wsgi.png" alt="WSGI" />
+これはPEP3333で定義されています。
+<a href="https://peps.python.org/pep-3333/" class="link pythonLogo">PEP3333</a>
+簡単に説明すると、APサーバの実体はPythonで書かれた呼び出し可能なオブジェクトであり、WEBサーバが当該オブジェクトを呼び出すことで、WEBサーバとAPサーバ間でのやり取りを実現します。<br /><br />呼び出し可能なオブジェクトとはクラスと関数が該当します。<br />一般的には関数を使用することが多いです。<br /><br />以降ではWEbサーバから呼び出される、APサーバとしての役割を担うオブジェクトをアプリケーションオブジェクトと呼ぶこととします。
+<h3>アプリケーションオブジェクト</h3>
+WEbサーバとAPサーバがやり取りをする際に、その規格が必要となりますが、これは非常に単純です。<br />アプリケーションオブジェクトは以下の要求を満たす設計である必要があります。
+<ul>
+	<li>「environ」「start_response」を引数として受け取る</li>
+	<li>いテラブルな文字列であるResponseDataを戻り値として返す</li>
+</ul>
+各単語について説明します。
+<table>
+	<tbody>
+		<tr>
+			<th>environ</th>
+			<td>環境変数を含む辞書型のデータです。</td>
+		</tr>
+		<tr>
+			<th>start_response</th>
+			<td>WEbサーバが実行するコールバック関数で、APサーバの実体です。</td>
+		</tr>
+		<tr>
+			<th>ResponseData</th>
+			<td>APサーバがWEBサーバに返すデータです。</td>
+		</tr>
+	</tbody>
+</table>
+<h2>ASGI</h2>
+「Asynchronous Server Gateway Interface」の略で、WSGIの非同期にも対応させたバージョンで、WSGIの進化系と言えます。<br />ASGIについては以下の引数を受け取るアプリケーションオブジェクトを実装する必要があります。
+<ul>
+	<li>リクエスト情報を格納する変数(scope)</li>
+	<li>ASGIイベントメッセージを受信するために使用される非同期関数(receive)</li>
+	<li>ASGIイベントメッセージを送信するために使用する非同期関数(send)</li>
+</ul>
 <h2>uvicorn</h2>
 fastAPIパッケージと同時にインストールし、FastAPIプログラムを実行する際のコマンドとしても使用しました。<br />このuvicornについて簡単に説明します。
 <a href="https://www.uvicorn.org/" class="link uvicornLogo">uvicorn</a>
+これは前述したASGIによるWEbサーバ・APサーバ間のやり取りを実現するためのフレームワークです。<br />したがって、アプリケーションをオブジェクトを生成し、これに関する情報をuvicornに与えるだけでWEBサーバとAPサーバを簡単に構築することが可能です。
