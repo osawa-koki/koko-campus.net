@@ -1,0 +1,41 @@
+<h2>FastAPIコード</h2>
+FastAPIはアプリケーションオブジェクトの作成が主となります。
+<code class="python">
+	@app.get(パス)
+	def 関数名():
+		return "ボディデータ"
+</code>
+例えば、トップページ(/)に対するアクセスに「Hello World」と返す場合には以下のように書きます。
+<code class="python">
+	@app.get("/")
+	def hello_world():
+		return "Hello World"
+</code>
+これを実行して「http://localhost/」にアクセスすると「Hello World」と出力されます。
+<h2>@デコレータ</h2>
+「@app.get("/")」という見たことない記法が出てきましたね♪<br />これはデコレータと呼ばれ、処理に対する補足情報を記述します。<br /><br />公式の説明では、「「デコレータ」は直下の関数を受け取り、それを使って何かを行います。」と説明されています。
+<p>引用元は<a href="https://fastapi.tiangolo.com/ja/tutorial/first-steps/">こちら</a>。</p>
+対象となるパスを指定することで当該パスに対するリクエストを受けた際に呼び出す関数を指定します。
+<h2>不明なパスの取得</h2>
+では、次は特定のパスではなくて任意のパスを指定してみましょう♪<br />先頭がpokemonで、次にポケモン名を指定してみましょう♪
+<code class="python">
+	@app.get("/pokemon/{name}")
+	def hello_world(name: str):
+		return "you entered {}!"
+</code>
+今回は文字列型と推測されるポケモン名を取得するため、str型として宣言しています。<br />それ以外のデータ型については後ほど説明します。
+<img src="/?S00/0103/fastapi_simplePathReceiver.gif" alt="パスの取得" />
+<h3>path宣言</h3>
+しかしながら上記の方法では、「/pokemon/ポケモン名」の場合にのみ有効であり、「/pokemon/ポケモン名/★★★」の場合には正常に動作しません。
+<img src="/?S00/0103/fastapi_simplePathReceiverUnableToCatch.gif" alt="パスの取得" />
+これに対応するためには全てのポケモン名の関数を宣言して、、、<br />ってのは現実的ではありません、、、<br /><br />「/pokemon」から始まる全てのパスを取得するには以下のように書き換えます。
+<code class="python">
+	@app.get("/pokemon/{name:path}")
+	def hello_world(name: str):
+		return "you entered {}!"
+</code>
+<img src="/?S00/0103/fastapi_simplePathReceiverAbleToCatch.gif" alt="パスの取得" />
+
+
+
+
