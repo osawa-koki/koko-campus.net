@@ -105,3 +105,22 @@ FastAPIはアプリケーションオブジェクトの作成が主となりま�
 		return "key1 is {}, key2 is {}".format(key1, key2)
 </code>
 <img src="/?S00/0103/fastapi_simpleQStr-receiver_default-args.gif" alt="クエリストリングの取得(デフォルト引数)" />
+<h2>HTTPメソッドの指定</h2>
+最後に@デコレータで対象となるHTTPメソッドを指定する方法について説明します。<br />といっても、なんとなく想像できる通りですが、「@app.get」の部分を「@app.post」「@app.put」「@app.delete」に変えるだけです。
+<code class="python">
+	@app.get("/")
+	def hello_world():
+		return "get"
+
+	@app.post("/")
+	def hello_world():
+		return "post"
+
+	@app.put("/")
+	def hello_world():
+		return "put"
+
+	@app.delete("/")
+	def hello_world():
+		return "delete"
+</code>
