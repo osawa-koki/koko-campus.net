@@ -374,6 +374,9 @@ noscript {
 #subjectMainBox .margin {
   margin: 25px 0;
 }
+#subjectMainBox .padding {
+  padding: 25px;
+}
 #subjectMainBox .center {
   text-align: center;
 }
@@ -387,4 +390,7 @@ noscript {
 #subjectMainBox .nowrap {
   white-space: nowrap;
   word-break: normal;
+}
+#subjectMainBox .red {
+  color: red;
 }
