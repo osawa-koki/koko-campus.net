@@ -1,0 +1,33 @@
+<h2>WSGIとASGI</h2>
+「WSGI」「ASGI」はそれぞれ、「Web Server Gateway Interface」「Asynchronous Server Gateway Interface」の略で、WEBサーバとWEBアプリケーションが通信するための、標準化されたインタフェース定義のことを言います。<br />一般的にはWEBシステムは以下の3つから構成されます。
+<ul>
+	<li>WEBサーバ</li>
+	<li>APサーバ</li>
+	<li>DBサーバ</li>
+</ul>
+各サーバは以下の役割を担います。
+<table>
+	<tbody>
+		<tr>
+			<th>WEBサーバ</th>
+			<td>HTTPリクエストを受け付け、「単純なHTML」「CSS」「JS」「画像」「動画」などのユーザによって表示する内容が異ならない静的ファイルについてはそのままレスポンスとして返し、動的に生成する必要があるデータに関してはAPサーバに処理を投げる役割を担います。</td>
+		</tr>
+		<tr>
+			<th>APサーバ</th>
+			<td>動的に生成する必要がある部分を担います。<br /></td>
+		</tr>
+		<tr>
+			<th>DBサーバ</th>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+
+<h2>uvicorn</h2>
+fastAPIパッケージと同時にインストールし、FastAPIプログラムを実行する際のコマンドとしても使用しました。<br />このuvicornについて簡単に説明します。
+<a href="https://www.uvicorn.org/" class="link uvicornLogo">uvicorn</a>
