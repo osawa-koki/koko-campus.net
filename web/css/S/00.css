@@ -184,13 +184,13 @@ noscript {
   cursor: pointer;
 }
 #subjectMainBox *.max-300w {
-  max-width: 300px;
+  max-width: 300px !important;
 }
 #subjectMainBox *.max-400w {
-  max-width: 400px;
+  max-width: 400px !important;
 }
 #subjectMainBox *.max-500w {
-  max-width: 500px;
+  max-width: 500px !important;
 }
 #subjectMainBox *.no-max {
   max-width: none !important;
@@ -393,4 +393,10 @@ noscript {
 }
 #subjectMainBox .red {
   color: red;
+}
+#subjectMainBox .blue {
+  color: blue;
+}
+#subjectMainBox .green {
+  color: green;
 }
