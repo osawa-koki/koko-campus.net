@@ -1,0 +1,192 @@
+<h2>SQLite</h2>
+「SQL」&times;「Lite」の造語で、非常に軽量なデータベース管理システムです。<br />データベースがファイルとして管理されるため、DBMSのインスタンスを生成して、、、という複雑な処理をすることなく操作が可能です。<br /><br />また、マスタデータ等のファイルに関してはGit管理対象として共有することも可能です。<br /><br />非常にシンプルで操作も簡単であるため、シンプルで簡単な記法を特徴とするPythonと非常に相性がいいです。<br /><br />以下のページはPython公式ページを参考に作成しています。
+<a href="https://docs.python.org/ja/3/library/sqlite3.html" class="link pythonLogo">Python SQLite</a>
+<h2>環境構築</h2>
+環境構築というほど大げさな処理は不要ですが、、、<br /><br />まずは、SQLiteをインストールしましょう♪
+<a href="https://www.sqlite.org/download.html" class="link SQLiteLogo">SQLite</a>
+Linuxであれば以下のコマンドで簡単にインストール可能です。
+<code class="shell">
+	sudo apt install sqlite3
+</code>
+SQLiteをPythonで操作するにはsqliteモジュールをファイル先頭でインポートします。
+<code class="python">
+	import sqlite3
+</code>
+sqlite3モジュールでデフォルトでインストールされているため、pipコマンドでインストールする必要はありません。
+<h2>コマンドライン操作</h2>
+SQLiteをコマンドラインで操作するには以下のコマンドを実行します。
+<code class="shell">
+	sqlite パス
+</code>
+SQLiteはファイルベースで動作するため、パスにはデータベースを管理するファイルへのパスを指定します。<br /><br />sqliteプロンプトモードに入れば他のDBMSと同様に操作が可能です。<br /><br />では、pokemonという名前のテーブルを作成してみましょう♪<br />カラムは以下のようにします。
+<ul>
+	<li>number(INT | PRIMARY KEY)</li>
+	<li>name(STRING | NOT NULL)</li>
+	<li>type1(STRING | NOT NULL)</li>
+	<li>type2(STRING | NULL)</li>
+</ul>
+また、SQLiteではデータ型を省略することもできます。<br />といっても省略する必要はほとんどなく、省略することによるデメリットの方が大きいと感じているため、僕はデータ型を省略しませんが、、、
+<code class="sql">
+	CREATE TABLE pokemon(
+		number INT PRIMARY KEY,
+		name STRING NOT NULL,
+		type1 STRING NOT NULL,
+		type2 STRING NULL
+	);
+</code>
+「.table」と打つと、そのデータベースが保有するテーブル一覧が表示されます。
+<h2>データベース接続</h2>
+データベースはファイルベースで管理され、ソケット通信を行わないため、接続文字列等の情報は不要です。<br />SQLiteはファイルベースで動作しますので、パスを指定するだけでOK!です。<br /><br />以下のように書きます。
+<code class="python">
+	connection = sqlite3.connect("ファイルへのパス")
+</code>
+一般的には「.db」や「.sqlite」という拡張子を付けることが多いです。<br />ここでは「koko.sqlite」とします。
+<code class="python">
+	connection = sqlite3.connect("db/koko.sqlite")
+</code>
+これ以降でSQL文の実行を行います。<br /><br />データベース操作が終了したら、データベース接続を遮断します。
+<code class="python">
+	connection.close()
+</code>
+<h2>カーソルオブジェクト</h2>
+公式サイトではデータベース接続を行ったら、カーソルオブジェクトを生成して、それに搭載されているメソッドを使用してSQLを実行すると説明されています。
+<div class="quote">
+	<div><a href="https://docs.python.org/ja/3/library/sqlite3.html">Python docs</a></div>
+	<div>Once a Connection has been established, create a Cursor object and call its execute() method to perform SQL commands:</div>
+</div>
+カーソルオブジェクトはデータベース接続を格納するオブジェクトにcursorメソッドを実行することをで生成できます。
+<code class="python">
+	cursor = connection.cursor()
+</code>
+<h2>INSERT</h2>
+では、テーブルに行を挿入しましょう♪
+<code class="python">
+	cursor.execute("INSERT INTO テーブル名 VALUES(...)")
+	connection.commit()
+</code>
+connecttionオブジェクトに対してcommitメソッドを実行しないとデータの永続化が行われません。<br /><br />バインド機構も簡単に使用可能です。<br />「?」をプレースホルダとして扱い、第二引で使用する値を指定します。<br />第二引数はタプル型で指定します。
+<code class="python">
+	cursor.execute("INSERT INTO テーブル名 VALUES(?, ?, ?)", (data1, data2, data3))
+</code>
+では、先ほど作成したpokemonテーブルにピカチュウを挿入してみましょう♪
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+
+	cursor.execute(
+		"INSERT INTO pokemon VALUES(?, ?, ?, ?)", (25, "ピカチュウ", "でんき", None)
+	)
+	connection.commit()
+	
+	connection.close()
+</code>
+<h3>複数のデータの一括実行</h3>
+カーソルオブジェクトのexecutemanyメソッドを使用することで一度で複数の値を挿入することができます。<br />この場合には第二引数にはタプル型のリストを指定します。
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+	
+	data = [
+		(25, "ピカチュウ", "でんき", None),
+		(152, "チコリータ", "くさ", None),
+		(875, "コオリッポ", "こおり", None),
+		(884, "ジュラルドン", "はがね", "ドラゴン"),
+	]
+	cursor.executemany("INSERT INTO pokemon VALUES(?, ?, ?, ?)", data)
+	connection.commit()
+	
+	connection.close()
+
+	/* &darr; コンソール &darr;
+	25|ピカチュウ|でんき|
+	152|チコリータ|くさ|
+	875|コオリッポ|こおり|
+	884|ジュラルドン|はがね|ドラゴン
+	*/
+</code>
+<h2>SELECT</h2>
+SELECT文で行を取得するメソッドは以下の2つがあります。
+<ul>
+	<li>execute - fetchone</li>
+	<li>execute - for</li>
+</ul>
+<h3>execute - fetchone</h3>
+1行だけを取得するメソッドです。<br />executeメソッドでSQL文を実行した後に、カーソルオブジェクトのfetchoneメソッドを実行します。<br />戻り値はタプル型のデータですので、インデックス番号を指定して要素を取得します。
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+	
+	cursor.execute("SELECT * FROM pokemon")
+	row = cursor.fetchone()
+	
+	print(row)
+	
+	connection.close()
+
+	/* &darr; コンソール &darr;
+	(25, 'ピカチュウ', 'でんき', None)
+	*/
+</code>
+<h3>execute - for</h3>
+executeメソッドを実行するとカーソルオブジェクトに選択した全ての行が代入されます。<br />先ほどのfetchoneメソッドでは先頭の1行だけを取得しましたが、カーソルオブジェクトそのものをループすることで全ての行を取得できます。
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+	
+	cursor.execute("SELECT * FROM pokemon")
+	for row in cursor:
+		print(row)
+	
+	connection.commit()
+	
+	connection.close()
+
+	/* &darr; コンソール &darr;
+	(25, 'ピカチュウ', 'でんき', None)
+	(152, 'チコリータ', 'くさ', None)
+	(875, 'コオリッポ', 'こおり', None)
+	(884, 'ジュラルドン', 'はがね', 'ドラゴン')
+	*/
+</code>
+<h2>UPDATE</h2>
+SELECT文やINSERT文と同じです。<br />commitメソッドを実行しないとデータが永続化しないことは注意して下さい。
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+	
+	cursor.execute("UPDATE pokemon SET name = ? WHERE number = ?;", ("ぴかちゅう", 25))
+	connection.commit()
+	
+	connection.close()
+</code>
+<h2>DELETE</h2>
+こちらもSELECT文やINSERT文と同じです。
+<code class="python">
+	import sqlite3
+
+	dbname = "db/koko.sqlite"
+	connection = sqlite3.connect(dbname)
+	cursor = connection.cursor()
+	
+	cursor.execute("DELETE FROM pokemon WHERE number = ?", (25, ))
+	
+	connection.commit()
+	
+	connection.close()
+</code>
+因みに、「(25, )」としているのは、要素をひとつだけ持つタプルとして表現するためです。<br />「(25)」としてしまうと、単なる数字としてみなされてしまいます。<br />「(1 + 2) * 3」的な感じで演算優先度調整用の括弧と勘違いされてしまうからです。
