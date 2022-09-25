@@ -1,0 +1,161 @@
+<h2>リクエストデータの処理</h2>
+ここでは、クライアントが送信したリクエストデータを扱う処理について説明します。<br />リクエストデータを処理するためにはPydanticモジュールを使用しますので、これをインポートしましょう♪
+<code class="python">
+	from pydantic import BaseModel
+</code>
+<h2>コンテントタイプ</h2>
+既に簡単に説明していますが、クライアントがサーバに送信するデータについて説明します。<br />クライアントがサーバに送信するデータの種類はコンテントタイプと呼ばれ、ヘッダの「Content-Type」フィールドで指定します。<br /><br />コンテントタイプには以下の種類があります。
+<div class="scroll-600w">
+	<table>
+		<thead>
+			<tr>
+				<th>Content-Type</th>
+				<th>Kind</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>text/plain</td>
+				<td>テキストファイル</td>
+			</tr>
+			<tr>
+				<td>text/csv</td>
+				<td>CSVファイル</td>
+			</tr>
+			<tr>
+				<td>text/html</td>
+				<td>HTMLファイル</td>
+			</tr>
+			<tr>
+				<td>text/css</td>
+				<td>CSSファイル</td>
+			</tr>
+			<tr>
+				<td>text/javascript</td>
+				<td>JavaScriptファイル</td>
+			</tr>
+			<tr>
+				<td>application/octet-stream</td>
+				<td>EXEファイルなどの実行ファイル</td>
+			</tr>
+			<tr>
+				<td>application/json</td>
+				<td>JSONファイル</td>
+			</tr>
+			<tr>
+				<td>application/pdf</td>
+				<td>PDFファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.ms-excel</td>
+				<td>EXCELファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</td>
+				<td>EXCELファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.ms-powerpoint</td>
+				<td>PowerPointファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.presentationml.presentation</td>
+				<td>PowerPointファイル</td>
+			</tr>
+			<tr>
+				<td>application/msword</td>
+				<td>WORDファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.wordprocessingml.document</td>
+				<td>WORDファイル</td>
+			</tr>
+			<tr>
+				<td>image/jpeg</td>
+				<td>JPEGファイル(.jpg, .jpeg)</td>
+			</tr>
+			<tr>
+				<td>image/png</td>
+				<td>PNGファイル</td>
+			</tr>
+			<tr>
+				<td>image/gif</td>
+				<td>GIFファイル</td>
+			</tr>
+			<tr>
+				<td>image/bmp</td>
+				<td>Bitmapファイル</td>
+			</tr>
+			<tr>
+				<td>image/svg+xml</td>
+				<td>SVGファイル</td>
+			</tr>
+			<tr>
+				<td>application/zip</td>
+				<td>Zipファイル</td>
+			</tr>
+			<tr>
+				<td>application/x-lzh</td>
+				<td>LZHファイル</td>
+			</tr>
+			<tr>
+				<td>application/x-tar</td>
+				<td>tarファイル/tar&amp;gzipファイル</td>
+			</tr>
+			<tr>
+				<td>audio/mpeg</td>
+				<td>MP3ファイル</td>
+			</tr>
+			<tr>
+				<td>video/mp4</td>
+				<td>MP4ファイル</td>
+			</tr>
+			<tr>
+				<td>video/mpeg</td>
+				<td>MPEGファイル（動画）</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://qiita.com/AkihiroTakamura/items/b93fbe511465f52bffaa">AkihiroTakamuraさんの記事</a>より引用。</p>
+一般的にAPIというとJSON形式でやり取りがされますが、必要に応じて画像や動画、PDFファイルを扱うことがあります。<br />ここでは、APIとして最も一般的なJSONを想定して説明をします。
+<h2>JSONのパース</h2>
+想定するJSONに合わせたクラスを作成し、当該クラスにBaseModelを継承させます。<br />アプリケーションオブジェクトの引数として当該クラスをデータ型として設定することで、その引数にパースされたJSONデータが格納されます。
+<code class="python">
+	class pokemonStruct(BaseModel):
+		number: int
+		name: str
+		type1: str
+		type2: str
+
+	@app.post("/")
+	def read_root(poke: pokemonStruct):
+		return "図鑑番号「{}」は「{}」で、タイプ1は「{}」、タイプ2は「{}」ですね、、、".format(poke.number, poke.name, poke.type1, poke.type2)
+</code>
+<h2>HTTPクライアント</h2>
+FastAPIの開発者モードを作成すれば不要ですが、一応簡単なHTTPクライアントプログラムを紹介します。
+<code class="python">
+	import requests
+	import json
+	
+	domain = "localhost:8000"
+	path = ""
+	
+	payload = {
+		"number": 25,
+		"name": "ピカチュウ",
+		"type1": "でんき",
+		"type2": "なし"
+	}
+	
+	response = requests.post("http://{}/{}".format(domain, path), data=json.dumps(payload))
+	
+	print(response.text)	
+</code>
+requestsライブラリをインストールする必要があります。
+<code class="shell">
+	pip install requests
+</code>
+
+
+
