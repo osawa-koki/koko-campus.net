@@ -9,6 +9,19 @@ body {
 	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
 }
 
+#subjectExplainingBox {
+	margin: 50px 0 !important;
+	th {
+		background-color: lightgray !important;
+	}
+	td {
+		background-color: white !important;
+		a {
+			color: blue !important;
+			text-decoration: none !important;
+		}
+	}
+}
 
 #subjectIndexBox {
 	border: 1px solid fuchsia;
@@ -197,13 +210,13 @@ noscript {
 	}
 	* {
 		&.max-300w {
-			max-width: 300px;
+			max-width: 300px !important;
 		}
 		&.max-400w {
-			max-width: 400px;
+			max-width: 400px !important;
 		}
 		&.max-500w {
-			max-width: 500px;
+			max-width: 500px !important;
 		}
 		&.no-max {
 			max-width: none !important;
@@ -388,6 +401,9 @@ noscript {
 	.margin {
 		margin: 25px 0;
 	}
+	.padding {
+		padding: 25px;
+	}
 	.center {
 		text-align: center;
 	}
@@ -399,6 +415,15 @@ noscript {
 	.nowrap {
 		white-space: nowrap;
 		word-break: normal;
+	}
+	.red {
+		color: red;
+	}
+	.blue {
+		color: blue;
+	}
+	.green {
+		color: green;
 	}
 }
 

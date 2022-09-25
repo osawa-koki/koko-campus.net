@@ -7,6 +7,20 @@ body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "yu-gothic";
 }
 
+#subjectExplainingBox {
+  margin: 50px 0 !important;
+}
+#subjectExplainingBox th {
+  background-color: lightgray !important;
+}
+#subjectExplainingBox td {
+  background-color: white !important;
+}
+#subjectExplainingBox td a {
+  color: blue !important;
+  text-decoration: none !important;
+}
+
 #subjectIndexBox {
   border: 1px solid fuchsia;
   margin: 0 auto 100px auto;
@@ -170,13 +184,13 @@ noscript {
   cursor: pointer;
 }
 #subjectMainBox *.max-300w {
-  max-width: 300px;
+  max-width: 300px !important;
 }
 #subjectMainBox *.max-400w {
-  max-width: 400px;
+  max-width: 400px !important;
 }
 #subjectMainBox *.max-500w {
-  max-width: 500px;
+  max-width: 500px !important;
 }
 #subjectMainBox *.no-max {
   max-width: none !important;
@@ -360,6 +374,9 @@ noscript {
 #subjectMainBox .margin {
   margin: 25px 0;
 }
+#subjectMainBox .padding {
+  padding: 25px;
+}
 #subjectMainBox .center {
   text-align: center;
 }
@@ -373,4 +390,13 @@ noscript {
 #subjectMainBox .nowrap {
   white-space: nowrap;
   word-break: normal;
+}
+#subjectMainBox .red {
+  color: red;
+}
+#subjectMainBox .blue {
+  color: blue;
+}
+#subjectMainBox .green {
+  color: green;
 }
