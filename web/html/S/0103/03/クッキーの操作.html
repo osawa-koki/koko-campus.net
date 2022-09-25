@@ -1,0 +1,44 @@
+<h2>クッキー</h2>
+REST4原則のうちのひとつに「ステートレス性」というのがありました。<br />ステートレスとは「状態がない」ことを意味し、これはHTTP通信は一度きりであることを意味します。<br /><br />ですけど、これでは不便です。<br />ユーザがログインしようとIDとパスワードを送信し、サーバはデータベースから当該IDとパスワードが正当がどうかを判定します。<br /><br />これで、終了です。<br /><br />ユーザが次に進もうとページ遷移をしたとしても、その状態は存在しないため、ユーザはもう一度IDとパスワードを送信する必要があります。<br /><br />そこからページ遷移をする際にもまたIDとパスワードを送信し、、、<br /><br />非常に大変ですね、、、<br /><br />これを克服するための技術がクッキーです。
+<img class="picChar" src="/?S00/0103/cookie.png" alt="クッキー" />
+<img class="picChar" src="/?S00/0103/cookie.png" alt="クッキー" />
+<img class="picChar" src="/?S00/0103/cookie.png" alt="クッキー" />
+<br /><br />
+サーバはユーザを識別するためにランダムに生成した文字列をクッキーフィールドにセットし、これを元にサーバはクライアントを識別します。<br />これによって疑似的にセッションを作り上げます。
+<h2>クッキーのセット</h2>
+レスポンスヘッダのクッキーをセットするためにはResponseクラスのset_cookieメソッドを使用します。
+<code class="python">
+	from fastapi import FastAPI, Header, Cookie, Response
+
+	@app.get("/cookie")
+	def read_rott(response: Response):
+		response.set_cookie(key="user_identifier", value="cookie_value_hogehoge")
+		return "cookie set"
+</code>
+ブラウザの開発者モードで確認すると正しくクッキーがセットされていることが確認できます。
+<img src="/?S00/0103/fastapi_set_cookie.gif" alt="クッキーの設定" />
+<h2>クッキーの取得</h2>
+クッキーはアプリケーションオブジェクトの引数に以下の内容を与えることで取得できます。
+<code class="python">
+	クッキー名: Union[str, None] = Cookie(default=None)
+</code>
+では、セットされたクッキーを出力するコードを書きましょう♪
+<code class="python">
+	@app.get("/cookie")
+	def read_rott(response: Response, user_identifier: Union[str, None] = Cookie(default=None)):
+		response.set_cookie(key="user_identifier", value="cookie_value_hogehoge")
+		return "your cookie -> {}".format(user_identifier)
+</code>
+<img src="/?S00/0103/fastapi_get_cookie.gif" alt="クッキーの取得" />
+<h2>実用的なクッキー操作</h2>
+一般的にはクッキーが既にセットされている場合にはそれを使用し、クッキーが指定されていない場合には新たにクッキーをセットするため、これを実現しましょう♪<br />クッキーが既にセットされているかどうかは、指定した引数がNoneかどうかで判定します。
+<code class="python">
+	@app.get("/cookie")
+	def read_rott(response: Response, user_identifier: Union[str, None] = Cookie(default=None)):
+		if user_identifier != None:
+			return "your cookie -> {}".format(user_identifier)
+		else:
+			response.set_cookie(key="user_identifier", value="cookie_value_hogehoge")
+			return "cookie set..."
+</code>
+<img src="/?S00/0103/fastapi_cookie-manipulation.gif" alt="クッキーの操作" />
