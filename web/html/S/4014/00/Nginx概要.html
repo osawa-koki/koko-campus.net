@@ -68,4 +68,9 @@ Nginxが正常に動作しているかは以下のコマンドで確認できま
 <code class="shell">
 	systemctl list-units --type=service
 </code>
-上のコマンドは現在実行中のデーモン(サービス)一覧を表示します。<br />この中にnginxコマンドが含まれていればok!です。
+指定したポートに正しくバインドされているかは以下のコマンドで確認します。
+<code class="shell">
+	ss -an | grep LISTEN | grep :ポート番号
+</code>
+上のコマンドは現在実行中のデーモン(サービス)一覧を表示します。<br />この中にnginxコマンドが含まれていればok!です。<br /><br />では、外部からアクセスしてNginxのデモサイトを確認してみましょう♪
+<img src="/?S00/4014/Welcome_to_nginx.gif" alt="Nginx デモサイト" />
