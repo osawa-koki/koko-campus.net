@@ -68,8 +68,8 @@ FTPであればFTPS(FTP over SSH)を、DBアクセスならば「Standard TCP/IP
 1. GoによるWEBサーバ構築
 2. MySQLによるデータベース構築
 3. PythonによるサブWEBサーバ構築
-4. その他開発用のソフトウェア準備  
-
+4. Nginxのインストール
+5. その他開発用のソフトウェア準備  
 
 
 
@@ -87,16 +87,12 @@ export DB_USER=root
 export DB_PASSWORD=pw1234
 export DB_DATABASE_NAME=koko
 
-export TLS_CERT=/home/koko-campus.net/dev/key/debug.crt
-export TLS_PRIVKEY=/home/koko-campus.net/dev/key/debug.key
-
 export DOMAIN=koko-campus.net
 
 export SMTP_SERVER=smtp20.gmoserver.jp
 export SMTP_PORT=587
 export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
 ```
-
 
 
 # GoによるWEBサーバ構築
@@ -126,7 +122,6 @@ go version
 ```
 
 Go言語を使用してWEBサーバを構築する。  
-一般的にはWEBサーバとAPサーバは分離させるが、当プロジェクトではGo言語によってWEB兼APサーバを実装する。  
   
 現在複雑な処理についてはpythonに処理を移譲する仕組みを構築中。(臼倉君担当)  
   
@@ -196,6 +191,49 @@ DB情報が格納されているディレクトリまでのパスを尋ねられ
 臼倉君による説明。
 
 
+# Nginxのインストール
+
+```bash
+# Nginxのインストール
+sudo apt install nginx
+
+# Nginxの起動
+sudo systemctl start nginx
+```
+
+「/etc/nginx/nginx.conf」ファイルのhttpディレクティブ内に以下の記載をします。
+
+```nginx.conf
+include <nginx.confへのパス>;
+```
+
+```bash
+# Nginxの再起動
+sudo systemctl restart nginx
+```
+
+## 証明書の発行
+
+無料で使用できる「Let's Encrypt」を使用します。
+
+```bash
+sudo apt install certbot
+ sudo certbot certonly --standalone -d koko-campus.net
+```
+
+更新は以下の手順で♪
+
+```bash
+# 80番ポートを解放
+lsof -i -P
+kill -9 プロセス
+
+sudo certbot renew
+
+sudo systemctl restart nginx
+```
+
+
 # その他開発用のソフトウェア準備  
 
 ## Git・Github
@@ -205,14 +243,14 @@ Git・Githubを使用してソースを管理する。
   
 ブランチは以下の構成をとる。
 ```git
-master
+main
 develop
 feature
 	- feature/〇〇〇
 	- feature/〇〇〇
 	- feature/〇〇〇
 ```
-「feature/〇〇〇」にて機能を実装、完成後は「develop」にマージ、本番環境へ移行する際にはmasterへとマージする。  
+「feature/〇〇〇」にて機能を実装、完成後は「develop」にマージ、本番環境へ移行する際にはmainへとマージする。  
 
 
 ## Libre

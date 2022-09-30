@@ -25,7 +25,7 @@ func setCookieANDredirect(RR *RequestResponse) {
 		Name:     cookieName,
 		Value:    cookieValue,
 		Path:     "/",
-		Secure:   true, // 一時的な対応
+		Secure:   false, // プロキシを使用するため
 		HttpOnly: true,
 		SameSite: http.SameSiteStrictMode,
 	}
