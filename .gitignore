@@ -5,7 +5,6 @@
 /**/bin/*
 /**/obj/*
 standalone/
-secret/
 
 # ファイル
 *.csv
@@ -13,11 +12,10 @@ secret/
 *.env
 *.user
 *.~lock*
-src/pyAPI/tmp/
 
 
 # 必要
-!src/pyAPI/requirements.txt
+!/pyapp/requirements.txt
 !.gitkeep
 
 
