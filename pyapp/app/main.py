@@ -7,7 +7,11 @@ from .config import settings
 app = FastAPI()
 
 if settings.DEBUG:
-    app = FastAPI(docs_url="/pyapi/docs", redoc_url="/pyapi/redoc")
+    app = FastAPI(
+        openapi_url="/pyapi/openapi.json",
+        docs_url="/pyapi/docs",
+        redoc_url="/pyapi/redoc",
+    )
 else:
     app = FastAPI(docs_url=None, redoc_url=None)
 
