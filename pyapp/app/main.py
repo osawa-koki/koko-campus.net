@@ -1,11 +1,13 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
-from . import database
 from .routers import emoji, note
-
+from .config import settings
 
 app = FastAPI()
+
+if not settings.DEBUG:
+    app = FastAPI(docs_url=None, redoc_url=None)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
