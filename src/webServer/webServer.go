@@ -75,12 +75,12 @@ func controller(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println(":8181")
+	fmt.Println("")
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
 
-	if er := http.ListenAndServe("", nil); er != nil {
+	if er := http.ListenAndServe(":8181", nil); er != nil {
 		fmt.Println("failure on ListenAndServe")
 		fmt.Println(er.Error())
 	}
