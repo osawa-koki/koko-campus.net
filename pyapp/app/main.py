@@ -4,17 +4,11 @@ from fastapi.staticfiles import StaticFiles
 from .routers import emoji, note
 from .config import settings
 
-app = FastAPI()
 
 if settings.DEBUG:
-    app = FastAPI(
-        openapi_url="/pyapi/openapi.json",
-        docs_url="/pyapi/docs",
-        redoc_url="/pyapi/redoc",
-    )
+    app = FastAPI()
 else:
-    app = FastAPI(docs_url=None, redoc_url=None)
-
+    app = FastAPI(root_path="/pyapi")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
