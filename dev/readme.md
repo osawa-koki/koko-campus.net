@@ -243,14 +243,14 @@ Git・Githubを使用してソースを管理する。
   
 ブランチは以下の構成をとる。
 ```git
-master
+main
 develop
 feature
 	- feature/〇〇〇
 	- feature/〇〇〇
 	- feature/〇〇〇
 ```
-「feature/〇〇〇」にて機能を実装、完成後は「develop」にマージ、本番環境へ移行する際にはmasterへとマージする。  
+「feature/〇〇〇」にて機能を実装、完成後は「develop」にマージ、本番環境へ移行する際にはmainへとマージする。  
 
 
 ## Libre
