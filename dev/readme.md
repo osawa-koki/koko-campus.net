@@ -155,8 +155,12 @@ DBMSはMySQLを使用する。
 ```cmd
 sudo apt install mysql-server
 
-sudo mysql
-CREATE USER 'koko'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pw1234';
+sudo mysql -uroot
+
+SET GLOBAL validate_password.length=6;
+SET GLOBAL validate_password.policy=LOW;
+
+CREATE USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pw1234';
 
 mysql_secure_installation
 
@@ -218,7 +222,7 @@ sudo systemctl restart nginx
 
 ```bash
 sudo apt install certbot
- sudo certbot certonly --standalone -d koko-campus.net
+sudo certbot certonly --standalone -d koko-campus.net
 ```
 
 更新は以下の手順で♪
