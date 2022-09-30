@@ -24,7 +24,7 @@ $ alembic upgrade head
 
 5. Webサーバーを起動
 ```
-$ uvicorn app.main:app --port 8888 --reload
+$ uvicorn app.main:app --port 8282 --reload
 ```
 もしくは、[デバッガーで`run_debug.py`を実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)
 
