@@ -1,0 +1,66 @@
+<h2>randクレート</h2>
+randクレートとは、名前から想像できる通り、乱数生成に関する機能を提供するクレートです。
+<a href="https://crates.io/crates/rand" class="link cratesLogo">crates.io</a>
+<a href="https://docs.rs/rand/0.8.5/rand/" class="link rustLogo">rustdoc</a>
+<h3>インストール</h3>
+「Cargo.toml」ファイルに以下のように依存関係を追加します。
+<code class="Cargo-dot-toml dummy">
+	rand = "0.8.5"
+</code>
+使用するファイルの先頭に以下のように書きます。
+<code class="rust">
+	extern crate rand;
+	use rand::*;
+</code>
+<h2>randomメソッド</h2>
+乱数の生成が数回程度の場合に使用します。<br />以下のように書きます。
+<code class="rust">
+	rng.gen::&lt;データ型&gt;()
+</code>
+データ型に整数を指定した場合には当該データ型が取り得る値を範囲として乱数が生成されます。<br />データ型に浮動小数点数型を指定した場合には、「0」以上「1」未満の範囲で乱数を生成します。
+<code class="rust">
+	println!("rand::random::&lt;u8&gt;() -&gt; {}", rand::random::&lt;u8&gt;());
+	println!("rand::random::&lt;i8&gt;() -&gt; {}", rand::random::&lt;i8&gt;());
+	println!("rand::random::&lt;u64&gt;() -&gt; {}", rand::random::&lt;u64&gt;());
+	println!("rand::random::&lt;f32&gt;() -&gt; {}", rand::random::&lt;f32&gt;());
+	println!("rand::random::&lt;f64&gt;() -&gt; {}", rand::random::&lt;f64&gt;());
+
+	/* &darr; コンソール &darr;
+	rand::random::&lt;u8&gt;() -&gt; 117
+	rand::random::&lt;i8&gt;() -&gt; -41
+	rand::random::&lt;u64&gt;() -&gt; 15680557489787446380
+	rand::random::&lt;f32&gt;() -&gt; 0.26826698
+	rand::random::&lt;f64&gt;() -&gt; 0.146468431137045
+	*/
+</code>
+乱数を生成しているため、毎回実行結果は異なります。<br />当然ですが、、、<br /><br />randomメソッドの仕様をいい感じに表す乱数が生成されたのでそれを紹介しているだけです。
+<h2>ThreadRng構造体</h2>
+何度も乱数を生成する際にはThreadRng構造体を生成して、それを再利用する方が効率的です。<br />この方法ではThreadRng構造体の生成と、ThreadRng構造体に搭載されているgenメソッドの実行の2つの手順を踏みます。
+<h3>ThreadRng構造体の生成</h3>
+<code class="rust">
+	let mut rng = rand::thread_rng();
+</code>
+<h3>genメソッドの実行</h3>
+先ほど生成したThreadRng構造体に搭載されているgenメソッドを実行します。
+<code class="rust">
+	rng.gen::&lt;データ型&gt;()
+</code>
+生成される乱数はrandomメソッドと同様で、データ型に整数を指定した場合には当該データ型が取り得る値を範囲として乱数が生成され、データ型に浮動小数点数型を指定した場合には、「0」以上「1」未満の範囲で乱数を生成します。
+<h3>gen_range</h3>
+gen_rangeメソッドでは任意の範囲を指定することができます。<br />以下のように指定します。
+<code class="rust">
+	println!("from 1 to 10 : {}", rng.gen_range(1..10));
+</code>
+この場合には「1」以上、「10」未満の乱数が生成されます。<br />「10」は含まれません。
+<h2>文字・真偽値に対する乱数</h2>
+データ型に文字型・真偽値型を指定することで、それぞれ文字型・真偽値型の乱数を生成することができます。<br /><br />文字型の乱数に関してはサロゲートペア文字識別用の文字である「0xD800...0xDFFF」を除いたものが一様分布で生成されます。<br /><br />真偽値に関しては「true」「false」がそれぞれ「0.5」の確率で生成されます。
+<h2>ベルヌーイ分布</h2>
+randクレートでは一様分布以外の乱数も使用可能です。<br />ここではベルヌーイ分布を生成してみましょう♪
+<div class="quote">
+	<div>ベルヌーイ分布 (<a href="https://ja.wikipedia.org/wiki/ベルヌーイ分布">wikipedia</a>より)</div>
+	<div>ベルヌーイ分布（英: Bernoulli distribution）とは、数学において、確率 p で 1 を、確率 q = 1 - p で 0 をとる、離散確率分布である。<br />ベルヌーイ分布という名前は、スイスの科学者ヤコブ・ベルヌーイに因んでつけられた名前である。</div>
+</div>
+<code class="rust">
+	let bernoulli = Bernoulli::new(成功確率).unwrap();
+    println!("bernoulli -&gt; {}", bernoulli.sample(&mut rng));
+</code>

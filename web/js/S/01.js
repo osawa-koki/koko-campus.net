@@ -2,6 +2,9 @@
 
 // ---> S/05.scss
 
+/*
+MENUボックス用プログラム
+*/
 
 const {Subject, Lesson, Page} = regexGrouping(window.location.pathname, /\/(S(?<Subject>\d+))?(L(?<Lesson>\d+))?(P(?<Page>\d+))?/);
 
@@ -38,7 +41,7 @@ if (Subject && Lesson && Page) {
 				if (this.classList.contains("open")) {
 					setTimeout(() => {
 						this.classList.add("transitionFinished");
-					}, 100);
+					}, 30);
 				}
 			});
 			box.classList.add("active");
@@ -56,86 +59,14 @@ if (Subject && Lesson && Page) {
 				}
 				mainBox.appendChild(a);
 			});
-			mainBox.addEventListener("wheel", function(e) {
-				if (fb) {
-					e.preventDefault();
-					if (e.wheelDelta < 0) {
-						this.scrollLeft += 30;
-					}
-					if (0 < e.wheelDelta) {
-						this.scrollLeft -= 30;
-					}
-				}
+			const [close] = mkElm(["div"]);
+			close.addEventListener("click", function(event) {
+				event.stopPropagation();
+				this.parentNode.parentNode.classList.remove("open");
+				this.parentNode.parentNode.classList.remove("transitionFinished");
 			});
-			(() => {
-				const [close, prev, next] = mkElm(["div", "div", "div"]);
-				const items = [close, prev, next];
-				let interval, count = 0;
-				const oneTapLimit = 3;
-				const oneTapScroll = 50;
-				const prevDown = (function() {
-					interval = setInterval(() => {
-						mainBox.scrollLeft -= speedUp(count);
-						count++;
-					}, 30);
-				});
-				const prevUp = (function() {
-					clearInterval(interval);
-					if (count < oneTapLimit) {
-						mainBox.scrollLeft -= oneTapScroll;
-					}
-					count = 0;
-				});
-				const nextDown = (function() {
-					interval = setInterval(() => {
-						mainBox.scrollLeft += speedUp(count);
-						count++;
-					}, 30);
-				});
-				const nextUp = (function() {
-					clearInterval(interval);
-					if (count < oneTapLimit) {
-						mainBox.scrollLeft += oneTapScroll;
-					}
-					count = 0;
-				});
-				const speedUp = a => (oneTapLimit <= a) ? a / 5 + 5 : 0;
-				const fx = [
-					{
-						"click": (function(e) {
-							e.stopPropagation();
-							this.parentNode.parentNode.classList.remove("open");
-							this.parentNode.parentNode.classList.remove("transitionFinished");
-						})
-					},
-					{
-						"mousedown": prevDown,
-						"mouseup": prevUp,
-						"touchstart": prevDown,
-						"touchend": prevUp,
-						"dblclick": (function() {
-							mainBox.scrollLeft = 0;
-						})
-					},
-					{
-						"mousedown": nextDown,
-						"mouseup": nextUp,
-						"touchstart": nextDown,
-						"touchend": nextUp,
-						"dblclick": (function() {
-							mainBox.scrollLeft = 10000;
-						})
-					}
-				];
-				const classes = ["close", "prev", "next"];
-				items.forEach((e, i) => {
-					Object.keys(fx[i]).forEach(f => {
-						e.addEventListener(f, fx[i][f]);
-					});
-					e.classList.add(classes[i]);
-					subBox.appendChild(e);
-				});
-			})();
+			close.classList.add("close");
+			subBox.appendChild(close);
 			box.appendChild(mainBox);
 			box.appendChild(subBox);
 		} else {

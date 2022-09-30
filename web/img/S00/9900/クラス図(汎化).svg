@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="クラス図(汎化).svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\クラス図(汎化).png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="393.28"
+         inkscape:cy="241.97"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g11679"
+             transform="translate(10.67,5.34)">
+            <path
+                 id="rect847-0-7"
+                 style="fill:white;stroke:black;stroke-width:1.63699;stroke-miterlimit:4;stroke-dasharray:none;stop-color:black"
+                 d="m 226.33,266.46 h 112.59 v 53.67 h -112.59 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="253.91"
+                 y="303.63"
+                 id="text2406-0-4"><tspan
+                     sodipodi:role="line"
+                     id="tspan2404-6-0"
+                     x="253.91"
+                     y="303.63">医師</tspan></text>
+        </g>
+        <g
+             id="g11789"
+             transform="translate(6)">
+            <path
+                 id="rect847-0-2"
+                 style="fill:white;stroke:black;stroke-width:1.63699;stroke-miterlimit:4;stroke-dasharray:none;stop-color:black"
+                 d="m 423.64,271.8 h 112.59 v 53.67 h -112.59 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="452.1"
+                 y="308.92"
+                 id="text2406-0-5"><tspan
+                     sodipodi:role="line"
+                     id="tspan2404-6-7"
+                     x="452.1"
+                     y="308.92">学生</tspan></text>
+        </g>
+        <g
+             id="g11784">
+            <path
+                 style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 94.651,270.63 v -67.99 h 397.279 v 70.66"
+                 id="path11575" />
+            <path
+                 style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 293.29,273.3 0,-158.65"
+                 id="path11577"
+                 sodipodi:nodetypes="cc" />
+        </g>
+        <g
+             id="g11674"
+             transform="translate(6,4.55)">
+            <path
+                 id="rect847-0"
+                 style="fill:white;stroke:black;stroke-width:1.63699;stroke-miterlimit:4;stroke-dasharray:none;stop-color:black"
+                 d="m 38.361,267.25 h 112.589 v 53.67 h -112.589 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="66.984"
+                 y="304.31"
+                 id="text2406-0"><tspan
+                     sodipodi:role="line"
+                     id="tspan2404-6"
+                     x="66.984"
+                     y="304.31">教師</tspan></text>
+        </g>
+        <g
+             id="g11794"
+             transform="translate(-2)">
+            <path
+                 id="rect847"
+                 style="fill:white;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stop-color:black"
+                 d="m 227.84,55.868 h 137.56 v 65.572 h -137.56 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="259.14"
+                 y="101.45"
+                 id="text2406"><tspan
+                     sodipodi:role="line"
+                     id="tspan2404"
+                     x="259.14"
+                     y="101.45">ヒト</tspan></text>
+        </g>
+        <path
+             id="path11841"
+             style="fill:white;stroke:black;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stop-color:black"
+             inkscape:transform-center-y="-6.565"
+             d="m 310.25,162.04 h -33.91 l 16.95,-39.39 z"
+             inkscape:transform-center-x="-0.0019201" />
+    </g>
+</svg>

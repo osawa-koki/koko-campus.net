@@ -1,0 +1,5 @@
+main img {
+  width: auto !important;
+  max-width: 100% !important;
+  display: block;
+}

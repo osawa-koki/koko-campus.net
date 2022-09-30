@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.to-mysql {
+    background-image: url(/?S00/0199/mysql-logo.png);
+}
+
+.db {
+    thead {
+        th, td {
+            background-color: lightgray !important;
+        }
+    }
+}
+
+table {
+    td.transIsolationLevel_SAFE {
+        background-color: rgba(0, 0, 255, 0.3);
+    }
+    td.transIsolationLevel_DANGEROUS {
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+}

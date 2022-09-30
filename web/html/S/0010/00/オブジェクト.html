@@ -4,11 +4,11 @@
 -->
 <h2>オブジェクト</h2>
 既に学習済みですがもう一度説明しますね♪<br />オブジェクト(object)、直訳すると「モノ」です。<br />オブジェクトはひとつ、ないしは複数のプロパティ(値)とメソッド(関数)を保有します。
-<img src="/?S0010/object.png" alt="オブジェクト" />
+<img src="/?S00/0010/object.png" alt="オブジェクト" />
 う～～～ん、、、<br />分かりにくいですね、、、<br />それもそのはず、オブジェクト指向を開発した天才プログラマであるアラン・ケイはIT業界のノーベル賞とも呼ばれるチューリング賞を獲得しています。<br />そんな人が考案した技術はそう簡単に理解できませんよね、、、<br />オブジェクトについて説明する前に連想配列について説明します。
 <h2>連想配列</h2>
 配列の進化バージョンです。<br />配列が配列内の要素をインデックス番号で管理するのに対して、連想配列では独自に「キー」を設定して配列内の要素を管理します。
-<img src="/?S0010/assoc.png" alt="連想配列" />
+<img src="/?S00/0010/assoc.png" alt="連想配列" />
 <h2>連想配列の定義</h2>
 連想配列は「{}(ブレース)」を用いて定義します。<br />連想配列の要素は「キー」と「バリュー」を「:(コロン)」で区切って、各要素は「,(カンマ)」で区切って表します。
 <code class="javascript">
@@ -37,7 +37,7 @@
 	console.log(pika["no"]);
 	console.log(pika["name"]);
 </code>
-<img class="no-max" src="/?S0010/accessToElementOfMap.gif" alt="objectの要素へのアクセス" />
+<img class="no-max" src="/?S00/0010/accessToElementOfMap.gif" alt="objectの要素へのアクセス" />
 <h3>.(ドット)によるアクセス</h3>
 以下のように記述します。
 <code class="javascript">
@@ -54,7 +54,7 @@
 	console.log(pika.no);
 	console.log(pika.name);
 </code>
-<img class="no-max" src="/?S0010/accessToElementOfMap-dot.gif" alt="object型" />
+<img class="no-max" src="/?S00/0010/accessToElementOfMap-dot.gif" alt="object型" />
 <div class="separator"></div>
 以下のコードで連想配列の要素を削除することもできますが、連想配列という性質上ほとんど用いることはありません。
 <code class="javascript">
@@ -86,7 +86,7 @@
 		console.log(k + "は" + pika[k]);
 	}
 </code>
-<img class="no-max" src="/?S0010/loopingMapWithFor.gif" alt="連想配列の走査" />
+<img class="no-max" src="/?S00/0010/loopingMapWithFor.gif" alt="連想配列の走査" />
 <h3>forEach</h3>
 配列の走査と異なります。
 <code class="javascript">
@@ -107,7 +107,7 @@
 		console.log(k + "は" + pika[k]);
 	});
 </code>
-<img class="no-max" src="/?S0010/loopingMapWithForEach.gif" alt="連想配列の走査" />
+<img class="no-max" src="/?S00/0010/loopingMapWithForEach.gif" alt="連想配列の走査" />
 <div class="separator"></div>
 通常はforを用いればok!です。
 <h2>オブジェクト</h2>
@@ -141,7 +141,7 @@
 	console.log(rect1.getArea());
 	console.log(rect1.getDiagonal());
 </code>
-<img class="no-max" src="/?S0010/methodInsideObject.gif" alt="メソッド" />
+<img class="no-max" src="/?S00/0010/methodInsideObject.gif" alt="メソッド" />
 <div class="separator"></div>
 メソッドに引数を渡すこともできます。<br />例えば以下のコードではcryメソッドの引数で指定した回数だけ猫が泣きます。
 <code class="javascript">
@@ -155,7 +155,7 @@
 	};
 	cat.cry(5);
 </code>
-<img class="no-max" src="/?S0010/argumentsList.gif" alt="メソッドの引数" />
+<img class="no-max" src="/?S00/0010/argumentsList.gif" alt="メソッドの引数" />
 <h2>関数からのオブジェクトの作成</h2>
 先ほどは予め「30 &times; 40」の長方形を直接作成しましたけど、実際はオブジェクトのプロパティはその場で決まることが多いです。<br />ということで、オブジェクトを作成したそれを返す関数を作成しましょう♪<br />関数の戻り値に作成したオブジェクトを設定すればok!です。<br />メソッドを少し変更して、戻り値を返すのではなくデータをそのままコンソール画面に表示しています。
 <code class="javascript">
@@ -177,7 +177,7 @@
 	rect2.getDiagnal();
 </code>
 Math.sqrt(n)はnの平方根を求めるメソッドです。
-<img class="no-max" src="/?S0010/returningObject.gif" alt="オブジェクト" />
+<img class="no-max" src="/?S00/0010/returningObject.gif" alt="オブジェクト" />
 <h2>破壊的・非破壊的メソッド</h2>
 メソッドはそのプロパティを変更するかどうかで破壊的メソッドか非破壊的メソッドに分類できます。
 <h3>破壊的メソッド</h3>
@@ -206,7 +206,7 @@ add1メソッドを実行するとプロパティ内のcountプロパティそ�
 	}
 	obj.getCount();
 </code>
-<img class="no-max" src="/?S0010/destructiveMethod.gif" alt="破壊的メソッド" />
+<img class="no-max" src="/?S00/0010/destructiveMethod.gif" alt="破壊的メソッド" />
 <h3>非破壊的メソッド</h3>
 オブジェクトのプロパティを加工したものを戻り値として返却します。<br />この方法は元のオブジェクトのデータは変更しません。<br />例えば、以下のメソッドが該当します。
 <code class="javascript">
@@ -224,4 +224,4 @@ add1メソッドを実行するとプロパティ内のcountプロパティそ�
 	console.log(obj.add_xy);
 	console.log(obj.add_all);
 </code>
-<img class="no-max" src="/?S0010/non-destructiveMethod.gif" alt="非破壊的メソッド" />
+<img class="no-max" src="/?S00/0010/non-destructiveMethod.gif" alt="非破壊的メソッド" />

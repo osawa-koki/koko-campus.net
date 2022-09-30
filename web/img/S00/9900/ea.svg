@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ea.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="391.95"
+         inkscape:cy="241.97"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="g32412" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <g
+             id="g32412">
+            <path
+                 id="path843-5-7-4-1"
+                 style="fill:#00a000;fill-opacity:0.2;stroke-width:2.36628;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 inkscape:transform-center-x="-0.0058437"
+                 inkscape:transform-center-y="-16.667"
+                 d="m 193.36,126.49 h -80.82 l 40.41,-100.006 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:56px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="125"
+                 y="99.987"
+                 id="text8159"><tspan
+                     sodipodi:role="line"
+                     id="tspan8157"
+                     x="125"
+                     y="99.987">BA</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="240.49"
+                 y="97.19"
+                 id="text8159-0"><tspan
+                     sodipodi:role="line"
+                     id="tspan8157-8"
+                     x="240.49"
+                     y="97.19">ビジネスアーキテクチャ</tspan></text>
+        </g>
+        <g
+             id="g32419">
+            <path
+                 id="path843-5-7-3"
+                 style="fill:#00a000;fill-opacity:0.2;stroke-width:4.25928;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 inkscape:transform-center-x="-0.0031316"
+                 inkscape:transform-center-y="-30.005"
+                 d="m 225.69,206.48 h -145.47 l 72.73,-179.994 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:56px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="125.67"
+                 y="181.31"
+                 id="text12683"><tspan
+                     sodipodi:role="line"
+                     id="tspan12681"
+                     x="125.67"
+                     y="181.31">DA</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="241.16"
+                 y="179.18"
+                 id="text12683-0"><tspan
+                     sodipodi:role="line"
+                     id="tspan12681-1"
+                     x="241.16"
+                     y="179.18">データアーキテクチャ</tspan></text>
+        </g>
+        <g
+             id="g32426">
+            <path
+                 id="path843-5-9"
+                 style="fill:#00a000;fill-opacity:0.2;stroke-width:6.15232;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 inkscape:transform-center-x="-0.0049864"
+                 inkscape:transform-center-y="-43.34"
+                 d="m 258.02,286.48 h -210.124 l 105.064,-259.995 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:56px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="127.02"
+                 y="262.63"
+                 id="text14589"><tspan
+                     sodipodi:role="line"
+                     id="tspan14587"
+                     x="127.02"
+                     y="262.63">AA</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="242.51"
+                 y="261.17"
+                 id="text14589-5"><tspan
+                     sodipodi:role="line"
+                     id="tspan14587-6"
+                     x="242.51"
+                     y="261.17">アプリケーションアーキテクチャ</tspan></text>
+        </g>
+        <g
+             id="g32433">
+            <path
+                 id="path843-6"
+                 style="fill:#00a000;fill-opacity:0.2;stroke-width:8.04526;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;stop-color:#000000"
+                 inkscape:transform-center-x="-0.002048"
+                 inkscape:transform-center-y="-56.672"
+                 d="m 290.34,366.48 h -274.774 l 137.394,-339.996 z" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:56px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="125.98"
+                 y="343.95"
+                 id="text15561"><tspan
+                     sodipodi:role="line"
+                     id="tspan15559"
+                     x="125.98"
+                     y="343.95">TA</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="241.47"
+                 y="343.16"
+                 id="text15561-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan15559-8"
+                     x="241.47"
+                     y="343.16">テクノロジアーキテクチャ</tspan></text>
+        </g>
+    </g>
+</svg>

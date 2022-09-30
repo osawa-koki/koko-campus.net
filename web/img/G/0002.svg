@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="100"
+     height="100"
+     viewBox="0 0 100 100"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="0002.svg"
+     inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+     inkscape:export-filename="0002.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="4.2432"
+         inkscape:cx="74.354"
+         inkscape:cy="74.943"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1"
+         inkscape:showpageshadow="2"
+         inkscape:deskcolor="#d1d1d1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid4387" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2">
+        <marker
+             style="overflow:visible"
+             id="DotL"
+             refX="0.0"
+             refY="0.0"
+             orient="auto"
+             inkscape:stockid="DotL"
+             inkscape:isstock="true">
+            <path
+                 transform="scale(0.8) translate(7.4, 1)"
+                 style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+                 d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+                 id="path4648" />
+        </marker>
+        <marker
+             style="overflow:visible"
+             id="DotL-8"
+             refX="0"
+             refY="0"
+             orient="auto"
+             inkscape:stockid="DotL"
+             inkscape:isstock="true">
+            <path
+                 transform="matrix(0.8,0,0,0.8,5.92,0.8)"
+                 style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+                 d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+                 id="path4648-7" />
+        </marker>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter5684"
+             x="-0.081075"
+             y="-0.081075"
+             width="1.1621"
+             height="1.1621">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.077406"
+                 id="feGaussianBlur5686" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter5684-1"
+             x="-0.081075"
+             y="-0.081075"
+             width="1.1621"
+             height="1.1621">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="0.077406"
+                 id="feGaussianBlur5686-0" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="205.31"
+             y="505.27"
+             id="text3089"><tspan
+                 sodipodi:role="line"
+                 id="tspan3087"
+                 x="205.31"
+                 y="505.27">GAME SET</tspan></text>
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m -37,50 10,5 2,20 h -24 l 2.001,-20 9.999,-5"
+             id="path4422-4" />
+        <g
+             id="g5887"
+             transform="translate(-7.6657,4.6661)">
+            <path
+                 style="fill:none;stroke:black;stroke-width:1.15405;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DotL)"
+                 d="m 35.26,34.729 c -11.2,-0.69 -18.28,-5.087 -19.232,-15"
+                 id="path4585"
+                 sodipodi:nodetypes="cc" />
+            <path
+                 style="fill:none;stroke:black;stroke-width:1.15405;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3.8;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DotL-8)"
+                 d="m 81.23,34.729 c 11.2,-0.69 18.28,-5.087 19.23,-15"
+                 id="path4585-7"
+                 sodipodi:nodetypes="cc" />
+            <path
+                 style="fill:#d7ba00;fill-opacity:1;stroke:black;stroke-width:2.29848px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                 d="m 58.637,13.064 22.985,11.492 4.597,45.97 h -55.163 l 4.598,-45.97 22.983,-11.492"
+                 id="path4422" />
+            <g
+                 id="g5849"
+                 transform="matrix(1.154,0,0,1.154,-1.6645,-11.041)">
+                <g
+                     id="g5801">
+                    <circle
+                         style="fill:black;fill-opacity:1;stroke-width:1.3;stroke-linejoin:round;stroke-miterlimit:3.8;stroke-dasharray:none;stop-color:black"
+                         id="path5259"
+                         cx="44.012"
+                         cy="42.009"
+                         r="3.8297" />
+                    <circle
+                         style="mix-blend-mode:normal;fill:white;fill-opacity:1;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:3.8;stroke-dasharray:none;filter:url(#filter5684);stop-color:black"
+                         id="path5467"
+                         cx="44.765"
+                         cy="43.265"
+                         r="1.1457"
+                         transform="matrix(1.4537,0,0,1.4537,-20.499,-19.901)" />
+                </g>
+                <g
+                     id="g5801-9"
+                     transform="translate(16.48)">
+                    <circle
+                         style="fill:black;fill-opacity:1;stroke-width:1.3;stroke-linejoin:round;stroke-miterlimit:3.8;stroke-dasharray:none;stop-color:black"
+                         id="path5259-1"
+                         cx="44.012"
+                         cy="42.009"
+                         r="3.8297" />
+                    <circle
+                         style="mix-blend-mode:normal;fill:white;fill-opacity:1;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:3.8;stroke-dasharray:none;filter:url(#filter5684-1);stop-color:black"
+                         id="path5467-8"
+                         cx="44.765"
+                         cy="43.265"
+                         r="1.1457"
+                         transform="matrix(1.4537,0,0,1.4537,-20.499,-19.901)" />
+                </g>
+            </g>
+        </g>
+        <path
+             style="fill:none;stroke:black;stroke-width:1.1239px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 35.381,106.85 c 11.213,6.18 22.073,6.18 32.579,0"
+             id="path196"
+             sodipodi:nodetypes="cc" />
+        <text
+             xml:space="preserve"
+             style="font-size:3px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             id="text348"
+             transform="translate(0.11787,-45.955)"><textPath
+                 xlink:href="#path196"
+                 id="textPath487"><tspan
+                     id="tspan346">将棋 with JavaScript</tspan></textPath></text>
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:'UD Digi Kyokasho NP-R';-inkscape-font-specification:'UD Digi Kyokasho NP-R, Normal';font-variant-ligatures:none;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+             x="65.045"
+             y="94.033"
+             id="text2270"><tspan
+                 sodipodi:role="line"
+                 id="tspan2268"
+                 x="65.045"
+                 y="94.033">将棋</tspan></text>
+    </g>
+</svg>

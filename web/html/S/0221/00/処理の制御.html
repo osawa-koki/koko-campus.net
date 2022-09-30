@@ -61,7 +61,7 @@
 		}
 	}
 </code>
-<img src="/?S0221/judgingOddEven.gif" alt="奇数-偶数判定プログラム" />
+<img src="/?S00/0221/judgingOddEven.gif" alt="奇数-偶数判定プログラム" />
 <div class="separator"></div>
 if文を連鎖させることもできます。<br />下の例では入力した数字が「3の倍数」か「3の倍数 + 1」か「3の倍数 + 2」かを判定しています。
 <code class="go">
@@ -86,7 +86,7 @@ if文を連鎖させることもできます。<br />下の例では入力した
 		}
 	}
 </code>
-<img src="/?S0221/judging3n.gif" alt="3n判定プログラム" />
+<img src="/?S00/0221/judging3n.gif" alt="3n判定プログラム" />
 <h2>条件分岐(switch)</h2>
 あるデータを他の複数のデータと比較して実行する処理を制御します。<br />「==」で判定するif文が複数連なっている場合はswitch文が有効です。<br />以下のように書きます。
 <code class="go">
@@ -101,7 +101,7 @@ if文を連鎖させることもできます。<br />下の例では入力した
 			// いずれにもマッチしなかった場合の処理
 	}
 </code>
-<img src="/?S0221/imageOfSwitch.png" alt="switch文" />
+<img src="/?S00/0221/imageOfSwitch.png" alt="switch文" />
 他の言語ではcaseにマッチした場合は「break」に出会うまでそれ以下の処理へ飛びますが、Goではマッチしたcase直後の処理を実行し終わったらswitch文から抜け出します。<br />Goで他の言語でのswitchのように「break」でswitch文から抜け出さずに下の処理へ飛ばせる場合には「fallthrough」を使用します。
 <code class="go">
 	switch エントリー文; 対象の比較対象の値 {
@@ -119,7 +119,7 @@ if文を連鎖させることもできます。<br />下の例では入力した
 	}
 </code>
 上のコードでは「case 値1, 値2, 値3:」を満たした場合は「処理X」「処理Y」「処理Z」「いずれにもマッチしなかった場合の処理」の全てが実行されます。<br /><br />また、switch文でもif同様にエントリー文を使用可能です。<br /><br />では、拡張子からファイルを判定するプログラムを作成してみましょう♪
-<img src="/?S0221/judgingExt.gif" alt="拡張子判定プログラム" />
+<img src="/?S00/0221/judgingExt.gif" alt="拡張子判定プログラム" />
 <h3>真偽値判定switch</h3>
 Goでは他の言語と異なりcase内での真偽値によって処理を制御することもできます。<br />この場合はswitchの後に続く対象となる値は省略します。
 <code class="go">
@@ -162,7 +162,7 @@ Goでは他の言語と異なりcase内での真偽値によって処理を制�
 		}
 	}
 </code>
-<img src="/?S0221/judgingSeason.gif" alt="季節判定プログラム" />
+<img src="/?S00/0221/judgingSeason.gif" alt="季節判定プログラム" />
 <h2>反復処理(for)</h2>
 ある処理を一定回数繰り返します。<br />以下のように書きます。
 <code class="go">
@@ -190,7 +190,7 @@ Goでは他の言語と異なりcase内での真偽値によって処理を制�
 		}
 	}
 </code>
-<img src="/?S0221/for.gif" alt="forプログラム" />
+<img src="/?S00/0221/for.gif" alt="forプログラム" />
 <h3>無限ループ</h3>
 最初に実行する回数を指定せずに無限ループさせて、処理内である条件を満たしたら強制的にループから抜け出させることがあります。<br />この場合の反復処理は以下のように書きます。
 <code class="go">
@@ -258,4 +258,4 @@ Goでは大分簡単に書けますね♪<br />そうでもないかな???
 		}
 	}
 </code>
-<img src="/?S0221/fibo.gif" alt="フィボナッチ数列プログラム" />
+<img src="/?S00/0221/fibo.gif" alt="フィボナッチ数列プログラム" />

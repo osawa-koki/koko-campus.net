@@ -9,6 +9,16 @@
         th {
             background-color: lightgray;
         }
+        td {
+            a {
+                text-decoration: none;
+                color: blue;
+                &.disabled {
+                    color: black;
+                    pointer-events: none;
+                }
+            }
+        }
     }
     .subjectImgBox {
         margin: 25px -5px;

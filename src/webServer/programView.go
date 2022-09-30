@@ -20,7 +20,7 @@ func programView(model *programStruct, digit string) *string {
 			} else {
 				Error(er.Error())
 			}
-			Error("subjectHTML出力失敗")
+			Error("program HTML出力失敗")
 		} else {
 			fmt.Println(er.Error())
 		}

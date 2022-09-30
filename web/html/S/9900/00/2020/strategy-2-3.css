@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+
+
+/* swot分析に関するcss */
+
+#swot_table th, #swot_table td {
+	text-align: center;
+}
+
+#swot_div .circle {
+	border-radius: 50%;
+	border: 1px black solid;
+	background-color: pink;
+	opacity: 0.5;
+	margin: 30px;
+}
+#swot_div .border_bottom {
+	border-bottom: 1px black solid;
+}
+#swot_div .border_right {
+	border-right: 1px black solid;
+}
+
+#swot_div #environment {
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+}
+#swot_div #plus_or_minus {
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+}
+#swot_div #swot_spot {
+	font-size: 35px;
+	font-weight: bold;
+	color: red;
+}
+
+
+
+
+.writing_vertical {
+	writing-mode: vertical-lr;
+}
+
+
+
+
+#marketing_mix_div table {
+	border-collapse: collapse;
+	border: 1px black solid;
+}
+
+#marketing_mix_div #p {
+	background-color: skyblue;
+}
+
+#marketing_mix_div #c {
+	background-color: lime;
+}
+
+#marketing_mix_div .arrow {
+	font-size: 100%;
+}
+
+#marketing_mix_table td {
+	text-align: center;
+}
+
+
+
+
+
+#growth_table td {
+	text-align: center;
+}
+
+
+
+#plc_div table {
+	border-collapse: collapse;
+}
+#plc_div caption {
+	margin-bottom: 30px;
+	border: 1px black dotted;
+}
+#plc_div th {
+	border: 1px black solid;
+}
+#plc_div td {
+	text-align: left;
+}
+
+
+
+
+
+#innovater_theory_div #first {
+	border: 1px black solid;
+	background-color: pink;
+	opacity: 0.5;
+	border-radius: 50%;
+}
+#innovater_theory_div #second {
+	border: 1px black solid;
+	background-color: lime;
+	opacity: 0.5;
+	border-radius: 50%;
+}
+#innovater_theory_div #third {
+	border: 1px black solid;
+	background-color: orange;
+	opacity: 0.5;
+	border-radius: 50%;
+}
+#innovater_theory_div .border {
+	border: 1px black solid;
+}
+#innovater_theory_div #chasm {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border-radius: 50%;
+}
+
+#innovator_table td {
+	text-align: center;
+}
+
+
+
+
+
+#marketing_words caption {
+	border: 1px black dotted;
+}
+
+

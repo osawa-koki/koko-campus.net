@@ -1,0 +1,257 @@
+<h2>numクレート</h2>
+numクレートとは、名前から想像できる通り、数値に関する処理をまとめたクレート(モジュール)です。<br />このクレートは切り捨て・切り上げ・複素数・有理数・巨大整数・対数・べき乗・平方根などの数学的な演算を行う機能を提供します。
+<a href="https://crates.io/crates/num" class="link cratesLogo">crates.io</a>
+<a href="https://docs.rs/num/0.4.0/num/" class="link rustLogo">rustdoc</a>
+<h3>インストール</h3>
+「Cargo.toml」ファイルに以下のように依存関係を追加します。
+<code class="Cargo-dot-toml dummy">
+	num = "0.4.0"
+</code>
+同時に使用するファイルの先頭に以下のように書きます。
+<code class="rust">
+	extern crate num;
+	use num::*;
+</code>
+「*」は「全て」を意味します。<br />今回はテスト用ですので、全てをインクルードしましたが、必要に応じて使用する機能だけをインクルードしてください。
+<h2>切り捨て・切り上げ</h2>
+integerモジュールに用意されている以下のメソッドを使用します。
+<ul>
+	<li>div_floor</li>
+	<li>div_ceil</li>
+</ul>
+<code class="rust">
+	println!("integer::div_floor(7, 3) -&gt; {}", integer::div_floor(7, 3));
+	println!("integer::div_ceil(7, 3) -&gt; {}", integer::div_ceil(7, 3));
+
+	/* &darr; コンソール &darr;
+	integer::div_floor(7, 3) -&gt; 2
+	integer::div_ceil(7, 3) -&gt; 3
+	*/
+</code>
+<h2>平方根</h2>
+integerモジュール、ないしはFloatモジュールに用意されているsqrtを使用します。<br />保有するモジュール名から推測できると思いますが、返すデータ型が整数型と浮動小数点数型と異なります。<br /><br />また、Floatモジュールが保有するsqrtメソッドに対しては、引数のデータ型が浮動小数点数型であることを確認して下さい。
+<code class="rust">
+	println!("integer::sqrt(2) -&gt; {}", integer::sqrt(2));
+	println!("Float::sqrt(2.0) -&gt; {}", Float::sqrt(2.0));
+
+	println!("integer::sqrt(25) -&gt; {}", integer::sqrt(25));
+	println!("Float::sqrt(25.0) -&gt; {}", Float::sqrt(25.0));
+
+	/* &darr; コンソール &darr;
+	integer::sqrt(2) -&gt; 1
+	Float::sqrt(2.0) -&gt; 1.4142135623730951
+	integer::sqrt(25) -&gt; 5
+	Float::sqrt(25.0) -&gt; 5
+	*/
+</code>
+<div class="separator"></div>
+cbrtメソッドでは三乗根を算出することができます。
+<h2>最小公倍数・最大公約数</h2>
+integerモジュールが有するgcd・lcmメソッドでそれぞれ最大公約数と最小公倍数を算出可能です。
+<code class="rust">
+	println!("integer::gcd(12, 18) -&gt; {}", integer::gcd(12, 18));
+	println!("integer::lcm(12, 18) -&gt; {}", integer::lcm(12, 18));
+
+	/* &darr; コンソール &darr;
+	integer::gcd(12, 18) -&gt; 6
+	integer::lcm(12, 18) -&gt; 36
+	*/
+</code>
+<h2>べき乗</h2>
+以下の3つのメソッドで計算可能です。
+<table>
+	<tbody>
+		<tr>
+			<th>pow</th>
+			<td>整数の整数乗の計算に使用します。</td>
+		</tr>
+		<tr>
+			<th>powi</th>
+			<td>浮動小数点数の整数乗の計算に使用します。</td>
+		</tr>
+		<tr>
+			<th>powf</th>
+			<td>浮動小数点数の浮動小数点数乗の計算に使用します。</td>
+		</tr>
+	</tbody>
+</table>
+<code class="rust">
+	println!("3.pow(3) -&gt; {}", 3.pow(3));
+	println!("(3.14).powi(3) -&gt; {}", (3.14).powi(3));
+	println!("(3.14).powf(3.14) -&gt; {}", (3.14).powf(3.14));
+
+	/* &darr; コンソール &darr;
+	3.pow(3) -&gt; 27
+	(3.14).powi(3) -&gt; 30.959144000000002
+	(3.14).powf(3.14) -&gt; 36.33783888017471
+	*/
+</code>
+<div class="separator"></div>
+自然対数の乗数や「2」の乗数に関しては専用の以下のメソッドを使用可能です。
+<code class="rust">
+	println!("Float::exp(10.0) -&gt; {}", Float::exp(10.0));
+	println!("Float::exp2(10.0) -&gt; {}", Float::exp2(10.0));
+
+	/* &darr; コンソール &darr;
+	Float::exp(10.0) -&gt; 22026.465794806718
+	Float::exp2(10.0) -&gt; 1024	
+	*/
+</code>
+<h2>対数</h2>
+自然対数と、任意の数を底とする対数が計算可能です。<br />「10」を底とすれば常用対数が計算可能です。
+<code class="rust">
+	println!("Float::ln(2.0) -&gt; {}", Float::ln(2.0));
+	println!("Float::log(2.0, 10.0) -&gt; {}", Float::log(2.0, 10.0));
+
+	/* &darr; コンソール &darr;
+	Float::ln(2.0) -&gt; 0.6931471805599453
+	Float::log(2.0, 10.0) -&gt; 0.30102999566398114
+	*/
+</code>
+<h2>二項係数</h2>
+numクレートは「<sub>n</sub>C<sub>r</sub>」を計算するメソッドも提供しています。
+<code class="rust">
+	println!("integer::binomial(5, 2) -&gt; {}", integer::binomial(5, 2));
+
+	/* &darr; コンソール &darr;
+	integer::binomial(5, 2) -&gt; 10
+	*/
+</code>
+<h2>複素数</h2>
+複素数はある程度プログラミングについて学んだら絶対に描写するマンデルブロ集合で使用しますよね♪<br />Rustはnumクレートが複素数型を提供しています。<br /><br />複素数型のデータは以下のように作成します。
+<code class="rust">
+	Complex{re: 実数部, im: 虚数部}
+</code>
+「re」は実数を意味する「real」の略で、「im」は虚数を意味する「imaginary」の略です。<br /><br />複素数型はプリミティブな算術演算子を使用可能です。
+<code class="rust">
+	let cplx_1 = Complex{re: 3.0, im: -1.0};
+	let cplx_2 = Complex{re: 2.5, im: -1.5};
+	println!("cplx_1 -&gt; {}", cplx_1);
+	println!("cplx_2 -&gt; {}", cplx_2);
+	println!("cplx_1 + cplx_2 -&gt; {}", cplx_1 + cplx_2);
+	println!("cplx_1 - cplx_2 -&gt; {}", cplx_1 - cplx_2);
+	println!("cplx_1 * cplx_2 -&gt; {}", cplx_1 * cplx_2);
+	println!("cplx_1 / cplx_2 -&gt; {}", cplx_1 / cplx_2);
+	println!("cplx_1 % cplx_2 -&gt; {}", cplx_1 % cplx_2);
+
+	/* &darr; コンソール &darr;
+	cplx_1 -&gt; 3-1i
+	cplx_2 -&gt; 2.5-1.5i
+	cplx_1 + cplx_2 -&gt; 5.5-2.5i
+	cplx_1 - cplx_2 -&gt; 0.5+0.5i
+	cplx_1 * cplx_2 -&gt; 6-7i
+	cplx_1 / cplx_2 -&gt; 1.0588235294117647+0.23529411764705882i
+	cplx_1 % cplx_2 -&gt; 0.5+0.5i
+	*/
+</code>
+また、複素数型は以下のメソッドを使用可能です。
+<ul>
+	<li>norm</li>
+	<li>norm_sqr</li>
+	<li>exp</li>
+	<li>ln</li>
+	<li>sqrt</li>
+	<li>cbrt</li>
+	<li>log</li>
+	<li>powf</li>
+</ul>
+<h3>norm</h3>
+「|complex|」を計算します。
+<code class="rust">
+	println!("cplx_1.norm() -&gt; {}", cplx_1.norm());
+
+	/* &darr; コンソール &darr;
+	cplx_1.norm() -&gt; 3.1622776601683795
+	*/
+</code>
+<h3>norm_sqr</h3>
+「|complex|<sup>2</sup>」を計算します。
+<code class="rust">
+	println!("cplx_1.norm() -&gt; {}", cplx_1.norm_sqr());
+
+	/* &darr; コンソール &darr;
+	cplx_1.norm_sqr() -> 10
+	*/
+</code>
+後ほど説明しますが、複素数型にべき乗を計算するpow(i/f)メソッドが搭載されているため、以下のように書くこともできます。
+<code class="rust">
+	println!("cplx_1.norm() -> {}", cplx_1.norm().powi(2));
+
+	/* &darr; コンソール &darr;
+	cplx_1.norm().powi(2) -> 10.000000000000002
+	*/
+</code>
+若干の誤差が生じていますね、、、
+<h3>exp</h3>
+「e<sup>complex</sup>」を計算します。<br />いつ使うんだろう???
+<code class="rust">
+	println!("cplx_1.exp() -&gt; {}", cplx_1.exp());
+
+	/* &darr; コンソール &darr;
+	cplx_1.exp() -&gt; 10.852261914197959-16.901396535150095i
+	*/
+</code>
+<h3>ln</h3>
+複素数の自然対数を計算します。
+<code class="rust">
+	println!("cplx_1.ln() -&gt; {}", cplx_1.ln());
+
+	/* &darr; コンソール &darr;
+	cplx_1.ln() -&gt; 1.151292546497023-0.3217505543966422i
+	*/
+</code>
+<h3>sqrt</h3>
+複素数の平方根を計算します。
+<code class="rust">
+	println!("cplx_1.sqrt() -&gt; {}", cplx_1.sqrt());
+
+	/* &darr; コンソール &darr;
+	cplx_1.sqrt() -&gt; 1.755317301824428-0.284848784593141i
+	*/
+</code>
+複素数型でも他のnumクレートに属するデータ型と同様に、cbrtメソッドで三乗根を算出することができます。
+<code class="rust">
+	println!("cplx_1.cbrt() -&gt; {}", cplx_1.cbrt());
+
+	/* &darr; コンソール &darr;
+	cplx_1.cbrt() -&gt; 1.4593656008683928-0.15712012294393962i
+	*/
+</code>
+<h3>log</h3>
+複素数の常用対数を計算します。
+<code class="rust">
+	println!("cplx_1.log(10.0) -&gt; {}", cplx_1.log(10.0));
+
+	/* &darr; コンソール &darr;
+	cplx_1.log(10.0) -&gt; 0.5-0.13973449032377375i
+	*/
+</code>
+<h3>pow(i/f/c)</h3>
+複素数のべき乗を計算します。
+<table>
+	<tbody>
+		<tr>
+			<th>powi</th>
+			<td>複素素数の整数乗を計算します。</td>
+		</tr>
+		<tr>
+			<th>powf</th>
+			<td>複素数の浮動小数点数乗を計算します。</td>
+		</tr>
+		<tr>
+			<th>powc</th>
+			<td>複素数の複素数乗を計算します。</td>
+		</tr>
+	</tbody>
+</table>
+<code class="rust">
+	println!("cplx_1.powi(2) -&gt; {}", cplx_1.powi(2));
+	println!("cplx_1.powf(2.5) -&gt; {}", cplx_1.powf(2.5));
+	println!("cplx_1.powc(cplx_2) -&gt; {}", cplx_1.powc(cplx_2));
+
+	/* &darr; コンソール &darr;
+	cplx_1.powi(2) -&gt; 8-6i
+	cplx_1.powf(2.5) -&gt; 12.333445707036581-12.810694087691699i
+	cplx_1.powc(cplx_2) -&gt; -8.993762544067078-6.289625228570555i
+	*/
+</code>

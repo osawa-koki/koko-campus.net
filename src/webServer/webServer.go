@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 )
 
@@ -45,7 +44,7 @@ func controller(w http.ResponseWriter, r *http.Request) {
 
 	setResponseHeaders(&w)
 	switch RR.snd {
-	case "R", "M":
+	case "R", "M": // [SEC] クリックジャッキング・XSS対策
 		setResponseHeadersSecurity(&w)
 	}
 
@@ -76,24 +75,13 @@ func controller(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println("")
+	fmt.Println(":8181")
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
 
-	if os.Getenv("DEBUG") == "ON" {
-		fmt.Println("DEBUG MODE")
-		if er := http.ListenAndServe("", nil); er != nil {
-			Error("failure on ListenAndServe")
-			fmt.Println("failure on ListenAndServe")
-		}
-	} else {
-		fmt.Println("OPERATION MODE")
-		if er := http.ListenAndServeTLS("", os.Getenv("TLS_CERT"), os.Getenv("TLS_PRIVKEY"), nil); er != nil {
-			fmt.Println("failure on ListenAndServe")
-			Error("failure on ListenAndServe")
-		} else {
-			fmt.Println("success on ListenAndServe")
-		}
+	if er := http.ListenAndServe("", nil); er != nil {
+		fmt.Println("failure on ListenAndServe")
+		fmt.Println(er.Error())
 	}
 }

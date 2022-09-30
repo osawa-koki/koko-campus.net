@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+.plan_class {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 30px;
+	text-align: center;
+	border: 1px black solid;
+}
+
+
+.plan_arrow {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+
+
+#plan_show {
+	font-size: 25px;
+	font-weight: bold;
+	margin: 25px;
+
+}
+
+
+
+
+
+
+#test th {
+	height: 50px;
+}
+
+#test td {
+	text-align: left;
+}
+
+
+#test .border {
+	border: 1px black solid;
+}
+
+.test_case {
+	margin: 25px;
+	border: 1px black solid;
+}
+
+
+
+#function_point_table {
+	width: 650px;
+}
+#function_point_table td {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

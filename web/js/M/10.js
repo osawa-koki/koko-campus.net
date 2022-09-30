@@ -37,7 +37,7 @@
 					window.alert(response.ErrorMessage.join("\n"))
 				}
 			})
-			.catch(() => {
+			.catch(ex => {
 				window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
 			});
 		});

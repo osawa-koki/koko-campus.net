@@ -3,16 +3,18 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"regexp"
 	"strings"
 )
 
 // 静的ページ
 func WebController(w *http.ResponseWriter, path string) {
-	reg := `/\?(?P<Category>[\w\d]+)/(?P<Name>[\w\d\-]+)\.(?P<Ext>\w+)`
-	Params := RegexGetParam(reg, path)
+	reg := `/\?(?P<Category>[\w\d]+)/(?P<Path>[\w\d\-/]+)\.(?P<Ext>\w+)`
+	dotRegex := regexp.MustCompile(`\.{2,}`) // [SEC] ディレクトリトラバーサル対策
+	Params := RegexGetParam(reg, dotRegex.ReplaceAllString(path, ".")) // [SEC] ディレクトリトラバーサル対策
 	var (
 		Category = Params["Category"]
-		Name     = Params["Name"]
+		Path     = Params["Path"]
 		Ext      = Params["Ext"]
 	)
 	var (
@@ -26,7 +28,7 @@ func WebController(w *http.ResponseWriter, path string) {
 	case "JS":
 		contentType = "text/javascript"
 		Type = "js"
-	case "PNG", "GIF", "JPEG", "JPG":
+	case "PNG", "GIF", "JPEG", "JPG", "WEBP":
 		Type = "img"
 		switch Params["Ext"] {
 		case "PNG":
@@ -35,6 +37,8 @@ func WebController(w *http.ResponseWriter, path string) {
 			contentType = "image/gif"
 		case "JPG", "JPEG":
 			contentType = "image/jpeg"
+		case "WEBP":
+			contentType = "image/webp"
 		}
 	case "MP4", "MPEG":
 		Type = "video"
@@ -49,7 +53,7 @@ func WebController(w *http.ResponseWriter, path string) {
 		contentType = "application/zip"
 	}
 	(*w).Header().Set("Content-Type", contentType)
-	if contents, er := FileGetContents(fmt.Sprintf("%s/%s/%s.%s", Type, Category, Name, strings.ToLower(Ext))); er == nil && Type != "" {
+	if contents, er := FileGetContents(fmt.Sprintf("%s/%s/%s.%s", Type, Category, Path, strings.ToLower(Ext))); er == nil && Type != "" {
 		fmt.Fprint(*w, contents)
 	} else {
 		(*w).WriteHeader(http.StatusNotFound)

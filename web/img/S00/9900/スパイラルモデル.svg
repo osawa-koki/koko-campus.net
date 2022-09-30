@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="スパイラルモデル.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.5002"
+         inkscape:cx="374.62"
+         inkscape:cy="209.64"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             id="path844"
+             style="fill:none;fill-rule:evenodd;stroke:#ffa000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 319.63,211.62 c 0.54,4.61 6.48,1.54 7.66,-0.91 3.2,-6.63 -3.31,-13.24 -9.47,-14.43 -11.04,-2.13 -20.25,7.66 -21.2,18.06 -1.4,15.24 12.05,27.36 26.63,27.95 19.44,0.79 34.55,-16.44 34.72,-35.2 0.21,-23.62 -20.83,-41.76 -43.78,-41.48 -27.79,0.32 -48.97,25.22 -48.25,52.36 0.87,31.96 29.63,56.19 60.94,55 36.14,-1.39 63.43,-34.02 61.76,-69.51 -1.89,-40.32 -38.41,-70.68 -78.07,-68.53 -44.51,2.41 -77.93,42.81 -75.3,86.65 2.91,48.68 47.21,85.17 95.23,82.06 52.85,-3.42 92.42,-51.6 88.82,-103.8 -3.93,-57.03 -56.01,-99.66 -112.38,-95.58 -61.21,4.42 -106.91,60.39 -102.35,120.95 4.93,65.38 64.8,114.16 129.54,109.1 69.56,-5.42 121.41,-69.18 115.86,-138.1 -5.92,-73.74 -73.58,-128.66 -146.68,-122.63 -77.91,6.426 -135.91,77.98 -129.39,155.26 6.92,82.1 82.38,143.16 163.83,136.15 86.27,-7.42 150.42,-86.78 142.92,-172.41 -7.91,-90.44 -91.17,-157.664 -180.98,-149.674 -94.63,8.414 -164.92,95.574 -156.45,189.554 0.28,3.15 0.66,6.3 1.11,9.43" />
+        <g
+             id="g7766">
+            <rect
+                 style="fill:#fdffff;fill-opacity:1;stroke:black;stroke-width:0.980357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect1116-6-6"
+                 width="145.34"
+                 height="48.013"
+                 x="116.64"
+                 y="125.97" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="169.43"
+                 y="157.24"
+                 id="text3734"><tspan
+                     sodipodi:role="line"
+                     id="tspan3732"
+                     x="169.43"
+                     y="157.24">計画</tspan></text>
+        </g>
+        <g
+             id="g7774">
+            <rect
+                 style="fill:#fdffff;fill-opacity:1;stroke:black;stroke-width:0.980357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect1116-6-5"
+                 width="145.34"
+                 height="48.013"
+                 x="367.94"
+                 y="123.97" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="420.61"
+                 y="155.09"
+                 id="text4464"><tspan
+                     sodipodi:role="line"
+                     id="tspan4462"
+                     x="420.61"
+                     y="155.09">設計</tspan></text>
+        </g>
+        <g
+             id="g7782">
+            <rect
+                 style="fill:#fdffff;fill-opacity:1;stroke:black;stroke-width:0.980357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect1116-6"
+                 width="145.34"
+                 height="48.013"
+                 x="367.94"
+                 y="251.95" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="369.24"
+                 y="283.65"
+                 id="text5392"><tspan
+                     sodipodi:role="line"
+                     id="tspan5390"
+                     x="369.24"
+                     y="283.65">プログラミング</tspan></text>
+        </g>
+        <g
+             id="g7790">
+            <rect
+                 style="fill:#fdffff;fill-opacity:1;stroke:black;stroke-width:0.980357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                 id="rect1116-6-3"
+                 width="145.34"
+                 height="48.013"
+                 x="116.64"
+                 y="253.96" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="159.78"
+                 y="284.76"
+                 id="text6254"><tspan
+                     sodipodi:role="line"
+                     id="tspan6252"
+                     x="159.78"
+                     y="284.76">テスト</tspan></text>
+        </g>
+    </g>
+</svg>

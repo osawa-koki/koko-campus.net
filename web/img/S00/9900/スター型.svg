@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="スター型.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\スター型.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.3388"
+         inkscape:cx="171.8"
+         inkscape:cy="205.78"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="23.578"
+             y="43.078"
+             id="text1912"><tspan
+                 sodipodi:role="line"
+                 id="tspan1910"
+                 x="23.578"
+                 y="43.078">★スター型</tspan></text>
+        <path
+             style="fill:none;stroke:black;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 375.93,202.05 70.96,-19.42"
+             id="path9670-6" />
+        <image
+             width="100"
+             height="74.258"
+             preserveAspectRatio="none"
+             xlink:href="pc.png"
+             id="image829-0-4"
+             x="436.23"
+             y="130.33" />
+        <image
+             width="100"
+             height="74.258"
+             preserveAspectRatio="none"
+             xlink:href="pc.png"
+             id="image829"
+             x="99.9"
+             y="130.33" />
+        <image
+             width="100"
+             height="74.258"
+             preserveAspectRatio="none"
+             xlink:href="pc.png"
+             id="image829-3"
+             x="375.77"
+             y="312.94" />
+        <image
+             width="100"
+             height="74.258"
+             preserveAspectRatio="none"
+             xlink:href="pc.png"
+             id="image829-0"
+             x="159.42"
+             y="312.94" />
+        <rect
+             style="opacity:1;fill:black;fill-opacity:1;stroke:none;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect7904"
+             width="134.68"
+             height="62.852"
+             x="252.05"
+             y="174.82" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+             x="291.12"
+             y="217.79"
+             id="text8934"><tspan
+                 sodipodi:role="line"
+                 id="tspan8932"
+                 x="291.12"
+                 y="217.79">ハブ</tspan></text>
+        <path
+             style="fill:none;stroke:black;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 318.68,180.01 v -100.087"
+             id="path9555" />
+        <path
+             style="fill:none;stroke:black;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 261.8,202.05 -70.96,-19.42"
+             id="path9670" />
+        <path
+             style="fill:none;stroke:black;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 289.42,236.03 -66.48,77.31"
+             id="path9807" />
+        <path
+             style="fill:none;stroke:black;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+             d="m 347.22,237.23 66.48,77.31"
+             id="path9807-1" />
+        <image
+             width="100"
+             height="74.258"
+             preserveAspectRatio="none"
+             xlink:href="pc.png"
+             id="image829-7"
+             x="268.55"
+             y="9.675" />
+    </g>
+</svg>

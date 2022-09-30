@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ソフトウェアの分類.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\itパスポート試験\pics\ソフトウェアの分類.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.0608"
+         inkscape:cx="278.09"
+         inkscape:cy="232.37"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:vertical-lr"
+             x="35.331"
+             y="108.65"
+             id="text1377"><tspan
+                 sodipodi:role="line"
+                 id="tspan1375"
+                 x="110.65"
+                 y="33.331">ソフトウェア</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:lr-tb"
+             x="136.33"
+             y="271.95"
+             id="text2107"><tspan
+                 sodipodi:role="line"
+                 id="tspan2105"
+                 x="136.33"
+                 y="271.95">システム</tspan><tspan
+                 sodipodi:role="line"
+                 x="136.33"
+                 y="310.22"
+                 id="tspan2307">ソフトウェア</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:lr-tb"
+             x="360.12"
+             y="130.65"
+             id="text3289"><tspan
+                 sodipodi:role="line"
+                 x="360.12"
+                 y="130.65"
+                 id="tspan3291">アプリケーション</tspan><tspan
+                 sodipodi:role="line"
+                 x="360.12"
+                 y="168.92"
+                 id="tspan15971">ソフトウェア</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:lr-tb"
+             x="362.18"
+             y="342.62"
+             id="text6635"><tspan
+                 sodipodi:role="line"
+                 id="tspan6633"
+                 x="362.18"
+                 y="342.62">OS</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:lr-tb"
+             x="356.62"
+             y="246.66"
+             id="text7959"><tspan
+                 sodipodi:role="line"
+                 id="tspan7957"
+                 x="356.62"
+                 y="246.66">ミドルウェア</tspan></text>
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 343.95,136.65 -249.296,0 v 145.98 h 34.666"
+             id="path16536"
+             sodipodi:nodetypes="cccc" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 343.95,234.64 h -17.99 v 100.65 h 19.33"
+             id="path16670" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 326.17,284.93 h -22.15"
+             id="path16672" />
+        <path
+             style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             d="m 95.211,210.23 h -35.35"
+             id="path16674" />
+    </g>
+</svg>

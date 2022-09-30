@@ -1,0 +1,29 @@
+*           text=auto eol=lf
+
+*.txt       text
+*.md        text
+*.json      text
+*.yaml      text
+*.yml       text
+*.toml      text
+
+*.html      text
+*.scss      text
+*.css       text
+*.js        text
+*.ts        text
+
+*.go        text
+*.sql       text
+*.mod       text
+*.sum       text
+
+*.bash      text
+*.cmd       text
+*.bat       text
+
+*.jpg       -text
+*.jpeg      -text
+*.png       -text
+*.webp      -text
+*.gif       -text

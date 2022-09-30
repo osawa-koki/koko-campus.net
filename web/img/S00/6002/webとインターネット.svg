@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="webとインターネット.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\http\pics\webとインターネット.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.0608"
+         inkscape:cx="259.24"
+         inkscape:cy="94.74"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter10723"
+             x="-0.27536"
+             y="-0.27536"
+             width="1.5507"
+             height="1.5507">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.6682"
+                 id="feGaussianBlur10725" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter10727"
+             x="-0.21034"
+             y="-0.21034"
+             width="1.4207"
+             height="1.4207">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.6682"
+                 id="feGaussianBlur10729" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter10731"
+             x="-0.089085"
+             y="-0.089085"
+             width="1.1782"
+             height="1.1782">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.6682"
+                 id="feGaussianBlur10733" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter10735"
+             x="-0.14424"
+             y="-0.14424"
+             width="1.2885"
+             height="1.2885">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="5.6682"
+                 id="feGaussianBlur10737" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter11370"
+             x="-0.033536"
+             y="-0.084399"
+             width="1.0671"
+             height="1.1688">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="3.1224"
+                 id="feGaussianBlur11372" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="fill:blue;fill-opacity:0.53286;stroke-width:0.404271;stroke-linejoin:round;stop-color:black"
+             id="rect847"
+             width="462.61"
+             height="83.539"
+             x="61.995"
+             y="296.4" />
+        <circle
+             style="mix-blend-mode:normal;fill:lime;fill-opacity:0.53286;stroke-width:0.404271;stroke-linejoin:round;filter:url(#filter10735);stop-color:black"
+             id="path871"
+             cx="134.58"
+             cy="221.11"
+             r="47.158" />
+        <circle
+             style="mix-blend-mode:normal;fill:lime;fill-opacity:0.53286;stroke-width:0.404271;stroke-linejoin:round;filter:url(#filter10731);stop-color:black"
+             id="path873"
+             cx="275.75"
+             cy="191.9"
+             r="76.352" />
+        <circle
+             style="mix-blend-mode:normal;fill:lime;fill-opacity:0.53286;stroke-width:0.404271;stroke-linejoin:round;filter:url(#filter10727);stop-color:black"
+             id="path875"
+             cx="402.11"
+             cy="235.92"
+             r="32.338" />
+        <circle
+             style="mix-blend-mode:normal;fill:lime;fill-opacity:0.53286;stroke-width:0.404271;stroke-linejoin:round;filter:url(#filter10723);stop-color:black"
+             id="path877"
+             cx="476.82"
+             cy="243.56"
+             r="24.702" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="134.4"
+             y="346.45"
+             id="text1643"><tspan
+                 sodipodi:role="line"
+                 id="tspan1641"
+                 x="134.4"
+                 y="346.45">インターネット(TCP/IP)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="110.84"
+             y="230.04"
+             id="text3045"><tspan
+                 sodipodi:role="line"
+                 id="tspan3043"
+                 x="110.84"
+                 y="230.04">FTP</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="236.16"
+             y="203.39"
+             id="text4039"><tspan
+                 sodipodi:role="line"
+                 id="tspan4037"
+                 x="236.16"
+                 y="203.39">HTTP</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="380.07"
+             y="242.3"
+             id="text4901"><tspan
+                 sodipodi:role="line"
+                 id="tspan4899"
+                 x="380.07"
+                 y="242.3">NNTP</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="457.13"
+             y="246.5"
+             id="text6621"><tspan
+                 sodipodi:role="line"
+                 id="tspan6619"
+                 x="457.13"
+                 y="246.5">Gopher</tspan></text>
+        <path
+             id="rect10761"
+             style="fill:yellow;fill-opacity:0.53286;stroke-width:0.3;stroke-linejoin:round;stop-color:black;filter:url(#filter11370)"
+             d="m 371.95,31.996 h 181.98 c 8.49,0 15.33,6.838 15.33,15.331 v 45.328 c 0,8.495 -6.84,15.335 -15.33,15.335 h -181.98 c -2.07,0 -4.3,-2.32 -5.85,-1.15 -39.25,29.69 -9.48,5.73 -9.48,-14.185 v -7.106 -38.222 c 0,-8.493 6.84,-15.331 15.33,-15.331 z"
+             sodipodi:nodetypes="sssssssscss" />
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="370.25"
+             y="65.045"
+             id="text12468"><tspan
+                 sodipodi:role="line"
+                 id="tspan12466"
+                 x="370.25"
+                 y="65.045">インターネットを使用した</tspan><tspan
+                 sodipodi:role="line"
+                 x="370.25"
+                 y="86.912"
+                 id="tspan12470">情報交換のための約束事</tspan></text>
+    </g>
+</svg>

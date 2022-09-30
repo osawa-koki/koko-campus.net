@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="700"
+     height="400"
+     viewBox="0 0 700 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="コンパイル.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\java入門\pics\コンパイル.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="-33.3289692692043"
+         inkscape:cy="155.312996794492"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="450.607666"
+             y="63.99161911"
+             width="297.2944031"
+             height="49.32687378"
+             id="rect26578" />
+        <rect
+             x="2.666317463"
+             y="58.65898514"
+             width="198.6406555"
+             height="39.99476242"
+             id="rect23492" />
+        <rect
+             x="163.9785309"
+             y="0"
+             width="259.1480408"
+             height="78.51298523"
+             id="rect15675" />
+        <rect
+             x="373.2844543"
+             y="109.3190155"
+             width="241.3017426"
+             height="318.624939"
+             id="rect8079" />
+        <rect
+             x="22.6636982"
+             y="53.32635117"
+             width="278.630194061523"
+             height="302.627028863086"
+             id="rect3617" />
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter19846"
+             x="-0.0374537751688532"
+             y="-0.0330949291794262"
+             width="1.07490755033771"
+             height="1.06618985835885">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.26501017"
+                 id="feGaussianBlur19848" />
+        </filter>
+        <filter
+             inkscape:collect="always"
+             style="color-interpolation-filters:sRGB"
+             id="filter19846-8"
+             x="-0.0374537751688532"
+             y="-0.0330949291794262"
+             width="1.07490755033771"
+             height="1.06618985835885">
+            <feGaussianBlur
+                 inkscape:collect="always"
+                 stdDeviation="4.26501017"
+                 id="feGaussianBlur19848-2" />
+        </filter>
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.26738;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter19846)"
+             id="rect19822"
+             width="273.2975464"
+             height="309.2928467"
+             x="-1.333158731"
+             y="94.65427399"
+             ry="5.332630157" />
+        <text
+             xml:space="preserve"
+             id="text3615"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect3617)"
+             transform="translate(-17.33315877,71.99266837)"><tspan
+                 x="22.6640625"
+                 y="75.8857421875"
+                 id="tspan9796">public class ex {
+</tspan><tspan
+                 x="22.6640625"
+                 y="108.3857421875"
+                 id="tspan9798">
+</tspan><tspan
+                 x="22.6640625"
+                 y="140.8857421875"
+                 id="tspan9800">   public static vo
+</tspan><tspan
+                 x="22.6640625"
+                 y="173.3857421875"
+                 id="tspan9802">
+</tspan><tspan
+                 x="22.6640625"
+                 y="205.8857421875"
+                 id="tspan9804">      System.out.pr
+</tspan><tspan
+                 x="22.6640625"
+                 y="238.3857421875"
+                 id="tspan9806">
+</tspan><tspan
+                 x="22.6640625"
+                 y="270.8857421875"
+                 id="tspan9808">   }
+</tspan><tspan
+                 x="22.6640625"
+                 y="303.3857421875"
+                 id="tspan9810">
+</tspan><tspan
+                 x="22.6640625"
+                 y="335.8857421875"
+                 id="tspan9812">}
+</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text8077"
+             style="font-size:26px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect8079)"
+             transform="translate(88,12)"><tspan
+                 x="373.28515625"
+                 y="131.8779296875"
+                 id="tspan9814">1010100001011011</tspan><tspan
+                 x="373.28515625"
+                 y="164.3779296875"
+                 id="tspan9816">0010101111010101</tspan><tspan
+                 x="373.28515625"
+                 y="196.8779296875"
+                 id="tspan9818">1110110000011010</tspan><tspan
+                 x="373.28515625"
+                 y="229.3779296875"
+                 id="tspan9820">1101001110101010</tspan><tspan
+                 x="373.28515625"
+                 y="261.8779296875"
+                 id="tspan9822">0101011111101000</tspan><tspan
+                 x="373.28515625"
+                 y="294.3779296875"
+                 id="tspan9824">1000101110100010</tspan><tspan
+                 x="373.28515625"
+                 y="326.8779296875"
+                 id="tspan9826">0101101010101011</tspan><tspan
+                 x="373.28515625"
+                 y="359.3779296875"
+                 id="tspan9828">1101101010000101</tspan><tspan
+                 x="373.28515625"
+                 y="391.8779296875"
+                 id="tspan9830">0101000110100000</tspan><tspan
+                 x="373.28515625"
+                 y="450.5029296875"
+                 id="tspan9832">0</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.930481;fill:#ff0000;stroke:#8f8e92;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill"
+             id="path12043"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="385.2828979"
+             sodipodi:cy="81.32268524"
+             sodipodi:r1="26.29400063"
+             sodipodi:r2="13.14700031"
+             sodipodi:arg1="0.5317240673"
+             sodipodi:arg2="1.578921618"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 407.9465967,94.65427277 -45.5410416,-0.37004239 23.0909869,-39.2546778 z"
+             inkscape:transform-center-x="3.255780531"
+             inkscape:transform-center-y="-3.549153409"
+             transform="rotate(133.8726172,401.6978733,102.8804532)" />
+        <path
+             style="fill:none;stroke:#ff0000;stroke-width:4.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             d="m 420.9616123,98.42151591 c -72.9226345,-51.13067904 -156.8499572,-56.40138502 -233.9816434,16.89855059"
+             id="path12180"
+             sodipodi:nodetypes="cc" />
+        <text
+             xml:space="preserve"
+             id="text15673"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect15675)"
+             transform="translate(18,14)"><tspan
+                 x="163.978515625"
+                 y="27.5625"
+                 id="tspan9842"><tspan
+                     style="fill:#ff0000"
+                     id="tspan9834">コンパイル</tspan><tspan
+                     style="fill:#ff0000"
+                     id="tspan9836">(</tspan><tspan
+                     style="fill:#ff0000"
+                     id="tspan9838">ビルド</tspan><tspan
+                     style="fill:#ff0000"
+                     id="tspan9840">)</tspan></tspan></text>
+        <rect
+             style="opacity:0.26738;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter19846-8)"
+             id="rect19822-2"
+             width="273.2975464"
+             height="309.2928467"
+             x="432.621521"
+             y="105.3195267"
+             ry="5.332630157"
+             inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\c言語入門\pics\rect19822-2.png"
+             inkscape:export-xdpi="96"
+             inkscape:export-ydpi="96" />
+        <text
+             xml:space="preserve"
+             id="text23490"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect23492)"
+             transform="translate(0,12)"><tspan
+                 x="2.666015625"
+                 y="78.345703125"
+                 id="tspan9844">ソースコード(.java)</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text26576"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect26578)"
+             transform="translate(4,18)"><tspan
+                 x="450.607421875"
+                 y="83.6796875"
+                 id="tspan9846">実行可能プログラム(.exe)</tspan></text>
+    </g>
+</svg>

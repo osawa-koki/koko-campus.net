@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ロック.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\sql入門\pics\ロック.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.750098204300002"
+         inkscape:cx="277.297024319779"
+         inkscape:cy="460.606355300402"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1">
+        <inkscape:grid
+             type="xygrid"
+             id="grid11346" />
+    </sodipodi:namedview>
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#d6d7d7;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path926-1"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="119.721069335938"
+             sodipodi:cy="213.989639282227"
+             sodipodi:r1="236.27018737793"
+             sodipodi:r2="118.135093688965"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="20.7084799885608"
+             transform="matrix(0.034191049025939,0,0,-0.350589806644188,335.317109897968,676.361636639865)"
+             d="m 324.337053762134,332.124732971191 h -409.2319688523932 l 204.6159844261961,-354.4052810668941 z" />
+        <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#d6d7d7;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path926"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="119.721069335938"
+             sodipodi:cy="213.989639282227"
+             sodipodi:r1="236.27018737793"
+             sodipodi:r2="118.135093688965"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 324.337053762134,332.124732971191 h -409.2319688523932 l 204.6159844261961,-354.4052810668941 z"
+             inkscape:transform-center-y="69.7281319584103"
+             transform="matrix(0.034191049025939,0,0,-1.18048124799415,336.567635576367,513.17017593444)" />
+        <text
+             xml:space="preserve"
+             style="font-size:36px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="285.962310791016"
+             y="71.9905700683594"
+             id="text2231"><tspan
+                 sodipodi:role="line"
+                 id="tspan2229"
+                 x="285.962310791016"
+                 y="71.9905700683594">DB</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="13.3315877914429"
+             y="99.9858551025391"
+             id="text4933"><tspan
+                 sodipodi:role="line"
+                 id="tspan4931"
+                 x="13.3315877914429"
+                 y="99.9858551025391">店舗決済</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="433.274505615234"
+             y="99.9858551025391"
+             id="text7773"><tspan
+                 sodipodi:role="line"
+                 id="tspan7771"
+                 x="433.274505615234"
+                 y="99.9858551025391">スマホ決済</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.724473;fill:#00ff00;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path11127"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="158.645889282227"
+             sodipodi:cy="181.309585571289"
+             sodipodi:r1="153.191482543945"
+             sodipodi:r2="76.5957412719727"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 291.313604808684,257.905326843262 h -265.3354310529145 l 132.6677155264575,-229.7872238159183 z"
+             inkscape:transform-center-y="114.677206798613"
+             transform="matrix(0.063158543129329,0,0,-2.99434933309853,294.382400486548,867.780397690073)" />
+        <g
+             id="g11527"
+             transform="matrix(0.784248453625201,-2.19375174805646,2.19375174805646,0.784248453625201,-990.060568154189,88.2291350811796)">
+            <g
+                 id="g11522">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420" />
+            </g>
+        </g>
+        <g
+             id="g11527-9"
+             transform="matrix(0.784248453625201,-2.19375174805646,2.19375174805646,0.784248453625201,-995.348000088499,353.157409560095)">
+            <g
+                 id="g11522-50">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418-4" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420-8" />
+            </g>
+        </g>
+        <g
+             id="g11527-2"
+             transform="matrix(0.784248453625201,-2.19375174805646,2.19375174805646,0.784248453625201,-755.905855794372,246.633935917433)">
+            <g
+                 id="g11522-5">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418-7" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420-7" />
+            </g>
+        </g>
+        <g
+             id="g11527-1"
+             transform="matrix(-0.784248453625201,-2.19375174805646,-2.19375174805646,0.784248453625201,1359.22464456697,211.041140404232)">
+            <g
+                 id="g11522-7">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418-9" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420-1" />
+            </g>
+        </g>
+        <g
+             id="g11527-1-0"
+             transform="matrix(-0.784248453625201,-2.19375174805646,-2.19375174805646,0.784248453625201,1591.85353237692,433.437905775383)">
+            <g
+                 id="g11522-7-8">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418-9-61" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420-1-5" />
+            </g>
+        </g>
+        <g
+             id="g11527-1-5"
+             transform="matrix(-0.784248453625201,-2.19375174805646,-2.19375174805646,0.784248453625201,1594.89604643128,121.600636480883)">
+            <g
+                 id="g11522-7-9">
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 128.965517241379,447.993715772977 v 82.006284227023"
+                     id="path11418-9-6" />
+                <path
+                     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                     d="m 120,521.034482758621 8.965517241379,8.965517241379 8.96551724138,-8.965517241379"
+                     id="path11420-1-0" />
+            </g>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="311.958099365234"
+             y="108.652442932129"
+             id="text12839"><tspan
+                 sodipodi:role="line"
+                 id="tspan12837"
+                 x="311.958099365234"
+                 y="108.652442932129">￥10,000-</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="311.669738769531"
+             y="548.461181640625"
+             id="text12839-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan12837-8"
+                 x="311.669738769531"
+                 y="548.461181640625">￥2,000-</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="96.9819946289062"
+             y="146.116271972656"
+             id="text15075"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073"
+                 x="96.9819946289062"
+                 y="146.116271972656">￥8,000-の決済ok???</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="100.213813781738"
+             y="412.107086181641"
+             id="text15075-83"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073-82"
+                 x="100.213813781738"
+                 y="412.107086181641">￥8,000-の決済完了♪</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="345.004333496094"
+             y="578.019714355469"
+             id="text15075-83-5"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073-82-9"
+                 x="345.004333496094"
+                 y="578.019714355469">￥8,000-の決済完了♪</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="160.545684814453"
+             y="292.615264892578"
+             id="text15075-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073-2"
+                 x="160.545684814453"
+                 y="292.615264892578">ok!!!</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="399.084869384766"
+             y="328.528839111328"
+             id="text15075-2-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073-2-5"
+                 x="399.084869384766"
+                 y="328.528839111328">ok!!!</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:18px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="329.515655517578"
+             y="175.836868286133"
+             id="text15075-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan15073-8"
+                 x="329.515655517578"
+                 y="175.836868286133">￥8,000-の決済ok???</tspan></text>
+        <rect
+             style="opacity:1;fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000;fill-opacity:0.7743682265"
+             id="rect1967"
+             width="85.9683532714844"
+             height="25.9875240325928"
+             x="259.782104492188"
+             y="500.527679443359" />
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="263.552856445312"
+             y="518.438720703125"
+             id="text3283"><tspan
+                 sodipodi:role="line"
+                 id="tspan3281"
+                 x="263.552856445312"
+                 y="518.438720703125">￥8,000減額</tspan></text>
+        <rect
+             style="fill:#ffffff;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect1967-1"
+             width="85.9683532714844"
+             height="25.9875240325928"
+             x="261.274017333984"
+             y="690.249694824219" />
+        <text
+             xml:space="preserve"
+             style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="265.044769287109"
+             y="708.160766601562"
+             id="text3283-1"><tspan
+                 sodipodi:role="line"
+                 id="tspan3281-5"
+                 x="265.044769287109"
+                 y="708.160766601562">￥8,000減額</tspan></text>
+        <path
+             id="path1420"
+             style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:0.50854;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+             d="m 508.701743903049,748.393467984956 c 0,0.195952555923 0.288228670501,0.580254101721 -0.01302308573,0.586622125981 -10.812901371146,0.228569018495 -34.164401089483,10.41551358981 -29.547665743591,24.423484760291 0.07146579852,0.216839556602 -0.612452281963,0.199816776701 -0.921459301536,0.298398513053 -0.139233223261,0.04441922687 -0.319003175538,0.210050138221 -0.418821749456,0.132716154329 -12.903786031434,-9.997149247126 -47.904869143553,-3.225754413712 -49.361779329491,6.904324016123 -0.01700400506,0.118230970227 -0.366838930988,7.34701211e-4 -0.550473946922,7.34701211e-4 -0.200955785834,0 -0.48211119036,0.103121181843 -0.602350878777,-8.79746827e-4 -13.729707831191,-11.875466275969 -33.646575547156,-12.588850372156 -53.102884685349,-8.174673818078 -0.356216279855,0.08081705217 -0.658995963392,-0.236687886968 -0.98480913962,-0.356624742906 -0.206805084282,-0.07612814156 -0.665350709762,-0.07947415076 -0.617423747041,-0.229659002858 5.429274973043,-17.013280469457 -13.152756476702,-20.535342561855 -25.500788628241,-23.22209372493 -0.176585749458,-0.03842247589 -0.0049660777,-0.241409988521 -0.0049660777,-0.362349235432 0,-0.128145488075 -0.180608715288,-0.341511515376 0.0055749476,-0.383910232768 11.940432972998,-2.719137840632 34.111833884119,-4.794935351655 28.925278155393,-24.417038164332 -0.04660800148,-0.17633031334 0.480998398519,-0.310675362399 0.739516588313,-0.245145809033 18.966148714382,4.807565979437 41.459235137196,2.456215205349 50.530259257311,-6.970376773553 0.140218486849,-0.145714799776 0.595291806166,-0.501696746714 0.612594208074,-0.32980929133 0.80049665104,7.952383323777 39.806361972476,25.335413853047 64.212262689149,9.327918403211 0.155096377132,-0.101725585957 0.289205830646,0.215915664723 0.432717673442,0.324301170657 0.127878540775,0.09657865212 0.504665525178,0.191281422131 0.381888798608,0.290399024232 -9.732875106288,7.857346168388 -8.354164611169,19.43637690828 15.781735868385,22.09381704201 0.15800102829,0.01739642049 0.0046181271,0.207061737853 0.0046181272,0.309844630949 z"
+             sodipodi:nodetypes="sssssssssssssssssssssss" />
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="375.188873291016"
+             y="756.9765625"
+             id="text3194"><tspan
+                 sodipodi:role="line"
+                 id="tspan3192"
+                 x="375.188873291016"
+                 y="756.9765625">エラー!!!</tspan></text>
+    </g>
+</svg>

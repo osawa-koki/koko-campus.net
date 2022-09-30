@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="800"
+     viewBox="0 0 600 800"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="継承.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\java入門\pics\継承.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="155.979576179876"
+         inkscape:cy="409.946322011212"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2">
+        <rect
+             x="166.644846346021"
+             y="754.567864254784"
+             width="134.64061507976"
+             height="42.6526557647468"
+             id="rect38968" />
+        <rect
+             x="166.64485168457"
+             y="754.56787109375"
+             width="134.640609741211"
+             height="42.6526565551758"
+             id="rect38968-8" />
+        <rect
+             x="166.64485168457"
+             y="754.56787109375"
+             width="134.640609741211"
+             height="42.6526565551758"
+             id="rect38968-2" />
+    </defs>
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="fill:#beffff;fill-opacity:1;stroke:#828100;stroke-width:0.559406;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect847"
+             width="291.90234375"
+             height="171.918075561523"
+             x="142.677703857422"
+             y="41.3539581298828" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="211.972244262695"
+             y="77.3195419311523"
+             id="text1990"><tspan
+                 sodipodi:role="line"
+                 id="tspan1988"
+                 x="211.972244262695"
+                 y="77.3195419311523">foodクラス</tspan></text>
+        <g
+             id="g13615"
+             transform="translate(-4.38054471536098,-64)">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="179.976959228516"
+                 y="182.56462097168"
+                 id="text6291"><tspan
+                     sodipodi:role="line"
+                     id="tspan6289"
+                     x="179.976959228516"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="325.291259765625"
+                 y="182.56462097168"
+                 id="text8477"><tspan
+                     sodipodi:role="line"
+                     id="tspan8475"
+                     x="325.291259765625"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="264.040344238281"
+                 y="182.75993347168"
+                 id="text9471"><tspan
+                     sodipodi:role="line"
+                     id="tspan9469"
+                     x="264.040344238281"
+                     y="182.75993347168">酸味</tspan></text>
+        </g>
+        <g
+             id="g13621"
+             transform="translate(-82.6573696665329,9.882723169075)">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="261.300659179688"
+                 y="146.8037109375"
+                 id="text7615"><tspan
+                     sodipodi:role="line"
+                     id="tspan7613"
+                     x="261.300659179688"
+                     y="146.8037109375">塩味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="331.291259765625"
+                 y="146.6474609375"
+                 id="text10663"><tspan
+                     sodipodi:role="line"
+                     id="tspan10661"
+                     x="331.291259765625"
+                     y="146.6474609375">苦味</tspan></text>
+        </g>
+        <g
+             id="g13627"
+             transform="translate(-82.6558437876266,-20.001047375391)">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="261.299133300781"
+                 y="213.305404663086"
+                 id="text11525"><tspan
+                     sodipodi:role="line"
+                     id="tspan11523"
+                     x="261.299133300781"
+                     y="213.305404663086">食べる()</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="372.616577148438"
+                 y="213.305404663086"
+                 id="text12519"><tspan
+                     sodipodi:role="line"
+                     id="tspan12517"
+                     x="372.616577148438"
+                     y="213.305404663086">写真を撮る()</tspan></text>
+        </g>
+        <path
+             sodipodi:type="star"
+             style="fill:#beff46;fill-opacity:1;stroke:#828100;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13675"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="246.634368896484"
+             sodipodi:cy="322.624420166016"
+             sodipodi:r1="86.6553192138672"
+             sodipodi:r2="43.3276596069336"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="m 321.680076708743,365.952079772949 h -150.091415624517 l 75.045707812258,-129.982978820801 z"
+             inkscape:transform-center-y="14.4762284540306"
+             transform="matrix(-0.22446283825201,-0.121784801055799,0.47699722575381,-0.879158566609465,122.882732488367,595.753920605725)"
+             inkscape:transform-center-x="1.91110053403312" />
+        <path
+             sodipodi:type="star"
+             style="fill:#beff46;fill-opacity:1;stroke:#828100;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13675-4"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="246.634368896484"
+             sodipodi:cy="322.624420166016"
+             sodipodi:r1="86.6553192138672"
+             sodipodi:r2="43.3276596069336"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="14.4762284540306"
+             transform="matrix(0.22446283825201,-0.121784801055799,-0.47699722575381,-0.879158566609465,470.570900645109,595.155178037142)"
+             inkscape:transform-center-x="-1.91110053403355"
+             d="m 321.680076708743,365.952079772949 h -150.091415624517 l 75.045707812258,-129.982978820801 z" />
+        <path
+             sodipodi:type="star"
+             style="fill:#beff46;fill-opacity:1;stroke:#828100;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13675-7"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="246.634368896484"
+             sodipodi:cy="322.624420166016"
+             sodipodi:r1="86.6553192138672"
+             sodipodi:r2="43.3276596069336"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="8.93998142920918"
+             transform="matrix(-0.13861991829525,-0.0752097732677,0.294575783572772,-0.542935702056606,34.7659506290841,838.494715580879)"
+             inkscape:transform-center-x="1.18022476212401"
+             d="m 321.680076708743,365.952079772949 h -150.091415624517 l 75.045707812258,-129.982978820801 z" />
+        <path
+             sodipodi:type="star"
+             style="fill:#beff46;fill-opacity:1;stroke:#828100;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13675-4-6"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="246.634368896484"
+             sodipodi:cy="322.624420166016"
+             sodipodi:r1="86.6553192138672"
+             sodipodi:r2="43.3276596069336"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="8.93998142921168"
+             transform="matrix(0.13861991829525,-0.0752097732677,-0.294575783572772,-0.542935702056606,249.48525934602,838.124954391979)"
+             inkscape:transform-center-x="-1.18022476212451"
+             d="m 321.680076708743,365.952079772949 h -150.091415624517 l 75.045707812258,-129.982978820801 z" />
+        <path
+             sodipodi:type="star"
+             style="fill:#beff46;fill-opacity:1;stroke:#828100;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="path13675-4-6-7"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="246.634368896484"
+             sodipodi:cy="322.624420166016"
+             sodipodi:r1="86.6553192138672"
+             sodipodi:r2="43.3276596069336"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="13.3250991201184"
+             transform="matrix(0.157701488558244,-0.001494071509227,-0.005851862948421,-0.617672910637374,431.418299856715,832.120891475368)"
+             inkscape:transform-center-x="0.253547524598901"
+             d="m 321.680076708743,365.952079772949 h -150.091415624517 l 75.045707812258,-129.982978820801 z" />
+        <rect
+             style="fill:#f2f0d7;fill-opacity:1;stroke:#828100;stroke-width:0.563274;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect847-8"
+             width="258.325561523438"
+             height="196.959365844727"
+             x="20.6977005004883"
+             y="398.924957275391" />
+        <text
+             xml:space="preserve"
+             style="font-size:28.3266px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.885206"
+             x="73.1515426635742"
+             y="430.727844238281"
+             id="text1990-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan1988-4"
+                 x="73.1515426635742"
+                 y="430.727844238281"
+                 style="stroke-width:0.885206">ramenクラス</tspan></text>
+        <g
+             id="g13615-0"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,-113.929128787391,305.630969327887)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="179.976959228516"
+                 y="182.56462097168"
+                 id="text6291-4"><tspan
+                     sodipodi:role="line"
+                     id="tspan6289-5"
+                     x="179.976959228516"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="325.291259765625"
+                 y="182.56462097168"
+                 id="text8477-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan8475-8"
+                     x="325.291259765625"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="264.040344238281"
+                 y="182.75993347168"
+                 id="text9471-1"><tspan
+                     sodipodi:role="line"
+                     id="tspan9469-7"
+                     x="264.040344238281"
+                     y="182.75993347168">酸味</tspan></text>
+        </g>
+        <g
+             id="g13621-9"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,-183.220232309986,366.819340025372)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="261.300659179688"
+                 y="146.8037109375"
+                 id="text7615-0"><tspan
+                     sodipodi:role="line"
+                     id="tspan7613-2"
+                     x="261.300659179688"
+                     y="146.8037109375">塩味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="331.291259765625"
+                 y="146.6474609375"
+                 id="text10663-9"><tspan
+                     sodipodi:role="line"
+                     id="tspan10661-1"
+                     x="331.291259765625"
+                     y="146.6474609375">苦味</tspan></text>
+        </g>
+        <g
+             id="g13627-4"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,-183.218881593048,365.478202556307)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="261.299133300781"
+                 y="213.305404663086"
+                 id="text11525-7"><tspan
+                     sodipodi:role="line"
+                     id="tspan11523-1"
+                     x="261.299133300781"
+                     y="213.305404663086">食べる()</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="372.616577148438"
+                 y="213.305404663086"
+                 id="text12519-4"><tspan
+                     sodipodi:role="line"
+                     id="tspan12517-0"
+                     x="372.616577148438"
+                     y="213.305404663086">写真を撮る()</tspan></text>
+        </g>
+        <g
+             id="g20163"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,11.8467119719694,23.3511062321708)"
+             style="fill:#ff0000;fill-opacity:1">
+            <g
+                 id="g21574"
+                 transform="translate(-139.981670930658,17.3310640199862)"
+                 style="fill:#ff0000;fill-opacity:1">
+                <text
+                     xml:space="preserve"
+                     style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1"
+                     x="181.309585571289"
+                     y="550.297668457031"
+                     id="text17307"><tspan
+                         sodipodi:role="line"
+                         id="tspan17305"
+                         x="181.309585571289"
+                         y="550.297668457031">硬さ</tspan></text>
+                <text
+                     xml:space="preserve"
+                     style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1"
+                     x="243.223358154297"
+                     y="550.397094726562"
+                     id="text17971"><tspan
+                         sodipodi:role="line"
+                         id="tspan17969"
+                         x="243.223358154297"
+                         y="550.397094726562">濃さ</tspan></text>
+                <text
+                     xml:space="preserve"
+                     style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1"
+                     x="305.293365478516"
+                     y="550.594543457031"
+                     id="text18569"><tspan
+                         sodipodi:role="line"
+                         id="tspan18567"
+                         x="305.293365478516"
+                         y="550.594543457031">油の量</tspan></text>
+            </g>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:17.7041px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1;stroke-width:0.885206"
+             x="46.009937286377"
+             y="583.553405761719"
+             id="text22722"><tspan
+                 sodipodi:role="line"
+                 id="tspan22720"
+                 x="46.009937286377"
+                 y="583.553405761719"
+                 style="fill:#ff0000;fill-opacity:1;stroke-width:0.885206">フーフーする()</tspan></text>
+        <rect
+             style="fill:#ffffc8;fill-opacity:1;stroke:#828100;stroke-width:0.563274;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect847-8-0"
+             width="258.325561523438"
+             height="196.959365844727"
+             x="326.104919433594"
+             y="398.924957275391" />
+        <text
+             xml:space="preserve"
+             style="font-size:28.3266px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;stroke-width:0.885206"
+             x="378.558746337891"
+             y="430.727844238281"
+             id="text1990-8-1"><tspan
+                 sodipodi:role="line"
+                 id="tspan1988-4-8"
+                 x="378.558746337891"
+                 y="430.727844238281"
+                 style="stroke-width:0.885206">pastaクラス</tspan></text>
+        <g
+             id="g13615-0-1"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,191.478078658637,305.630957446603)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="179.976959228516"
+                 y="182.56462097168"
+                 id="text6291-4-1"><tspan
+                     sodipodi:role="line"
+                     id="tspan6289-5-6"
+                     x="179.976959228516"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="325.291259765625"
+                 y="182.56462097168"
+                 id="text8477-7-6"><tspan
+                     sodipodi:role="line"
+                     id="tspan8475-8-9"
+                     x="325.291259765625"
+                     y="182.56462097168">うま味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="264.040344238281"
+                 y="182.75993347168"
+                 id="text9471-1-8"><tspan
+                     sodipodi:role="line"
+                     id="tspan9469-7-5"
+                     x="264.040344238281"
+                     y="182.75993347168">酸味</tspan></text>
+        </g>
+        <g
+             id="g13621-9-2"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,122.186975136041,366.819328144088)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="261.300659179688"
+                 y="146.8037109375"
+                 id="text7615-0-8"><tspan
+                     sodipodi:role="line"
+                     id="tspan7613-2-2"
+                     x="261.300659179688"
+                     y="146.8037109375">塩味</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="331.291259765625"
+                 y="146.6474609375"
+                 id="text10663-9-3"><tspan
+                     sodipodi:role="line"
+                     id="tspan10661-1-3"
+                     x="331.291259765625"
+                     y="146.6474609375">苦味</tspan></text>
+        </g>
+        <g
+             id="g13627-4-0"
+             transform="matrix(0.885205851997929,0,0,0.885205851997929,122.188325852979,365.478190675023)"
+             style="fill:#000000;fill-opacity:1">
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="261.299133300781"
+                 y="213.305404663086"
+                 id="text11525-7-5"><tspan
+                     sodipodi:role="line"
+                     id="tspan11523-1-1"
+                     x="261.299133300781"
+                     y="213.305404663086">食べる()</tspan></text>
+            <text
+                 xml:space="preserve"
+                 style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#000000;fill-opacity:1"
+                 x="372.616577148438"
+                 y="213.305404663086"
+                 id="text12519-4-4"><tspan
+                     sodipodi:role="line"
+                     id="tspan12517-0-8"
+                     x="372.616577148438"
+                     y="213.305404663086">写真を撮る()</tspan></text>
+        </g>
+        <text
+             xml:space="preserve"
+             style="font-size:17.7041px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1;stroke-width:0.885206"
+             x="353.837646484375"
+             y="525.819396972656"
+             id="text17307-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan17305-7"
+                 x="353.837646484375"
+                 y="525.819396972656"
+                 style="fill:#ff0000;fill-opacity:1;stroke-width:0.885206">オリーブの量</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:17.7041px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1;stroke-width:0.885206"
+             x="351.417144775391"
+             y="583.553344726562"
+             id="text22722-8"><tspan
+                 sodipodi:role="line"
+                 id="tspan22720-8"
+                 x="351.417144775391"
+                 y="583.553344726562"
+                 style="fill:#ff0000;fill-opacity:1;stroke-width:0.885206">クルクルする()</tspan></text>
+        <rect
+             style="fill:#d4ffde;fill-opacity:1;stroke:#828100;stroke-width:0.516871;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect33948"
+             width="145.297424316406"
+             height="82.6389770507812"
+             x="167.988021850586"
+             y="714.58154296875" />
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="175.313781738281"
+             y="737.23681640625"
+             id="text34964"><tspan
+                 sodipodi:role="line"
+                 id="tspan34962"
+                 x="175.313781738281"
+                 y="737.23681640625">shio_ramenクラス</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text38966"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect38968)"
+             transform="translate(30,-4)"><tspan
+                 x="166.64453125"
+                 y="768.451171875"
+                 id="tspan3205">.....
+</tspan><tspan
+                 x="166.64453125"
+                 y="788.451171875"
+                 id="tspan3207">.....</tspan></text>
+        <rect
+             style="fill:#f2d8e9;fill-opacity:1;stroke:#828100;stroke-width:0.516871;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect33948-3"
+             width="145.297424316406"
+             height="82.6389770507812"
+             x="394.623443603516"
+             y="715.248107910156" />
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="401.949188232422"
+             y="737.903381347656"
+             id="text34964-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan34962-5"
+                 x="401.949188232422"
+                 y="737.903381347656">margheritaクラス</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text38966-4"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect38968-2)"
+             transform="translate(256.635415392004,-3.33342868401132)"><tspan
+                 x="166.64453125"
+                 y="768.451171875"
+                 id="tspan3209">.....
+</tspan><tspan
+                 x="166.64453125"
+                 y="788.451171875"
+                 id="tspan3211">.....</tspan></text>
+        <rect
+             style="fill:#d4e9ce;fill-opacity:1;stroke:#828100;stroke-width:0.516871;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;stroke-opacity:0.535019;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect33948-1"
+             width="145.297424316406"
+             height="82.6389770507812"
+             x="2.69059753417969"
+             y="714.58154296875" />
+        <text
+             xml:space="preserve"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="10.0163726806641"
+             y="737.23681640625"
+             id="text34964-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan34962-1"
+                 x="10.0163726806641"
+                 y="737.23681640625">miso_ramenクラス</tspan></text>
+        <text
+             xml:space="preserve"
+             id="text38966-6"
+             style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect38968-8)"
+             transform="translate(-135.297412330161,-4.00000891383645)"><tspan
+                 x="166.64453125"
+                 y="768.451171875"
+                 id="tspan3213">.....
+</tspan><tspan
+                 x="166.64453125"
+                 y="788.451171875"
+                 id="tspan3215">.....</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="23.3310642242432"
+             y="204.64274597168"
+             id="text50894"><tspan
+                 sodipodi:role="line"
+                 id="tspan50892"
+                 x="23.3310642242432"
+                 y="204.64274597168">基本クラス</tspan><tspan
+                 sodipodi:role="line"
+                 x="23.3310642242432"
+                 y="231.97673034668"
+                 id="tspan1821">スーパークラス</tspan><tspan
+                 sodipodi:role="line"
+                 x="23.3310642242432"
+                 y="259.310729980469"
+                 id="tspan1823">(親クラス)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="22.0308589935303"
+             y="332.267028808594"
+             id="text52074"><tspan
+                 sodipodi:role="line"
+                 id="tspan52072"
+                 x="22.0308589935303"
+                 y="332.267028808594">派生クラス</tspan><tspan
+                 sodipodi:role="line"
+                 x="22.0308589935303"
+                 y="359.601013183594"
+                 id="tspan2403">サブクラス</tspan><tspan
+                 sodipodi:role="line"
+                 x="22.0308589935303"
+                 y="386.934997558594"
+                 id="tspan2405">(子クラス)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="190.641708374023"
+             y="302.627044677734"
+             id="text53350"><tspan
+                 sodipodi:role="line"
+                 id="tspan53348"
+                 x="190.641708374023"
+                 y="302.627044677734">継承</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="352.138275146484"
+             y="304.679992675781"
+             id="text53350-7"><tspan
+                 sodipodi:role="line"
+                 id="tspan53348-4"
+                 x="352.138275146484"
+                 y="304.679992675781">継承</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="70.8417739868164"
+             y="660.633361816406"
+             id="text53350-7-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan53348-4-2"
+                 x="70.8417739868164"
+                 y="660.633361816406">継承</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="169.495529174805"
+             y="660.633422851562"
+             id="text53350-7-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan53348-4-8"
+                 x="169.495529174805"
+                 y="660.633422851562">継承</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:24px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="445.459411621094"
+             y="652.634460449219"
+             id="text53350-7-5"><tspan
+                 sodipodi:role="line"
+                 id="tspan53348-4-7"
+                 x="445.459411621094"
+                 y="652.634460449219">継承</tspan></text>
+    </g>
+</svg>

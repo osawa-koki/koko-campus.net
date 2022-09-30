@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+/*index*/
+#link-to-vuejs {
+	background-image: url(../pics/logo.png);
+}
+.border {
+	border: 1px solid black;
+}
+
+
+

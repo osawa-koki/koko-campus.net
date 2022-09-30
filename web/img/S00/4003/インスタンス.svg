@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="インスタンス.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="1.5002"
+         inkscape:cx="276.63"
+         inkscape:cy="142.98"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.8;fill:#dedeff;fill-opacity:1;stroke:blue;stroke-width:1.5;stroke-linejoin:round;stop-color:black;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect847"
+             width="587.78"
+             height="272.19"
+             x="6.7359"
+             y="45.025"
+             ry="44.756" />
+        <g
+             id="g6906">
+            <g
+                 id="g10307">
+                <rect
+                     style="opacity:0.8;fill:white;fill-opacity:1;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                     id="rect1105"
+                     width="162.53"
+                     height="191.86"
+                     x="28.386"
+                     y="101.04" />
+                <g
+                     id="g3988"
+                     transform="translate(0,-14)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296"
+                             x="58.645"
+                             y="192.46">データベース1</tspan></text>
+                </g>
+                <g
+                     id="g3988-9"
+                     transform="translate(0,68.984)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-7"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298-7"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-9"
+                             x="58.645"
+                             y="192.46">データベース3</tspan></text>
+                </g>
+                <g
+                     id="g3983"
+                     transform="translate(8.001,-21.838)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-3"
+                         width="133.32"
+                         height="25.997"
+                         x="36.66"
+                         y="223.64" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="50.644"
+                         y="242.79"
+                         id="text2298-0"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-8"
+                             x="50.644"
+                             y="242.79">データベース2</tspan></text>
+                </g>
+                <text
+                     xml:space="preserve"
+                     style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="39.328"
+                     y="131.98"
+                     id="text8366"><tspan
+                         sodipodi:role="line"
+                         id="tspan8364"
+                         x="39.328"
+                         y="131.98">既定のインスタンス</tspan></text>
+            </g>
+            <g
+                 id="g10307-0"
+                 transform="translate(186.47)">
+                <rect
+                     style="opacity:0.8;fill:white;fill-opacity:1;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                     id="rect1105-2"
+                     width="162.53"
+                     height="191.86"
+                     x="28.386"
+                     y="101.04" />
+                <g
+                     id="g3988-6"
+                     transform="translate(0,-14)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-4"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298-07"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-4"
+                             x="58.645"
+                             y="192.46">データベース1</tspan></text>
+                </g>
+                <g
+                     id="g3988-9-6"
+                     transform="translate(0,68.984)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-7-9"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298-7-8"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-9-9"
+                             x="58.645"
+                             y="192.46">データベース3</tspan></text>
+                </g>
+                <g
+                     id="g3983-3"
+                     transform="translate(8.001,-21.838)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-3-1"
+                         width="133.32"
+                         height="25.997"
+                         x="36.66"
+                         y="223.64" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="50.644"
+                         y="242.79"
+                         id="text2298-0-0"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-8-5"
+                             x="50.644"
+                             y="242.79">データベース2</tspan></text>
+                </g>
+                <text
+                     xml:space="preserve"
+                     style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="39.328"
+                     y="131.98"
+                     id="text8366-1"><tspan
+                         sodipodi:role="line"
+                         id="tspan8364-8"
+                         x="39.328"
+                         y="131.98">名前付きインスタンス1</tspan></text>
+            </g>
+            <g
+                 id="g10307-4"
+                 transform="translate(372.95)">
+                <rect
+                     style="opacity:0.8;fill:white;fill-opacity:1;stroke:black;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                     id="rect1105-6"
+                     width="162.53"
+                     height="191.86"
+                     x="28.386"
+                     y="101.04" />
+                <g
+                     id="g3988-7"
+                     transform="translate(0,-14)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-72"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298-4"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-3"
+                             x="58.645"
+                             y="192.46">データベース1</tspan></text>
+                </g>
+                <g
+                     id="g3988-9-0"
+                     transform="translate(0,68.984)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-7-3"
+                         width="133.32"
+                         height="25.997"
+                         x="44.661"
+                         y="173.31" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="58.645"
+                         y="192.46"
+                         id="text2298-7-0"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-9-90"
+                             x="58.645"
+                             y="192.46">データベース3</tspan></text>
+                </g>
+                <g
+                     id="g3983-2"
+                     transform="translate(8.001,-21.838)">
+                    <rect
+                         style="opacity:0.8;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+                         id="rect1370-3-13"
+                         width="133.32"
+                         height="25.997"
+                         x="36.66"
+                         y="223.64" />
+                    <text
+                         xml:space="preserve"
+                         style="font-size:16px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+                         x="50.644"
+                         y="242.79"
+                         id="text2298-0-6"><tspan
+                             sodipodi:role="line"
+                             id="tspan2296-8-3"
+                             x="50.644"
+                             y="242.79">データベース2</tspan></text>
+                </g>
+                <text
+                     xml:space="preserve"
+                     style="font-size:14px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                     x="39.328"
+                     y="131.98"
+                     id="text8366-0"><tspan
+                         sodipodi:role="line"
+                         id="tspan8364-6"
+                         x="39.328"
+                         y="131.98">名前付きインスタンス2</tspan></text>
+            </g>
+        </g>
+        <rect
+             style="opacity:0.8;fill:blue;fill-opacity:1;stroke:none;stroke-width:1.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:black"
+             id="rect16515"
+             width="589.92"
+             height="50.66"
+             x="5.3326"
+             y="336.62" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:white;fill-opacity:1"
+             x="216.96"
+             y="372.29"
+             id="text17333"><tspan
+                 sodipodi:role="line"
+                 id="tspan17331"
+                 x="216.96"
+                 y="372.29">ハードウェア</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="37.328"
+             y="79.989"
+             id="text19275"><tspan
+                 sodipodi:role="line"
+                 id="tspan19273"
+                 x="37.328"
+                 y="79.989">OS<tspan
+     style="font-size:24px"
+     id="tspan21809">(Windows server)</tspan></tspan></text>
+    </g>
+</svg>

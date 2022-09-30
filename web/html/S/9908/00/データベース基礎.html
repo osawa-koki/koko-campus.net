@@ -12,7 +12,7 @@
 SQLとは「Structed Query Language」の略で、構造化問合せ言語と訳されます。<br />「エスキューエル」と呼ぶことが多いですが、僕は呼びやすさの観点から「シークゥイル」と呼んでいます。<br />データベースを操作するための言語です。<br /><br />ユーザが、ないしはプログラムが直接データベースを操作することはせずに、RDBMSにSQLを発行してデータベースを操作してもらいます。
 <h2>データベースの仕組み</h2>
 データベースにはデータベースファイルとユーザの架け橋をしてくれるDBMS(RDBMS)と呼ばれるプログラムが存在します。<br />RDBMSはユーザが発行するSQLを受け取ってデータベースファイルを操作して、その結果をユーザに返します。
-<img src="/?S9908/structOfDB.png" alt="データベースの画像" />
+<img src="/?S00/9908/structOfDB.png" alt="データベースの画像" />
 php・java・pythonなどのプログラムから直接SQLを送信する(埋込型SQL)こともできますが、ここではユーザがコマンドラインで直接操作するSQL(会話型SQL)だけを説明します。<br />会話型SQLを理解できたら埋込型SQLもほとんど同じですので、すぐに使えるようになりますよ♪
 <h2>RDBMS</h2>
 「Relational DataBase Management System」の略で、実際にデータベースを操作してくれるプログラムを指します。<br /><br />データベース操作に関しては一般にユーザが直接データベースを操作することはせずに、ユーザがRDBMSへSQLと言われる命令文を出してそれを受け取ったRDBMSが代わりにデータベースを操作します。<br /><br />RDBMSには以下の種類があります。
@@ -26,7 +26,7 @@ php・java・pythonなどのプログラムから直接SQLを送信する(埋込
 ほとんどのRDBMSはANSIやISOによって標準化されていため処理は同じですが、種類によっては少し記述方法が異なる場合があります。
 <h2>関係DBの構造</h2>
 最初に関係DBの構造を理解しましょう♪<br />データベースは複数のテーブルからなります。<br />また、テーブルは表形式となっており、横のラインを行(フィールド)、縦のラインを列(カラム)と呼びます。
-<img src="/?S9908/structOfRelationalDB.png" alt="関係DB" />
+<img src="/?S00/9908/structOfRelationalDB.png" alt="関係DB" />
 データベースはひとつのシステムにつき原則ひとつだけ作成して、その下に複数のテーブルを作成します。
 <h2>データベース環境構築</h2>
 これから、実際にデータベースを操作しますが、単に説明を読みだけではなく、実際にデータベースを自分で操作してみることをオススメします。<br />そのほうが理解しやすいですから、、、<br /><br />ということで、DBMSをインストールしましょう♪<br /><br />DBMSの種類はなんでもOK!ですが、ここでは「SQL Server」を紹介します。<br />前回までは「MySQL」を説明に使用していましたが、「MySQL」は僕が開発環境でバリバリ稼働させているという理由から、今回は「SQL Server」とします。<br />それ以外の理由として、GUIで簡単に操作できるからという理由も挙げておきます。
@@ -34,16 +34,16 @@ php・java・pythonなどのプログラムから直接SQLを送信する(埋込
 <h3>「SQL Server」のダウンロード</h3>
 以下のリンクからインストラクターインストーラをダウンロードして下さい。<br />「Express」を選択して下さい。
 <a href="https://www.microsoft.com/ja-jp/sql-server/sql-server-downloads" class="link SQLServer">SQL Server</a>
-<img src="/?S9908/SQLServer_EXPRESS.gif" alt="SQL Server Express" />
+<img src="/?S00/9908/SQLServer_EXPRESS.gif" alt="SQL Server Express" />
 ダウンロードが完了したら、そのままインストーラを起動して下さい。
 <h3>「SQL Server」のインストール</h3>
 インストーラを実行するとインストール内容を選択する画面が表示されます。<br />今回は特にカスタマイズせず、全部デフォルトに設定します。
-<img src="/?S9908/SQLServer_INSTALL.gif" alt="SQL Server" />
+<img src="/?S00/9908/SQLServer_INSTALL.gif" alt="SQL Server" />
 <h3>SSMSのインストール</h3>
 次に「SQL Server」をGUIで簡単に操作するためのIDE(統合開発環境)を整えましょう♪<br />「SSMS」と呼ばれるプログラムを使用します。<br /><br />以下のリンクからインストラクターインストーラをダウンロードして下さい。
 <a href="https://docs.microsoft.com/ja-jp/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15" class="link">SSMS</a>
 「SQL Server Management Studio (SSMS) **.**.** の無料ダウンロード」と書いてあるところからダウンロードして下さい。<br />ダウンロードが完了したらそのまま起動してインストールを実行してください。<br /><br />インストールが完了したらパソコンを再起動するようにお願いされます。<br />斜に構えずに再起動してください。<br /><br />再起動が終わったら、SSMSを起動してください。<br />スタートメニューで「SSMS」と検索したら表示されます。<br /><br />SSMSを起動したら以下の画面が表示されると思います。
-<img src="/?S9908/SQLServer_LOGIN.gif" alt="SQL Server" />
+<img src="/?S00/9908/SQLServer_LOGIN.gif" alt="SQL Server" />
 「SQL Server」のログインオプションに関しては「SQL Server」独自のものですので、気にしなくてOK!です。<br /><br />ログインに成功したら、早速SQLを実行しましょう♪<br />左上に表示されている「New Query」をクリックして、表示されたエディタに以下のSQLを貼り付けてください。
 <code class="sql">
 	SELECT
@@ -54,5 +54,5 @@ php・java・pythonなどのプログラムから直接SQLを送信する(埋込
 		SYS.DATABASES;
 </code>
 「Execute」ボタンをクリックするか、「F5」キーを押すことでSQLを実行します。
-<img src="/?S9908/EXEC_SQL.gif" alt="SSMS" />
+<img src="/?S00/9908/EXEC_SQL.gif" alt="SSMS" />
 今回はデフォルトで登録されているデータベース一覧が表示しました。<br />表示された内容は気にしなくてOK!です。<br /><br />ここでは、SQLの実行方法だけ理解して下さい。<br /><br />左側に表示されている「Object Explorer」からは簡単にデータベース・テーブル・ストアドプロシージャなどを表示・変更することが可能です。<br />「pokemon」データベースに「my_pokemon」テーブルの列を確認する場合には、「Databases &gt; pokemon &gt; my_pokemon &gt; 列」から確認することが可能です。

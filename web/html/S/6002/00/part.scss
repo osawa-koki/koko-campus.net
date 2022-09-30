@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.to-mozilla {
+	background-image: url(../pics/mdn-logo.png);
+}
+.to-fiddler {
+	background-image: url(../pics/fiddler.png);
+}
+
+.red {
+	color: red;
+}
+.url-encode {
+	max-width: 100%;
+	resize: none;
+	border-radius: 0;
+	display: block;
+	margin: 25px 0;
+	padding: 25px;
+	font-family: "consolas", "Consolas";
+}
+
+.button {
+	padding: 5px;
+	margin: 15px 0;
+	text-align: center;
+	width: 100px;
+	font-size: 12px;
+	color: black;
+	background-color: lightcyan;
+	border: 1px black solid;
+	cursor: pointer;
+	&:hover {
+		color: white;
+		background-color: blue;
+	}
+}
+

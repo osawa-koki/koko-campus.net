@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="400"
+     viewBox="0 0 600 400"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="ウォーターフォールモデル.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7501"
+         inkscape:cx="349.29"
+         inkscape:cy="221.97"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <path
+             id="rect27912"
+             style="fill:blue;fill-opacity:1;stroke:none;stroke-width:1.07497;stop-color:black"
+             d="m 124.48,51.992 v 180.518 h -50.446 l 83.406,144.45 83.4,-144.45 h -50.44 v -180.518 z" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="348.62" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-5"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="296.14" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-8"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="243.66" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-6"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="191.17" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-65"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="86.209" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-0"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="138.69" />
+        <rect
+             style="fill:#fdffff;stroke:black;stroke-width:0.900666;stop-color:black;fill-opacity:0.8"
+             id="rect3905-50-57"
+             width="225.76"
+             height="31.381"
+             x="43.606"
+             y="33.727" />
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="69.832"
+             y="55.994"
+             id="text9166"><tspan
+                 sodipodi:role="line"
+                 id="tspan9164"
+                 x="69.832"
+                 y="55.994">要件定義</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="69.91"
+             y="107.48"
+             id="text12436"><tspan
+                 sodipodi:role="line"
+                 id="tspan12434"
+                 x="69.91"
+                 y="107.48">外部設計(概要設計)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="68.66"
+             y="160.2"
+             id="text14988"><tspan
+                 sodipodi:role="line"
+                 id="tspan14986"
+                 x="68.66"
+                 y="160.2">内部設計(詳細設計)</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="67.566"
+             y="214.34"
+             id="text17748"><tspan
+                 sodipodi:role="line"
+                 id="tspan17746"
+                 x="67.566"
+                 y="214.34">プログラム設計</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="67.566"
+             y="267.06"
+             id="text21748"><tspan
+                 sodipodi:role="line"
+                 id="tspan21746"
+                 x="67.566"
+                 y="267.06">プログラミング</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="68.972"
+             y="318.8"
+             id="text24584"><tspan
+                 sodipodi:role="line"
+                 id="tspan24582"
+                 x="68.972"
+                 y="318.8">テスト</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:20px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="69.988"
+             y="371.95"
+             id="text26796"><tspan
+                 sodipodi:role="line"
+                 id="tspan26794"
+                 x="69.988"
+                 y="371.95">運用・保守</tspan></text>
+        <image
+             width="249.4"
+             height="249.4"
+             preserveAspectRatio="none"
+             xlink:href="waterfall.png"
+             id="image34701"
+             x="309.24"
+             y="38.619" />
+        <text
+             xml:space="preserve"
+             style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;writing-mode:lr-tb"
+             x="327.96"
+             y="321.29"
+             id="text35839"><tspan
+                 sodipodi:role="line"
+                 id="tspan35837"
+                 x="321.29"
+                 y="327.96">滝のように、、、</tspan></text>
+    </g>
+</svg>

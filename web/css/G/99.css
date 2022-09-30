@@ -1,0 +1,21 @@
+#gameSelectPlayStyleBox {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+#gameSelectPlayStyleBox a {
+  display: block;
+  width: 50%;
+  max-width: 50%;
+}
+#gameSelectPlayStyleBox a img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  border: 1px black solid;
+  background-color: lightgoldenrodyellow;
+}
+#gameSelectPlayStyleBox a img:hover {
+  opacity: 0.8;
+  background-color: white;
+}

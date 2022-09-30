@@ -61,7 +61,7 @@ Mathオブジェクトのrandomメソッドを使用します。<br />「0」以
 <code class="javascript">
 	Math.floor(Math.random() * 6) + 1;
 </code>
-<img class="no-max" src="/?S0010/random.gif" alt="random" />
+<img class="no-max" src="/?S00/0010/random.gif" alt="random" />
 <h2>平方根</h2>
 Mathオブジェクトのsqrtメソッドを使用します。
 <code class="javascript">
@@ -73,7 +73,7 @@ Mathオブジェクトのsqrtメソッドを使用します。
 </code>
 <h2>誤差</h2>
 コンピュータって我々と異なり、2進数を採用しているので我々が用いている10進数の演算を行うと若干の誤差が生じる場合があります。<br />例えば、以下のコードを見てください。
-<img class="no-max" src="/?S0010/mathematicalError.gif" alt="誤差" />
+<img class="no-max" src="/?S00/0010/mathematicalError.gif" alt="誤差" />
 実際のところ、どうしようもないです、、、<br />c/c++なら精度を指定することもできるのですが、、、<br />ミサイルの弾道計算でもしない限りは問題ありませんし、そもそもjavascriptでそんな計算は行いません。<br />一応こんなことがあるんだな、程度に覚えておいてください。<br />演算結果を表示する際に「0.30000000000000004」ってなってしまうと見栄えが悪いので切り捨て・切り上げ・四捨五入等の適切な処理を行ってください。
 <h2>数値変換</h2>
 文字列として受け取った数字を数字型として扱うには型変換を行う必要があります。<br />例えば、ユーザがフォームに入力した数字を取得すると文字列型の数字として取得されるため、これに算術演算を行うには数字型に変換しなければなりません。<br />文字列を数字に変換する方法は以下の2通りあります。
@@ -90,7 +90,7 @@ Mathオブジェクトのsqrtメソッドを使用します。
 	console.log(x + y); //「11」
 	console.log(parseInt(x) + y); //「2」
 </code>
-<img class="no-max" src="/?S0010/parseInt.gif" alt="parseInt" />
+<img class="no-max" src="/?S00/0010/parseInt.gif" alt="parseInt" />
 小数点以下は切り捨てられるので注意が必要です。<br />Math.floorの代わりに使用する人もいます。
 <code class="javascript">
 	const pai = 3.1415;
@@ -107,7 +107,7 @@ Mathオブジェクトのsqrtメソッドを使用します。
 	console.log(parseInt(x) + y); //「4.23」
 	console.log(parseFloat(x) + y); //「4.37」
 </code>
-<img class="no-max" src="/?S0010/parseFloat.gif" alt="parseFloat" />
+<img class="no-max" src="/?S00/0010/parseFloat.gif" alt="parseFloat" />
 <div class="separator"></div>
 反対に数字型を文字列型に変換するにはtoStringメソッドを使用します。
 <code class="javascript">
@@ -117,7 +117,7 @@ Mathオブジェクトのsqrtメソッドを使用します。
 	console.log(x + y);
 	console.log(x.toString() + y.toString());
 </code>
-<img class="no-max" src="/?S0010/toString.gif" alt="toString" />
+<img class="no-max" src="/?S00/0010/toString.gif" alt="toString" />
 <h2>表示桁指定</h2>
 小数点以下を何桁まで表示するかはtoFixedメソッドを使用します。<br />引数に小数点以下何桁まで表示するかを指定します。
 <code class="javascript">
@@ -127,5 +127,5 @@ Mathオブジェクトのsqrtメソッドを使用します。
 	console.log(pai.toFixed(5)); //「3.14159」
 	console.log(pai.toFixed(100)); //「3.1415965...」
 </code>
-<img class="no-max" src="/?S0010/toFixed.gif" alt="toFixed" />
+<img class="no-max" src="/?S00/0010/toFixed.gif" alt="toFixed" />
 引数に大きな値を渡すと想定しない結果を返します。

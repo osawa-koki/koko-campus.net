@@ -97,7 +97,7 @@ PHPファイルでHTMLを書く際には「&lt;?php～?&gt;」の外で書けば
 		&lt;/body&gt;
 	&lt;/html&gt;
 </code>
-<img src="/?S0100/cmd-echo.gif" alt="echo" />
+<img src="/?S00/0100/cmd-echo.gif" alt="echo" />
 <p>実行方法は気にしなくてok!です。<br />出力結果だけ確認してください。</p>
 echoに関するphpのショートハンド(コードを簡単に書く裏技)として、「&lt;?= $data;?&gt;」があります。<br />これはshort_open_tagと呼ばれ「&lt;?php echo $data; ?&gt;」と同義で、HTMLメインの文書にちょっとだけPHPで何かを出力させる際に便利なのですが、僕は推奨しません。<br />理由はXMLやその他のXMLベースの文書をHTMLに組み込む際にバグにつながる危険性があるためです。
 <h2>変数</h2>
@@ -263,7 +263,7 @@ PHPではC/C++やJavaScriptと異なり、変数の宣言は必要ありませ�
 <p>次のページで詳しく説明します。</p>
 <h4>インデックス配列</h4>
 要素を「0」から始まるインデックス番号で管理します。<br />インデックス番号は渡した要素の順番通りに自動で振られます。
-<img src="/?S0100/array.png" alt="配列" />
+<img src="/?S00/0100/array.png" alt="配列" />
 「$array = array(データ1, データ2, データ3, データ4, データ5, ...);」といった形で配列を作成します。
 <code class="php">
 	$ary = array(
@@ -279,7 +279,7 @@ PHPではC/C++やJavaScriptと異なり、変数の宣言は必要ありませ�
 </code>
 <h4>連想配列</h4>
 配列の各要素に数字ではなく、独自に名前を付けることができます。<br />連想配列では名前を「キー」、値を「バリュー」と呼びます。
-<img src="/?S0100/assoc.png" alt="連想配列" />
+<img src="/?S00/0100/assoc.png" alt="連想配列" />
 連想配列は「キー =&gt; バリュー」の形で作成します。
 <code class="php">
 	$ary = array(
@@ -335,4 +335,4 @@ PHPではC/C++やJavaScriptと異なり、変数の宣言は必要ありませ�
 	echo $z;
 </code>
 分かりましたか???<br /><br />答えは「the sooner,the better」(早ければ早いほど良い)です。
-<img src="/?S0100/cmd-the_sooner_the_better.gif" alt="phpプログラム" />
+<img src="/?S00/0100/cmd-the_sooner_the_better.gif" alt="phpプログラム" />

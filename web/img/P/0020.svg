@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="100"
+     height="100"
+     viewBox="0 0 100 100"
+     version="1.1"
+     id="svg20"
+     inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+     sodipodi:docname="0020.svg"
+     inkscape:export-filename="0020.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview22"
+         pagecolor="#ffffff"
+         bordercolor="#000000"
+         borderopacity="0.25"
+         inkscape:showpageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:deskcolor="#d1d1d1"
+         inkscape:document-units="px"
+         showgrid="false"
+         inkscape:zoom="5.9081"
+         inkscape:cx="52.893"
+         inkscape:cy="57.209"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs17">
+        <rect
+             x="5.7548"
+             y="6.2625"
+             width="84.968"
+             height="69.565"
+             id="rect405" />
+    </defs>
+    <g
+         inkscape:label="Layer 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Berlin Sans FB';-inkscape-font-specification:'Berlin Sans FB, Normal';font-variant-ligatures:none;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+             x="46.038"
+             y="94.446"
+             id="text233"><tspan
+                 sodipodi:role="line"
+                 id="tspan231"
+                 x="46.038"
+                 y="94.446">editer</tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:10px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="7.7859"
+             y="10.663"
+             id="text401"><tspan
+                 sodipodi:role="line"
+                 id="tspan399"
+                 x="7.7859"
+                 y="10.663" /></text>
+        <text
+             xml:space="preserve"
+             id="text403"
+             style="font-size:4px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;white-space:pre;shape-inside:url(#rect405);display:inline"
+             transform="translate(2.7081,-2.6459)"><tspan
+                 x="5.7539"
+                 y="9.7324"
+                 id="tspan1068">10100001010110101110101010101000011010</tspan><tspan
+                 x="5.7539"
+                 y="14.732"
+                 id="tspan1070">10110100010111010110010100100100101110</tspan><tspan
+                 x="5.7539"
+                 y="19.732"
+                 id="tspan1072">10011111101000010101101011101010101010</tspan><tspan
+                 x="5.7539"
+                 y="24.732"
+                 id="tspan1074">00011010101101000101110101100101001001</tspan><tspan
+                 x="5.7539"
+                 y="29.732"
+                 id="tspan1076">00101110100111110100010101000101101000</tspan><tspan
+                 x="5.7539"
+                 y="34.732"
+                 id="tspan1078">01010110101110101010101000011010101101</tspan><tspan
+                 x="5.7539"
+                 y="39.732"
+                 id="tspan1080">00010111011010000101011010111010101010</tspan><tspan
+                 x="5.7539"
+                 y="44.732"
+                 id="tspan1082">10000110101011010001011101011001010010</tspan><tspan
+                 x="5.7539"
+                 y="49.732"
+                 id="tspan1084">01001011101001111110100001010110101110</tspan><tspan
+                 x="5.7539"
+                 y="54.732"
+                 id="tspan1086">10101010100001101010110100010111010110</tspan><tspan
+                 x="5.7539"
+                 y="59.732"
+                 id="tspan1088">01010010010010111010011111010001010100</tspan><tspan
+                 x="5.7539"
+                 y="64.732"
+                 id="tspan1090">01011010000101011010111010101010100001</tspan><tspan
+                 x="5.7539"
+                 y="69.732"
+                 id="tspan1092">10101011010001011101011001010010010010</tspan><tspan
+                 x="5.7539"
+                 y="74.732"
+                 id="tspan1094">11101001111101000101011001010010010010</tspan><tspan
+                 x="5.7539"
+                 y="79.299"
+                 id="tspan1098"><tspan
+                     dx="0 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992 2.1992"
+                     id="tspan1096">11101001111101000101</tspan></tspan></text>
+        <text
+             xml:space="preserve"
+             style="font-size:12px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:black;fill-opacity:1;stroke:none;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+             x="-32.526"
+             y="94.01"
+             id="text454"
+             transform="rotate(-20.896)"
+             inkscape:transform-center-x="-16.645"
+             inkscape:transform-center-y="-8.6212"><tspan
+                 sodipodi:role="line"
+                 id="tspan452"
+                 x="-32.526"
+                 y="94.01">バイナリ</tspan></text>
+    </g>
+</svg>

@@ -28,7 +28,7 @@ SQL(Structed Query Language)は以下の3つに分類できます。
 </ul>
 <h2>検索</h2>
 検索文の基本構造は「<strong>SELECT 列名 FROM テーブル名 WHERE 条件;</strong>」です。
-<img src="/?S0100/SELECT.png" alt="SELECT文" />
+<img src="/?S00/0100/SELECT.png" alt="SELECT文" />
 例えば以下のデータを保存しているデータベースの「generation3」表からtype1が「ほのお」である「name」を抜き出すSQLはこうなります。
 <code class="sql">
 	SELECT name FROM generation3 WHERE type1 = 'ほのお';
@@ -138,7 +138,7 @@ SQL(Structed Query Language)は以下の3つに分類できます。
 	</tbody>
 </table>
 このように更新用のSQLは「<strong>UPDATE テーブル名 SET 列名 = 値 WHERE 条件;</strong>」で作成します。
-<img src="/?S0100/UPDATE.png" alt="UPDATE文" />
+<img src="/?S00/0100/UPDATE.png" alt="UPDATE文" />
 SETの内容が複数存在する場合は「SET type1 = 'エスパー', type2 = 'フェアリー'」のように、「,(カンマ)」で区切って表します。
 <p>WHERE句で条件を設定しないと全部のデータが変更されることに注意してください。</p>
 <h2>削除</h2>
@@ -190,7 +190,7 @@ SETの内容が複数存在する場合は「SET type1 = 'エスパー', type2 =
 	</tbody>
 </table>
 このように削除用のSQLは「<strong>DELETE FROM テーブル名 WHERE 条件式;</strong>」で作成します。
-<img src="/?S0100/DELETE.png" alt="DELETE文" />
+<img src="/?S00/0100/DELETE.png" alt="DELETE文" />
 <p>WHERE句で条件を指定しないと全データを削除することに注意してください。</p>
 <h2>追加</h2>
 第三世代と言えば「レックウザ」ですよね♪<br /><br />追加しましょう♪
@@ -247,4 +247,4 @@ SETの内容が複数存在する場合は「SET type1 = 'エスパー', type2 =
 	</tbody>
 </table>
 このように追加用のSQLは「<strong>INSERT INTO generation3(カラム1, カラム2, カラム3, ...) VALUES(値1, 値2, 値3, ...);</strong>」で作成します。
-<img src="/?S0100/INSERT.png" alt="INSERT文" />
+<img src="/?S00/0100/INSERT.png" alt="INSERT文" />

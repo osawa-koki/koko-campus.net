@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+     width="600"
+     height="600"
+     viewBox="0 0 600 600"
+     version="1.1"
+     id="svg5"
+     sodipodi:docname="グループ化-絞り込み.svg"
+     inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+     inkscape:export-filename="C:\Program Files\XAMPP\htdocs\koko-campus.org\subjects\sql入門\pics\グループ化-絞り込み.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview
+         id="namedview7"
+         pagecolor="#ffffff"
+         bordercolor="#666666"
+         borderopacity="1.0"
+         inkscape:pageshadow="2"
+         inkscape:pageopacity="0.0"
+         inkscape:pagecheckerboard="0"
+         inkscape:document-units="px"
+         showgrid="false"
+         units="px"
+         width="600px"
+         inkscape:zoom="0.7500982043"
+         inkscape:cx="222.637514718285"
+         inkscape:cy="363.285765034327"
+         inkscape:window-width="1920"
+         inkscape:window-height="1009"
+         inkscape:window-x="-8"
+         inkscape:window-y="-8"
+         inkscape:window-maximized="1"
+         inkscape:current-layer="layer1" />
+    <defs
+         id="defs2" />
+    <g
+         inkscape:label="レイヤー 1"
+         inkscape:groupmode="layer"
+         id="layer1">
+        <rect
+             style="opacity:0.559157;fill:#767978;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843"
+             width="450.607666015625"
+             height="69.3242568969727"
+             x="79.9895248413086"
+             y="55.9916191101074"
+             ry="27.3379001617432" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="211.971725463867"
+             y="102.652183532715"
+             id="text1397"><tspan
+                 sodipodi:role="line"
+                 id="tspan1395"
+                 x="211.971725463867"
+                 y="102.652183532715">元のテーブル</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.559157;fill:#00ff00;fill-opacity:1;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path2447"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="206.639602661133"
+             sodipodi:cy="226.636993408203"
+             sodipodi:r1="70.6574172973633"
+             sodipodi:r2="35.3287086486816"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="17.6643537126787"
+             transform="matrix(0.477751192929634,0,0,-1,206.60985324605,403.279484313884)"
+             d="m 267.830721006447,261.965702056885 h -122.382236690629 l 61.191118345315,-105.986125946045 z" />
+        <rect
+             style="opacity:0.559157;fill:#00ff78;fill-opacity:1;stroke-width:0.565141;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-6"
+             width="293.708343505859"
+             height="69.3242568969727"
+             x="158.232818603516"
+             y="270.130279541016" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none;fill:#ff0000;fill-opacity:1"
+             x="223.971725463867"
+             y="316.790832519531"
+             id="text1397-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan1395-1"
+                 x="223.971725463867"
+                 y="316.790832519531">グループ化</tspan></text>
+        <path
+             sodipodi:type="star"
+             style="opacity:0.559157;fill:#00ff00;fill-opacity:1;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="path2447-2"
+             inkscape:flatsided="true"
+             sodipodi:sides="3"
+             sodipodi:cx="206.639602661133"
+             sodipodi:cy="226.636993408203"
+             sodipodi:r1="70.6574172973633"
+             sodipodi:r2="35.3287086486816"
+             sodipodi:arg1="0.523598775598299"
+             sodipodi:arg2="1.5707963267949"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             inkscape:transform-center-y="17.6643537126787"
+             transform="matrix(0.477751192929634,0,0,-1,206.60985324605,617.418134547461)"
+             d="m 267.830721006447,261.965702056885 h -122.382236690629 l 61.191118345315,-105.986125946045 z" />
+        <rect
+             style="opacity:0.559157;fill:#ff7978;fill-opacity:1;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:0.499999;paint-order:markers stroke fill;stop-color:#000000"
+             id="rect843-0"
+             width="450.607666015625"
+             height="69.3242568969727"
+             x="79.9895248413086"
+             y="484.268859863281"
+             ry="27.3379001617432" />
+        <text
+             xml:space="preserve"
+             style="font-size:32px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+             x="241.971725463867"
+             y="530.929443359375"
+             id="text1397-9"><tspan
+                 sodipodi:role="line"
+                 id="tspan1395-4"
+                 x="241.971725463867"
+                 y="530.929443359375">集計結果</tspan></text>
+        <g
+             id="g14642"
+             transform="translate(0,-8)">
+            <path
+                 id="path3998"
+                 style="opacity:1;fill:#ffff78;fill-opacity:1;stroke:#000000;stroke-width:1.25696;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 d="m 262.766013726409,207.661620341198 c 0,0.33643194692 0.383692735657,0.914418360321 -0.01874802651,1.006512428404 -22.436817649959,5.13441481709 -23.534059335489,17.559406950616 -20.751226857056,29.531465451075 0.05895931749,0.253649619106 -0.517166716875,0.309440302595 -0.778664589314,0.462260932032 -0.200165096497,0.116977456653 -0.372299209361,0.421098181266 -0.603884401417,0.348690056778 -17.050949383729,-5.331201251054 -32.826414088877,-1.264001498552 -44.881421455358,11.124945229919 -0.223074305187,0.229253753186 -0.727175518001,0.0053445669 -1.09177736582,0.0053445669 -0.57450079938,0 -1.386235999325,0.358296749869 -1.718436411778,-0.01325058676 -14.979860971771,-16.754125637522 -32.03415214173,-15.337238826199 -45.686122195208,-11.957454812039 -0.458558362195,0.113524144577 -0.761614779046,-0.465608070267 -1.135822718122,-0.702528168395 -0.408536101032,-0.258654087844 -0.811795114963,-0.520558046039 -1.209668228432,-0.785644024937 -0.365258633333,-0.243356334191 -1.170111106849,-0.36664022086 -1.082074400551,-0.738061693173 6.55136063662,-27.639789306437 -10.073894946718,-25.029693723686 -17.293598741379,-28.282279379894 -0.27174742481,-0.122426321244 -0.292271632231,-0.690244515051 0.0103129832,-0.746691455242 23.886302548427,-4.455972388535 24.058369054716,-16.083356198687 17.706756431429,-27.828570824357 -0.168674732402,-0.311908337533 0.649000245064,-0.440209335534 0.978978639426,-0.657078353816 0.383113971668,-0.251790881904 0.734870030602,-0.950027693321 1.163934208162,-0.74653909143 21.423122622961,10.160161343427 40.08419485337,9.626685053323 46.564397713267,-12.487350924865 0.129017185645,-0.440277989264 1.442533107784,-0.417964751124 1.701342720026,-0.01298801549 18.585487145786,29.081956613843 36.304316735255,14.71647353077 48.883408029756,12.891972305764 0.315010135706,-0.04568981694 0.497196001581,0.321841329785 0.742753007097,0.484581815207 0.08366612068,0.05544889695 0.295253858939,0.08778590313 0.25028835596,0.166766754742 -8.149736107958,14.314820375546 5.419052148409,21.52804535784 18.220196591043,27.68272972618 0.446440170497,0.214644741419 0.02907671162,0.83399965204 0.02907671158,1.253168063397 z"
+                 sodipodi:nodetypes="ssssssssssssssssssssssss" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="158.645889282227"
+                 y="217.97119140625"
+                 id="text8974"><tspan
+                     sodipodi:role="line"
+                     id="tspan8972"
+                     x="158.645889282227"
+                     y="217.97119140625">WHERE</tspan></text>
+        </g>
+        <g
+             id="g14637"
+             transform="translate(2,-8)">
+            <path
+                 id="path3998-9"
+                 style="fill:#ffff78;fill-opacity:1;stroke:#000000;stroke-width:1.25696;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.499999;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+                 d="m 260.115963598082,424.021582949632 c 0,0.33643194692 0.383692735656,0.914418360321 -0.01874802651,1.006512428404 -22.43681764996,5.13441481709 -23.53405933549,17.559406950616 -20.751226857057,29.531465451075 0.05895931749,0.253649619106 -0.517166716875,0.309440302595 -0.778664589314,0.462260932032 -0.200165096496,0.116977456653 -0.37229920936,0.421098181266 -0.603884401416,0.348690056778 -17.05094938373,-5.331201251054 -32.826414088878,-1.264001498552 -44.881421455359,11.124945229919 -0.223074305187,0.229253753186 -0.727175518,0.0053445669 -1.09177736582,0.0053445669 -0.57450079938,0 -1.386235999325,0.358296749869 -1.718436411778,-0.01325058676 -14.97986097177,-16.754125637522 -32.03415214173,-15.337238826199 -45.686122195207,-11.957454812039 -0.458558362195,0.113524144577 -0.761614779046,-0.465608070267 -1.135822718122,-0.702528168395 -0.408536101033,-0.258654087844 -0.811795114963,-0.520558046039 -1.209668228432,-0.785644024937 -0.365258633334,-0.243356334191 -1.170111106849,-0.36664022086 -1.082074400551,-0.738061693173 6.551360636619,-27.639789306437 -10.073894946719,-25.029693723686 -17.29359874138,-28.282279379894 -0.27174742481,-0.122426321244 -0.292271632231,-0.690244515051 0.0103129832,-0.746691455242 23.886302548428,-4.455972388535 24.058369054717,-16.083356198687 17.70675643143,-27.828570824357 -0.168674732402,-0.311908337533 0.649000245064,-0.440209335534 0.978978639426,-0.657078353816 0.383113971668,-0.251790881904 0.734870030602,-0.950027693321 1.163934208162,-0.74653909143 21.423122622961,10.160161343427 40.08419485337,9.626685053323 46.564397713267,-12.487350924865 0.129017185645,-0.440277989264 1.442533107783,-0.417964751124 1.701342720026,-0.01298801549 18.585487145786,29.081956613843 36.304316735254,14.71647353077 48.883408029756,12.891972305764 0.315010135705,-0.04568981694 0.49719600158,0.321841329785 0.742753007097,0.484581815207 0.08366612068,0.05544889695 0.295253858938,0.08778590313 0.25028835596,0.166766754742 -8.149736107958,14.314820375546 5.419052148409,21.52804535784 18.220196591043,27.68272972618 0.446440170497,0.214644741419 0.02907671162,0.83399965204 0.02907671158,1.253168063397 z"
+                 sodipodi:nodetypes="ssssssssssssssssssssssss" />
+            <text
+                 xml:space="preserve"
+                 style="font-size:28px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:'Consolas, Normal';font-variant-ligatures:none"
+                 x="147.313262939453"
+                 y="431.943450927734"
+                 id="text10386"><tspan
+                     sodipodi:role="line"
+                     id="tspan10384"
+                     x="147.313262939453"
+                     y="431.943450927734">HAVING</tspan></text>
+        </g>
+    </g>
+</svg>

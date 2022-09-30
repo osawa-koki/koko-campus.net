@@ -1,8 +1,5 @@
 version: '3.8'
 
-volumes:
-  mysql-data:
-
 services:
   app:
     build: 
@@ -33,7 +30,7 @@ services:
     command: sleep infinity
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:db
+    # network_mode: service:db
 
     # Uncomment the next line to use a non-root user for all processes.
     # user: vscode
@@ -41,16 +38,4 @@ services:
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
-  db:
-    image: mysql:8.0.30
-    platform: linux/amd64 # For Apple M1
-    restart: unless-stopped
-    volumes:
-      - mysql-data:/var/lib/mysql
-      - ./initdb.d:/docker-entrypoint-initdb.d
-      - ./mysql-my.cnf:/etc/mysql/conf.d/my.cnf
-    env_file:
-      # Ensure that the variables in .env match the same variables in devcontainer.json
-      - db.env
-    ports:
-      - 13306:3306
+  

@@ -15,43 +15,32 @@ header {
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 100;
 }
-
 @media screen and (max-width: 500px) {
   header {
     height: 50px;
   }
 }
-
 header img {
   cursor: pointer;
   height: 100%;
 }
-
 header #logo {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
 }
-
 header #header-right-div {
   position: absolute;
   top: 5px;
   right: 5px;
   bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
-
 header #header-right-div img {
   margin-right: 5px;
 }
-
 header #header-right-div img:hover {
   opacity: 0.7;
 }
@@ -63,7 +52,6 @@ main {
   margin-right: auto;
   margin-left: auto;
 }
-
 @media screen and (max-width: 500px) {
   main {
     margin-top: 60px;
@@ -80,7 +68,7 @@ main {
 footer {
   margin: 25px 0;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: lightgoldenrodyellow;
   background-image: url(?00/90.png);
   background-position: center;
