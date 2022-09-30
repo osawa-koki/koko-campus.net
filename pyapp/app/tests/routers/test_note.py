@@ -2,14 +2,13 @@ import os
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.config import settings
 
 client = TestClient(app)
 
 
 def test_valid_token():
-    response = client.delete(
-        "/note/", headers={"x-token": os.getenv("PYAPI_SECRET_TOKEN")}
-    )
+    response = client.delete("/note/", headers={"x-token": settings.PYAPI_SECRET_TOKEN})
     assert response.status_code == 200
 
 
