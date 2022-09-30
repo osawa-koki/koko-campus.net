@@ -1,16 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "src\\webServer"
+			"path": "src/webServer"
 		},
 		{
-			"path": "web\\html\\S"
-		},
-		{
-			"path": "src\\pyAPI"
+			"path": "web/html/S"
 		}
 	],
-	"settings": {
-		"terminal.integrated.cwd": ""
-	}
+	"settings": {}
 }

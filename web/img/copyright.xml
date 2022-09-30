@@ -31,6 +31,8 @@
         <img path="?99/0028.png" using-for="?G/30.png" url="https://rakugakiicon.com/?p=424" description="設定" />
         <img path="?99/0029.png" using-for="" url="https://tsukatte.com/danbo-ru/" description="箱" />
         <img path="?99/0030.png" using-for="?00/0103/cookie.png" url="https://www.irasutoya.com/2012/11/blog-post_27.html" description="クッキー" />
+        <img path="?99/0031.png" using-for="?00/4014/webServer-for-staticFiles.png" url="https://www.illust-box.jp/sozai/201668/" description="両矢印" />
+        <img path="?99/0032.jpeg" using-for="?00/4014/webServer-as-LB.png" url="https://www.ac-illust.com/main/detail.php?id=2645940" description="サーバ" />
     </free>
     <bought>
         <img path="?bought/0000.png" using-for="?S/0221.png" url="https://pixta.jp/illustration/41469917" description="gopher" />

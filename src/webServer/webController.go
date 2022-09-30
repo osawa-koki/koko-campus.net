@@ -28,7 +28,7 @@ func WebController(w *http.ResponseWriter, path string) {
 	case "JS":
 		contentType = "text/javascript"
 		Type = "js"
-	case "PNG", "GIF", "JPEG", "JPG":
+	case "PNG", "GIF", "JPEG", "JPG", "WEBP":
 		Type = "img"
 		switch Params["Ext"] {
 		case "PNG":
@@ -37,6 +37,8 @@ func WebController(w *http.ResponseWriter, path string) {
 			contentType = "image/gif"
 		case "JPG", "JPEG":
 			contentType = "image/jpeg"
+		case "WEBP":
+			contentType = "image/webp"
 		}
 	case "MP4", "MPEG":
 		Type = "video"
