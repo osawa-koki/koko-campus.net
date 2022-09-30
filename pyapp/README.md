@@ -1,38 +1,58 @@
 # pyAPI
 
-- python >= 3.10
 
+## セットアップ
+1. python >= 3.10をインストール
 
-## 実行方法
-1. MySQLにデータベース（`DB_PYAPI_DATABASE_NAME`）を作成
+2. MySQLにデータベース（`DB_PYAPI_DATABASE_NAME`）を作成
 
-2. 環境変数を設定
+3. 環境変数を設定
 ```
 $ export DB_PYAPI_DATABASE_NAME=<fastAPI用のMySQLのDB名>
 $ export PYAPI_SECRET_TOKEN=<適当な文字列>
 ```
 
-3. Pythonのパッケージ（ライブラリ）をインストール
+4. 移動
+```
+$ cd pyapp
+```
+
+5. 仮想環境の作成
+```
+$ python -m venv venv
+$ source venv/bin/activate
+```
+
+6. Pythonのパッケージ（ライブラリ）をインストール
 ```
 $ pip install -r requirements.txt
 ```
 
-4. DBマイグレーション
+7. DBマイグレーション
 ```
 $ alembic upgrade head
 ```
 
-5. Webサーバーを起動
+
+## Webサーバーの起動方法
+
+### ローカル環境
+venv内で、
 ```
 $ uvicorn app.main:app --port 8282 --reload
 ```
-もしくは、[デバッガーで`run_debug.py`を実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)
+を実行。もしくは、[デバッガーで`run_debug.py`を実行](https://fastapi.tiangolo.com/ja/tutorial/debugging/)。
+
+### 本番環境
+```
+$ nohup /home/koko-campus.net/pyapp/venv/bin/uvicorn --port 8282 --reload &
+```
 
 
 ## 開発環境
 
 ### フォーマッター
-`src/pyAPI`フォルダーをWorkspaceに追加して開けば自動でフォーマッターの設定が反映されると思うけど、反映されない場合は[この記事](https://maku.blog/p/4oybku6/)を参考にして、Python用フォーマッターのblackをオンにしてほしい！
+`src/pyAPI`フォルダーをWorkspaceに追加して開けば自動でフォーマッターの設定が反映されると思うけど、反映されない場合は[この記事](https://maku.blog/p/4oybku6/)を参考にして、Python用フォーマッターのblackをオンにしてほしい。
 
 setting.json
 ```
