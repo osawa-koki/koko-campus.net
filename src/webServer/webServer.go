@@ -75,7 +75,7 @@ func controller(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	fmt.Println("")
+	fmt.Println(":8181")
 	fmt.Println("***** webServer started... *****")
 	fmt.Println("")
 	http.HandleFunc("/", controller)
