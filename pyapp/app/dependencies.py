@@ -1,5 +1,3 @@
-import os
-
 from fastapi import Header, HTTPException
 
 from .config import settings
