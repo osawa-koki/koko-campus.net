@@ -8,27 +8,27 @@
 			<link rel="stylesheet" href="{{$css}}">
 		{{ end }}
 		{{ range $_, $css := .CSS }}
-			<link rel="stylesheet" href="/?{{$css}}.css">
+			<link rel="stylesheet" href="/static/css/{{$css}}.css">
 		{{ end }}
-		<link rel="icon" type="image/png" href="/?00/01.png" />
+		<link rel="icon" type="image/png" href="/static/img/00/01.png" />
 		{{ range $_, $js := .JSLIB }}
 			<script charset="utf-8" type="text/javascript" src="{{$js}}"></script>
 		{{ end }}
 		{{ range $_, $js := .JSFX }}
-			<script charset="utf-8" type="text/javascript" src="/?{{$js}}.js"></script>
+			<script charset="utf-8" type="text/javascript" src="/static/js/{{$js}}.js"></script>
 		{{ end }}
 	</head>
 	<body>
 		<div id="entireWrapper">
 			<header>
-				<a href="/"><img id="logo" src="/?00/00.png" alt="logo" /></a>
+				<a href="/"><img id="logo" src="/static/img/00/00.png" alt="logo" /></a>
 				<div id="header-right-div">
 					{{ if .Login }}
-						<a href="/??"><img src="/?01/09.png" alt="to logout" /></a>
-						<a href="/M00"><img src="/?01/00.png" alt="to mypage" /></a>
+						<a href="/??"><img src="/static/img/01/09.png" alt="to logout" /></a>
+						<a href="/M00"><img src="/static/img/01/00.png" alt="to mypage" /></a>
 					{{ else }}
-						<a href="/R10"><img src="/?01/02.png" alt="register" /></a>
-						<a href="/R00"><img src="/?01/01.png" alt="login" /></a>
+						<a href="/R10"><img src="/static/img/01/02.png" alt="register" /></a>
+						<a href="/R00"><img src="/static/img/01/01.png" alt="login" /></a>
 					{{ end }}
 				</div>
 			</header>
@@ -37,7 +37,7 @@
 		</div>
 		<div id="scriptBox">
 		{{ range $_, $js := .JS }}
-			<script charset="utf-8" type="text/javascript" src="/?{{$js}}.js" defer></script>
+			<script charset="utf-8" type="text/javascript" src="/static/js/{{$js}}.js" defer></script>
 		{{ end }}
 		</div>
 	</body>

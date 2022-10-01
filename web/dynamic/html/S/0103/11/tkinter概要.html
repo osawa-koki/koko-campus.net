@@ -48,11 +48,11 @@ tkinterとはpythonで簡単にGUIアプリケーションを作成するため�
 
 	root.mainloop()
 </code>
-<img src="/?S00/0103/tk_template.gif" alt="tkinter 雛形" />
+<img src="/static/img/S00/0103/tk_template.gif" alt="tkinter 雛形" />
 一般的にtkinterモジュールは名前が長いため、tkという名前でインポートすることが多いです。<br />これ以降もtkinterをtkとして扱います。<br /><br />また、メインとなる部分は「root」変数に代入することが多いです。
 <h2>tkinterの構造</h2>
 tkinterでデスクトップ上に配置する部品は階層構造をとります。
-<img src="/?S00/0103/tk_hierarchy.png" alt="tkinter ウィジェット階層" />
+<img src="/static/img/S00/0103/tk_hierarchy.png" alt="tkinter ウィジェット階層" />
 <table>
 	<tbody>
 		<tr>
@@ -108,13 +108,13 @@ rootオブジェクトの最小サイズを指定することができます。<
 <code class="python">
 	root.minsize(width = 横幅, height = 縦幅)
 </code>
-<img src="/?S00/0103/root-minsize.gif" alt="tkinter minsize" />
+<img src="/static/img/S00/0103/root-minsize.gif" alt="tkinter minsize" />
 <h3>maxsizeメソッド</h3>
 rootオブジェクトの最大サイズを指定することができます。<br />以下のように記述します。
 <code class="python">
 	root.maxsize(width = 横幅, height = 縦幅)
 </code>
-<img src="/?S00/0103/root-maxsize.gif" alt="tkinter maxsize" />
+<img src="/static/img/S00/0103/root-maxsize.gif" alt="tkinter maxsize" />
 <h3>configure</h3>
 背景色やメニューバーを設置するために使用します。<br />背景色は以下のように記述します。
 <code class="python">
@@ -161,7 +161,7 @@ rootオブジェクトの最大サイズを指定することができます。<
 	<li>sunken</li>
 </ul>
 違いは実際に見た方が早いです♪
-<img src="/?S00/0103/relief.png" alt="relief" />
+<img src="/static/img/S00/0103/relief.png" alt="relief" />
 <div class="hidden">
 	<code class="python">
 		from tkinter import *

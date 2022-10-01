@@ -43,7 +43,7 @@
 	WHERE (152 &lt;= 図鑑番号 AND 図鑑番号 &lt;= 251)
 		AND (タイプ1 = 'ほのお' OR タイプ2 = 'ほのお');
 </code>
-<img src="/?S00/0199/where.png" alt="WHERE" />
+<img src="/static/img/S00/0199/where.png" alt="WHERE" />
 <h2>NULL</h2>
 「ナル」と呼びます。<br />人によっては「ヌル」と発音しますが、正確には「ナル」です。<br /><br />NULLとはデータが存在しないことを示すデータ型です。<br />数字の「0」や空の文字列「''」とも異なります。<br />なんだかややこしい概念なのですが、本当に何もないデータだと思ってください。<br />NULLはデータの挿入時に当該データが欠けていた場合に使用されます。<br /><br />ポケモンデータの挿入時にタイプ2がない場合は「なし」としましたが、実際には「なし」タイプが存在するわけではないため、これをNULLとしましょう♪
 <p>データが欠けていた場合に自動的にNULLが設定されるようにすることもできますが、まだ学習していないためここでは無理やりNULLを挿入します。</p>
@@ -92,7 +92,7 @@
 		AND タイプ2 IS NULL;
 </code>
 <p>条件式の括弧は省略可能ですが、見やすさの観点から省略していません。</p>
-<img src="/?S00/0199/is-null.png" alt="IS NULL" />
+<img src="/static/img/S00/0199/is-null.png" alt="IS NULL" />
 次は第五世代のポケモン(494 ～ 649)で複数タイプのポケモンを取得しましょう♪
 <code class="sql">
 	SELECT *
@@ -100,7 +100,7 @@
 	WHERE (494 &lt;= 図鑑番号 AND 図鑑番号 &lt;= 649)
 		AND タイプ2 IS NOT NULL;
 </code>
-<img src="/?S00/0199/is-not-null.png" alt="IS NOT NULL" />
+<img src="/static/img/S00/0199/is-not-null.png" alt="IS NOT NULL" />
 <h2>LIKE演算子</h2>
 文字列がある条件にマッチしているかどうかの判定にはLIKE演算子を使用します。
 <code class="sql">
@@ -128,7 +128,7 @@
 		AND (タイプ1 = 'ひこう' OR タイプ2 = 'ひこう')
 		AND (名前 LIKE '%ー%');
 </code>
-<img src="/?S00/0199/like_wildcard1.png" alt="LIKE演算子">
+<img src="/static/img/S00/0199/like_wildcard1.png" alt="LIKE演算子">
 では今度は第三世代まで(～ 386)のポケモンで名前が三文字のポケモンを取得してみましょう♪
 <code class="sql">
 	SELECT *
@@ -136,7 +136,7 @@
 	WHERE (図鑑番号 &lt;= 386)
 		AND (名前 LIKE '___'); /*_(アンダースコア)3つ*/
 </code>
-<img src="/?S00/0199/like_wildcard0.png" alt="LIKE演算子">
+<img src="/static/img/S00/0199/like_wildcard0.png" alt="LIKE演算子">
 <h3>ESCAPE句</h3>
 「%」や「_」を文字列として使用する場合にはESCAPE句を使用する必要があります。
 <code class="sql">
@@ -157,7 +157,7 @@
 	WHERE 図鑑番号 BETWEEN 387 AND 493
 		AND タイプ1 IN ('じめん', 'いわ', 'はがね');
 </code>
-<img src="/?S00/0199/in.png" alt="IN演算子" />
+<img src="/static/img/S00/0199/in.png" alt="IN演算子" />
 「NOT IN」を使用することで含まないという条件を課します。<br /><br />では、メインタイプが「ほのお」「くさ」「みず」「でんき」のいずれでもない単体タイプの第四世代(387 ～ 493)のポケモンを取得しましょう♪
 <code class="sql">
 	SELECT *
@@ -166,7 +166,7 @@
 		AND タイプ2 IS NULL
 		AND タイプ1 NOT IN ('ほのお', 'くさ', 'みず', 'でんき');
 </code>
-<img src="/?S00/0199/not-in.png" alt="NOT IN演算子" />
+<img src="/static/img/S00/0199/not-in.png" alt="NOT IN演算子" />
 <h2>ANY/ALL演算子</h2>
 IN演算子の比較バージョンです。<br />後ほど学習する式や副問合せと組み合わせて使用します。
 <code class="sql">

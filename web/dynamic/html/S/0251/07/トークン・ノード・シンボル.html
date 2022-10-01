@@ -1,10 +1,10 @@
 <h2>トークン</h2>
 字句解析によって生成される分割されたコードの最小単位です。<br />空白文字や特殊文字でコードを分割したもので、各トークンは独立に存在してそれぞれのトークンとしての意味を有するだけで、トークン間での階層構造はありません。
-<img src="/?S00/0251/token.png" alt="トークン" />
+<img src="/static/img/S00/0251/token.png" alt="トークン" />
 <h2>ノード</h2>
 各トークンの文脈を判断して、各トークンに階層構造を設けたものです。<br />「文脈を判断する」とは、「{...}」「[...]」「(...)」内をひとつの集合としてとらえたり、「,」によって前後のトークンに対して配列の関係があることを認識することを言います。<br /><br />ノードは最低一つのトークンを有し、また再帰的にノードを有することもあります。<br />各ドキュメントは「CompilationUnit」を頂点のノードとするノードツリーと呼ばれる階層構造を形成します。
-<img src="/?S00/0251/node.png" alt="ノード" />
-<img src="/?S00/0251/syntaxTree.png" alt="構文ツリー" />
+<img src="/static/img/S00/0251/node.png" alt="ノード" />
+<img src="/static/img/S00/0251/syntaxTree.png" alt="構文ツリー" />
 一般的には各ドキュメントから頂点となるノードを取り出して、それ以下のノードを探索していきます。<br />トークンが分割されたコードの最小単位とすると、ノードは意味を持ったノードと、そのノードの集合体として機能します。
 <h2>シンボル</h2>
 トークン・ノードはともにroslynの構文APIを使用して操作します。<br />これに対してシンボルはSemanticAPIを使用して操作するという違いがあります。<br />「Semantic」は和訳すると「意味的な」という意味になります。<br /><br />トークンはコードを最小単位に分割したもので、ノードによってトークンに階層構造を形成することは説明済みです。<br /><br />シンボルはプログラム実行時に必要となる「意味」を保持します。<br />例えば、ある変数がどこで定義されていて、どこで参照されているかなどです。<br />この機能によって、より柔軟に(プログラム実行を考えての)コードの解析が可能になります。
@@ -18,10 +18,10 @@ roslynは「解析」「宣言」「バインド」「プログラム生成」�
 	<li>Go To Definition</li>
 	<li>...</li>
 </ul>
-<img src="/?S00/0251/compilerPipeline.png" alt="コンパイラAPI" />
+<img src="/static/img/S00/0251/compilerPipeline.png" alt="コンパイラAPI" />
 <p><a href="https://github.com/dotnet/roslyn/blob/main/docs/wiki/Roslyn-Overview.md">github</a>より。</p>
 使用する機能によって対象のAPIを使い分けます。<br />例えば、コードの色づけをしたい場合は「構文API」を、オブジェクトブラウザを使用する場合には「シンボル」を、定義へ移動や全ての参照の検索を使用する場合は「セマンティックモデル」を使用します。
-<img src="/?S00/0251/stageOfCompilerAPI.png" alt="コンパイラAPI" />
+<img src="/static/img/S00/0251/stageOfCompilerAPI.png" alt="コンパイラAPI" />
 <p><a href="https://docs.microsoft.com/ja-jp/dotnet/csharp/roslyn-sdk/compiler-api-model">MS公式ドキュメント</a>より。</p>
 <h2>構文ツリー</h2>
 次に構文ツリーの構成要素について説明します。<br />主に以下の3つからなります。
@@ -72,4 +72,4 @@ roslynは「解析」「宣言」「バインド」「プログラム生成」�
 </table>
 <h2>SyntaxVisualizer</h2>
 構文ツリーを解析するためには「SyntaxVisualizer」を使用します。<br />これによって構文ツリーの階層構造を視覚的に把握できます。<br /><br />「表示 &gt; その他のウィンドウ &gt; Syntax Visualizer」から表示できます。
-<img src="/?S00/0251/SyntaxVisualizer.gif" alt="SyntaxVisualizer" />
+<img src="/static/img/S00/0251/SyntaxVisualizer.gif" alt="SyntaxVisualizer" />

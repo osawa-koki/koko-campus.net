@@ -24,11 +24,11 @@
 		</tr>
 	</tbody>
 </table>
-<img src="/?S00/0103/web3layer-scheme.png" alt="WEB三層システム" />
+<img src="/static/img/S00/0103/web3layer-scheme.png" alt="WEB三層システム" />
 問題なのはWEBサーバとAPサーバ間のやり取りです。<br />Perlなどを使用している古いシステムでは標準入出力を通して送受信を行うCGIという仕組みを使用することが多かったですが、これには無駄なオーバヘッドが生じるという問題や、保守性の問題などから最近は使用されなくなっています。<br /><br />WEBサーバにApacheを採用している場合にはPHP用のモジュールを使用することで簡単にPHPプログラムを動作させることができ、現在でも一般的に使用されています。<br />それ以外にはJavaのサーブレットなどがありますね♪<br /><br />FastAPIが採用しているuvicornはこれとは若干異なるWSGI、さらにはその進化系であるASGIを使用しています。
 <h2>WSGI</h2>
 「Web Server Gateway Interface」の略で、WEBサーバとWEBアプリケーションが通信するための、標準化されたインタフェース定義のことを言います。<br />前述したWEB三層システムのWEBサーバ-APサーバ間の通信を標準化したものだと認識してください。
-<img src="/?S00/0103/wsgi.png" alt="WSGI" />
+<img src="/static/img/S00/0103/wsgi.png" alt="WSGI" />
 これはPEP3333で定義されています。
 <a href="https://peps.python.org/pep-3333/" class="link pythonLogo">PEP3333</a>
 簡単に説明すると、APサーバの実体はPythonで書かれた呼び出し可能なオブジェクトであり、WEBサーバが当該オブジェクトを呼び出すことで、WEBサーバとAPサーバ間でのやり取りを実現します。<br /><br />呼び出し可能なオブジェクトとはクラスと関数が該当します。<br />一般的には関数を使用することが多いです。<br /><br />以降ではWEbサーバから呼び出される、APサーバとしての役割を担うオブジェクトをアプリケーションオブジェクトと呼ぶこととします。

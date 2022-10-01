@@ -49,7 +49,7 @@
 	INSERT INTO pokemon
 	VALUES (116, 'タッツー', 'みず', 'なし');
 </code>
-<img src="/?S00/0199/insert.png" alt="insert" />
+<img src="/static/img/S00/0199/insert.png" alt="insert" />
 <h2>SELECT文</h2>
 ここからは第七世代までの802匹の全てのポケモンを挿入したデータベースを使用して説明をします。<br />僕はcsvファイルからまとめてインポートしましたが、この方法は後ほど説明しますのでここでは気にしなくてok!です。<br /><br />では、データベースから条件を満たすデータを抽出しましょう♪<br />以下のように書きます。
 <code class="sql">
@@ -65,14 +65,14 @@
 	FROM pokemon
 	WHERE タイプ1 = 'ほのお';
 </code>
-<img src="/?S00/0199/select_where.png" alt="select" />
+<img src="/static/img/S00/0199/select_where.png" alt="select" />
 次はどくタイプのポケモンを検索しましょう♪<br />どくタイプである条件は、タイプ1がどく、<strong>または</strong>タイプ2がどくであることです。<br />または(論理和)は「OR」を使用します。<br /><br />また、名前だけではなくて、図鑑番号も取得しましょう♪
 <code class="sql">
 	SELECT 図鑑番号, 名前
 	FROM pokemon
 	WHERE タイプ1 = 'どく' OR タイプ2 = 'どく';
 </code>
-<img src="/?S00/0199/select_or.png" alt="select" />
+<img src="/static/img/S00/0199/select_or.png" alt="select" />
 今度はほのお・ひこうタイプのポケモンを取得しましょう♪<br />タイプ1がほのおで、<strong>かつ</strong>タイプ2がひこうであるポケモンの抽出です。<br />かつ(論理積)は「AND」を使用します。
 <p class="r">正確にはタイプ1がひこう、タイプ2がほのおタイプのポケモンも含めるべきなのですがここでは省略します。</p>
 <code class="sql">
@@ -80,13 +80,13 @@
 	FROM pokemon
 	WHERE タイプ1 = 'ほのお' AND タイプ2 = 'ひこう';
 </code>
-<img src="/?S00/0199/select_and.png" alt="select" />
+<img src="/static/img/S00/0199/select_and.png" alt="select" />
 最後に全てのデータを取得してみましょう♪<br />全てのカラムは「*(アスタリスク)」で指定します。<br />また条件は課さないため、WHERE句は省略します。
 <code class="sql">
 	SELECT *
 	FROM pokemon;
 </code>
-<img src="/?S00/0199/select_all.png" alt="select" />
+<img src="/static/img/S00/0199/select_all.png" alt="select" />
 <h2>UPDATE文</h2>
 UPADTE文ではデータを更新します。
 <code class="sql">
@@ -105,7 +105,7 @@ UPADTE文ではデータを更新します。
 	SET タイプ2 = '炎'
 	WHERE タイプ2 = 'ほのお';
 </code>
-<img src="/?S00/0199/update.png" alt="update" />
+<img src="/static/img/S00/0199/update.png" alt="update" />
 <h2>DELETE文</h2>
 指定した行を削除します。
 <code class="sql">
@@ -120,4 +120,4 @@ UPADTE文ではデータを更新します。
 	FROM pokemon
 	WHERE タイプ1 = 'むし' OR タイプ2 = 'むし';
 </code>
-<img src="/?S00/0199/delete.png" alt="delete" />
+<img src="/static/img/S00/0199/delete.png" alt="delete" />

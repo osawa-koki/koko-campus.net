@@ -112,7 +112,7 @@ Dateオブジェクトから以下で紹介するメソッドを使用して年�
 
 	console.log(`${y}年${m + 1}月${d}日 ${h}時${mm}分${s}秒♪`);
 </code>
-<img class="no-max" src="/?S00/0010/Date.gif" alt="Dateオブジェクト" />
+<img class="no-max" src="/static/img/S00/0010/Date.gif" alt="Dateオブジェクト" />
 <h2>setTimeout</h2>
 何秒後に指定した関数を実行します。<br />以下のように書きます。
 <code class="javascript">
@@ -125,16 +125,16 @@ Dateオブジェクトから以下で紹介するメソッドを使用して年�
 	}
 	setTimeout(hello, 1000);
 </code>
-<img class="no-max" src="/?S00/0010/setTimeout.gif" alt="setTimeout" />
+<img class="no-max" src="/static/img/S00/0010/setTimeout.gif" alt="setTimeout" />
 少し難しいんですけど、javascriptは他の言語と異なり非同期で実行されるため、時間がかかる処理は一旦飛ばして後で実行します。<br />例えば以下のコードを見てください。
 <code class="javascript">
 	console.log(1);
 	setTimeout(() => {console.log(3)}, 1000);
 	console.log(3);
 </code>
-<img class="no-max" src="/?S00/0010/setTimeout-async.gif" alt="setTimeout" />
+<img class="no-max" src="/static/img/S00/0010/setTimeout-async.gif" alt="setTimeout" />
 「1」「2」「3」と順番に実行されません。<br />javascriptは非同期であるため、時間がかかる処理は一旦スキップして無限ループをします。<br />そのループの中で実際に1秒以上経過していたらスキップした処理を実行します。
-<img src="/?S00/0010/imageOfAsync.png" alt="非同期処理" />
+<img src="/static/img/S00/0010/imageOfAsync.png" alt="非同期処理" />
 言い換えれば、setTimeoutで指定する秒数ピッタリに実行されるとは限りません。<br />ループ一周に時間が多くかかった場合は指定した時間を過ぎて実行されることもあります。<br /><br />どうしても順番に実行したい場合はsetTimeoutを連鎖させる必要があります。
 <code class="javascript">
 	setTimeout(() => {
@@ -176,7 +176,7 @@ Dateオブジェクトから以下で紹介するメソッドを使用して年�
 		}
 	}, 1000);
 </code>
-<img class="no-max" src="/?S00/0010/setInterval.gif" alt="setInterval" />
+<img class="no-max" src="/static/img/S00/0010/setInterval.gif" alt="setInterval" />
 <div id="incodeTimerDiv">
 	<div id="incodeTimerClockBody">
 		<div id="incodeTimerClockLine"></div>

@@ -126,7 +126,7 @@ Rustでは他の言語と異なり配列は固定長であるため、後から�
 		ary[10] = "エモンガ"; // 存在しない要素への処理
 	}
 </code>
-<img src="/?S00/0220/outOfRange.png" alt="インデックス外へのアクセス" />
+<img src="/static/img/S00/0220/outOfRange.png" alt="インデックス外へのアクセス" />
 C/C++の国際標準ではこれに関しては未定義ですので、有り得ない動作をするコンパイラも存在します。<br />僕が使っているCコンパイラはちゃんとエラーを吐き出してくれますが、、、<br />Rustでは規格としてしっかりとこれに関してはエラーを吐き出してくれます。
 <h4>tuple型</h4>
 tuple型は異なるデータ型の要素を1つにまとめるデータ型です。<br />それぞれの要素に関してデータ型を宣言する必要がります。<br />以下のように作成します。
@@ -173,7 +173,7 @@ rustでは異なるデータ型同士の演算は行えません。<br />例え�
 		println!("{}", x + y);
 	}
 </code>
-<img src="/?S00/0220/operationWithDifferentDataTypes_sign.png" alt="異なるデータ型の演算" />
+<img src="/static/img/S00/0220/operationWithDifferentDataTypes_sign.png" alt="異なるデータ型の演算" />
 符号の有無が同じでもビット数が異なればエラーとなります。
 <code class="rust">
 	fn main() {
@@ -182,7 +182,7 @@ rustでは異なるデータ型同士の演算は行えません。<br />例え�
 		println!("{}", x + y);
 	}
 </code>
-<img src="/?S00/0220/operationWithDifferentDataTypes_bit.png" alt="異なるデータ型の演算" />
+<img src="/static/img/S00/0220/operationWithDifferentDataTypes_bit.png" alt="異なるデータ型の演算" />
 データ型を変換する方法は以下の2つあります。
 <ul>
 	<li>from</li>
@@ -209,7 +209,7 @@ x変数をi8データ型からi16データ型に変換してから演算を行�
 		println!("{}", x + i8::from(y); // エラー
 	}
 </code>
-<img src="/?S00/0220/from-error.png" alt="不完全な型変換" />
+<img src="/static/img/S00/0220/from-error.png" alt="不完全な型変換" />
 簡単に言えば、小さいデータ型から大きいデータ型への変換はok!ですが、大きいデータ型から小さいデータ型への変換はデータが失われる危険性があるため、エラーとなります。
 <h3>as</h3>
 この方法を使っておけばok!だと思います。<br /><a href="https://doc.rust-jp.rs/rust-by-example-ja/types/cast.html">公式ドキュメント</a>でもこの方法で説明されています。<br />以下のように記述します。
@@ -258,7 +258,7 @@ x変数をi8データ型からi16データ型に変換してから演算を行�
 <code class="rust">
 	let wd = "50".trim().parse().ok().unwrap();
 </code>
-<img src="/?S00/0220/parse-unwrap_noteDataType.png" alt="型変換 型の明示" />
+<img src="/static/img/S00/0220/parse-unwrap_noteDataType.png" alt="型変換 型の明示" />
 <h2>演算</h2>
 ではデータ型の変換ができるようになったので、実際に簡単な演算を行いましょう♪<br />他のプログラミング言語と同じです。
 <h3>算術演算</h3>

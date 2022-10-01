@@ -4,7 +4,7 @@
 -->
 <h2>関数</h2>
 関数はある一定の処理をまとめたもので、主に引数(関数に渡すデータ)から戻り値を算出することを目的とします。
-<img src="/?S00/0010/function.png" alt="関数" />
+<img src="/static/img/S00/0010/function.png" alt="関数" />
 主な目的としては以下の3つがあげられます。
 <ul>
 	<li>コードの簡素化</li>
@@ -45,7 +45,7 @@
 	console.log(pai_r2(10));
 	console.log(pai_r2(25));
 </code>
-<img class="no-max" src="/?S00/0010/callFx.gif" alt="関数の実行" />
+<img class="no-max" src="/static/img/S00/0010/callFx.gif" alt="関数の実行" />
 <h2>アロー関数</h2>
 突然ですが以下のコードを実行すると何が出力されるでしょうか???
 <code class="javascript">
@@ -57,7 +57,7 @@
 	}
 	pokemon();
 </code>
-<img class="no-max" src="/?S00/0010/rewritingFx.gif" alt="関数の上書き" />
+<img class="no-max" src="/static/img/S00/0010/rewritingFx.gif" alt="関数の上書き" />
 これは同一の名前を持つ関数を設定したことで関数の上書きが起こったためです。<br />変数であれば上書きをすることは多いのですが、関数を上書きすることはまずありません。<br />ということで関数を上書きできないように設定しましょう♪<br />以下のように記述します。
 <code class="javascript">
 	const 関数名 = 引数 => {
@@ -69,7 +69,7 @@
 <code class="javascript">
 	const pai_r2 = r => r ** 2 * 3.14
 </code>
-<img class="no-max" src="/?S00/0010/constFx.gif" alt="リテラル関数" />
+<img class="no-max" src="/static/img/S00/0010/constFx.gif" alt="リテラル関数" />
 これで関数を上書きするとエラーを吐き出してくれます。
 <code class="javascript">
 	const pokemon = () => {
@@ -80,10 +80,10 @@
 	}
 	pokemon();
 </code>
-<img class="no-max" src="/?S00/0010/preventRewritingFx.gif" alt="関数上書き" />
+<img class="no-max" src="/static/img/S00/0010/preventRewritingFx.gif" alt="関数上書き" />
 <h2>関数のスコープ</h2>
 関数内で宣言した変数にはスコープ(有効範囲)が存在し、当該関数のスコープの外では参照できません。
-<img src="/?S00/0010/scope.png" alt="関数のスコープ" />
+<img src="/static/img/S00/0010/scope.png" alt="関数のスコープ" />
 <h2>再帰関数</h2>
 再帰関数とは自分自身を呼び出す関数です。<br />再帰関数の例を紹介します。
 <code class="javascript">
@@ -92,7 +92,7 @@
 	}
 </code>
 上のコードはエラーとなります。<br />関数が自分自身を呼び出して、呼び出された関数がまた自分自身を呼び出して、さらにその関数が自分自身を呼び出して、、、<br />無限ループに陥ります。<br />再帰関数は条件分岐を用いて無限ループをしないように設定する必要があります。<br />数学でいえば「場合分け」を用いるということですね♪<br /><br />では再帰関数の代表格ともいえる、階乗を求める関数を作ってみましょう♪
-<img src="/?S00/0010/caserFactorial.png" alt="再帰関数" />
+<img src="/static/img/S00/0010/caserFactorial.png" alt="再帰関数" />
 <code class="javascript">
 	function factrial(n) {
 		if (n !== 1) {
@@ -102,5 +102,5 @@
 		}
 	}
 </code>
-<img class="no-max" src="/?S00/0010/recursiveFx.gif" alt="再帰関数" />
+<img class="no-max" src="/static/img/S00/0010/recursiveFx.gif" alt="再帰関数" />
 結構複雑です。<br />最初のうちは紙に書いて実行順序を辿っていくことをオススメします。<br />これがすぐに理解できるようであれば、プログラミングのセンス抜群です!!!<br />頭がこんがらがってても心配無用です。

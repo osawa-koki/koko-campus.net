@@ -5,7 +5,7 @@
 				{{ range $categoryTitle, $subjectsSlice := $subjectsMap }}
 					<div class="categoryTitle">{{ $categoryTitle }}</div>
 					{{ range $_, $subjectMap := $subjectsSlice }}
-						<a href="/S{{ index $subjectMap "code" }}"><img src="/?S/{{ index $subjectMap "code" }}.png" alt="{{ index $subjectMap "name" }}" /></a>
+						<a href="/S{{ index $subjectMap "code" }}"><img src="/static/img/S/{{ index $subjectMap "code" }}.png" alt="{{ index $subjectMap "name" }}" /></a>
 					{{ end }}
 				{{ end }}
 			{{ end }}
@@ -13,13 +13,13 @@
 		<div id="toppageProgramsBox">
 			<div class="programTitle">プログラム</div>
 			{{ range $_, $ProgramMap := .Programs }}
-				<a href="/P{{ index $ProgramMap "code" }}"><img src="/?P/{{ index $ProgramMap "code" }}.png" alt="{{ index $ProgramMap "name" }}" /></a>
+				<a href="/P{{ index $ProgramMap "code" }}"><img src="/static/img/P/{{ index $ProgramMap "code" }}.png" alt="{{ index $ProgramMap "name" }}" /></a>
 			{{ end }}
 		</div>
 		<div id="toppageGamesBox">
 			<div class="gameTitle">ゲーム</div>
 			{{ range $_, $GameMap := .Games }}
-				<a href="/G{{ index $GameMap "code" }}"><img src="/?G/{{ index $GameMap "code" }}.png" alt="{{ index $GameMap "name" }}" /></a>
+				<a href="/G{{ index $GameMap "code" }}"><img src="/static/img/G/{{ index $GameMap "code" }}.png" alt="{{ index $GameMap "name" }}" /></a>
 			{{ end }}
 		</div>
 	</div>

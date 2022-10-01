@@ -10,8 +10,8 @@ PHPはHTML文書に埋込むことができるなど、webサイト構築に特�
 </ol>
 <h3>エディタのインストール</h3>
 エディタとは実際にコードを打ち込むアプリケーションです。<br /><br />Windowsユーザならばデフォルトでメモ帳が搭載されていますが、オススメしません。<br />理由は使いにくいし機能が少ないからです。
-<img src="/?S00/0100/notepad.png" alt="メモ帳" />
-<img src="/?S00/0100/atomEditer.png" alt="atomエディタ" />
+<img src="/static/img/S00/0100/notepad.png" alt="メモ帳" />
+<img src="/static/img/S00/0100/atomEditer.png" alt="atomエディタ" />
 下のエディタの方が見やすいですよね♪<br />ということで一般的に良く用いられているエディタを紹介します。
 <ul>
 	<li><a href="https://atom.io/">atom</a></li>
@@ -31,7 +31,7 @@ PHPというのは説明した通りサーバサイドで動く言語です。<b
 </ol>
 <h4>htdocsフォルダの登録</h4>
 XAMPPのインストール時に特殊な設定をしなければ、「C:\Program Files\XAMPP」フォルダに「htdocs」というフォルダがあると思います。<br /><br />この「htdocs」フォルダがwebページのアップロード先です。
-<img src="/?S00/0100/dir-to-htdocs.gif" alt="htdocsフォルダ" />
+<img src="/static/img/S00/0100/dir-to-htdocs.gif" alt="htdocsフォルダ" />
 このフォルダはよく使うのでクイックアクセスに登録しておきましょう♪(登録しなくても問題はありません。)
 <h4>.htaccessファイルの設定</h4>
 .htaccessファイルとはapacheというwebサーバ用のプログラムの設定を記述するファイルです。<br />以下の内容のファイルを作成します。
@@ -68,7 +68,7 @@ XAMPPのインストール時に特殊な設定をしなければ、「C:\Progra
 上のテキストをコピーして、新たに「.htaccess」という名前のファイルを作成して貼り付け、「htdocs」フォルダに保存して下さい。
 <h4>XAMPPの起動</h4>
 とっても簡単です。<br />XAMPPの画面から「apache」のstartボタンを押すだけです。<br /><br />後ほど説明しますが、データベースを操作する際にはその下の「mysql」もスタートします。
-<img src="/?S00/0100/startingXAMPP.gif" alt="xamppの開始" />
+<img src="/static/img/S00/0100/startingXAMPP.gif" alt="xamppの開始" />
 緑色に変化すれば起動に成功しています。
 <div class="separator"></div>
 早速ブラウザを用いてhtdocsディレクトリにアップしたファイル(webページ)を閲覧するにはurlの欄に「http://localhost/」から始まるパスを書きます。<br />例えば、htdocsディレクトリにindex.phpというファイルをアップした場合は「http://localhost/index.php」、htdocsディレクトリにあるmemberディレクトリ内のlogin.phpファイルにアクセスするには「http://localhost/member/login.php」と入力してください。<br />「<span class="en">\</span>(バックスラッシュ)」ではなく、「/(スラッシュ)」を使用してください。

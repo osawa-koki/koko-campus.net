@@ -43,7 +43,7 @@ SQLは大文字と小文字を原則として区別しません。<br />した�
 
 	show DATABASES;
 </code>
-<img src="/?S00/0199/caseInsensitive.gif" alt="SQL記法" />
+<img src="/static/img/S00/0199/caseInsensitive.gif" alt="SQL記法" />
 一般的には予約語は大文字で書き、それ以外の名前は小文字で書きます。<br />僕は予約語のうち、「DATABASE」と「TABLE」だけは小文字で、それ以外は大文字で書きます。<br />特に理由はありません。<br />なんとなくです。
 <h3>自由記述形式</h3>
 SQLでは各単語は空白類似文字(スペース・改行文字・タブ文字)で区切りますが、その空白類似文字の種類や空白類似文字の数は気にしません。<br />したがって、以下のSQLは全て同じ命令文と認識されます。
@@ -55,7 +55,7 @@ SQLでは各単語は空白類似文字(スペース・改行文字・タブ文�
 	SHOW
 	database;
 </code>
-<img src="/?S00/0199/freeFormatted.gif" alt="SQL記法" />
+<img src="/static/img/S00/0199/freeFormatted.gif" alt="SQL記法" />
 <h3>文字列表記</h3>
 SQLで文字列を表記するには「'(シングルクォーテーション)」ないしは「"(ダブルクォーテーション)」で囲んで表現します。<br />標準のSQLでは「'(シングルクォーテーション)」で囲むことになっているため、ここでも「'(シングルクォーテーション)」で囲んで表記します。
 <code class="sql">
@@ -67,7 +67,7 @@ SQL文の中にコメントアウトを書くこともできます。<br />コ�
 <code class="sql">
 	SHOW /*コメントアウト*/ databases;
 </code>
-<img src="/?S00/0199/commentOut.gif" alt="コメントアウト" />
+<img src="/static/img/S00/0199/commentOut.gif" alt="コメントアウト" />
 コメントアウトは空白文字一文字として認識されるため、例えば以下のコードはエラーとなります。
 <code class="sql">
 	SH/*コメントアウト*/OW databases;

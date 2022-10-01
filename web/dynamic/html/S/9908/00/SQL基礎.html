@@ -122,10 +122,10 @@ SQLではそれぞれ、以下のクエリ文が該当します。
 </table>
 <h4>射影</h4>
 「SELECT 列1, 列2, ...」と取得する列を指定する作業を言います。<br />一般的には取得された行のうち、重複するものは排除することが多いため、「SELECT DISTINCT 列1, 列2, ...」というSQLが射影に該当します。
-<img src="/?S00/9908/projection.png" alt="射影" />
+<img src="/static/img/S00/9908/projection.png" alt="射影" />
 <h4>選択</h4>
 「WHERE」句によって取得する行に対して条件を課すことを言います。
-<img src="/?S00/9908/selection.png" alt="選択" />
+<img src="/static/img/S00/9908/selection.png" alt="選択" />
 条件として以下の設定が可能です。
 <table>
 	<tbody>
@@ -189,7 +189,7 @@ SELECT文でグループを作成して、そのグループ間での合計や�
 	SELECT MAX(speed) As '素早さ最高'
 	FROM pokemon;
 </code>
-<img src="/?S00/9908/aggregateFx.gif" alt="集約関数" />
+<img src="/static/img/S00/9908/aggregateFx.gif" alt="集約関数" />
 集約関数と同時に「WHERE」句を使用すると、集約される前のデータを対象に絞り込みが行われることに注意して下さい。
 <h4>GROUP BY句</h4>
 「GROUP BY」句によってグループ化をすることが可能です。
@@ -209,7 +209,7 @@ SELECT文でグループを作成して、そのグループ間での合計や�
 	FROM pokemon
 	GROUP BY type1;
 </code>
-<img src="/?S00/9908/group_by.gif" alt="GROUP BY" />
+<img src="/static/img/S00/9908/group_by.gif" alt="GROUP BY" />
 <div class="separator"></div>
 次にメインタイプでグループ化した後に、hpの平均が「70」以上のタイプを取得しましょう♪
 <code class="sql">
@@ -218,7 +218,7 @@ SELECT文でグループを作成して、そのグループ間での合計や�
 	GROUP BY type1
 	HAVING 70 &lt;= AVG(hp);
 </code>
-<img src="/?S00/9908/group_by_having.gif" alt="GROUP BY HAVING" />
+<img src="/static/img/S00/9908/group_by_having.gif" alt="GROUP BY HAVING" />
 <div class="separator"></div>
 「WHERE」句はグループ化前の絞り込みに使用されると説明しましたね♪<br />では、hpが「50」以上のポケモンを対象にメインタイプによる絞り込みを行った結果、平均が「70」以上のタイプとその平均値を表示しましょう♪
 <code class="sql">
@@ -228,7 +228,7 @@ SELECT文でグループを作成して、そのグループ間での合計や�
 	GROUP BY type1
 	HAVING 70 &lt;= AVG(hp);
 </code>
-<img src="/?S00/9908/group_by_where_having.gif" alt="GROUP BY WHERE HAVING" />
+<img src="/static/img/S00/9908/group_by_where_having.gif" alt="GROUP BY WHERE HAVING" />
 <h4>ORDER BY句</h4>
 指定した列を対象に行の並び替えを行います。<br />並び順には以下の2通りの指定が可能です。
 <table>
@@ -261,7 +261,7 @@ SELECT文でグループを作成して、そのグループ間での合計や�
 	FROM pokemon
 	ORDER BY speed DESC;
 </code>
-<img src="/?S00/9908/order_by.gif" alt="ORDER BY" />
+<img src="/static/img/S00/9908/order_by.gif" alt="ORDER BY" />
 <h2>UPDATE文</h2>
 指定した行の対象の列の値を更新します。<br />以下のように書きます。
 <code class="sql">

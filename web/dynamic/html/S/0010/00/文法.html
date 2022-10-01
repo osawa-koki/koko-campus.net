@@ -25,7 +25,7 @@
 		//繰り返す処理
 	}
 </code>
-<img src="/?S00/0010/for.png" alt="for文" />
+<img src="/static/img/S00/0010/for.png" alt="for文" />
 では、「li」要素を10個作成して追加しましょう♪
 <code class="html">
 	&lt;ul id="num"&gt;&lt;/ul&gt;
@@ -40,7 +40,7 @@
 		ul.appendChild(elm); //作成した要素を追加
 	}
 </code>
-<img src="/?S00/0010/for-loop.gif" alt="for文" />
+<img src="/static/img/S00/0010/for-loop.gif" alt="for文" />
 <h3>while</h3>
 ある条件を満たす限りは反復処理を繰り返します。<br />while文は以下のように書きます。
 <code class="javascript">
@@ -64,12 +64,12 @@
 		i++; //最後に「i」に「1」を加算し忘れると無限ループに陥るので要注意!!
 	}
 </code>
-<img src="/?S00/0010/while-loop.gif" alt="while文" />
+<img src="/static/img/S00/0010/while-loop.gif" alt="while文" />
 <div class="separator"></div>
 次に説明する条件分岐(if)と併せて「break;」を用いることもあります。<br />ループ処理中に「break;」に出会うと、条件分岐から強制的に抜け出します。
 <h2>二重ループ</h2>
 ループの中にループを入れることもできます。<br />これをループの入れ子(ネスト)と呼びます。<br />外側のループが一周する度に内側のループが全て完了します。
-<img src="/?S00/0010/nestOfLoop.png" alt="ループの入れ子" />
+<img src="/static/img/S00/0010/nestOfLoop.png" alt="ループの入れ子" />
 ではテーブルタグに掛け算九九の結果を表示してみましょう♪
 <code class="html">
 	&lt;table&gt;
@@ -91,7 +91,7 @@
 		tbody.appendChild(tr); //内側(横)のループが完了したら、それを追加
 	}
 </code>
-<img class="no-max" src="/?S00/0010/kuku.gif" alt="二十ループ" />
+<img class="no-max" src="/static/img/S00/0010/kuku.gif" alt="二十ループ" />
 <h2>条件分岐</h2>
 「天気予報が雨ならば傘を持っていき、雨でないならば傘を持って行かない」というように、条件を満たすかどうかでプログラムの処理を変更します。<br />条件分岐を実現するためのコードには以下の2つがあります。
 <ul>
@@ -117,7 +117,7 @@ The「条件分岐」です。<br />和訳すると「もしも」ですね♪<b
 		//条件式A・条件式Bのいずれも満たさなかった場合の処理
 	}
 </code>
-<img src="/?S00/0010/imageOfIf.png" alt="if文" />
+<img src="/static/img/S00/0010/imageOfIf.png" alt="if文" />
 ではちょっと高度なプログラミングをしてみましょう♪<br />フィボナッチ数列を100000まで表示してみましょう♪
 <div class="quote">
 	<div>フィボナッチ数列</div>
@@ -155,10 +155,10 @@ The「条件分岐」です。<br />和訳すると「もしも」ですね♪<b
 		now = after; //「次の数字」を「今の数字」に
 	}
 </code>
-<img class="no-max" src="/?S00/0010/fibo.gif" alt="while if" />
+<img class="no-max" src="/static/img/S00/0010/fibo.gif" alt="while if" />
 <h3>switch</h3>
 if文と異なり、ある値を比較することで処理を変更することに特化した文法です。<br />一度マッチするとそれ以降の処理を全て実行するので、各処理の終わりに「break;」を置いて強制的にswitchから抜け出すことが多いです。
-<img src="/?S00/0010/imageOfSwitch.png" alt="switch文" />
+<img src="/static/img/S00/0010/imageOfSwitch.png" alt="switch文" />
 では天気予報に合わせて持っていくアイテムを変更しましょう♪
 <code class="javascript">
 	const weather = "雨";
@@ -175,4 +175,4 @@ if文と異なり、ある値を比較することで処理を変更すること
 			console.log("なし");
 	}
 </code>
-<img class="no-max" src="/?S00/0010/switchStatement.gif" alt="switch文" />
+<img class="no-max" src="/static/img/S00/0010/switchStatement.gif" alt="switch文" />

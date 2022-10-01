@@ -91,7 +91,7 @@ println!関数の標準エラー出力バージョンです。
 		println!("入力された文字は {}", word);
 	}
 </code>
-<img src="/?S00/0220/stdInput.gif" alt="標準入力" />
+<img src="/static/img/S00/0220/stdInput.gif" alt="標準入力" />
 ひとつずつ説明します。
 <h3>let mut word</h3>
 変数を宣言しています。<br />変数の宣言にはlet修飾子を使用しますが、Rustで通常の方法で宣言された変数は不可変(イミュータブル)であるため、これを後で代入する場合には「let mut」として可変(ミュータブル)宣言します。<br />「mut」はミュータブルの略です。<br />mut修飾子を付けずに、変数に値を再代入するとエラーを吐き出します。
@@ -102,7 +102,7 @@ println!関数の標準エラー出力バージョンです。
 		println!("{}", word);
 	}
 </code>
-<img src="/?S00/0220/immutable.png" alt="イミュータブル" />
+<img src="/static/img/S00/0220/immutable.png" alt="イミュータブル" />
 不可変の変数に二回値を代入しちゃダメ!!って怒られちゃいました、、、<br />変数を変更する場合には必ずmut修飾子を付けてくださいね♪
 <code class="rust">
 	fn main() {
@@ -111,7 +111,7 @@ println!関数の標準エラー出力バージョンです。
 		println!("{}", word);
 	}
 </code>
-<img src="/?S00/0220/never-read-var.png" alt="無意味な変数" />
+<img src="/static/img/S00/0220/never-read-var.png" alt="無意味な変数" />
 これで動きます。<br />ピチューって値は一度も使ってないけど大丈夫か???ってRustコンパイルちゃんに心配されちゃいましたけど、、、<br />Rustちゃんは優秀ですね!!
 <h3>String::new()</h3>
 Rustでは文字列型を表すのに「&amp;str」と「String」型があります。
@@ -146,7 +146,7 @@ Rustでは文字列型を表すのに「&amp;str」と「String」型があり�
 	}
 </code>
 -->
-<img src="/?S00/0220/str-string_error.png" alt="str型とString型" />
+<img src="/static/img/S00/0220/str-string_error.png" alt="str型とString型" />
 解決策は以下の二通りあります。
 <ul>
 	<li>String型を宣言</li>
@@ -176,7 +176,7 @@ Rustでは文字列型を表すのに「&amp;str」と「String」型があり�
 std::io::stdin()で返されたコンソールの標準入力へのハンドルを表すデータに対して、これを取得して渡した引数に格納します。<br /><br />&amp;mutとする理由を説明します。<br />まず、&amp;を付ける理由は参照渡しするためです。<br />関数にはスコープが存在するので、引数に渡したデータを取得したい変数を関数内だけで書き換えても意味ないですよね、、、<br />変数に対する参照を渡して、これを関数内で書き換えてもらいます。<br /><br />mut修飾子を付ける理由は、rustは説明した通り変数はデフォルトで不可変(イミュータブル)であるためです。<br />関数内で変数に代入する必要があるため、これをミュータブル宣言しておきます。
 <h3>.ok()</h3>
 最悪省略してもプログラムは動作します。
-<img src="/?S00/0220/unused-result.png" alt="unused Result" />
+<img src="/static/img/S00/0220/unused-result.png" alt="unused Result" />
 プログラマたるもの、エラーへの対応を怠ってはなりません。<br />思わぬバグの原因になりますのでね、、、<br />エラーへの対応方法は以下の二通りあります。
 <ul>
 	<li>.ok()</li>

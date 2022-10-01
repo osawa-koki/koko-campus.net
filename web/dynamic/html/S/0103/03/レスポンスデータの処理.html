@@ -20,7 +20,7 @@ fastapi.responsesモジュールに含まれるHTMLResponseクラスを使用し
 	def read_root():
 		return HTMLResponse(content="&lt;html&gt;&lt;title&gt;FastAPI&lt;/title&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;", status_code=200)
 </code>
-<img src="/?S00/0103/fastapi_returning-html.gif" alt="HTMLの返却" />
+<img src="/static/img/S00/0103/fastapi_returning-html.gif" alt="HTMLの返却" />
 <h2>プレーンテキスト</h2>
 fastapi.responsesモジュールに含まれるPlainTextResponseクラスを使用します。
 <code class="python">
@@ -30,7 +30,7 @@ fastapi.responsesモジュールに含まれるPlainTextResponseクラスを使�
 	def read_root():
 		return "PLAIN TEXT"
 </code>
-<img src="/?S00/0103/fastapi_returning-plainText.gif" alt="プレーンテキストの返却" />
+<img src="/static/img/S00/0103/fastapi_returning-plainText.gif" alt="プレーンテキストの返却" />
 <h2>JSON</h2>
 FastAPIではデフォルトでJSONが設定されているため、特に設定しなければJSONとして返されます。
 <h2>orjson</h2>
@@ -50,7 +50,7 @@ fastapi.responsesモジュールに含まれるRedirectResponseクラスを使�
 	def read_root():
 		return RedirectResponse("/pokemon/chikorita")
 </code>
-<img src="/?S00/0103/fastapi_returning-redirect.gif" alt="リダイレクト" />
+<img src="/static/img/S00/0103/fastapi_returning-redirect.gif" alt="リダイレクト" />
 <h2>ストリーム</h2>
 バイナリを送信します。<br />ファイルストリームを渡すことで実現します。<br /><br />media_typeでストリームの種類を指定します。
 <code class="python">
@@ -63,7 +63,7 @@ fastapi.responsesモジュールに含まれるRedirectResponseクラスを使�
 				yield from binary
 		return StreamingResponse(iterfile(), media_type="image/jpeg")
 </code>
-<img src="/?S00/0103/fastapi_returning-stream.gif" alt="ストリーム" />
+<img src="/static/img/S00/0103/fastapi_returning-stream.gif" alt="ストリーム" />
 <p>画像は<a href="https://zukan.pokemon.co.jp/detail/722">ポケモン図鑑(公式)</a>より。</p>
 <h2>ファイル</h2>
 ファイルを送信するにはFileResponseクラスを使用します。
@@ -74,5 +74,5 @@ fastapi.responsesモジュールに含まれるRedirectResponseクラスを使�
 	async def read_root():
 		return FileResponse("data/pika.jpeg")
 </code>
-<img src="/?S00/0103/fastapi_returning-file.gif" alt="ファイル" />
+<img src="/static/img/S00/0103/fastapi_returning-file.gif" alt="ファイル" />
 <p>画像は<a href="https://seiga.nicovideo.jp/seiga/im2635811">ゆっさん</a>より。</p>

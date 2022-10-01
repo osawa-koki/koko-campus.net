@@ -1,6 +1,6 @@
 <h2>構文ツリー</h2>
 既に説明済みですが復習がてらにもう一度説明します。<br />構文ツリーは「構文ノード」「構文トークン」「構文トリビア」から構成されるドキュメント要素を階層構造で表したものです。
-<img src="/?S00/0251/syntaxTree_syntaxNode_syntaxToken_syntaxTrivia.png" alt="構文ツリー" />
+<img src="/static/img/S00/0251/syntaxTree_syntaxNode_syntaxToken_syntaxTrivia.png" alt="構文ツリー" />
 構文ツリーの頂点に位置する構文ノードを取得したら、それ配下の構文ノード・構文トークン・構文トリビアを探索することをコードを解析します。<br />通常は構文トークン・構文トリビアを探索せずに、その親となる構文ノードを探索対象とします。
 <h2>構文ノード</h2>
 こちらも既に説明済みですね♪<br />構文ノードは構文ツリーの主要な構成要素で、構文ノードを再帰的に保持します。<br /><br />構文解析では、構文ノードの探索がメインになりますので、しっかりと理解して下さい。<br />構文ノードは「SyntaxNode」クラスで表されます。<br />「SyntaxNode」クラスは以下のプロパティ・メソッドを保持します。
@@ -500,7 +500,7 @@
 		}
 	}
 </code>
-<img src="/?S00/0251/DescendantNodes_withoutFiltering.gif" alt="DescendantNodes" />
+<img src="/static/img/S00/0251/DescendantNodes_withoutFiltering.gif" alt="DescendantNodes" />
 ノード全てが取得されていることを確認できます。
 <h2>ノードフィルタリング</h2>
 先ほどはノード全てを取得しましたね♪<br />次はノードを一定の条件でフィルタリングしましょう♪<br /><br />ノードのフィルタリングには以下の2つの方法があります。
@@ -519,7 +519,7 @@ DescendantNodesメソッドではノード一覧はIEnumerable型で取得しま
 		Console.WriteLine(" _____ _____ _____ _____ _____ ");
 	}
 </code>
-<img src="/?S00/0251/DescendantNodes_withLinqFiltering.gif" alt="DescendantNodes LINQ" />
+<img src="/static/img/S00/0251/DescendantNodes_withLinqFiltering.gif" alt="DescendantNodes LINQ" />
 <h3>判定関数</h3>
 「DescendantNodes」メソッドの第一引数に判定関数を渡すことで、当該条件を満たすノード配下のノードだけを取得できます。<br />全てを取得してLINQで絞り込む方法とは若干異なりますが、階層構造の下り方を指定する場合に使用できます。<br />判定関数は引数として「SyntaxNode」のデータ型を受け取り、戻り値には真偽値を返す関数である必要があります。<br />判定の条件を再利用する場合にはメソッドとして定義し、その場限りの場合にはラムダ式を使用することをオススメします。<br />ここでは簡単のため、ラムダ式を採用します。<br /><br />以下のコードを書き換えたものです。
 <code class="charp">
@@ -560,5 +560,5 @@ SyntaxVisualyzerを使用して対象となるノードの種類を把握して�
 		Console.WriteLine(" _____ _____ _____ _____ _____ ");
 	}
 </code>
-<img src="/?S00/0251/DescendantNodes_withDetailedFiltering.gif" alt="DescendantNodes" />
+<img src="/static/img/S00/0251/DescendantNodes_withDetailedFiltering.gif" alt="DescendantNodes" />
 こんな感じで構文ノードの絞り込みを行います。

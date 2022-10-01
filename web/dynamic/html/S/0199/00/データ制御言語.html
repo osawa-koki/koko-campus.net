@@ -13,7 +13,7 @@
 	SELECT user, host
 	FROM mysql.user;
 </code>
-<img src="/?S00/0199/showUsers.png" alt="ユーザ一覧の表示" />
+<img src="/static/img/S00/0199/showUsers.png" alt="ユーザ一覧の表示" />
 <h3>ユーザの作成</h3>
 以下のsql文を実行します。
 <code class="sql">
@@ -26,7 +26,7 @@
 	CREATE USER 'koko'@'localhost'
 	IDENTIFIED BY 'koko0123';
 </code>
-<img src="/?S00/0199/addUser.png" alt="ユーザの追加" />
+<img src="/static/img/S00/0199/addUser.png" alt="ユーザの追加" />
 <div class="separator"></div>
 別のユーザでログインする場合には以下のコマンドでMySQLにログインします。
 <code class="shell">
@@ -53,12 +53,12 @@
 <code class="sql">
 	SHOW GRANTS FOR 'koko'@'localhost';
 </code>
-<img src="/?S00/0199/showPrivileges_koko.png" alt="権限の確認" />
+<img src="/static/img/S00/0199/showPrivileges_koko.png" alt="権限の確認" />
 なんかサッパリしていますね、、、<br /><br />今度はroot権限でログインして確認してみましょう♪<br />先ほど作成したユーザからはroot権限を確認できません。<br />一度ログアウトしてrootとしてログインしてください。
 <code class="sql">
 	SHOW GRANTS FOR 'root'@'localhost';
 </code>
-<img src="/?S00/0199/showPrivileges_root.png" alt="権限の確認" />
+<img src="/static/img/S00/0199/showPrivileges_root.png" alt="権限の確認" />
 な～～～んかたくさんありますね、、、<br />rootは最強のユーザですから全てが許可されています。
 <h3>権限の付与</h3>
 以下のSQL文でユーザに権限を付与します。
@@ -91,7 +91,7 @@
 	GRANT INSERT ON koko.越谷の天気 TO koko@localhost;
 	GRANT INSERT, UPDATE, DELETE, SELECT ON koko.kokoのポケモン TO koko@localhost;
 </code>
-<img src="/?S00/0199/grant.png" alt="権限の付与" />
+<img src="/static/img/S00/0199/grant.png" alt="権限の付与" />
 権限が付与されているのが確認できますね♪
 <h3>権限の剥奪</h3>
 ユーザから権限を剥奪するには以下のように書きます。
@@ -102,6 +102,6 @@
 <code class="sql">
 	REVOKE DELETE ON koko.kokoのポケモン FROM koko@localhost;
 </code>
-<img src="/?S00/0199/revoke.png" alt="権限の剥奪" />
+<img src="/static/img/S00/0199/revoke.png" alt="権限の剥奪" />
 <div class="separator"></div>
 今までは最強のroot権限でログインしていましたが、これはセキュリティの観点から適切とは言えません。<br />ユーザにはその人が実行する処理に必要不可欠な権限のみを与えるべきです。

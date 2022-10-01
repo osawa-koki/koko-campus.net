@@ -119,9 +119,9 @@
 	var num = 10;
 </code>
 しかしながら、この方法では思わぬ例外が発生することがあるので注意して下さい。<br />例えば、数値が整数型と推論されて、小数型のデータを格納できなくなるといったことが想定されます。
-<img src="/?S00/0251/typeInferenceError.png" alt="型推論" />
+<img src="/static/img/S00/0251/typeInferenceError.png" alt="型推論" />
 「10.0」として強制的に小数型として推論させるか、「10D」のようにリテラルデータにデータ型を推論させます。
-<img src="/?S00/0251/typeInferenceSuccess.png" alt="型推論" />
+<img src="/static/img/S00/0251/typeInferenceSuccess.png" alt="型推論" />
 僕は「10D」のようにリテラルデータにデータ型を指定することをオススメします。<br />理由は、そちらのほうがコードが読みやすいからです。
 <h3>変数の参照</h3>
 変数に格納されているデータを使用するには、変数をそのまま書けばOK!です。
@@ -140,8 +140,8 @@
 	Console.WriteLine(データ);
 </code>
 「Write」は表示するデータをそのまま、「WriteLine」は最後に改行文字が自動で挿入して表示します。
-<img src="/?S00/0251/ConsoleWrite.png" alt="Console.Write" />
-<img src="/?S00/0251/ConsoleWriteLine.png" alt="Console.WriteLine" />
+<img src="/static/img/S00/0251/ConsoleWrite.png" alt="Console.Write" />
+<img src="/static/img/S00/0251/ConsoleWriteLine.png" alt="Console.WriteLine" />
 <h3>標準入力</h3>
 コンソール画面に入力されたデータを受け取ります。<br />以下のように書きます。
 <code class="cs">
@@ -152,7 +152,7 @@
 	var word = Console.ReadLine();
 	Console.WriteLine("Hello " + word + " !!!");
 </code>
-<img src="/?S00/0251/ConsoleReadLine.gif" alt="標準入力" />
+<img src="/static/img/S00/0251/ConsoleReadLine.gif" alt="標準入力" />
 コンソール画面から数字を受け取る際には、まず文字列型として受け取り、それを数値型に変換する処理をします。<br />データ型の変換については、後ほど説明します。
 <div class="separator"></div>
 「Console.Read」は最後の一文字だけを受け取り、かつその文字のASCIIコードを返すため、ほとんど使用する機会はありません。

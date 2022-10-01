@@ -21,7 +21,7 @@ SQLとは「Structed Query Language」の略で、構造化問合せ言語と訳
 ほとんどのRDBMSはANSIやISOによって標準化されていため処理は同じですが、種類によっては少し記述方法が異なる場合がありますが、ここでは気にしなくてok!です。
 <h2>データベースの仕組み</h2>
 データベースはひとつのシステムにつき原則ひとつだけ作成して、その下に複数のテーブルを作成します。
-<img src="/?S00/0100/database.png" alt="データベース" />
+<img src="/static/img/S00/0100/database.png" alt="データベース" />
 ひとつのテーブルはエクセルのように行(レコード)と列(カラム・フィールド)を持ちます。
 <table class="db">
 	<thead>
@@ -56,19 +56,19 @@ SQLとは「Structed Query Language」の略で、構造化問合せ言語と訳
 横のラインが「行(レコード)」で、縦のラインが「列(カラム・フィールド)」です。
 <h2>MySQLの設定</h2>
 では、今度はデータベースの設定に入りましょう♪<br /><br />xamppの画面から「mysql」のstartボタンを押して下さい。
-<img src="/?S00/0100/xampp.png" alt="xampp" />
+<img src="/static/img/S00/0100/xampp.png" alt="xampp" />
 次に「<a href="http://localhost" target="_blank">http://localhost/</a>」にアクセスしてください。<br />以下の画面が表示されますので、右上の「phpMyAdmin」をクリックしてください。
-<img src="/?S00/0100/phpMyAdmin.png" alt="phpMyAdmin" />
+<img src="/static/img/S00/0100/phpMyAdmin.png" alt="phpMyAdmin" />
 これがデータベースを管理する画面です。<br />ではまず肝心なデータベースを作成しましょう♪<br />データベースの画面に移ってください。
-<img src="/?S00/0100/phpMyAdmin-database.png" alt="phpMyAdmin データベース" />
+<img src="/static/img/S00/0100/phpMyAdmin-database.png" alt="phpMyAdmin データベース" />
 こんな感じの画面に遷移すると思います。
-<img src="/?S00/0100/phpMyAdmin-database-charset.png" alt="phpMyAdmin データベース(文字コード指定)" />
+<img src="/static/img/S00/0100/phpMyAdmin-database-charset.png" alt="phpMyAdmin データベース(文字コード指定)" />
 この画面ではデータベースの名前と文字コードを設定します。<br />ここでは「koko_project」に設定しました。<br />原則として半角の英数字を指定してください。<br />また「-(ハイフン)」を使用するとその後のエスケープ処理が必要となるため極力避けてください。<br />代わりに「_(アンダースコア)」を使用してください。<br /><br />文字コードでは「utf8_general_ci」ないしは「utf8_unicode_ci」を指定してください。<br /><br />両者の違いは、「utf8_general_ci」が半角と全角の区別するのに対して、「utf8_unicode_ci」は半角と全角の違いを区別しません。<br /><br />ユーザが半角と全角を混同するリスクも考えると「utf8_unicode_ci」を使用するべきだと僕は思います。
 <p>ユーザの入力時に全角チェックを入れればok!な話ですが、、、</p>
 では「作成」ボタンを押してテーブルの作成画面へ移りましょう♪
-<img src="/?S00/0100/phpMyAdmin-creatingTable.png" alt="phpMyAdmin テーブル作成" />
+<img src="/static/img/S00/0100/phpMyAdmin-creatingTable.png" alt="phpMyAdmin テーブル作成" />
 テーブル名ではその名の通りテーブル名を命名してください。<br />テーブル名はSQL文で毎回記述するため、その実体を表すできるだけ短い文字列をオススメします。<br />ここでは会員情報を登録することを想定して「member」というテーブルを作成します。<br /><br />データベース名同様に、半角英数字を使用して「-(ハイフン)」の使用は避けてください。<br />カラム数ではデータの属性の数を指定します。<br /><br />後からでも容易に追加可能ですのでここではデフォルトの「4」とします。<br /><br />次にカラムデータを登録しましょう♪
-<img src="/?S00/0100/phpMyAdmin-addingColumn.png" alt="phpMyAdmin カラムデータ登録" />
+<img src="/static/img/S00/0100/phpMyAdmin-addingColumn.png" alt="phpMyAdmin カラムデータ登録" />
 ここではカラムにどのようなデータが入るのかを設定します。<br />具体的には以下の内容を設定します。
 <ul>
 	<li>名前</li>

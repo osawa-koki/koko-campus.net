@@ -6,7 +6,7 @@
 データの型の授業で一度学びましたね♪<br /><br />覚えていますか??<br />配列とは複数のデータを格納した包括的なデータで、格納されたデータ(要素)に対する名前を付け方から「<strong>インデックス配列</strong>」と「<strong>連想配列</strong>」に分類できます。
 <h3>インデックス配列</h3>
 データの名前を「0, 1, 2, 3, ...」とします。<br />インデックス番号(データの名前)は<strong>「0」から始まる</strong>ことに注意してください。
-<img src="/?S00/0100/array.png" alt="配列" />
+<img src="/static/img/S00/0100/array.png" alt="配列" />
 <code class="php">
 	$ary = array(
 		"データ1", "データ2", "データ3"
@@ -15,7 +15,7 @@
 </code>
 <h3>連想配列</h3>
 データの名前(キー)をユーザが独自に設定できます。
-<img src="/?S00/0100/assoc.png" alt="連想配列" />
+<img src="/static/img/S00/0100/assoc.png" alt="連想配列" />
 <code class="php">
 	$ary = array(
 		"キー1" =&gt; "データ1",
@@ -301,7 +301,7 @@
 	}
 	echo "&lt;\ol&gt;\n";
 </code>
-<img src="/?S00/0100/loopingArrayWithForStatement.gif" alt="配列の走査(for)" />
+<img src="/static/img/S00/0100/loopingArrayWithForStatement.gif" alt="配列の走査(for)" />
 <p>見やすさの観点から改行とタブ文字を挿入していますが、htmlではこれを無視するため、気にしなくてok!です。</p>
 <h3>foreach</h3>
 forループから各要素を指定するには「配列[インデックス番号]」と書かなければなりません。<br />なんだか、大変ですね、、、<br />ということで、要素をそのまま変数に代入して使用できるようにしましょう♪<br />foraechを使用します。
@@ -324,7 +324,7 @@ forループから各要素を指定するには「配列[インデックス番�
 	}
 	echo "&lt;\ol&gt;\n";
 </code>
-<img src="/?S00/0100/loopingArrayWithForStatement.gif" alt="配列の走査(foreach)" />
+<img src="/static/img/S00/0100/loopingArrayWithForStatement.gif" alt="配列の走査(foreach)" />
 <h2>連想配列の走査</h2>
 連想配列はforeachを使用して走査します。
 <code class="php">
@@ -359,7 +359,7 @@ forループから各要素を指定するには「配列[インデックス番�
 	}
 	echo "&lt;/table&gt;";
 </code>
-<img src="/?S00/0100/loopingArrayWithForeachStatement.gif" alt="配列の走査(foreach)" />
+<img src="/static/img/S00/0100/loopingArrayWithForeachStatement.gif" alt="配列の走査(foreach)" />
 <h2>配列化・文字列化</h2>
 ここでは文字列を配列に変換する方法と、配列を文字列に変換する方法を紹介します。<br />それぞれ、「explode」関数と「implode」関数が該当します。
 <h3>explode</h3>

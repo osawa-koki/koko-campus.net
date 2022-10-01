@@ -2,7 +2,7 @@
 	{{ range $_, $mapData := .Suggestion }}
 		<a href="/G/{{ index $mapData "Program" }}">
 			<div class="gameSuggestionItem">
-				<img src="/?G/{{ index $mapData "Game" }}.png" alt="{{ index $mapData "Name" }}" class="gameImg" />
+				<img src="/static/img/G/{{ index $mapData "Game" }}.png" alt="{{ index $mapData "Name" }}" class="gameImg" />
 				<div class="gameName">{{ index $mapData "Name" }}</div>
 				<div class="gameDescription">{{ index $mapData "Description" }}</div>
 			</div>

@@ -69,7 +69,7 @@ idがtargetに設定されているタグのtextContentプロパティに「ピ�
 	const tgt = document.getElementById("target");
 	tgt.textContent = "ピチュー&lt;br /&gt;ピカチュウ&lt;br /&gt;&lt;input type="text" /&gt;";
 </code>
-<img class="no-max" src="/?S00/0010/textContent-innerHTML.gif" alt="textContent" />
+<img class="no-max" src="/static/img/S00/0010/textContent-innerHTML.gif" alt="textContent" />
 自動的にエスケープ処理されているのが分かりますね♪
 <h3>innerHTML</h3>
 idがtargetに設定されているタグのinnerHTMLプロパティに「ピチュー&lt;br /&gt;ピカチュウ&lt;br /&gt;&lt;input type="text" /&gt;」を設定してみましょう♪
@@ -77,9 +77,9 @@ idがtargetに設定されているタグのinnerHTMLプロパティに「ピチ
 	const tgt = document.getElementById("target");
 	tgt.innerHTML = "ピチュー&lt;br /&gt;ピカチュウ&lt;br /&gt;&lt;input type="text" /&gt;";
 </code>
-<img class="no-max" src="/?S00/0010/innerHTML-textContent.gif" alt="innerHTML" />
+<img class="no-max" src="/static/img/S00/0010/innerHTML-textContent.gif" alt="innerHTML" />
 ユーザが入力したデータをinnerHTMLで表示するとhtmlを不正に操作される危険性があります。<br />例えばユーザフォームに以下のように入力して不正なjsファイルを実行させます。
-<img src="/?S00/0010/xss.png" alt="xss" />
+<img src="/static/img/S00/0010/xss.png" alt="xss" />
 これをHTML上に表示してしまうと、危険なjsを実行される危険性があります。<br />いわゆる、クロスサイトスクリプティング(XSS)と呼ばれるハッキング手法です。<br />したがって、原則としてinnerHTMLは使用するべきではないです。<br />もし、使用する場合には絶対にユーザから受け取ったデータを他の人に表示する際に用いないでください。<br />ユーザが入力したデータをそのユーザだけが使用するために使用するならok!です。
 <h2>outerHTML</h2>
 innerHTMLが自身のタグの中のデータが対象であったのに対してouterHTMLは自身も含めたプロパティです。<br />例えば以下のHTMLのouterHTMLを取得して表示すると違いが一目瞭然だと思います。
@@ -93,13 +93,13 @@ innerHTMLが自身のタグの中のデータが対象であったのに対し�
 	const tgt = document.getElementById("target");
 	console.log(tgt.innerHTML);
 </code>
-<img class="no-max" src="/?S00/0010/innerHTML-outerHTML.gif" alt="innerHTML" />
+<img class="no-max" src="/static/img/S00/0010/innerHTML-outerHTML.gif" alt="innerHTML" />
 <h3>outerHTML</h3>
 <code class="javascript">
 	const tgt = document.getElementById("target");
 	console.log(tgt.outerHTML);
 </code>
-<img class="no-max" src="/?S00/0010/innerHTML-outerHTML.gif" alt="outerHTML" />
+<img class="no-max" src="/static/img/S00/0010/innerHTML-outerHTML.gif" alt="outerHTML" />
 <h2>insertAdjacentHTML</h2>
 既に学習したappendChildは要素を自身の最後の子要素として追加しましたが、もっと詳細に追加するメソッドがinsertAdjacentHTMLです。<br />そのメソッドで追加する要素はcreateElementメソッドで作成したものではなく、「&lt;div&gt;ピカチュウ♪&lt;/div&gt;」のようにHTMLタグをそのまま書いた文字列である必要があります。<br />以下のように書きます。
 <code class="javascript">
@@ -127,12 +127,12 @@ innerHTMLが自身のタグの中のデータが対象であったのに対し�
 	</tbody>
 </table>
 <h3>beforebegin</h3>
-<img class="no-max" src="/?S00/0010/insertAdjacentHTML-beforebegin.gif" alt="insertAdjacentHTML" />
+<img class="no-max" src="/static/img/S00/0010/insertAdjacentHTML-beforebegin.gif" alt="insertAdjacentHTML" />
 <h3>afterend</h3>
-<img class="no-max" src="/?S00/0010/insertAdjacentHTML-afterend.gif" alt="insertAdjacentHTML" />
+<img class="no-max" src="/static/img/S00/0010/insertAdjacentHTML-afterend.gif" alt="insertAdjacentHTML" />
 <h3>afterbegin</h3>
-<img class="no-max" src="/?S00/0010/insertAdjacentHTML-afterbegin.gif" alt="insertAdjacentHTML" />
+<img class="no-max" src="/static/img/S00/0010/insertAdjacentHTML-afterbegin.gif" alt="insertAdjacentHTML" />
 <h3>beforeend</h3>
-<img class="no-max" src="/?S00/0010/insertAdjacentHTML-beforeend.gif" alt="insertAdjacentHTML" />
+<img class="no-max" src="/static/img/S00/0010/insertAdjacentHTML-beforeend.gif" alt="insertAdjacentHTML" />
 <div class="separator"></div>
 innerHTMLやouterHTMLと同様にxssの危険性があるので原則として用いるべきではありません。<br />もし、使用する場合はあるユーザが入力したデータを第三者のjsでこれを使用しないようにしてください。<br />ユーザが入力したデータをそのユーザだけが使用するために使用するならok!です。

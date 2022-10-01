@@ -11,13 +11,13 @@ UNIXライクな環境の構築が完了したら、以下のコマンドを実�
 <code class="shell">
 	bash -c "sh &lt;(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
 </code>
-<img src="/?S00/0301/opamInstall.gif" alt="opam" />
+<img src="/static/img/S00/0301/opamInstall.gif" alt="opam" />
 <h3>初期作業</h3>
 先ほどインストールしたopamを使用して、Ocaml開発環境を構築しましょう♪<br />以下のコマンドを実行して下さい。
 <code class="shell">
 	opam init
 </code>
-<img src="/?S00/0301/missingPackages.png" alt="opam init" />
+<img src="/static/img/S00/0301/missingPackages.png" alt="opam init" />
 上記のように必要なモジュールが不足しているとエラーが発生します。<br />必要なモジュールをインストールして下さい。
 <code class="shell">
 	sudo apt install make
@@ -41,7 +41,7 @@ UNIXライクな環境の構築が完了したら、以下のコマンドを実�
 	# duneのインストール
 	opam install dune utop ocaml-lsp-server
 </code>
-<img src="/?S00/0301/setupOpam.gif" alt="opam init" />
+<img src="/static/img/S00/0301/setupOpam.gif" alt="opam init" />
 インストール完了後に以下のコマンドを実行することでOcaml対話シェルモードに入ることができます。
 <code class="shell">
 	ocaml
@@ -56,13 +56,13 @@ UNIXライクな環境の構築が完了したら、以下のコマンドを実�
 <code class="shell">
 	ocaml ファイルパス
 </code>
-<img src="/?S00/0301/helloOcaml.gif" alt="ocaml コンパイル" />
+<img src="/static/img/S00/0301/helloOcaml.gif" alt="ocaml コンパイル" />
 
 <h2>VScode</h2>
 エディタは「VScode」をオススメします。<br />使いやすくて機能が豊富という特徴を持ち、WindowsユーザならばWSLウィンドウを使用してLinux環境で簡単に開発が可能だからです。
 <a href="https://code.visualstudio.com/" class="link vsCode">VS code</a>
 特に設定することなく使用可能です。<br />左側の拡張機能メニューからOcaml用のプラグインを使用することをオススメします。
-<img src="/?S00/0301/VScodeExt.png" alt="VS code" />
+<img src="/static/img/S00/0301/VScodeExt.png" alt="VS code" />
 <div class="separator"></div>
 WindowsユーザでWSL上にOcaml開発環境を構築した方は、WSLウィンドウを使用することで簡単に操作ができます。<br /><br />左下のリモートホストボタンから「新しいWSLウィンドウ」を選択します。<br />WSLに接続したVScodeインスタンスが新たに生成されます。
-<img src="/?S00/0301/VScodeWSLWindow.gif" alt="WSLウィンドウ" />
+<img src="/static/img/S00/0301/VScodeWSLWindow.gif" alt="WSLウィンドウ" />

@@ -54,7 +54,7 @@
 	else: # 余りが「0」でなければ、、、
 		print("奇数です")
 </code>
-<img src="/?S00/0103/if.gif" alt="条件分岐" />
+<img src="/static/img/S00/0103/if.gif" alt="条件分岐" />
 <p>このgif画像は繰り返し実行できるように若干加工してあります。</p>
 <div class="separator"></div>
 次は入力された数字が20以上30未満であるかどうかを判定するプログラムを作ってみましょう♪
@@ -64,7 +64,7 @@
 		print("20以上30未満")
 </code>
 今回はelseを書かず、条件を満たさなかった場合は特に何も処理はしません。
-<img src="/?S00/0103/if2.gif" alt="条件分岐" />
+<img src="/static/img/S00/0103/if2.gif" alt="条件分岐" />
 また、pythonでは以上(より大きい)と以下(より小さい)を同時に判定する際に「min &lt; x &lt; max」とつなげて書くことができます。<br />他の言語では「(min &lt; x) and (x &lt; max)」と2つに分けて書く必要があります。
 <code class="python">
 	n = int(input("数字を入力してください。\n"))
@@ -82,7 +82,7 @@
 	elif n % 3 == 2:
 		print("3n+2")
 </code>
-<img src="/?S00/0103/elif.gif" alt="条件分岐" />
+<img src="/static/img/S00/0103/elif.gif" alt="条件分岐" />
 <h2>反復処理</h2>
 一定回数処理を繰り返します。<br />反復処理を実現するコードには以下の2つがあります。
 <ul>
@@ -95,13 +95,13 @@
 	for k in ["ピカチュウ", "エモンガ", "トゲデマル"]:
 		print(k)
 </code>
-<img src="/?S00/0103/for.png" alt="反復処理" />
+<img src="/static/img/S00/0103/for.png" alt="反復処理" />
 これを利用して10回反復処理を実行する場合には10個の配列の要素を作成します。
 <code class="python">
 	for k in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
 		print("10回繰り返し♪")
 </code>
-<img src="/?S00/0103/for2.png" alt="反復処理" />
+<img src="/static/img/S00/0103/for2.png" alt="反復処理" />
 もし仮に100回ループ処理をさせる場合は100個の配列の要素を作成します。
 <code class="python">
 	for k in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25...]:
@@ -113,7 +113,7 @@
 	for k in range(1, 10 + 1) :
 		print(str(k) + "回目のループ") # 「k」は整数型であるため、文字列と連結するために文字列型に変換
 </code>
-<img src="/?S00/0103/range.png" alt="反復処理" />
+<img src="/static/img/S00/0103/range.png" alt="反復処理" />
 もっと簡単にrange(繰り返したい回数)と書くこともできます。<br />この場合は「0」から始まります。<br />プログラミングの世界では「1」からではなく、「0」から数えることが多いので早めに慣れちゃいましょう♪
 <p>この書き方はrange(0, 繰り返したい回数)の省略形です。</p>
 <h3>while</h3>
@@ -124,7 +124,7 @@
 		print(n)
 		n = n + 1
 </code>
-<img class="max-350w" src="/?S00/0103/while.png" alt="反復処理" />
+<img class="max-350w" src="/static/img/S00/0103/while.png" alt="反復処理" />
 <div class="separator"></div>
 whileとifを併用して、反復処理中にある条件を満たしたら処理をやめる場合には「break」を用います。
 <code class="python">
@@ -147,4 +147,4 @@ whileとifを併用して、反復処理中にある条件を満たしたら処�
 		print("") # ここで改行
 </code>
 <p>print関数で自動で改行しないように「end=""」を加えています。</p>
-<img class="max-350w" src="/?S00/0103/nestedLoop.png" alt="二重ループ" />
+<img class="max-350w" src="/static/img/S00/0103/nestedLoop.png" alt="二重ループ" />

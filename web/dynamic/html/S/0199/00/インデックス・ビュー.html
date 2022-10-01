@@ -31,14 +31,14 @@ SQL文を簡単に書くために使用されますが、実行効率が低下�
 	SELECT *
 	FROM ほのお;
 </code>
-<img src="/?S00/0199/simpleView.png" alt="ビュー" />
+<img src="/static/img/S00/0199/simpleView.png" alt="ビュー" />
 これを用いてほのおタイプ単体のポケモンを抽出してみましょう♪
 <code class="sql">
 	SELECT *
 	FROM ほのお
 	WHERE タイプ2 IS NULL;
 </code>
-<img src="/?S00/0199/viewWithWhereClause.png" alt="ビュー" />
+<img src="/static/img/S00/0199/viewWithWhereClause.png" alt="ビュー" />
 あくまでもビュー定義時に設定したSELECT文を展開しているだけです。<br />したがって、上のコードは以下のコードに展開されて実行されます。
 <code class="sql">
 	SELECT *

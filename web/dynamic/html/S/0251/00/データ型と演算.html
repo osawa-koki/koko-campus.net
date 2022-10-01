@@ -179,8 +179,8 @@
 非常に簡単ですね♪<br />これを(後置)インクリメント記法と呼びます。<br /><br />マイナスの場合は「x--;」となり、(後置)デクリメント記法と呼ばれます。
 <div class="separator"></div>
 因みに、「++」を変数の後ろに書きましたが、前に書くパターンもあります。<br />前置インクリメント記法と呼ばれます。<br />後置インクリメント記法との相違点は、前置インクリメントは「1」を加算(減算)してから評価されることです。<br /><br />なんだかよくわかりませんね、、、
-<img src="/?S00/0251/postfixIncrement.png" alt="後置インクリメント記法" />
-<img src="/?S00/0251/prefixIncrement.png" alt="前置インクリメント記法" />
+<img src="/static/img/S00/0251/postfixIncrement.png" alt="後置インクリメント記法" />
+<img src="/static/img/S00/0251/prefixIncrement.png" alt="前置インクリメント記法" />
 <h3>関係演算</h3>
 2つのデータを比較します。<br />「比較演算」とも呼ばれます。<br /><br />評価の結果として真偽値を返します。
 <table>
@@ -211,7 +211,7 @@
 		</tr>
 	</tbody>
 </table>
-<img src="/?S00/0251/relationalOperator.png" alt="関係演算" />
+<img src="/static/img/S00/0251/relationalOperator.png" alt="関係演算" />
 <h3>論理演算</h3>
 「かつ(AND)」と「または(OR)」と「ない(NOT)」による演算です。<br />演算対象は真偽値で評価結果として真偽値を返します。
 <table>
@@ -230,7 +230,7 @@
 		</tr>
 	</tbody>
 </table>
-<img src="/?S00/0251/logicalOperation.png" alt="論理演算" />
+<img src="/static/img/S00/0251/logicalOperation.png" alt="論理演算" />
 「&amp;&amp;」と「||」は短絡評価演算子と呼ばれ、全てを値を評価することなく、最終的な結果が定まった時点で評価を終了します。<br /><br />例えば、「A &amp;&amp; B」と式に関して、「A」が「false」である場合、その結果は絶対に「false」となるため、「B」に関しての評価は行われません。<br /><br />したがって、左の値が「true」の場合にのみ、右の値を評価したいという場合に使用することで、コードを簡単に書くことができます。
 <div class="separator"></div>
 「&amp;」「|」はぞれぞれ、「&amp;&amp;」「||」の短絡評価しないバージョンです。<br />実際のところ、ほとんど使用することはありません。
@@ -266,7 +266,7 @@
 	2.5
 	*/
 </code>
-<img src="/?S00/0251/explicitCast.gif" alt="明示的な型変換" />
+<img src="/static/img/S00/0251/explicitCast.gif" alt="明示的な型変換" />
 <h3>文字列と数値型</h3>
 <h4>文字列 &rarr; 数値</h4>
 文字列型のデータを数値型に変換するには、以下のように書きます。
@@ -280,7 +280,7 @@
 	int.TryParse(num, out answer);
 	Console.WriteLine(answer * 2);
 </code>
-<img src="/?S00/0251/TryParseWithoutErrorHandling.gif" alt="TryParse" />
+<img src="/static/img/S00/0251/TryParseWithoutErrorHandling.gif" alt="TryParse" />
 コンソール画面に入力された文字列が「num」変数に格納され、次にそれを型変換した際に格納するための「answer」を整数型で宣言しています。<br />実際に「num」変数に格納されている文字列を整数型に変換して、それを2倍した数字をコンソール画面に出力しています。
 <div class="separator"></div>
 「TryParse」ではない「Parse」メソッドも存在しますが、原則として「TryParse」を使用して下さい。<br />理由は、データ型の変換は必ずしも成功するとは限らず、失敗した際の対応をしないと例外が発生するからです。
@@ -296,7 +296,7 @@
 </code>
 また、「D」「N」に数字を続けた引数を渡すことで、最小桁数・小数点以下桁数を指定可能です。
 <p>引数については後ほど説明しますが、かっこの中に書くデータのことだと思ってください。</p>
-<img src="/?S00/0251/ToString.png" alt="ToString" />
+<img src="/static/img/S00/0251/ToString.png" alt="ToString" />
 指定した桁数が足りない場合には、桁数指定は無視されます。
 <h2>NULL</h2>
 「NULL」とは、値がなにもないことを意味します。<br />「0」でも「""(空文字)」でもなく、本当に空っぽです。<br /><br />古い言語ではほとんど「NULL」をサポートしてると思いますが、これが非常に厄介です。<br /><br />「NULL」の概念はアントニー・ホーアというプログラマが考案したものですが、彼はこれを「10億ドルの失敗」と呼んでいます。
@@ -326,7 +326,7 @@
 </ul>
 <h4>==によるNULL判定</h4>
 そのまま「== NULL」とすることで、その値がNULLかどうかを判定します。<br />「!=」で「非NULL」を判定できます。
-<img src="/?S00/0251/comparisionToNull.png" alt="NULL制御" />
+<img src="/static/img/S00/0251/comparisionToNull.png" alt="NULL制御" />
 <h4>??による判定</h4>
 NULL合体演算子と呼びます。<br />「A ?? B」と書くことで、Aの値が「NULL」の場合にBの値を使用します。<br />これは複数連結させることもできます。
-<img src="/?S00/0251/nullCoalescingOperator.png" alt="NULL合体演算子" />
+<img src="/static/img/S00/0251/nullCoalescingOperator.png" alt="NULL合体演算子" />

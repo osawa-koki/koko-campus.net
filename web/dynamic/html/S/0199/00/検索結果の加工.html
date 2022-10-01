@@ -10,7 +10,7 @@ SELECT文で取得する際に、カラム名やテーブル名に別名を付�
 	SELECT 図鑑番号 AS number, 名前 AS name, タイプ1 AS type1, タイプ2 AS type2
 	FROM pokemon;
 </code>
-<img src="/?S00/0199/as.png" alt="AS" />
+<img src="/static/img/S00/0199/as.png" alt="AS" />
 <h2>DISTINCT句</h2>
 SELECT文にDISTINCT句を設定すると、重複した行を排除して取得できます。<br />関係モデルを正しく採用した場合には常にDISTINCTを付けるべきですが、付けなくても動作に影響を及ぼさない場合には省略されることも多くあります。
 <code class="sql">
@@ -22,7 +22,7 @@ SELECT文にDISTINCT句を設定すると、重複した行を排除して取得
 	SELECT DISTINCT タイプ1
 	FROM pokemon;
 </code>
-<img src="/?S00/0199/distinct.png" alt="DISTINCT句" />
+<img src="/static/img/S00/0199/distinct.png" alt="DISTINCT句" />
 <h2>ORDER BY句</h2>
 結果を整理して表示します。
 <code class="sql">
@@ -51,14 +51,14 @@ SELECT文にDISTINCT句を設定すると、重複した行を排除して取得
 	FROM pokemon
 	ORDER BY 名前 ASC;
 </code>
-<img src="/?S00/0199/order-by_asc.png" alt="ORDER BY句" />
+<img src="/static/img/S00/0199/order-by_asc.png" alt="ORDER BY句" />
 次は降順で、、、
 <code class="sql">
 	SELECT *
 	FROM pokemon
 	ORDER BY 名前 DESC;
 </code>
-<img src="/?S00/0199/order-by_desc.png" alt="ORDER BY句" />
+<img src="/static/img/S00/0199/order-by_desc.png" alt="ORDER BY句" />
 <h2>UNION演算子</h2>
 複数の検索結果を合体させて表示します。<br />例えば、ポケモン全てをひとつのテーブルで管理すると膨大な量になってしまうので世代ごとに分けた際に、結果をまとめて表示する場合などに使用されます。
 <code class="sql">
@@ -80,6 +80,6 @@ SELECT文にDISTINCT句を設定すると、重複した行を排除して取得
 		FROM gen3
 		WHERE タイプ1 = 'みず' AND タイプ2 IS NULL;
 </code>
-<img src="/?S00/0199/union.png" alt="UNION演算子" />
+<img src="/static/img/S00/0199/union.png" alt="UNION演算子" />
 <p>結合させて表示する結果の列の数は同じである必要があります。</p>
 これで世代を指定する際に図鑑番号で指定しなくてもよくなりました♪<br />UNION演算子では重複している行をまとめて表示するのに対して、UNION ALL演算子を使用すれば重複している行もそのまま表示します。

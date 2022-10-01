@@ -1,6 +1,6 @@
 <h2>ファイル操作</h2>
 ファイル操作は以下の3つの手順で行います。
-<img src="/?S00/0200/manipulatingFile.png" alt="ファイル操作の手順" />
+<img src="/static/img/S00/0200/manipulatingFile.png" alt="ファイル操作の手順" />
 <h2>ファイルのオープン</h2>
 ファイルを開くためには以下のように記述します。
 <code class="c">
@@ -76,7 +76,7 @@ scanf関数は危険であるため、scanf_s関数を使用するように警�
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/checkFileExisting.gif" alt="ファイル存在判定プログラム" />
+<img src="/static/img/S00/0200/checkFileExisting.gif" alt="ファイル存在判定プログラム" />
 <h2>ファイルの読み込み</h2>
 では今度は開いたファイルの中身を読み込んでコンソール画面に出力してみましょう♪<br />ファイルストリームからデータを取得するにはscanf関数を使用します。
 <code class="c">
@@ -123,7 +123,7 @@ fscanf関数の使用が推奨されていない環境では以下のコード�
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/fscanf.gif" alt="fscanf関数" />
+<img src="/static/img/S00/0200/fscanf.gif" alt="fscanf関数" />
 僕はシェルで実行しているのでコンソール画面の文字コードの指定が可能なのですが、IDE(visual stusio等)で実行する場合は文字コードが正しく設定できていない場合があるので、極力半角英数字を使用してください。
 <p>シェル起動時のコマンドライン引数を設定する方法もあるのですが、ここでは割愛!!</p>
 <h2>ファイルへの書き込み</h2>
@@ -165,7 +165,7 @@ scanf関数の使用が推奨されていない環境では以下のコードに
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/fprintf-write.gif" alt="fprintf関数" />
+<img src="/static/img/S00/0200/fprintf-write.gif" alt="fprintf関数" />
 「type ファイル名」はファイルの中身を表示するwindowsシェル(コマンドプロンプト)用のコマンドです。<br />linuxでいうcatコマンドです。
 <h2>ファイルへの追記</h2>
 先ほどは「w」モードでファイルへ書き込んだため、元のデータを新しいデータで上書しましたね♪<br />今度は元のファイルに追記するプログラムを作成しましょう♪<br />といっても「w」を「a」に替えるだけです。
@@ -202,6 +202,6 @@ scanf関数の使用が推奨されていない環境では以下のコードに
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/fprintf-append.gif" alt="fprintf関数" />
+<img src="/static/img/S00/0200/fprintf-append.gif" alt="fprintf関数" />
 <div class="separator"></div>
 お疲れさまでした。

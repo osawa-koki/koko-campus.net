@@ -2,7 +2,7 @@
 リストとは同一の型のデータを複数格納するデータ型です。
 <p>異なるデータ型の要素を持つこともできますが、、、</p>
 リスト内の要素は<span class="u">「0」から始まるインデックス番号</span>で指定されます。
-<img src="/?S00/0103/explanationOfList.png" alt="リスト" />
+<img src="/static/img/S00/0103/explanationOfList.png" alt="リスト" />
 <h2>リストの作成</h2>
 リストは以下のように作成します。
 <code class="python">
@@ -16,14 +16,14 @@
 	print(ary[1])
 	print(ary[2])
 </code>
-<img src="/?S00/0103/list.png" alt="リスト" />
+<img src="/static/img/S00/0103/list.png" alt="リスト" />
 リストは全ての要素をfor文を用いて取り出すこともできます。
 <code class="python">
 	ary = ["ピチュー", "ピカチュウ", "ライチュウ"]
 	for k in ary:
 		print(k)
 </code>
-<img src="/?S00/0103/list.png" alt="リスト" />
+<img src="/static/img/S00/0103/list.png" alt="リスト" />
 <h2>リストの追加</h2>
 リストに要素を追加する方法として以下の2つを覚えましょう♪
 <ul>
@@ -41,20 +41,20 @@ pythonでリストの任意の位置に要素を追加するには「insert」�
 	ary.insert(0, "fortran") # 先頭に追加
 	print(ary)
 </code>
-<img src="/?S00/0103/insert.png" alt="insertメソッド" />
+<img src="/static/img/S00/0103/insert.png" alt="insertメソッド" />
 <code class="python">
 	ary = ["python", "c", "java", "ruby", "php"]
 	ary.insert(2, "c++") # 先頭から「3」番目に追加
 	print(ary)
 </code>
-<img src="/?S00/0103/insert2.png" alt="insertメソッド" />
+<img src="/static/img/S00/0103/insert2.png" alt="insertメソッド" />
 マイナス値を追加位置に指定することで後ろからの位置を指定することもできます。
 <code class="python">
 	ary = ["python", "c", "java", "ruby", "php"]
 	ary.insert(-2, "c++") # 後ろから「2」番目に追加
 	print(ary)
 </code>
-<img src="/?S00/0103/insert3.png" alt="insertメソッド" />
+<img src="/static/img/S00/0103/insert3.png" alt="insertメソッド" />
 <h3>append</h3>
 リストの一番最後に要素を追加するためにメソッドです。<br />以下のように実行します。
 <code class="python">
@@ -62,7 +62,7 @@ pythonでリストの任意の位置に要素を追加するには「insert」�
 	ary.append("go") # リストの最後に追加
 	print(ary)
 </code>
-<img src="/?S00/0103/append.png" alt="appendメソッド" />
+<img src="/static/img/S00/0103/append.png" alt="appendメソッド" />
 <h2>index</h2>
 あるデータに関してリスト内を探索して一致する要素のインデックス番号を返します。<br />indexメソッドは以下のように記述します。<br />一致するデータが見つからなかった場合はエラーとなります。
 <code class="python">
@@ -92,10 +92,10 @@ fint_it関数の第一引数に対象のリスト、第二引数に探したい�
 	idx = ary.index("java") # javaのインデックス番号を取得
 	del ary[idx] # javaを削除
 </code>
-<img src="/?S00/0103/del.png" alt="del文" />
+<img src="/static/img/S00/0103/del.png" alt="del文" />
 <h2>二次元リスト</h2>
 リストの中にリストを入れることもできます。<br />リストの中にリストを入れた場合二次元リストとなり、いわゆるエクセルのような表のデータを管理することができます。<br />リスト内の要素を指定するには「リスト名[外側のインデックス番号][内側のインデックス番号]」と指定します。
-<img src="/?S00/0103/nestedList.png" alt="多次元リスト" />
+<img src="/static/img/S00/0103/nestedList.png" alt="多次元リスト" />
 ここでは簡単に掛け算九九の結果を二次元リストに保存してそれを表示してみましょう♪
 <code class="python">
 	kuku = [] # 空のリストを作成(要素を追加するため)
@@ -109,4 +109,4 @@ fint_it関数の第一引数に対象のリスト、第二引数に探したい�
 			print(str(l) + " ", end="")
 		print("")
 </code>
-<img class="max-350w" src="/?S00/0103/doubleLoop.png" alt="二重ループ" />
+<img class="max-350w" src="/static/img/S00/0103/doubleLoop.png" alt="二重ループ" />

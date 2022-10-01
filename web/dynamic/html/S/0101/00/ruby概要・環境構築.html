@@ -10,21 +10,21 @@ Rubyとはマッツこと、まつもとゆきひろさんによって開発さ�
 僕はマイクロソフト社が提供しているVSCodeをオススメします。<br />個人であれば無料で使用でき、様々な言語に対応してたプラグインが存在するからです。
 <a href="https://code.visualstudio.com/" class="link to-VSCode">VSCode</a>
 インストールが完了したらそのまま使用できます。<br />拡張機能から「rebornix.ruby」をインストールすることをオススメします。
-<img src="/?S00/0101/VSCodeExt.png" alt="VSCode 拡張機能" />
+<img src="/static/img/S00/0101/VSCodeExt.png" alt="VSCode 拡張機能" />
 良い感じでプログラムコードを色付けしてくれ、コードに誤りがある場合にその詳細を表示してくれます。
 <h2>Rubyのインストール</h2>
 Rubyは以下のリンクからダウンロードして下さい。
 <a href="https://rubyinstaller.org/" class="link rubyLogo">ruby</a>
 「download &gt; WITH DEVKIT」から最新版をダウンロードして下さい。<br />ダウンロードが完了したらそのまま起動します。<br />インストーラが起動しますので、特に変更することなく進めてください。<br />インストールが完了したら必要なコンポーネントのインストール画面が表示されます。
-<img src="/?S00/0101/rubyinstaller.png" alt="rubyLogo" />
+<img src="/static/img/S00/0101/rubyinstaller.png" alt="rubyLogo" />
 「1」と入力してください。<br />必要なコンポーネントのインストールが実行されます。<br /><br />完了したらコマンドプロンプトを開いて、以下のコマンドを実行してください。
 <p>スタートからコマンドプロンプトと検索したら表示されます。</p>
 <code class="shell">
 	ruby --version
 </code>
-<img src="/?S00/0101/ruby--version.png" alt="ruby --version" />
+<img src="/static/img/S00/0101/ruby--version.png" alt="ruby --version" />
 バージョンが表示されたら成功です。<br />「'ruby' is not recognized as an internal or external command, operable program or batch file.」と表示されたら、環境変数の設定が成功していない可能性があります。<br />スタート画面から「環境変数」と検索して「Path」を編集して先ほどインストールしたフォルダを登録してください。
-<img src="/?S00/0101/envVar.png" alt="環境変数" />
+<img src="/static/img/S00/0101/envVar.png" alt="環境変数" />
 通常は「<span class="en">C:\Users\ユーザ名\Ruby31-x64\bin</span>」を指定すればok!です。<br />簡単に説明すれば、「ruby」と言えばこのフォルダにあるrubyプログラムを実行してね♪って登録します。
 <h2>rubyコマンド</h2>
 覚えるべきはひとつだけです。
@@ -32,7 +32,7 @@ Rubyは以下のリンクからダウンロードして下さい。
 	ruby 実行するファイル名
 </code>
 これで指定したファイルを実行します。<br />遠くにあるファイルを指定するのは大変なので通常は実行するファイルがあるフォルダに移動して実行します。<br />コマンドプロンプトでカレントディレクトリを変更するにはcdコマンドを使用しますが、エクスプローラーから対象のフォルダに移動してそこからコマンドプロンプトを開くことで当該フォルダをカレントディレクトリに設定した状態にすることができます。
-<img src="/?S00/0101/cd.gif" alt="カレントディレクトリ" />
+<img src="/static/img/S00/0101/cd.gif" alt="カレントディレクトリ" />
 試しに以下のファイルを実行してみましょう♪<br />中身は気にしなくてok!です。
 <code class="ruby">
 	puts "hello ruby"
@@ -41,8 +41,8 @@ Rubyは以下のリンクからダウンロードして下さい。
 <code class="shell">
 	ruby main.rb
 </code>
-<img src="/?S00/0101/hello-ruby.gif" alt="hello ruby" />
+<img src="/static/img/S00/0101/hello-ruby.gif" alt="hello ruby" />
 <h2>irbコマンド</h2>
 ファイルとしてrubyを実行するのではなく、対話型でrubyを実行します。<br />プログラムの動作をひとつずつチェックできるため、練習目的で使用します。
-<img src="/?S00/0101/irb.gif" alt="irb" />
+<img src="/static/img/S00/0101/irb.gif" alt="irb" />
 irbモードを終了するにはquitコマンドを実行します。<br />便利な機能ですが、プログラムの説明には向いていないのでここでは使用しません。

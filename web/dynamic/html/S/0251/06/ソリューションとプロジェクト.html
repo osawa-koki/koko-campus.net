@@ -14,16 +14,16 @@ C#で大規模な(複数ファイルからなる)プログラムを構築する�
 		</tr>
 	</tbody>
 </table>
-<img src="/?S00/0251/solution-project.png" alt="ソリューションとプロジェクト" />
+<img src="/static/img/S00/0251/solution-project.png" alt="ソリューションとプロジェクト" />
 <h2>プロジェクトの作成</h2>
 では、早速プロジェクトを作成しましょう♪<br />といっても、既にプロジェクトは何度も作成していますが、、、<br /><br />今まではコンソールアプリであれば、「.NET Framework」か否かは問いませんでしたが、今回は「.NET Framework」の機能を使用するため、「コンソールアプリ(.NET Framework)」を選択して下さい。
-<img src="/?S00/0251/newProject.png" alt="プロジェクトの作成" />
+<img src="/static/img/S00/0251/newProject.png" alt="プロジェクトの作成" />
 通常のコンソールアプリ用のプロジェクトでは生成されなかった、「App.config」が生成されていることが確認できます。
-<img src="/?S00/0251/AppConfig.png" alt="app.config" />
+<img src="/static/img/S00/0251/AppConfig.png" alt="app.config" />
 「App.config」ファイルについては後ほど詳しく説明しますが、アプリケーション(プロジェクト)に固有の値を設定するために使用される、「.NET Framework」の技術です。
 <h2>プロジェクト構成</h2>
 先ほど作成したソリューションとプロジェクトは以下の構成になっています。
-<img src="/?S00/0251/structOfProject-Solution.png" alt="プロジェクトの構成" />
+<img src="/static/img/S00/0251/structOfProject-Solution.png" alt="プロジェクトの構成" />
 <table>
 	<tbody>
 		<tr>
@@ -62,9 +62,9 @@ C#で大規模な(複数ファイルからなる)プログラムを構築する�
 </table>
 <h3>.slnファイル</h3>
 ソリューションファイルと読みます。<br />ソリューションが格納するプロジェクトに関する情報を記述しています。<br />通常はVisual Studioが自動で生成するので、プログラマが直接操作することはしませんが、今回は特別に中身を確認してみましょう♪<br /><br />右クリックして「プログラムから開く &rarr; メモ帳(VS code)」を選択すると中身をテキストとして確認できます。
-<img src="/?S00/0251/insideOfSlnFile.png" alt="slnファイル" />
+<img src="/static/img/S00/0251/insideOfSlnFile.png" alt="slnファイル" />
 「koko.csproj」というソリューションが格納するプロジェクトのプロジェクト管理ファイルである「.csproj」までのパスが記載されていることが確認できます。
 <h3>.csprojファイル</h3>
 プロジェクトに関する情報を格納します。<br />こちらも、プログラマが直接操作することはしません。<br /><br />中身を確認してみましょう♪
-<img src="/?S00/0251/insideOfCsprojFile.png" alt="csprojファイル" />
+<img src="/static/img/S00/0251/insideOfCsprojFile.png" alt="csprojファイル" />
 そのプロジェクトを構成するソースファイルや構成ファイルについて記述されていることが確認できます。

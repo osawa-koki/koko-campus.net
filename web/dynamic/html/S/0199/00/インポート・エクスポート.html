@@ -77,9 +77,9 @@
 	LINES TERMINATED BY '\r\n'
 	SET 威力 = nullif(威力,"");
 </code>
-<img src="/?S00/0199/import.png" alt="インポート" />
+<img src="/static/img/S00/0199/import.png" alt="インポート" />
 では結果を確認してみましょう♪
-<img src="/?S00/0199/importWazaMachine.png" alt="インポート" />
+<img src="/static/img/S00/0199/importWazaMachine.png" alt="インポート" />
 完璧ですね♪
 <h3>インポートの注意点</h3>
 インポートするファイルに関して以下の点に注意してください。
@@ -92,15 +92,15 @@
 <code class="sql">
 	SELECT @@secure_file_priv;
 </code>
-<img src="/?S00/0199/secure_file_priv.png" alt="secure_file_priv" />
+<img src="/static/img/S00/0199/secure_file_priv.png" alt="secure_file_priv" />
 ここに表示されているディレクトリにエクスポートするのであれば、特に設定なくエクスポートできます。<br />新たにエクスポートできるディレクトリを追加するには「C:\ProgramData\MySQL\MySQL Server 8.0\my.ini」ファイルを編集します。
 <p>「8.0」の部分はバージョンによって変わります。<br />また、インストール時に設定を変更した場合はパスが異なります。</p>
-<img src="/?S00/0199/my-ini.png" alt="my.ini" />
+<img src="/static/img/S00/0199/my-ini.png" alt="my.ini" />
 このファイルに以下のテキストを付け加えます。
 <code class="my-dot-ini">
 	secure-file-priv = ""
 </code>
-<img src="/?S00/0199/rewrite_my-ini.png" alt="my.ini" />
+<img src="/static/img/S00/0199/rewrite_my-ini.png" alt="my.ini" />
 どこにでもエクスポートしてok!って意味です。<br />具体的にパスを書いてエクスポート先ディレクトリを設定してもok!です。
 <div class="separator"></div>
 この設定はセキュリティの観点からオススメできません。<br />原則としてデフォルトで許可されているディレクトリに出力するべきです。
@@ -123,7 +123,7 @@ INTO OUTFILEで出力先のファイルのパスを指定します。<br />そ�
 	FIELDS TERMINATED BY ','
 	LINES TERMINATED BY '\r\n';
 </code>
-<img src="/?S00/0199/failedToExport.png" alt="エクスポート" />
+<img src="/static/img/S00/0199/failedToExport.png" alt="エクスポート" />
 NULLの値が「\N」として出力されていますね、、、<br />これを防ぐためにはSELECT文でNULLを判定して空白文字等に置き換える処理をする必要があります。<br />NULLの可能性があるのは威力ですので、これがNULLなら「''(空文字)」の置換します。
 <code class="sql">
 	SELECT 番号, 名前, タイプ, 形態, IFNULL(威力, ''), 命中率, PP
@@ -133,10 +133,10 @@ NULLの値が「\N」として出力されていますね、、、<br />これ�
 	FIELDS TERMINATED BY ','
 	LINES TERMINATED BY '\r\n';
 </code>
-<img src="/?S00/0199/successedToExport.png" alt="エクスポート" />
+<img src="/static/img/S00/0199/successedToExport.png" alt="エクスポート" />
 これでうまくエクスポートできましたね♪
 <h2>xlsxからcsvへ</h2>
 余談ですが、、、<br />エクセルのデータをcsvにエクスポートする方法を紹介します。<br /><br />「ファイル &gt; エクスポート &gt; ファイルの種類の変更 &gt; CSV」を選択します。
-<img src="/?S00/0199/xlsx-to-csv.gif" alt="エクセルのcsvエクスポート" />
+<img src="/static/img/S00/0199/xlsx-to-csv.gif" alt="エクセルのcsvエクスポート" />
 <h3>注意点</h3>
 エクセルで使用される文字コードが「ANSI」であるのに対してMySQLでは「UTF-8」を使用するため、csvエクスポート後に文字コードを「UTF-8」に変更する必要があります。

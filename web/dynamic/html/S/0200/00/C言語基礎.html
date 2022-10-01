@@ -16,7 +16,7 @@ c言語プログラムのテンプレートは以下の要素からなります�
 	<li>{...}</li>
 	<li>return 0</li>
 </ul>
-<img src="/?S00/0200/mainFx.png" alt="main関数" />
+<img src="/static/img/S00/0200/mainFx.png" alt="main関数" />
 <h3>#include &lt;stdio.h&gt;</h3>
 「#include &lt;stdio.h&gt;」では標準の入出力を扱うヘッダファイルを読み込んでいます。<br />「printf」関数を使用する際に使用します。
 <h3>int</h3>
@@ -57,7 +57,7 @@ c言語プログラムのテンプレートは以下の要素からなります�
 </code>
 <h2>コンソールに表示</h2>
 コンソール画面とは文字の入出力をする画面です。<br />みなさんがプログラマにどのようなイメージを抱いているか分かりませんが、いわゆるプログラマがキーボードで何か文字を打ち込んだり文字を入力させたりする黒い画面をいいます。
-<img src="/?S00/0200/console.png" alt="コンソール画面" />
+<img src="/static/img/S00/0200/console.png" alt="コンソール画面" />
 こんな画面です。<br />実際にプログラムが内部でどのような処理をしているか分からないので、とりあえずこのコンソール画面に必要なデータを出力させてチェックしましょう♪<br /><br />コンソール画面に出力するための関数には主に以下の2つがあります。
 <ul>
 	<li>printf</li>
@@ -200,7 +200,7 @@ printf関数の第一引数である書式文字列内の変換指定(「%d」�
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/scanf.gif" alt="scanf" />
+<img src="/static/img/S00/0200/scanf.gif" alt="scanf" />
 「数字を入力してください。」と表示され、何か数字を入力して「enter」を押すと「あなたは25と入力しましたね♪」と表示されます。(25と入力した場合)<br /><br />ひょっとしたらコンパイル(ビルド)時にエラーが出て「'scanf': This function or variable may be unsafe. Consider using scanf_s instead. ...」と表示されるかもしれません。<br />これは「scanf」という関数はバッファオーバーフローというハッキングに対して脆弱であるため使用が非推奨です。<br />そのため、「scanf」という関数の代わりに「scanf_s」という関数を使用してください。
 <code class="c">
 	#include &lt;stdio.h&gt;

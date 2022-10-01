@@ -26,7 +26,7 @@
 	</tbody>
 </table>
 ではポケモンのステータスを計算して表示しましょう♪<br />statusテーブルにポケモンの種族値を含めたデータを追加しました。
-<img src="/?S00/0199/statusOfPokemon.png" alt="ポケモンのステータス" />
+<img src="/static/img/S00/0199/statusOfPokemon.png" alt="ポケモンのステータス" />
 HPのステータスは「(種族値 &times; 2 + 個体値 + 努力値 &divide; 4) &times; レベル &divide; 100 + レベル + 10」で計算されます。<br />努力値と個体値は両方とも最大の「252」と「31」で計算します。<br />簡単にすれば「HP = 2 &times; 種族値 + 204」で計算します。<br />HP以外はここでは保留とします。<br />では実際にポケモンの全ての最大ステータスを計算して表示してみましょう♪
 <code class="sql">
 	SELECT 図鑑番号,
@@ -34,7 +34,7 @@ HPのステータスは「(種族値 &times; 2 + 個体値 + 努力値 &divide; 
 		HP * 2 + 204 AS HP最大値
 	FROM status;
 </code>
-<img src="/?S00/0199/formula.png" alt="式" />
+<img src="/static/img/S00/0199/formula.png" alt="式" />
 式はINSERT文・UPDATE文でも使用できます。
 <h2>CASE演算子</h2>
 CASE演算子は式の結果に応じて、使用する値を設定することができます。
@@ -67,7 +67,7 @@ CASE演算子は式の結果に応じて、使用する値を設定すること�
 		END AS HPの判定
 	FROM status;
 </code>
-<img src="/?S00/0199/case.png" alt="CASE" />
+<img src="/static/img/S00/0199/case.png" alt="CASE" />
 <h2>関数</h2>
 関数とはあるデータ(引数)に関して一定の処理を行ってその結果を戻り値として取得します。<br />プログラミング言語の関数とは若干異なるため、ここでは式の進化バージョンだと思ってください。<br />以下の関数を学びます。
 <ul>
@@ -91,7 +91,7 @@ CASE演算子は式の結果に応じて、使用する値を設定すること�
 	FROM pokemon
 	WHERE 図鑑番号 &lt;= 151;
 </code>
-<img src="/?S00/0199/char_length.png" alt="CHAR_LENGTH" />
+<img src="/static/img/S00/0199/char_length.png" alt="CHAR_LENGTH" />
 CHAR_LENGTH関数では文字列の長さを返すのに対して、LENGTH関数では文字列のバイト数を返します。
 <h2>TRIM</h2>
 文字列から余分な空白文字を削除します。<br />例えば、テーブル作成時にデータ型をCHAR型で設定した場合は固定長の文字列となりますが、入力した文字列の長さがこれに満たなかった場合は文字列の右側が空白で埋められます。<br />これを削除する際に使用します。<br /><br />また、LTRIMは左側の空白だけを削除、RTRIMは右側だけの空白を削除します。
@@ -105,21 +105,21 @@ CHAR_LENGTH関数では文字列の長さを返すのに対して、LENGTH関数
 	SELECT
 	REPLACE('あなたのこと嫌い', '嫌い', '好き') AS '恋文';
 </code>
-<img src="/?S00/0199/replace.png" alt="REPLACE" />
+<img src="/static/img/S00/0199/replace.png" alt="REPLACE" />
 <h2>UPPER</h2>
 引数で渡した文字列を大文字に変換します。
 <code class="sql">
 	SELECT
 	UPPER('i love you') AS '恋文';
 </code>
-<img src="/?S00/0199/upper.png" alt="UPPER" />
+<img src="/static/img/S00/0199/upper.png" alt="UPPER" />
 <h2>LOWER</h2>
 引数で渡した文字列を小文字に変換します。
 <code class="sql">
 	SELECT
 	LOWER('I LOVE YOU') AS '恋文';
 </code>
-<img src="/?S00/0199/lower.png" alt="LOWER" />
+<img src="/static/img/S00/0199/lower.png" alt="LOWER" />
 <h2>ROUND</h2>
 数字を指定して桁で四捨五入します。
 <code class="sql">
@@ -131,7 +131,7 @@ CHAR_LENGTH関数では文字列の長さを返すのに対して、LENGTH関数
 	ROUND (1234567890, -5) AS '整数部分の四捨五入',
 	ROUND (0.123456789, 5) AS '小数部分の四捨五入';
 </code>
-<img src="/?S00/0199/round.png" alt="ROUND" />
+<img src="/static/img/S00/0199/round.png" alt="ROUND" />
 <h2>TRUNC</h2>
 ROUND関数の切り捨てバージョンです。
 <code class="sql">
@@ -144,4 +144,4 @@ ROUND関数の切り捨てバージョンです。
 	TRUNCATE (0.123456789, 5) AS '小数部分の四捨五入';
 </code>
 <p>Oracle/PostgreSQLではTRUNC関数を使用します。</p>
-<img src="/?S00/0199/truncate.png" alt="TRUNCATE" />
+<img src="/static/img/S00/0199/truncate.png" alt="TRUNCATE" />

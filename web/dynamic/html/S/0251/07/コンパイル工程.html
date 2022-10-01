@@ -19,15 +19,15 @@
 実際に実行可能プログラムを生成します。
 <h2>ソリューション・プロジェクト・ドキュメント</h2>
 ソリューションは単一、ないしは複数のプロジェクトを有し、プロジェクトは単一の、ないしは複数のドキュメントを有する階層構造をとっています。
-<img src="/?S00/0251/solution_project_document.png" alt="ソリューション・プロジェクト・ドキュメント" />
+<img src="/static/img/S00/0251/solution_project_document.png" alt="ソリューション・プロジェクト・ドキュメント" />
 <p>画像は<a href="https://github.com/dotnet/roslyn/blob/main/docs/wiki/Roslyn-Overview.md">github</a>より。</p>
 <p>ワークスペースについては後ほど説明します。</p>
 <h3>ソリューション</h3>
 プロジェクトのコンテナとしての役割を果たします。<br />「*.sln」ファイルによって、当該ソリューションが含むプロジェクトを指定します。
-<img src="/?S00/0251/insideOfSlnFile.png" alt="slnファイル" />
+<img src="/static/img/S00/0251/insideOfSlnFile.png" alt="slnファイル" />
 <h3>プロジェクト</h3>
 コードのコンパイル単位です。<br />「*.csproj」「*.vbproj」ファイルによって、当該プロジェクトが使用するファイルを指定します。<br />このファイルに記載された内容によってコンパイル時に必要なファイルや、ライブラリを特定します。
-<img src="/?S00/0251/insideOfCsprojFile.png" alt="csprojファイル" />
+<img src="/static/img/S00/0251/insideOfCsprojFile.png" alt="csprojファイル" />
 <h3>ドキュメント</h3>
 プロジェクトに含まれるファイルひとつひとつが該当します。<br />ドキュメント単位でノードツリーを形成します。
 

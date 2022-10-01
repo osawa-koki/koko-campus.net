@@ -1,6 +1,6 @@
 <h2>イベントハンドリング</h2>
 イベントハンドリングとは、ユーザが何らかの文字を入力したりユーザがボタンを押したりしたら処理を実行する仕組みを言います。
-<img src="/?S00/0103/tk_eventHandling.gif" alt="イベントハンドリング" />
+<img src="/static/img/S00/0103/tk_eventHandling.gif" alt="イベントハンドリング" />
 <h2>command</h2>
 では、実際にイベントハンドリングを実装してみましょう♪<br />ウィジェット生成時のcommandオプションに関数名を指定することで実現します。<br /><br />ここではボタンのクリック時に関数を実行します。
 <code class="python">
@@ -22,7 +22,7 @@
 
 	root.mainloop()
 </code>
-<img src="/?S00/0103/tk_eventHandling-sample.gif" alt="イベントハンドリング" />
+<img src="/static/img/S00/0103/tk_eventHandling-sample.gif" alt="イベントハンドリング" />
 javascriptではこのように何らかのイベントに紐づけられて、そのイベントの発生で発火される関数をコールバック関数と呼ぶのでここでもコールバック関数と呼ぶことにします。
 <h2>コールバック関数への引数</h2>
 複数のウィジェットのイベントに紐づけられる関数で、それぞれで異なるデータを取得する際には引数を使用します。<br />しかし、以下のように書くことはできません。
@@ -45,7 +45,7 @@ javascriptではこのように何らかのイベントに紐づけられて、�
 	button2 = tk.Button(root, command=lambda: clicked(2), text="ボタン2", font=("consolas", 16, "bold"), fg="red", bg="yellow")
 	button2.pack(pady=30)
 </code>
-<img src="/?S00/0103/tk_callback-lambda.gif" alt="ラムダ式" />
+<img src="/static/img/S00/0103/tk_callback-lambda.gif" alt="ラムダ式" />
 <h2>ウィジェットの操作</h2>
 
 

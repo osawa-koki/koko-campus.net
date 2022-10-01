@@ -7,13 +7,13 @@ c言語以降の現代プログラミング言語は、構造化言語として�
 </ul>
 <h3>順次実行</h3>
 C言語以前のコードではgoto文を用いてプログラムの実行順序を記述していましたが、構造化言語ではgoto文は原則として使用しません。<br />プログラムは上に書いたコードから順に実行されます。<br /><br />これをサポートするために変数という、一時的にデータを保管する箱を使用します。
-<img src="/?S00/0200/sequentialExecution.png" alt="順次実行" />
+<img src="/static/img/S00/0200/sequentialExecution.png" alt="順次実行" />
 <h3>条件分岐</h3>
 条件を満たした場合は処理Aを行い、満たさなかった場合は処理Bを行うといったようにある条件を満たすかどうかによって実行する処理を変更します。
-<img src="/?S00/0200/conditionalFlowControlling.png" alt="条件分岐" />
+<img src="/static/img/S00/0200/conditionalFlowControlling.png" alt="条件分岐" />
 <h3>反復処理</h3>
 ある一定の処理を条件を満たす限り繰り返して実行し続けます。<br />ループ処理とも呼びます。
-<img src="/?S00/0200/loop.png" alt="反復処理" />
+<img src="/static/img/S00/0200/loop.png" alt="反復処理" />
 <div class="separator"></div>
 ではそれぞれの性質について学びましょう♪
 <h2>順次実行</h2>
@@ -110,7 +110,7 @@ switchに続く条件式が、「{}」内のcaseの後の値(名札)と一致す
 </ul>
 <h3>for</h3>
 「for (前処理; 制御式; 間処理) {反復処理}」と書きます。
-<img src="/?S00/0200/imageOfFor.png" alt="for" />
+<img src="/static/img/S00/0200/imageOfFor.png" alt="for" />
 <h4>前処理</h4>
 前処理では反復処理実行前に1度だけ実行される前処理を記載します。<br />通常は「i」(数字をカウントアップする変数)に「1」を代入します。
 <h4>制御式</h4>
@@ -179,4 +179,4 @@ whileが先に条件式を評価して、それを満たす限り反復処理を
 		return 0;
 	}
 </code>
-<img src="/?S00/0200/kuku.png" alt="多重ループの説明画像" />
+<img src="/static/img/S00/0200/kuku.png" alt="多重ループの説明画像" />

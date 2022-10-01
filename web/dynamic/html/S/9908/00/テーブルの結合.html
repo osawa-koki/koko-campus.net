@@ -3,9 +3,9 @@
 <p>このページでも簡単な正規化については説明します。</p>
 <h2>正規化の必要性</h2>
 最初に正規化する必要性について説明します。<br />以下のテーブルをみて下さい。<br />自分がゲットしたポケモンを管理するテーブルです。
-<img src="/?S00/9908/duplicatedTable.gif" alt="重複したテーブル" />
+<img src="/static/img/S00/9908/duplicatedTable.gif" alt="重複したテーブル" />
 上のテーブルも問題点が分かりますか???<br /><br />上のテーブルでは「図鑑番号」から「名前」「タイプ」を特定できるのにもかかわらず、それを重複して管理している点です。
-<img src="/?S00/9908/duplicatedTableHighlighted.gif" alt="重複したテーブル" />
+<img src="/static/img/S00/9908/duplicatedTableHighlighted.gif" alt="重複したテーブル" />
 「ぴぃちゃん(0002)」が進化してライチュウになったとします。<br />以下のSQLを実行してデータベースを更新したとします。
 <code class="sql">
 	UPDATE my_poke
@@ -13,9 +13,9 @@
 	WHERE id = 0002;
 </code>
 以下のテーブルに更新されます。
-<img src="/?S00/9908/conflictedTable.gif" alt="矛盾したテーブル" />
+<img src="/static/img/S00/9908/conflictedTable.gif" alt="矛盾したテーブル" />
 図鑑番号は「25」で「ライチュウ」という矛盾が発生してしまいます。<br />図鑑番号も正しく更新すれば矛盾は防げますが、理論上矛盾が発生しうるという状態そのものが問題であり、設計時にこのような問題を防ぐために正規化(テーブルの適切な分割)を行います。<br /><br />今回は以下のようにテーブルを分割します。
-<img src="/?S00/9908/normalizationOfTable.gif" alt="正規化" />
+<img src="/static/img/S00/9908/normalizationOfTable.gif" alt="正規化" />
 自分がゲットしたポケモンテーブルとポケモン図鑑テーブルを分離させることで理論上、矛盾が発生しない設計となりました。
 <h2>結合の種類</h2>
 テーブルの結合の種類は大きく以下の3通りに分類されます。
@@ -52,10 +52,10 @@
 		level INT CHECK(1 &lt;= level AND level &lt;= 100)
 	);
 </code>
-<img src="/?S00/9908/my_poke_rawdata.gif" alt="テーブル結合 RAWデータ" />
+<img src="/static/img/S00/9908/my_poke_rawdata.gif" alt="テーブル結合 RAWデータ" />
 <h2>結合の基本的な考え方</h2>
 テーブルの結合は結合対象のテーブル(A・B)に対して、一定の条件から横に結合します。<br />一般的にはAに存在する指定した列の値と、Bに存在する指定した列の値が一致するように結合します。
-<img src="/?S00/9908/joiningTable.gif" alt="テーブルの結合" />
+<img src="/static/img/S00/9908/joiningTable.gif" alt="テーブルの結合" />
 問題となるのは、結合条件と設定した列がもう片方に存在しない、ないしはNULLが登録されている場合です。
 <h2>内部結合</h2>
 結合対象テーブル両方に存在するデータを抽出します。<br />今回は自分がゲットしたポケモンとポケモン図鑑は図鑑番号をもとに結合できますが、ダイナちゃん(ムゲンダイナ)は第七世代のポケモンであるためポケモン図鑑テーブルに登録されていません。<br /><br />この状態で内部結合を行います。
@@ -65,7 +65,7 @@
 	INNER JOIN pokemon
 	ON my_poke.number = pokemon.number;
 </code>
-<img src="/?S00/9908/inner_join.gif" alt="内部結合" />
+<img src="/static/img/S00/9908/inner_join.gif" alt="内部結合" />
 ダイナちゃんは無視されていることが確認できます。<br />このようにどちらか一方にしか存在しない行は内部結合では取得されません。<br />ダイナちゃんとnumberがNULLの場合も同様です。
 <div class="separator"></div>
 内部結合は以下のように書きます。
@@ -97,7 +97,7 @@
 	LEFT OUTER JOIN pokemon
 	ON my_poke.number = pokemon.number;
 </code>
-<img src="/?S00/9908/left_outer_join.gif" alt="左外部結合" />
+<img src="/static/img/S00/9908/left_outer_join.gif" alt="左外部結合" />
 右側(ポケモン図鑑)に存在しないダイナちゃんも取得されています。<br />欠損しているデータはNULLとなります。<br /><br />結合条件を満たす行が結合対象先に複数存在する場合には当該業はその数だけ表示されます。
 <h3>左外部結合</h3>
 右側(JOIN句の対象)のテーブルにしか存在しないデータも表示します。<br />以下のように書きます。
@@ -114,7 +114,7 @@
 	RIGHT OUTER JOIN pokemon
 	ON my_poke.number = pokemon.number;
 </code>
-<img src="/?S00/9908/right_outer_join.gif" alt="右外部結合" />
+<img src="/static/img/S00/9908/right_outer_join.gif" alt="右外部結合" />
 今回は合条件を満たす行が結合対象先に複数存在する行がその数だけ表示されていることが確認できます。
 <p>「25: ピカチュウ」の行です。</p>
 <div class="separator"></div>
@@ -125,7 +125,7 @@
 	LEFT OUTER JOIN my_poke
 	ON pokemon.number = my_poke.number;
 </code>
-<img src="/?S00/9908/left_outer_join-switched.gif" alt="右外部結合" />
+<img src="/static/img/S00/9908/left_outer_join-switched.gif" alt="右外部結合" />
 <h3>完全外部結合</h3>
 「左外部結合」+「右外部結合」です。<br />どちらか一方にしか存在しない行を全て取得します。
 <code class="sql">
@@ -140,7 +140,7 @@
 	FULL OUTER JOIN my_poke
 	ON pokemon.number = my_poke.number;
 </code>
-<img src="/?S00/9908/full_outer_join.gif" alt="完全外部結合" />
+<img src="/static/img/S00/9908/full_outer_join.gif" alt="完全外部結合" />
 <h2>クロス結合</h2>
 使うことはほとんどありません。<br />両テーブルの全ての行に対して全ての組み合わせパターンを取得します。<br />以下のように書きます。
 <code class="sql">
