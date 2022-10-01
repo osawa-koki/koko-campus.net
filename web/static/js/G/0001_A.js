@@ -159,7 +159,7 @@ function updateStatus() {
 }
 
 (() => { // init
-	botImg.src = `/?G/${random(...BOT_IMAGES_RANGE)}.png`;
+	botImg.src = `/static/img/G/${random(...BOT_IMAGES_RANGE)}.png`;
 	append(doNtimes(ITEM_COUNT ** 2, () => {
 		const [cell] = mkElm(["div"]);
 		cell.classList.add("cell");
