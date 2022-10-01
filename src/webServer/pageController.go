@@ -71,11 +71,6 @@ func pageController(RR *RequestResponse) {
 	case "G":
 		urlCheck = true
 		strHTML = gameController(tmplMap, RR)
-	case "B":
-		strHTML = backOfficeController(RR, digit)
-	case "X":
-		isPage = false
-		APIdata = extensibleAPI(RR)
 	case "A":
 		isPage = false
 		APIdata = API(RR)
