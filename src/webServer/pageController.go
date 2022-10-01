@@ -25,7 +25,7 @@ func pageController(RR *RequestResponse) {
 	rex := regexp.MustCompile(`\d+`)
 	digit := rex.FindString(RR.request.URL.Path)
 
-	switch RR.snd {
+	switch RR.fst {
 	case "", "T", "0":
 		urlCheck = true
 		tmplMap.addCSS("T/00")
@@ -80,7 +80,7 @@ func pageController(RR *RequestResponse) {
 		isPage = false
 		APIdata = API(RR)
 	default:
-		Logger(RR.snd)
+		Logger(RR.fst)
 	}
 	if isPage {
 		tmplMap.addJS("00/99")

@@ -21,7 +21,7 @@ func Logout(RR *RequestResponse) {
 		HttpOnly: true,
 	}
 	http.SetCookie(*RR.response, cookie)
-	http.Redirect(*RR.response, RR.request, "?!", http.StatusFound)
+	http.Redirect(*RR.response, RR.request, "/", http.StatusFound)
 }
 
 func LogoutPageController(w *http.ResponseWriter) {

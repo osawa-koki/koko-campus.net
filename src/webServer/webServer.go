@@ -10,7 +10,7 @@ import (
 type RequestResponse struct {
 	request     *http.Request
 	response    *http.ResponseWriter
-	snd         string
+	fst         string
 	path        string
 	Login       bool
 	NeedToLogin bool
@@ -34,7 +34,7 @@ func controller(w http.ResponseWriter, r *http.Request) {
 	RR := RequestResponse{
 		request:     r,
 		response:    &w,
-		snd:         strIndex(path, 1),
+		fst:         strIndex(path, 1),
 		path:        r.URL.Path,
 		Login:       false,
 		NeedToLogin: false,
@@ -43,35 +43,17 @@ func controller(w http.ResponseWriter, r *http.Request) {
 	}
 
 	setResponseHeaders(&w)
-	switch RR.snd {
+	switch RR.fst {
 	case "R", "M": // [SEC] クリックジャッキング・XSS対策
 		setResponseHeadersSecurity(&w)
 	}
 
-	if RR.snd == "?" {
-		// セッションがいらないページ(静的ページ)
-		// or
-		// ログアウト
-		switch strIndex(path, 2) {
-		case "?": //「??」
-			// ログアウト処理
-			Logout(&RR)
-		case "!": //「?!」
-			// ログアウト後のリダイレクト先ページ
-			LogoutPageController(&w)
-		default:
-			// その他(静的ページ)
-			WebController(&w, path)
-		}
-	} else {
-		// セッションが必要なページ
-		RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
+	RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
 
-		if (RR.snd == "M") {
-			RR.NeedToLogin = true;
-		}
-		sessionController(&RR)
+	if (RR.fst == "M") {
+		RR.NeedToLogin = true;
 	}
+	sessionController(&RR)
 }
 
 func main() {

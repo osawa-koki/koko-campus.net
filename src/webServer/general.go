@@ -22,7 +22,7 @@ func GetDateTime() string {
 }
 
 func getRootDIR() string {
-	return os.Getenv("WWWROOT")
+	return os.Getenv("DYNAMIC_ROOT")
 }
 
 /*
