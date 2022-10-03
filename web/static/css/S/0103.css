@@ -1,19 +1,19 @@
 .pythonLogo {
-  background-image: url(/?S00/0103/pythonLogo.png);
+  background-image: url(/static/img/S00/0103/pythonLogo.png);
 }
 
 .FastAPILogo {
-  background-image: url(/?S00/0103/FastAPILogo.png);
+  background-image: url(/static/img/S00/0103/FastAPILogo.png);
 }
 
 .uvicornLogo {
-  background-image: url(/?S00/0103/uvicornLogo.png);
+  background-image: url(/static/img/S00/0103/uvicornLogo.png);
 }
 
 .SQLiteLogo {
-  background-image: url(/?S00/0103/SQLiteLogo.png);
+  background-image: url(/static/img/S00/0103/SQLiteLogo.png);
 }
 
 .PyScriptLogo {
-  background-image: url(/?S00/0103/PyScriptLogo.png);
+  background-image: url(/static/img/S00/0103/PyScriptLogo.png);
 }

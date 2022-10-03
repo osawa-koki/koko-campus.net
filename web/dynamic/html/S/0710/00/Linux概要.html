@@ -1,15 +1,6 @@
-<?php
-require(__DIR__. "/../../framework/ver2/common.php");
-$obj = array(
-	"title" => "linux入門トップ",
-	"made" => "2021-11-20",
-	"updated" => "2021-11-20"
-);
-head($obj);
-?>
-<h2>linuxとは</h2>
-WindowsやMacOS・Andoroid・iOSなどのクライアントを動かすOSと異なり、主に<span class="u">サーバを動かすためのOS</span>です。<br /><br />ワークステーションでおなじみ?のUNIXというOSの親戚にあたります。<br /><br />また、linuxには様々な<strong>ディストリビューション</strong>と呼ばれる種類が存在します。<br /><br />linuxディストリビューションは大きく以下のように分けられます。<br /><br />
-<table class="exp">
+<h2>Linux</h2>
+「Windows」「MacOS」「Andoroid」「iOS」などのクライアントを動かすOSと異なり、主に<span class="u">サーバを動かすためのOS</span>です。<br /><br />ワークステーションでおなじみ?のUNIXというOSの親戚にあたります。<br /><br />また、Linuxには様々な<strong>ディストリビューション</strong>と呼ばれる種類が存在します。<br /><br />Linuxディストリビューションは大きく以下のように分けられます。<br /><br />
+<table>
 	<thead>
 		<tr>
 			<td width="50%">RedHat系統</td>
@@ -19,14 +10,14 @@ WindowsやMacOS・Andoroid・iOSなどのクライアントを動かすOSと異�
 	<tbody>
 		<tr>
 			<td>
-				<ul class="normal">
+				<ul>
 					<li>RHEL</li>
 					<li>CentOS</li>
 					<li>Fedora</li>
 				</ul>
 			</td>
 			<td>
-				<ul class="normal">
+				<ul>
 					<li>Ubuntu</li>
 					<li>Debian GNU/Linux</li>
 				</ul>
@@ -115,4 +106,3 @@ SSHを実現するクライアントサイドのアプリケーションです�
 	ubuntu@tk2-216-17609:~$
 </code>
 この画面が表示されればSHHログイン成功です。<br /><br />次はlinuxを動かすための機能について学びましょう♪
-<?php footer(); ?>

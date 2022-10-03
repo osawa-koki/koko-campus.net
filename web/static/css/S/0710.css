@@ -1,0 +1,5 @@
+.border-bottom-separator {
+  border-bottom: 1px lightgray solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}

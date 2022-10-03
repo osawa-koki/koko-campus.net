@@ -12,6 +12,6 @@ $num: "";
 		$num: "#{$i}";
 	}
 	.to#{$num} {
-		background-image: url(/?S/#{$num}.png);
+		background-image: url(/static/img/S/#{$num}.png);
 	}
 }
