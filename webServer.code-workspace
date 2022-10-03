@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "src/webServer"
+		},
+		{
+			"path": "web/dynamic/html/S/0710"
 		}
 	],
 	"settings": {}
