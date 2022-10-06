@@ -52,7 +52,7 @@ func notesAPI(RR *RequestResponse) string {
 			if Execute(&SQL) {
 				success = true
 			} else {
-				errorMessage = append(errorMessage, "SQLの実行失敗しました🥺")
+				errorMessage = append(errorMessage, "SQLの実行に失敗しました🥺")
 			}
 		} else {
 			errorMessage = append(errorMessage, "500文字以下で入力してください。")

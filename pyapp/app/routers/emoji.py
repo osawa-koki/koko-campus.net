@@ -4,10 +4,10 @@ import re
 from fastapi import APIRouter, Query
 
 from ..schemas.emoji import Emoji
-
+from ..config import settings
 
 router = APIRouter(
-    prefix="/emoji",
+    prefix=settings.BASE_PATH + "/emoji",
     tags=["emoji"],
     responses={404: {"description": "Not found"}},
 )

@@ -4,10 +4,10 @@ from sqlalchemy.orm import Session
 from ..cruds import note as cruds
 from ..schemas import note as schemas
 from ..dependencies import get_db, get_token_header
-
+from ..config import settings
 
 router = APIRouter(
-    prefix="/note",
+    prefix=settings.BASE_PATH + "/note",
     tags=["note"],
     responses={404: {"description": "Not found"}},
 )

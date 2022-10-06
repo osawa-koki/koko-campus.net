@@ -12,7 +12,7 @@ import (
 
 // デバグ用ログ
 func Logger(message string) {
-	f, er := os.OpenFile(fmt.Sprintf(getRootDIR()+"/../../logFiles/%s.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	f, er := os.OpenFile(fmt.Sprintf(getLogDIR()+"%s.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
 	wt := func(f *os.File, s string) {
 		_, er := f.WriteString(s + "\n")
 		if er != nil {
@@ -29,7 +29,7 @@ func Logger(message string) {
 
 // デバグ用ログ
 func Error(message string) {
-	f, er := os.OpenFile(fmt.Sprintf(getRootDIR()+"/../logFiles/%s.error.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	f, er := os.OpenFile(fmt.Sprintf(getLogDIR()+"%s.error.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
 	wt := func(f *os.File, s string) {
 		_, er := f.WriteString(s + "\n")
 		if er != nil {
@@ -46,7 +46,7 @@ func Error(message string) {
 
 // デバグ用ログ
 func SQLLogger(SQLstruct *SQLbuilder) {
-	f, er := os.OpenFile(fmt.Sprintf(getRootDIR()+"/../logFiles/%s.SQL.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	f, er := os.OpenFile(fmt.Sprintf(getLogDIR()+"%s.SQL.log", GetDate()), os.O_APPEND|os.O_CREATE|os.O_WRONLY, os.ModePerm)
 	wt := func(f *os.File, s string) {
 		_, er := f.WriteString(s + "\n")
 		if er != nil {
