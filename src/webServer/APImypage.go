@@ -33,7 +33,7 @@ func mypageAPI(RR *RequestResponse) string {
 		if fhd.Size <= iconFileSizeLimit {
 			if src, er := fhd.Open(); er == nil {
 				defer src.Close()
-				if dst, er := os.Create(getRootDIR() + "/img/M00/" + userId + ".png"); er == nil {
+				if dst, er := os.Create(getRootDIR() + "../static/img/M00/" + userId + ".png"); er == nil {
 					defer dst.Close()
 					io.Copy(dst, src)
 					success = true
