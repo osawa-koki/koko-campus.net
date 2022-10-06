@@ -7,7 +7,7 @@
    viewBox="0 0 100 100"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="4000.svg"
    inkscape:export-filename="4000.png"
    inkscape:export-xdpi="96"
@@ -28,8 +28,8 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="2.8284271"
-     inkscape:cx="87.681241"
-     inkscape:cy="66.114484"
+     inkscape:cx="54.093669"
+     inkscape:cy="66.114485"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -86,13 +86,13 @@
        y="37.889606" />
     <text
        xml:space="preserve"
-       style="font-size:10.6667px;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#000000;stroke-width:0.2;stroke-dasharray:none"
-       x="9.9367189"
-       y="60.927711"
+       style="font-size:32px;font-family:Consolas;-inkscape-font-specification:Consolas;fill:#000000;stroke-width:0.2;stroke-dasharray:none"
+       x="10.997379"
+       y="63.04903"
        id="text233"><tspan
          sodipodi:role="line"
          id="tspan231"
-         x="9.9367189"
-         y="60.927711">.NET Framework</tspan></text>
+         x="10.997379"
+         y="63.04903">.NET</tspan></text>
   </g>
 </svg>
