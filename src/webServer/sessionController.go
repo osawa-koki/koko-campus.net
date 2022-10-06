@@ -1,10 +1,30 @@
 package main
 
+import (
+	"fmt"
+	"net/http"
+)
+
 /*
 セッションが必要なページ
 (パスの2文字目が「?」ではない場合)
 */
 func sessionController(RR *RequestResponse) {
+	// 「/0」ならばログアウト処理
+	if RR.fst == "0" {
+		cookie := &http.Cookie{
+			Name:     cookieName,
+			Value:    "bye",
+			Path:     "/",
+			Secure:   false, // プロキシを使用するため
+			HttpOnly: true,
+			SameSite: http.SameSiteStrictMode,
+		}
+		fmt.Fprint(*RR.response, "Bye...")
+		http.SetCookie(*RR.response, cookie)
+		return
+	}
+
 	// cookieの設定
 	if cookie, err := RR.request.Cookie(cookieName); err == nil && SessionValidationCheck(cookie.Value) { // cookieが有効であれば、処理を続行(存在 + 有効)
 		// セッション有効期限のアップデート
@@ -22,7 +42,7 @@ func sessionController(RR *RequestResponse) {
 			RR.Login = true
 			RR.userID = userID
 		}
-		
+
 		switch RR.fst {
 		case "M":
 			loginController(RR)
