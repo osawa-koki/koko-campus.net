@@ -1,0 +1,74 @@
+<h2>PHPとは</h2>
+PHPはHTML文書に埋込むことができるなど、webサイト構築に特化した汎用プログラミング言語です。<br /><br />webサイトの75%以上はこのPHPで作成されているほど、webサイト構築では人気な言語です。
+<p><a href="https://w3techs.com/">w3techs</a>より。(2021年11月時点)</p>
+因みに、webサイト用のCMS最大手であるWordPressもPHPで書かれています。<br />このページに到達した人はおそらくHTMLやCSSの学習が終了してECMAScript(旧JavaScript)やRubyなどの次の言語に進もうとしている人が多いと思います。<br /><br />PHPはサーバーサイドの言語の中でもかなり簡単ですので、サーバーサイドの言語に難しいイメージを抱いている人でも学びやすいです。<br />是非PHPへ進みましょう♪
+<h2>環境構築</h2>
+実際にPHPプログラムを動作させる環境を構築していきましょう♪<br />具体的には以下の2つの処理をします。
+<ol>
+	<li>エディタのインストール</li>
+	<li>XAMPPのインストール</li>
+</ol>
+<h3>エディタのインストール</h3>
+エディタとは実際にコードを打ち込むアプリケーションです。<br /><br />Windowsユーザならばデフォルトでメモ帳が搭載されていますが、オススメしません。<br />理由は使いにくいし機能が少ないからです。
+<img src="/static/img/S00/0100/notepad.png" alt="メモ帳" />
+<img src="/static/img/S00/0100/atomEditer.png" alt="atomエディタ" />
+下のエディタの方が見やすいですよね♪<br />ということで一般的に良く用いられているエディタを紹介します。
+<ul>
+	<li><a href="https://atom.io/">atom</a></li>
+	<li><a href="https://www.sublimetext.com/3">sublimetext3</a></li>
+	<li><a href="https://brackets.io/">brackets</a></li>
+	<li><a href="https://code.visualstudio.com/">VScode</a></li>
+</ul>
+僕は「VScode」をオススメします。<br />理由は機能が豊富で使いやすいからです。
+<h3>XAMPPのインストール</h3>
+PHPというのは説明した通りサーバサイドで動く言語です。<br /><br />みなさんが使用しているパソコン(クライアント)ではなく、サーバでの利用が想定されています。<br /><br />しかしながら、十万円をはるかに超えるサーバを用意なんてできないですよね、、、<br />皆さんが実際にwebサイトを構築する際にはレンタルサーバやVPSを借りることになるのですが、あくまでも練習用(開発用)で使用したいので、皆さんが使っているパソコン上に仮想的にサーバを作成してPHPを稼働させるアプリケーションであるXAMPPを使用します。
+<a class="link to-xampp" href="https://www.apachefriends.org/jp/index.html">XAMPP</a>
+容量が大きいですので、インストールに10分程度かかります。<br />XAMPPに関して以下の3つの処理をして環境構築は完了です。
+<ol>
+	<li>htdocsフォルダの登録</li>
+	<li>.htaccessファイルの設定</li>
+	<li>XAMPPの起動</li>
+</ol>
+<h4>htdocsフォルダの登録</h4>
+XAMPPのインストール時に特殊な設定をしなければ、「C:\Program Files\XAMPP」フォルダに「htdocs」というフォルダがあると思います。<br /><br />この「htdocs」フォルダがwebページのアップロード先です。
+<img src="/static/img/S00/0100/dir-to-htdocs.gif" alt="htdocsフォルダ" />
+このフォルダはよく使うのでクイックアクセスに登録しておきましょう♪(登録しなくても問題はありません。)
+<h4>.htaccessファイルの設定</h4>
+.htaccessファイルとはapacheというwebサーバ用のプログラムの設定を記述するファイルです。<br />以下の内容のファイルを作成します。
+<code class="dummy -dot-htaccess">
+	# webサーバの文字コード(UTF-8)指定
+	php_value output_buffering OFF
+	php_value default_charset UTF-8
+	php_value mbstraing.detect_order UTF-8,SJIS,EUC-JP,JIS,ASCII
+	php_value mbstraing.http_input pass
+	php_value mbstraing.http.output pass
+	php_value mbstraing.internal_encoding UTF-8
+	php_value mbstraing.substitude_character none
+	php_value mbstraing.encoding_translation OFF
+
+	# php拡張子を削除
+	&lt;IfModule mod_rewrite.c&gt;
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME}\.php -f
+	RewriteRule ^(.+)$ $1\.php
+	&lt;/IfModule&gt;
+
+	# phpエラー出力の有無
+	php_flag display_errors on
+
+	# タイムゾーンの設定
+	php_value date.timezone Asia/Tokyo
+
+	# デフォルトファイルの設定
+	DirectoryIndex index.php
+
+	# ファイル・ディレクトリ一覧の非表示
+	Options -Indexes
+</code>
+上のテキストをコピーして、新たに「.htaccess」という名前のファイルを作成して貼り付け、「htdocs」フォルダに保存して下さい。
+<h4>XAMPPの起動</h4>
+とっても簡単です。<br />XAMPPの画面から「apache」のstartボタンを押すだけです。<br /><br />後ほど説明しますが、データベースを操作する際にはその下の「mysql」もスタートします。
+<img src="/static/img/S00/0100/startingXAMPP.gif" alt="xamppの開始" />
+緑色に変化すれば起動に成功しています。
+<div class="separator"></div>
+早速ブラウザを用いてhtdocsディレクトリにアップしたファイル(webページ)を閲覧するにはurlの欄に「http://localhost/」から始まるパスを書きます。<br />例えば、htdocsディレクトリにindex.phpというファイルをアップした場合は「http://localhost/index.php」、htdocsディレクトリにあるmemberディレクトリ内のlogin.phpファイルにアクセスするには「http://localhost/member/login.php」と入力してください。<br />「<span class="en">\</span>(バックスラッシュ)」ではなく、「/(スラッシュ)」を使用してください。

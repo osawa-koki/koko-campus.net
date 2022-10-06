@@ -1,0 +1,210 @@
+<h2>HTTP通信</h2>
+FastAPIはWEBサーバを構築する用のフレームワークですので、HTTP通信についての基本的な知識が必要となります。<br />ということで、最初に簡単なHTTP通信の概要について説明します。
+<img src="/static/img/S00/0103/http.png" alt="HTTP通信" />
+HTTP通信はクライアント(ブラウザ)がサーバに対してリクエストを受け、サーバは受けたリクエストに応じてレスポンスを生成し、クライアントに返します。
+<h3>HTTPリクエスト</h3>
+クライアント(ブラウザ)がサーバに送信するデータです。<br />大きく以下の3つから構成されます。
+
+<ul>
+	<li>リクエスト部</li>
+	<li>ヘッダ部</li>
+	<li>ボディ部</li>
+</ul>
+<h4>リクエスト部</h4>
+HTTPメソッドと資源の所在を表すパスから構成されます。<br />HTTPメソッドとは指定した資源に対する処理を指定します。<br />一般的には以下の4つを使用することが多いです。
+<ul>
+	<li>GET</li>
+	<li>POST</li>
+	<li>PUT</li>
+	<li>DELETE</li>
+</ul>
+詳しくは後ほど説明します。<br /><br />パスとはURLのうちのドメイン名の後の部分を指します。<br />具体的には以下の部分が該当します。
+<div class="border margin padding">https://example.com<span class="red">/dir1/dir2/app</span></div>
+<h4>ヘッダ部</h4>
+リクエストに関する補足事項を扱います。<br />文字コード、クッキー、コンテントタイプなどを指定します。<br />「キー: バリュー」の形式で指定します。
+<h4>ボディ部</h4>
+クライアントがサーバに送信するメインとなるデータです。<br />GETメソッドやDELETEメソッドでは使われません。<br /><br />ボディ部のデータの形式を指定するために、前述したヘッダ部の「Content-Type」プロパティを使用します。<br />「Content-Type」の種類については後ほど説明します。
+<h3>HTTPレスポンス</h3>
+サーバがクライアント(ブラウザ)へ送信するデータです。<br />HTTPリクエストとほとんど同じで、以下の3つから構成されます。
+<ul>
+	<li>ステータスコード</li>
+	<li>ヘッダ部</li>
+	<li>ボディ部</li>
+</ul>
+<h4>ステータスコード</h4>
+クライアントからのリクエストに対して、サーバで行った処理の結果を返します。<br />具体的には「成功」「クライアントエラー」「サーバエラー」等があります。<br /><br />「404 Not Found」などは見たことがある方も多いと思います。
+<h4>ヘッダ部</h4>
+HTTPリクエストと同様で、HTTPレスポンスに関する補足情報を記載します。<br /><br />文字コード、クッキー、コンテントタイプなどを指定します。<br />「キー: バリュー」の形式で指定します。
+<h4>ボディ部</h4>
+これもHTTPリクエストと同様です。<br />サーバがクライアントに送信するメインとなるデータです。<br /><br />ボディ部のデータの形式を指定するために、前述したヘッダ部の「Content-Type」プロパティを使用します。<br />「Content-Type」の種類については後ほど説明します。
+<h2>HTTPメソッド</h2>
+クライアントがサーバに送信するデータに付すHTTPメソッドについて説明します。<br />以下の4つが使用されることが多いです。
+<ul>
+	<li>GET</li>
+	<li>POST</li>
+	<li>PUT</li>
+	<li>DELETE</li>
+</ul>
+<h3>GET</h3>
+サーバに存在するデータを取得するためのメソッドです。<br />最も一般的なメソッドで、単にURLを入力してアクセスするとGETメソッドを使用した通信が行われます。<br /><br />また、このメソッドを使用して、サーバへデータを送信することもでき、その場合にはパスの後に「?キー1=バリュー1&amp;キー2=バリュー2&amp;キー3=バリュー3...」といった感じに、キーとバリューを「=」でつないだセットとして扱い、それが複数存在する場合には「&amp;」で結合します。<br />「?」以降のデータはクエリ文字列やクエリストリング、URLパラメタと呼ばれます。<br /><br />この場合に送信されるデータは暗号化されずにインターネットを移動するため、個人情報を扱うのには適していません。
+<h3>POST</h3>
+サーバにデータを送信するためのメソッドです。<br />より正確な表現をすると、サーバ上に新たな資源を作成するために使用されるメソッドです。<br /><br />といっても新規資源の作成時だけでなく、一般的にはクライアントからサーバにデータを送信する際に使用します。<br /><br />送信するためのデータはボディ部に格納され、そのボディ部はHTTPS通信では暗号化されるため、個人情報などの機密情報を扱う際に使用されます。<br /><br />また、画像や動画などのバイナリデータを扱う際にも適しています。
+<h3>PUT</h3>
+POSTとほとんど同じですが、正確な説明をすると、POSTが新規データの作成であるのに対してPUTメソッドは既存データの更新という意味を持ちます。
+<h3>DELETE</h3>
+名前からわかると思いますが、サーバ上に存在する資源を削除するためのメソッドです。
+<div class="separator"></div>
+HTTPメソッドとして4つを紹介しましたが、これらは混同されることが大半です。<br />具体的にはGETメソッドでデータを送信したり、POSTメソッドでデータを取得したりすることも可能です。<br /><br />あくまでも、本来の意味として説明しましたので、違う用途のHTTPメソッドを使用していても、その処理の意味を理解することが大切です。
+<h2>コンテントタイプ</h2>
+送信するデータの種類を指定するための識別子です。<br />ヘッダ部の「Content-Type」フィールドで指定します。<br /><br />以下の種類があります。
+<div class="scroll-600w">
+	<table>
+		<thead>
+			<tr>
+				<th>Content-Type</th>
+				<th>Kind</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>text/plain</td>
+				<td>テキストファイル</td>
+			</tr>
+			<tr>
+				<td>text/csv</td>
+				<td>CSVファイル</td>
+			</tr>
+			<tr>
+				<td>text/html</td>
+				<td>HTMLファイル</td>
+			</tr>
+			<tr>
+				<td>text/css</td>
+				<td>CSSファイル</td>
+			</tr>
+			<tr>
+				<td>text/javascript</td>
+				<td>JavaScriptファイル</td>
+			</tr>
+			<tr>
+				<td>application/octet-stream</td>
+				<td>EXEファイルなどの実行ファイル</td>
+			</tr>
+			<tr>
+				<td>application/json</td>
+				<td>JSONファイル</td>
+			</tr>
+			<tr>
+				<td>application/pdf</td>
+				<td>PDFファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.ms-excel</td>
+				<td>EXCELファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</td>
+				<td>EXCELファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.ms-powerpoint</td>
+				<td>PowerPointファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.presentationml.presentation</td>
+				<td>PowerPointファイル</td>
+			</tr>
+			<tr>
+				<td>application/msword</td>
+				<td>WORDファイル</td>
+			</tr>
+			<tr>
+				<td>application/vnd.openxmlformats-officedocument.wordprocessingml.document</td>
+				<td>WORDファイル</td>
+			</tr>
+			<tr>
+				<td>image/jpeg</td>
+				<td>JPEGファイル(.jpg, .jpeg)</td>
+			</tr>
+			<tr>
+				<td>image/png</td>
+				<td>PNGファイル</td>
+			</tr>
+			<tr>
+				<td>image/gif</td>
+				<td>GIFファイル</td>
+			</tr>
+			<tr>
+				<td>image/bmp</td>
+				<td>Bitmapファイル</td>
+			</tr>
+			<tr>
+				<td>image/svg+xml</td>
+				<td>SVGファイル</td>
+			</tr>
+			<tr>
+				<td>application/zip</td>
+				<td>Zipファイル</td>
+			</tr>
+			<tr>
+				<td>application/x-lzh</td>
+				<td>LZHファイル</td>
+			</tr>
+			<tr>
+				<td>application/x-tar</td>
+				<td>tarファイル/tar&amp;gzipファイル</td>
+			</tr>
+			<tr>
+				<td>audio/mpeg</td>
+				<td>MP3ファイル</td>
+			</tr>
+			<tr>
+				<td>video/mp4</td>
+				<td>MP4ファイル</td>
+			</tr>
+			<tr>
+				<td>video/mpeg</td>
+				<td>MPEGファイル（動画）</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p><a href="https://qiita.com/AkihiroTakamura/items/b93fbe511465f52bffaa">AkihiroTakamuraさんの記事</a>より引用。</p>
+FastAPIを使用したAPIサーバを構築する際には一般的にJSONファイルを扱うため、「application/json」を指定します。<br />HTMLを扱う際には「text/html」を指定します。
+<h2>REST</h2>
+「REpresentational State Transfer」の略で、各単語は以下の意味を持ちます。
+<table>
+	<tbody>
+		<tr>
+			<th>representational</th>
+			<td>具象的な</td>
+		</tr>
+		<tr>
+			<th>state</th>
+			<td>状態</td>
+		</tr>
+		<tr>
+			<th>transfer</th>
+			<td>送信</td>
+		</tr>
+	</tbody>
+</table>
+なんだかよくわかりませんね、、、<br />Roy FieldingというプログラマがREST4原則でRESTの構造について分かりやすく説明していますので、これを確認しましょう♪
+<h3>RESTの4原則</h3>
+Roy FieldingはREST4原則として以下の4つを挙げています。
+<ul>
+	<li>統一インターフェース</li>
+	<li>アドレス可能性</li>
+	<li>接続性</li>
+	<li>ステートレス性</li>
+</ul>
+<h4>統一インターフェース</h4>
+データの送受信形式を統一することを言います。<br />予め〇〇〇メソッドで、コンテントタイプは〇〇〇で、といった感じで、インターフェースを統一します。
+<h4>アドレス可能性</h4>
+サーバが保有する資源に対してはその識別子となるURLが割り振られ、これによって資源を一意に特定することが可能となります。
+<h4>接続性</h4>
+扱うデータの中にハイパーリンクを含めることができます。
+<h4>ステートレス性</h4>
+HTTP通信はリクエストとレスポンスがワンセットで、文脈(前のやり取り)などは保持しません。<br />リクエストを送信して、それに対するレスポンスを受け取ってHTTPの通信は終了です。<br /><br />再度通信を行う際には前に行った通信などの情報を持ちません。<br /><br />HTTP通信は一度きりであるということです。
+<div class="separator"></div>
+これはあくまでも設計の思想であり、規格ではありませんので、これに沿っていない技術も存在します。<br />しかしながら、WEB用のAPIを作成する際に絶対に必要になる知識です。

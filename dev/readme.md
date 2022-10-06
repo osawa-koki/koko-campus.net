@@ -216,6 +216,36 @@ include <nginx.confへのパス>;
 sudo systemctl restart nginx
 ```
 
+## Windowsでの開発環境
+
+[Nginx(Windows)](http://nginx.org/en/download.html)からバイナリディストリビューションをダウンロード、解凍して任意のフォルダに配置。  
+そのディレクトリの「conf/nginx.conf」ファイルのhttpディレクティブ内でルートディレクトリに配置してある「nginx.debug.conf」をインクルード。  
+
+```nginx.conf
+http {
+	include "C:\\webSite\\koko-campus.net\\nginx.debug.conf"
+}
+
+# 「\」はエスケープ処理する必要あり。
+```
+
+コマンドは以下の通り。
+
+```cmd
+# 実行
+start nginx
+
+# 停止
+nginx -s stop
+
+# 構成ファイルテスト
+nginx -t
+
+# リロード
+nginx -s reload
+```
+
+
 ## 証明書の発行
 
 無料で使用できる「Let's Encrypt」を使用します。

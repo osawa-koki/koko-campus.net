@@ -22,7 +22,8 @@ func sessionController(RR *RequestResponse) {
 			RR.Login = true
 			RR.userID = userID
 		}
-		switch RR.snd {
+		
+		switch RR.fst {
 		case "M":
 			loginController(RR)
 		default:

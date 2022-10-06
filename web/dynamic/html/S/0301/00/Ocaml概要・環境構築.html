@@ -1,0 +1,68 @@
+<h2>Ocaml</h2>
+Ocamlは1996年にINRIA(フランス国立情報学自動制御研究所)が開発した関数型プログラミング言語で、数的処理を得意とします。<br />強い静的型付けを行うコンパイラにより、型安全という性質によりバグの少ない高信頼なプログラムが開発できます。<br /><br />また、関数型言語であると同時にオブジェクト指向もサポートしており、「関数型 &times; オブジェクト指向」なプログラム開発が可能です。<br />ガベージコレクション機能がコンパイラに搭載されているため、C言語によるmalloc/freeのようなメモリ管理をプログラマが行う必要はありません。<br />関数型言語にしては珍しく、GUIアプリケーションの開発も容易に可能です。
+<h2>関数型言語</h2>
+プログラムの処理を関数の定義と適用によって行う言語を言います。<br />関数型言語では関数を値として扱うことができます。<br />言い換えれば、関数を変数に代入することや関数の引数に関数を渡すこと、さらには関数の戻り値に関数を返すことが可能です。<br /><br />これに対して、python・C#・Java・C++などは命令型言語と呼ばれます。<br />これは、これらの言語での文一つ一つが命令であり、これを逐次に実行していくからです。<br />関数はあくまでもこの処理をサポートする立場にあり、主となる処理は変数に対する代入(更新)であって、変数に関数を適用するという概念はありません。<br /><br />もっとも、関数型言語と命令型言語は完全に区別されるものではなく、関数型言語に近い命令型言語や命令型言語に近い関数型言語も存在します。<br />例えば、JavaScriptやC#は命令型言語でありながら、関数を値として変数に代入する評価式型関数の生成が可能です。
+<h2>opam</h2>
+opamとはOcaml用のパッケージ管理ツールです。<br />Ocamlコードをコンパイルしてプログラムを生成するには、このopamを使用することが一般的です。<br /><br />ということで早速opamをインストールしてみましょう♪
+<a href="https://opam.ocaml.org/doc/Install.html" class="link toOcaml">opam</a>
+原則としてUNIXライクなOSでのみインストール可能です。<br />Windows上でOcaml(opam)を使用する場合にはWSLを使用します。<br />以下のリンクを参考にWSLをインストールしてください。
+<a href="/S0710L01P00" class="pageSensitive link WSL">WSL</a>
+UNIXライクな環境の構築が完了したら、以下のコマンドを実行します。
+<code class="shell">
+	bash -c "sh &lt;(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+</code>
+<img src="/static/img/S00/0301/opamInstall.gif" alt="opam" />
+<h3>初期作業</h3>
+先ほどインストールしたopamを使用して、Ocaml開発環境を構築しましょう♪<br />以下のコマンドを実行して下さい。
+<code class="shell">
+	opam init
+</code>
+<img src="/static/img/S00/0301/missingPackages.png" alt="opam init" />
+上記のように必要なモジュールが不足しているとエラーが発生します。<br />必要なモジュールをインストールして下さい。
+<code class="shell">
+	sudo apt install make
+	sudo apt install gcc
+	sudo apt install zip
+	sudo apt install bubblewrap
+</code>
+必要なモジュール群のインポートが完了したら、再度コマンドを実行します。
+<code class="shell">
+	# 既にインストール済み(上で実行)
+	bash -c "sh &lt;(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+	
+	# opamの初期化
+	opam init
+	eval `opam env`
+
+	# スイッチの設定
+	opam switch create 4.14.0
+	eval `opam env`
+
+	# duneのインストール
+	opam install dune utop ocaml-lsp-server
+</code>
+<img src="/static/img/S00/0301/setupOpam.gif" alt="opam init" />
+インストール完了後に以下のコマンドを実行することでOcaml対話シェルモードに入ることができます。
+<code class="shell">
+	ocaml
+</code>
+試しに以下の演算を行ってみましょう♪
+<code class="ocaml">
+	10 + 25;;
+</code>
+「35」と出力されることが確認できます。
+<h3>コンパイル</h3>
+以下のコマンドでファイルをコンパイル・実行できます。
+<code class="shell">
+	ocaml ファイルパス
+</code>
+<img src="/static/img/S00/0301/helloOcaml.gif" alt="ocaml コンパイル" />
+
+<h2>VScode</h2>
+エディタは「VScode」をオススメします。<br />使いやすくて機能が豊富という特徴を持ち、WindowsユーザならばWSLウィンドウを使用してLinux環境で簡単に開発が可能だからです。
+<a href="https://code.visualstudio.com/" class="link vsCode">VS code</a>
+特に設定することなく使用可能です。<br />左側の拡張機能メニューからOcaml用のプラグインを使用することをオススメします。
+<img src="/static/img/S00/0301/VScodeExt.png" alt="VS code" />
+<div class="separator"></div>
+WindowsユーザでWSL上にOcaml開発環境を構築した方は、WSLウィンドウを使用することで簡単に操作ができます。<br /><br />左下のリモートホストボタンから「新しいWSLウィンドウ」を選択します。<br />WSLに接続したVScodeインスタンスが新たに生成されます。
+<img src="/static/img/S00/0301/VScodeWSLWindow.gif" alt="WSLウィンドウ" />

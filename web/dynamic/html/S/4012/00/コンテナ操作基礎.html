@@ -1,0 +1,107 @@
+<h2>コンテナ</h2>
+既に簡単に説明しましたが、コンテナとは論理的に区切られて構成されたアプリケーションの実行環境です。<br />ここではDockerを使用してコンテナを操作する方法を学びましょう♪
+<img src="/static/img/S00/4012/imageOfContainer.png" alt="コンテナ" />
+<h2>コンテナ操作</h2>
+コンテナに対する処理は大きく種類があります。
+<ul>
+	<li>start</li>
+	<li>stop</li>
+	<li>create</li>
+	<li>rm</li>
+	<li>run</li>
+	<li>exec</li>
+	<li>ls</li>
+	<li>ps</li>
+</ul>
+これらについてひとつずつ学びましょう♪
+<div class="separator"></div>
+原則としてコマンドは以下のような構成をとります。
+<code class="shell">
+	docker container サブコマンド オプション 対象
+</code>
+しかしながらcontainerは省略されて、dockerの後にサブコマンドを書くことが一般的です。
+<code class="shell">
+	docker サブコマンド オプション 対象
+</code>
+<h2>start</h2>
+指定したコンテナを開始します。<br />以下のように書きます。
+<code class="shell">
+	docker container start コンテナ名
+</code>
+コンテナの実行には当然ですが、コンテナが必要です。<br /><br />実行する前にcreateコマンドでコンテナを作成する必要があります。
+<h2>stop</h2>
+指定したコンテナを停止します。<br />以下のように書きます。
+<code class="shell">
+	docker container stop コンテナ名
+</code>
+<h2>create</h2>
+Dockerイメージからコンテナを作成します。<br />以下のように書きます。
+<code class="shell">
+	docker create -オプション イメージ名
+</code>
+指定するイメージ名は事前にダウンロードする必要があります。<br />Dockerイメージの操作については後ほど説明します。<br /><br />一般的にはDockerイメージのダウンロード・コンテナの作成・コンテナの実行をまとめて行ってくれるrunコマンドを使用します。
+<h2>rm</h2>
+指定したコンテナを削除します。<br />以下のように書きます。
+<code class="shell">
+	docker container rm コンテナ名
+</code>
+<h2>run</h2>
+Dockerイメージのダウンロード・コンテナの作成・コンテナの実行をまとめたものです。<br />この方法が一番簡単ですので、こちらを使用してイメージのダウンロード・コンテナの作成・コンテナの実行をしてみましょう♪<br /><br />使用するアプリケーションはApacheです。<br />Apacheとは最も有名なWebサーバで、オープンソースで開発が進められています。<br /><br />Apacheはhttpdという名前で登録されています。
+<code class="shell">
+	docker container run --name test -d httpd
+</code>
+以下のコマンドで現在実行されているコンテナ一覧が取得できます。
+<code class="shell">
+	docker container ps
+</code>
+以下のように出力されると思います。
+<img src="/static/img/S00/4012/docker-run-httpd.gif" alt="docker run ps" />
+<div class="separator"></div>
+runコマンドで使用されるオプションについて簡単に説明します。
+<table>
+	<tbody>
+		<tr>
+			<th>--name</th>
+			<td>コンテナの名前を指定します。</td>
+		</tr>
+		<tr>
+			<th>-d</th>
+			<td>コンテナをバックグラウンドで実行します。</td>
+		</tr>
+		<tr>
+			<th>-i</th>
+			<td>コンテナをキーボードで操作可能にします。</td>
+		</tr>
+		<tr>
+			<th>-t</th>
+			<td>特殊キーを使用可能にします。</td>
+		</tr>
+		<tr>
+			<th>-e</th>
+			<td>キー=バリューの形で指定し、当該コンテナ内で有効な環境変数を登録します。</td>
+		</tr>
+		<tr>
+			<th>-p</th>
+			<td>ポート番号を指定します。</td>
+		</tr>
+		<tr>
+			<th>-v</th>
+			<td>指定したボリュームをマウントします。</td>
+		</tr>
+		<tr>
+			<th>--net</th>
+			<td>コンテナをネットワークに接続します。</td>
+		</tr>
+	</tbody>
+</table>
+<h2>exec</h2>
+実行中のコンテナ内で、新しいコマンドを実行します。
+<h2>ps</h2>
+現在稼働中のコンテナ一覧を表示します。<br />「-a」オプションを付けることで停止しているコンテナも含めた全てのコンテナ一覧を出力します。
+<code class="shell">
+	docker ps
+</code>
+psコマンドは以下のコマンドの略称です。
+<code class="shell">
+	docker container ls
+</code>

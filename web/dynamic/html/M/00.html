@@ -1,0 +1,146 @@
+<div id="mypageEntireWapper">
+	<div id="yourProfile">
+		<img id="userIcon" src="/static/img/M00/{{ .UserId }}.png" alt="ユーザアイコン" />
+		<input type="file" class="hidden" id="fileButton" />
+		<div id="userId">@{{ .UserId }}</div>
+		<input id="userName" value="{{ .UserName }}" maxlength="16" readonly />
+		<!--<span id="editProfile" href="/M05">編集</span>-->
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		"use strict";
+		(() => {
+			const [userIcon, fileButton, userName, editProfile] = getElm(["userIcon", "fileButton", "userName", "editProfile"]);
+			userIcon.addEventListener("click", () => {
+				fileButton.click();
+			});
+			fileButton.addEventListener("change", function(event) {
+				const file = event.target.files[0];
+				if (50 * 1024 < file.size) {
+					window.alert(`ファイルサイズが「50KB」を超えています。\n(${Math.floor(file.size / 1000)}KB)`);
+					return;
+				}
+				const Form = new FormData();
+				Form.append("program", "mypage");
+				Form.append("action", "changeIcon");
+				Form.append("icon", file);
+				fetch("/A", {
+       				method: "POST",
+					body: Form
+				})
+				.then(response => response.json())
+				.then(response  => {
+					if (response.Success) {
+						userIcon.src = window.URL.createObjectURL(file);
+					} else {
+						window.alert(response.ErrorMessage.join("\n"));
+					}
+				})
+				.catch(ex => {
+					// ***** ***** *****
+				});
+			});
+		})();
+	</script>
+
+	<div class="title">予定</div>
+	<div id="yourScheduleBox">
+		<div id="scheduleLoadingBox"></div>
+		<div id="scheduleTable"></div>
+		<script type="text/javascript" charset="utf-8">
+			"use strict";
+			(() => {
+				let index = 10;
+				let allGot = false;
+				const NumsOfSchedules = 10;
+				const CDate = a => {
+					const D = new Date(a);
+					return `${D.getFullYear()}年${("0" + (1 + D.getMonth())).slice(-2)}月${D.getDate()}日`;
+				};
+				const reachedBottom = e => {
+					const {scrollHeight, scrollTop, clientHeight} = e.target;
+					if (scrollHeight - clientHeight === scrollTop) {
+						return true;
+					}
+					return false;
+				};
+				const [table, load] = getElm(["scheduleTable", "scheduleLoadingBox"]);
+				table.addEventListener("scroll", e => {
+					if (reachedBottom(e) && !allGot) {
+						load.classList.add("loading");
+						setTimeout(() => {
+							putSchedule(index);
+							index += NumsOfSchedules;
+						}, 1000);
+					}
+				});
+				const putSchedule = index => {
+					const url = "/A";
+					const postData = URLencodeAssoc({
+						"program" : "mypage",
+						"action" : "getSchedule",
+						"sort": "ByDue",
+						"order": "ascending",
+						"start": index,
+						"end": index + NumsOfSchedules,
+					});
+					const data = {
+						method: "POST",
+						mode: "cors",
+						headers: {
+							"Accept": "application/json",
+							"Content-Type": "application/x-www-form-urlencoded",
+						}
+					};
+					data["body"] = postData;
+					fetch(url, data)
+					.then(response => response.json())
+					.then(response => {
+						if (response.Success) {
+							if (response.Schedule.length !== NumsOfSchedules) {
+								allGot = true;
+							}
+							response.Schedule.forEach(scheduleElement => {
+								let {ScheduleId, Title, Importance, Due, Description, Progress, Status, Rgdt, Updt} = scheduleElement;
+								Due = CDate(Due);
+								Rgdt = CDate(Rgdt);
+								Updt = CDate(Updt);
+								const ScheduleAttributes = ["ScheduleId", "Title", "Importance", "Due", "Description", "Rgdt", "Updt"];
+								const scheduleWords = [ScheduleId, Title, Importance, Due, Description, Rgdt, Updt];
+								const [ScheduleId_, Title_, Importance_, Due_, Description_, Rgdt_, Updt_] = mkElm(Array(scheduleWords.length).fill("div"));
+								const [container] = mkElm(["div"]);
+								let i = 0;
+								[ScheduleId_, Title_, Importance_, Due_, Description_, Rgdt_, Updt_].map(e => {
+									e.textContent = scheduleWords[i];
+									e.classList.add("scheduleElement_" + ScheduleAttributes[i]);
+									container.appendChild(e);
+									i++;
+								});
+								Importance_.classList.add(Importance);
+								container.classList.add("scheduleContainer");
+								table.appendChild(container);
+								load.classList.remove("loading");
+							});
+						} else {
+							window.alert(response.ErrorMessage.join("\n"))
+						}
+					})
+					.catch(ex => {
+						console.error(ex);
+						window.alert("通信に失敗しました。\n時間を開けて再度登録を行ってください。")
+					});
+				};
+				putSchedule(0);
+			})();
+		</script>
+	</div>
+
+	<div class="title">登録情報変更</div>
+	<div id="editProfileBox">
+		{{ range $i, $Map := .Contents }}
+			<a href="{{ index $Map "URL" }}" class="menuBox">
+				<div class="menuTitle">{{ index $Map "Title" }}</div>
+				<div class="menuContents">{{ index $Map "Contents" }}</div>
+			</a>
+		{{ end }}
+	</div>
+</div>

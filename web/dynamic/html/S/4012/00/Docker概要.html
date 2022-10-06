@@ -1,0 +1,76 @@
+<h2>Docker</h2>
+Dockerとは仮想化技術によってコンテナを生成するプログラムで言い、各アプリケーションプログラムを隔離することでプラットフォーム依存しない開発環境を構築することを可能とします。<br /><br />そのプログラムなんで動かないの???<br />オレの環境だと動くんだけど、、、<br /><br />的なよくある開発環境に依存するトラブルを防止するのに役立ちます。<br /><br />さらっとコンテナという言葉を使用しましたが、コンテナとは論理的に構成されたプログラムの実行環境です。<br />このコンテナをDockerで構築します。
+<img src="/static/img/S00/4012/imageOfContainer.png" alt="Docker" />
+<h2>Dockerイメージ</h2>
+コンテナはイメージから作成します。<br />コンテナ内で使用するソフトウェアによって、用意された専用のイメージを使用します。<br /><br />例えば、MySQLをコンテナ内で使用する際にはMySQL用のイメージを使用してコンテナを生成し、Apacheをコンテナ内で使用する際にはApache用のイメージを使用してコンテナを生成します。
+<img src="/static/img/S00/4012/creatingContainerFromImage.png" alt="Dockerイメージ" />
+<h2>Dockerインストール</h2>
+Dockerは原則としてLinux上で操作しますが、WindowsやMacOSでも動作するように拡張されています。<br />ここでは、Linux/Ubuntuを使用したインストール方法を紹介します。
+<div class="separator"></div>
+まずは、最初に古いDockerを削除します。<br />Dockerがインストールされていなければこの手順はスキップしてok!です。
+<code class="shell">
+	sudo apt-get remove docker docker-engine docker.io containerd runc
+</code>
+次にバージョン管理ツールであるaptを更新します。<br />これは必ず必要なわけではありませんが、最新の方が何かと都合がいいのでここで最新のバージョンにアップデートしておきます。
+<code class="shell">
+	sudo apt update
+	sudo apt upgrade
+</code>
+では、Dockerのインストールに入りましょう♪
+<code class="shell">
+	sudo apt-get update
+
+	sudo apt-get install \
+		ca-certificates \
+		curl \
+		gnupg \
+		lsb-release
+
+	sudo mkdir -p /etc/apt/keyrings
+	curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+	echo \
+		"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+		$(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+	sudo apt-get update
+	sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+</code>
+これでインストールは完了です。<br />毎回Dockerを起動するのは大変ですので、自動起動機能をオンにしましょう♪
+<code class="shell">
+	sudo systemctl enable docker
+</code>
+自動起動機能を使用せずに、毎回実行する場合には以下のコマンドを実行します。
+<code class="shell">
+	# 実行
+	sudo systemctl start docker
+
+	# 停止
+	sudo systemctl stop docker
+</code>
+<h2>Dockerグループの作成</h2>
+Dockerコマンドを実行するためには管理者権限である必要があります。<br />したがって、毎回コマンドの前に「sudo」と書かなければなりません。
+<code class="shell">
+	sudo docker ～～～
+</code>
+大変ですよね、、、<br /><br />Dockerグループを作成してこれを省略できるようにしましょう♪
+<div class="separator"></div>
+最初にDockerグループが存在しているかどうかを確認します。
+<code class="shell">
+	cat /etc/group | grep docker
+</code>
+グループが存在しなければ以下のコマンドで新たに作成します。
+<code class="shell">
+	sudo groupadd docker
+</code>
+次に自分自身をdockerグループに追加します。
+<code class="shell">
+	sudo gpasswd -a ユーザ名 docker
+</code>
+最後にDockerを再起動します。
+<code class="shell">
+	sudo systemctl restart docker
+</code>
+これで、毎回管理者権限で実行しなくてもdockerコマンドを実行できるようになりました。
+<div class="separator"></div>
+セキュリティの観点からは、dockerコマンドを実行可能なユーザをテキトーに作成するのはよくないです。<br />ここではDockerのテストということで、セキュリティ上よくない行為を説明しました。

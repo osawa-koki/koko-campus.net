@@ -1,0 +1,283 @@
+<h2>CRUD</h2>
+CRUDとは、以下の単語の頭文字を合わせてもので、「データに対する一般的な処理4つ」のことです。
+<table>
+	<tbody>
+		<tr>
+			<th>CREATE</th>
+			<td>データの作成</td>
+		</tr>
+		<tr>
+			<th>READ</th>
+			<td>データの読み取り</td>
+		</tr>
+		<tr>
+			<th>UPDATE</th>
+			<td>データの更新</td>
+		</tr>
+		<tr>
+			<th>DELETE</th>
+			<td>データの削除</td>
+		</tr>
+	</tbody>
+</table>
+SQLではそれぞれ、以下のクエリ文が該当します。
+<table>
+	<tbody>
+		<tr>
+			<th>INSERT文</th>
+			<td>CREATE</td>
+		</tr>
+		<tr>
+			<th>SELECT文</th>
+			<td>READ</td>
+		</tr>
+		<tr>
+			<th>UPDATE文</th>
+			<td>UPDATE</td>
+		</tr>
+		<tr>
+			<th>DELETE文</th>
+			<td>DELETE</td>
+		</tr>
+	</tbody>
+</table>
+データベーススペシャリスト試験を受ける人の大半は業務でSQLを使用する方だと思いますが、使用する頻度が低い人のために入門レベルから説明します。
+<div class="separator"></div>
+以下で使用するデータベース・テーブルを作成しましょう♪
+<code class="sql">
+	-- データベースの作成
+	CREATE DATABASE poke;
+
+	-- データベースの選択
+	USE poke;
+
+	-- テーブルの作成
+	CREATE TABLE pokemon(
+		number INT PRIMARY KEY,
+		name NVARCHAR(5) NOT NULL,
+		type1 NVARCHAR(5) NOT NULL,
+		type2 NVARCHAR(5) NULL,
+		hp INT NULL,
+		attack INT NULL,
+		defence INT NULL,
+		sp_attack INT NULL,
+		sp_defence INT NULL,
+		speed INT NULL
+	);
+</code>
+<p>ひとつずつ実行して下さい。</p>
+「poke」データベースを作成し、その中に「pokemon」テーブルを作成しました。<br />「pokemon」テーブルでは、以下の内容を管理します。
+<ul>
+	<li>number: 図鑑番号</li>
+	<li>name: 名前</li>
+	<li>type1: タイプ1</li>
+	<li>type2: タイプ2</li>
+	<li>hp: HP</li>
+	<li>attack: 攻撃</li>
+	<li>defence: 防御</li>
+	<li>sp_attack: 特攻</li>
+	<li>sp_defence: 特防</li>
+	<li>speed: スピード</li>
+</ul>
+<h2>INSERT文</h2>
+行を追加するためのSQL文です。
+<code class="sql">
+	INSERT INTO テーブル名(列1, 列2, 列3)
+	VALUES(値1, 値2, 値3);
+</code>
+では、「pokemon」テーブルにピカチュウを登録してみましょう♪
+<code class="sql">
+	INSERT INTO pokemon(number, name, type1)
+	VALUES('25', 'ピカチュウ', 'でんき')
+</code>
+指定していない列は「NULL」となります。<br />指定した列が「NOT NULL」制約を課している場合にはエラーとなります。
+<h2>SELECT文</h2>
+テーブルから指定した列を指定した条件から取得します。
+<code class="sql">
+	SELECT 列1, 列2, 列3
+	FROM テーブル名
+	WHERE 条件;
+</code>
+では、でんきタイプのポケモン一覧を取得してみましょう♪
+<code class="sql">
+	SELECT *
+	FROM pokemon
+	WHERE type1 = 'でんき' OR type2 = 'でんき';
+</code>
+全ての列を取得する際には「*」を指定し、条件に対しては「AND」「OR」で論理和・論理積を使用可能です。<br />また、「AS 名前」とすることで取得結果の列に任意の名前を設定可能です。
+<h3>射影と選択</h3>
+<table>
+	<thead>
+		<tr>
+			<th width="50%">射影</th>
+			<th width="50%">選択</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>指定したテーブルから特定の列を取得する作業を指します。<br />データベース理論の観点からは、ある関係のうち、指定した属性のみを抽出する演算と説明されます。	</td>
+			<td>指定したテーブルから特定の条件を満たす行を取得する作業を指します。<br />データベース理論の観点からは、ある関係のうち、指定した特定の集合だけを抽出する演算と説明されます。</td>
+		</tr>
+	</tbody>
+</table>
+<h4>射影</h4>
+「SELECT 列1, 列2, ...」と取得する列を指定する作業を言います。<br />一般的には取得された行のうち、重複するものは排除することが多いため、「SELECT DISTINCT 列1, 列2, ...」というSQLが射影に該当します。
+<img src="/static/img/S00/9908/projection.png" alt="射影" />
+<h4>選択</h4>
+「WHERE」句によって取得する行に対して条件を課すことを言います。
+<img src="/static/img/S00/9908/selection.png" alt="選択" />
+条件として以下の設定が可能です。
+<table>
+	<tbody>
+		<tr>
+			<th>関係演算子</th>
+			<td>「&lt;」「&lt;=」「&gt;」「&gt;=」「=」「&lt;&gt;」</td>
+		</tr>
+		<tr>
+			<th>BETWEEN</th>
+			<td>「BETWEEN A AND B」で「A ～ B」間に属するという条件を課すことができます。<br />「A」「B」の大小関係は気にせず、「A」「B」と等価のものも含みます。</td>
+		</tr>
+		<tr>
+			<th>IN</th>
+			<td>「IN (A, B, C, ...)」と記述し、続くカッコ内の値に含まれるかを条件として課します。</td>
+		</tr>
+		<tr>
+			<th>LIKE</th>
+			<td>文字列の部分一致を指定します。<br />「%」は任意の0文字以上を表し、「_」は任意の1文字を表します。</td>
+		</tr>
+		<tr>
+			<th>IS (NOT) NULL</th>
+			<td>NULLかどうかを判定します。<br />「= NULL」では判定できないことに注意して下さい。</td>
+		</tr>
+	</tbody>
+</table>
+<h3>集約関数</h3>
+SELECT文でグループを作成して、そのグループ間での合計や件数や平均を求めるために使用します。<br />集約関数には以下のものがあります。
+<table>
+	<caption>集約関数</caption>
+	<tbody>
+		<tr>
+			<th>AVG</th>
+			<td>平均</td>
+		</tr>
+		<tr>
+			<th>MIN</th>
+			<td>最小</td>
+		</tr>
+		<tr>
+			<th>MAX</th>
+			<td>最大</td>
+		</tr>
+		<tr>
+			<th>SUM</th>
+			<td>合計</td>
+		</tr>
+		<tr>
+			<th>COUNT</th>
+			<td>件数</td>
+		</tr>
+	</tbody>
+</table>
+では、単一タイプのポケモンの総数、全ポケモンのHPの平均、素早さの最高値を求めましょう♪<br />第六世代までを対象としています。
+<code class="sql">
+	SELECT COUNT(*) AS 'ポケモン総数'
+	FROM pokemon;
+	
+	SELECT AVG(hp) AS 'HP平均'
+	FROM pokemon;
+	
+	SELECT MAX(speed) As '素早さ最高'
+	FROM pokemon;
+</code>
+<img src="/static/img/S00/9908/aggregateFx.gif" alt="集約関数" />
+集約関数と同時に「WHERE」句を使用すると、集約される前のデータを対象に絞り込みが行われることに注意して下さい。
+<h4>GROUP BY句</h4>
+「GROUP BY」句によってグループ化をすることが可能です。
+<code class="sql">
+	SELECT *
+	FROM テーブル名
+	GROUP BY グループ化する列名
+	HAVING 条件;
+</code>
+また、グループ化後のデータに対して絞り込み条件を課す場合には「HAVING」を使用します。<br />「WHERE」句はグループ化前の絞り込みに使用されます。<br />では、メインタイプでグループ化してみましょう♪<br />GROUP BY句を指定した場合には、取得対象の列には以下の2つを指定可能です。
+<ul>
+	<li>GROUP BYで指定したグループ化対象列</li>
+	<li>集約関数</li>
+</ul>
+<code class="sql">
+	SELECT type1, AVG(hp) AS hp
+	FROM pokemon
+	GROUP BY type1;
+</code>
+<img src="/static/img/S00/9908/group_by.gif" alt="GROUP BY" />
+<div class="separator"></div>
+次にメインタイプでグループ化した後に、hpの平均が「70」以上のタイプを取得しましょう♪
+<code class="sql">
+	SELECT type1, AVG(hp) AS hp
+	FROM pokemon
+	GROUP BY type1
+	HAVING 70 &lt;= AVG(hp);
+</code>
+<img src="/static/img/S00/9908/group_by_having.gif" alt="GROUP BY HAVING" />
+<div class="separator"></div>
+「WHERE」句はグループ化前の絞り込みに使用されると説明しましたね♪<br />では、hpが「50」以上のポケモンを対象にメインタイプによる絞り込みを行った結果、平均が「70」以上のタイプとその平均値を表示しましょう♪
+<code class="sql">
+	SELECT type1, AVG(hp) AS hp
+	FROM pokemon
+	WHERE 50 &lt; hp
+	GROUP BY type1
+	HAVING 70 &lt;= AVG(hp);
+</code>
+<img src="/static/img/S00/9908/group_by_where_having.gif" alt="GROUP BY WHERE HAVING" />
+<h4>ORDER BY句</h4>
+指定した列を対象に行の並び替えを行います。<br />並び順には以下の2通りの指定が可能です。
+<table>
+	<thead>
+		<tr>
+			<th width="50%">ASC</th>
+			<th width="50%">DESC</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>昇順</td>
+			<td>降順</td>
+		</tr>
+	</tbody>
+</table>
+<code class="sql">
+	SELECT *
+	FROM テーブル名
+	ORDER BY 対象の列 並び順;
+</code>
+並び順を省略すると、「昇順」が採用されます。
+<div class="separator"></div>
+<code class="sql">
+	SELECT *
+	FROM pokemon
+	ORDER BY hp ASC;
+	
+	SELECT *
+	FROM pokemon
+	ORDER BY speed DESC;
+</code>
+<img src="/static/img/S00/9908/order_by.gif" alt="ORDER BY" />
+<h2>UPDATE文</h2>
+指定した行の対象の列の値を更新します。<br />以下のように書きます。
+<code class="sql">
+	UPDATE テーブル名
+	SET 列名 = 値
+	WHERE 条件;
+</code>
+「WHERE」句で条件を設定しないと、全ての行の値が更新されてしなう点に注意して下さい。
+<h2>DELETE文</h2>
+指定した行を削除します。
+<code class="sql">
+	DELETE
+	FROM テーブル名
+	WHERE 条件;
+</code>
+「WHERE」句で条件を設定しないとテーブルに格納されている全てのデータが削除されてしまう点に注意して下さい。<br /><br />「WHERE」句を設定しないと、指定したテーブルを初期化することが可能ですが、一般的にはTRUNCATE句を使用することでテーブルの初期化を行います。
+<code class="sql">
+	TRUNCATE TABLE テーブル名;
+</code>

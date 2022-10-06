@@ -1,0 +1,112 @@
+<h2>リスト</h2>
+リストとは同一の型のデータを複数格納するデータ型です。
+<p>異なるデータ型の要素を持つこともできますが、、、</p>
+リスト内の要素は<span class="u">「0」から始まるインデックス番号</span>で指定されます。
+<img src="/static/img/S00/0103/explanationOfList.png" alt="リスト" />
+<h2>リストの作成</h2>
+リストは以下のように作成します。
+<code class="python">
+	変数 = ["要素1", "要素2", "要素3"]
+</code>
+<h2>リストの要素へのアクセス・リストの走査</h2>
+リスト内の要素にアクセスするには「リスト名[インデックス番号]」で指定します。<br />インデックス番号は「0」から始まることに注意してください。
+<code class="python">
+	ary = ["ピチュー", "ピカチュウ", "ライチュウ"]
+	print(ary[0])
+	print(ary[1])
+	print(ary[2])
+</code>
+<img src="/static/img/S00/0103/list.png" alt="リスト" />
+リストは全ての要素をfor文を用いて取り出すこともできます。
+<code class="python">
+	ary = ["ピチュー", "ピカチュウ", "ライチュウ"]
+	for k in ary:
+		print(k)
+</code>
+<img src="/static/img/S00/0103/list.png" alt="リスト" />
+<h2>リストの追加</h2>
+リストに要素を追加する方法として以下の2つを覚えましょう♪
+<ul>
+	<li>insert</li>
+	<li>append</li>
+</ul>
+<h3>insert</h3>
+pythonでリストの任意の位置に要素を追加するには「insert」メソッドを使用します。<br />メソッドとはとあるオブジェクト専用の関数ですが、とりあえず「対象オブジェクト.関数名(引数)」で実行すると覚えてください。<br />対象オブジェクトとはここではリストのことです。<br />insertメソッドは以下のように実行します。
+<code class="python">
+	対象のリスト.insert(追加位置, 追加する要素)
+</code>
+追加位置よりも後ろにある要素はひとつ分後ろに押し出されます。
+<code class="python">
+	ary = ["python", "c", "java", "ruby", "php"]
+	ary.insert(0, "fortran") # 先頭に追加
+	print(ary)
+</code>
+<img src="/static/img/S00/0103/insert.png" alt="insertメソッド" />
+<code class="python">
+	ary = ["python", "c", "java", "ruby", "php"]
+	ary.insert(2, "c++") # 先頭から「3」番目に追加
+	print(ary)
+</code>
+<img src="/static/img/S00/0103/insert2.png" alt="insertメソッド" />
+マイナス値を追加位置に指定することで後ろからの位置を指定することもできます。
+<code class="python">
+	ary = ["python", "c", "java", "ruby", "php"]
+	ary.insert(-2, "c++") # 後ろから「2」番目に追加
+	print(ary)
+</code>
+<img src="/static/img/S00/0103/insert3.png" alt="insertメソッド" />
+<h3>append</h3>
+リストの一番最後に要素を追加するためにメソッドです。<br />以下のように実行します。
+<code class="python">
+	ary = ["python", "c", "java", "ruby", "php"]
+	ary.append("go") # リストの最後に追加
+	print(ary)
+</code>
+<img src="/static/img/S00/0103/append.png" alt="appendメソッド" />
+<h2>index</h2>
+あるデータに関してリスト内を探索して一致する要素のインデックス番号を返します。<br />indexメソッドは以下のように記述します。<br />一致するデータが見つからなかった場合はエラーとなります。
+<code class="python">
+	ary = ["python", "c", "c++", "java", "ruby", "php"]
+	idx = ary.index("c++")
+	print(idx) # 「2」と出力
+</code>
+腕試しとしてindexメソッドを使用しないで自分で関数を作ってみましょう♪<br />forループでリスト内の要素を走査して一致した際のインデックス番号を返せばok!です。<br />僕はこう作りました。
+<code class="python">
+	def find_it(ary, target):
+		i = 0
+		for k in ary :
+			if k == target : # マッチしたら、、
+				return i # そのインデックス番号を返して関数から抜け出す
+			i = i + 1
+		return -1 # 見つからなかったら「-1」を返却
+</code>
+fint_it関数の第一引数に対象のリスト、第二引数に探したいデータを与えると、戻り値に一致するデータのインデックス番号を返し、一致するデータがなかった場合は「-1」を返します。
+<h2>要素の削除</h2>
+リストの要素を削除するには以下のように記述します。
+<code class="python">
+	del リスト名[インデックス番号]
+</code>
+インデックス番号でしか削除できないので、先ほどのindexメソッドと併せて使用することが多いです。
+<code class="python">
+	ary = ["python", "c", "c++", "java", "ruby", "php"]
+	idx = ary.index("java") # javaのインデックス番号を取得
+	del ary[idx] # javaを削除
+</code>
+<img src="/static/img/S00/0103/del.png" alt="del文" />
+<h2>二次元リスト</h2>
+リストの中にリストを入れることもできます。<br />リストの中にリストを入れた場合二次元リストとなり、いわゆるエクセルのような表のデータを管理することができます。<br />リスト内の要素を指定するには「リスト名[外側のインデックス番号][内側のインデックス番号]」と指定します。
+<img src="/static/img/S00/0103/nestedList.png" alt="多次元リスト" />
+ここでは簡単に掛け算九九の結果を二次元リストに保存してそれを表示してみましょう♪
+<code class="python">
+	kuku = [] # 空のリストを作成(要素を追加するため)
+	for i in range(1, 9 + 1): # 外側のループ
+		kuku2 = [] # 空のリストを作成(要素を追加するため)
+		for j in range(1, 9 + 1): # 内側のループ
+			kuku2.append(i * j) # 九九の結果を内側のリストに追加
+		kuku.append(kuku2) # 内側のリストを外側のリストに追加
+	for k in kuku:
+		for l in k :
+			print(str(l) + " ", end="")
+		print("")
+</code>
+<img class="max-350w" src="/static/img/S00/0103/doubleLoop.png" alt="二重ループ" />

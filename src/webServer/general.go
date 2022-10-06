@@ -22,7 +22,7 @@ func GetDateTime() string {
 }
 
 func getRootDIR() string {
-	return os.Getenv("WWWROOT")
+	return os.Getenv("DYNAMIC_ROOT")
 }
 
 /*
@@ -94,8 +94,7 @@ func zPad4(i int) string {
 }
 
 /*
-
- */
+*/
 func jsonEncode(intf any) string {
 	var answer string
 	if jsonByte, er := json.Marshal(intf); er == nil {

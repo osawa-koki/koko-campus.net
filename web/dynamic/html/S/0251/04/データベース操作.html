@@ -1,0 +1,27 @@
+<h2>データベース</h2>
+プログラムがデータを永続化されるためには、以下の2通りが考えられます。
+<ul>
+	<li>ファイルへの保存</li>
+	<li>データベースへの保存</li>
+</ul>
+<p>データベースも結局はファイルから構成されていますが、、、</p>
+ファイルでの保存は非常に操作がしにくく、かつコードの可読性の低下につながるという問題があります。<br />また、データ構造も複雑となり、アルゴリズムに対しても悪い影響を与えることが多いです。<br />データベースはデータの管理(追加・削除・更新・参照)のプロフェッショナルですので、データの管理は自分でファイル操作を行うのではなく、データベースに任せたほうが楽チンです。<br /><br />このような理由から、データを保存するには一般的にデータベースを使用することが多いです。<br />ということで、C#でデータベースを操作する方法を学習しましょう♪
+<h2>SQL Server</h2>
+実際に我々がデータベースを直接操作するのではなく、DBMSと呼ばれるプログラムに命令を出して、データベースを操作してもらいます。
+<img src="/static/img/S00/0251/DBMS.png" alt="DBMS" />
+DBMSに対する命令はSQLと呼ばれ、実際にデータベースを操作するにはこのSQLを書く作業が大半となります。<br /><br />DBMSにはいくつかの種類があります。<br />代表的なものには以下のDBMSがあげられます。
+<ul>
+	<li>MySQL</li>
+	<li>Oracle DB</li>
+	<li>Mongo DB</li>
+	<li>SQLite</li>
+	<li>SQL Server</li>
+</ul>
+ここでは、C#と開発元であるマイクロソフトが開発していて、相性がいい「SQL Server」を使用します。<br /><br />以下のリンクから「SQL Server」をインストールして下さい。
+<a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads" class="link SQLServer">SQL Server</a>
+「Express」バージョンをダウンロードして下さい。<br /><br />ダウンロードが完了したらそのまま起動し、インストールを完了させます。<br />インストール時にいくつかの設定をする場面がありますが、全部デフォルトでOK!です。<br /><br />次にデータベースを簡単に操作するためのツールであるSSMSをインストールしましょう♪
+<a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16" class="link SSMS">SSMS</a>
+こちらも設定は全てデフォルトでOK!です。<br /><br />インストールが完了したら、SSMSを起動して下さい。<br />ログイン画面が現れたら、そのままログインしてください。<br />「PC名\SQLEXPRESS」でログイン可能です。<br />認証方式は「Windows Authentication」を選択して下さい。<br /><br />ログインに成功したら、左上の「New Query」を押して、SQLエディタを表示し、そこにSQLを書いて「Execute」ボタンで実行します。
+<img src="/static/img/S00/0251/executeSQL.gif" alt="SQLの実行" />
+
+
