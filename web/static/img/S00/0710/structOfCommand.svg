@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400.00002"
+   version="1.1"
+   id="svg135"
+   sodipodi:docname="structOfCommand.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="structOfCommand.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0444209"
+     inkscape:cx="297.29394"
+     inkscape:cy="243.19697"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132" />
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:42.6667px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;stroke-width:3"
+       x="300.60239"
+       y="127.28207"
+       id="text237"><tspan
+         sodipodi:role="line"
+         id="tspan235"
+         x="300.60239"
+         y="127.28207">$ command argv -option</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;stroke-width:3"
+       x="174.25923"
+       y="183.60864"
+       id="text405"><tspan
+         sodipodi:role="line"
+         id="tspan403"
+         x="174.25923"
+         y="183.60864">コマンド</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;stroke-width:3"
+       x="319.79443"
+       y="182.85864"
+       id="text409"><tspan
+         sodipodi:role="line"
+         id="tspan407"
+         x="319.79443"
+         y="182.85864">引数</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;stroke-width:3"
+       x="485.43646"
+       y="183.65031"
+       id="text413"><tspan
+         sodipodi:role="line"
+         id="tspan411"
+         x="485.43646"
+         y="183.65031">オプション</tspan></text>
+    <path
+       style="opacity:0.949045;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-opacity:1"
+       d="M 86.172153,148.4076 H 259.47393"
+       id="path469" />
+    <path
+       style="opacity:0.949045;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-opacity:1"
+       d="m 279.58076,148.4076 h 93.8319"
+       id="path471" />
+    <path
+       style="opacity:0.949045;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-opacity:1"
+       d="M 396.3919,148.4076 H 561.07646"
+       id="path473" />
+  </g>
+</svg>

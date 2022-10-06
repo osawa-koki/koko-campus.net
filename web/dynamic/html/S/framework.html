@@ -1,0 +1,62 @@
+<table id="subjectExplainingBox">
+	<tbody>
+		<tr>
+			<th>教科</th>
+			<td><a href="/S{{ .PathS }}">{{ .Name }}</a></td>
+		</tr>
+		<tr>
+			<th>レッスン</th>
+			<td><a href="/S{{ .PathS }}L{{ .PathL }}">{{ .Lesson }}</a></td>
+		</tr>
+		<tr>
+			<th>ページ</th>
+			<td><a href="/S{{ .PathS }}L{{ .PathL }}P{{ .PathP }}">{{ .Page }}</a></td>
+		</tr>
+	</tbody>
+</table>
+<h1>{{ .Page }}</h1>
+<div id="subjectMainBox">
+	<section id="subjectIndexBox"></section>
+	(((CONTENTS)))
+</div>
+<div id="fixedBox">
+	<!-- 【S/01.scss】 -->
+	<div id="subjectsButtonBox">
+		<!-- 【前へ戻るボタンの表示部分】 -->
+		{{ if ne .PrevPage "" }}
+			<a id="subjectPrevButtonA" href="/S{{ .PathS }}L{{ .PathL }}P{{ .PrevPage }}">
+				<img class="board" src="/static/img/S/10.png" alt="前へ戻る" />
+				<img class="bird" src="/static/img/S/11.png" alt="前へ戻る" />
+			</a>
+		{{ end }}
+		<!-- 【先へ進むボタンの表示部分】 -->
+		{{ if ne .NextPage "" }}
+			<a id="subjectNextButtonA" href="/S{{ .PathS }}L{{ .PathL }}P{{ .NextPage }}">
+				<img class="board" src="/static/img/S/20.png" alt="次に進む" />
+				<img class="bird" src="/static/img/S/21.png" alt="次に進む" />
+			</a>
+		{{ end }}
+	</div>
+
+	<div id="subjectMenuBox"></div>
+	
+	{{ if .IsLogin }}
+		<!-- 【S/70.scss】 -->
+		<svg
+			id="star"
+			class="notePreviewIgnore off"
+			viewBox="0 0 50 50"
+			version="1.1"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:svg="http://www.w3.org/2000/svg">
+			<path d="M 40.168877,45.114596 26.119471,40.089045 12.207125,45.482431 12.645203,30.567672 3.2166368,19.002892 17.536789,14.810614 25.621961,2.2698021 34.034224,14.593591 48.459701,18.407722 39.338614,30.21652 Z" />
+		</svg>
+		<div id="noteBox">
+			<div id="noteSaveButton" class="notePreviewIgnore"><i id="noteSaveButtonIcon" class="gg-circle-green"></i></div>
+			<textarea id="noteArea" class="notePreviewIgnore" maxlength="500"></textarea>
+			<div id="notePreviewButton" class="notePreviewIgnore"><i class="gg-notes"></i></div>
+		</div>
+	{{ end }}
+
+	<div id="zoomedImgBox"></div>
+</div>

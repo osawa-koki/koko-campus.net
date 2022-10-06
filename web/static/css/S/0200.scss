@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+/*環境構築*/
+.VisualStudio {
+	background-image: url(/static/img/S00/0200/VisualStudio.png);
+}
+
+
+#shosikimojiretu {
+	border-spacing: 10px 0;
+	margin: 25px 0;
+	tr td {
+		text-align: center;
+		padding: 2px 5px;
+	}
+	tr:nth-of-type(1) td {
+		border-bottom: 1px #000000 solid;
+	}
+}

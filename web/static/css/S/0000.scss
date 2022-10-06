@@ -1,0 +1,656 @@
+@charset "UTF-8";
+
+.to-atom {
+	background-image: url(/static/img/S00/0000/to-atom.png);
+}
+
+
+/*htmlの基本*/
+div.para2 {
+	margin: 30px 0;
+	border: 1px solid black;
+	padding: 30px 10px;
+	overflow-x: auto;
+}
+
+/*cssプロパティ(基本編)*/
+.part_font-size {
+	.sabi {
+		font-size: 20px;
+	}
+}
+.part_font-family {
+	.consolas {
+		font-family: "consolas";
+	}
+	.gothic {
+		font-family: "MS P ゴシック";
+	}
+	.meiryo {
+		font-family: "Meiryo";
+	}
+	.century {
+		font-family: "Century";
+	}
+	.arial {
+		font-family: "arial";
+	}
+}
+.part_font-weight {
+	.bold {
+		font-weight: bold;
+	}
+	.normal {
+		font-weight: normal;
+	}
+	.light {
+		font-weight: thin;
+	}
+}
+.part_letter-spacing {
+	.letter-spacing_0px {
+		letter-spacing: 0px;
+	}
+	.letter-spacing_1px {
+		letter-spacing: 1px;
+	}
+	.letter-spacing_2px {
+		letter-spacing: 2px;
+	}
+	.letter-spacing_3px {
+		letter-spacing: 3px;
+	}
+	.letter-spacing_10px {
+		letter-spacing: 10px;
+	}
+}
+.part_line-height {
+	.line-height_16px {
+		line-height: 16px;
+	}
+	.line-height_17px {
+		line-height: 17px;
+	}
+	.line-height_18px {
+		line-height: 18px;
+	}
+	.line-height_20px {
+		line-height: 20px;
+	}
+	.line-height_25px {
+		line-height: 25px;
+	}
+}
+.part_text-align {
+	.left {
+		text-align: left;
+	}
+	.center {
+		text-align: center;
+	}
+	.right {
+		text-align: right;
+	}
+}
+.part_color {
+	.red {
+		color: red;
+	}
+	.fuchsia {
+		color: fuchsia;
+	}
+	.CC66FF {
+		color: #CC66FF;
+	}
+	.rgba_135-235-225-90 {
+		color: rgba(135, 235, 225, 0.9);
+	}
+}
+.part_background-color {
+	.bg-red {
+		background-color: red;
+	}
+	.bg-fuchsia {
+		background-color: fuchsia;
+	}
+	.bg-CC66FF {
+		background-color: #CC66FF;
+	}
+	.bg-rgba_135-235-225-90 {
+		background-color: rgba(135, 235, 225, 0.9);
+	}
+	.bg-cherry {
+		background-image: url(https://koko-campus.org/pics/cherry-bg.png);
+	}
+}
+.part_background-image {
+	.para_bg-cherry {
+		background-image: url(/static/img/S00/0000/bg-img-sample.png);
+		border: 1px solid black;
+		padding: 25px;
+	}
+}
+.part_background-repeat {
+	p {
+		background-image: url(/static/img/S00/0000/bg-img-sample.png);
+		border: 1px solid black;
+		padding: 25px;
+	}
+	.bg_repeat-both {
+		background-repeat: repeat;
+	}
+	.bg_repeat-x {
+		background-repeat: repeat-x;
+	}
+	.bg_repeat-y {
+		background-repeat: repeat-y;
+	}
+	.bg_repeat-no {
+		background-repeat: no-repeat;
+	}
+}
+.part_background-position {
+	.bgimg_topleft {
+		background-position: top left;
+	}
+	.bgimg_center-right {
+		background-position: center right;
+	}
+	.bgimg_center {
+		background-position: center;
+	}
+	p {
+		background-image: url(/static/img/S00/0000/bg-img-sample.png);
+		background-repeat: no-repeat;
+		border: 1px solid black;
+		padding: 25px;
+	}
+}
+
+/*cssプロパティ(レイアウト編)*/
+.to-イロイロ {
+	background-image: url(../../../program/pics/イロイロ.png);
+}
+
+/*displayとposition*/
+/*ver1を継承*/
+
+/*フレックスボックス*/
+.flex {
+	display: flex;
+	max-width: 600px;
+	background-color: lightgrey;
+}
+.item {
+	background-color: rgb(0, 210, 210);
+	margin: 10px;
+	padding: 5px 10px;
+}
+.flex-go {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0;
+}
+.item-go {
+	border: 1px solid black;
+	background-color: #FFFF99;
+	margin: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+#align-items_result {
+	height: 300px;
+}
+#align-content_result {
+	height: 300px;
+	flex-wrap: wrap;
+}
+#buttons {
+	display: flex;
+	justify-content: center;
+	margin: 25px 0;
+}
+#buttons > div {
+	margin: 5px;
+	padding: 5px 10px;
+	color: white;
+	cursor: pointer;
+}
+#buttons div:nth-of-type(1) {
+	background-color: red;
+}
+#buttons div:nth-of-type(2) {
+	background-color: blue;
+}
+#practice-result {
+	display: flex;
+	overflow: visible;
+	width: 80%;
+	margin: 25px auto;
+	height: 300px;
+	background-color: #DDDDDD;
+	border: 1px solid black;
+}
+#practice-result > div {
+	margin: 5px;
+	padding: 5px 10px;
+	background-color: rgb(0, 210, 210);
+}
+#flex-property {
+	border-collapse: collapse;
+	margin: 25px auto;
+}
+
+/*レスポンシブページ*/
+#viewport-svg2 {
+	display: block;
+	margin: 30px 0;
+	border: 1px solid black;
+	background-image: url(/static/img/S00/0000/viewport.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*疑似要素*/
+/*ver1を継承*/
+
+/*疑似要素*/
+/*ver1を継承*/
+
+
+
+/*^^^ver1^^^*/
+
+
+
+/*htmlの基本*/
+div.para {
+	display: inline-block;
+	font-family: monospace;
+	margin: 50px 30px;
+	border: 1px solid black;
+	padding: 30px;
+	overflow-x: scroll;
+}
+
+/*htmlタグ*/
+/*(frameworkに移行)
+div.result {
+	position: relative;
+	margin: 30px 0;
+	padding: 50px 25px 30px 25px;
+	border: 1px solid black;
+}
+div.result::before {
+	content: "結果";
+	display: inline-block;
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #CCFFFF;
+}
+*/
+
+/*cssの基本*/
+.result .sabi {
+	font-size: 20px;
+}
+
+/*cssプロパティ(基本編)*/
+.consolas {
+	font-family: "consolas";
+}
+.gothic {
+	font-family: "MS P ゴシック";
+}
+.meiryo {
+	font-family: "Meiryo";
+}
+.century {
+	font-family: "Century";
+}
+.arial {
+	font-family: "arial";
+}
+.bold {
+	font-weight: bold;
+}
+.normal {
+	font-weight: normal;
+}
+.light {
+	font-weight: thin;
+}
+.letter-spacing_0px {
+	letter-spacing: 0px;
+}
+.letter-spacing_1px {
+	letter-spacing: 1px;
+}
+.letter-spacing_2px {
+	letter-spacing: 2px;
+}
+.letter-spacing_3px {
+	letter-spacing: 3px;
+}
+.letter-spacing_10px {
+	letter-spacing: 10px;
+}
+.line-height_16px {
+	line-height: 16px;
+}
+.line-height_17px {
+	line-height: 17px;
+}
+.line-height_18px {
+	line-height: 18px;
+}
+.line-height_20px {
+	line-height: 20px;
+}
+.line-height_25px {
+	line-height: 25px;
+}
+.border-bottom_div > p {
+	font-size: 16px;
+	margin: 25px 0;
+	padding: 0 0 25px 0;
+	border-bottom: 1px solid black;
+}
+.left {
+	text-align: left;
+}
+.center {
+	text-align: center;
+}
+.right {
+	text-align: right;
+}
+.red {
+	color: red;
+}
+.fuchsia {
+	color: fuchsia;
+}
+.CC66FF {
+	color: #CC66FF;
+}
+.rgba_135-235-225-90 {
+	color: rgba(135, 235, 225, 0.9);
+}
+.bg-red {
+	background-color: red;
+}
+.bg-fuchsia {
+	background-color: fuchsia;
+}
+.bg-CC66FF {
+	background-color: #CC66FF;
+}
+.bg-rgba_135-235-225-90 {
+	background-color: rgba(135, 235, 225, 0.9);
+}
+.bg-cherry {
+	background-image: url(https://koko-campus.org/pics/cherry-bg.png);
+}
+.on-bg p {
+	background-image: url(/static/img/S00/0000/bg-img-sample.png);
+	border: 1px solid black;
+	padding: 25px;
+}
+.bg_repeat-both {
+	background-repeat: repeat;
+}
+.bg_repeat-x {
+	background-repeat: repeat-x;
+}
+.bg_repeat-y {
+	background-repeat: repeat-y;
+}
+.bg_repeat-no {
+	background-repeat: no-repeat;
+}
+.on-bg_norepeat p {
+	background-image: url(/static/img/S00/0000/bg-img-sample.png);
+	background-repeat: no-repeat;
+	border: 1px solid black;
+	padding: 25px;
+}
+.bgimg_topleft {
+	background-position: top left;
+}
+.bgimg_center-right {
+	background-position: center right;
+}
+.bgimg_center {
+	background-position: center;
+}
+
+/*cssプロパティ(レイアウト編)*/
+.width-height > div {
+	margin: 25px 0;
+	background-color: orange;
+}
+.w100px-h50px {
+	width: 100px;
+	height: 50px;
+}
+.w50pc-h100px {
+	width: 50%;
+	height: 100px;
+}
+
+/*displayとposition*/
+.machigatteru {
+	font-size: 16px;
+	font-weight: bold;
+}
+.machigatteru2 {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px;
+	margin: 10px;
+	background-color: #CCCCCC;
+}
+.divs > div {
+	padding: 25px;
+	border: 1px solid black;
+	background-color: lightyellow;
+}
+.left-div {
+	width: 150px;
+	text-align: left;
+	margin: 25px;
+}
+.center-div {
+	width: 80%;
+	text-align: center;
+	margin: 25px auto;
+}
+.right-div {
+	width: 250px;
+	margin: 25px 0;
+	text-align: right;
+}
+#button-x {
+	cursor: pointer;
+	position: relative;
+	width: 150px;
+	border: 1px solid black;
+	border-radius: 25px;
+	background-color: aqua;
+	text-align: center;
+	padding: 10px;
+	margin: 30px;
+}
+#button-x:hover {
+	top: 2px;
+	left: 2px;
+}
+
+/*フレックスボックス*/
+.flex {
+	display: flex;
+	max-width: 600px;
+	background-color: lightgrey;
+}
+.item {
+	background-color: rgb(0, 210, 210);
+	margin: 10px;
+	padding: 5px 10px;
+}
+.flex-go {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0;
+}
+.item-go {
+	border: 1px solid black;
+	background-color: #FFFF99;
+	margin: 10px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+#align-items_result {
+	height: 300px;
+}
+#align-content_result {
+	height: 300px;
+	flex-wrap: wrap;
+}
+#buttons {
+	display: flex;
+	justify-content: center;
+	margin: 25px 0;
+}
+#buttons > div {
+	margin: 5px;
+	padding: 5px 10px;
+	color: white;
+	cursor: pointer;
+}
+#buttons div:nth-of-type(1) {
+	background-color: red;
+}
+#buttons div:nth-of-type(2) {
+	background-color: blue;
+}
+#practice-result {
+	display: flex;
+	overflow: visible;
+	width: 80%;
+	margin: 25px auto;
+	height: 300px;
+	background-color: #DDDDDD;
+	border: 1px solid black;
+}
+#practice-result > div {
+	margin: 5px;
+	padding: 5px 10px;
+	background-color: rgb(0, 210, 210);
+}
+#flex-property {
+	border-collapse: collapse;
+	margin: 25px auto;
+}
+
+/*レスポンシブページ*/
+#viewport-svg {
+	border: 1px solid black;
+	background-image: url(/static/img/S00/0000/viewport.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#viewport-img {
+	display: block;
+	max-width: 300px;
+	margin: 50px auto;
+}
+
+/*疑似要素*/
+#link-blue:link {
+	color: blue;
+}
+#link-red:link {
+	color: red;
+}
+#link-green:link {
+	color: green
+}
+#visited-blue:visited {
+	color: blue;
+}
+#visited-red:visited {
+	color: red;
+}
+#visited-green:visited {
+	color: green
+}
+#hover-blue:hover {
+	color: blue;
+}
+#hover-red:hover {
+	color: red;
+}
+#hover-green:hover {
+	color: green
+}
+#active-blue:active {
+	color: blue;
+}
+#active-red:active {
+	color: red;
+}
+#active-green:active {
+	color: green
+}
+.odd-even p:nth-child(2n) {
+	color: red;
+}
+.odd-even p:nth-child(2n+1) {
+	color: blue;
+}
+.odd-even2 p:nth-of-type(2n) {
+	color: red;
+}
+.odd-even2 p:nth-of-type(2n+1) {
+	color: blue;
+}
+.not-selector li:not(.electricity) {
+	color: red;
+}
+
+/*疑似要素*/
+#pseudo-b4 p::before {
+	content: "・";
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+}
+#pseudo-after p::after {
+	content: " ♪";
+	color: blue;
+	font-size: 18px;
+	font-weight: bold;
+}
+#first-line p::first-line {
+	font-size: 16px;
+	font-weight: bold;
+}
+#first-letter p::first-letter {
+	font-size: 20px;
+	font-weight: bold;
+}
+.selection1::selection {
+	color: white;
+	background-color: blue;
+}
+.selection2::selection {
+	color: white;
+	background-color: black;
+}
+.selection3::selection {
+	color: blue;
+	background-color: yellow;
+}

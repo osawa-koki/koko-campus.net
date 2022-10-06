@@ -1,0 +1,57 @@
+.to-atom {
+  background-image: url(/static/img/S00/0100/to-atom.png);
+}
+
+.to-xampp {
+  background-image: url(/static/img/S00/0100/to-xampp.png);
+}
+
+.phpLessonExampleCode {
+  margin: 30px 0;
+  padding: 15px;
+  border: 1px #000000 solid;
+  background-color: #CCFFFF;
+  max-width: 300px;
+  overflow-x: hidden;
+}
+.phpLessonExampleCode .phpLessonExampleCode_title {
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+#questionMarkBox {
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+#questionMarkBox span {
+  display: inline-block;
+  padding: 10px;
+  transform-origin: center;
+  -webkit-animation: questionRotate 1s linear 0s infinite alternate none running;
+          animation: questionRotate 1s linear 0s infinite alternate none running;
+}
+@-webkit-keyframes questionRotate {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes questionRotate {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+.db {
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+.db thead th, .db thead td {
+  background-color: lightgray !important;
+}

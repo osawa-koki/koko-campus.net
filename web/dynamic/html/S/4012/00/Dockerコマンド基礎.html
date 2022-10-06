@@ -1,0 +1,44 @@
+<h2>dockerコマンド</h2>
+Dockerでコンテナを操作する際にはdockerコマンドを使用します。<br />dockerコマンドは以下のように書きます。
+<code class="shell">
+	docker ～～～
+</code>
+例えば、Dockerで操作させているプロセス一覧を表示するには以下のコマンドを実行します。
+<code class="shell">
+	docker ps
+</code>
+dockerコマンドには以下のものがあります。
+<table>
+	<tbody>
+		<tr>
+			<th>container</th>
+			<td>コンテナ操作系</td>
+		</tr>
+		<tr>
+			<th>image</th>
+			<td>イメージ操作系</td>
+		</tr>
+		<tr>
+			<th>volume</th>
+			<td>ボリューム操作系</td>
+		</tr>
+		<tr>
+			<th>network</th>
+			<td>ネットワーク操作系</td>
+		</tr>
+	</tbody>
+</table>
+<h2>Dockerコマンドの構成</h2>
+Dockerは階層構造をとっており、例えば上で説明した「container」コマンドは配下に以下のコマンドを受け付けます。
+<ul>
+	<li>start</li>
+	<li>stop</li>
+	<li>create</li>
+	<li>run</li>
+	<li>...</li>
+</ul>
+<img src="/static/img/S00/4012/dockerCommandStructure.png" alt="dockerコマンド" />
+<p>画像は<a href="https://book.mynavi.jp/ec/products/detail/id=120304">仕組みと使い方がわかる Docker＆Kubernetesのきほんのきほん</a>より。</p>
+<h2>コマンドとオプション</h2>
+コマンド(広義)は大きく、コマンド部(狭義)とオプション部に分割できます。<br />コマンドはその名の通りプログラムに対する命令で、オプションはプログラム実行に際に必要となる補足情報です。
+<img src="/static/img/S00/4012/containerManipulationCommand.png" alt="コマンドとオプション" />

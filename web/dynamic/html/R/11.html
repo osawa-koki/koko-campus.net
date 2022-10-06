@@ -1,0 +1,66 @@
+<div id="registerEntireBox">
+	<div id="welcomeSign">パスワード再発行</div>
+	<div id="registerBox">
+		{{ if eq .R12_Success "false" }}
+			<p id="errorMessageBox">{{ .ErrorMessage }}</p>
+		{{ end }}
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="2">メールアドレスを入力して下さい。</td>
+				</tr>
+				<tr>
+					<th>Mail</th>
+					<td><input type="email" id="mail" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" id="button" value="再設定" disabled /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="ImgBox" class="hidden">
+			<img src="/static/img/R/02.png" alt="メール送信完了" />
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			"use strict";
+			(() => {
+				const [mail, button, ImgBox] = getElm(["mail", "button", "ImgBox"]);
+				const inputCheck = () => {
+					button.disabled = !(mail.value.match(`^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]*\.)+[a-zA-Z]{2,}$`) && between(5, 50)(mail.value));
+				};
+				mail.addEventListener("input", inputCheck);
+				button.addEventListener("click", () => {
+					const url = "/A";
+					const postData = URLencodeAssoc({
+						"program" : "register",
+						"action" : "pre-reset",
+						"mail": mail.value
+					});
+					const data = {
+						method: "POST",
+						mode: "cors",
+						headers: {
+							"Accept": "application/json",
+							"Content-Type": "application/x-www-form-urlencoded",
+						}
+					};
+					data["body"] = postData;
+					fetch(url, data)
+					.then(response => response.json())
+					.then(response => {
+						if (response.Success) {
+							ImgBox.classList.remove("hidden");
+							button.disabled = true;
+						} else {
+							window.alert(response.ErrorMessage.join("\n"));
+						}
+					})
+					.catch(ex => {
+						console.log(ex);
+						window.alert("通信に失敗しました。\n時間を開けて再度ログインを行って下さい。")
+					});
+				});
+			})();
+		</script>
+	</div>
+</div>

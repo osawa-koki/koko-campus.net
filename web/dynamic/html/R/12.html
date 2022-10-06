@@ -1,0 +1,77 @@
+<div id="registerEntireBox">
+	<div id="welcomeSign">パスワード再設定</div>
+	<div id="registerBox">
+		<table>
+			<tbody>
+				<tr>
+					<td colspan="2">パスワードを入力して下さい。</td>
+				</tr>
+				<tr>
+					<th>Mail</th>
+					<td><input type="email" id="mail" value="{{ .Mail }}" disabled /></td>
+				</tr>
+				<tr>
+					<th>PW</th>
+					<td>
+						<input type="password" id="pw" />
+						<p class="msgNormal">半角英数字「8 ～ 16」文字で入力してください。</p>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="button" id="button" value="再設定" disabled /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="hiddenField" class="hidden">
+			<input type="text" id="token" value="{{ .Token }}" />
+		</div>
+		<div id="ImgBox" class="hidden">
+			<img src="/static/img/R/03.png" alt="パスワード再設定完了" />
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			"use strict";
+			(() => {
+				const [mail, pw, button, token, ImgBox] = getElm(["mail", "pw", "button", "token", "ImgBox"]);
+				const inputCheck = () => {
+					button.disabled = !(pw.value.match(/^[0-9a-zA-Z]{8,16}$/));
+				};
+				pw.addEventListener("input", inputCheck);
+				button.addEventListener("click", () => {
+					const url = "/A";
+					const postData = URLencodeAssoc({
+						"program" : "register",
+						"action" : "reset",
+						"mail": mail.value,
+						"pw": pw.value,
+						"token": token.value
+					});
+					const data = {
+						method: "POST",
+						mode: "cors",
+						headers: {
+							"Accept": "application/json",
+							"Content-Type": "application/x-www-form-urlencoded",
+						}
+					};
+					data["body"] = postData;
+					fetch(url, data)
+					.then(response => response.json())
+					.then(response => {
+						if (response.Success) {
+							ImgBox.classList.remove("hidden");
+							button.disabled = true;
+							setTimeout(() => {
+								window.location.href = "/M00";
+							}, 3000);
+						} else {
+							window.alert(response.ErrorMessage.join("\n"));
+						}
+					})
+					.catch(ex => {
+						window.alert("通信に失敗しました。\n時間を開けて再度ログインを行って下さい。")
+					});
+				});
+			})();
+		</script>
+	</div>
+</div>

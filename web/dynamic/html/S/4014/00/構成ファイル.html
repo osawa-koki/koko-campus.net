@@ -1,0 +1,261 @@
+<h2>構成ファイル</h2>
+Nginxの動作は設定ファイルで規定します。<br />設定ファイルはデフォルトでは「/etc/nginx/nginx.conf」にあります。<br /><br />当ファイルを変更するには管理者権限が必要ですが、毎回管理者権限で実行するのは大変ですので、ファイルにかかるパーミションを変更します。
+<p>この処理はあくまでもテスト用で、本番環境では禁止です。</p>
+<code class="shell">
+	sudo chmod a+w /etc/nginx/nginx.conf
+</code>
+<code class="nginx-dot-conf dummy">
+	user www-data;
+	worker_processes auto;
+	pid /run/nginx.pid;
+	include /etc/nginx/modules-enabled/*.conf;
+	
+	events {
+		worker_connections 768;
+		# multi_accept on;
+	}
+	
+	http {
+	
+		##
+		# Basic Settings
+		##
+	
+		sendfile on;
+		tcp_nopush on;
+		types_hash_max_size 2048;
+		# server_tokens off;
+	
+		# server_names_hash_bucket_size 64;
+		# server_name_in_redirect off;
+	
+		include /etc/nginx/mime.types;
+		default_type application/octet-stream;
+	
+		##
+		# SSL Settings
+		##
+	
+		ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+		ssl_prefer_server_ciphers on;
+	
+		##
+		# Logging Settings
+		##
+	
+		access_log /var/log/nginx/access.log;
+		error_log /var/log/nginx/error.log;
+	
+		##
+		# Gzip Settings
+		##
+	
+		gzip on;
+	
+		# gzip_vary on;
+		# gzip_proxied any;
+		# gzip_comp_level 6;
+		# gzip_buffers 16 8k;
+		# gzip_http_version 1.1;
+		# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+	
+		##
+		# Virtual Host Configs
+		##
+	
+		include /etc/nginx/conf.d/*.conf;
+		include /etc/nginx/sites-enabled/*;
+	}
+	
+	
+	#mail {
+	#	# See sample authentication script at:
+	#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+	#
+	#	# auth_http localhost/auth.php;
+	#	# pop3_capabilities "TOP" "USER";
+	#	# imap_capabilities "IMAP4rev1" "UIDPLUS";
+	#
+	#	server {
+	#		listen     localhost:110;
+	#		protocol   pop3;
+	#		proxy      on;
+	#	}
+	#
+	#	server {
+	#		listen     localhost:143;
+	#		protocol   imap;
+	#		proxy      on;
+	#	}
+	#}	
+</code>
+<h2>構成ファイルの書き方</h2>
+構成ファイルはディレクティブとパラメタから構成されます。
+<img src="/static/img/S00/4014/directive-parameters.png" alt="ディレクティブ" />
+パラメタは複数指定することが可能で、複数指定する場合にはそれぞれの値を空白類似文字(空白文字・タブ文字・改行文字)で区切ります。<br /><br />また、パラメタ内に空白文字を含める際にはパラメタを単一引用符か二重引用符で囲みます。<br /><br />また、「#」を使用してコメントアウトを書くことができます。
+<div class="separator"></div>
+では、設定ファイルに少し変更を加えてみましょう♪
+<ul>
+	<li>使用するポートを「8888」に</li>
+	<li>ルートディレクトリを「/home/webSite」に</li>
+	<li>インデックス拡張子を「index.html」に</li>
+</ul>
+以下の内容はserverディレクトリ内に以下の内容を追加することで実現できます。
+<code class="nginx-dot-conf dummy">
+	server {
+		listen ポート番号;
+		root ルートディレクトリ;
+		index index.html;
+	}
+</code>
+全体としては以下のようになります。<br />ポート番号は「8888」、ルートディレクトリは「/home/webSite」、インデックスページは「index.html」と設定しました。
+<code class="nginx-dot-conf dummy">
+	user www-data;
+	worker_processes auto;
+	pid /run/nginx.pid;
+	include /etc/nginx/modules-enabled/*.conf;
+	
+	events {
+		worker_connections 768;
+		# multi_accept on;
+	}
+	
+	http {
+	
+		##
+		# Basic Settings
+		##
+	
+		sendfile on;
+		tcp_nopush on;
+		types_hash_max_size 2048;
+		# server_tokens off;
+	
+		# server_names_hash_bucket_size 64;
+		# server_name_in_redirect off;
+	
+		include /etc/nginx/mime.types;
+		default_type application/octet-stream;
+	
+		##
+		# SSL Settings
+		##
+	
+		ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+		ssl_prefer_server_ciphers on;
+	
+		##
+		# Logging Settings
+		##
+	
+		access_log /var/log/nginx/access.log;
+		error_log /var/log/nginx/error.log;
+	
+		##
+		# Gzip Settings
+		##
+	
+		gzip on;
+	
+		# gzip_vary on;
+		# gzip_proxied any;
+		# gzip_comp_level 6;
+		# gzip_buffers 16 8k;
+		# gzip_http_version 1.1;
+		# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+	
+		##
+		# Virtual Host Configs
+		##
+	
+		include /etc/nginx/conf.d/*.conf;
+		include /etc/nginx/sites-enabled/*;
+	
+		server {
+			listen 8888;
+			root /home/webSite;
+			index index.html;
+		}
+	}
+	
+	#mail {
+	#	# See sample authentication script at:
+	#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+	#
+	#	# auth_http localhost/auth.php;
+	#	# pop3_capabilities "TOP" "USER";
+	#	# imap_capabilities "IMAP4rev1" "UIDPLUS";
+	#
+	#	server {
+	#		listen     localhost:110;
+	#		protocol   pop3;
+	#		proxy      on;
+	#	}
+	#
+	#	server {
+	#		listen     localhost:143;
+	#		protocol   imap;
+	#		proxy      on;
+	#	}
+	#}	
+</code>
+この状態で、Nginxを再起動します。<br />再起動は以下のコマンドで実行できます。
+<code class="shell">
+	sudo systemctl restart nginx
+</code>
+ルートディレクトリには以下の内容を記載してファイルを「index.html」という名前で配置します。
+<code class="html">
+	&lt;!DOCTYPE html&gt;
+	&lt;html lang="ja"&gt;
+	&lt;head&gt;
+		&lt;meta charset="UTF-8"&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+		&lt;title&gt;koko's lesson&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Hello Nginx!!!&lt;/h1&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+</code>
+では、「:8888」とポート番号を指定してアクセスしてみましょう♪
+<img src="/static/img/S00/4014/Hello_Nginx.gif" alt="Hello Nginx" />
+<h2>変数</h2>
+構成ファイルでは変数を使用できます。<br />「$」から始まる文字列が変数です。<br /><br />以下の公式サイトで詳しく説明されています。
+<a href="http://nginx.org/en/docs/varindex.html" class="link nginxLogo">Nginx公式サイト</a>
+<h2>設定のインクルード</h2>
+外部に記載した設定ファイルをインクルードすることもできます。<br />以下のように書きます。
+<code class="nginx-dot-conf dummy">
+	include ファイルパス
+</code>
+ファイルパスには絶対パスと相対パスの両方が使用できます。<br />では先ほど記載した内容を「outside.conf」に移動して、それをインクルードしてみましょう♪
+<code class="outside-dot-conf dummy">
+	server {
+		listen 8888;
+		root /home/webSite;
+		index index.html;
+	}
+</code>
+<code class="nginx-dot-conf dummy">
+	http {
+		# #####
+		# #####
+		# #####
+		include outside.conf
+	}
+</code>
+上記のようにファイルを分割しても正常に動作することを確認できます。
+<h2>設定ファイルのテスト</h2>
+設定ファイルの変更後は以下のコマンドでテスト可能です。
+<code class="shell">
+	sudo nginx -t
+</code>
+テストに成功すると以下の結果が出力されます。
+<code class="shell dummy">
+	nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+	nginx: configuration file /etc/nginx/nginx.conf test is successful
+</code>
+失敗するとエラーが発生した個所とその内容を出力します。
+<code class="shell dummy">
+	nginx: [emerg] unexpected "}" in /etc/nginx/nginx.conf:63
+	nginx: configuration file /etc/nginx/nginx.conf test failed
+</code>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="400"
+   viewBox="0 0 600 400.00002"
+   version="1.1"
+   id="svg135"
+   sodipodi:docname="prompt.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="prompt.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#000000"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.0444209"
+     inkscape:cx="20.58557"
+     inkscape:cy="211.60051"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132" />
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:53.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;fill-opacity:1;stroke-width:10"
+       x="259.98044"
+       y="134.0524"
+       id="text237"><tspan
+         sodipodi:role="line"
+         id="tspan235"
+         x="274.64188"
+         y="134.0524">koko @ host $ </tspan></text>
+    <path
+       style="opacity:0.949045;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       d="M 67.703238,161.64148 H 193.96977"
+       id="path2265" />
+    <path
+       style="opacity:0.949045;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       d="M 271.18256,161.64148 H 399.81872"
+       id="path2267" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       x="132.02132"
+       y="204.25055"
+       id="text2331"><tspan
+         sodipodi:role="line"
+         id="tspan2329"
+         x="132.02132"
+         y="204.25055">ユーザ名</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:21.3333px;font-family:Consolas;-inkscape-font-specification:'Consolas Bold';text-align:center;text-anchor:middle;opacity:0.949045;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-dasharray:none;stroke-opacity:1"
+       x="340.06781"
+       y="203.79222"
+       id="text2331-6"><tspan
+         sodipodi:role="line"
+         id="tspan2329-3"
+         x="340.06781"
+         y="203.79222">ホスト名</tspan></text>
+  </g>
+</svg>

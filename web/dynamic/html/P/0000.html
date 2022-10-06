@@ -1,0 +1,11 @@
+<div id="programListBox">
+	{{ range $_, $mapData := .Suggestion }}
+		<a href="/P/{{ index $mapData "Program" }}">
+			<div class="programSuggestionItem">
+				<img src="/static/img/P/{{ index $mapData "Program" }}.png" alt="{{ index $mapData "Name" }}" class="programImg" />
+				<div class="programName">{{ index $mapData "Name" }}</div>
+				<div class="programDescription">{{ index $mapData "Description" }}</div>
+			</div>
+		</a>
+	{{ end }}
+</div>

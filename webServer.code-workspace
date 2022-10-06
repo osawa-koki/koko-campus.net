@@ -4,7 +4,10 @@
 			"path": "src/webServer"
 		},
 		{
-			"path": "web/html/S"
+			"path": "web/dynamic/html/S/4001/00"
+		},
+		{
+			"path": "web/dynamic/html/S/4002/00"
 		}
 	],
 	"settings": {}

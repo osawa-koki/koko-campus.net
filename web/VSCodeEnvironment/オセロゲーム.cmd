@@ -1,1 +1,0 @@
-code -n ../html/G/0001.html ../css/G/0001.scss ../js/G/0001.js ../js/G/0001_A.js

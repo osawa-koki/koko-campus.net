@@ -1,0 +1,80 @@
+<h2>コメントアウト</h2>
+ここからは実際にOcamlを用いてプログラミングしていきます。<br />プログラムコード中にコメントアウト(メモ書き)をするには以下のように書きます。
+<code class="ocaml">
+	(* コメントアウト *)
+</code>
+<h2>エントリーポイント</h2>
+Ocamlではプログラムへのエントリーポイントを以下のように書きます。
+<code class="ocaml">
+	let () =
+		(* 処理... *)
+		(* 処理... *)
+		(* 処理... *)
+</code>
+「()」の代わりに「_」を使用することも可能です。
+<code class="ocaml">
+	let _ =
+		(* 処理... *)
+		(* 処理... *)
+		(* 処理... *)
+</code>
+そのままグローバルモジュールに処理をべた書きすることも可能ですが、可読性の観点からオススメしません。
+<code class="ocaml">
+	(* 処理... *)
+	(* 処理... *)
+	(* 処理... *)
+</code>
+<h2>標準入出力</h2>
+<h3>標準出力</h3>
+コンソール画面に表示するには以下の文を使用します。
+<ul>
+	<li>print_bytes</li>
+	<li>print_char</li>
+	<li>print_string</li>
+	<li>print_newline</li>
+	<li>print_endline</li>
+	<li>print_int</li>
+	<li>print_float</li>
+</ul>
+コンソール画面に出力するデータ型によって使用する関数を使い分けます。<br />データ型については後ほど説明しますが、整数・小数・文字列などのデータの種類を表すのもだと思ってください。
+<code class="ocaml">
+	let () = 
+		print_bytes (Bytes.of_string "Iam bytes!");
+		print_char 'A';
+		print_endline "Hello Ocaml";
+		print_newline ();
+		print_int 10;
+		print_float 10.25;
+</code>
+<img src="/static/img/S00/0301/print.png" alt="標準出力" />
+<h3>標準入力</h3>
+以下のように書きます。
+<code class="ocaml">
+	read_line()
+</code>
+改行されるまでの1行を読み取ります。
+<p>末尾の改行文字は削除されます。</p>
+では、入力した文字を出力する簡単なプログラムを作成してみましょう♪
+<code class="ocaml">
+	let () = 
+		print_endline("I love " ^ read_line() ^ " !!!");
+</code>
+<img src="/static/img/S00/0301/read_line.gif" alt="標準入出力" />
+<h2>変数</h2>
+変数とはプログラムの実行に際して必要となる一時的なデータを保存するための箱です。<br />変数は以下のように宣言します。
+<code class="ocaml">
+	let 変数 = 値
+</code>
+関数型言語は変数は値を拘束することを目的とし、更新ができないという特徴を持ちますが、Ocamlでは更新に近い動作をします。<br />以下のコードを見て下さい。
+<code class="ocaml">
+	let a = "AAA"
+	let a = "BBB"
+
+	let () =
+		print_endline a;
+
+	(* &darr; コンソール &darr;
+	BBB
+	*)
+</code>
+値の更新(再代入)ができていますね、、、<br />正確には後に行った変数束縛が前に行った変数束縛を隠しているだけなのですが、プログラマ視点からだと変数の再代入と同じ効果をもたらします。<br /><br />このようにOcamlは変数の更新が事実上可能ですが、関数型言語として扱う以上は原則として変数の更新は行わないことをオススメします。

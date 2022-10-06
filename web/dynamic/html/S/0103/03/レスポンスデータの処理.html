@@ -1,0 +1,78 @@
+<h2>レスポンスデータの種類</h2>
+このページではサーバがクライアントにデータを返すための処理について説明します。<br />FastAPIでは以下の種類のデータを返すための機能が搭載されています。
+<ul>
+	<li>HTML</li>
+	<li>プレーンテキスト</li>
+	<li>JSON</li>
+	<li>orjson(Python用の高速なJSON)</li>
+	<li>ujson(Python用の高速なJSON)</li>
+	<li>リダイレクト</li>
+	<li>ストリーム</li>
+	<li>ファイル</li>
+</ul>
+FastAPIではデフォルトでJSONが設定されています。<br />したがって、単純な「Hello World」という文字列を返す際は「"Hello World"」のJSON用のエンコードがなされます。
+<h2>HTMLレスポンス</h2>
+fastapi.responsesモジュールに含まれるHTMLResponseクラスを使用します。
+<code class="python">
+	from fastapi.responses import HTMLResponse
+
+	@app.get("/html", response_class=HTMLResponse)
+	def read_root():
+		return HTMLResponse(content="&lt;html&gt;&lt;title&gt;FastAPI&lt;/title&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;", status_code=200)
+</code>
+<img src="/static/img/S00/0103/fastapi_returning-html.gif" alt="HTMLの返却" />
+<h2>プレーンテキスト</h2>
+fastapi.responsesモジュールに含まれるPlainTextResponseクラスを使用します。
+<code class="python">
+	from fastapi.responses import PlainTextResponse
+
+	@app.get("/plain", response_class=PlainTextResponse)
+	def read_root():
+		return "PLAIN TEXT"
+</code>
+<img src="/static/img/S00/0103/fastapi_returning-plainText.gif" alt="プレーンテキストの返却" />
+<h2>JSON</h2>
+FastAPIではデフォルトでJSONが設定されているため、特に設定しなければJSONとして返されます。
+<h2>orjson</h2>
+Python専用のJSONで、高速かつ正確に拡張されたJSONです。<br />fastapi.responsesモジュールに含まれるORJSONResponseクラスを使用します。
+<a href="https://github.com/ijl/orjson" class="link githubLogo">orjson</a>
+Pythonで使用する場合にはオススメですが、APIの利用環境が想定できない場合にはあまりオススメできません。
+<h2>ujson</h2>
+Python専用のJSONで、高速かつ正確に拡張されたJSONです。<br />fastapi.responsesモジュールに含まれるUJSONResponseクラスを使用します。
+<a href="https://github.com/ultrajson/ultrajson" class="link githubLogo">ujson</a>
+orjsonの方が高速であると公式では説明されています。<br />orjsonのreadmeファイルでもJSON操作系Pythonライブラリの中で最速と説明されているため、特に理由がない限りはorjsonを使用することをオススメします。
+<h2>リダイレクト</h2>
+fastapi.responsesモジュールに含まれるRedirectResponseクラスを使用します。<br />RedirectResponse関数の引数にリダイレクト先パスを指定し、その戻り値をそのままアプリケーションオブジェクトの戻り値とします。<br /><br />下の例では、「/redirect」に対するアクセスを「/pokemon/chikorita」にリダイレクトさせます。
+<code class="python">
+	from fastapi.responses import RedirectResponse
+
+	@app.get("/redirect", response_class=RedirectResponse)
+	def read_root():
+		return RedirectResponse("/pokemon/chikorita")
+</code>
+<img src="/static/img/S00/0103/fastapi_returning-redirect.gif" alt="リダイレクト" />
+<h2>ストリーム</h2>
+バイナリを送信します。<br />ファイルストリームを渡すことで実現します。<br /><br />media_typeでストリームの種類を指定します。
+<code class="python">
+	from fastapi.responses import StreamingResponse
+
+	@app.get("/stream")
+	def read_root():
+		def iterfile():
+			with open("data/moku.jpeg", mode="rb") as binary:
+				yield from binary
+		return StreamingResponse(iterfile(), media_type="image/jpeg")
+</code>
+<img src="/static/img/S00/0103/fastapi_returning-stream.gif" alt="ストリーム" />
+<p>画像は<a href="https://zukan.pokemon.co.jp/detail/722">ポケモン図鑑(公式)</a>より。</p>
+<h2>ファイル</h2>
+ファイルを送信するにはFileResponseクラスを使用します。
+<code class="python">
+	from fastapi.responses import FileResponse
+
+	@app.get("/file")
+	async def read_root():
+		return FileResponse("data/pika.jpeg")
+</code>
+<img src="/static/img/S00/0103/fastapi_returning-file.gif" alt="ファイル" />
+<p>画像は<a href="https://seiga.nicovideo.jp/seiga/im2635811">ゆっさん</a>より。</p>

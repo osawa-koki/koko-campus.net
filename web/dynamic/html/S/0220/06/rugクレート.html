@@ -1,0 +1,281 @@
+<h2>rugクレート</h2>
+rugクレートとは、任意精度の数値を扱うためのクレートです。
+<a href="https://crates.io/crates/rug" class="link cratesLogo">crates.io</a>
+<a href="https://docs.rs/rug/1.17.0" class="link rustLogo">rustdoc</a>
+<h3>インストール</h3>
+「Cargo.toml」ファイルに以下のように依存関係を追加します。
+<code class="Cargo-dot-toml dummy">
+	rug = "1.17.0"
+</code>
+使用するファイルの先頭に以下のように書きます。
+<code class="rust">
+	extern crate rug;
+	use rug::*;
+</code>
+<div class="separator"></div>
+rugクレートでは大きく以下の4つの機能を提供しています。
+<ul>
+	<li>Integer(整数)</li>
+	<li>Float(浮動小数点数)</li>
+	<li>Rational(有理数)</li>
+	<li>Complex(複素数)</li>
+</ul>
+<h2>環境構築</h2>
+環境構築というほどのことではありませんが、rugクレートはC言語でのGMPをラップしているモジュールであるため、これに必要なモジュールもインストールする必要があります。
+<code class="shell">
+	sudo apt-get install m4 m4-doc
+</code>
+<h2>Integer</h2>
+任意の精度の整数を扱うことができます。<br />Integer型では以下のメソッドを確認しましょう♪
+<ul>
+	<li>new</li>
+	<li>assign</li>
+	<li>from</li>
+</ul>
+<h3>new</h3>
+任意精度整数型のデータを初期化します。<br />初期化とは、専用のメモリ空間を確保して実際に変数を使用できる状態にすることだと認識して下さい。
+<code class="rust">
+	let mut int = Integer::new();
+</code>
+これで、intという変数で任意精度整数を扱うことができるようになりました。
+<h3>assign</h3>
+初期化した変数に実際に値を代入します。<br />残念ながら、「=」は使用できません。
+<code class="rust">
+	/* コンパイルエラー */
+
+	int = 10;
+
+	/* &darr; コンソール &darr;
+	expected struct `rug::Integer`, found integer
+	*/
+</code>
+これはassignメソッドを使用することで解決します。
+<code class="rust">
+	int.assign(10);
+</code>
+
+<h3>from</h3>
+プリミティブ型から任意精度整数型を生成します。
+<code class="rust">
+	Integer::from(プリミティブ型)
+</code>
+先ほど、任意精度整数型変数への代入は「=」を使用できないと説明しましたが、任意精度整数型は「=」による代入を禁止しているわけではなく、プリミティブ型から任意精度整数型への暗黙の型変換ができないため、エラーが発生しています。<br /><br />したがって、assignの代わりに以下のように書くことは可能です。
+<code class="rust">
+	rug_int = Integer::from(10);
+</code>
+<div class="separator"></div>
+では、実際に巨大な数を扱ってみましょう♪<br />プリミティブ型として最初に扱うことができる最大値を取得します。
+<code class="rust">
+	println!("max of u64 -> {}", std::u64::MAX);
+
+	/* &darr; コンソール &darr;
+	max of u64 -> 18446744073709551615
+	*/
+</code>
+これを超える値は扱うことができません。
+<code class="rust">
+	/* コンパイルエラー */
+
+	let big: u64 = 18446744073709551616;
+
+	/* &darr; コンソール &darr;
+	the literal `18446744073709551616` does not fit into the type `u64` whose range is `0..=18446744073709551615`
+	*/
+</code>
+ということで、任意精度整数型を使用して整数を扱いましょう♪
+<code class="rust">
+	let norm_max = std::u64::MAX; // 18446744073709551615
+    let mut rug_int = Integer::new();
+    rug_int = Integer::from(norm_max); // rugデータ型にu64の最大値を格納
+	println!("rugクレートを使えばok! -> {}", rug_int.clone() * rug_int.clone()); // 340282366920938463426481119284349108225
+</code>
+cloneメソッドを使用しているのは所有権の問題があるからです。<br />u64の最大値に2乗であるものすごく大きな数字も扱えていることが確認できます。
+<h2>Float</h2>
+任意精度の浮動小数点数型です。<br />Float型では以下のメソッドを確認しましょう♪
+<ul>
+	<li>new</li>
+	<li>with_val</li>
+	<li>with_val_round</li>
+	<li>prec</li>
+	<li>set_prec</li>
+	<li>set_prec_round</li>
+</ul>
+<h3>new</h3>
+任意精度浮動小数点数型を初期化します。<br />引数には任意精度浮動小数点数型の精度を指定します。<br />例えば、f32と同じ精度の浮動小数点数型を初期化する際には以下のように書きます。
+<code class="rust">
+	let flt = Float::new(32);
+</code>
+<h3>with_val</h3>
+初期化時に精度の指定と初期値の代入を同時に行います。
+<code class="rust">
+	let flt = Float::with_val(32, 3.01234567890123456789);
+    println!("{}", flt);
+
+	/* &darr; コンソール &darr;
+	3.0123456791
+	*/
+</code>
+32ビットでアンダーフローが発生していますね、、、<br />もっと高い精度で表現しましょう♪
+<code class="rust">
+	let flt = Float::with_val(128, 3.01234567890123456789);
+    println!("{}", flt);
+
+	/* &darr; コンソール &darr;
+	3.012345678901234613533688388997688889503
+	*/
+</code>
+さっきよりは精度が高くなっていますが、誤差も生じていますね、、、<br />プリミティブ型そのものを表現している際に誤差が生じているためです。<br /><br />任意精度浮動小数点数型同士で演算することでこれを回避できます。
+<code class="rust">
+	println!("{}", Float::with_val(128, 1) / Float::with_val(128, 3));
+
+	/* &darr; コンソール &darr;
+	3.333333333333333333333333333333333333338e-1
+	*/
+</code>
+上のコードは任意精度浮動小数点数型である「1」を同じく任意精度浮動小数点数型である「3」で割っているため、その結果も精度の範囲内で正しく表現できています。
+<h3>with_val_round</h3>
+指定した精度では表現できない場合に、言い換えればアンダーフローが発生した際に、その溢れた部分をどのように処理するかを第三引数で指定します。
+<ul>
+	<li>Nearest</li>
+	<li>Zero</li>
+	<li>Up</li>
+	<li>Down</li>
+</ul>
+<table>
+	<tbody>
+		<tr>
+			<th>Nearest</th>
+			<td>銀行丸めを行います。<br />近い方の偶数に丸めます。</td>
+		</tr>
+		<tr>
+			<th>Zero</th>
+			<td>ゼロに向かって丸めます。</td>
+		</tr>
+		<tr>
+			<th>Up</th>
+			<td>正の無限大に向かって丸めます。</td>
+		</tr>
+		<tr>
+			<th>Down</th>
+			<td>負の無限大に向かって丸めます。</td>
+		</tr>
+	</tbody>
+</table>
+これらは「rug::float::Round」に属しています。
+<h3>prec</h3>
+任意精度浮動小数点数型の精度を返します。
+<code class="rust">
+	let mut flt = Float::with_val(64, 0.123456789);
+	println!("{}", flt.prec());
+	
+	/* &darr; コンソール &darr;
+	64
+	*/
+</code>
+<h3>set_prec</h3>
+任意精度浮動小数点数型の精度を指定します。
+<code class="rust">
+	let mut flt = Float::with_val(64, 0.123456789);
+	println!("{}", flt.prec());
+	flt.set_prec(128);
+	println!("{}", flt.prec());
+
+	/* &darr; コンソール &darr;
+	64
+	128
+	*/
+</code>
+<h3>set_prec_round</h3>
+指定した精度では表現できない部分の処理方法を指定します。<br />with_val_roundメソッドで初期化する際の第三引数で指定する処理方法と同様です。
+<table>
+	<tbody>
+		<tr>
+			<th>Nearest</th>
+			<td>銀行丸めを行います。<br />近い方の偶数に丸めます。</td>
+		</tr>
+		<tr>
+			<th>Zero</th>
+			<td>ゼロに向かって丸めます。</td>
+		</tr>
+		<tr>
+			<th>Up</th>
+			<td>正の無限大に向かって丸めます。</td>
+		</tr>
+		<tr>
+			<th>Down</th>
+			<td>負の無限大に向かって丸めます。</td>
+		</tr>
+	</tbody>
+</table>
+<h3>pow</h3>
+任意精度浮動小数点数型のべき乗計算を行うためには、「rug::ops::Pow」モジュールをインポートする必要があります。<br />既にrugクレート直下の機能はインポートしていますので、以下の内容をファイルに記載してください。
+<code class="rust">
+	use ops::Pow;
+</code>
+使い方は非常に簡単です。<br />任意精度浮動小数点数型のデータのメソッドとしてpowを呼び出し、引数に指数を渡します。<br /><br />では、ネイピア数を算出してみましょう♪
+<div class="quote">
+	<div>ネイピア数</div>
+	<div>
+		「1」よりもほんの少しだけ大きい数字(1.0000...1)を限りなく大きい数を指数としてべき乗した数字です。
+		<img src="/static/img/S00/0220/napier.png" alt="ネイピア数" />
+	</div>
+</div>
+必要な部品は以下の3つです。
+<ul>
+	<li>1</li>
+	<li>ものすごく小さい数</li>
+	<li>ものすごく大きい数</li>
+</ul>
+「(1 + ものすごく大きい数)<sup>ものすごく大きい数</sup>」を計算することでネイピア数を算出します。<br />ここでは、精度を「2048(32倍精度)」として計算します。
+<code class="rust">
+	let mut one = Float::with_val(2048, 1);
+	let mut small:Float = Float::with_val(2048, 0.0001).pow(100);
+	println!("{}", Float::from(one + small).pow(Integer::from(10000).pow(100)));
+
+	/* &darr; コンソール &darr;
+	2.71828182845905826183870965820910469406769924306340979036449506047048214812164560492486587922356108195074333923975561284392892110196804759976614161835061629916231951692946191853846181325740521988700642826989158560754454585590684666935071423486999640663721182174966321412710894874394874671213287934036757223667872919203270205403647865430876816641080567992899809138663715554563465537054406122676048681866196927397171219131140667114778697130767990128483207428382399435209622434847219855908883247188726833479009854918920702931280472113429943290801571205393280805453185824575004188638273873920038492587606596548415573375038
+	*/
+</code>
+「2.7182818284590」までは正しく計算できていますね♪<br />より高い精度を計算するためには、精度を高める必要があります。
+<h2>Rational</h2>
+comming soon...
+
+
+
+<h2>Complex</h2>
+
+
+
+
+
+
+
+<h2>incomplete</h2>
+<a href="https://docs.rs/rug/latest/rug/index.html#incomplete-computation-values">Rust公式ページ</a>では、不完全値について以下の場合に生じると説明しています。
+<div class="quote">
+	<div>不完全値 (<a href="https://docs.rs/rug/latest/rug/index.html#incomplete-computation-values">Rust公式ページ</a>)</div>
+	<div>
+		<ul>
+			<li>Sometimes we need to assign the result to an object that already exists. Since Rug types require memory allocations, this can help reduce the number of allocations. (While the allocations might not affect performance noticeably for computationally intensive functions, they can have a much more significant effect on faster functions like addition.)</li>
+			<li>For the Float and Complex number types, we need to know the precision when we create a value, and the operation itself does not convey information about what precision is desired for the result.</li>
+		</ul>
+	</div>
+</div>
+例えば、巨大整数のべき乗は不完全値を返します。
+<code class="rust">
+	println!("{:?}", Integer::i_pow_u(10, 100));
+
+	/* &darr; コンソール &darr;
+	IPowUIncomplete { base: 10, exponent: 100 }
+	*/
+</code>
+デフォルトの出力形式では出力できないため、「:?」とデバグ目的出力を指定しています。<br />「10<sup>100</sup>」の計算はまだ完成していません。<br />これを完成させるには、上で紹介してたrugのデータ型に変換する必要があります。<br />ここでは任意精度整数型に変換します。
+<code class="rust">
+	println!("{}", Integer::from(Integer::i_pow_u(10, 100)));
+
+	/* &darr; コンソール &darr;
+	10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	*/
+</code>
+どの演算が不完全値を返すのかをすべて覚えるのは大変ですので、コンパイル時のエラー出力で、「incomplete...」的な文が出力されたら、対象となる部分をrugが用意する専用のデータ型に変換してみて下さい。
+

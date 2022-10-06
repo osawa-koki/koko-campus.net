@@ -1,0 +1,28 @@
+.ghc {
+  background-image: url(/static/img/S00/0300/haskell.png);
+}
+
+.vsCode {
+  background-image: url(/static/img/S00/0300/vsCode.png);
+}
+
+#operant {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 30px -5px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+#operant li {
+  display: block;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 1px;
+}

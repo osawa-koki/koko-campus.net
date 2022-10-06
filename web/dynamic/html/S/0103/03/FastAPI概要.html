@@ -1,0 +1,75 @@
+<h2>FastAPI</h2>
+DjangoやFlaskと比べると認知度は低いですが、APIなど提供などの軽量で高速な処理を得意とするPythonで書かれたWEBアプリケーションフレームワークです。<br />公式サイトではFastAPIについて、以下のように説明します。
+<div class="quote">
+	<div>FastAPI (<a href="https://fastapi.tiangolo.com/ja/">公式ドキュメント</a>より)</div>
+	<div>FastAPIは、Pythonの標準である型ヒントに基づいてPython3.6以降でAPI を構築するための、モダンで、高速(高パフォーマンス)な、Webフレームワークです。</div>
+</div>
+<a href="https://fastapi.tiangolo.com/ja/" class="link FastAPILogo">FastAPI</a>
+<h2>FastAPIの特徴</h2>
+公式サイトではFastAPIの特徴を以下のように説明しています。
+<ul>
+	<li>高速</li>
+	<li>高速なコーディング</li>
+	<li>少ないバグ</li>
+	<li>直感的</li>
+	<li>簡単</li>
+	<li>短い</li>
+	<li>堅牢性</li>
+	<li>Standards-based</li>
+</ul>
+<h2>環境構築</h2>
+では、実際にFastAPIを使用できる環境を構築しましょう♪<br />以下の2つの手順を踏みます。
+<p>Dockerを使用した環境構築については後ほど説明します。</p>
+<ul>
+	<li>Pythonのインストール</li>
+	<li>ライブラリのインストール</li>
+</ul>
+<h3>Pythonのインストール</h3>
+以下のリンクから自分のプラットフォームにあったPythonインタプリタをインストールしてください。
+<a href="https://www.python.org/downloads/" class="link pythonLogo">Python</a>
+コマンドラインから以下のコマンドを実行して下さい。<br />正しくインストールが完了していれば、使用しているPythonのバージョンが出力されます。
+<code class="shell">
+	python --version
+</code>
+Linux環境ではPython2系とPython3系を区別するため、以下のコマンドとなります。
+<code class="shell">
+	python3 --version
+</code>
+これ以降はLinux環境の方はpythonコマンドをpython3コマンドに置き換えて実行してください。
+<h3>ライブラリのインストール</h3>
+FastAPIでは基本的に以下の2つのライブラリを使用します。
+<ul>
+	<li>fastapi</li>
+	<li>uvicorn</li>
+</ul>
+これらをインストールします。
+<code class="shell">
+	pip install fastapi
+	pip install uvicorn[standard]
+</code>
+<div class="separator"></div>
+では、実際に動作をテストしましょう♪<br />「main.py」という名前のファイルを作成し、以下の内容を貼り付けてください。
+<code class="python">
+	from fastapi import FastAPI
+
+	app = FastAPI()
+	
+	@app.get("/")
+	def read_root():
+		return {"Hello": "World"}
+	
+	@app.get("/items/{item_id}")
+	def read_item(item_id: int, q: str = None):
+		return {"item_id": item_id, "q": q}
+</code>
+次に以下のコマンドで実際にWEBサーバを起動しましょう♪
+<code class="shell">
+	uvicorn main:app --reload
+</code>
+実際にWEBサーバが正常に動作しているかは以下のURLにアクセスすることで確認できます。
+<ul>
+	<li><a href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a></li>
+	<li><a href="http://127.0.0.1:8000/items/5?q=somequery">http://127.0.0.1:8000/items/5?q=somequery</a></li>
+	<li><a href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a></li>
+</ul>
+<img src="/static/img/S00/0103/FastAPI_tester.gif" alt="FastAPI 動作テスト" />
