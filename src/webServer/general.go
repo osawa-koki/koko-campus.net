@@ -25,6 +25,10 @@ func getRootDIR() string {
 	return os.Getenv("DYNAMIC_ROOT")
 }
 
+func getLogDIR() string {
+	return os.Getenv("LOG_DIR")
+}
+
 /*
 ファイルの中身を取得します。
 【引数】ファイルのパス(「web」ディレクトリを起点に|最初の「/」は不要)
@@ -94,7 +98,7 @@ func zPad4(i int) string {
 }
 
 /*
-*/
+ */
 func jsonEncode(intf any) string {
 	var answer string
 	if jsonByte, er := json.Marshal(intf); er == nil {
