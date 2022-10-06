@@ -6,6 +6,8 @@
 /**/obj/*
 standalone/
 
+/web/static/img/M00/*.png
+
 # ファイル
 *.csv
 *.txt

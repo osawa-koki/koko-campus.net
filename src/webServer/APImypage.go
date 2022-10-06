@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"os"
 )
@@ -37,6 +38,8 @@ func mypageAPI(RR *RequestResponse) string {
 					defer dst.Close()
 					io.Copy(dst, src)
 					success = true
+				} else {
+					Error(fmt.Sprintf("アイコンの画像登録失敗 %s", er.Error()))
 				}
 			}
 			if !success {
