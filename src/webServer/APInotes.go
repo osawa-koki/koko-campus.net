@@ -14,7 +14,7 @@ func notesAPI(RR *RequestResponse) string {
 
 	switch r.PostFormValue("method") {
 	case "get":
-		// レコードがあったら内容返す。なかったら何もから文字。
+		// レコードがあったら内容返す。なかったらから文字を返す。
 		var SQL SQLbuilder
 		SQL.Add("SELECT content")
 		SQL.Add("FROM notes")
