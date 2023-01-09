@@ -28,9 +28,6 @@ fi
 
 # ここから追加
 
-# PATHの設定
-export PATH=$PATH:/usr/local/go/bin
-
 # データベース設計
 export DB_HOST=localhost
 export DB_PORT=3306
