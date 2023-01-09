@@ -38,9 +38,6 @@ export DB_USER=root
 export DB_PASSWORD=pw1234
 export DB_DATABASE_NAME=koko
 
-export TLS_CERT=/etc/letsencrypt/live/koko-campus.net/cert.pem
-export TLS_PRIVKEY=/etc/letsencrypt/live/koko-campus.net/privkey.pem
-
 export WWWROOT=/home/webSite/web/
 export DOMAIN=koko-campus.net
 
