@@ -5,7 +5,7 @@ RUN apt update && apt install -y golang-go nginx mysql-server
 
 # MySQL
 
-RUN service mysql start && service mysql stop && \
+RUN service mysql start &&  \
   mysql -u root -e "CREATE DATABASE koko;" && \
   mysql -u root -e "CREATE USER 'osawa'@'localhost' IDENTIFIED BY 'password';" && \
   mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'osawa'@'localhost'; FLUSH PRIVILEGES;"
@@ -19,13 +19,6 @@ ENV DB_DATABASE_NAME koko
 ENV WWWROOT=/var/www/html/
 ENV DOMAIN=koko-campus.net
 
-# Nginx
-
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY ./web/static /var/www/html/
-
-RUN service nginx start
-
 # Go
 
 WORKDIR /app
@@ -35,3 +28,10 @@ COPY ./web/dynamic ./web
 RUN go build -o webServer
 RUN chmod +x webServer
 RUN ./webServer
+
+# Nginx
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY ./web/static /var/www/html/
+
+RUN service nginx start
