@@ -26,13 +26,10 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-
 # ここから追加
 
 # PATHの設定
 export PATH=$PATH:/usr/local/go/bin
-
-
 
 # データベース設計
 export DB_HOST=localhost
@@ -51,9 +48,4 @@ export SMTP_SERVER=smtp20.gmoserver.jp
 export SMTP_PORT=587
 export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
 
-
-
-
-
 echo finished reading fst Env Setting Files
-
