@@ -23,6 +23,8 @@ ENV DOMAIN=koko-campus.net
 
 WORKDIR /app
 
+ENV HTTP_PROXY https://proxy.golang.org
+
 COPY ./src/webServer .
 COPY ./web/dynamic ./web
 RUN go build -o webServer

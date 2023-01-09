@@ -1,4 +1,4 @@
-module example.com/webServer
+module example.com/program
 
 go 1.19
 
