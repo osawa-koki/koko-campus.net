@@ -1,41 +1,40 @@
 # 情報共有サイト (koko-campus)
 
-# 目的
+## 目的
 
 * 誰でも簡単に学べるサイトの構築。
 * シンプルで使いやすく、かつ一次情報を意識した情報の提供と、新しく実用的な情報の公開。
 * システム構築を低レイヤで行うことで、セキュリティ上の問題を正しく理解し、自身の成長につなげる。
 
-
-# 基礎知識・定義
+## 基礎知識・定義
 
 ディレクトリ構成は以下の通りである。
 
 ```directory
 webSite
-	- dev (開発者が使用するデータを格納)
-		- db (データベース関連のデータ)
-			- programming (ストアドプロシージャを格納)
-			- table (データベーステーブルを格納)
-		- deployTool (デプロイ用スクリプトを格納)
+  - dev (開発者が使用するデータを格納)
+    - db (データベース関連のデータ)
+      - programming (ストアドプロシージャを格納)
+      - table (データベーステーブルを格納)
+    - deployTool (デプロイ用スクリプトを格納)
 
-	- logFiles (ログを出力)
+  - logFiles (ログを出力)
 
-	- src (各種ソースファイルを格納)
-		- webServer (WEBサーバソースファイル)
-		- redirectWebServer (リダイレクト用WEBサーバソースファイル)
-		- pyAPI (pythonサーバソースファイル)
-		- subProgram (その他特別目的プログラムソースファイル)
-		- x_<プログラム名> (各モジュールテスト用ソースファイル)
+  - src (各種ソースファイルを格納)
+    - webServer (WEBサーバソースファイル)
+    - redirectWebServer (リダイレクト用WEBサーバソースファイル)
+    - pyAPI (pythonサーバソースファイル)
+    - subProgram (その他特別目的プログラムソースファイル)
+    - x_<プログラム名> (各モジュールテスト用ソースファイル)
 
-	- standalone (プログラム・ゲーム等を独立してgithubで公開するためのファイルを管理)
+  - standalone (プログラム・ゲーム等を独立してgithubで公開するためのファイルを管理)
 
-	- web (HTML・CSS・JS・画像ファイル)
-		- bin (コンパイルされたWEBサーバを配置)
-		- css (CSSファイル)
-		- html (HTMLファイル)
-		- img (画像ファイル)
-		- js (JSファイル)
+  - web (HTML・CSS・JS・画像ファイル)
+    - bin (コンパイルされたWEBサーバを配置)
+    - css (CSSファイル)
+    - html (HTMLファイル)
+    - img (画像ファイル)
+    - js (JSファイル)
 ```
 
 本番環境へのアクセスはSSHを使用する。  
@@ -49,8 +48,12 @@ FTPであればFTPS(FTP over SSH)を、DBアクセスならば「Standard TCP/IP
 >> 配下にはHTML・CSS・JS・画像ファイルを格納する。  
 >> 環境変数「WWWROOT」で指定する。  
 
+---
+
 > Goサーバ
 >> Go言語によって構築されたWEBサーバをいう。  
+
+---
 
 > MVC
 >> 「Model」「View」「Controller」によって処理する手法をいう。  
@@ -60,8 +63,7 @@ FTPであればFTPS(FTP over SSH)を、DBアクセスならば「Standard TCP/IP
 >> 教科やプログラム・ゲームなどの独立した処理ごとにMVCを有する。  
 >> その他一般化された処理はハンドラで行う。
 
-
-# 環境構築
+## 環境構築
 
 主に、以下の4点を行う。
 
@@ -71,14 +73,11 @@ FTPであればFTPS(FTP over SSH)を、DBアクセスならば「Standard TCP/IP
 4. Nginxのインストール
 5. その他開発用のソフトウェア準備  
 
-
-
-# 環境変数の登録
+## 環境変数の登録
 
 「/etc/profile」に以下の内容を登録する。
 
-
-```profile                                                            
+```profile
 export PATH=$PATH:/usr/local/go/bin
 
 export DB_HOST=localhost
@@ -94,11 +93,9 @@ export SMTP_PORT=587
 export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
 ```
 
-
-# GoによるWEBサーバ構築
+## GoによるWEBサーバ構築
 
 以下のコマンドでGo言語コンパイラをインストールする。
-
 
 ```bash
 # 古いバージョンのGoコンパイラをアンインストール
@@ -113,7 +110,6 @@ ls /usr/local/go
 
 export PATH=$PATH:/usr/local/go/bin
 ```
-
 
 ```bash
 go version
@@ -133,7 +129,7 @@ go run .
 
 ビルド・実行ファイルの移動・実行をまとめたバッチファイルを使用することも可能である。
 
-```
+```shell
 // Windows
 .\0
 
@@ -147,8 +143,7 @@ go run .
 ./00.bash
 ```
 
-
-# MySQLによるデータベース構築
+## MySQLによるデータベース構築
 
 DBMSはMySQLを使用する。
 
@@ -171,7 +166,6 @@ mysql --version -> 8.0.28
 パスワードは特に理由がない場合は「pw1234」とする。  
 本番環境であっても、直接Dbへのアクセスは禁止し、SSH経由でのアクセスを要求しているため、そのまま「pw1234」をパスワードとして設定している。  
 
-
 データベースは「koko」データベースをGoサーバ用に、「koko_pyapi」データベースをpythonサーバ用に作成する。  
 
 ```db
@@ -188,14 +182,12 @@ go run .
 DB情報が格納されているディレクトリまでのパスを尋ねられるため、「webSite/dev/db」までのパスを指定する。  
 例) 「C:\ofMine\webSite\dev\db」
 
-
-
-# PythonによるサブWEBサーバ構築
+## PythonによるサブWEBサーバ構築
 
 臼倉君による説明。
 
 
-# Nginxのインストール
+## Nginxのインストール
 
 ```bash
 # Nginxのインストール
@@ -223,7 +215,7 @@ sudo systemctl restart nginx
 
 ```nginx.conf
 http {
-	include "C:\\webSite\\koko-campus.net\\nginx.debug.conf"
+  include "C:\\webSite\\koko-campus.net\\nginx.debug.conf"
 }
 
 # 「\」はエスケープ処理する必要あり。
@@ -244,7 +236,6 @@ nginx -t
 # リロード
 nginx -s reload
 ```
-
 
 ## 証明書の発行
 
@@ -267,27 +258,27 @@ sudo certbot renew
 sudo systemctl restart nginx
 ```
 
+## その他開発用のソフトウェア準備  
 
-# その他開発用のソフトウェア準備  
-
-## Git・Github
+### Git・Github
 
 Git・Githubを使用してソースを管理する。  
-「https://github.com/koko-campus/koko-campus.net」  
+「<https://github.com/koko-campus/koko-campus.net>」  
   
-ブランチは以下の構成をとる。
+ブランチは以下の構成をとる。  
+
 ```git
 main
 develop
 feature
-	- feature/〇〇〇
-	- feature/〇〇〇
-	- feature/〇〇〇
+  - feature/〇〇〇
+  - feature/〇〇〇
+  - feature/〇〇〇
 ```
+
 「feature/〇〇〇」にて機能を実装、完成後は「develop」にマージ、本番環境へ移行する際にはmainへとマージする。  
 
-
-## Libre
+### Libre
 
 教科を管理するテーブルをLibreのマクロを使用してSQLで出力が可能。  
   
@@ -295,5 +286,3 @@ feature
 「scripts/python」は無ければ作成。  
   
 「ツール - マクロの実行」から一括でSQL文を生成可能。
-
-
