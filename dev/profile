@@ -41,8 +41,4 @@ export DB_DATABASE_NAME=koko
 export WWWROOT=/home/webSite/web/
 export DOMAIN=koko-campus.net
 
-export SMTP_SERVER=smtp20.gmoserver.jp
-export SMTP_PORT=587
-export SMTP_PASSWORD="fvFPqs#WsDTZM3Vxu5LSSY$vZ"
-
 echo finished reading fst Env Setting Files
