@@ -36,7 +36,7 @@ CREATE TABLE subjects_shiken(
   snd DATE NULL,
   rgdt DATETIME DEFAULT CURRENT_TIMESTAMP,
   updt DATETIME DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE subjects(
   subject CHAR(4) PRIMARY KEY CHECK (LENGTH(subject) = 4),
@@ -66,7 +66,7 @@ CREATE TABLE session_log(
   sec_ch_ua_platform VARCHAR(30) NULL,
   rgdt datetime DEFAULT CURRENT_TIMESTAMP,
   updt datetime DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 CREATE TABLE bookmark(
   user_id CHAR(16) CHECK (8 <= LENGTH(user_id) AND LENGTH(user_id) <= 16),
