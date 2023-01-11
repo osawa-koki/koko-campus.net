@@ -56,6 +56,7 @@ func Select(sqlStruct *SQLbuilder) *sql.Row {
 		db.Close()
 		return row
 	} else {
+		fmt.Println(err.Error())
 		Error(err.Error())
 	}
 	sqlStruct.Reset()
@@ -77,7 +78,8 @@ func SelectAll(sqlStruct *SQLbuilder) *sql.Rows {
 			return rows
 		}
 		db.Close()
-	} else {
+		} else {
+		fmt.Println(err.Error())
 		Error(err.Error())
 	}
 	sqlStruct.Reset()
@@ -112,11 +114,12 @@ func Execute(sqlStruct *SQLbuilder) bool {
 			sqlStruct.Reset()
 			db.Close()
 			return true
+			} else {
+				Error("SQL Execute 失敗 ---> " + sqlStruct.sql + fmt.Sprintf("	【%s】", er.Error()))
+			}
+			db.Close()
 		} else {
-			Error("SQL Execute 失敗 ---> " + sqlStruct.sql + fmt.Sprintf("	【%s】", er.Error()))
-		}
-		db.Close()
-	} else {
+		fmt.Println(er.Error())
 		Error(er.Error())
 	}
 	sqlStruct.Reset()
