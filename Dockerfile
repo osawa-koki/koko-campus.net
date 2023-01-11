@@ -5,4 +5,4 @@ COPY ./src/webServer .
 COPY ./web/dynamic ./web
 RUN go build -o webServer
 RUN chmod +x webServer
-RUN ./webServer
+CMD ./webServer
