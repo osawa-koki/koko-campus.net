@@ -23,7 +23,7 @@ services:
     hostname: js_csp_watcher_app
     build: ./
     networks:
-      - "js-csp-watcher-network"
+      - "koko-campus_network"
     volumes:
       - "./var:/app/var"
     depends_on:
@@ -35,7 +35,7 @@ services:
       - "8080:8080"
     build: ./web
     networks:
-      - "js-csp-watcher-network"
+      - "koko-campus_network"
     volumes:
       - "./var:/app/var"
     depends_on:
@@ -43,5 +43,5 @@ services:
 networks:
   default:
     name: bridge
-  js-csp-watcher-network:
+  koko-campus_network:
     name: docker.internal
