@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  db:
+    hostname: koko-campus_db
+    container_name: koko-campus_db
+    build: ./mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: koko
+      MYSQL_USER: root
+      MYSQL_PASSWORD: my_password
+      TZ: 'Asia/Tokyo'
+    volumes:
+    - ./mysql/data:/var/lib/mysql
+    - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+    - 3306:3306
+    networks:
+      - "koko-campus_network"
+  app:
+    container_name: js_csp_watcher_app
+    hostname: js_csp_watcher_app
+    build: ./
+    networks:
+      - "js-csp-watcher-network"
+    volumes:
+      - "./var:/app/var"
+    depends_on:
+      - db
+  web:
+    container_name: js_csp_watcher_web
+    hostname: js_csp_watcher_web
+    ports:
+      - "8080:8080"
+    build: ./web
+    networks:
+      - "js-csp-watcher-network"
+    volumes:
+      - "./var:/app/var"
+    depends_on:
+      - db
+networks:
+  default:
+    name: bridge
+  js-csp-watcher-network:
+    name: docker.internal
