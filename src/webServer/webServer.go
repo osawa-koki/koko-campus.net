@@ -50,8 +50,8 @@ func controller(w http.ResponseWriter, r *http.Request) {
 
 	RR.path = strings.ToUpper(RR.path) // 静的ページ以外は大文字小文字を区別しない
 
-	if (RR.fst == "M") {
-		RR.NeedToLogin = true;
+	if RR.fst == "M" {
+		RR.NeedToLogin = true
 	}
 	sessionController(&RR)
 }
@@ -62,7 +62,7 @@ func main() {
 	fmt.Println("")
 	http.HandleFunc("/", controller)
 
-	if er := http.ListenAndServe(":8181", nil); er != nil {
+	if er := http.ListenAndServe("0.0.0.0:8080", nil); er != nil {
 		fmt.Println("failure on ListenAndServe")
 		fmt.Println(er.Error())
 	}

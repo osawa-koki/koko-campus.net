@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/rand"
+	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
@@ -37,6 +38,7 @@ func setCookieANDredirect(RR *RequestResponse) {
 			pageController(RR)
 		}
 	} else {
+		fmt.Println("cookieの追加に失敗しました。")
 		Error("cookieの追加に失敗しました。")
 		(*RR.response).WriteHeader(http.StatusInternalServerError)
 	}

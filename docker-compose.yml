@@ -1,0 +1,55 @@
+version: '3'
+
+services:
+  db:
+    hostname: koko-campus_db
+    container_name: koko-campus_db
+    build: ./mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: koko_campus
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    volumes:
+    - ./mysql/data:/var/lib/mysql
+    - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    ports:
+    - 3306:3306
+    networks:
+      - "koko-campus_network"
+  app:
+    container_name: koko-campus_app
+    hostname: koko-campus_app
+    build: ./
+    environment:
+      - DB_HOST=koko-campus_db
+      - DB_PORT=3306
+      - DB_DATABASE=koko_campus
+      - DB_USER=root
+      - DB_PASSWORD=root_password
+      - WWWROOT=/var/www/html
+      - DOMAIN=koko-campus.net
+      - DYNAMIC_ROOT=/app/web/
+      - LOG_DIR=/app/log/
+    networks:
+      - "koko-campus_network"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+  web:
+    container_name: koko-campus_web
+    hostname: koko-campus_web
+    ports:
+      - "8000:8000"
+    build: ./web
+    networks:
+      - "koko-campus_network"
+    depends_on:
+      - db
+networks:
+  default:
+    name: bridge
+  koko-campus_network:
+    name: docker.internal

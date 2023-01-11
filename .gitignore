@@ -9,21 +9,14 @@ standalone/
 /web/static/img/M00/*.png
 
 # ファイル
-*.csv
-*.txt
-*.env
 *.user
 *.~lock*
-
 
 # 必要
 !/pyapp/requirements.txt
 !.gitkeep
 
-
 # 以下はテンプレート #
-
-
 
 # Created by https://www.toptal.com/developers/gitignore/api/go,python,visualstudio,visualstudiocode,csharp,haskell,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=go,python,visualstudio,visualstudiocode,csharp,haskell,node

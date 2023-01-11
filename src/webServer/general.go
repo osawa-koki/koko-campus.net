@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"time"
 )
@@ -35,7 +34,7 @@ func getLogDIR() string {
 【戻り値】ファイルの中身, エラー
 */
 func FileGetContents(path string) (string, error) {
-	if bt, er := ioutil.ReadFile(getRootDIR() + "/" + path); er == nil {
+	if bt, er := os.ReadFile(getRootDIR() + "/" + path); er == nil {
 		return string(bt), nil
 	} else {
 		Error(er.Error())
@@ -50,7 +49,7 @@ func FileGetContents(path string) (string, error) {
 【戻り値】成功か否か
 */
 func FileSaveContents(path string, contents string) bool {
-	if er := ioutil.WriteFile(path, []byte(contents), os.ModePerm); er == nil {
+	if er := os.WriteFile(path, []byte(contents), os.ModePerm); er == nil {
 		return true
 	} else {
 		return false
@@ -64,7 +63,7 @@ func FileSaveContents(path string, contents string) bool {
 【戻り値】成功か否か
 */
 func FileSaveContentsByte(path string, contents []byte) bool {
-	if er := ioutil.WriteFile(path, contents, os.ModePerm); er == nil {
+	if er := os.WriteFile(path, contents, os.ModePerm); er == nil {
 		return true
 	} else {
 		fmt.Print(er.Error())

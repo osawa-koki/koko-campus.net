@@ -1,5 +1,0 @@
-CREATE TABLE debug(
-	a VARCHAR(30) NULL,
-    b VARCHAR(30) NULL,
-    c VARCHAR(30) NULL
-)
