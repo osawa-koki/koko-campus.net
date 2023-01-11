@@ -4,7 +4,7 @@ services:
   db:
     hostname: koko-campus_db
     container_name: koko-campus_db
-    image: mysql:5.7
+    build: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: koko_campus
@@ -14,7 +14,6 @@ services:
     volumes:
     - ./mysql/data:/var/lib/mysql
     - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-    - ./mysql/init:/docker-entrypoint-initdb.d
     ports:
     - 3306:3306
     networks:
