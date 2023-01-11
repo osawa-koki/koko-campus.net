@@ -24,7 +24,7 @@ services:
     hostname: koko-campus_app
     build: ./
     environment:
-      - DB_HOST=db
+      - DB_HOST=koko-campus_db
       - DB_PORT=13306
       - DB_DATABASE=koko_campus
       - DB_USERNAME=root
