@@ -6,10 +6,7 @@ services:
     container_name: koko-campus_db
     build: ./mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: koko
-      MYSQL_USER: root
-      MYSQL_PASSWORD: my_password
+      MYSQL_ROOT_PASSWORD: root_password
       TZ: 'Asia/Tokyo'
     volumes:
     - ./mysql/data:/var/lib/mysql
