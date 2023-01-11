@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY ./src/webServer .
 RUN go mod download
-COPY ./web/dynamic /var/www/html
+COPY ./web/dynamic ./web
 RUN go build -o webServer
 RUN chmod +x webServer
 CMD ./webServer

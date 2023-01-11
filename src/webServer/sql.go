@@ -14,10 +14,10 @@ func connect() (*sql.DB, error) {
 	password := os.Getenv("DB_PASSWORD")
 	host := os.Getenv("DB_HOST")
 	port := os.Getenv("DB_PORT")
-	database_name := os.Getenv("DB_DATABASE_NAME")
+	database_name := os.Getenv("DB_DATABASE")
 
 	dbconf := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4", user, password, host, port, database_name)
-
+	fmt.Println(dbconf)
 	db, err := sql.Open("mysql", dbconf)
 	if err != nil {
 		Error(err.Error())
