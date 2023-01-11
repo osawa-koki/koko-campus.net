@@ -4,6 +4,10 @@ Goで実装した学習サイト公開用のプロジェクト。
 
 ## 実行方法
 
+以下の順でコマンドを実行。  
+
 ```shell
-docker build -t koko-campus . && docker run -p 80:80 -it --rm --name my-koko-campus koko-campus
+docker compose up db -d [--build]
+docker compose up app -d [--build]
+docker compose up web -d [--build]
 ```
