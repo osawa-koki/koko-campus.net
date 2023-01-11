@@ -4,6 +4,10 @@ tables=()
 tables+=("category")
 tables+=("games")
 tables+=("programs")
+tables+=("subjects")
+tables+=("subjects_category")
+tables+=("subjects_lesson")
+tables+=("subjects_pages")
 
 for table in "${tables[@]}"
 do
