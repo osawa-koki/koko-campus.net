@@ -23,6 +23,14 @@ services:
     container_name: koko-campus_app
     hostname: koko-campus_app
     build: ./
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=koko_campus
+      - DB_USERNAME=root
+      - DB_PASSWORD=root_password
+      - WWWROOT=/var/www/html
+      - DOMAIN=koko-campus.net
     networks:
       - "koko-campus_network"
     ports:
