@@ -1,10 +1,11 @@
 # !/bin/bash
 
-# category
-mysql -u root --password=root_password --local-infile koko_campus -e "LOAD DATA LOCAL INFILE '/master-data/category.csv' INTO TABLE category FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES"
+tables=()
+tables+=("category")
+tables+=("games")
+tables+=("programs")
 
-# games
-mysql -u root --password=root_password --local-infile koko_campus -e "LOAD DATA LOCAL INFILE '/master-data/games.csv' INTO TABLE games FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES"
-
-# programs
-mysql -u root --password=root_password --local-infile koko_campus -e "LOAD DATA LOCAL INFILE '/master-data/programs.csv' INTO TABLE programs FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES"
+for table in "${tables[@]}"
+do
+  mysql -u root --password=root_password --local-infile koko_campus -e "LOAD DATA LOCAL INFILE '/master-data/$table.csv' INTO TABLE $table FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES"
+done
