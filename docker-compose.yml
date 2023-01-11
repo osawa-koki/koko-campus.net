@@ -16,7 +16,7 @@ services:
     - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     - ./mysql/init:/docker-entrypoint-initdb.d
     ports:
-    - 13306:3306
+    - 3306:3306
     networks:
       - "koko-campus_network"
   app:
@@ -25,7 +25,7 @@ services:
     build: ./
     environment:
       - DB_HOST=koko-campus_db
-      - DB_PORT=13306
+      - DB_PORT=3306
       - DB_DATABASE=koko_campus
       - DB_USER=root
       - DB_PASSWORD=root_password
