@@ -5,9 +5,9 @@ tables+=("category")
 tables+=("games")
 tables+=("programs")
 tables+=("subjects")
-tables+=("subject_category")
-tables+=("subject_lesson")
-tables+=("subject_pages")
+tables+=("subjects_category")
+tables+=("subjects_lesson")
+tables+=("subjects_page")
 
 for table in "${tables[@]}"
 do
