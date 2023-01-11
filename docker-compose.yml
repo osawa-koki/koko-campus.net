@@ -20,25 +20,21 @@ services:
     networks:
       - "koko-campus_network"
   app:
-    container_name: js_csp_watcher_app
-    hostname: js_csp_watcher_app
+    container_name: koko-campus_app
+    hostname: koko-campus_app
     build: ./
     networks:
       - "koko-campus_network"
-    volumes:
-      - "./var:/app/var"
     depends_on:
       - db
   web:
-    container_name: js_csp_watcher_web
-    hostname: js_csp_watcher_web
+    container_name: koko-campus_web
+    hostname: koko-campus_web
     ports:
       - "8080:8080"
     build: ./web
     networks:
       - "koko-campus_network"
-    volumes:
-      - "./var:/app/var"
     depends_on:
       - db
 networks:
