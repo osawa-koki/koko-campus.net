@@ -25,13 +25,15 @@ services:
     build: ./
     networks:
       - "koko-campus_network"
+    ports:
+      - "8080:8080"
     depends_on:
       - db
   web:
     container_name: koko-campus_web
     hostname: koko-campus_web
     ports:
-      - "8080:8080"
+      - "8000:8000"
     build: ./web
     networks:
       - "koko-campus_network"
